@@ -1,0 +1,7 @@
+{
+  "name": "Shikanime",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "devas"
+}

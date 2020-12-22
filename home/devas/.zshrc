@@ -24,6 +24,7 @@ plugins=(
   stack
   dotenv
   mix
+  ssh-agent
   kubectl
   gcloud
   minikube
@@ -41,8 +42,7 @@ DISABLE_UPDATE_PROMPT=true
 # Starship shell
 eval $(starship init zsh)
 
-# Java
-. ${HOME}/.asdf/plugins/java/set-java-home.zsh
-
 # OPAM configuration
-. ${HOME}/.opam/opam-init/init.zsh
+if [ -f "${HOME}/.opam/opam-init/init.zsh" ]; then
+  . ${HOME}/.opam/opam-init/init.zsh
+fi

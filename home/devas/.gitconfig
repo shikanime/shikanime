@@ -4,8 +4,6 @@ email = deva.shikanime@protonmail.com
 [core]
 editor = nvim
 excludesfile = /home/devas/.gitignore
-[credential]
-helper = manager
 [pull]
 rebase = true
 ff = only
