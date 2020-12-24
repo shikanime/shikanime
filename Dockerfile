@@ -48,6 +48,7 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
   clang-tidy \
   clang-tools \
   clang \
+  darcs \
   default-jdk \
   dialog \
   fop \
@@ -103,6 +104,7 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
   m4 \
   make \
   man-db \
+  mercurial \
   mesa-utils \
   nano \
   ncdu \
@@ -163,6 +165,9 @@ USER devas
 
 # Install Oh My ZSH
 RUN zsh -i -c "curl -sSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash -s --  --keep-zshrc --skip-chsh"
+
+# Init user OPAM
+RUN zsh -i -c "opam init --bare -a -n"
 
 # Add user configuration
 COPY --chown=devas home/devas/.ssh .ssh
