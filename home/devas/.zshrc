@@ -39,10 +39,8 @@ plugins=(
 DISABLE_AUTO_UPDATE=true
 DISABLE_UPDATE_PROMPT=true
 
+# OPAM configuration
+. ${HOME}/.opam/opam-init/init.zsh
+
 # Starship shell
 eval $(starship init zsh)
-
-# OPAM configuration
-if [ -f "${HOME}/.opam/opam-init/init.zsh" ]; then
-  . ${HOME}/.opam/opam-init/init.zsh
-fi

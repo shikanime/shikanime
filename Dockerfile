@@ -135,11 +135,21 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
 # Java Home
 ENV JAVA_HOME /usr/lib/jvm/default-java
 
+FROM base as starship
+
 # Install Starship
 RUN curl -sSL https://starship.rs/install.sh | bash -s -- -y
 
+FROM base as stack
+
 # Haskell development tools
 RUN curl -sSL https://get.haskellstack.org/ | sh
+
+FROM base as core
+
+# Copy external software
+COPY --from=starship /usr/local/bin/starship /usr/local/bin/starship
+COPY --from=stack /usr/local/bin/stack /usr/local/bin/stack
 
 # Create user space
 RUN useradd --user-group --create-home --shell /usr/bin/zsh --groups sudo --comment "Shikanime Deva" devas
@@ -151,22 +161,19 @@ COPY etc/sudoers.d/devas /etc/sudoers.d
 WORKDIR /home/devas
 USER devas
 
+# Install Oh My ZSH
+RUN zsh -i -c "curl -sSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash -s --  --keep-zshrc --skip-chsh"
+
 # Add user configuration
 COPY --chown=devas home/devas/.ssh .ssh
 COPY --chown=devas home/devas/.gitconfig .gitconfig
 COPY --chown=devas home/devas/.gitignore .gitignore
 COPY --chown=devas home/devas/.zshrc .zshrc
-COPY --chown=devas home/devas/.tool-versions .tool-versions
 
 # Command entrypoint
 ENTRYPOINT [ "/usr/bin/zsh" ]
 
-FROM base as ohmyzsh
-
-# Install Oh My ZSH
-RUN zsh -i -c "curl -sSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash -s --  --keep-zshrc --skip-chsh"
-
-FROM base as asdf
+FROM core as asdf
 
 # Install ASDF
 RUN zsh -i -c "git clone https://github.com/asdf-vm/asdf.git .asdf --branch v0.8.0"
@@ -181,12 +188,12 @@ RUN zsh -i -c "asdf plugin add nodejs \
   && asdf plugin add elixir \
   && bash .asdf/plugins/nodejs/bin/import-release-team-keyring"
 
-FROM base as rustup
+FROM core as rustup
 
 # Install Rust development tools
 RUN zsh -i -c "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
 
-FROM base as gcloud
+FROM core as gcloud
 
 # Install Google Cloud SDK
 RUN zsh -i -c "curl https://sdk.cloud.google.com | bash -s -- --disable-prompts"
@@ -194,7 +201,7 @@ RUN zsh -i -c "curl https://sdk.cloud.google.com | bash -s -- --disable-prompts"
 # Install Google Cloud additional tools
 RUN zsh -i -c "gcloud components install --quiet beta alpha kubectl skaffold kustomize"
 
-FROM base as krew
+FROM core as krew
 
 # Install Krew package manager
 RUN mkdir -p /tmp/krew-install \
@@ -204,10 +211,9 @@ RUN mkdir -p /tmp/krew-install \
   && ./krew-linux_amd64 install krew \
   && rm -rf /tmp/krew-install
 
-FROM base
+FROM core
 
 # Copy local dependencies
-COPY --from=ohmyzsh /home/devas/.oh-my-zsh .oh-my-zsh
 COPY --from=asdf /home/devas/.asdf .asdf
 COPY --from=rustup /home/devas/.rustup .rustup
 COPY --from=krew /home/devas/.krew .krew
