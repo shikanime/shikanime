@@ -1,4 +1,4 @@
-FROM ubuntu:20.10 as base
+FROM ubuntu:20.10 as system
 
 LABEL maintainer="Shikanime Deva <deva.shikanime@protonmail.com>"
 
@@ -137,21 +137,26 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
 # Java Home
 ENV JAVA_HOME /usr/lib/jvm/default-java
 
-FROM base as starship
+# Command entrypoint
+ENTRYPOINT [ "/usr/bin/zsh" ]
+
+FROM system as starship
 
 # Install Starship
 RUN curl -sSL https://starship.rs/install.sh | bash -s -- -y
 
-FROM base as stack
+FROM system as stack
 
 # Haskell development tools
 RUN curl -sSL https://get.haskellstack.org/ | sh
 
-FROM base as core
+FROM system as base
 
 # Copy external software
 COPY --from=starship /usr/local/bin/starship /usr/local/bin/starship
 COPY --from=stack /usr/local/bin/stack /usr/local/bin/stack
+
+FROM base as user
 
 # Create user space
 RUN useradd --user-group --create-home --shell /usr/bin/zsh --groups sudo --comment "Shikanime Deva" devas
@@ -175,10 +180,7 @@ COPY --chown=devas home/devas/.gitconfig .gitconfig
 COPY --chown=devas home/devas/.gitignore .gitignore
 COPY --chown=devas home/devas/.zshrc .zshrc
 
-# Command entrypoint
-ENTRYPOINT [ "/usr/bin/zsh" ]
-
-FROM core as asdf
+FROM user as asdf
 
 # Install ASDF
 RUN zsh -i -c "git clone https://github.com/asdf-vm/asdf.git .asdf --branch v0.8.0"
@@ -193,12 +195,12 @@ RUN zsh -i -c "asdf plugin add nodejs \
   && asdf plugin add elixir \
   && bash .asdf/plugins/nodejs/bin/import-release-team-keyring"
 
-FROM core as rustup
+FROM user as rustup
 
 # Install Rust development tools
 RUN zsh -i -c "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
 
-FROM core as gcloud
+FROM user as gcloud
 
 # Install Google Cloud SDK
 RUN zsh -i -c "curl https://sdk.cloud.google.com | bash -s -- --disable-prompts"
@@ -206,7 +208,7 @@ RUN zsh -i -c "curl https://sdk.cloud.google.com | bash -s -- --disable-prompts"
 # Install Google Cloud additional tools
 RUN zsh -i -c "gcloud components install --quiet beta alpha kubectl skaffold kustomize"
 
-FROM core as krew
+FROM user as krew
 
 # Install Krew package manager
 RUN mkdir -p /tmp/krew-install \
@@ -216,7 +218,7 @@ RUN mkdir -p /tmp/krew-install \
   && ./krew-linux_amd64 install krew \
   && rm -rf /tmp/krew-install
 
-FROM core
+FROM user
 
 # Copy local dependencies
 COPY --from=asdf /home/devas/.asdf .asdf
