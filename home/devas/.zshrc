@@ -1,3 +1,7 @@
+# Zsh
+DISABLE_AUTO_UPDATE=true
+DISABLE_UPDATE_PROMPT=true
+
 # Krew
 export PATH="${KREW_ROOT:-${HOME}/.krew}/bin:${PATH}"
 
@@ -10,7 +14,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # Local
 export PATH="${HOME}/.local/bin:${PATH}"
 
-# oh-my-zsh
+# Oh My Zsh
 export ZSH="${HOME}/.oh-my-zsh"
 plugins=(
   golang
@@ -33,14 +37,13 @@ plugins=(
   npm
   asdf
 )
-. ${ZSH}/oh-my-zsh.sh
+. ${ZSH}/oh-my-zsh.sh &>/dev/null
 
-# ZSH
-DISABLE_AUTO_UPDATE=true
-DISABLE_UPDATE_PROMPT=true
+# OPAM
+. ${HOME}/.opam/opam-init/init.zsh &>/dev/null
 
-# OPAM configuration
-. ${HOME}/.opam/opam-init/init.zsh
+# Rust Cargo
+. $HOME/.cargo/env &>/dev/null
 
 # Starship shell
 eval $(starship init zsh)
