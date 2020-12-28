@@ -28,6 +28,11 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
   curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add - \
   && apt-add-repository -y "deb [arch=amd64] https://apt.releases.hashicorp.com focal main"
 
+# Add Gcloud SDK APT keys
+RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
+  curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
+  && apt-add-repository -y "deb https://packages.cloud.google.com/apt cloud-sdk main"
+
 # Setup locales
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
   apt-get install -y --no-install-recommends \
@@ -55,12 +60,21 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
   gcc \
   git \
   golang \
+  google-cloud-sdk-anthos-auth \
+  google-cloud-sdk-app-engine-python \
+  google-cloud-sdk-config-connector \
+  google-cloud-sdk-kpt \
+  google-cloud-sdk-kubectl-oidc \
+  google-cloud-sdk-pubsub-emulator \
+  google-cloud-sdk-skaffold \
+  google-cloud-sdk \
   g++ \
   helm \
   htop \
   inotify-tools \
   iproute2 \
   jq \
+  kubectl \
   less \
   libbz2-dev \
   libc6-dev \
@@ -123,6 +137,7 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
   strace \
   sudo \
   terraform \
+  texlive \
   unixodbc-dev \
   unzip \
   vim-tiny \
@@ -156,8 +171,6 @@ FROM system as base
 COPY --from=starship /usr/local/bin/starship /usr/local/bin/starship
 COPY --from=stack /usr/local/bin/stack /usr/local/bin/stack
 
-FROM base as user
-
 # Create user space
 RUN useradd --user-group --create-home --shell /usr/bin/zsh --groups sudo --comment "Shikanime Deva" devas
 
@@ -168,22 +181,50 @@ COPY etc/sudoers.d/devas /etc/sudoers.d
 WORKDIR /home/devas
 USER devas
 
-# Install Oh My ZSH
-RUN zsh -i -c "curl -sSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash -s --  --keep-zshrc --skip-chsh"
+FROM base as opam
 
 # Init user OPAM
 RUN zsh -i -c "opam init --bare -a -n"
 
-# Add user configuration
-COPY --chown=devas home/devas/.ssh .ssh
-COPY --chown=devas home/devas/.gitconfig .gitconfig
-COPY --chown=devas home/devas/.gitignore .gitignore
-COPY --chown=devas home/devas/.zshrc .zshrc
+FROM base as rustup
 
-FROM user as asdf
+# Install Rust development tools
+RUN zsh -i -c "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
+
+FROM base as ohmyzsh
+
+# Install Oh My ZSH
+RUN zsh -i -c "curl -sSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash -s --  --keep-zshrc --skip-chsh"
+
+FROM base as krew
+
+# Install Krew package manager
+RUN mkdir -p /tmp/krew-install \
+  && cd /tmp/krew-install \
+  && curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" \
+  && tar zxvf krew.tar.gz ./krew-linux_amd64 \
+  && ./krew-linux_amd64 install krew \
+  && rm -rf /tmp/krew-install
+
+FROM base as asdf
 
 # Install ASDF
 RUN zsh -i -c "git clone https://github.com/asdf-vm/asdf.git .asdf --branch v0.8.0"
+
+FROM base as user
+
+# Add user configuration
+COPY --chown=devas home/devas/.gitconfig .gitconfig
+COPY --chown=devas home/devas/.gitignore .gitignore
+COPY --chown=devas home/devas/.zshrc .zshrc
+COPY --chown=devas home/devas/.ssh .ssh
+
+# Copy local dependencies
+COPY --from=ohmyzsh --chown=devas home/devas/.oh-my-zsh .oh-my-zsh
+COPY --from=opam --chown=devas home/devas/.opam .opam
+COPY --from=asdf --chown=devas /home/devas/.asdf .asdf
+COPY --from=rustup --chown=devas /home/devas/.rustup .rustup
+COPY --from=krew --chown=devas /home/devas/.krew .krew
 
 # Install ASDF plugins
 RUN zsh -i -c "asdf plugin add nodejs \
@@ -194,34 +235,3 @@ RUN zsh -i -c "asdf plugin add nodejs \
   && asdf plugin add rebar \
   && asdf plugin add elixir \
   && bash .asdf/plugins/nodejs/bin/import-release-team-keyring"
-
-FROM user as rustup
-
-# Install Rust development tools
-RUN zsh -i -c "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
-
-FROM user as gcloud
-
-# Install Google Cloud SDK
-RUN zsh -i -c "curl https://sdk.cloud.google.com | bash -s -- --disable-prompts"
-
-# Install Google Cloud additional tools
-RUN zsh -i -c "gcloud components install --quiet beta alpha kubectl skaffold kustomize"
-
-FROM user as krew
-
-# Install Krew package manager
-RUN mkdir -p /tmp/krew-install \
-  && cd /tmp/krew-install \
-  && curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew.tar.gz" \
-  && tar zxvf krew.tar.gz ./krew-linux_amd64 \
-  && ./krew-linux_amd64 install krew \
-  && rm -rf /tmp/krew-install
-
-FROM user
-
-# Copy local dependencies
-COPY --from=asdf /home/devas/.asdf .asdf
-COPY --from=rustup /home/devas/.rustup .rustup
-COPY --from=krew /home/devas/.krew .krew
-COPY --from=gcloud /home/devas/google-cloud-sdk google-cloud-sdk
