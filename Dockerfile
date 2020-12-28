@@ -213,12 +213,6 @@ RUN zsh -i -c "git clone https://github.com/asdf-vm/asdf.git .asdf --branch v0.8
 
 FROM base as user
 
-# Add user configuration
-COPY --chown=devas home/devas/.gitconfig .gitconfig
-COPY --chown=devas home/devas/.gitignore .gitignore
-COPY --chown=devas home/devas/.zshrc .zshrc
-COPY --chown=devas home/devas/.ssh .ssh
-
 # Copy local dependencies
 COPY --from=ohmyzsh --chown=devas home/devas/.oh-my-zsh .oh-my-zsh
 COPY --from=opam --chown=devas home/devas/.opam .opam
@@ -226,6 +220,12 @@ COPY --from=asdf --chown=devas /home/devas/.asdf .asdf
 COPY --from=rustup --chown=devas /home/devas/.cargo .cargo
 COPY --from=rustup --chown=devas /home/devas/.rustup .rustup
 COPY --from=krew --chown=devas /home/devas/.krew .krew
+
+# Add user configuration
+COPY --chown=devas home/devas/.gitconfig .gitconfig
+COPY --chown=devas home/devas/.gitignore .gitignore
+COPY --chown=devas home/devas/.zshrc .zshrc
+COPY --chown=devas home/devas/.ssh .ssh
 
 FROM user as asdf-full
 
