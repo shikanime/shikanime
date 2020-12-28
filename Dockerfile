@@ -223,8 +223,11 @@ COPY --chown=devas home/devas/.ssh .ssh
 COPY --from=ohmyzsh --chown=devas home/devas/.oh-my-zsh .oh-my-zsh
 COPY --from=opam --chown=devas home/devas/.opam .opam
 COPY --from=asdf --chown=devas /home/devas/.asdf .asdf
+COPY --from=rustup --chown=devas /home/devas/.cargo .cargo
 COPY --from=rustup --chown=devas /home/devas/.rustup .rustup
 COPY --from=krew --chown=devas /home/devas/.krew .krew
+
+FROM user as asdf-full
 
 # Install ASDF plugins
 RUN zsh -i -c "asdf plugin add nodejs \
@@ -235,3 +238,7 @@ RUN zsh -i -c "asdf plugin add nodejs \
   && asdf plugin add rebar \
   && asdf plugin add elixir \
   && bash .asdf/plugins/nodejs/bin/import-release-team-keyring"
+
+FROM user
+
+COPY --from=asdf-full --chown=devas /home/devas/.asdf .asdf
