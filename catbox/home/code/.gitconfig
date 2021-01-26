@@ -3,7 +3,7 @@ name = Shikanime Deva
 email = deva.shikanime@protonmail.com
 [core]
 editor = nvim
-excludesfile = /home/devas/.gitignore
+excludesfile = /home/code/.gitignore
 [pull]
 rebase = true
 ff = only

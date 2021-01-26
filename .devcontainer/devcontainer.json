@@ -1,8 +1,0 @@
-{
-  "name": "Shikanime",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "runArgs": ["--privileged"],
-  "remoteUser": "devas"
-}

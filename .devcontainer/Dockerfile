@@ -1,1 +1,0 @@
-FROM docker.pkg.github.com/shikanime/shikanime/catbox
