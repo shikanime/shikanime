@@ -8,7 +8,7 @@ COPY etc/localtime /etc/localtime
 
 # Install essential packages
 RUN --mount=type=cache,target=/var/cache/apk --mount=type=cache,target=/var/lib/apk \
-  apk add ca-certificates curl gnupg bash zsh git neovim
+  apk add ca-certificates curl gnupg bash zsh git neovim sudo
 
 # Command entrypoint
 ENTRYPOINT [ "/bin/zsh" ]
@@ -63,7 +63,9 @@ RUN mkdir -p /tmp/krew-install \
 FROM base AS user
 
 # Copy local dependencies
-COPY --from=ohmyzsh --chown=code home/code/.oh-my-zsh .oh-my-zsh
+COPY --from=starship --chown=code /usr/local/bin/starship .local/bin/starship
+COPY --from=stack --chown=code /usr/local/bin/stack .local/bin/stack
+COPY --from=ohmyzsh --chown=code /home/code/.oh-my-zsh .oh-my-zsh
 COPY --from=asdf --chown=code /home/code/.asdf .asdf
 COPY --from=rustup --chown=code /home/code/.cargo .cargo
 COPY --from=rustup --chown=code /home/code/.rustup .rustup
