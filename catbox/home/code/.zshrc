@@ -21,5 +21,8 @@ plugins=(
 )
 . ${ZSH}/oh-my-zsh.sh &>/dev/null
 
+# Rust Cargo
+. $HOME/.cargo/env &>/dev/null
+
 # Starship shell
 eval $(starship init zsh)
