@@ -13,6 +13,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 plugins=(
   cargo
   git
+  alpine
   rustup
   stack
   dotenv
