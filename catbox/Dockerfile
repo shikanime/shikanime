@@ -9,8 +9,8 @@ COPY etc/localtime /etc/localtime
 # Install essential packages
 RUN --mount=type=cache,target=/var/cache/apt --mount=from=debian:bullseye-20210111-slim,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
-  ca-certificates curl gnupg2 bash zsh git neovim sudo gcc g++ \
-  make libc6-dev libffi-dev libgmp-dev zlib1g-dev xz-utils netbase
+  ca-certificates curl gnupg2 bash zsh git vim sudo gcc g++ make \
+  libc6-dev libffi-dev libgmp-dev zlib1g-dev xz-utils netbase
 
 # Command entrypoint
 ENTRYPOINT [ "/bin/zsh" ]
