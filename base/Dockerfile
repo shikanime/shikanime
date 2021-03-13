@@ -11,7 +11,14 @@ USER root
 # Install essential packages
 RUN --mount=type=cache,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
-  ca-certificates curl gnupg2 bash zsh git vim sudo
+  ca-certificates curl gnupg2 bash zsh git vim sudo locales
+
+# Setup locales
+COPY etc/locale.gen /etc/locale.gen
+RUN locale-gen
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
 
 # Override default shell
 SHELL [ "/usr/bin/zsh", "-i", "-c"]
