@@ -1,25 +1,18 @@
-FROM debian:bullseye-20210111-slim AS system
+ARG BASE_IMAGE=docker.pkg.github.com/shikanime/shikanime/base:v0.3
+FROM ${BASE_IMAGE} AS genesis
+
+FROM genesis AS system
 
 LABEL maintainer="Shikanime Deva <deva.shikanime@protonmail.com>"
 
-# Setup timezone
-COPY etc/timezone /etc/timezone
-COPY etc/localtime /etc/localtime
+# Enfore root user for system installation
+USER root
 
 # Install essential packages
-RUN --mount=type=cache,target=/var/cache/apt --mount=from=debian:bullseye-20210111-slim,target=/var/lib/apt/lists \
+RUN --mount=type=cache,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
-  ca-certificates curl gnupg2 bash zsh git vim sudo gcc g++ make \
-  libc6-dev libffi-dev libgmp-dev zlib1g-dev xz-utils netbase
-
-# Command entrypoint
-ENTRYPOINT [ "/bin/zsh" ]
-
-FROM system AS starship
-
-# Install Starship
-ARG STARSHIP_INSTALL_SCRIPT_URL="https://starship.rs/install.sh"
-RUN curl -sSL "${STARSHIP_INSTALL_SCRIPT_URL}" | bash -s -- -y
+  ca-certificates curl gnupg2 git gcc g++ make libc6-dev \
+  libffi-dev libgmp-dev zlib1g-dev xz-utils netbase
 
 FROM system as stack
 
@@ -29,33 +22,21 @@ RUN curl -sSL "${STACK_INSTALL_SCRIPT_URL}" | sh
 
 FROM system AS base
 
-# Create user space
-RUN adduser --disabled-password --shell /bin/zsh --gecos "Code" vscode
-
-# Grant user sudo
-COPY etc/sudoers.d/vscode /etc/sudoers.d
-
 # Switch to user context
-WORKDIR /home/vscode
-USER vscode
+WORKDIR /home/sakamoto
+USER sakamoto
 
 FROM base as rustup
 
 # Install Rust development tools
 ARG RUSTUP_INSTALL_SCRIPT_URL="https://sh.rustup.rs"
-RUN zsh -i -c "curl --proto '=https' --tlsv1.2 -sSf "${RUSTUP_INSTALL_SCRIPT_URL}" | sh -s -- -y --default-toolchain none"
-
-FROM base AS ohmyzsh
-
-# Install Oh My ZSH
-ARG OH_MY_ZSH_INSTALL_SCRIPT_URL="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
-RUN zsh -i -c "curl -sSL $"{OH_MY_ZSH_INSTALL_SCRIPT_URL}" | bash -s --  --keep-zshrc --skip-chsh"
+RUN curl --proto '=https' --tlsv1.2 -sSf "${RUSTUP_INSTALL_SCRIPT_URL}" | sh -s -- -y --default-toolchain none
 
 FROM base AS asdf
 
 # Install ASDF
 ARG ASDF_REPOSITORY="https://github.com/asdf-vm/asdf.git"
-RUN zsh -i -c "git clone "${ASDF_REPOSITORY}" .asdf --branch v0.8.0"
+RUN git clone "${ASDF_REPOSITORY}" .asdf --branch v0.8.0
 
 FROM base as krew
 
@@ -71,15 +52,11 @@ RUN mkdir -p /tmp/krew-install \
 FROM base AS user
 
 # Copy local dependencies
-COPY --from=starship --chown=vscode /usr/local/bin/starship .local/bin/starship
-COPY --from=stack --chown=vscode /usr/local/bin/stack .local/bin/stack
-COPY --from=ohmyzsh --chown=vscode /home/vscode/.oh-my-zsh .oh-my-zsh
-COPY --from=asdf --chown=vscode /home/vscode/.asdf .asdf
-COPY --from=rustup --chown=vscode /home/vscode/.cargo .cargo
-COPY --from=rustup --chown=vscode /home/vscode/.rustup .rustup
-COPY --from=krew --chown=vscode /home/vscode/.krew .krew
+COPY --from=stack --chown=sakamoto /usr/local/bin/stack .local/bin/stack
+COPY --from=asdf --chown=sakamoto /home/sakamoto/.asdf .asdf
+COPY --from=rustup --chown=sakamoto /home/sakamoto/.cargo .cargo
+COPY --from=rustup --chown=sakamoto /home/sakamoto/.rustup .rustup
+COPY --from=krew --chown=sakamoto /home/sakamoto/.krew .krew
 
 # Add user configuration
-COPY --chown=vscode home/vscode/.gitconfig .gitconfig
-COPY --chown=vscode home/vscode/.gitignore .gitignore
-COPY --chown=vscode home/vscode/.zshrc .zshrc
+COPY --chown=sakamoto home/sakamoto/.zshrc .zshrc

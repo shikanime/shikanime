@@ -2,8 +2,8 @@
 name = Shikanime Deva
 email = deva.shikanime@protonmail.com
 [core]
-editor = nvim
-excludesfile = /home/vscode/.gitignore
+editor = vim
+excludesfile = /home/sakamoto/.gitignore
 [pull]
 rebase = true
 ff = only

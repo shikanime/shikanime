@@ -1,4 +1,4 @@
 # Catbox
 
-My Little sweet, cute, light and fancy portable development environment built on
-top of Alpine base distribution and ASDF.
+My Little sweet, cute, light and fancy modular and portable environment
+supporting arbitrary base image based on Debian distribution.
