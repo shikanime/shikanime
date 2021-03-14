@@ -11,7 +11,7 @@ USER root
 # Install essential packages
 RUN --mount=type=cache,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
-  ca-certificates curl gnupg2 bash zsh git vim sudo locales
+  ca-certificates curl gnupg2 bash zsh git vim sudo locales ssh
 
 # Setup locales
 COPY etc/locale.gen /etc/locale.gen
