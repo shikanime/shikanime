@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=docker.pkg.github.com/shikanime/shikanime/base:v0.3
+ARG BASE_IMAGE=docker.pkg.github.com/shikanime/shikanime/papercraft:v0.3
 FROM ${BASE_IMAGE} AS genesis
 
 FROM genesis AS system
@@ -11,26 +11,13 @@ USER root
 # Install essential packages
 RUN --mount=type=cache,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
-  ca-certificates curl gnupg2 git gcc g++ make libc6-dev \
-  libffi-dev libgmp-dev zlib1g-dev xz-utils netbase
-
-FROM system as stack
-
-# Haskell development tools
-ARG STACK_INSTALL_SCRIPT_URL="https://get.haskellstack.org"
-RUN curl -sSL "${STACK_INSTALL_SCRIPT_URL}" | sh
+  ca-certificates curl git
 
 FROM system AS base
 
 # Switch to user context
 WORKDIR /home/sakamoto
 USER sakamoto
-
-FROM base as rustup
-
-# Install Rust development tools
-ARG RUSTUP_INSTALL_SCRIPT_URL="https://sh.rustup.rs"
-RUN curl --proto '=https' --tlsv1.2 -sSf "${RUSTUP_INSTALL_SCRIPT_URL}" | sh -s -- -y --default-toolchain none
 
 FROM base AS asdf
 
@@ -52,10 +39,7 @@ RUN mkdir -p /tmp/krew-install \
 FROM base AS user
 
 # Copy local dependencies
-COPY --from=stack --chown=sakamoto /usr/local/bin/stack .local/bin/stack
 COPY --from=asdf --chown=sakamoto /home/sakamoto/.asdf .asdf
-COPY --from=rustup --chown=sakamoto /home/sakamoto/.cargo .cargo
-COPY --from=rustup --chown=sakamoto /home/sakamoto/.rustup .rustup
 COPY --from=krew --chown=sakamoto /home/sakamoto/.krew .krew
 
 # Add user configuration

@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=docker.pkg.github.com/shikanime/shikanime/catex:v0.3-base
+ARG BASE_IMAGE=docker.pkg.github.com/shikanime/shikanime/papercraft:v0.3-texlive
 FROM ${BASE_IMAGE} AS genesis
 
 FROM genesis AS system
