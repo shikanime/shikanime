@@ -9,7 +9,7 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/.krew/bin:${PATH}"
 
 # Define Oh My ZSH plugins
-plugins=(dotenv asdf ${plugins})
+plugins=(dotenv asdf git debian)
 
 # Oh My Zsh
 test -r ${HOME}/.oh-my-zsh/oh-my-zsh.sh &&
