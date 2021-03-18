@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=debian:bullseye-20210111-slim
+ARG BASE_IMAGE=debian:bullseye-20210111
 FROM ${BASE_IMAGE} AS genesis
 
 FROM genesis AS system
