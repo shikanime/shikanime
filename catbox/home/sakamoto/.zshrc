@@ -2,6 +2,9 @@
 export DISABLE_AUTO_UPDATE="true"
 export DISABLE_UPDATE_PROMPT="true"
 
+# Ignore dotenv prompt
+export ZSH_DOTENV_PROMPT="false"
+
 # Append local bin path
 export PATH="${HOME}/.local/bin:${PATH}"
 
