@@ -6,7 +6,9 @@ USER root
 # Install Python dependencies
 RUN --mount=type=cache,target=/var/cache/apt \
   apt-get update -y && apt-get install -y --no-install-recommends \
-  libbz2-dev libsqlite3-dev libssl-dev libreadline-dev
+  libbz2-dev libsqlite3-dev libssl-dev libreadline-dev \
+  libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev tk-dev \
+  libssl-dev openssl libffi-dev gcc g++ make
 
 # Switch to user land
 USER sakamoto
