@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/shikanime/shikanime/catbox:v0.3 AS base
+FROM docker.pkg.github.com/shikanime/shikanime/catbox:0.3.1 AS base
 
 # Switch to root user for system installation
 USER root
