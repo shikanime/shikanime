@@ -1,4 +1,4 @@
-![header.png](https://raw.githubusercontent.com/Shikanime/Shikanime/master/docs/header.png)
+![header.png](https://raw.githubusercontent.com/Shikanime/Shikanime/master/images/header.png)
 
 ## About me
 
