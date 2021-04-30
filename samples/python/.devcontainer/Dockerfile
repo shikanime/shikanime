@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/shikanime/shikanime/catbox:0.3.1 AS base
+FROM docker.pkg.github.com/shikanime/shikanime/catbox:debian-bullseye-20210111 AS base
 
 # Switch to root user for system installation
 USER root

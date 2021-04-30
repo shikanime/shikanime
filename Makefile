@@ -13,39 +13,34 @@ CATBOX_REPOSITORY=$(IMAGE_REGISTRY)/catbox
 # Texlive image
 TYPEWRITER_REPOSITORY=$(IMAGE_REGISTRY)/typewriter
 
-all: \
-	papercraft-debian-bullseye-20210111-image \
-	papercraft-texlive-TL2021-2021-04-25-04-10-image \
-	papercraft-tensorflow-2.4.1-gpu-image \
-	catbox-debian-bullseye-20210111-image \
-	typewriter-texlive-TL2021-2021-04-25-04-10-image
+all:
 
-papercraft-debian-bullseye-20210111-image:
+papercraft-debian-%-image:
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_DEBIAN_BASE_IMAGE):bullseye-20210111" \
-		-t "$(PAPERCRAFT_REPOSITORY):0.3.1-debian-bullseye-20210111" \
+		--build-arg BASE_IMAGE="$(PAPERCRAFT_DEBIAN_BASE_IMAGE):$*" \
+		-t "$(PAPERCRAFT_REPOSITORY):debian-$*" \
 		papercraft
 
-papercraft-texlive-TL2021-2021-04-25-04-10-image:
+papercraft-texlive-%-image:
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_TEXLIVE_BASE_IMAGE):TL2021-2021-04-25-04-10" \
-		-t "$(PAPERCRAFT_REPOSITORY):0.3.1-texlive-TL2021-2021-04-25-04-10" \
+		--build-arg BASE_IMAGE="$(PAPERCRAFT_TEXLIVE_BASE_IMAGE):$*" \
+		-t "$(PAPERCRAFT_REPOSITORY):texlive-$*" \
 		papercraft
 
-papercraft-tensorflow-2.4.1-gpu-image:
+papercraft-tensorflow-%-image:
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_TENSORFLOW_BASE_IMAGE):2.4.1-gpu" \
-		-t "$(PAPERCRAFT_REPOSITORY):0.3.1-tensorflow-2.4.1-gpu" \
+		--build-arg BASE_IMAGE="$(PAPERCRAFT_TENSORFLOW_BASE_IMAGE):$*" \
+		-t "$(PAPERCRAFT_REPOSITORY):tensorflow-$*" \
 		papercraft
 
-catbox-debian-bullseye-20210111-image: papercraft-debian-bullseye-20210111-image
+catbox-%-image: papercraft-%-image
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):0.3.1-debian-bullseye-20210111" \
-		-t "$(CATBOX_REPOSITORY):0.3.1-debian-bullseye-20210111" \
+		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$*" \
+		-t "$(CATBOX_REPOSITORY):$*" \
 		catbox
 
-typewriter-texlive-TL2021-2021-04-25-04-10-image: papercraft-texlive-TL2021-2021-04-25-04-10-image
+typewriter-%-image: papercraft-%-image
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):0.3.1-debian-bullseye-20210111" \
-		-t "$(TYPEWRITER_REPOSITORY):0.3.1-texlive-TL2021-2021-04-25-04-10" \
+		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$*" \
+		-t "$(TYPEWRITER_REPOSITORY):$*" \
 		typewriter
