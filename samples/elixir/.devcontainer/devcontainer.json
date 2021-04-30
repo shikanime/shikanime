@@ -10,8 +10,5 @@
     "terminal.integrated.shell.linux": "/usr/bin/zsh"
   },
   "postCreateCommand": ".devcontainer/postCreateCommand.sh",
-  "mounts": [
-    "type=bind,src=${localEnv:HOME}/.ssh,dst=/home/sakamoto/.ssh,readonly"
-  ],
   "remoteUser": "sakamoto"
 }
