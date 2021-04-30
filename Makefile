@@ -13,7 +13,12 @@ CATBOX_REPOSITORY=$(IMAGE_REGISTRY)/catbox
 # Texlive image
 TYPEWRITER_REPOSITORY=$(IMAGE_REGISTRY)/typewriter
 
-all: papercraft-image catbox-image typewriter-image
+all: \
+	papercraft-debian-bullseye-20210111-image \
+	papercraft-texlive-TL2021-2021-04-25-04-10-image \
+	papercraft-tensorflow-2.4.1-gpu-image \
+	catbox-debian-bullseye-20210111-image \
+	typewriter-texlive-TL2021-2021-04-25-04-10-image
 
 papercraft-debian-bullseye-20210111-image:
 	docker buildx build \
