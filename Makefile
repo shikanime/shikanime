@@ -5,6 +5,7 @@ IMAGE_REGISTRY=docker.pkg.github.com/shikanime/shikanime
 PAPERCRAFT_REPOSITORY=$(IMAGE_REGISTRY)/papercraft
 PAPERCRAFT_IMAGE=$(PAPERCRAFT_REPOSITORY):v0.3
 PAPERCRAFT_TEXLIVE_BASE_IMAGE=texlive/texlive
+PAPERCRAFT_TENSORFLOW_BASE_IMAGE=tensorflow/tensorflow:2.4.1-gpu
 
 # Multi purpose development image
 CATBOX_REPOSITORY=$(IMAGE_REGISTRY)/catbox
@@ -21,6 +22,9 @@ papercraft-image:
 
 papercraft-texlive-image:
 	docker buildx build --build-arg BASE_IMAGE="$(PAPERCRAFT_TEXLIVE_BASE_IMAGE)" -t "$(PAPERCRAFT_IMAGE)-texlive" papercraft
+
+papercraft-tensorflow-image:
+	docker buildx build --build-arg BASE_IMAGE="$(PAPERCRAFT_TENSORFLOW_BASE_IMAGE)" -t "$(PAPERCRAFT_IMAGE)-tensorflow-2.4.1-gpu" papercraft
 
 catbox-image: papercraft-image
 	docker buildx build -t "$(CATBOX_IMAGE)" catbox
