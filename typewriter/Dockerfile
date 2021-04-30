@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=docker.pkg.github.com/shikanime/shikanime/papercraft:tensorflow
+ARG BASE_IMAGE=docker.pkg.github.com/shikanime/shikanime/papercraft
 FROM ${BASE_IMAGE} AS genesis
 
 FROM genesis AS system
