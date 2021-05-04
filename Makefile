@@ -16,46 +16,49 @@ TYPEWRITER_REPOSITORY=$(IMAGE_REGISTRY)/typewriter
 # Scientific heavy compute image
 FLUCLIGHT_REPOSITORY=$(IMAGE_REGISTRY)/fluctlight
 
+# Global version
+VERSION=0.3.2
+
 all:
 
 papercraft-debian-%-image:
 	docker buildx build \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_DEBIAN_BASE_IMAGE):$*" \
-		-t "$(PAPERCRAFT_REPOSITORY):debian-$*" \
+		-t "$(PAPERCRAFT_REPOSITORY):$(VERSION)-debian-$*" \
 		papercraft
 
 papercraft-texlive-%-image:
 	docker buildx build \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_TEXLIVE_BASE_IMAGE):$*" \
-		-t "$(PAPERCRAFT_REPOSITORY):texlive-$*" \
+		-t "$(PAPERCRAFT_REPOSITORY):$(VERSION)-texlive-$*" \
 		papercraft
 
 papercraft-cuda-%-image:
 	docker buildx build \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_CUDA_BASE_IMAGE):$*" \
-		-t "$(PAPERCRAFT_REPOSITORY):cuda-$*" \
+		-t "$(PAPERCRAFT_REPOSITORY):$(VERSION)-cuda-$*" \
 		papercraft
 
 catbox-%-image: papercraft-%-image
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$*" \
-		-t "$(CATBOX_REPOSITORY):$*" \
+		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$(VERSION)-$*" \
+		-t "$(CATBOX_REPOSITORY):$(VERSION)-$*" \
 		catbox
 
 catbox-cuda-%-image: papercraft-cuda-%-image
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):cuda-$*" \
-		-t "$(CATBOX_REPOSITORY):cuda-$*" \
+		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$(VERSION)-cuda-$*" \
+		-t "$(CATBOX_REPOSITORY):$(VERSION)-cuda-$*" \
 		catbox
 
 typewriter-%-image: papercraft-%-image
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$*" \
-		-t "$(TYPEWRITER_REPOSITORY):$*" \
+		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$(VERSION)-$*" \
+		-t "$(TYPEWRITER_REPOSITORY):$(VERSION)-$*" \
 		typewriter
 
 fluctlight-%-image: catbox-%-image
 	docker buildx build \
-		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$*" \
-		-t "$(FLUCLIGHT_REPOSITORY):$*" \
-		fluctlight
+		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
+		-t "$(FLUCLIGHT_REPOSITORY):$(VERSION)-$*" \
+		fluclight
