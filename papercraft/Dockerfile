@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=debian
+ARG BASE_IMAGE
 FROM ${BASE_IMAGE} AS genesis
 
 FROM genesis AS system
