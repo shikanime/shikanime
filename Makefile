@@ -51,6 +51,27 @@ catbox-cuda-%-image: papercraft-cuda-%-image
 		-t "$(CATBOX_REPOSITORY):$(VERSION)-cuda-$*" \
 		catbox
 
+catbox-python-%-image: catbox-%-image
+	docker buildx build \
+		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
+		-t "$(CATBOX_REPOSITORY):$(VERSION)-python-$*" \
+		-f catbox/python.Dockerfile \
+		catbox
+
+catbox-erlang-%-image: catbox-%-image
+	docker buildx build \
+		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
+		-t "$(CATBOX_REPOSITORY):$(VERSION)-erlang-$*" \
+		-f catbox/erlang.Dockerfile \
+		catbox
+
+catbox-nodejs-%-image: catbox-%-image
+	docker buildx build \
+		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
+		-t "$(CATBOX_REPOSITORY):$(VERSION)-nodejs-$*" \
+		-f catbox/nodejs.Dockerfile \
+		catbox
+
 typewriter-%-image: papercraft-%-image
 	docker buildx build \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$(VERSION)-$*" \
@@ -61,4 +82,4 @@ fluctlight-%-image: catbox-%-image
 	docker buildx build \
 		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
 		-t "$(FLUCLIGHT_REPOSITORY):$(VERSION)-$*" \
-		fluclight
+		fluctlight
