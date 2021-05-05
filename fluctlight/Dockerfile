@@ -26,7 +26,7 @@ RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/lib
   && echo "/usr/local/cuda/lib64/stubs" > /etc/ld.so.conf.d/z-cuda-stubs.conf \
   && ldconfig
 
-FROM system AS user
+FROM system
 
 # Switch to user context
 WORKDIR /home/sakamoto
