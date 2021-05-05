@@ -1,9 +1,6 @@
 {
   "build": {
-    "dockerfile": "Dockerfile",
-    "args": {
-      "NODE_VERSION": "15.9.0"
-    }
+    "dockerfile": "Dockerfile"
   },
   "settings": {
     "terminal.integrated.shell.linux": "/usr/bin/zsh"

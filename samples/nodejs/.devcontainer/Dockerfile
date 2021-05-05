@@ -1,17 +1,4 @@
-FROM docker.pkg.github.com/shikanime/shikanime/catbox:debian-bullseye-20210111 AS base
-
-# Switch to root user for system installation
-USER root
-
-# Install essential packages
-RUN --mount=type=cache,target=/var/cache/apt \
-  apt-get update -y && apt-get install -y --no-install-recommends \
-  python3 make g++
-
-# Switch to user land
-USER sakamoto
-
-FROM base
+FROM docker.pkg.github.com/shikanime/shikanime/catbox:0.3.2-nodejs-debian-bullseye-20210111 AS base
 
 # Add ASDF NodeJS plugin
 RUN asdf plugin-add nodejs

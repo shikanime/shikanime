@@ -1,10 +1,6 @@
 {
   "build": {
-    "dockerfile": "Dockerfile",
-    "args": {
-      "ERLANG_VERSION": "23.2.7",
-      "ELIXIR_VERSION": "1.11.3"
-    }
+    "dockerfile": "Dockerfile"
   },
   "settings": {
     "terminal.integrated.shell.linux": "/usr/bin/zsh"
