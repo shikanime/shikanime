@@ -18,9 +18,5 @@ plugins=(dotenv asdf git debian)
 test -r ${HOME}/.oh-my-zsh/oh-my-zsh.sh &&
   . ${HOME}/.oh-my-zsh/oh-my-zsh.sh >/dev/null 2>/dev/null
 
-# Rust Cargo
-test -r ${HOME}/.cargo/env &&
-  . ${HOME}/.cargo/env &>/dev/null 2>/dev/null
-
 # Starship shell
 eval $(starship init zsh)
