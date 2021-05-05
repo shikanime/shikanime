@@ -8,9 +8,6 @@ export ZSH_DOTENV_PROMPT="false"
 # Append local bin path
 export PATH="${HOME}/.local/bin:${PATH}"
 
-# Append Krew path
-export PATH="${HOME}/.krew/bin:${PATH}"
-
 # Define Oh My ZSH plugins
 plugins=(dotenv asdf git debian)
 
