@@ -3,7 +3,6 @@
 
 # ZSH common utils
 zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting
 
 # Starship shell
 zinit ice from"gh-r" as"program" atload'!eval $(starship init zsh)'
