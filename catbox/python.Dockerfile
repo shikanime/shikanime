@@ -7,7 +7,7 @@ FROM genesis
 USER root
 
 # Install Python dependencies
-RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
+RUN --mount=type=cache,sharing=private,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
   libbz2-dev libsqlite3-dev libssl-dev libreadline-dev liblzma-dev\

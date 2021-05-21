@@ -7,7 +7,7 @@ FROM genesis
 USER root
 
 # Install essential packages
-RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
+RUN --mount=type=cache,sharing=private,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
   python3 make g++
 
