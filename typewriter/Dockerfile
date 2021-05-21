@@ -9,14 +9,14 @@ LABEL maintainer="Shikanime Deva <deva.shikanime@protonmail.com>"
 USER root
 
 # Install system packages
-RUN --mount=type=cache,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
+RUN --mount=type=cache,sharing=locked,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
   curl cpanminus make gcc libc6-dev
 
 FROM system AS base
 
 # Latex indent dependencies
-RUN --mount=type=cache,target=/home/root/.cpan \
+RUN --mount=type=cache,sharing=locked,target=/home/root/.cpan \
   cpan -i Log::Log4perl Log::Dispatch::File YAML::Tiny \
   File::HomeDir Unicode::GCString
 
