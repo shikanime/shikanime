@@ -11,7 +11,7 @@ USER root
 # Install essential packages
 RUN --mount=type=cache,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
-  ca-certificates curl git
+  gnupg2 vim ssh
 
 FROM system AS base
 
@@ -19,9 +19,7 @@ FROM system AS base
 WORKDIR /home/sakamoto
 USER sakamoto
 
-# Install ASDF
-ARG ASDF_REPOSITORY="https://github.com/asdf-vm/asdf.git"
-RUN git clone "${ASDF_REPOSITORY}" .asdf --branch v0.8.0
-
 # Add user configuration
+COPY --chown=sakamoto home/sakamoto/.gitconfig .gitconfig
+COPY --chown=sakamoto home/sakamoto/.gitignore .gitignore
 COPY --chown=sakamoto home/sakamoto/.zshrc .zshrc

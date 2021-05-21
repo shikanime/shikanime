@@ -1,19 +1,17 @@
-# Immutable Oh My ZSH installation
-export DISABLE_AUTO_UPDATE="true"
-export DISABLE_UPDATE_PROMPT="true"
+# Zinit
+. ${HOME}/.zinit/bin/zinit.zsh
 
-# Ignore dotenv prompt
-export ZSH_DOTENV_PROMPT="false"
-
-# Append local bin path
-export PATH="${HOME}/.local/bin:${PATH}"
-
-# Define Oh My ZSH plugins
-plugins=(dotenv asdf git debian)
-
-# Oh My Zsh
-test -r ${HOME}/.oh-my-zsh/oh-my-zsh.sh &&
-  . ${HOME}/.oh-my-zsh/oh-my-zsh.sh >/dev/null 2>/dev/null
+# ZSH common utils
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
 
 # Starship shell
-eval $(starship init zsh)
+zinit ice from"gh-r" as"program" atload'!eval $(starship init zsh)'
+zinit light starship/starship
+
+# Oh My ZSH Plugins
+zinit snippet OMZP::git
+zinit snippet OMZP::debian
+
+# Runtime package manager
+zinit light asdf-vm/asdf

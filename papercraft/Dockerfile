@@ -11,7 +11,7 @@ USER root
 # Install essential packages
 RUN --mount=type=cache,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
-  ca-certificates curl gnupg2 bash zsh git vim sudo locales ssh
+  ca-certificates curl git zsh sudo locales file
 
 # Setup locales
 COPY etc/locale.gen /etc/locale.gen
@@ -23,12 +23,6 @@ ENV LANGUAGE en_US:en
 # Override default shell
 SHELL [ "/usr/bin/zsh", "-i", "-c"]
 ENTRYPOINT [ "/usr/bin/zsh", "-i" ]
-
-FROM system AS starship
-
-# Install Starship
-ARG STARSHIP_INSTALL_SCRIPT_URL="https://starship.rs/install.sh"
-RUN curl -sSL "${STARSHIP_INSTALL_SCRIPT_URL}" | bash -s -- -y
 
 FROM system AS base
 
@@ -42,19 +36,20 @@ COPY etc/sudoers.d/sakamoto /etc/sudoers.d
 WORKDIR /home/sakamoto
 USER sakamoto
 
-FROM base AS ohmyzsh
+FROM base AS zinit
 
-# Install Oh My ZSH
-ARG OH_MY_ZSH_INSTALL_SCRIPT_URL="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
-RUN curl -sSL "${OH_MY_ZSH_INSTALL_SCRIPT_URL}" | bash -s --  --keep-zshrc --skip-chsh
+# Install Zinit
+ARG ZINIT_INSTALL_SCRIPT_URL="https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh"
+RUN curl -sSL "${ZINIT_INSTALL_SCRIPT_URL}" | sh
 
 FROM base AS user
 
+# Disable ZSH update
+ENV DISABLE_AUTO_UPDATE "true"
+ENV DISABLE_UPDATE_PROMPT "true"
+
 # Copy local dependencies
-COPY --from=starship --chown=sakamoto /usr/local/bin/starship .local/bin/starship
-COPY --from=ohmyzsh --chown=sakamoto /home/sakamoto/.oh-my-zsh .oh-my-zsh
+COPY --from=zinit --chown=sakamoto /home/sakamoto/.zinit .zinit
 
 # Add user configuration
-COPY --chown=sakamoto home/sakamoto/.gitconfig .gitconfig
-COPY --chown=sakamoto home/sakamoto/.gitignore .gitignore
 COPY --chown=sakamoto home/sakamoto/.zshrc .zshrc
