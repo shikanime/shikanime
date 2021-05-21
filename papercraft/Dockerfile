@@ -20,9 +20,8 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 
-# Override default shell
-SHELL [ "/usr/bin/zsh", "-i", "-c"]
-ENTRYPOINT [ "/usr/bin/zsh", "-i" ]
+# Default shell
+CMD [ "/usr/bin/env", "zsh", "-i" ]
 
 FROM system AS base
 
