@@ -23,36 +23,42 @@ all:
 
 papercraft-debian-%-image:
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_DEBIAN_BASE_IMAGE):$*" \
 		-t "$(PAPERCRAFT_REPOSITORY):$(VERSION)-debian-$*" \
 		papercraft
 
 papercraft-texlive-%-image:
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_TEXLIVE_BASE_IMAGE):$*" \
 		-t "$(PAPERCRAFT_REPOSITORY):$(VERSION)-texlive-$*" \
 		papercraft
 
 papercraft-cuda-%-image:
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_CUDA_BASE_IMAGE):$*" \
 		-t "$(PAPERCRAFT_REPOSITORY):$(VERSION)-cuda-$*" \
 		papercraft
 
 catbox-%-image: papercraft-%-image
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$(VERSION)-$*" \
 		-t "$(CATBOX_REPOSITORY):$(VERSION)-$*" \
 		catbox
 
 catbox-cuda-%-image: papercraft-cuda-%-image
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$(VERSION)-cuda-$*" \
 		-t "$(CATBOX_REPOSITORY):$(VERSION)-cuda-$*" \
 		catbox
 
 catbox-python-%-image: catbox-%-image
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
 		-t "$(CATBOX_REPOSITORY):$(VERSION)-python-$*" \
 		-f catbox/python.Dockerfile \
@@ -60,6 +66,7 @@ catbox-python-%-image: catbox-%-image
 
 catbox-erlang-%-image: catbox-%-image
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
 		-t "$(CATBOX_REPOSITORY):$(VERSION)-erlang-$*" \
 		-f catbox/erlang.Dockerfile \
@@ -67,6 +74,7 @@ catbox-erlang-%-image: catbox-%-image
 
 catbox-nodejs-%-image: catbox-%-image
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
 		-t "$(CATBOX_REPOSITORY):$(VERSION)-nodejs-$*" \
 		-f catbox/nodejs.Dockerfile \
@@ -74,12 +82,14 @@ catbox-nodejs-%-image: catbox-%-image
 
 typewriter-%-image: papercraft-%-image
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$(VERSION)-$*" \
 		-t "$(TYPEWRITER_REPOSITORY):$(VERSION)-$*" \
 		typewriter
 
 fluctlight-%-image: catbox-%-image
 	docker buildx build \
+		--push \
 		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
 		-t "$(FLUCLIGHT_REPOSITORY):$(VERSION)-$*" \
 		fluctlight
