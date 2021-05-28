@@ -3,9 +3,6 @@ FROM ${BASE_IMAGE} AS genesis
 
 FROM genesis
 
-# Switch to root user for system installation
-USER root
-
 # Default JRE man requirement
 RUN mkdir -p /usr/share/man/man1
 
@@ -15,6 +12,3 @@ RUN --mount=type=cache,sharing=private,target=/var/cache/apt --mount=from=genesi
   autoconf libncurses-dev build-essential m4 unixodbc-dev \
   libssl-dev libwxgtk3.0-gtk3-dev libglu-dev libncurses5-dev \
   libxml2-utils fop xsltproc g++ man default-jdk
-
-# Switch to user land
-USER sakamoto

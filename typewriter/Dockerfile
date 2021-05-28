@@ -5,9 +5,6 @@ FROM genesis AS system
 
 LABEL maintainer="Shikanime Deva <deva.shikanime@protonmail.com>"
 
-# Enfore root user for system installation
-USER root
-
 # Install system packages
 RUN --mount=type=cache,sharing=private,target=/var/cache/apt --mount=from=genesis,target=/var/lib/apt/lists \
   apt-get update -y && apt-get install -y --no-install-recommends \
@@ -19,9 +16,3 @@ FROM system AS base
 RUN --mount=type=cache,sharing=private,target=/home/root/.cpan \
   cpan -i Log::Log4perl Log::Dispatch::File YAML::Tiny \
   File::HomeDir Unicode::GCString
-
-FROM base AS user
-
-# Switch to user context
-WORKDIR /home/sakamoto
-USER sakamoto

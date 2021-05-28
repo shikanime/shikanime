@@ -5,9 +5,6 @@ FROM genesis AS system
 
 LABEL maintainer="Shikanime Deva <deva.shikanime@protonmail.com>"
 
-# Enfore root user for system installation
-USER root
-
 # Install TensorRT if not building for PowerPC
 # NOTE: libnvinfer uses cuda11.1 versions
 ARG LIBNVINFER=7.2.2-1
@@ -25,9 +22,3 @@ ENV LD_LIBRARY_PATH /usr/local/cuda/extras/CUPTI/lib64:/usr/local/cuda/lib64:$LD
 RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1 \
   && echo "/usr/local/cuda/lib64/stubs" > /etc/ld.so.conf.d/z-cuda-stubs.conf \
   && ldconfig
-
-FROM system
-
-# Switch to user context
-WORKDIR /home/sakamoto
-USER sakamoto
