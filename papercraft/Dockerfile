@@ -26,7 +26,11 @@ FROM system AS base
 RUN adduser --disabled-password --shell /usr/bin/zsh --gecos "Sakamoto" sakamoto
 
 # Grant user sudo
-COPY etc/sudoers.d/sakamoto /etc/sudoers.d
+COPY etc/sudoers.d/sakamoto /etc/sudoers.d/
+
+# Automatic login to user
+COPY etc/systemd/system/console-getty.service.d/override.conf /etc/systemd/system/console-getty.service.d/
+COPY etc/systemd/system/container-getty@.service.d/override.conf /etc/systemd/system/container-getty@.service.d/
 
 FROM base AS zinit
 
