@@ -1,15 +1,15 @@
 [user]
-name = Shikanime Deva
-email = deva.shikanime@protonmail.com
+	name = Shikanime Deva
+	email = deva.shikanime@protonmail.com
 [core]
-editor = vim
-excludesfile = /home/sakamoto/.gitignore
+	editor = vim
+	excludesfile = /home/sakamoto/.gitignore
 [pull]
-rebase = true
-ff = only
+	rebase = true
+	ff = only
 [rebase]
-autoStash = true
+	autoStash = true
 [alias]
-adog = log --all --decorate --oneline --graph
+	adog = log --all --decorate --oneline --graph
 [init]
-defaultBranch = main
+	defaultBranch = main
