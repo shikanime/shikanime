@@ -87,6 +87,17 @@ typewriter-%-image: catbox-%-image
 		-t "$(TYPEWRITER_REPOSITORY):$(VERSION)-$*" \
 		typewriter
 
+fluctlight-%-cuda-11.3.1-tensorrt8-cudnn8-devel-ubuntu18.04-image: fluctlight-%-cuda-11.3.1-cudnn8-devel-ubuntu18.04-image
+	docker buildx build \
+		--push \
+		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*-cuda-11.3.1-cudnn8-devel-ubuntu18.04" \
+		--build-arg CUDA_VERSION="11.3" \
+		--build-arg LIBNVINFER_VERSION="8.0.0-1" \
+		--build-arg LIBNVINFER_MAJOR_VERSION="8" \
+		-t "$(FLUCLIGHT_REPOSITORY):$(VERSION)-$*-cuda-11.3.1-tensorrt8-cudnn8-devel-ubuntu18.04" \
+		-f fluctlight/tensorrt.Dockerfile \
+		fluctlight
+
 fluctlight-%-image: catbox-%-image
 	docker buildx build \
 		--push \
