@@ -83,7 +83,7 @@ catbox-nodejs-%-image: catbox-%-image
 typewriter-%-image: catbox-%-image
 	docker buildx build \
 		--push \
-		--build-arg BASE_IMAGE="$(PAPERCRAFT_REPOSITORY):$(VERSION)-$*" \
+		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
 		-t "$(TYPEWRITER_REPOSITORY):$(VERSION)-$*" \
 		typewriter
 
