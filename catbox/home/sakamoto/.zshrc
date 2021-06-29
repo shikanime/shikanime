@@ -2,6 +2,7 @@
 . ${HOME}/.zinit/bin/zinit.zsh
 
 # ZSH common utils
+zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 

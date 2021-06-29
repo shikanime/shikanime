@@ -80,6 +80,14 @@ catbox-nodejs-%-image: catbox-%-image
 		-f catbox/nodejs.Dockerfile \
 		catbox
 
+catbox-go-%-image: catbox-%-image
+	docker buildx build \
+		--push \
+		--build-arg BASE_IMAGE="$(CATBOX_REPOSITORY):$(VERSION)-$*" \
+		-t "$(CATBOX_REPOSITORY):$(VERSION)-go-$*" \
+		-f catbox/go.Dockerfile \
+		catbox
+
 typewriter-%-image: catbox-%-image
 	docker buildx build \
 		--push \
