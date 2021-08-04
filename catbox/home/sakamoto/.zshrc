@@ -15,4 +15,4 @@ zinit snippet OMZP::git
 zinit snippet OMZP::debian
 
 # Runtime package manager
-zinit light asdf-vm/asdf
+zinit load asdf-vm/asdf
