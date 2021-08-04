@@ -1,5 +1,5 @@
 # Images registry to be pushed
-IMAGE_REGISTRY=docker.pkg.github.com/shikanime/shikanime
+IMAGE_REGISTRY=ghcr.io/shikanime/shikanime
 
 # Default Debian base image
 PAPERCRAFT_REPOSITORY=$(IMAGE_REGISTRY)/papercraft
