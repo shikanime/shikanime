@@ -51,4 +51,5 @@ ENV DISABLE_UPDATE_PROMPT "true"
 COPY --from=zinit --chown=sakamoto /home/sakamoto/.zinit /home/sakamoto/.zinit
 
 # Add user configuration
+COPY --chown=sakamoto home/sakamoto/.zshenv /home/sakamoto/.zshenv
 COPY --chown=sakamoto home/sakamoto/.zshrc /home/sakamoto/.zshrc

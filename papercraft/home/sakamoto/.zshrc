@@ -1,6 +1,3 @@
-# Zinit
-. ${HOME}/.zinit/bin/zinit.zsh
-
 # ZSH common utils
 zinit light zsh-users/zsh-autosuggestions
 

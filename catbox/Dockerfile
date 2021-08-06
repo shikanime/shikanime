@@ -15,4 +15,5 @@ FROM system AS base
 # Add user configuration
 COPY --chown=sakamoto home/sakamoto/.gitconfig /home/sakamoto/.gitconfig
 COPY --chown=sakamoto home/sakamoto/.gitignore /home/sakamoto/.gitignore
+COPY --chown=sakamoto home/sakamoto/.zshenv /home/sakamoto/.zshenv
 COPY --chown=sakamoto home/sakamoto/.zshrc /home/sakamoto/.zshrc
