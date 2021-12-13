@@ -1,10 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -22,20 +15,6 @@
 \usepackage{multicol}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -52,196 +31,193 @@
 
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
+\raggedbottom{}
+\raggedright{}
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\titleformat{\section}{ \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule{} \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+\item\small{ {#1 \vspace{-2pt}} } }
 
 \newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
+\item\small{ {#1 #2 #3 #4 \vspace{-2pt}} } }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
+\newcommand{\resumeSubheading}[4]{ \vspace{-2pt}\item
+\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r} \textbf{#1} &
+\textbf{\small #2} \\
+\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-7pt} }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r} \textit{\small#1} &
+\textit{\small #2} \\
+\end{tabular*}\vspace{-7pt} }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
-}
+\begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r} \small#1 &
+\textbf{\small #2}\\
+\end{tabular*}\vspace{-7pt} }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in,
+label={}]} \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    {\Huge \scshape First Last} \\ \vspace{1pt}
-    123 Street Name, Town, State 12345 \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ 123-456-7890 ~ \href{mailto:x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{email@gmail.com}} ~
-    \href{https://linkedin.com/in//}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/username}}  ~
-    \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/username}}
-    \vspace{-8pt}
+  {\Huge \scshape William Phetsinorath} \\
+  \vspace{1pt} 2 rue des tournesols,
+  \href{https://linkedin.com/in/williamphetsinorath/}{\raisebox{-0.2\height}\faLinkedin\
+    \underline{linkedin.com/in/williamphetsinorath}} ~
+  \href{https://github.com/shikanime}{\raisebox{-0.2\height}\faGithub\
+    \underline{github.com/shikanime}}
+  \vspace{-8pt}
 \end{center}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {State University}{Sep. 2017 -- May 2021}
-      {Bachelor of Science in Computer Science}{City, State}
-  \resumeSubHeadingListEnd
+% -----------EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart{}
 
-%------RELEVANT COURSEWORK-------
-\section{Relevant Coursework}
-    %\resumeSubHeadingListStart
-        \begin{multicols}{4}
-            \begin{itemize}[itemsep=-5pt, parsep=3pt]
-                \item\small Data Structures
-                \item Software Methodology
-                \item Algorithms Analysis
-                \item Database Management
-                \item Artificial Intelligence
-                \item Internet Technology
-                \item Systems Programming
-                \item Computer Architecture
-            \end{itemize}
-        \end{multicols}
-        \vspace*{2.0\multicolsep}
-    %\resumeSubHeadingListEnd
+\resumeSubheading{SFEIR}
+{October 2018 -- Present} % chktex 8
+{Data Engineer}
+{Neuilly-Sur-Seine, France}
+\resumeItemListStart{}
+\resumeItem{Integrated and optimized the computation of satellite images for the
+  detection of atmospheric anomalies on the Google Earth engine, monitoring and
+  reporting on the environmental impact of petrochemical infrastructures.}
+\resumeItem{Designed and implemented data ingestion pipeline to BigQuery via
+  Apache Beam and Apache Airflow served by Tableau and used by industrial supply
+  chain decision makers.}
+\resumeItem{Modeling of data marts and dashboards of business metrics and car
+  fleet management for Leasys.}
+\resumeItemListEnd{}
 
+\resumeSubheading{SFEIR}
+{September 2018 -- October 2021} % chktex 8
+{Software Engineer}
+{Neuilly-Sur-Seine, France}
+\resumeItemListStart{}
+\resumeItem{}
+\resumeItem{Developped of infrastructure certificate validator and secure IoT
+  devices with PKI for Louis Vuitton Tambour luxury smartwatch.}
+\resumeItem{Trained multiple enterprise on 1--3 days sessions on Google Cloud
+  fundamentals and Google Infrastructure Kubernetes specialisation through the
+  SFEIR Institute.}
+\resumeItem{Maintained and improved the transpiler architecture of the xLayers
+  open source project. Allowing to generate Angular, Xamarin\ldots  UI components from
+  a SketchApp file format, streamlining the process between design and technical
+  implementation.}
+\resumeItemListEnd{}
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubheading{École d'Alternance en Informatique}
+{September 2017 -- October 2017} % chktex 8
+{Computer Science Teaching Assistant}
+{Ivry-sur-Seine, France}
+\resumeItemListStart{}
+\resumeItem{Organization of dynamic activities and workshops on the subjects
+  studied as well as the evaluation interview at the end of the projects.}
+\resumeItem{Training in system languages: C, AWK, Perl and Bash; Web and Unix
+  system fundamentals to +100 first year students.}
+\resumeItemListEnd{}
 
-    \resumeSubheading
-      {Electronics Company}{May 2020 -- August 2020}
-      {Software Engineer Intern}{City, State}
-      \resumeItemListStart
-        \resumeItem{Developed a service to automatically perform a set of unit tests daily on a product in development in order to decrease time needed for team members to identify and fix bugs/issues.}
-        \resumeItem{Incorporated scripts using Python and PowerShell to aggregate XML test results into an organized format and to load the latest build code onto the hardware, so that daily testing can be performed.}
-        \resumeItem{Utilized Jenkins to provide a continuous integration service in order to automate the entire process of loading the latest build code and test files, running the tests, and generating a report of the results once per day.}
-        \resumeItem{Explored ways to visualize and send a daily report of test results to team members  using HTML, Javascript, and CSS.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Startup, Inc}{May 2019 -- August 2019}
-      {Front End Developer Intern}{City, State}
-      \resumeItemListStart
-        \resumeItem{Assisted in development of the front end of a mobile application for iOS/Android using Dart and the Flutter framework.}
-        \resumeItem{Worked with Google Firebase to manage user inputted data across multiple platforms including web and mobile apps.}
-        \resumeItem{Collaborated with team members using version control systems such as Git to organize modifications and assign tasks.}
-        \resumeItem{Utilized Android Studio as a development environment in order to visualize the application in both iOS and Android.}
-    \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+\resumeSubheading{KMB Labs}
+{June 2017 -- December 2018} % chktex 8
+{Full Stack Developer Intern}
+{Paris, France}
+\resumeItemListStart{}
+\resumeItem{Designed and implemented new conversation dialogue and user
+  interactive element on Facebook Messenger chatbots, using React library and
+  wit.ai Natural Language Processing service.}
+\resumeItem{Integrated and processed 10,000+ customer jobs across multiple SQL,
+  NoSQL and search engine databases daily on Amazon Web Service, delivering
+  content to 1000+ active users daily.}
+\resumeItem{Introduced and integrated a methodology for collaborating with team
+  members on trunk-based development using AWS CodeCommit to organize changes and
+  Trello to assign tasks.}
+\resumeItemListEnd{}
+\resumeSubHeadingListEnd{}
 \vspace{-16pt}
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gym Reservation Bot} $|$ \emph{Python, Selenium, Google Cloud Console}}{January 2021}
-          \resumeItemListStart
-            \resumeItem{Developed an automatic bot using Python and Google Cloud Console to register myself for a timeslot at my school gym.}
-            \resumeItem{Implemented Selenium to create an instance of Chrome in order to interact with the correct elements of the web page.}
-            \resumeItem{Created a Linux virtual machine to run on Google Cloud so that the program is able to run everyday from the cloud.}
-            \resumeItem{Used Cron to schedule the program to execute automatically at 11 AM every morning so a reservation is made for me.}
-          \resumeItemListEnd
-          \vspace{-13pt}
-      \resumeProjectHeading
-          {\textbf{Ticket Price Calculator App} $|$ \emph{Java, Android Studio}}{November 2020}
-          \resumeItemListStart
-            \resumeItem{Created an Android application using Java and Android Studio to calculate ticket prices for trips to museums in NYC.}
-            \resumeItem{Processed user inputted information in the back-end of the app to return a subtotal price based on the tickets selected.}
-            \resumeItem{Utilized the layout editor to create a UI for the application in order to allow different scenes to interact with each other.}
-          \resumeItemListEnd
-          \vspace{-13pt}
-          \resumeProjectHeading
-          {\textbf{Transaction Management GUI} $|$ \emph{Java, Eclipse, JavaFX}}{October 2020}
-          \resumeItemListStart
-            \resumeItem{Designed a sample banking transaction system using Java to simulate the common functions of using a bank account.}
-            \resumeItem{Used JavaFX to create a GUI that supports actions such as creating an account, deposit, withdraw, list all acounts, etc.}
-            \resumeItem{Implemented object-oriented programming practices such as inheritance to create different account types and databases.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+
+% -----------PROJECTS-----------
+\section{Leadership Experience}
+\vspace{-5pt}
+\resumeSubHeadingListStart{}
+\resumeProjectHeading{\textbf{SFEIR \& Panopli \& Teamstarter} \(|\) \emph{Project Manager}}
+{February 2020 -- January 2021} % chktex 8
+\resumeItemListStart{}
+\resumeItem{SFEIR is known for its rich corporate culture and its emblematic
+  mascot the Axolotl. The plush would be an icon that would become real. So we
+  took the initiative to launch an internal project and, with funding from 200+
+  contributors, we were able to find a partners, create several prototypes and
+  produce 500 exclusive plushes.}
+\resumeItemListEnd{}
+\resumeSubHeadingListEnd{}
 \vspace{-15pt}
 
 
+% -----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart{}
+\resumeSubheading{École d'Alternance en Informatique}
+{September 2016 -- October 2021} % chktex 8
+{Master's Degree in Network and Cyber Security Architect}
+{Ivry-sur-Seine, France}
+\resumeSubHeadingListEnd{}
+
+
+% -----------INVOLVEMENT---------------
+\section{Licenses \& Certifications}
+\resumeSubHeadingListStart{}
+\resumeSubheading{Professional Data Engineer Certification}
+{Jun 2021 -- Jun 2023} % chktex 8
+{Certification}
+{Google Cloud}
+\resumeSubheading{Professional Machine Learning Engineer Certification}
+{Jun 2021 -- Jun 2023} % chktex 8
+{Certification}
+{Google Cloud}
+\resumeSubheading{Certified Kubernetes Application Developer}
+{Febuary 2021 -- Febuary 2024} % chktex 8
+{Certification}
+{The Linux Foundation}
+\resumeSubheading{Terraform Associate}
+{January 2021 -- January 2023} % chktex 8
+{Certification}
+{HashiCorp}
+\resumeSubheading{Professional Cloud Developer Certification}
+{May 2019 -- April 2023} % chktex 8
+{Certification}
+{Google Cloud}
+\resumeSubHeadingListEnd{}
+\vspace{-16pt}
+
 %
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, Java, C, HTML/CSS, JavaScript, SQL} \\
-     \textbf{Developer Tools}{: VS Code, Eclipse, Google Cloud Platform, Android Studio} \\
-     \textbf{Technologies/Frameworks}{: Linux, Jenkins, GitHub, JUnit, WordPress} \\
-    }}
- \end{itemize}
- \vspace{-16pt}
-
-
-%-----------INVOLVEMENT---------------
-\section{Leadership / Extracurricular}
-    \resumeSubHeadingListStart
-        \resumeSubheading{Fraternity}{Spring 2020 -- Present}{President}{University Name}
-            \resumeItemListStart
-                \resumeItem{Achieved a 4 star fraternity ranking by the Office of Fraternity and Sorority Affairs (highest possible ranking).}
-                \resumeItem{Managed executive board of 5 members and ran weekly meetings to oversee progress in essential parts of the chapter.}
-                \resumeItem{Led chapter of 30+ members to work towards goals that improve and promote community service, academics, and unity.}
-            \resumeItemListEnd
-
-    \resumeSubHeadingListEnd
+% -----------PROGRAMMING SKILLS-----------
+\section{Technical Skills \& Interests}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{ \textbf{Programming Languages}{: OCaml, Erlang/Elixir, Rust, Go,
+                  C/C++, SQL, Python, JavaScript/TypeScript} \\
+                \textbf{Technologies}{: Tensorflow, Kubernetes, Apache Beam,
+                  Game Server Development, Blockchain, Functional Programming}
+          }}
+\end{itemize}
 
 
 \end{document}
