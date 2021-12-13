@@ -30,11 +30,15 @@
 \raggedbottom{}
 \raggedright{}
 \setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}
+{\vspace{-4pt}\scshape\raggedright\large}
+{}
+{0em}
+{}
+[\color{black}\titlerule\vspace{-5pt}]
 
 %-------------------------
 % Custom commands
@@ -78,8 +82,10 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://linkedin.com/in/williamphetsinorath}{\Large William Phetsinorath}} & \href{mailto:contact@example.com}{contact@example.com}\\
-  \href{https://linkedin.com/in/williamphetsinorath}{https://linkedin.com/in/williamphetsinorath} & +33 X XX XX XX XX \\
+  \textbf{\href{https://linkedin.com/in/williamphetsinorath}{\Large William Phetsinorath}} &
+  \href{mailto:contact@example.com}{contact@example.com}\\
+  \href{https://linkedin.com/in/williamphetsinorath}{https://linkedin.com/in/williamphetsinorath} &
+  +33 X XX XX XX XX \\
 \end{tabular*}
 
 
@@ -208,10 +214,14 @@
 \section{Technical Skills \& Interests}
 \resumeSubHeadingListStart{}
 \resumeItem{
-  \textbf{Languages}{: OCaml, Erlang/Elixir, Rust, Go, C/C++, SQL, Python, JavaScript/TypeScript}
+  \textbf{Languages:}{
+    OCaml, Erlang/Elixir, Rust, Go, C/C++, SQL, Python, JavaScript/TypeScript
+  }
 }
 \resumeItem{
-  \textbf{Technologies}{: Tensorflow, Kubernetes, Apache Beam, Game Server Development, Blockchain}
+  \textbf{Technologies:}{
+    Tensorflow, Kubernetes, Apache Beam, Game Server Development, Blockchain
+  }
 }
 \resumeSubHeadingListEnd{}
 
