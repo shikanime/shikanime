@@ -15,7 +15,7 @@
         username = "williamphetsinorath";
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
-          nixpkgs.config.allowUnfree = true;
+          nixpkgs.config = import ./config.nix;
           imports = [ ./home.nix ];
         };
       };
@@ -25,7 +25,7 @@
         username = "devas";
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
-          nixpkgs.config.allowUnfree = true;
+          nixpkgs.config = import ./config.nix;
           imports = [ ./home.nix ];
         };
       };
