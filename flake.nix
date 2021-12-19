@@ -29,10 +29,16 @@
           imports = [ ./home.nix ];
         };
       };
+      olva = home-manager.lib.homeManagerConfiguration {
+        system = "x86_64-darwin";
+        homeDirectory = "/Users/devas";
+        username = "devas";
+        stateVersion = "21.11";
+        configuration = { config, pkgs, ... }: {
+          nixpkgs.config = import ./config.nix;
+          imports = [ ./home.nix ];
+        };
+      };
     };
-    defaultPackage.x86_64-darwin =
-      self.homeConfigurations.altashar.activationPackage;
-    defaultPackage.x86_64-linux =
-      self.homeConfigurations.ishtar.activationPackage;
   };
 }
