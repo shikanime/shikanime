@@ -30,7 +30,8 @@ let
     pkgs.podman
   ];
 
-  utilityPackages = [ pkgs.openssh pkgs.unzip pkgs.htop pkgs.yq pkgs.zip ]
+  utilityPackages =
+    [ pkgs.daemonize pkgs.openssh pkgs.unzip pkgs.htop pkgs.yq pkgs.zip ]
     ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
       pkgs.inotify-tools
       pkgs.usbutils
