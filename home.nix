@@ -30,12 +30,18 @@ let
     pkgs.podman
   ];
 
-  utilityPackages =
-    [ pkgs.daemonize pkgs.openssh pkgs.unzip pkgs.htop pkgs.yq pkgs.zip ]
-    ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
-      pkgs.inotify-tools
-      pkgs.usbutils
-    ];
+  utilityPackages = [
+    pkgs.daemonize
+    pkgs.openssh
+    pkgs.unzip
+    pkgs.htop
+    pkgs.yq
+    pkgs.zip
+    pkgs.syncthing
+  ] ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
+    pkgs.inotify-tools
+    pkgs.usbutils
+  ];
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -128,11 +134,6 @@ in {
 
   programs.gpg.enable = true;
 
-  services.gpg-agent = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
-    enable = true;
-    enableSshSupport = true;
-  };
-
   programs.ssh = {
     enable = true;
     matchBlocks = {
@@ -193,4 +194,12 @@ in {
   };
 
   programs.mpv.enable = true;
+
+  services.gpg-agent = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
+    enable = true;
+    enableSshSupport = true;
+  };
+
+  services.syncthing =
+    lib.mkIf pkgs.stdenv.hostPlatform.isLinux { enable = true; };
 }
