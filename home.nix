@@ -195,11 +195,10 @@ in {
 
   programs.mpv.enable = true;
 
-  services.gpg-agent = lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
-    enable = true;
+  services.gpg-agent = {
+    enable = pkgs.stdenv.hostPlatform.isLinux;
     enableSshSupport = true;
   };
 
-  services.syncthing =
-    lib.mkIf pkgs.stdenv.hostPlatform.isLinux { enable = true; };
+  services.syncthing.enable = pkgs.stdenv.hostPlatform.isLinux;
 }
