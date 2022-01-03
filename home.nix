@@ -2,7 +2,6 @@
 
 let
   devPackages = [
-    pkgs.yarn
     pkgs.darcs
     pkgs.nixfmt
     pkgs.rustup
