@@ -26,7 +26,6 @@ let
     pkgs.cloudflared
     pkgs.terraform
     pkgs.github-cli
-    pkgs.podman
   ];
 
   utilityPackages = [
