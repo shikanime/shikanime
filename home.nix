@@ -138,22 +138,22 @@ in {
     matchBlocks = {
       "gitlab.com" = {
         hostname = "gitlab.com";
-        identityFile = "${config.home.homeDirectory}/.ssh/gitlab";
+        identityFile = "~/.ssh/gitlab";
         identitiesOnly = true;
       };
       "github.com" = {
         hostname = "github.com";
-        identityFile = "${config.home.homeDirectory}/.ssh/github";
+        identityFile = "~/.ssh/github";
         identitiesOnly = true;
       };
       "ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
-        identityFile = "${config.home.homeDirectory}/.ssh/azure";
+        identityFile = "~/.ssh/azure";
         identitiesOnly = true;
       };
       "gcmd.birdz.com" = {
         hostname = "gcmd.birdz.com";
-        identityFile = "${config.home.homeDirectory}/.ssh/birdz";
+        identityFile = "~/.ssh/birdz";
         identitiesOnly = true;
       };
     };
