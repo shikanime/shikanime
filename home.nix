@@ -19,6 +19,8 @@ let
   ];
 
   cloudPackages = [
+    pkgs.skaffold
+    pkgs.kompose
     pkgs.google-cloud-sdk
     pkgs.azure-cli
     pkgs.aws
