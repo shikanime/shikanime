@@ -24,7 +24,6 @@ let
     pkgs.google-cloud-sdk
     pkgs.azure-cli
     pkgs.aws
-    pkgs.kubectl
     pkgs.minikube
     pkgs.cloudflared
     pkgs.terraform
