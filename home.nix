@@ -7,6 +7,9 @@ let
     pkgs.nixfmt
     pkgs.rustup
     pkgs.poetry
+    pkgs.elixir
+    pkgs.erlang
+    pkgs.rebar3
     pkgs.python3Packages.black
     pkgs.python3Packages.flake8
     pkgs.python3Packages.autopep8
