@@ -181,6 +181,7 @@ in {
     aliases = {
       adog = "log --all --decorate --oneline --graph";
       pr = "pull --rebase";
+      am = "commit --amend";
       pf = "push --force-with-lease";
     };
     ignores = [ "*~" ".fuse_hidden*" ".directory" ".Trash-*" ".nfs*" ];
