@@ -10,10 +10,15 @@ let
     pkgs.elixir
     pkgs.erlang
     pkgs.rebar3
+    pkgs.nodejs
+    pkgs.deno
+    pkgs.go
+    pkgs.python3
     pkgs.python3Packages.black
     pkgs.python3Packages.flake8
     pkgs.python3Packages.autopep8
     pkgs.nodePackages.esy
+    pkgs.nodePackages.typescript
     pkgs.nodePackages.eslint
     pkgs.nodePackages.stylelint
     pkgs.nodePackages.htmlhint
