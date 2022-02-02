@@ -183,6 +183,9 @@ in {
       pr = "pull --rebase";
       am = "commit --amend";
       pf = "push --force-with-lease";
+      p = "push";
+      s = "switch";
+      a = "add .";
     };
     ignores = [ "*~" ".fuse_hidden*" ".directory" ".Trash-*" ".nfs*" ];
 
