@@ -178,7 +178,11 @@ in {
     userName = "Shikanime Deva";
     userEmail = "deva.shikanime@protonmail.com";
 
-    aliases.adog = "log --all --decorate --oneline --graph";
+    aliases = {
+      adog = "log --all --decorate --oneline --graph";
+      pr = "pull --rebase";
+      pf = "push --force-with-lease";
+    };
     ignores = [ "*~" ".fuse_hidden*" ".directory" ".Trash-*" ".nfs*" ];
 
     lfs.enable = true;
