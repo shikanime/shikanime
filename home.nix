@@ -15,6 +15,7 @@ let
     pkgs.yarn
     pkgs.go
     pkgs.python3
+    pkgs.texlive.combined.scheme-full
     pkgs.python3Packages.black
     pkgs.python3Packages.flake8
     pkgs.python3Packages.autopep8
