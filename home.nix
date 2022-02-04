@@ -1,6 +1,9 @@
 { lib, config, pkgs ? import <nixpkgs> { }, ... }:
 
 let
+  pythonPackages =
+    pkgs.python3.withPackages (p: with p; [ pip pipx black flake8 autopep8 ]);
+
   devPackages = [
     pkgs.gnumake
     pkgs.darcs
@@ -14,18 +17,8 @@ let
     pkgs.deno
     pkgs.yarn
     pkgs.go
-    pkgs.python3
     pkgs.texlive.combined.scheme-full
-    pkgs.python3Packages.black
-    pkgs.python3Packages.flake8
-    pkgs.python3Packages.autopep8
-    pkgs.nodePackages.esy
-    pkgs.nodePackages.typescript
-    pkgs.nodePackages.eslint
-    pkgs.nodePackages.stylelint
-    pkgs.nodePackages.htmlhint
-    pkgs.nodePackages.jshint
-    pkgs.nodePackages.prettier
+    pythonPackages
   ];
 
   cloudPackages = [
