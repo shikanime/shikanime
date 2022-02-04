@@ -12,6 +12,7 @@ let
     pkgs.rebar3
     pkgs.nodejs
     pkgs.deno
+    pkgs.yarn
     pkgs.go
     pkgs.python3
     pkgs.python3Packages.black
