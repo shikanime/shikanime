@@ -204,8 +204,6 @@ in {
     };
   };
 
-  programs.mpv.enable = true;
-
   services.gpg-agent = {
     enable = pkgs.stdenv.hostPlatform.isLinux;
     enableSshSupport = true;
