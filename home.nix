@@ -6,6 +6,7 @@ let
 
   devPackages = [
     pkgs.gnumake
+    pkgs.cmake
     pkgs.darcs
     pkgs.nixfmt
     pkgs.rustup
