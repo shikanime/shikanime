@@ -9,6 +9,8 @@ let
     pkgs.cmake
     pkgs.darcs
     pkgs.nixfmt
+    pkgs.php
+    pkgs.ruby
     pkgs.rustup
     pkgs.poetry
     pkgs.elixir
