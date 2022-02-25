@@ -8,6 +8,11 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }: {
+    packages.x86_64-darwin.curriculum =
+      import ./default.nix { pkgs = nixpkgs.legacyPackages.x86_64-darwin; };
+    packages.x86_64-linux.curriculum =
+      import ./default.nix { pkgs = nixpkgs.legacyPackages.x86_64-linux; };
+
     homeConfigurations = {
       altashar = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-darwin";
