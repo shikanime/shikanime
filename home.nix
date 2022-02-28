@@ -96,6 +96,8 @@ in {
 
   programs.jq.enable = true;
 
+  programs.dircolors.enable = true;
+
   programs.zsh = {
     enable = true;
     autocd = true;
