@@ -91,12 +91,15 @@ in {
 
   programs.opam = {
     enable = true;
+    enableBashIntegration = true;
     enableZshIntegration = true;
   };
 
   programs.jq.enable = true;
 
   programs.dircolors.enable = true;
+
+  programs.bash.enable = true;
 
   programs.zsh = {
     enable = true;
@@ -127,6 +130,7 @@ in {
 
   programs.direnv = {
     enable = true;
+    enableBashIntegration = true;
     enableZshIntegration = true;
     nix-direnv = {
       enable = true;
@@ -136,6 +140,7 @@ in {
 
   programs.starship = {
     enable = true;
+    enableBashIntegration = true;
     enableZshIntegration = true;
   };
 
