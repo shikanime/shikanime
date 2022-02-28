@@ -33,6 +33,7 @@ let
     pkgs.minikube
     pkgs.cloudflared
     pkgs.terraform
+    pkgs.pulumi-bin
     pkgs.github-cli
   ];
 
