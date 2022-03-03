@@ -2,7 +2,7 @@
 
 let
   pythonPackages =
-    pkgs.python3.withPackages (p: with p; [ pip pipx black flake8 autopep8 ]);
+    pkgs.python3.withPackages (pypkgs: with pypkgs; [ pip pipx black flake8 autopep8 ]);
 
   devPackages = [
     pkgs.gnumake
@@ -31,6 +31,9 @@ let
     pkgs.azure-cli
     pkgs.aws
     pkgs.minikube
+    pkgs.kubectl
+    pkgs.istioctl
+    pkgs.kn
     pkgs.cloudflared
     pkgs.terraform
     pkgs.pulumi-bin
