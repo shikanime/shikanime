@@ -198,12 +198,8 @@ in {
 
     aliases = {
       adog = "log --all --decorate --oneline --graph";
-      pr = "pull --rebase";
       am = "commit --amend";
-      pf = "push --force-with-lease";
-      p = "push";
-      s = "switch";
-      a = "add .";
+      pouf = "push --force-with-lease";
     };
     ignores = [ "*~" ".fuse_hidden*" ".directory" ".Trash-*" ".nfs*" ];
 
@@ -213,7 +209,6 @@ in {
       core.editor = "vim";
       color.ui = "auto";
       pull = {
-        ff = "only";
         rebase = true;
       };
       rebase.autoStash = true;
