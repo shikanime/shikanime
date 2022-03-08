@@ -1,8 +1,8 @@
 { lib, config, pkgs ? import <nixpkgs> { }, ... }:
 
 let
-  pythonPackages =
-    pkgs.python3.withPackages (pypkgs: with pypkgs; [ pip pipx black flake8 autopep8 ]);
+  pythonPackages = pkgs.python3.withPackages
+    (pypkgs: with pypkgs; [ pip pipx black flake8 autopep8 ]);
 
   devPackages = [
     pkgs.gnumake
@@ -36,7 +36,6 @@ let
     pkgs.kn
     pkgs.cloudflared
     pkgs.terraform
-    pkgs.pulumi-bin
     pkgs.github-cli
   ];
 
@@ -208,9 +207,7 @@ in {
     extraConfig = {
       core.editor = "vim";
       color.ui = "auto";
-      pull = {
-        rebase = true;
-      };
+      pull = { rebase = true; };
       rebase.autoStash = true;
       init.defaultBranch = "main";
       credential."https://dev.azure.com".useHttpPath = true;
