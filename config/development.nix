@@ -20,7 +20,7 @@ in {
     pkgs.gnumake
     pkgs.cmake
     pkgs.darcs
-    pkgs.nixfmt
+    pkgs.nixpkgs-fmt
     pkgs.php
     pkgs.ruby
     pkgs.rustup
