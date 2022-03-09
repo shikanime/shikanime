@@ -21,7 +21,7 @@
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
           nixpkgs.config = import ./config.nix;
-          imports = [ ./home.nix ];
+          imports = [ ./config/home.nix ./config/development.nix ];
         };
       };
       ishtar = home-manager.lib.homeManagerConfiguration {
@@ -31,7 +31,11 @@
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
           nixpkgs.config = import ./config.nix;
-          imports = [ ./home.nix ];
+          imports = [
+            ./config/home.nix
+            ./config/development.nix
+            ./config/linux/development.nix
+          ];
         };
       };
       olva = home-manager.lib.homeManagerConfiguration {
@@ -41,7 +45,7 @@
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
           nixpkgs.config = import ./config.nix;
-          imports = [ ./home.nix ];
+          imports = [ ./config/home.nix ./config/development.nix ];
         };
       };
     };

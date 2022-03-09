@@ -1,10 +1,10 @@
-{ lib, config, pkgs ? import <nixpkgs> { }, ... }:
+{ pkgs ? import <nixpkgs> { }, ... }:
 
 let
   pythonPackages = pkgs.python3.withPackages
     (pypkgs: with pypkgs; [ pip pipx black flake8 autopep8 ]);
-
-  devPackages = [
+in {
+  home.packages = [
     pkgs.gnumake
     pkgs.cmake
     pkgs.darcs
@@ -21,10 +21,6 @@ let
     pkgs.yarn
     pkgs.go
     pkgs.texlive.combined.scheme-full
-    pythonPackages
-  ];
-
-  cloudPackages = [
     pkgs.skaffold
     pkgs.kompose
     pkgs.google-cloud-sdk
@@ -39,58 +35,9 @@ let
     pkgs.github-cli
   ];
 
-  utilityPackages = [
-    pkgs.daemonize
-    pkgs.openssh
-    pkgs.unzip
-    pkgs.htop
-    pkgs.yq
-    pkgs.zip
-    pkgs.syncthing
-  ] ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
-    pkgs.inotify-tools
-    pkgs.usbutils
-  ];
-in {
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  # Session configuration
-  home.sessionVariables.EDITOR = "vim";
-
-  # Core global utilitary packages
-  home.packages = devPackages ++ cloudPackages ++ utilityPackages;
-
-  home.file.".editorconfig".text = ''
-    # top-most EditorConfig file
-    root = true
-
-    # Unix-style newlines with a newline ending every file
-    [*]
-    end_of_line = lf
-    insert_final_newline = true
-
-    # Matches multiple files with brace expansion notation
-    # Set default charset
-    [*.{js,py}]
-    charset = utf-8
-
-    # 4 space indentation
-    [*.py]
-    indent_style = space
-    indent_size = 4
-
-    # Tab indentation (no size specified)
-    [Makefile]
-    indent_style = tab
-  '';
-
   programs.java.enable = true;
 
-  # TODO: find a way to add gopls, gopkgs, go-outline, dlv, dlv-dap and staticcheck.
   programs.go.enable = true;
-
-  programs.vim.enable = true;
 
   programs.opam = {
     enable = true;
@@ -98,18 +45,17 @@ in {
     enableZshIntegration = true;
   };
 
-  programs.jq.enable = true;
-
-  programs.dircolors.enable = true;
-
-  programs.bash.enable = true;
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    nix-direnv = {
+      enable = true;
+      enableFlakes = true;
+    };
+  };
 
   programs.zsh = {
-    enable = true;
-    autocd = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    enableSyntaxHighlighting = true;
     oh-my-zsh = {
       enable = true;
       plugins = [
@@ -129,27 +75,6 @@ in {
         "vim-interaction"
       ];
     };
-  };
-
-  programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    nix-direnv = {
-      enable = true;
-      enableFlakes = true;
-    };
-  };
-
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
-
-  programs.tmux = {
-    enable = true;
-    newSession = true;
   };
 
   programs.gpg.enable = true;
@@ -213,11 +138,4 @@ in {
       credential."https://dev.azure.com".useHttpPath = true;
     };
   };
-
-  services.gpg-agent = {
-    enable = pkgs.stdenv.hostPlatform.isLinux;
-    enableSshSupport = true;
-  };
-
-  services.syncthing.enable = pkgs.stdenv.hostPlatform.isLinux;
 }
