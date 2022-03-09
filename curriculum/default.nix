@@ -1,9 +1,9 @@
 { stdenv, lib, texlive }:
 
 stdenv.mkDerivation {
-  name = "shikanime-curriculum";
+  name = "curriculum";
   buildInputs = [ texlive.combined.scheme-full ];
-  src = lib.cleanSource ./curriculum;
+  src = lib.cleanSource ./.;
 
   buildPhase = "pdflatex *.tex";
   installPhase = ''

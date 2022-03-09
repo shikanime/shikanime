@@ -10,7 +10,8 @@
   outputs = { self, nixpkgs, home-manager, ... }: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       with import nixpkgs { inherit system; }; {
-        curriculum = import ./default.nix { inherit stdenv lib texlive; };
+        curriculum =
+          import ./curriculum/default.nix { inherit stdenv lib texlive; };
       });
 
     homeConfigurations = {

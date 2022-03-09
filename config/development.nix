@@ -5,6 +5,18 @@ let
     (pypkgs: with pypkgs; [ pip pipx black flake8 autopep8 ]);
 in {
   home.packages = [
+    pkgs.skaffold
+    pkgs.kompose
+    pkgs.google-cloud-sdk
+    pkgs.azure-cli
+    pkgs.aws
+    pkgs.minikube
+    pkgs.kubectl
+    pkgs.istioctl
+    pkgs.kn
+    pkgs.cloudflared
+    pkgs.terraform
+    pkgs.github-cli
     pkgs.gnumake
     pkgs.cmake
     pkgs.darcs
@@ -20,19 +32,8 @@ in {
     pkgs.deno
     pkgs.yarn
     pkgs.go
+    pythonPackages
     pkgs.texlive.combined.scheme-full
-    pkgs.skaffold
-    pkgs.kompose
-    pkgs.google-cloud-sdk
-    pkgs.azure-cli
-    pkgs.aws
-    pkgs.minikube
-    pkgs.kubectl
-    pkgs.istioctl
-    pkgs.kn
-    pkgs.cloudflared
-    pkgs.terraform
-    pkgs.github-cli
   ];
 
   programs.java.enable = true;
