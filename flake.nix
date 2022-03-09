@@ -8,10 +8,10 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }: {
-    packages.x86_64-darwin.curriculum =
-      import ./default.nix { pkgs = nixpkgs.legacyPackages.x86_64-darwin; };
-    packages.x86_64-linux.curriculum =
-      import ./default.nix { pkgs = nixpkgs.legacyPackages.x86_64-linux; };
+    packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
+      with import nixpkgs { inherit system; }; {
+        curriculum = import ./default.nix { inherit stdenv lib texlive; };
+      });
 
     homeConfigurations = {
       altashar = home-manager.lib.homeManagerConfiguration {

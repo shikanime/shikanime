@@ -1,9 +1,9 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ stdenv, lib, texlive }:
 
-pkgs.stdenv.mkDerivation {
+stdenv.mkDerivation {
   name = "shikanime-curriculum";
-  buildInputs = [ pkgs.texlive.combined.scheme-full ];
-  src = pkgs.lib.cleanSource ./curriculum;
+  buildInputs = [ texlive.combined.scheme-full ];
+  src = lib.cleanSource ./curriculum;
 
   buildPhase = "pdflatex *.tex";
   installPhase = ''
