@@ -68,7 +68,6 @@ in {
         "docker"
         "kubectl"
         "rust"
-        "rustup"
         "node"
         "minikube"
         "golang"
