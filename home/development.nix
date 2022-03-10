@@ -3,7 +3,8 @@
 let
   pythonPackages = pkgs.python3.withPackages
     (pypkgs: with pypkgs; [ pip pipx black flake8 autopep8 ]);
-in {
+in
+{
   home.packages = [
     pkgs.skaffold
     pkgs.kompose

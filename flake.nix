@@ -9,7 +9,7 @@
 
   outputs = { self, nixpkgs, home-manager, ... }: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      with import nixpkgs { inherit system; }; {
+      with import nixpkgs { inherit system; config.allowUnfree = true; }; {
         curriculum =
           import ./curriculum/default.nix { inherit stdenv lib texlive; };
       });
@@ -21,8 +21,8 @@
         username = "williamphetsinorath";
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
-          nixpkgs.config = import ./config.nix;
-          imports = [ ./config/home.nix ./config/development.nix ];
+          nixpkgs.config = import ./nixpkgs/config.nix;
+          imports = [ ./home/home.nix ./home/development.nix ];
         };
       };
       ishtar = home-manager.lib.homeManagerConfiguration {
@@ -31,11 +31,11 @@
         username = "devas";
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
-          nixpkgs.config = import ./config.nix;
+          nixpkgs.config = import ./nixpkgs/config.nix;
           imports = [
-            ./config/home.nix
-            ./config/development.nix
-            ./config/linux/development.nix
+            ./home/home.nix
+            ./home/development.nix
+            ./home/linux/development.nix
           ];
         };
       };
@@ -45,8 +45,8 @@
         username = "devas";
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
-          nixpkgs.config = import ./config.nix;
-          imports = [ ./config/home.nix ./config/development.nix ];
+          nixpkgs.config = import ./nixpkgs/config.nix;
+          imports = [ ./home/home.nix ./home/development.nix ];
         };
       };
     };
