@@ -94,9 +94,14 @@ in
         identityFile = "~/.ssh/github";
         identitiesOnly = true;
       };
-      "ssh.dev.azure.com" = {
+      "coopelec.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/azure";
+        identityFile = "~/.ssh/coopelec";
+        identitiesOnly = true;
+      };
+      "lvmh-celine.ssh.dev.azure.com" = {
+        hostname = "ssh.dev.azure.com";
+        identityFile = "~/.ssh/lvmh-celine";
         identitiesOnly = true;
       };
       "gcmd.birdz.com" = {
