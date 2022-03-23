@@ -7,6 +7,11 @@
   # Session configuration
   home.sessionVariables.EDITOR = "vim";
 
+  # Local programs
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
+
   # Core global utilitary packages
   home.packages =
     [ pkgs.daemonize pkgs.openssh pkgs.unzip pkgs.htop pkgs.yq pkgs.zip ];
