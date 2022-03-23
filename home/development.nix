@@ -140,10 +140,11 @@ in
     extraConfig = {
       core.editor = "vim";
       color.ui = "auto";
-      pull = { rebase = true; };
+      pull.rebase = true;
       rebase.autoStash = true;
       init.defaultBranch = "main";
       credential."https://dev.azure.com".useHttpPath = true;
+      credential.helper = "store";
     };
   };
 }
