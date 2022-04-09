@@ -22,7 +22,8 @@ in
     pkgs.cmake
     pkgs.darcs
     pkgs.nixpkgs-fmt
-    pkgs.gcc
+    pkgs.clang
+    pkgs.clang-tools
     pkgs.php
     pkgs.ruby
     pkgs.rustup
