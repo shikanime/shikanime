@@ -32,11 +32,7 @@
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
           nixpkgs.config = import ./nixpkgs/config.nix;
-          imports = [
-            ./home/home.nix
-            ./home/development.nix
-            ./home/linux/development.nix
-          ];
+          imports = [ ./home/home.nix ./home/development.nix ];
         };
       };
       olva = home-manager.lib.homeManagerConfiguration {

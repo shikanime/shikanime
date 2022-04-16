@@ -37,6 +37,8 @@ in
     pkgs.yarn
     pythonPackages
     pkgs.texlive.combined.scheme-full
+  ] ++ pkgs.lib.optionals pkgs.hostPlatform.isLinux [
+    pkgs.nerdctl
   ];
 
   programs.java.enable = true;
@@ -146,5 +148,10 @@ in
       credential."https://dev.azure.com".useHttpPath = true;
       credential.helper = "store";
     };
+  };
+
+  services.gpg-agent = pkgs.lib.mkIf pkgs.hostPlatform.isLinux {
+    enable = true;
+    enableSshSupport = true;
   };
 }
