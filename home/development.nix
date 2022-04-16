@@ -132,7 +132,6 @@ in
 
     aliases = {
       adog = "log --all --decorate --oneline --graph";
-      am = "commit --amend";
       pouf = "push --force-with-lease";
     };
     ignores = [ "*~" ".fuse_hidden*" ".directory" ".Trash-*" ".nfs*" ];
