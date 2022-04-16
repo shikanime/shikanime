@@ -143,7 +143,7 @@ in
       core.editor = "vim";
       color.ui = "auto";
       pull.rebase = true;
-      rebase.autoStash = true;
+      rebase.autostash = true;
       init.defaultBranch = "main";
       credential."https://dev.azure.com".useHttpPath = true;
       credential.helper = "store";
