@@ -35,7 +35,6 @@ in
     pkgs.nodejs
     pkgs.deno
     pkgs.yarn
-    pkgs.go
     pythonPackages
     pkgs.texlive.combined.scheme-full
   ];
