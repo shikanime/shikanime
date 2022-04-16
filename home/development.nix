@@ -11,6 +11,7 @@ in
     pkgs.google-cloud-sdk
     pkgs.azure-cli
     pkgs.aws
+    pkgs.docker
     pkgs.minikube
     pkgs.kubectl
     pkgs.istioctl
