@@ -103,9 +103,9 @@ in
         identityFile = "~/.ssh/coopelec";
         identitiesOnly = true;
       };
-      "lvmh-celine.ssh.dev.azure.com" = {
+      "lvmh.celine.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/lvmh-celine";
+        identityFile = "~/.ssh/lvmh_celine";
         identitiesOnly = true;
       };
       "gcmd.birdz.com" = {
