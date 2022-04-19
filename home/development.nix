@@ -91,30 +91,26 @@ in
       "gitlab.com" = {
         hostname = "gitlab.com";
         identityFile = "~/.ssh/gitlab";
-        identitiesOnly = true;
       };
       "github.com" = {
         hostname = "github.com";
         identityFile = "~/.ssh/github";
-        identitiesOnly = true;
       };
       "coopelec.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
         identityFile = "~/.ssh/coopelec";
-        identitiesOnly = true;
       };
       "lvmh.celine.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
         identityFile = "~/.ssh/lvmh_celine";
-        identitiesOnly = true;
       };
       "gcmd.birdz.com" = {
         hostname = "gcmd.birdz.com";
         identityFile = "~/.ssh/birdz";
-        identitiesOnly = true;
       };
     };
     extraConfig = ''
+      IdentitiesOnly yes
       HostKeyAlgorithms +ssh-rsa
       PubkeyAcceptedKeyTypes +ssh-rsa
     '';
