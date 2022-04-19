@@ -146,6 +146,7 @@ in
       rebase.autostash = true;
       init.defaultBranch = "main";
       credential."https://dev.azure.com".useHttpPath = true;
+      credential."https://source.developers.google.com".helper = "gcloud.sh";
       credential.helper = "store";
     };
   };
