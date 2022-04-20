@@ -62,4 +62,6 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
   };
+
+  services.syncthing.enable = true;
 }
