@@ -63,5 +63,7 @@
     enableZshIntegration = true;
   };
 
-  services.syncthing.enable = true;
+  services.syncthing = pkgs.lib.mkIf pkgs.hostPlatform.isLinux {
+    enable = true;
+  };
 }
