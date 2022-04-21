@@ -124,13 +124,13 @@ in
   programs.mercurial = {
     enable = true;
     userName = "Shikanime Deva";
-    userEmail = "deva.shikanime@protonmail.com";
+    userEmail = "shikanime.deva@shikanime.studio";
   };
 
   programs.git = {
     enable = true;
     userName = "Shikanime Deva";
-    userEmail = "deva.shikanime@protonmail.com";
+    userEmail = "shikanime.deva@shikanime.studio";
 
     aliases = {
       adog = "log --all --decorate --oneline --graph";
@@ -149,6 +149,8 @@ in
       credential."https://dev.azure.com".useHttpPath = true;
       credential."https://source.developers.google.com".helper = "gcloud.sh";
       credential.helper = "store";
+      user.signingKey = "B9443725856FF9EB";
+      commit.gpgSign = true;
     };
   };
 
