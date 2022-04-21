@@ -21,7 +21,7 @@ users:
   - name: devas
     gecos: Shikanime Deva
     sudo: ALL=(ALL) NOPASSWD:ALL
-    shell: /bin/bash
+    shell: /bin/zsh
     lock_passwd: true
     ssh_authorized_keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7pi5OYqzuMkTymIbJUJteIU3dz+OgduiF5O9cA+B7u devas@ishtar
