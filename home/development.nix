@@ -88,6 +88,11 @@ in
   programs.ssh = {
     enable = true;
     matchBlocks = {
+      "wonderland.local" = {
+        hostname = "wonderland.local";
+        identityFile = "~/.ssh/wonderland";
+        user = "devas";
+      };
       "gitlab.com" = {
         hostname = "gitlab.com";
         identityFile = "~/.ssh/gitlab";
