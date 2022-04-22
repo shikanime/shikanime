@@ -66,4 +66,10 @@
   services.syncthing = pkgs.lib.mkIf pkgs.hostPlatform.isLinux {
     enable = true;
   };
+
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
 }
