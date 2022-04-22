@@ -105,7 +105,7 @@ in
         hostname = "ssh.dev.azure.com";
         identityFile = "~/.ssh/coopelec";
       };
-      "lvmh.celine.ssh.dev.azure.com" = {
+      "celine.lvmh.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
         identityFile = "~/.ssh/lvmh_celine";
       };
