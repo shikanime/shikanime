@@ -21,8 +21,8 @@
         username = "williamphetsinorath";
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
-          nixpkgs.config = import ./nixpkgs/config.nix;
-          imports = [ ./home/home.nix ./home/development.nix ];
+          nixpkgs.config.allowUnfree = true;
+          imports = [ ./nixpkgs/home.nix ];
         };
       };
       ishtar = home-manager.lib.homeManagerConfiguration {
@@ -31,8 +31,8 @@
         username = "devas";
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
-          nixpkgs.config = import ./nixpkgs/config.nix;
-          imports = [ ./home/home.nix ./home/development.nix ];
+          nixpkgs.config.allowUnfree = true;
+          imports = [ ./nixpkgs/home.nix ];
         };
       };
       olva = home-manager.lib.homeManagerConfiguration {
@@ -41,8 +41,8 @@
         username = "devas";
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
-          nixpkgs.config = import ./nixpkgs/config.nix;
-          imports = [ ./home/home.nix ./home/development.nix ];
+          nixpkgs.config.allowUnfree = true;
+          imports = [ ./nixpkgs/home.nix ];
         };
       };
     };

@@ -277,6 +277,10 @@
 				{
 					"PackageIdentifier" : "GnuPG.GnuPG",
 					"Version" : "2.3.5"
+				},
+				{
+					"PackageIdentifier" : "vim.vim",
+					"Version" : "8.2.4803"
 				}
 			],
 			"SourceDetails" :
