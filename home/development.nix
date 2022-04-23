@@ -1,46 +1,6 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
-let
-  pythonPackages = pkgs.python3.withPackages
-    (pypkgs: with pypkgs; [ pip pipx black flake8 autopep8 ]);
-in
 {
-  home.packages = [
-    pkgs.skaffold
-    pkgs.kompose
-    pkgs.google-cloud-sdk
-    pkgs.azure-cli
-    pkgs.aws
-    pkgs.docker
-    pkgs.minikube
-    pkgs.kubectl
-    pkgs.istioctl
-    pkgs.kn
-    pkgs.cloudflared
-    pkgs.terraform
-    pkgs.github-cli
-    pkgs.gnumake
-    pkgs.cmake
-    pkgs.darcs
-    pkgs.nixpkgs-fmt
-    pkgs.clang
-    pkgs.clang-tools
-    pkgs.php
-    pkgs.ruby
-    pkgs.rustup
-    pkgs.poetry
-    pkgs.elixir
-    pkgs.erlang
-    pkgs.rebar3
-    pkgs.nodejs
-    pkgs.deno
-    pkgs.yarn
-    pythonPackages
-    pkgs.texlive.combined.scheme-full
-  ] ++ pkgs.lib.optionals pkgs.hostPlatform.isLinux [
-    pkgs.nerdctl
-  ];
-
   programs.java.enable = true;
 
   programs.go.enable = true;
@@ -49,13 +9,6 @@ in
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    nix-direnv.enable = true;
   };
 
   programs.zsh = {

@@ -13,8 +13,7 @@
   ];
 
   # Core global utilitary packages
-  home.packages =
-    [ pkgs.daemonize pkgs.openssh pkgs.unzip pkgs.htop pkgs.yq pkgs.zip ];
+  home.packages = [ pkgs.nixpkgs-fmt ];
 
   home.file.".editorconfig".text = ''
     # top-most EditorConfig file
