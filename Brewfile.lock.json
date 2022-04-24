@@ -1843,6 +1843,12 @@
         "options": {
           "full_name": "wacom-tablet"
         }
+      },
+      "yubico-yubikey-manager": {
+        "version": "1.2.4",
+        "options": {
+          "full_name": "yubico-yubikey-manager"
+        }
       }
     },
     "mas": {
