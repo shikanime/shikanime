@@ -281,6 +281,10 @@
 				{
 					"PackageIdentifier" : "vim.vim",
 					"Version" : "8.2.4803"
+				},
+				{
+					"PackageIdentifier" : "GoLang.Go",
+					"Version" : "1.18.1"
 				}
 			],
 			"SourceDetails" :
