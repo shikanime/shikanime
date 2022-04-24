@@ -54,6 +54,7 @@ cask "raspberry-pi-imager"
 # Brew virtualization
 brew "lima"
 brew "qemu"
+brew "ko"
 cask "docker"
 cask "multipass"
 
