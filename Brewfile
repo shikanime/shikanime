@@ -1,5 +1,6 @@
 # Essentials
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 brew "whalebrew"
 brew "mas"
 

@@ -3,6 +3,9 @@
     "tap": {
       "homebrew/cask": {
         "revision": "808c64409702c316a82cbc758ee830084989e882"
+      },
+      "homebrew/cask-drivers": {
+        "revision": "4b6477351a575d2c69061a97cbcc79d77f4588c1"
       }
     },
     "brew": {
@@ -1619,6 +1622,45 @@
             }
           }
         }
+      },
+      "vim": {
+        "version": "8.2.4800",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_monterey": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:3d8c7be8a3b35603cbd47a2dcae40bdc92ca962af472ddba2b925360b19c1598",
+              "sha256": "3d8c7be8a3b35603cbd47a2dcae40bdc92ca962af472ddba2b925360b19c1598"
+            },
+            "arm64_big_sur": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:ff7b0c7426204cd663b6aef73ba4767080bb0e0e4032b69d91620911a312fb26",
+              "sha256": "ff7b0c7426204cd663b6aef73ba4767080bb0e0e4032b69d91620911a312fb26"
+            },
+            "monterey": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:33aa4e33b4ce8522e975b180140f55b20a7c6dc73799bddea624ea375d17960a",
+              "sha256": "33aa4e33b4ce8522e975b180140f55b20a7c6dc73799bddea624ea375d17960a"
+            },
+            "big_sur": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:8a92548c9fa27d94daab57c4e3e5fc0868218eb448beb05f85fdac050bc320e0",
+              "sha256": "8a92548c9fa27d94daab57c4e3e5fc0868218eb448beb05f85fdac050bc320e0"
+            },
+            "catalina": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:cb5a30e082538fe550eec07c38c5d8d17d8886292e26d0ace47ab297743d1d79",
+              "sha256": "cb5a30e082538fe550eec07c38c5d8d17d8886292e26d0ace47ab297743d1d79"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:7a19591cc8429c7bdac45f67b0bef53f17cd2f173cb4efc5156407ef6fdd964c",
+              "sha256": "7a19591cc8429c7bdac45f67b0bef53f17cd2f173cb4efc5156407ef6fdd964c"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1777,6 +1819,30 @@
         "options": {
           "full_name": "appcleaner"
         }
+      },
+      "raspberry-pi-imager": {
+        "version": "1.7.2",
+        "options": {
+          "full_name": "raspberry-pi-imager"
+        }
+      },
+      "microsoft-edge": {
+        "version": "100.0.1185.50",
+        "options": {
+          "full_name": "microsoft-edge"
+        }
+      },
+      "chrome-remote-desktop-host": {
+        "version": "89.0.4389.25",
+        "options": {
+          "full_name": "chrome-remote-desktop-host"
+        }
+      },
+      "wacom-tablet": {
+        "version": "6.3.46-1",
+        "options": {
+          "full_name": "wacom-tablet"
+        }
       }
     },
     "mas": {
@@ -1801,7 +1867,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.4.7",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "7c654e7a8aebceba53e2d12669e5f4fc9923ec9c",
+        "Homebrew/homebrew-core": "38a26a6e2c1e307308ebc45949c467821db6f052",
         "CLT": "13.3.1.0.1.1648687083",
         "Xcode": "13.3.1",
         "macOS": "12.3.1"
