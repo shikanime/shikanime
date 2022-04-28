@@ -165,4 +165,8 @@
     enable = true;
     enableSshSupport = true;
   };
+
+  services.syncthing = pkgs.lib.mkIf pkgs.hostPlatform.isLinux {
+    enable = true;
+  };
 }
