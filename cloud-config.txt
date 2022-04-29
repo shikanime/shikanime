@@ -22,6 +22,7 @@ packages:
   - mercurial
   - git
   - darcs
+  - build-essential
 locale: en_US.UTF-8
 timezone: Europe/Paris
 users:
