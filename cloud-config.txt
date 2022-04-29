@@ -25,11 +25,10 @@ packages:
 locale: en_US.UTF-8
 timezone: Europe/Paris
 users:
-  - default
   - name: devas
     gecos: Shikanime Deva
     sudo: ALL=(ALL) NOPASSWD:ALL
-    shell: /bin/zsh
+    shell: /bin/bash
     passwd: $6$rounds=4096$oVxilNspN00437Le$aUS3o5FcITkFqEWeLw0p8dPrrqsA2pGivNm3sxYVFXn0vHocToteUHmp8Sv6rFotZti2QXDNM3bEO0VzExxxq0
     ssh_authorized_keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7pi5OYqzuMkTymIbJUJteIU3dz+OgduiF5O9cA+B7u devas@ishtar
