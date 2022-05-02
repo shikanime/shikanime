@@ -48,7 +48,6 @@ brew "vim"
 cask "visual-studio-code"
 cask "dbeaver-community"
 cask "jetbrains-toolbox"
-cask "blender"
 cask "raspberry-pi-imager"
 
 # Brew virtualization
@@ -57,6 +56,7 @@ brew "qemu"
 brew "ko"
 brew "packer"
 cask "virtualbox"
+cask "virtualbox-extension-pack"
 cask "vagrant"
 cask "docker"
 cask "multipass"
@@ -88,6 +88,10 @@ cask "microsoft-remote-desktop"
 mas "Pages", id: 409201541
 mas "Numbers", id: 409203825
 mas "Keynote", id: 409183694
+
+# Art
+cask "blender"
+cask "krita"
 
 # Utils
 brew "openssh"
