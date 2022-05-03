@@ -65,6 +65,7 @@
     pkgs.unzip
     pkgs.zip
     pkgs.inotify-tools
+    pkgs.e2fsprogs
     pkgs.xorg.xrandr
   ];
 
