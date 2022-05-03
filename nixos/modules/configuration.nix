@@ -25,6 +25,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # KVM kernel modules.
+  boot.kernelModules = [ "kvm-intel" "kvm-amd" ];
+
   # Define the network configurations.
   networking = {
     hostName = "wonderland";
