@@ -22,7 +22,10 @@
   hardware.video.hidpi.enable = true;
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot = {
+    enable = true;
+    consoleMode = "auto";
+  };
   boot.loader.efi.canTouchEfiVariables = true;
 
   # KVM kernel modules.
