@@ -59,10 +59,6 @@
     pkgs.xclip
     pkgs.wget
     pkgs.curl
-    pkgs.git
-    pkgs.darcs
-    pkgs.mercurial
-    pkgs.subversion
     pkgs.unzip
     pkgs.zip
     pkgs.inotify-tools
