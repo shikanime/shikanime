@@ -3,16 +3,33 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
-    packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      with import nixpkgs { inherit system; config.allowUnfree = true; }; {
-        curriculum =
-          import ./curriculum/default.nix { inherit stdenv lib texlive; };
-      });
+  outputs = { self, nixpkgs, home-manager, nixos-generators }: {
+    packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system: {
+      curriculum = import ./curriculum/default.nix {
+        pkgs = import nixpkgs { inherit system; };
+      };
+
+      wonderland = nixpkgs.lib.genAttrs [ "virtualbox" "hyperv" ]
+        (format: nixos-generators.nixosGenerate {
+          inherit format;
+          pkgs = import nixpkgs { inherit system; };
+          modules = [
+            ./nixos/modules/configuration.nix
+            ./nixos/modules/home-manager.nix
+            home-manager.nixosModules.home-manager
+          ];
+        });
+    });
 
     homeConfigurations = {
       altashar = home-manager.lib.homeManagerConfiguration {

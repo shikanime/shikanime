@@ -1,9 +1,9 @@
-{ stdenv, lib, texlive }:
+{ pkgs ? import <nixpkgs> { } }:
 
-stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation {
   name = "curriculum";
-  buildInputs = [ texlive.combined.scheme-full ];
-  src = lib.cleanSource ./.;
+  buildInputs = [ pkgs.texlive.combined.scheme-full ];
+  src = pkgs.lib.cleanSource ./.;
 
   buildPhase = "pdflatex *.tex";
   installPhase = ''
