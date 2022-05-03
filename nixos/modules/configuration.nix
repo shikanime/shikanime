@@ -38,6 +38,7 @@
   virtualisation = {
     docker.enable = true;
     libvirtd.enable = true;
+    containerd.enable = true;
   };
 
   # Select internationalisation properties.
