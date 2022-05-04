@@ -28,6 +28,14 @@
     pkgs.darcs
     pkgs.nodejs
     pkgs.rustup
+    pkgs.google-cloud-sdk
+    pkgs.azure-cli
+    pkgs.aws
+    pkgs.kubectl
+    pkgs.istioctl
+    pkgs.kn
+    pkgs.cloudflared
+    pkgs.github-cli
   ];
 
   home.file.".editorconfig".text = ''
