@@ -33,6 +33,7 @@
         virtualbox = nixos-generators.nixosGenerate {
           pkgs = import nixpkgs { inherit system; };
           modules = [
+            ./nixos/modules/virtualbox.nix
             ./nixos/modules/configuration.nix
             ./nixos/modules/home-manager.nix
             home-manager.nixosModules.home-manager
