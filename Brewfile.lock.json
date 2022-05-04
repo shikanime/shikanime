@@ -1701,8 +1701,7 @@
           }
         }
       },
-      "vagrant": {
-      },
+      "vagrant": {},
       "packer": {
         "version": "1.8.0",
         "bottle": {
@@ -1778,12 +1777,6 @@
         "version": "4.7.1,77678",
         "options": {
           "full_name": "docker"
-        }
-      },
-      "multipass": {
-        "version": "1.8.1",
-        "options": {
-          "full_name": "multipass"
         }
       },
       "mpv": {

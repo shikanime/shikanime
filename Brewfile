@@ -59,7 +59,6 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "vagrant"
 cask "docker"
-cask "multipass"
 
 # Multimedia
 cask "mpv"

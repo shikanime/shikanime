@@ -1,300 +1,293 @@
 {
-	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2022-04-24T00:47:16.099-00:00",
-	"Sources" :
-	[
+	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate": "2022-04-24T00:47:16.099-00:00",
+	"Sources": [
 		{
-			"Packages" :
-			[
+			"Packages": [
 				{
-					"PackageIdentifier" : "NexusMods.Vortex",
-					"Version" : "1.5.10"
+					"PackageIdentifier": "NexusMods.Vortex",
+					"Version": "1.5.10"
 				},
 				{
-					"PackageIdentifier" : "OpenWhisperSystems.Signal",
-					"Version" : "5.40.1"
+					"PackageIdentifier": "OpenWhisperSystems.Signal",
+					"Version": "5.40.1"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community",
-					"Version" : "17.1.5"
+					"PackageIdentifier": "Microsoft.VisualStudio.2022.Community",
+					"Version": "17.1.5"
 				},
 				{
-					"PackageIdentifier" : "BraveSoftware.BraveBrowser",
-					"Version" : "100.1.37.116"
+					"PackageIdentifier": "BraveSoftware.BraveBrowser",
+					"Version": "100.1.37.116"
 				},
 				{
-					"PackageIdentifier" : "Canonical.Ubuntu",
-					"Version" : "2004.2022.1.0"
+					"PackageIdentifier": "Canonical.Ubuntu",
+					"Version": "2004.2022.1.0"
 				},
 				{
-					"PackageIdentifier" : "dbeaver.dbeaver",
-					"Version" : "22.0.3"
+					"PackageIdentifier": "dbeaver.dbeaver",
+					"Version": "22.0.3"
 				},
 				{
-					"PackageIdentifier" : "Discord.Discord",
-					"Version" : "1.0.9004"
+					"PackageIdentifier": "Discord.Discord",
+					"Version": "1.0.9004"
 				},
 				{
-					"PackageIdentifier" : "Docker.DockerDesktop",
-					"Version" : "4.7.1"
+					"PackageIdentifier": "Docker.DockerDesktop",
+					"Version": "4.7.1"
 				},
 				{
-					"PackageIdentifier" : "Mozilla.Firefox.DeveloperEdition",
-					"Version" : "100.0"
+					"PackageIdentifier": "Mozilla.Firefox.DeveloperEdition",
+					"Version": "100.0"
 				},
 				{
-					"PackageIdentifier" : "GitHub.GitHubDesktop",
-					"Version" : "2.9.15"
+					"PackageIdentifier": "GitHub.GitHubDesktop",
+					"Version": "2.9.15"
 				},
 				{
-					"PackageIdentifier" : "Git.Git",
-					"Version" : "2.36.0"
+					"PackageIdentifier": "Git.Git",
+					"Version": "2.36.0"
 				},
 				{
-					"PackageIdentifier" : "Graphviz.Graphviz",
-					"Version" : "3.0.0"
+					"PackageIdentifier": "Graphviz.Graphviz",
+					"Version": "3.0.0"
 				},
 				{
-					"PackageIdentifier" : "KDE.Krita",
-					"Version" : "5.0.5.0"
+					"PackageIdentifier": "KDE.Krita",
+					"Version": "5.0.5.0"
 				},
 				{
-					"PackageIdentifier" : "LLVM.LLVM",
-					"Version" : "14.0.1"
+					"PackageIdentifier": "LLVM.LLVM",
+					"Version": "14.0.1"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.Edge",
-					"Version" : "100.0.1185.50"
+					"PackageIdentifier": "Microsoft.Edge",
+					"Version": "100.0.1185.50"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime",
-					"Version" : "100.0.1185.50"
+					"PackageIdentifier": "Microsoft.EdgeWebView2Runtime",
+					"Version": "100.0.1185.50"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WindowsTerminal",
-					"Version" : "1.12.10733.0"
+					"PackageIdentifier": "Microsoft.WindowsTerminal",
+					"Version": "1.12.10733.0"
 				},
 				{
-					"PackageIdentifier" : "Canonical.Multipass",
-					"Version" : "1.8.0+win"
+					"PackageIdentifier": "OBSProject.OBSStudio",
+					"Version": "27.1.3"
 				},
 				{
-					"PackageIdentifier" : "OBSProject.OBSStudio",
-					"Version" : "27.1.3"
+					"PackageIdentifier": "Microsoft.OneDrive",
+					"Version": "22.065.0412.0004"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.OneDrive",
-					"Version" : "22.065.0412.0004"
+					"PackageIdentifier": "RaspberryPiFoundation.RaspberryPiImager",
+					"Version": "1.7.2"
 				},
 				{
-					"PackageIdentifier" : "RaspberryPiFoundation.RaspberryPiImager",
-					"Version" : "1.7.2"
+					"PackageIdentifier": "RiotGames.LeagueOfLegends.EUW",
+					"Version": "Unknown"
 				},
 				{
-					"PackageIdentifier" : "RiotGames.LeagueOfLegends.EUW",
-					"Version" : "Unknown"
+					"PackageIdentifier": "Valve.Steam",
+					"Version": "2.10.91.91"
 				},
 				{
-					"PackageIdentifier" : "Valve.Steam",
-					"Version" : "2.10.91.91"
+					"PackageIdentifier": "BlenderFoundation.Blender",
+					"Version": "Unknown"
 				},
 				{
-					"PackageIdentifier" : "BlenderFoundation.Blender",
-					"Version" : "Unknown"
+					"PackageIdentifier": "Microsoft.Teams",
+					"Version": "1.5.00.10287"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.Teams",
-					"Version" : "1.5.00.10287"
+					"PackageIdentifier": "JetBrains.Toolbox",
+					"Version": "1.23.11731"
 				},
 				{
-					"PackageIdentifier" : "JetBrains.Toolbox",
-					"Version" : "1.23.11731"
+					"PackageIdentifier": "UnityTechnologies.UnityHub",
+					"Version": "3.1.1"
 				},
 				{
-					"PackageIdentifier" : "UnityTechnologies.UnityHub",
-					"Version" : "3.1.1"
+					"PackageIdentifier": "Wacom.WacomTabletDriver",
+					"Version": "6.3.46-1"
 				},
 				{
-					"PackageIdentifier" : "Wacom.WacomTabletDriver",
-					"Version" : "6.3.46-1"
+					"PackageIdentifier": "SlackTechnologies.Slack",
+					"Version": "4.25.2"
 				},
 				{
-					"PackageIdentifier" : "SlackTechnologies.Slack",
-					"Version" : "4.25.2"
+					"PackageIdentifier": "TheDocumentFoundation.LibreOffice",
+					"Version": "7.3.2.2"
 				},
 				{
-					"PackageIdentifier" : "TheDocumentFoundation.LibreOffice",
-					"Version" : "7.3.2.2"
+					"PackageIdentifier": "Microsoft.PowerToys",
+					"Version": "0.57.2"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerToys",
-					"Version" : "0.57.2"
+					"PackageIdentifier": "msys2.msys2",
+					"Version": "20211130"
 				},
 				{
-					"PackageIdentifier" : "msys2.msys2",
-					"Version" : "20211130"
+					"PackageIdentifier": "Kitware.CMake",
+					"Version": "3.23.1"
 				},
 				{
-					"PackageIdentifier" : "Kitware.CMake",
-					"Version" : "3.23.1"
+					"PackageIdentifier": "Python.Python.3",
+					"Version": "3.10.4150.0"
 				},
 				{
-					"PackageIdentifier" : "Python.Python.3",
-					"Version" : "3.10.4150.0"
+					"PackageIdentifier": "7zip.7zip",
+					"Version": "21.07.00.0"
 				},
 				{
-					"PackageIdentifier" : "7zip.7zip",
-					"Version" : "21.07.00.0"
+					"PackageIdentifier": "GitHub.GitLFS",
+					"Version": "3.1.4"
 				},
 				{
-					"PackageIdentifier" : "GitHub.GitLFS",
-					"Version" : "3.1.4"
+					"PackageIdentifier": "StrawberryPerl.StrawberryPerl",
+					"Version": "5.32.1001"
 				},
 				{
-					"PackageIdentifier" : "StrawberryPerl.StrawberryPerl",
-					"Version" : "5.32.1001"
+					"PackageIdentifier": "Cloudflare.Warp",
+					"Version": "22.4.115.0"
 				},
 				{
-					"PackageIdentifier" : "Cloudflare.Warp",
-					"Version" : "22.4.115.0"
+					"PackageIdentifier": "Google.Chrome.Dev",
+					"Version": "102.0.5005.12"
 				},
 				{
-					"PackageIdentifier" : "Google.Chrome.Dev",
-					"Version" : "102.0.5005.12"
+					"PackageIdentifier": "calibre.calibre",
+					"Version": "5.40.0"
 				},
 				{
-					"PackageIdentifier" : "calibre.calibre",
-					"Version" : "5.40.0"
+					"PackageIdentifier": "Telegram.TelegramDesktop",
+					"Version": "3.7.1"
 				},
 				{
-					"PackageIdentifier" : "Telegram.TelegramDesktop",
-					"Version" : "3.7.1"
+					"PackageIdentifier": "Google.Drive",
+					"Version": "57.0.5.0"
 				},
 				{
-					"PackageIdentifier" : "Google.Drive",
-					"Version" : "57.0.5.0"
+					"PackageIdentifier": "WinFsp.WinFsp",
+					"Version": "1.10.22006"
 				},
 				{
-					"PackageIdentifier" : "WinFsp.WinFsp",
-					"Version" : "1.10.22006"
+					"PackageIdentifier": "Microsoft.VisualStudioCode",
+					"Version": "1.66.2"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudioCode",
-					"Version" : "1.66.2"
+					"PackageIdentifier": "Google.ChromeRemoteDesktop",
+					"Version": "101.0.4951.13"
 				},
 				{
-					"PackageIdentifier" : "Google.ChromeRemoteDesktop",
-					"Version" : "101.0.4951.13"
+					"PackageIdentifier": "Microsoft.PowerBI",
+					"Version": "2.104.702.0"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerBI",
-					"Version" : "2.104.702.0"
+					"PackageIdentifier": "Peppy.Osu!",
+					"Version": "latest"
 				},
 				{
-					"PackageIdentifier" : "Peppy.Osu!",
-					"Version" : "latest"
+					"PackageIdentifier": "VideoLAN.VLC",
+					"Version": "3.0.17.0"
 				},
 				{
-					"PackageIdentifier" : "VideoLAN.VLC",
-					"Version" : "3.0.17.0"
+					"PackageIdentifier": "Zoom.Zoom",
+					"Version": "5.10.4420"
 				},
 				{
-					"PackageIdentifier" : "Zoom.Zoom",
-					"Version" : "5.10.4420"
+					"PackageIdentifier": "Transmission.Transmission",
+					"Version": "3.00.0"
 				},
 				{
-					"PackageIdentifier" : "Transmission.Transmission",
-					"Version" : "3.00.0"
+					"PackageIdentifier": "Nvidia.GeForceExperience",
+					"Version": "3.25.1.27"
 				},
 				{
-					"PackageIdentifier" : "Nvidia.GeForceExperience",
-					"Version" : "3.25.1.27"
+					"PackageIdentifier": "Nvidia.PhysX",
+					"Version": "9.21.0713"
 				},
 				{
-					"PackageIdentifier" : "Nvidia.PhysX",
-					"Version" : "9.21.0713"
+					"PackageIdentifier": "Nvidia.Broadcast",
+					"Version": "1.3.0.45"
 				},
 				{
-					"PackageIdentifier" : "Nvidia.Broadcast",
-					"Version" : "1.3.0.45"
+					"PackageIdentifier": "Microsoft.PowerShell",
+					"Version": "7.2.2.0"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerShell",
-					"Version" : "7.2.2.0"
+					"PackageIdentifier": "GitHub.cli",
+					"Version": "2.8.0"
 				},
 				{
-					"PackageIdentifier" : "GitHub.cli",
-					"Version" : "2.8.0"
+					"PackageIdentifier": "VideoLAN.VLC",
+					"Version": "3.0.17.0"
 				},
 				{
-					"PackageIdentifier" : "VideoLAN.VLC",
-					"Version" : "3.0.17.0"
+					"PackageIdentifier": "EpicGames.EpicGamesLauncher",
+					"Version": "1.3.23.0"
 				},
 				{
-					"PackageIdentifier" : "EpicGames.EpicGamesLauncher",
-					"Version" : "1.3.23.0"
+					"PackageIdentifier": "Microsoft.GitCredentialManagerCore",
+					"Version": "2.0.696.25923"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.GitCredentialManagerCore",
-					"Version" : "2.0.696.25923"
+					"PackageIdentifier": "Jellyfin.JellyfinMediaPlayer",
+					"Version": "1.6.1"
 				},
 				{
-					"PackageIdentifier" : "Jellyfin.JellyfinMediaPlayer",
-					"Version" : "1.6.1"
+					"PackageIdentifier": "GnuWin32.Wget",
+					"Version": "1.11.4-1"
 				},
 				{
-					"PackageIdentifier" : "GnuWin32.Wget",
-					"Version" : "1.11.4-1"
+					"PackageIdentifier": "GnuWin32.Make",
+					"Version": "3.81"
 				},
 				{
-					"PackageIdentifier" : "GnuWin32.Make",
-					"Version" : "3.81"
+					"PackageIdentifier": "GnuWin32.Grep",
+					"Version": "2.5.4"
 				},
 				{
-					"PackageIdentifier" : "GnuWin32.Grep",
-					"Version" : "2.5.4"
+					"PackageIdentifier": "GnuWin32.Zip",
+					"Version": "3.0"
 				},
 				{
-					"PackageIdentifier" : "GnuWin32.Zip",
-					"Version" : "3.0"
+					"PackageIdentifier": "Google.CloudSDK",
+					"Version": "375.0.0"
 				},
 				{
-					"PackageIdentifier" : "Google.CloudSDK",
-					"Version" : "375.0.0"
+					"PackageIdentifier": "Klocman.BulkCrapUninstaller",
+					"Version": "5.2.0.0"
 				},
 				{
-					"PackageIdentifier" : "Klocman.BulkCrapUninstaller",
-					"Version" : "5.2.0.0"
+					"PackageIdentifier": "Rufus.Rufus",
+					"Version": "3.13.1730.0"
 				},
 				{
-					"PackageIdentifier" : "Rufus.Rufus",
-					"Version" : "3.13.1730.0"
+					"PackageIdentifier": "gerardog.gsudo",
+					"Version": "1.3.0"
 				},
 				{
-					"PackageIdentifier" : "gerardog.gsudo",
-					"Version" : "1.3.0"
+					"PackageIdentifier": "GnuPG.GnuPG",
+					"Version": "2.3.5"
 				},
 				{
-					"PackageIdentifier" : "GnuPG.GnuPG",
-					"Version" : "2.3.5"
+					"PackageIdentifier": "vim.vim",
+					"Version": "8.2.4803"
 				},
 				{
-					"PackageIdentifier" : "vim.vim",
-					"Version" : "8.2.4803"
-				},
-				{
-					"PackageIdentifier" : "GoLang.Go",
-					"Version" : "1.18.1"
+					"PackageIdentifier": "GoLang.Go",
+					"Version": "1.18.1"
 				}
 			],
-			"SourceDetails" :
-			{
-				"Argument" : "https://winget.azureedge.net/cache",
-				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
-				"Name" : "winget",
-				"Type" : "Microsoft.PreIndexed.Package"
+			"SourceDetails": {
+				"Argument": "https://winget.azureedge.net/cache",
+				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name": "winget",
+				"Type": "Microsoft.PreIndexed.Package"
 			}
 		}
 	],
-	"WinGetVersion" : "1.3.692-preview"
+	"WinGetVersion": "1.3.692-preview"
 }
