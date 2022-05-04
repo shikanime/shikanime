@@ -1,13 +1,7 @@
 name: Build Curriculum
 on:
-  push:
-    branches: [main]
-    paths:
-      - flake.lock
-      - flake.nix
-      - curriculum/**/*
-  pull_request:
-    branches: [main]
+  release:
+    types: [created]
     paths:
       - flake.lock
       - flake.nix
