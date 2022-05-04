@@ -1,6 +1,10 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
 {
+  # Resize Hyper-V default disk size
+  hyperv.baseImageSize = 64 * 1024;
+
+  # Create user accounts
   users.users.devas = {
     isNormalUser = true;
     home = "/home/devas";
@@ -56,14 +60,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = [
-    pkgs.gnumake
-    pkgs.gcc
     pkgs.killall
     pkgs.xclip
-    pkgs.wget
-    pkgs.curl
-    pkgs.unzip
-    pkgs.zip
     pkgs.inotify-tools
     pkgs.e2fsprogs
     pkgs.xorg.xrandr

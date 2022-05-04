@@ -16,7 +16,18 @@
   ];
 
   # Core global utilitary packages
-  home.packages = [ pkgs.nixpkgs-fmt ];
+  home.packages = [
+    pkgs.nixpkgs-fmt
+    pkgs.gnumake
+    pkgs.gcc
+    pkgs.binutils
+    pkgs.wget
+    pkgs.curl
+    pkgs.unzip
+    pkgs.zip
+    pkgs.darcs
+    pkgs.rustup
+  ];
 
   home.file.".editorconfig".text = ''
     # top-most EditorConfig file
