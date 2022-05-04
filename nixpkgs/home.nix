@@ -26,6 +26,7 @@
     pkgs.unzip
     pkgs.zip
     pkgs.darcs
+    pkgs.nodejs
     pkgs.rustup
   ];
 
