@@ -40,7 +40,17 @@
           ];
           format = "virtualbox";
         };
+      };
 
+      nixosConfigurations = {
+        wonderland = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./nixos/modules/configuration.nix
+            ./nixos/modules/home-manager.nix
+            home-manager.nixosModules.home-manager
+          ];
+        };
       };
     });
 
