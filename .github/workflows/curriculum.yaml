@@ -8,9 +8,6 @@ on:
       - curriculum/**/*
 jobs:
   build:
-    strategy:
-      matrix:
-        arch: ["x86_64-linux"]
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
