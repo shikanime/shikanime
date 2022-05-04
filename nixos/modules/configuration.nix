@@ -1,9 +1,6 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
 {
-  # Resize Hyper-V default disk size
-  hyperv.baseImageSize = 64 * 1024;
-
   # Create user accounts
   users.users.devas = {
     isNormalUser = true;
@@ -25,11 +22,7 @@
   # We expect to run the VM on hidpi machines.
   hardware.video.hidpi.enable = true;
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot = {
-    enable = true;
-    consoleMode = "auto";
-  };
+  # Allow installation process to modify EFI boot variables.
   boot.loader.efi.canTouchEfiVariables = true;
 
   # KVM kernel modules.

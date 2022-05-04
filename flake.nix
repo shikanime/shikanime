@@ -19,16 +19,28 @@
         pkgs = import nixpkgs { inherit system; };
       };
 
-      wonderland = nixpkgs.lib.genAttrs [ "virtualbox" "hyperv" ]
-        (format: nixos-generators.nixosGenerate {
-          inherit format;
+      wonderland = {
+        hyperv = nixos-generators.nixosGenerate {
+          pkgs = import nixpkgs { inherit system; };
+          modules = [
+            ./nixos/modules/hyperv.nix
+            ./nixos/modules/configuration.nix
+            ./nixos/modules/home-manager.nix
+            home-manager.nixosModules.home-manager
+          ];
+          format = "hyperv";
+        };
+        virtualbox = nixos-generators.nixosGenerate {
           pkgs = import nixpkgs { inherit system; };
           modules = [
             ./nixos/modules/configuration.nix
             ./nixos/modules/home-manager.nix
             home-manager.nixosModules.home-manager
           ];
-        });
+          format = "virtualbox";
+        };
+
+      };
     });
 
     homeConfigurations = {
