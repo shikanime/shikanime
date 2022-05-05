@@ -26,6 +26,7 @@
     pkgs.zip
     pkgs.darcs
     pkgs.nodejs
+    pkgs.deno
     pkgs.rustup
     pkgs.google-cloud-sdk
     pkgs.azure-cli
