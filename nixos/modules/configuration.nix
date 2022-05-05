@@ -19,6 +19,7 @@
     experimental-features = nix-command flakes
   '';
 
+
   # We expect to run the VM on hidpi machines.
   hardware.video.hidpi.enable = true;
 
@@ -32,6 +33,14 @@
   networking = {
     hostName = "wonderland";
     enableIPv6 = true;
+    networkmanager.insertNameservers = [
+      "1.1.1.2"
+      "1.0.0.2"
+      "1.1.1.1"
+      "1.0.0.1"
+      "8.8.8.8"
+      "8.8.4.4"
+    ];
   };
 
   # Virtualization settings
