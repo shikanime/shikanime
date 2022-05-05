@@ -63,6 +63,7 @@
   # $ nix search wget
   environment.systemPackages = [
     pkgs.killall
+    pkgs.git
     pkgs.xclip
     pkgs.inotify-tools
     pkgs.e2fsprogs
