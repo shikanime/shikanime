@@ -5,17 +5,8 @@ brew "whalebrew"
 brew "mas"
 
 # Interpreter Toolchains
-brew "yarn"
-brew "deno"
 brew "nodejs"
-brew "elixir"
-brew "erlang"
-brew "poetry"
-brew "ruby"
-brew "php"
-brew "texlive"
-brew "go"
-mas "xcode", id: 497799835
+brew "python@3.10"
 
 # Source control
 brew "darcs"
@@ -28,16 +19,14 @@ brew "rustup"
 brew "llvm"
 brew "make"
 cask "cmake"
+mas "xcode", id: 497799835
 
 # Cloud
-brew "terraform"
-brew "kn"
-brew "istioctl"
 brew "awscli"
 brew "azure-cli"
 brew "gh"
-cask "google-cloud-sdk"
 brew "cloudflared"
+cask "google-cloud-sdk"
 
 # Python
 brew "pipx"
@@ -51,13 +40,9 @@ cask "jetbrains-toolbox"
 cask "raspberry-pi-imager"
 
 # Brew virtualization
-brew "lima"
 brew "qemu"
-brew "ko"
-brew "packer"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
-cask "vagrant"
 cask "docker"
 
 # Multimedia
@@ -94,10 +79,8 @@ cask "krita"
 
 # Utils
 brew "openssh"
-brew "unzip"
 brew "htop"
 brew "yq"
-brew "zip"
 brew "curl"
 brew "wget"
 cask "iterm2"
