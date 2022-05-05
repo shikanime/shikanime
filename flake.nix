@@ -18,30 +18,30 @@
       curriculum = import ./curriculum/default.nix {
         pkgs = import nixpkgs { inherit system; };
       };
-
-      nixosConfigurations = {
-        virtualbox.wonderland = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./nixos/modules/virtualbox.nix
-            ./nixos/modules/configuration.nix
-            ./nixos/modules/home-manager.nix
-            nixos-generators.nixosModules.virtualbox
-            home-manager.nixosModules.home-manager
-          ];
-        };
-        hyperv.wonderland = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./nixos/modules/hyperv.nix
-            ./nixos/modules/configuration.nix
-            ./nixos/modules/home-manager.nix
-            nixos-generators.nixosModules.hyperv
-            home-manager.nixosModules.home-manager
-          ];
-        };
-      };
     });
+
+    nixosConfigurations = {
+      virtualbox = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./nixos/modules/virtualbox.nix
+          ./nixos/modules/configuration.nix
+          ./nixos/modules/home-manager.nix
+          nixos-generators.nixosModules.virtualbox
+          home-manager.nixosModules.home-manager
+        ];
+      };
+      hyperv = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./nixos/modules/hyperv.nix
+          ./nixos/modules/configuration.nix
+          ./nixos/modules/home-manager.nix
+          nixos-generators.nixosModules.hyperv
+          home-manager.nixosModules.home-manager
+        ];
+      };
+    };
 
     homeConfigurations = {
       altashar = home-manager.lib.homeManagerConfiguration {
