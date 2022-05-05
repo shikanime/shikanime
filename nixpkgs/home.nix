@@ -20,7 +20,6 @@
     pkgs.nixpkgs-fmt
     pkgs.gnumake
     pkgs.gcc
-    pkgs.binutils
     pkgs.wget
     pkgs.curl
     pkgs.unzip
@@ -36,6 +35,8 @@
     pkgs.kn
     pkgs.cloudflared
     pkgs.github-cli
+  ] ++ pkgs.lib.optionals pkgs.hostPlatform.isLinux [
+    pkgs.binutils
   ];
 
   home.file.".editorconfig".text = ''
