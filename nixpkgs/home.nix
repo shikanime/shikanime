@@ -25,6 +25,7 @@
     pkgs.unzip
     pkgs.zip
     pkgs.darcs
+    pkgs.yarn
     pkgs.nodejs
     pkgs.deno
     pkgs.rustup
