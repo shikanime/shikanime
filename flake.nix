@@ -20,6 +20,12 @@
       };
     });
 
+    devShells = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system: {
+      curriculum = import ./curriculum/shell.nix {
+        pkgs = import nixpkgs { inherit system; };
+      };
+    });
+
     nixosConfigurations = {
       virtualbox = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

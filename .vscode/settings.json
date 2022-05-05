@@ -1,0 +1,24 @@
+{
+  "latex-workshop.chktex.path": "/nix/store/8qi54r2flw74qi9276h77nv54vn0230z-texlive-combined-full-2021-final/bin/chktex",
+  "latex-workshop.kpsewhich.path": "/nix/store/8qi54r2flw74qi9276h77nv54vn0230z-texlive-combined-full-2021-final/bin/kpsewhich",
+  "latex-workshop.latexindent.path": "/nix/store/8qi54r2flw74qi9276h77nv54vn0230z-texlive-combined-full-2021-final/bin/latexindent",
+  "latex-workshop.synctex.path": "/nix/store/8qi54r2flw74qi9276h77nv54vn0230z-texlive-combined-full-2021-final/bin/synctex",
+  "latex-workshop.texcount.path": "/nix/store/8qi54r2flw74qi9276h77nv54vn0230z-texlive-combined-full-2021-final/bin/texcount",
+  "latex-workshop.texdoc.path": "/nix/store/8qi54r2flw74qi9276h77nv54vn0230z-texlive-combined-full-2021-final/bin/texdoc",
+  "latex-workshop.latex.clean.command": "/nix/store/8qi54r2flw74qi9276h77nv54vn0230z-texlive-combined-full-2021-final/bin/latexmk",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "/nix/store/8qi54r2flw74qi9276h77nv54vn0230z-texlive-combined-full-2021-final/bin/latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+  ]
+}
