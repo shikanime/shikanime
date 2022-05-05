@@ -28,6 +28,8 @@
     pkgs.nodejs
     pkgs.deno
     pkgs.rustup
+    pkgs.minikube
+    pkgs.skaffold
     pkgs.google-cloud-sdk
     pkgs.azure-cli
     pkgs.aws
