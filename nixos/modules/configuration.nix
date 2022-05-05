@@ -23,16 +23,22 @@
   # We expect to run the VM on hidpi machines.
   hardware.video.hidpi.enable = true;
 
-  # Allow installation process to modify EFI boot variables.
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # KVM kernel modules.
-  boot.kernelModules = [ "kvm-intel" "kvm-amd" ];
+  boot = {
+    # Allow installation process to modify EFI boot variables.
+    loader.efi.canTouchEfiVariables = true;
+    # KVM kernel modules.
+    kernelModules = [ "kvm-intel" "kvm-amd" ];
+    # Increase the inotify limit.
+    kernel.sysctl = {
+      "fs.inotify.max_user_watches" = "204800";
+    };
+  };
 
   # Define the network configurations.
   networking = {
     hostName = "wonderland";
     enableIPv6 = true;
+    # Priority to well known public DNS.
     networkmanager.insertNameservers = [
       "1.1.1.2"
       "1.0.0.2"
