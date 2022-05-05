@@ -123,21 +123,13 @@
         identityFile = "~/.ssh/wonderland";
         user = "devas";
       };
-      "gitlab.com" = {
-        hostname = "gitlab.com";
-        identityFile = "~/.ssh/gitlab";
-      };
-      "github.com" = {
-        hostname = "github.com";
-        identityFile = "~/.ssh/github";
-      };
       "coopelec.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
         identityFile = "~/.ssh/coopelec";
       };
-      "celine.lvmh.ssh.dev.azure.com" = {
+      "lvmh.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/lvmh_celine";
+        identityFile = "~/.ssh/lvmh";
       };
       "gcmd.birdz.com" = {
         hostname = "gcmd.birdz.com";
