@@ -1,10 +1,10 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
 {
-  # Enable XDG base directories.
+  # Enable XDG base directories
   xdg.enable = true;
 
-  # Let Home Manager install and manage itself.
+  # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
   # Session configuration

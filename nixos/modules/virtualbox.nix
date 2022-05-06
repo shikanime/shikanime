@@ -1,4 +1,7 @@
+{ modulesPath, ... }:
+
 {
-  # Include Guest Additions
-  virtualisation.virtualbox.guest.enable = true;
+  imports = [
+    "${toString modulesPath}/virtualisation/virtualbox-image.nix"
+  ];
 }

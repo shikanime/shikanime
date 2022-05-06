@@ -32,8 +32,7 @@
         modules = [
           ./nixos/modules/virtualbox.nix
           ./nixos/modules/configuration.nix
-          ./nixos/modules/home-manager.nix
-          nixos-generators.nixosModules.virtualbox
+          ./nixos/modules/home.nix
           home-manager.nixosModules.home-manager
         ];
       };
@@ -42,8 +41,7 @@
         modules = [
           ./nixos/modules/hyperv.nix
           ./nixos/modules/configuration.nix
-          ./nixos/modules/home-manager.nix
-          nixos-generators.nixosModules.hyperv
+          ./nixos/modules/home.nix
           home-manager.nixosModules.home-manager
         ];
       };
