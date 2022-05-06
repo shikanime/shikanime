@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "fdacabfe9cd0f7d9d85574c2bed43003ea7e7e03"
+        "revision": "a9e4b9bd983dae14b37bfbbd4f72e37efc455641"
       },
       "homebrew/cask-drivers": {
-        "revision": "643efb5e7e0d23261b9cc876ac7655d014d7f1a7"
+        "revision": "a2b75c9dbea543e1ffccce64116bd81d8aecd066"
       }
     },
     "brew": {
@@ -1796,7 +1796,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.66.2",
+        "version": "1.67.0",
         "options": {
           "full_name": "visual-studio-code"
         }
@@ -1808,7 +1808,7 @@
         }
       },
       "jetbrains-toolbox": {
-        "version": "1.23,1.23.11849",
+        "version": "1.24,1.24.11947",
         "options": {
           "full_name": "jetbrains-toolbox"
         }
@@ -1940,7 +1940,7 @@
         }
       },
       "microsoft-edge": {
-        "version": "101.0.1210.32",
+        "version": "101.0.1210.39",
         "options": {
           "full_name": "microsoft-edge"
         }
@@ -1986,6 +1986,12 @@
         "options": {
           "full_name": "virtualbox-extension-pack"
         }
+      },
+      "xquartz": {
+        "version": "2.8.1",
+        "options": {
+          "full_name": "xquartz"
+        }
       }
     },
     "mas": {
@@ -2010,7 +2016,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.4.10",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "05f6739a551e15ae982cac60b5bafdd1d36104b5",
+        "Homebrew/homebrew-core": "a14e6ed6fe79ad88acdcfd493a8c19204ba3becf",
         "CLT": "13.3.1.0.1.1648687083",
         "Xcode": "13.3.1",
         "macOS": "12.3.1"

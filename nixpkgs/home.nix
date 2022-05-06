@@ -127,6 +127,8 @@
         hostname = "wonderland.local";
         identityFile = "~/.ssh/wonderland";
         user = "devas";
+        forwardX11 = true;
+        forwardAgent = true;
       };
       "coopelec.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";

@@ -87,6 +87,16 @@
     };
   };
 
+  # Setup windowing environment.
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+  };
+
+  # Allows to manage devices via Gnome.
+  services.udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
+
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
