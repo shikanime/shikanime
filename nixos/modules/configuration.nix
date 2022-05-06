@@ -26,8 +26,6 @@
   boot = {
     # Allow installation process to modify EFI boot variables.
     loader.efi.canTouchEfiVariables = true;
-    # KVM kernel modules.
-    kernelModules = [ "kvm-intel" "kvm-amd" ];
     # Increase the inotify limit.
     kernel.sysctl = {
       "fs.inotify.max_user_watches" = "204800";
@@ -90,6 +88,8 @@
   # Setup windowing environment.
   services.xserver = {
     enable = true;
+    layout = "us";
+    xkbVariant = "colemak";
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
   };
