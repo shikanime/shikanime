@@ -20,21 +20,6 @@
     containerd.enable = true;
   };
 
-  # Setup windowing environment
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    xkbVariant = "colemak";
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-  };
-
-  # Allows to manage devices via Gnome
-  services.udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
-
-  # Enable the OpenSSH daemon
-  services.openssh.forwardX11 = true;
-
   # Manage fonts
   fonts = {
     fontDir.enable = true;
@@ -82,6 +67,7 @@
     enable = true;
     passwordAuthentication = false;
     permitRootLogin = "no";
+    forwardX11 = true;
   };
 
   # Select internationalisation properties
