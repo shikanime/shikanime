@@ -2,6 +2,6 @@
 
 {
   imports = [
-    "${toString modulesPath}/virtualisation/virtualbox-image.nix"
+    "${modulesPath}/virtualisation/virtualbox-image.nix"
   ];
 }

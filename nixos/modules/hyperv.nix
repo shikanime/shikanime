@@ -2,7 +2,7 @@
 
 {
   imports = [
-    "${toString modulesPath}/virtualisation/hyperv-image.nix"
+    "${modulesPath}/virtualisation/hyperv-image.nix"
   ];
 
   # Resize Hyper-V default disk size
