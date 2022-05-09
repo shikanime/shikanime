@@ -76,6 +76,13 @@
   # Keep the system timezone up-to-date based on the current location
   services.localtime.enable = true;
 
+  # Compatibility for alien binary with hardcoded ld paths
+  system.activationScripts.ldlinux = ''
+    mkdir -m 0755 -p /lib64
+    ln -sfn ${pkgs.stdenv.glibc.out}/lib64/ld-linux-x86-64.so.2 /lib64/.ld-linux-x86-64.so.2.tmp
+    mv -f /lib64/.ld-linux-x86-64.so.2.tmp /lib64/ld-linux-x86-64.so.2
+  '';
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken It‘s perfectly fine and recommended to leave
