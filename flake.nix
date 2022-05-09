@@ -27,19 +27,19 @@
     });
 
     nixosConfigurations = {
-      virtualbox = nixpkgs.lib.nixosSystem {
+      elkia = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./nixos/modules/virtualbox.nix
+          ./nixos/modules/elkia.nix
           ./nixos/modules/configuration.nix
           ./nixos/modules/home.nix
           home-manager.nixosModules.home-manager
         ];
       };
-      hyperv = nixpkgs.lib.nixosSystem {
+      elvengard = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./nixos/modules/hyperv.nix
+          ./nixos/modules/elvengard.nix
           ./nixos/modules/configuration.nix
           ./nixos/modules/home.nix
           home-manager.nixosModules.home-manager

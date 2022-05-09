@@ -26,8 +26,7 @@
     fonts = [ pkgs.fira-code ];
   };
 
-  # List packages installed in system profile To search, run:
-  # $ nix search wget
+  # List packages installed in system profile.
   environment.systemPackages = [
     pkgs.killall
     pkgs.git
@@ -38,9 +37,7 @@
 
   # Define the network configurations
   networking = {
-    hostName = "wonderland";
     enableIPv6 = true;
-    # Priority to well known public DNS
     networkmanager.insertNameservers = [
       "1.1.1.2"
       "1.0.0.2"
