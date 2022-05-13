@@ -29,8 +29,6 @@ in
   home.packages = [
     pkgs.wget
     pkgs.curl
-    pkgs.unzip
-    pkgs.zip
     pkgs.darcs
     pkgs.minikube
     pkgs.skaffold
@@ -124,7 +122,6 @@ in
       enable = true;
       plugins = [
         "git"
-        "ubuntu"
         "gcloud"
         "aws"
         "python"

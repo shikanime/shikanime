@@ -30,18 +30,18 @@
       elkia = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./nixos/modules/elkia.nix
-          ./nixos/modules/configuration.nix
-          ./nixos/modules/home.nix
+          ./modules/elkia.nix
+          ./modules/configuration.nix
+          ./modules/home.nix
           home-manager.nixosModules.home-manager
         ];
       };
       elvengard = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./nixos/modules/elvengard.nix
-          ./nixos/modules/configuration.nix
-          ./nixos/modules/home.nix
+          ./modules/elvengard.nix
+          ./modules/configuration.nix
+          ./modules/home.nix
           home-manager.nixosModules.home-manager
         ];
       };
@@ -55,7 +55,7 @@
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
           nixpkgs.config.allowUnfree = true;
-          imports = [ ./nixpkgs/home.nix ];
+          imports = [ ./home/default.nix ];
         };
       };
       ishtar = home-manager.lib.homeManagerConfiguration {
@@ -65,7 +65,7 @@
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
           nixpkgs.config.allowUnfree = true;
-          imports = [ ./nixpkgs/home.nix ];
+          imports = [ ./home/default.nix ];
         };
       };
       olva = home-manager.lib.homeManagerConfiguration {
@@ -75,7 +75,7 @@
         stateVersion = "21.11";
         configuration = { config, pkgs, ... }: {
           nixpkgs.config.allowUnfree = true;
-          imports = [ ./nixpkgs/home.nix ];
+          imports = [ ./home/default.nix ];
         };
       };
     };
