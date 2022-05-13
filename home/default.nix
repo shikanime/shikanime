@@ -1,12 +1,5 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
-let
-  pythonEnv = pkgs.python3.withPackages (pypkgs: [
-    pypkgs.pip
-    pypkgs.pipx
-    pypkgs.black
-  ]);
-in
 {
   # Enable XDG base directories
   xdg.enable = true;
@@ -15,78 +8,12 @@ in
   programs.home-manager.enable = true;
 
   # Session configuration
-  home.sessionVariables = {
-    EDITOR = "vim";
-    LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib ];
-  };
-
-  # Local programs
-  home.sessionPath = [
-    "$HOME/.local/bin"
-  ];
+  home.sessionVariables.EDITOR = "vim";
 
   # Core global utilitary packages
   home.packages = [
-    pkgs.wget
-    pkgs.curl
-    pkgs.darcs
-    pkgs.minikube
-    pkgs.skaffold
-    pkgs.kompose
-    pkgs.google-cloud-sdk
-    pkgs.azure-cli
-    pkgs.aws
-    pkgs.kubectl
-    pkgs.istioctl
-    pkgs.kn
-    pkgs.cloudflared
-    pkgs.github-cli
     pkgs.nixpkgs-fmt
-    pkgs.cmake
-    pkgs.gnumake
-    pkgs.gcc
-    pkgs.clang-tools
-    pkgs.rustup
-    pkgs.yarn
-    pkgs.nodejs
-    pkgs.deno
-    pkgs.poetry
-    pkgs.terraform
-    pkgs.php
-    pkgs.ruby
-    pkgs.elixir
-    pkgs.erlang
-    pkgs.rebar3
-    pkgs.tectonic
-    pkgs.texlive.combined.scheme-basic
-    pythonEnv
-  ] ++ pkgs.lib.optionals pkgs.hostPlatform.isLinux [
-    pkgs.binutils
   ];
-
-  home.file.".editorconfig".text = ''
-    # top-most EditorConfig file
-    root = true
-
-    # Unix-style newlines with a newline ending every file
-    [*]
-    end_of_line = lf
-    insert_final_newline = true
-
-    # Matches multiple files with brace expansion notation
-    # Set default charset
-    [*.{js,py}]
-    charset = utf-8
-
-    # 4 space indentation
-    [*.py]
-    indent_style = space
-    indent_size = 4
-
-    # Tab indentation (no size specified)
-    [Makefile]
-    indent_style = tab
-  '';
 
   programs.vim.enable = true;
 
@@ -102,16 +29,6 @@ in
     enableZshIntegration = true;
   };
 
-  programs.java.enable = true;
-
-  programs.go.enable = true;
-
-  programs.opam = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
-
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -122,23 +39,11 @@ in
       enable = true;
       plugins = [
         "git"
-        "gcloud"
-        "aws"
-        "python"
-        "docker"
-        "kubectl"
-        "rust"
-        "node"
-        "minikube"
-        "golang"
         "sudo"
-        "yarn"
         "vim-interaction"
       ];
     };
   };
-
-  programs.gpg.enable = true;
 
   programs.ssh = {
     enable = true;
@@ -157,65 +62,6 @@ in
         forwardX11 = true;
         forwardAgent = true;
       };
-      "coopelec.ssh.dev.azure.com" = {
-        hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/coopelec";
-      };
-      "lvmh.ssh.dev.azure.com" = {
-        hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/lvmh";
-      };
-      "gcmd.birdz.com" = {
-        hostname = "gcmd.birdz.com";
-        identityFile = "~/.ssh/birdz";
-      };
     };
-    extraConfig = ''
-      IdentitiesOnly yes
-      HostKeyAlgorithms +ssh-rsa
-      PubkeyAcceptedKeyTypes +ssh-rsa
-    '';
-  };
-
-  programs.mercurial = {
-    enable = true;
-    userName = "Shikanime Deva";
-    userEmail = "shikanime.deva@shikanime.studio";
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "Shikanime Deva";
-    userEmail = "shikanime.deva@shikanime.studio";
-
-    aliases = {
-      adog = "log --all --decorate --oneline --graph";
-      pouf = "push --force-with-lease";
-    };
-    ignores = [ "*~" ".fuse_hidden*" ".directory" ".Trash-*" ".nfs*" ];
-
-    lfs.enable = true;
-
-    extraConfig = {
-      core.editor = "vim";
-      color.ui = "auto";
-      pull.rebase = true;
-      rebase.autostash = true;
-      init.defaultBranch = "main";
-      credential."https://dev.azure.com".useHttpPath = true;
-      credential."https://source.developers.google.com".helper = "gcloud.sh";
-      credential.helper = "store";
-      user.signingKey = "B9443725856FF9EB";
-      commit.gpgSign = true;
-    };
-  };
-
-  services.gpg-agent = pkgs.lib.mkIf pkgs.hostPlatform.isLinux {
-    enable = true;
-    enableSshSupport = true;
-  };
-
-  services.syncthing = pkgs.lib.mkIf pkgs.hostPlatform.isLinux {
-    enable = true;
   };
 }
