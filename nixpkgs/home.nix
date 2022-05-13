@@ -1,5 +1,12 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
+let
+  pythonEnv = pkgs.python3.withPackages (pypkgs: [
+    pypkgs.pip
+    pypkgs.pipx
+    pypkgs.black
+  ]);
+in
 {
   # Enable XDG base directories
   xdg.enable = true;
@@ -20,20 +27,14 @@
 
   # Core global utilitary packages
   home.packages = [
-    pkgs.nixpkgs-fmt
-    pkgs.gnumake
-    pkgs.gcc
     pkgs.wget
     pkgs.curl
     pkgs.unzip
     pkgs.zip
     pkgs.darcs
-    pkgs.yarn
-    pkgs.nodejs
-    pkgs.deno
-    pkgs.rustup
     pkgs.minikube
     pkgs.skaffold
+    pkgs.kompose
     pkgs.google-cloud-sdk
     pkgs.azure-cli
     pkgs.aws
@@ -42,6 +43,25 @@
     pkgs.kn
     pkgs.cloudflared
     pkgs.github-cli
+    pkgs.nixpkgs-fmt
+    pkgs.cmake
+    pkgs.gnumake
+    pkgs.gcc
+    pkgs.clang-tools
+    pkgs.rustup
+    pkgs.yarn
+    pkgs.nodejs
+    pkgs.deno
+    pkgs.poetry
+    pkgs.terraform
+    pkgs.php
+    pkgs.ruby
+    pkgs.elixir
+    pkgs.erlang
+    pkgs.rebar3
+    pkgs.tectonic
+    pkgs.texlive.combined.scheme-basic
+    pythonEnv
   ] ++ pkgs.lib.optionals pkgs.hostPlatform.isLinux [
     pkgs.binutils
   ];
