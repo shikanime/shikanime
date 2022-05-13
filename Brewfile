@@ -6,7 +6,7 @@ brew "mas"
 
 # Interpreter Toolchains
 brew "nodejs"
-brew "python@3.10"
+brew "python"
 
 # Source control
 brew "darcs"
@@ -79,6 +79,7 @@ cask "krita"
 
 # Utils
 brew "openssh"
+brew "gnupg"
 brew "htop"
 brew "yq"
 brew "curl"
