@@ -6,17 +6,15 @@
     experimental-features = nix-command flakes
   '';
 
-  boot = {
-    # Increase the inotify limit for Syncthing
-    kernel.sysctl."fs.inotify.max_user_watches" = "204800";
-    # Emulate foreign executable via QEMU
-    binfmt.emulatedSystems = [ "aarch64-linux" ];
-  };
+  # Increase the inotify limit for Syncthing
+  boot.kernel.sysctl."fs.inotify.max_user_watches" = "204800";
+
+  # Emulate foreign executable via QEMU
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   # Virtualization settings
   virtualisation = {
     docker.enable = true;
-    libvirtd.enable = true;
     containerd.enable = true;
   };
 
@@ -25,6 +23,9 @@
     fontDir.enable = true;
     fonts = [ pkgs.fira-code ];
   };
+
+  # Enforce requirement of X11 libraries
+  environment.noXlibs = false;
 
   # List packages installed in system profile.
   environment.systemPackages = [
@@ -35,37 +36,18 @@
     pkgs.e2fsprogs
   ];
 
-  # Define the network configurations
-  networking = {
-    enableIPv6 = true;
-    networkmanager.insertNameservers = [
-      "1.1.1.2"
-      "1.0.0.2"
-      "1.1.1.1"
-      "1.0.0.1"
-      "8.8.8.8"
-      "8.8.4.4"
-    ];
-  };
+  # Enable modern IPv6 support
+  networking.enableIPv6 = true;
 
-  # Enable the Bonjour protocol for local network discovery
-  services.avahi = {
-    enable = true;
-    nssmdns = true;
-    publish = {
-      enable = true;
-      addresses = true;
-      workstation = true;
-    };
-  };
-
-  # Enable the OpenSSH daemon
-  services.openssh = {
-    enable = true;
-    passwordAuthentication = false;
-    permitRootLogin = "no";
-    forwardX11 = true;
-  };
+  # Enable well known secure DNS servers
+  networking.networkmanager.insertNameservers = [
+    "1.1.1.2"
+    "1.0.0.2"
+    "1.1.1.1"
+    "1.0.0.1"
+    "8.8.8.8"
+    "8.8.4.4"
+  ];
 
   # Select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";

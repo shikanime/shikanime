@@ -32,6 +32,7 @@
         modules = [
           ./modules/elkia.nix
           ./modules/configuration.nix
+          ./modules/remote.nix
           ./modules/home.nix
           home-manager.nixosModules.home-manager
         ];
@@ -41,6 +42,7 @@
         modules = [
           ./modules/elvengard.nix
           ./modules/configuration.nix
+          ./modules/remote.nix
           ./modules/home.nix
           home-manager.nixosModules.home-manager
         ];
