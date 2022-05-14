@@ -2,7 +2,7 @@
 
 {
   imports = [
-    "${modulesPath}/virtualisation/virtualbox-image.nix"
+    "${modulesPath}/virtualisation/vmware-image.nix"
   ];
 
   # Define network name
