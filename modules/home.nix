@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, ... }:
+{ pkgs ? import <nixpkgs> { }, lib, ... }:
 
 {
   # Create user accounts
@@ -27,7 +27,7 @@
       # Session configuration
       home.sessionVariables = {
         EDITOR = "vim";
-        LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+        LD_LIBRARY_PATH = lib.makeLibraryPath [
           pkgs.stdenv.cc.cc.lib
         ];
       };
