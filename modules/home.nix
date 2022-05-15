@@ -5,7 +5,7 @@
   users.users.devas = {
     isNormalUser = true;
     home = "/home/devas";
-    extraGroups = [ "docker" "wheel" "libvirt" "vboxsf" "vboxusers" ];
+    extraGroups = [ "docker" "wheel" ];
     shell = pkgs.zsh;
     hashedPassword = "$6$YS5jCyZU2Z6i05wm$jFsx9fnINawEk2Vd5uZBdR71sOBHHgANUEBsp93fG3scp2uui3kYhzXh9c4eC4ZdHKq48//IWE00JwZ.ez.lg.";
     openssh.authorizedKeys.keys = [
