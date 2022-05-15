@@ -29,6 +29,9 @@
 
   # List packages installed in system profile.
   environment.systemPackages = [
+    pkgs.bashInteractive
+    pkgs.cacert
+    pkgs.nix
     pkgs.killall
     pkgs.git
     pkgs.xclip

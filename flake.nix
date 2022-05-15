@@ -27,6 +27,15 @@
     });
 
     nixosConfigurations = {
+      oceando = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./modules/oceando.nix
+          ./modules/configuration.nix
+          ./modules/home.nix
+          home-manager.nixosModules.home-manager
+        ];
+      };
       elkia = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
