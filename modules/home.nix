@@ -35,6 +35,7 @@
       # Local programs
       home.sessionPath = [
         "$HOME/.local/bin"
+        "$HOME/go/bin"
       ];
 
       # Core global utilitary packages
