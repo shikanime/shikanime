@@ -175,6 +175,10 @@
             hostname = "gcmd.birdz.com";
             identityFile = "~/.ssh/birdz";
           };
+          "sfeir.gitlab.com" = {
+            hostname = "gitlab.com";
+            identityFile = "~/.ssh/sfeir";
+          };
         };
         extraConfig = ''
           IdentitiesOnly yes
