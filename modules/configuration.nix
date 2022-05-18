@@ -9,9 +9,6 @@
   # Increase the inotify limit for Syncthing
   boot.kernel.sysctl."fs.inotify.max_user_watches" = "204800";
 
-  # Emulate foreign executable via QEMU
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
-
   # Virtualization settings
   virtualisation = {
     docker.enable = true;
