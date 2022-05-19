@@ -41,8 +41,7 @@ cask "raspberry-pi-imager"
 
 # Brew virtualization
 brew "qemu"
-cask "virtualbox"
-cask "virtualbox-extension-pack"
+cask "vmware-fusion"
 cask "docker"
 
 # Multimedia
@@ -84,6 +83,7 @@ brew "htop"
 brew "yq"
 brew "curl"
 brew "wget"
+cask "rectangle"
 cask "xquartz"
 cask "iterm2"
 cask "cloudflare-warp"
