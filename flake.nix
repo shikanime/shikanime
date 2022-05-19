@@ -73,22 +73,22 @@
     };
 
     homeConfigurations = {
-      altashar = home-manager.lib.homeManagerConfiguration {
+      williamphetsinorath = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-darwin";
         homeDirectory = "/Users/williamphetsinorath";
         username = "williamphetsinorath";
         stateVersion = "21.11";
-        configuration = { config, pkgs, ... }: {
-          imports = [ ./home/default.nix ];
+        configuration = import ./home/default.nix {
+          pkgs = import nixpkgs { system = "x86_64-darwin"; };
         };
       };
-      ishtar = home-manager.lib.homeManagerConfiguration {
+      devas = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-linux";
         homeDirectory = "/home/devas";
         username = "devas";
         stateVersion = "21.11";
-        configuration = { config, pkgs, ... }: {
-          imports = [ ./home/default.nix ];
+        configuration = import ./home/default.nix {
+          pkgs = import nixpkgs { system = "x86_64-linux"; };
         };
       };
       olva = home-manager.lib.homeManagerConfiguration {
@@ -96,8 +96,8 @@
         homeDirectory = "/Users/devas";
         username = "devas";
         stateVersion = "21.11";
-        configuration = { config, pkgs, ... }: {
-          imports = [ ./home/default.nix ];
+        configuration = import ./home/default.nix {
+          pkgs = import nixpkgs { system = "x86_64-darwin"; };
         };
       };
     };
