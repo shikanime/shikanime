@@ -7,13 +7,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-generators = {
-      url = "github:nix-community/nixos-generators";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-generators }: {
+  outputs = { self, nixpkgs, home-manager }: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system: {
       curriculum = import ./curriculum/default.nix {
         pkgs = import nixpkgs { inherit system; };
