@@ -66,7 +66,7 @@
         system = "x86_64-darwin";
         homeDirectory = "/Users/williamphetsinorath";
         username = "williamphetsinorath";
-        stateVersion = "21.11";
+        stateVersion = "22.05";
         configuration = import ./home/default.nix {
           pkgs = import nixpkgs { system = "x86_64-darwin"; };
         };
@@ -75,7 +75,7 @@
         system = "x86_64-linux";
         homeDirectory = "/home/devas";
         username = "devas";
-        stateVersion = "21.11";
+        stateVersion = "22.05";
         configuration = import ./home/default.nix {
           pkgs = import nixpkgs { system = "x86_64-linux"; };
         };
@@ -84,7 +84,7 @@
         system = "x86_64-darwin";
         homeDirectory = "/Users/devas";
         username = "devas";
-        stateVersion = "21.11";
+        stateVersion = "22.05";
         configuration = import ./home/default.nix {
           pkgs = import nixpkgs { system = "x86_64-darwin"; };
         };
