@@ -14,29 +14,22 @@
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-generators }: {
-    packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      let pkgs = import nixpkgs { inherit system; }; in
-      {
-        curriculum = import ./curriculum/default.nix {
-          inherit pkgs;
-        };
-      }
-    );
+    packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system: {
+      curriculum = import ./curriculum/default.nix {
+        pkgs = import nixpkgs { inherit system; };
+      };
+    });
 
     defaultPackage = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      let pkgs = import nixpkgs { inherit system; }; in
       import ./default.nix {
-        inherit pkgs;
+        pkgs = import nixpkgs { inherit system; };
         nixosConfigurations = self.nixosConfigurations;
       }
     );
 
-    devShells = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      let pkgs = import nixpkgs { inherit system; }; in
-      {
-        curriculum = import ./curriculum/shell.nix {
-          inherit pkgs;
-        };
+    devShell = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
+      import ./shell.nix {
+        pkgs = import nixpkgs { inherit system; };
       }
     );
 

@@ -84,7 +84,7 @@
         pkgs.erlang
         pkgs.rebar3
         pkgs.tectonic
-        pkgs.texlive.combined.scheme-basic
+        pkgs.texlive.combined.scheme-full
         pythonEnv
       ];
 
@@ -131,6 +131,12 @@
     programs.go.enable = true;
 
     programs.opam = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
+
+    programs.direnv = {
       enable = true;
       enableBashIntegration = true;
       enableZshIntegration = true;
