@@ -6,6 +6,9 @@
     experimental-features = nix-command flakes
   '';
 
+  # Allow unfree software such as Cloudflared or CUDA
+  nixpkgs.config.allowUnfree = true;
+
   # Increase the inotify limit for Syncthing
   boot.kernel.sysctl."fs.inotify.max_user_watches" = "204800";
 
