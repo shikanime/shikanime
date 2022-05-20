@@ -6,6 +6,11 @@
     experimental-features = nix-command flakes
   '';
 
+  # Add personal caching server
+  nix.settings.substituters = [
+    "https://shikanime.cachix.org"
+  ];
+
   # Allow unfree software such as Cloudflared or CUDA
   nixpkgs.config.allowUnfree = true;
 
@@ -37,6 +42,7 @@
     pkgs.xclip
     pkgs.inotify-tools
     pkgs.e2fsprogs
+    pkgs.cachix
   ];
 
   # Enable modern IPv6 support
