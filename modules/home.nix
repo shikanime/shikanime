@@ -175,19 +175,19 @@
       matchBlocks = {
         "coopelec.ssh.dev.azure.com" = {
           hostname = "ssh.dev.azure.com";
-          identityFile = "~/.ssh/coopelec";
+          identityFile = "~/.ssh/coopelec_rsa";
         };
         "lvmh.ssh.dev.azure.com" = {
           hostname = "ssh.dev.azure.com";
-          identityFile = "~/.ssh/lvmh";
+          identityFile = "~/.ssh/lvmh_ed25519";
         };
         "gcmd.birdz.com" = {
           hostname = "gcmd.birdz.com";
-          identityFile = "~/.ssh/birdz";
+          identityFile = "~/.ssh/birdz_ed25519";
         };
         "sfeir.gitlab.com" = {
           hostname = "gitlab.com";
-          identityFile = "~/.ssh/sfeir";
+          identityFile = "~/.ssh/sfeir_ed25519";
         };
       };
       extraConfig = ''
