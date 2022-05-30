@@ -61,9 +61,6 @@
   # Select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable Network Time Protocol
-  services.ntp.enable = true;
-
   # Keep the system timezone up-to-date based on the current location
   services.localtime.enable = true;
 
