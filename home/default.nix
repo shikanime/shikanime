@@ -10,10 +10,11 @@
   # Session configuration
   home.sessionVariables.EDITOR = "vim";
 
-  # Core global utilitary packages
-  home.packages = [
-    pkgs.nixpkgs-fmt
-  ];
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
 
   programs.vim.enable = true;
 
