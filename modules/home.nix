@@ -188,7 +188,13 @@
         adog = "log --all --decorate --oneline --graph";
         pouf = "push --force-with-lease";
       };
-      ignores = [ "*~" ".fuse_hidden*" ".directory" ".Trash-*" ".nfs*" ];
+      ignores = [
+        "*~"
+        ".fuse_hidden*"
+        ".directory"
+        ".Trash-*"
+        ".nfs*"
+      ];
 
       lfs.enable = true;
 
@@ -211,9 +217,7 @@
       enableSshSupport = true;
     };
 
-    services.syncthing = {
-      enable = true;
-    };
+    services.syncthing.enable = true;
 
     home.stateVersion = "22.05";
   };
