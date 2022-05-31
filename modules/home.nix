@@ -39,50 +39,22 @@
     ];
 
     # Core global utilitary packages
-    home.packages =
-      let
-        pythonEnv = pkgs.python3.withPackages (pypkgs: [
-          pypkgs.pip
-          pypkgs.pipx
-          pypkgs.black
-        ]);
-      in
-      [
-        pkgs.wget
-        pkgs.curl
-        pkgs.darcs
-        pkgs.minikube
-        pkgs.skaffold
-        pkgs.kompose
-        pkgs.google-cloud-sdk
-        pkgs.azure-cli
-        pkgs.aws
-        pkgs.kubectl
-        pkgs.istioctl
-        pkgs.kn
-        pkgs.cloudflared
-        pkgs.github-cli
-        pkgs.nixpkgs-fmt
-        pkgs.cmake
-        pkgs.gnumake
-        pkgs.gcc
-        pkgs.binutils
-        pkgs.clang-tools
-        pkgs.rustup
-        pkgs.yarn
-        pkgs.nodejs
-        pkgs.deno
-        pkgs.poetry
-        pkgs.terraform
-        pkgs.php
-        pkgs.ruby
-        pkgs.elixir
-        pkgs.erlang
-        pkgs.rebar3
-        pkgs.tectonic
-        pkgs.texlive.combined.scheme-full
-        pythonEnv
-      ];
+    home.packages = [
+      pkgs.wget
+      pkgs.curl
+      pkgs.darcs
+      pkgs.minikube
+      pkgs.google-cloud-sdk
+      pkgs.azure-cli
+      pkgs.aws
+      pkgs.kubectl
+      pkgs.github-cli
+      pkgs.rustup
+      pkgs.nodejs
+      pkgs.deno
+      pkgs.poetry
+      pkgs.terraform
+    ];
 
     programs.vim.enable = true;
 
@@ -97,10 +69,6 @@
       enableBashIntegration = true;
       enableZshIntegration = true;
     };
-
-    programs.java.enable = true;
-
-    programs.go.enable = true;
 
     programs.opam = {
       enable = true;

@@ -61,7 +61,6 @@
         "minikube"
         "golang"
         "sudo"
-        "yarn"
         "vim-interaction"
       ];
     };
