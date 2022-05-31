@@ -67,7 +67,7 @@
   # Compatibility for alien binary with hardcoded ld paths
   system.activationScripts.ldlinux = ''
     mkdir -m 0755 -p /lib64
-    ln -sfn ${pkgs.stdenv.glibc.out}/lib64/ld-linux-x86-64.so.2 /lib64/.ld-linux-x86-64.so.2.tmp
+    ln -sfn ${pkgs.glibc.out}/lib64/ld-linux-x86-64.so.2 /lib64/.ld-linux-x86-64.so.2.tmp
     mv -f /lib64/.ld-linux-x86-64.so.2.tmp /lib64/ld-linux-x86-64.so.2
   '';
 
