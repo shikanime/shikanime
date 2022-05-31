@@ -74,7 +74,7 @@ mas "Keynote", id: 409183694
 
 # Art
 cask "blender"
-cask "krita"
+cask "figma"
 
 # Utils
 brew "openssh"
