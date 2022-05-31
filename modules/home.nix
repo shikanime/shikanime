@@ -211,6 +211,7 @@
     services.gpg-agent = {
       enable = true;
       enableSshSupport = true;
+      enableExtraSocket = true;
     };
 
     home.stateVersion = "22.05";
