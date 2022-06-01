@@ -40,8 +40,7 @@ cask "jetbrains-toolbox"
 cask "raspberry-pi-imager"
 
 # Brew virtualization
-brew "qemu"
-cask "vmware-fusion"
+cask "utm"
 cask "docker"
 
 # Multimedia
