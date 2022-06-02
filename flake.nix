@@ -36,6 +36,7 @@
           ./modules/oceando.nix
           ./modules/configuration.nix
           ./modules/home.nix
+          ./modules/compat.nix
           home-manager.nixosModules.home-manager
         ];
       };
@@ -46,6 +47,7 @@
           ./modules/configuration.nix
           ./modules/remote.nix
           ./modules/home.nix
+          ./modules/compat.nix
           home-manager.nixosModules.home-manager
         ];
       };
@@ -56,6 +58,7 @@
           ./modules/configuration.nix
           ./modules/remote.nix
           ./modules/home.nix
+          ./modules/compat.nix
           home-manager.nixosModules.home-manager
         ];
       };

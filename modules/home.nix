@@ -25,12 +25,7 @@
     programs.home-manager.enable = true;
 
     # Session configuration
-    home.sessionVariables = {
-      EDITOR = "vim";
-      LD_LIBRARY_PATH = lib.makeLibraryPath [
-        pkgs.stdenv.cc.cc.lib
-      ];
-    };
+    home.sessionVariables.EDITOR = "vim";
 
     # Local programs
     home.sessionPath = [
