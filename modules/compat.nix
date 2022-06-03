@@ -11,15 +11,14 @@
           --recursive \
           --event create \
           --event moved_to \
-          --format "%w%f" \
           "$HOME/.vscode-server/bin" \
-          | while IFS=: read -r filename;
+          | while IFS=:" " read -r out event filename;
         do
-          if ${pkgs.file}/bin/file $filename | grep -q ELF; then
+          if ${pkgs.file}/bin/file "$out$filename" | grep -q ELF; then
             ${pkgs.patchelf}/bin/patchelf \
               --set-interpreter "${pkgs.glibc.out}/lib/ld-linux-x86-64.so.2" \
               --set-rpath "${lib.makeLibraryPath [pkgs.stdenv.cc.cc.lib]}" \
-              $filename
+              "$out$filename"
           fi
         done
       '';
@@ -35,20 +34,12 @@
         ${pkgs.inotify-tools}/bin/inotifywait \
           --monitor \
           --event delete \
-          --format "%w" \
+          --include ".tar.gz" \
           "$HOME/.cache/JetBrains/RemoteDev/dist" \
-          | while IFS=: read -r out;
+          | while IFS=:" " read -r out event filename;
         do
-          find $out/*/plugins/remote-dev-server/bin \
-            -mindepth 1 \
-            -maxdepth 1 \
-            -name launcher.sh \
-            -type f \
-            | while IFS=: read -r file;
-          do
-            sed -i 's#/lib64/ld-linux-x86-64.so.2#${pkgs.glibc.out}/lib/ld-linux-x86-64.so.2#g' \
-              "$file"
-          done
+          sed -i 's#/lib64/ld-linux-x86-64.so.2#${pkgs.glibc.out}/lib/ld-linux-x86-64.so.2#g' \
+            "$out''${filename%%.tar.gz}/plugins/remote-dev-server/bin/launcher.sh"
         done
       '';
     };
