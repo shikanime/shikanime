@@ -175,6 +175,9 @@
       enable = true;
       enableSshSupport = true;
       enableExtraSocket = true;
+      extraConfig = ''
+        pinentry-timeout 60
+      '';
     };
 
     home.stateVersion = "22.05";
