@@ -5,7 +5,7 @@ on:
     paths:
       - flake.lock
       - flake.nix
-      - curriculum/**/*
+      - pkgs/curriculum/**/*
 jobs:
   build:
     runs-on: ubuntu-latest

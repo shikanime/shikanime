@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, lib, ... }:
+{ pkgs ? import <nixpkgs> { }, ... }:
 
 {
   # Create user accounts
@@ -8,12 +8,6 @@
     extraGroups = [ "docker" "wheel" ];
     shell = pkgs.zsh;
     hashedPassword = "$6$YS5jCyZU2Z6i05wm$jFsx9fnINawEk2Vd5uZBdR71sOBHHgANUEBsp93fG3scp2uui3kYhzXh9c4eC4ZdHKq48//IWE00JwZ.ez.lg.";
-  };
-
-  # Configure Home Manager to use NixOS global packages
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
   };
 
   # Configure user home
