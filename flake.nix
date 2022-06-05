@@ -74,7 +74,7 @@
         homeDirectory = "/Users/williamphetsinorath";
         username = "williamphetsinorath";
         stateVersion = "22.05";
-        configuration = import ./home/default.nix {
+        configuration = import ./homes/base.nix {
           pkgs = import nixpkgs { inherit system; };
         };
       };
@@ -83,7 +83,7 @@
         homeDirectory = "/home/devas";
         username = "devas";
         stateVersion = "22.05";
-        configuration = import ./home/default.nix {
+        configuration = import ./homes/base.nix {
           pkgs = import nixpkgs { inherit system; };
         };
       };
@@ -92,7 +92,7 @@
         homeDirectory = "/Users/devas";
         username = "devas";
         stateVersion = "22.05";
-        configuration = import ./home/default.nix {
+        configuration = import ./homes/base.nix {
           pkgs = import nixpkgs { inherit system; };
         };
       };

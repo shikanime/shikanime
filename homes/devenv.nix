@@ -7,13 +7,32 @@
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
-  # Core global utilitary packages
-  home.packages = [
-    pkgs.rustup
-  ];
-
   # Session configuration
   home.sessionVariables.EDITOR = "vim";
+
+  # Local programs
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/go/bin"
+  ];
+
+  # Core global utilitary packages
+  home.packages = [
+    pkgs.wget
+    pkgs.curl
+    pkgs.darcs
+    pkgs.minikube
+    pkgs.google-cloud-sdk
+    pkgs.azure-cli
+    pkgs.aws
+    pkgs.kubectl
+    pkgs.github-cli
+    pkgs.rustup
+    pkgs.nodejs
+    pkgs.deno
+    pkgs.poetry
+    pkgs.terraform
+  ];
 
   programs.vim.enable = true;
 
@@ -61,10 +80,13 @@
         "minikube"
         "golang"
         "sudo"
+        "yarn"
         "vim-interaction"
       ];
     };
   };
+
+  programs.gpg.enable = true;
 
   programs.ssh = {
     enable = true;
@@ -84,20 +106,6 @@
       "sfeir.gitlab.com" = {
         hostname = "gitlab.com";
         identityFile = "~/.ssh/sfeir_ed25519";
-      };
-      "elkia.local" = {
-        hostname = "elkia.local";
-        identityFile = "~/.ssh/elkia";
-        user = "devas";
-        forwardX11 = true;
-        forwardAgent = true;
-      };
-      "elvengard.local" = {
-        hostname = "elvengard.local";
-        identityFile = "~/.ssh/elvengard";
-        user = "devas";
-        forwardX11 = true;
-        forwardAgent = true;
       };
     };
     extraConfig = ''
@@ -146,10 +154,14 @@
     };
   };
 
-  programs.gpg.enable = true;
-
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
+    enableExtraSocket = true;
+    extraConfig = ''
+      pinentry-timeout 60
+    '';
   };
+
+  home.stateVersion = "22.05";
 }
