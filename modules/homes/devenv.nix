@@ -1,19 +1,15 @@
-{ pkgs ? import <nixpkgs> { }, ... }:
+{ pkgs ? import <nixpkgs> { }, config, lib, ... }:
 
 {
   # Enable XDG base directories
   xdg.enable = true;
-
-  # Let Home Manager install and manage itself
-  programs.home-manager.enable = true;
 
   # Session configuration
   home.sessionVariables.EDITOR = "vim";
 
   # Local programs
   home.sessionPath = [
-    "$HOME/.local/bin"
-    "$HOME/go/bin"
+    "${config.home.homeDirectory}/.local/bin"
   ];
 
   # Core global utilitary packages
@@ -33,6 +29,9 @@
     pkgs.poetry
     pkgs.terraform
   ];
+
+  # Let Home Manager install and manage itself
+  programs.home-manager.enable = true;
 
   programs.vim.enable = true;
 

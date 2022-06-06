@@ -3,6 +3,7 @@
 {
   systemd.user.services.jetbrains-patcher = {
     description = "Automatically fix the JetBrains used by the Remote Dev";
+    unitConfig.ConditionPathIsDirectory = "%h/.cache/JetBrains/RemoteDev/dist";
     serviceConfig = {
       Restart = "always";
       ExecStart = pkgs.writeShellScript "patch-jetbrains" ''

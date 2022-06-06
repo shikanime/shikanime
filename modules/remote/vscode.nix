@@ -5,6 +5,7 @@ with lib;
 {
   systemd.user.services.vscode-server-patcher = {
     description = "Automatically fix the VS Code server used by the remote SSH extension";
+    unitConfig.ConditionPathIsDirectory = "%h/.vscode-server/bin";
     serviceConfig = {
       Restart = "always";
       ExecStart = pkgs.writeShellScript "patch-vscode-server" ''

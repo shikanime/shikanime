@@ -11,7 +11,5 @@
   };
 
   # Configure user home
-  home-manager.users.devas = import ../../homes/devenv.nix {
-    inherit pkgs;
-  };
+  home-manager.users.devas = ../homes/devenv.nix;
 }

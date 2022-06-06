@@ -74,27 +74,21 @@
         homeDirectory = "/Users/williamphetsinorath";
         username = "williamphetsinorath";
         stateVersion = "22.05";
-        configuration = import ./homes/base.nix {
-          pkgs = import nixpkgs { inherit system; };
-        };
+        configuration = ./modules/homes/base.nix;
       };
       devas = home-manager.lib.homeManagerConfiguration rec {
         system = "x86_64-linux";
         homeDirectory = "/home/devas";
         username = "devas";
         stateVersion = "22.05";
-        configuration = import ./homes/base.nix {
-          pkgs = import nixpkgs { inherit system; };
-        };
+        configuration = ./modules/homes/base.nix;
       };
       olva = home-manager.lib.homeManagerConfiguration rec {
         system = "x86_64-darwin";
         homeDirectory = "/Users/devas";
         username = "devas";
         stateVersion = "22.05";
-        configuration = import ./homes/base.nix {
-          pkgs = import nixpkgs { inherit system; };
-        };
+        configuration = ./modules/homes/base.nix;
       };
     };
   };

@@ -4,11 +4,11 @@
   # Enable XDG base directories
   xdg.enable = true;
 
-  # Let Home Manager install and manage itself
-  programs.home-manager.enable = true;
-
   # Session configuration
   home.sessionVariables.EDITOR = "vim";
+
+  # Let Home Manager install and manage itself
+  programs.home-manager.enable = true;
 
   programs.vim.enable = true;
 
