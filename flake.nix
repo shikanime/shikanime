@@ -44,7 +44,7 @@
           ./modules/machines/elkia.nix
           ./modules/profiles/devenv.nix
           ./modules/users/devas.nix
-          ./modules/remote/openssh.nix
+          ./modules/remote/ssh.nix
           ./modules/remote/syncthing.nix
           ./modules/remote/time.nix
           ./modules/remote/jetbrains.nix
@@ -58,7 +58,7 @@
           ./modules/machines/elvengard.nix
           ./modules/profiles/devenv.nix
           ./modules/users/devas.nix
-          ./modules/remote/openssh.nix
+          ./modules/remote/ssh.nix
           ./modules/remote/syncthing.nix
           ./modules/remote/time.nix
           ./modules/remote/jetbrains.nix
