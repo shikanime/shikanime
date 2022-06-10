@@ -1,6 +1,9 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
 {
+  # FIX: https://github.com/nix-community/home-manager/issues/2991
+  programs.zsh.enable = true;
+
   # Create user accounts
   users.users.devas = {
     isNormalUser = true;
