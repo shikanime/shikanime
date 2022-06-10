@@ -5,7 +5,7 @@
   xdg.enable = true;
 
   # Session configuration
-  home.sessionVariables.EDITOR = "vim";
+  home.sessionVariables.EDITOR = "${pkgs.vim}/bin/vim";
 
   # Local programs
   home.sessionPath = [
@@ -129,6 +129,7 @@
       adog = "log --all --decorate --oneline --graph";
       pouf = "push --force-with-lease";
     };
+
     ignores = [
       "*~"
       ".fuse_hidden*"
@@ -139,17 +140,18 @@
 
     lfs.enable = true;
 
+    signing = {
+      key = "B9443725856FF9EB";
+      signByDefault = true;
+    };
+
     extraConfig = {
-      core.editor = "vim";
-      color.ui = "auto";
+      core.editor = "${pkgs.vim}/bin/vim";
       pull.rebase = true;
       rebase.autostash = true;
       init.defaultBranch = "main";
       credential."https://dev.azure.com".useHttpPath = true;
-      credential."https://source.developers.google.com".helper = "gcloud.sh";
-      credential.helper = "store";
-      user.signingKey = "B9443725856FF9EB";
-      commit.gpgSign = true;
+      credential."https://source.developers.google.com".helper = "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
     };
   };
 
