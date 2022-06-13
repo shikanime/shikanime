@@ -25,6 +25,8 @@
     pkgs.github-cli
     pkgs.rustup
     pkgs.nodejs
+    pkgs.python3
+    pkgs.openjdk
     pkgs.deno
     pkgs.poetry
     pkgs.terraform
