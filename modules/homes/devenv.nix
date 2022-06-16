@@ -162,7 +162,7 @@
     enableSshSupport = true;
     enableExtraSocket = true;
     extraConfig = ''
-      pinentry-timeout 60
+      pinentry-timeout 30
     '';
   };
 
