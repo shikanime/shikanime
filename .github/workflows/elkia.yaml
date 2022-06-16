@@ -1,11 +1,11 @@
-name: Build Curriculum
+name: Build Elkia
 on:
   release:
     types: [created]
     paths:
       - flake.lock
       - flake.nix
-      - pkgs/curriculum/**/*
+      - modules/**/*
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,18 +14,20 @@ jobs:
         uses: actions/checkout@v2
       - name: Prepare build environment
         uses: cachix/install-nix-action@v15
+        with:
+          extra_nix_config: system-features = nixos-test benchmark big-parallel kvm
       - name: Connect Shikanime Nix cache
         uses: cachix/cachix-action@v10
         with:
           name: shikanime
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-      - name: Compile documents
-        run: nix build .#curriculum
+      - name: Build image
+        run: nix build .#nixosConfigurations.elkia.config.system.build.qcow
       - name: Export output path
         run: echo "RELEASE_PATH=$(readlink -f result)" >> $GITHUB_ENV
       - name: Export build artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: Curriculum
+          name: Elkia
           path: ${{ env.RELEASE_PATH }}
 
