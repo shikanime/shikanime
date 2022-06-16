@@ -1,11 +1,8 @@
 name: Build Elkia
 on:
-  release:
-    types: [created]
-    paths:
-      - flake.lock
-      - flake.nix
-      - modules/**/*
+  push:
+    tags:
+      - v*.*.*
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,7 +17,7 @@ jobs:
         uses: cachix/cachix-action@v10
         with:
           name: shikanime
-          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
       - name: Build image
         run: nix build .#nixosConfigurations.elkia.config.system.build.qcow
       - name: Export output path
@@ -30,4 +27,3 @@ jobs:
         with:
           name: Elkia
           path: ${{ env.RELEASE_PATH }}
-
