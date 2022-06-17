@@ -10,7 +10,6 @@ stdenv.mkDerivation {
 
   buildPhase = "pdflatex *.tex";
   installPhase = ''
-    mkdir -p $out/share
-    cp *.pdf $out/share
+    cp *.pdf $out
   '';
 }
