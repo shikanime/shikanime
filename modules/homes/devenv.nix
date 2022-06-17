@@ -124,6 +124,7 @@
 
   programs.git = {
     enable = true;
+
     userName = "Shikanime Deva";
     userEmail = "shikanime.deva@shikanime.studio";
 
@@ -146,6 +147,22 @@
       key = "B9443725856FF9EB";
       signByDefault = true;
     };
+
+    includes = [
+      {
+        condition = "gitdir:${config.home.homeDirectory}/Source/Repos/sfeir/";
+        contents = {
+          user = {
+            name = "Phetsinorath William";
+            email = "phetsinorath.w@sfeir.com";
+          };
+          signing = {
+            key = "9A31DF925449E15A";
+            signByDefault = true;
+          };
+        };
+      }
+    ];
 
     extraConfig = {
       core.editor = "${pkgs.vim}/bin/vim";
