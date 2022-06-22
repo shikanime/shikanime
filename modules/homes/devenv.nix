@@ -10,6 +10,7 @@
   # Local programs
   home.sessionPath = [
     "${config.home.homeDirectory}/.local/bin"
+    "${config.home.homeDirectory}/.mix/escripts"
   ];
 
   # Core global utilitary packages
