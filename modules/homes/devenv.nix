@@ -173,14 +173,5 @@
     };
   };
 
-  services.gpg-agent = {
-    enable = true;
-    enableSshSupport = true;
-    enableExtraSocket = true;
-    extraConfig = ''
-      pinentry-timeout 30
-    '';
-  };
-
   home.stateVersion = "22.05";
 }
