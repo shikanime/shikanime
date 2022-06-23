@@ -27,15 +27,18 @@
     pkgs.rustup
     pkgs.nodejs
     pkgs.python3
-    pkgs.openjdk
     pkgs.deno
     pkgs.poetry
+    pkgs.dotnet-sdk
     pkgs.terraform
     pkgs.bitwarden-cli
+    pkgs.nixpkgs-fmt
   ];
 
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
+
+  programs.java.enable = true;
 
   programs.vim.enable = true;
 
