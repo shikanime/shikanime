@@ -31,6 +31,7 @@
     pkgs.deno
     pkgs.poetry
     pkgs.terraform
+    pkgs.bitwarden-cli
   ];
 
   # Let Home Manager install and manage itself
