@@ -7,6 +7,7 @@ brew "mas"
 # Interpreter Toolchains
 brew "nodejs"
 brew "python"
+brew "openjdk"
 
 # Source control
 brew "darcs"
