@@ -33,7 +33,7 @@ brew "pipx"
 brew "black"
 
 # Development Enviroment
-brew "vim"
+brew "neovim"
 cask "visual-studio-code"
 cask "dbeaver-community"
 cask "jetbrains-toolbox"

@@ -5,7 +5,7 @@
   xdg.enable = true;
 
   # Session configuration
-  home.sessionVariables.EDITOR = "${pkgs.vim}/bin/vim";
+  home.sessionVariables.EDITOR = "${pkgs.neovim}/bin/nvim";
 
   # Local programs
   home.sessionPath = [
@@ -40,7 +40,11 @@
 
   programs.java.enable = true;
 
-  programs.vim.enable = true;
+  programs.neovim = {
+    enable = true;
+    withNodeJs = true;
+    withPython3 = true;
+  };
 
   programs.jq.enable = true;
 
@@ -168,7 +172,7 @@
     ];
 
     extraConfig = {
-      core.editor = "${pkgs.vim}/bin/vim";
+      core.editor = "${pkgs.neovim}/bin/nvim";
       pull.rebase = true;
       rebase.autostash = true;
       init.defaultBranch = "main";
