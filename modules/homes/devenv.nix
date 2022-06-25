@@ -29,6 +29,7 @@
     pkgs.python3
     pkgs.deno
     pkgs.poetry
+    pkgs.php
     pkgs.dotnet-sdk
     pkgs.terraform
     pkgs.bitwarden-cli
