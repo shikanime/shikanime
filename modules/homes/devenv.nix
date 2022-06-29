@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, config, lib, ... }:
+{ pkgs ? import <nixpkgs> { }, config, ... }:
 
 {
   # Enable XDG base directories
@@ -30,14 +30,14 @@
     pkgs.deno
     pkgs.poetry
     pkgs.php
+    pkgs.gcc
+    pkgs.binutils
+    pkgs.gnumake
     pkgs.dotnet-sdk
     pkgs.terraform
     pkgs.bitwarden-cli
     pkgs.nixpkgs-fmt
   ];
-
-  # Let Home Manager install and manage itself
-  programs.home-manager.enable = true;
 
   programs.java.enable = true;
 
@@ -71,31 +71,7 @@
     enableZshIntegration = true;
   };
 
-  programs.zsh = {
-    enable = true;
-    autocd = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    enableSyntaxHighlighting = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "git"
-        "gcloud"
-        "aws"
-        "python"
-        "docker"
-        "kubectl"
-        "rust"
-        "node"
-        "minikube"
-        "golang"
-        "sudo"
-        "yarn"
-        "vim-interaction"
-      ];
-    };
-  };
+  programs.zsh.enable = true;
 
   programs.gpg.enable = true;
 
@@ -106,9 +82,9 @@
         hostname = "ssh.dev.azure.com";
         identityFile = "~/.ssh/coopelec_rsa";
       };
-      "lvmh.ssh.dev.azure.com" = {
+      "celine.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/lvmh_ed25519";
+        identityFile = "~/.ssh/celine_ed25519";
       };
       "gcmd.birdz.com" = {
         hostname = "gcmd.birdz.com";
@@ -163,7 +139,7 @@
         condition = "gitdir:${config.home.homeDirectory}/Source/Repos/sfeir/";
         contents = {
           user = {
-            name = "Phetsinorath William";
+            name = "William Phetsinorath";
             email = "phetsinorath.w@sfeir.com";
             signingKey = "9A31DF925449E15A";
           };

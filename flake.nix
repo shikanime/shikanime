@@ -15,13 +15,6 @@
         curriculum = callPackage ./pkgs/curriculum/default.nix { };
       });
 
-    defaultPackage = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      with import nixpkgs { inherit system; };
-      callPackage ./default.nix {
-        nixosConfigurations = self.nixosConfigurations;
-      }
-    );
-
     devShell = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       import ./shell.nix {
         pkgs = import nixpkgs { inherit system; };
@@ -29,20 +22,12 @@
     );
 
     nixosConfigurations = {
-      oceando = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./modules/machines/oceando.nix
-          ./modules/profiles/devenv.nix
-          ./modules/users/devas.nix
-          home-manager.nixosModules.home-manager
-        ];
-      };
       elkia = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./modules/machines/elkia.nix
+          ./modules/machines/utm.nix
           ./modules/profiles/devenv.nix
+          ./modules/profiles/elkia.nix
           ./modules/users/devas.nix
           ./modules/remote/ssh.nix
           ./modules/remote/syncthing.nix
@@ -55,8 +40,9 @@
       elvengard = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./modules/machines/elvengard.nix
+          ./modules/machines/hyperv.nix
           ./modules/profiles/devenv.nix
+          ./modules/profiles/elvengard.nix
           ./modules/users/devas.nix
           ./modules/remote/ssh.nix
           ./modules/remote/syncthing.nix
@@ -74,21 +60,21 @@
         homeDirectory = "/Users/williamphetsinorath";
         username = "williamphetsinorath";
         stateVersion = "22.05";
-        configuration = ./modules/homes/base.nix;
+        configuration = ./modules/homes/host.nix;
       };
       devas = home-manager.lib.homeManagerConfiguration rec {
         system = "x86_64-linux";
         homeDirectory = "/home/devas";
         username = "devas";
         stateVersion = "22.05";
-        configuration = ./modules/homes/base.nix;
+        configuration = ./modules/homes/host.nix;
       };
       olva = home-manager.lib.homeManagerConfiguration rec {
         system = "x86_64-darwin";
         homeDirectory = "/Users/devas";
         username = "devas";
         stateVersion = "22.05";
-        configuration = ./modules/homes/base.nix;
+        configuration = ./modules/homes/host.nix;
       };
     };
   };

@@ -21,7 +21,4 @@
     diskSize = 64 * 1024;
     format = "qcow2";
   };
-
-  # Define network name
-  networking.hostName = "elkia";
 }

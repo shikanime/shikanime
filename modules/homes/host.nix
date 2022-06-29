@@ -53,9 +53,9 @@
         hostname = "ssh.dev.azure.com";
         identityFile = "~/.ssh/coopelec_rsa";
       };
-      "lvmh.ssh.dev.azure.com" = {
+      "celine.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/lvmh_ed25519";
+        identityFile = "~/.ssh/celine_ed25519";
       };
       "gcmd.birdz.com" = {
         hostname = "gcmd.birdz.com";

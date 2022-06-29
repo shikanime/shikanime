@@ -5,7 +5,7 @@ with lib;
 {
   systemd.user.services.vscode-server-patcher = {
     description = "Automatically fix the VS Code server used by the remote SSH extension";
-    unitConfig.ConditionPathIsDirectory = "%h/.vscode-server/bin";
+    unitConfig.Type = "simple";
     serviceConfig = {
       Restart = "always";
       ExecStart = pkgs.writeShellScript "patch-vscode-server" ''
@@ -29,9 +29,18 @@ with lib;
     wantedBy = [ "default.target" ];
   };
 
+  systemd.user.paths.vscode-server-patcher = {
+    description = "Monitor VS Code server connection";
+    pathConfig = {
+      PathExists = "%h/.vscode-server/bin";
+      Unit = "vscode-server-patcher.service";
+    };
+    wantedBy = [ "default.target" ];
+  };
+
   systemd.user.services.vscode-server-extensions-patcher = {
     description = "Automatically fix the VS Code server extensions used by the remote SSH extension";
-    unitConfig.ConditionPathIsDirectory = "%h/.vscode-server/extensions";
+    unitConfig.Type = "simple";
     serviceConfig = {
       Restart = "always";
       ExecStart = pkgs.writeShellScript "patch-vscode-server" ''
@@ -51,6 +60,15 @@ with lib;
           fi
         done
       '';
+    };
+    wantedBy = [ "default.target" ];
+  };
+
+  systemd.user.paths.vscode-server-extensions-patcher = {
+    description = "Monitor VS Code server extensions connection";
+    pathConfig = {
+      PathExists = "%h/.vscode-server/extensions";
+      Unit = "vscode-server-extensions-patcher.service";
     };
     wantedBy = [ "default.target" ];
   };

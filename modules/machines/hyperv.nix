@@ -7,7 +7,4 @@
 
   # Resize Hyper-V default disk size
   hyperv.baseImageSize = 64 * 1024;
-
-  # Define network name
-  networking.hostName = "elvengard";
 }

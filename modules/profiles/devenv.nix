@@ -7,6 +7,32 @@
     useUserPackages = true;
   };
 
+  # Deploy a nice default user friendly shell prompt
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    ohMyZsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "gcloud"
+        "aws"
+        "python"
+        "docker"
+        "kubectl"
+        "rust"
+        "node"
+        "minikube"
+        "golang"
+        "sudo"
+        "yarn"
+        "vim-interaction"
+      ];
+    };
+  };
+
   # Enable experimental features so we can access flakes
   nix.extraOptions = ''
     experimental-features = nix-command flakes
@@ -32,17 +58,11 @@
     fonts = [ pkgs.fira-code ];
   };
 
-  # Enforce requirement of X11 libraries
-  environment.noXlibs = false;
-
   # List packages installed in system profile.
   environment.systemPackages = [
     pkgs.cacert
-    pkgs.nix
-    pkgs.killall
-    pkgs.xclip
-    pkgs.inotify-tools
     pkgs.cachix
+    pkgs.inotify-tools
   ];
 
   # Enable modern IPv6 support

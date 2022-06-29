@@ -1,12 +1,11 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
 {
-  systemd.user.services.jetbrains-patcher = {
-    description = "Automatically fix the JetBrains used by the Remote Dev";
-    unitConfig.ConditionPathIsDirectory = "%h/.cache/JetBrains/RemoteDev/dist";
+  systemd.user.services.jetbrains-remote-development-patcher = {
+    description = "Automatically fix the JetBrains Remote Development used by the Remote Dev";
     serviceConfig = {
       Restart = "always";
-      ExecStart = pkgs.writeShellScript "patch-jetbrains" ''
+      ExecStart = pkgs.writeShellScript "patch-jetbrains-remote-development" ''
         ${pkgs.inotify-tools}/bin/inotifywait \
           --monitor \
           --event delete \
@@ -18,6 +17,15 @@
             "$out''${filename%%.tar.gz}/plugins/remote-dev-server/bin/launcher.sh"
         done
       '';
+    };
+    wantedBy = [ "default.target" ];
+  };
+
+  systemd.user.paths.jetbrains-remote-development-patcher = {
+    description = "Monitor JetBrains Remote Development connection";
+    pathConfig = {
+      PathExists = "%h/.cache/JetBrains/RemoteDev/dist";
+      Unit = "jetbrains-remote-development-patcher.service";
     };
     wantedBy = [ "default.target" ];
   };
