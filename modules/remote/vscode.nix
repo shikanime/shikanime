@@ -43,7 +43,7 @@ with lib;
     unitConfig.Type = "simple";
     serviceConfig = {
       Restart = "always";
-      ExecStart = pkgs.writeShellScript "patch-vscode-server" ''
+      ExecStart = pkgs.writeShellScript "patch-vscode-server-extensions" ''
         ${pkgs.inotify-tools}/bin/inotifywait \
           --monitor \
           --recursive \
@@ -55,7 +55,7 @@ with lib;
           if ${pkgs.file}/bin/file "$out$filename" | grep -q ELF; then
             ${pkgs.patchelf}/bin/patchelf \
               --set-interpreter "${pkgs.glibc.out}/lib/ld-linux-x86-64.so.2" \
-              --set-rpath "${makeLibraryPath [pkgs.stdenv.cc.cc.lib]}" \
+              --set-rpath "${makeLibraryPath [pkgs.stdenv.cc.cc.lib pkgs.zlib]}" \
               "$out$filename"
           fi
         done
