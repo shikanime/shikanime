@@ -3,8 +3,19 @@
 with lib;
 
 {
-  # Increase the inotify limit
-  boot.kernel.sysctl."fs.inotify.max_user_watches" = mkDefault "204800";
+  # Configure the kernel
+  boot.kernel.sysctl = {
+    "kernel.threads-max" = mkDefault 8192;
+    "fs.inotify.max_user_watches" = mkDefault 204800;
+    "fs.file-max" = mkDefault 131072;
+    "vm.max_map_count" = mkDefault 524288;
+  };
+
+  # Increase security limits
+  security.pam.loginLimits = [
+    { domain = "*"; item = "nofile"; type = "-"; value = "131072"; }
+    { domain = "*"; item = "nproc"; type = "-"; value = "8192"; }
+  ];
 
   # P2P file synchronization
   services.syncthing = {
