@@ -47,6 +47,7 @@ with lib;
           --recursive \
           --event create \
           --event moved_to \
+          --event modify \
           "$HOME/.vscode-server/extensions" \
           | while IFS=:" " read -r out event filename;
         do
