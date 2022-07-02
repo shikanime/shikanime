@@ -15,6 +15,7 @@
 
   # Core global utilitary packages
   home.packages = [
+    pkgs.file
     pkgs.wget
     pkgs.curl
     pkgs.darcs
