@@ -49,9 +49,10 @@
   # List packages installed in system profile.
   environment.systemPackages = [
     pkgs.cacert
-    pkgs.cachix
-    pkgs.inotify-tools
   ];
+
+  # Add ~/.local/bin/ to $PATH
+  environment.localBinInPath = true;
 
   # Enable modern IPv6 support
   networking.enableIPv6 = true;

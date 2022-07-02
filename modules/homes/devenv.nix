@@ -35,33 +35,40 @@
     pkgs.terraform
     pkgs.bitwarden-cli
     pkgs.nixpkgs-fmt
+    pkgs.inotify-tools
+    pkgs.cachix
   ];
+
+  programs.go = {
+    enable = true;
+    goPath = "${config.xdg.dataHome}/go";
+  };
+
+  programs.opam = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
 
   programs.java.enable = true;
 
+  programs.jq.enable = true;
+
   programs.neovim = {
     enable = true;
-    viAlias=true;
-    vimAlias=true;
-    vimdiffAlias=true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
     withNodeJs = true;
-    withRuby=true;
+    withRuby = true;
     withPython3 = true;
   };
-
-  programs.jq.enable = true;
 
   programs.dircolors.enable = true;
 
   programs.bash.enable = true;
 
   programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
-
-  programs.opam = {
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
