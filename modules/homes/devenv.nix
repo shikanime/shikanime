@@ -4,9 +4,6 @@
   # Enable XDG base directories
   xdg.enable = true;
 
-  # Session configuration
-  home.sessionVariables.EDITOR = "${pkgs.neovim}/bin/nvim";
-
   # Local programs
   home.sessionPath = [
     "${config.home.homeDirectory}/.local/bin"
