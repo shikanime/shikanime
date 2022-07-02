@@ -72,7 +72,26 @@
     enableZshIntegration = true;
   };
 
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "gcloud"
+        "aws"
+        "python"
+        "docker"
+        "kubectl"
+        "rust"
+        "node"
+        "minikube"
+        "golang"
+        "yarn"
+        "vim-interaction"
+      ];
+    };
+  };
 
   programs.gpg.enable = true;
 

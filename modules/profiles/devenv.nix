@@ -16,19 +16,7 @@
     ohMyZsh = {
       enable = true;
       plugins = [
-        "git"
-        "gcloud"
-        "aws"
-        "python"
-        "docker"
-        "kubectl"
-        "rust"
-        "node"
-        "minikube"
-        "golang"
         "sudo"
-        "yarn"
-        "vim-interaction"
       ];
     };
   };
