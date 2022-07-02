@@ -55,7 +55,7 @@ with lib;
           if ${pkgs.file}/bin/file "$out$filename" | grep -q ELF; then
             ${pkgs.patchelf}/bin/patchelf \
               --set-interpreter "${pkgs.glibc.out}/lib/ld-linux-x86-64.so.2" \
-              --set-rpath "${makeLibraryPath [pkgs.stdenv.cc.cc.lib pkgs.zlib]}" \
+              --set-rpath "${makeLibraryPath [pkgs.stdenv.cc.cc.lib pkgs.zlib "${pkgs.openjdk}/lib/openjdk"]}" \
               "$out$filename"
           fi
         done
