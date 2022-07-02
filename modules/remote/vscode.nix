@@ -5,7 +5,6 @@ with lib;
 {
   systemd.user.services.vscode-server-patcher = {
     description = "Automatically fix the VS Code server used by the remote SSH extension";
-    unitConfig.Type = "simple";
     serviceConfig = {
       Restart = "always";
       ExecStart = pkgs.writeShellScript "patch-vscode-server" ''
@@ -40,7 +39,6 @@ with lib;
 
   systemd.user.services.vscode-server-extensions-patcher = {
     description = "Automatically fix the VS Code server extensions used by the remote SSH extension";
-    unitConfig.Type = "simple";
     serviceConfig = {
       Restart = "always";
       ExecStart = pkgs.writeShellScript "patch-vscode-server-extensions" ''
