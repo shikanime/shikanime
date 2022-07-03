@@ -21,6 +21,9 @@
     };
   };
 
+  # Allow cgroup memory resize
+  boot.kernelParams = [ "cgroup_enable=memory" "swapaccount=1" ];
+
   # Enable experimental features so we can access flakes
   nix.extraOptions = ''
     experimental-features = nix-command flakes
