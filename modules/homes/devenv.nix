@@ -12,6 +12,8 @@
 
   # Core global utilitary packages
   home.packages = [
+    pkgs.htop
+    pkgs.openssl
     pkgs.file
     pkgs.wget
     pkgs.curl
