@@ -124,6 +124,10 @@
         hostname = "gitlab.com";
         identityFile = "~/.ssh/sfeir_ed25519";
       };
+      "sfeir.bitbucket.org" = {
+        hostname = "bitbucket.org";
+        identityFile = "~/.ssh/sfeir_ed25519";
+      };
     };
     extraConfig = ''
       IdentitiesOnly yes
