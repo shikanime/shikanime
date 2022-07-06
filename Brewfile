@@ -76,6 +76,10 @@ mas 'Keynote', id: 409_183_694
 cask 'blender'
 cask 'figma'
 
+# Productivity
+cask 'rectangle'
+mas 'Amphetamine', id: 937_984_704
+
 # Utils
 brew 'openssh'
 brew 'gnupg'
@@ -83,9 +87,10 @@ brew 'htop'
 brew 'yq'
 brew 'curl'
 brew 'wget'
-cask 'rectangle'
 cask 'xquartz'
 cask 'iterm2'
+
+# System
 cask 'cloudflare-warp'
 cask 'android-file-transfer'
 cask 'the-unarchiver'
