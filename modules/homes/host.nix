@@ -4,9 +4,6 @@
   # Enable XDG base directories
   xdg.enable = true;
 
-  # Session configuration
-  home.sessionVariables.EDITOR = "${pkgs.neovim}/bin/nvim";
-
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
@@ -131,6 +128,4 @@
       credential."https://source.developers.google.com".helper = "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
     };
   };
-
-  home.stateVersion = "22.05";
 }

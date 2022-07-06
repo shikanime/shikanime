@@ -55,21 +55,21 @@
     };
 
     homeConfigurations = {
-      williamphetsinorath = home-manager.lib.homeManagerConfiguration rec {
+      williamphetsinorath = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-darwin";
         homeDirectory = "/Users/williamphetsinorath";
         username = "williamphetsinorath";
         stateVersion = "22.05";
         configuration = ./modules/homes/host.nix;
       };
-      devas = home-manager.lib.homeManagerConfiguration rec {
+      devas = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-linux";
         homeDirectory = "/home/devas";
         username = "devas";
         stateVersion = "22.05";
         configuration = ./modules/homes/host.nix;
       };
-      olva = home-manager.lib.homeManagerConfiguration rec {
+      olva = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-darwin";
         homeDirectory = "/Users/devas";
         username = "devas";

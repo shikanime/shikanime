@@ -191,6 +191,4 @@
       credential."https://source.developers.google.com".helper = "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
     };
   };
-
-  home.stateVersion = "22.05";
 }
