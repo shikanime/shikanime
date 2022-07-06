@@ -65,6 +65,10 @@
         hostname = "gitlab.com";
         identityFile = "~/.ssh/sfeir_ed25519";
       };
+      "sfeir.bitbucket.org" = {
+        hostname = "bitbucket.org";
+        identityFile = "~/.ssh/sfeir_ed25519";
+      };
       "elkia.local" = {
         hostname = "elkia.local";
         identityFile = "~/.ssh/elkia";
