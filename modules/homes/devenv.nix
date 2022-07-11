@@ -12,6 +12,7 @@
 
   # Core global utilitary packages
   home.packages = [
+    pkgs.sqlfluff
     pkgs.htop
     pkgs.openssl
     pkgs.file
