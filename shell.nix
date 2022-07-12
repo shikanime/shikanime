@@ -1,9 +1,13 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ mkShell
+, texlive
+, rubocop
+, nixpkgs-fmt
+}:
 
-pkgs.mkShell {
+mkShell {
   buildInputs = [
-    pkgs.texlive.combined.scheme-full
-    pkgs.rubocop
-    pkgs.nixpkgs-fmt
+    texlive.combined.scheme-full
+    rubocop
+    nixpkgs-fmt
   ];
 }

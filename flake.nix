@@ -16,9 +16,8 @@
       });
 
     devShell = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      import ./shell.nix {
-        pkgs = import nixpkgs { inherit system; };
-      }
+      with import nixpkgs { inherit system; };
+      callPackage ./shell.nix { }
     );
 
     nixosConfigurations = {
