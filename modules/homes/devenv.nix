@@ -187,6 +187,7 @@
       core.editor = "${pkgs.neovim}/bin/nvim";
       pull.rebase = true;
       rebase.autostash = true;
+      push.autoSetupRemote = true;
       init.defaultBranch = "main";
       credential."https://dev.azure.com".useHttpPath = true;
       credential."https://source.developers.google.com".helper = "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
