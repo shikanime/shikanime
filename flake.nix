@@ -25,6 +25,7 @@
         system = "x86_64-linux";
         modules = [
           ./modules/virtualisation/utm.nix
+          ./modules/profiles/base.nix
           ./modules/profiles/devenv.nix
           ./modules/profiles/elkia.nix
           ./modules/users/devas.nix
@@ -40,6 +41,7 @@
         system = "x86_64-linux";
         modules = [
           ./modules/virtualisation/hyperv.nix
+          ./modules/profiles/base.nix
           ./modules/profiles/devenv.nix
           ./modules/profiles/elvengard.nix
           ./modules/users/devas.nix
