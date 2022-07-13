@@ -1,12 +1,8 @@
 { pkgs ? import <nixpkgs> { }, config, ... }:
 
 {
-  # Enable XDG base directories
-  xdg.enable = true;
-
   # Local programs
   home.sessionPath = [
-    "${config.home.homeDirectory}/.local/bin"
     "${config.home.homeDirectory}/.mix/escripts"
   ];
 
@@ -38,7 +34,6 @@
     pkgs.terraform
     pkgs.bitwarden-cli
     pkgs.nixpkgs-fmt
-    pkgs.inotify-tools
     pkgs.cachix
   ];
 
@@ -67,42 +62,20 @@
     withPython3 = true;
   };
 
-  programs.dircolors.enable = true;
-
-  programs.bash.enable = true;
-
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
-
-  programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
-
-  programs.zsh = {
-    enable = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "git"
-        "gcloud"
-        "aws"
-        "python"
-        "docker"
-        "kubectl"
-        "rust"
-        "node"
-        "minikube"
-        "golang"
-        "yarn"
-        "vim-interaction"
-      ];
-    };
-  };
+  programs.zsh.oh-my-zsh.plugins = [
+    "git"
+    "gcloud"
+    "aws"
+    "python"
+    "docker"
+    "kubectl"
+    "rust"
+    "node"
+    "minikube"
+    "golang"
+    "yarn"
+    "vim-interaction"
+  ];
 
   programs.gpg.enable = true;
 

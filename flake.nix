@@ -62,6 +62,9 @@
         username = "williamphetsinorath";
         stateVersion = "22.05";
         configuration = ./modules/homes/host.nix;
+        extraModules = [
+          ./modules/homes/base.nix
+        ];
       };
       devas = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-linux";
@@ -69,6 +72,9 @@
         username = "devas";
         stateVersion = "22.05";
         configuration = ./modules/homes/host.nix;
+        extraModules = [
+          ./modules/homes/base.nix
+        ];
       };
       olva = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-darwin";
@@ -76,6 +82,9 @@
         username = "devas";
         stateVersion = "22.05";
         configuration = ./modules/homes/host.nix;
+        extraModules = [
+          ./modules/homes/base.nix
+        ];
       };
     };
   };

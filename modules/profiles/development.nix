@@ -1,6 +1,11 @@
 { pkgs ? import <nixpkgs> { }, ... }:
 
 {
+  # Global system specific packages
+  environment.systemPackages = [
+    pkgs.inotify-tools
+  ];
+
   # Virtualization settings
   virtualisation = {
     docker.enable = true;
