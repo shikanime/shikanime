@@ -1,10 +1,6 @@
 { pkgs ? import <nixpkgs> { }, config, lib, modulesPath, ... }:
 
 {
-  imports = [
-    "${modulesPath}/profiles/qemu-guest.nix"
-  ];
-
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";
     autoResize = true;
