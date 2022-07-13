@@ -24,7 +24,7 @@
       elkia = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./modules/machines/utm.nix
+          ./modules/virtualisation/utm.nix
           ./modules/profiles/devenv.nix
           ./modules/profiles/elkia.nix
           ./modules/users/devas.nix
@@ -39,7 +39,7 @@
       elvengard = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./modules/machines/hyperv.nix
+          ./modules/virtualisation/hyperv.nix
           ./modules/profiles/devenv.nix
           ./modules/profiles/elvengard.nix
           ./modules/users/devas.nix
