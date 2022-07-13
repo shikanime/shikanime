@@ -52,5 +52,8 @@
   };
 
   # Configure user home
-  home-manager.users.devas.imports = [ ../homes/devenv.nix ];
+  home-manager.users.devas.imports = [
+    ../homes/base.nix
+    ../homes/development.nix
+  ];
 }

@@ -26,7 +26,7 @@
         modules = [
           ./modules/virtualisation/utm.nix
           ./modules/profiles/base.nix
-          ./modules/profiles/devenv.nix
+          ./modules/profiles/development.nix
           ./modules/profiles/elkia.nix
           ./modules/users/devas.nix
           ./modules/remote/ssh.nix
@@ -42,7 +42,7 @@
         modules = [
           ./modules/virtualisation/hyperv.nix
           ./modules/profiles/base.nix
-          ./modules/profiles/devenv.nix
+          ./modules/profiles/development.nix
           ./modules/profiles/elvengard.nix
           ./modules/users/devas.nix
           ./modules/remote/ssh.nix
