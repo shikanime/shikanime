@@ -87,6 +87,7 @@ brew 'htop'
 brew 'yq'
 brew 'curl'
 brew 'wget'
+brew 'nushell'
 cask 'xquartz'
 cask 'iterm2'
 
