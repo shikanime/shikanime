@@ -48,8 +48,6 @@
     enableZshIntegration = true;
   };
 
-  programs.java.enable = true;
-
   programs.jq.enable = true;
 
   programs.neovim = {

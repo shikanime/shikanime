@@ -6,6 +6,10 @@
     pkgs.inotify-tools
   ];
 
+  # Configure Java home globally for tools that do not
+  # rely on the shell dotfiles
+  programs.java.enable = true;
+
   # Virtualization settings
   virtualisation = {
     docker.enable = true;
