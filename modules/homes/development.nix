@@ -15,6 +15,7 @@
     pkgs.wget
     pkgs.curl
     pkgs.darcs
+    pkgs.cloudflared
     pkgs.minikube
     pkgs.google-cloud-sdk
     pkgs.azure-cli
