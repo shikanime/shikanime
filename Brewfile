@@ -35,6 +35,7 @@ brew 'black'
 
 # Development Enviroment
 brew 'neovim'
+brew 'wireshark'
 cask 'visual-studio-code'
 cask 'dbeaver-community'
 cask 'jetbrains-toolbox'
