@@ -8,6 +8,7 @@
 
   # Core global utilitary packages
   home.packages = [
+    pkgs.snowsql
     pkgs.sqlfluff
     pkgs.htop
     pkgs.openssl
