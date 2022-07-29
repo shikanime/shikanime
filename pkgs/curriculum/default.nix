@@ -3,10 +3,12 @@
 , lib
 }:
 
+with lib;
+
 stdenv.mkDerivation {
   name = "curriculum";
   buildInputs = [ texlive.combined.scheme-full ];
-  src = lib.cleanSource ./.;
+  src = cleanSource ./.;
 
   buildPhase = "pdflatex *.tex";
   installPhase = ''

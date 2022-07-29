@@ -51,7 +51,7 @@ Temporary Items
 *.xdv
 *.pdf
 *-converted-to.*
-# these rules might exclude image files for figures etc.
+# these rules might exclude image files for figures etc
 # *.ps
 # *.eps
 
@@ -69,9 +69,9 @@ Temporary Items
 ## Build tool auxiliary files:
 *.fdb_latexmk
 *.synctex
-*.synctex(busy)
+*.synctex\(busy\)
 *.synctex.gz
-*.synctex.gz(busy)
+*.synctex.gz\(busy\)
 *.pdfsync
 
 ## Build tool directories for auxiliary files
@@ -317,8 +317,8 @@ TSWLatexianTemp*
 *.xwm
 
 # REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
-# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
-# Uncomment the next line to have this generated file ignored.
+# option is specified. Footnotes are the stored in a file with suffix Notes.bib
+# Uncomment the next line to have this generated file ignored
 #*Notes.bib
 
 ### LaTeX Patch ###
