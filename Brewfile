@@ -91,6 +91,7 @@ brew 'wget'
 brew 'nushell'
 cask 'xquartz'
 cask 'iterm2'
+cask 'obs'
 
 # System
 cask 'cloudflare-warp'
