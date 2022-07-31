@@ -46,10 +46,5 @@ with lib;
         name = "Elven Gard";
       };
     };
-    extraOptions.gui = {
-      tls = true;
-      user = "syncthing";
-      password = "$y$j9T$fTQ/mZUAB3ESkTk6QhSl/1$PkBMfZmw6QcvGQzQepHjMAdRIc1QNor2ngMcKT6w7D9";
-    };
   };
 }
