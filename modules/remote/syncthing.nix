@@ -49,7 +49,7 @@ with lib;
     extraOptions.gui = {
       tls = true;
       user = "syncthing";
-      password = "$2a$10$vy0rh/iE4hAtLM4LFxbv1OyMJQiLXUZrLFxrODmI2Ml7kmEvYxjbO";
+      password = "$y$j9T$fTQ/mZUAB3ESkTk6QhSl/1$PkBMfZmw6QcvGQzQepHjMAdRIc1QNor2ngMcKT6w7D9";
     };
   };
 }
