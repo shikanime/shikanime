@@ -25,6 +25,7 @@
         system = "x86_64-linux";
         modules = [
           ./modules/profiles/qcow.nix
+          ./modules/profiles/iso.nix
           ./modules/profiles/base.nix
           ./modules/profiles/development.nix
           ./modules/profiles/elkia.nix
@@ -41,6 +42,7 @@
         system = "x86_64-linux";
         modules = [
           ./modules/virtualisation/hyperv.nix
+          ./modules/profiles/iso.nix
           ./modules/profiles/base.nix
           ./modules/profiles/development.nix
           ./modules/profiles/elvengard.nix

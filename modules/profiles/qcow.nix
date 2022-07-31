@@ -1,5 +1,7 @@
 { pkgs, config, lib, modulesPath, ... }:
 
+with lib;
+
 {
   # for virtio kernel drivers
   imports = [
@@ -15,7 +17,7 @@
   boot.growPartition = true;
   boot.kernelParams = [ "console=ttyS0" ];
   boot.loader.grub.device = "/dev/vda";
-  boot.loader.timeout = 0;
+  boot.loader.timeout = mkDefault 0;
 
   system.build.qcow = import "${pkgs.path}/nixos/lib/make-disk-image.nix" {
     inherit lib config pkgs;
