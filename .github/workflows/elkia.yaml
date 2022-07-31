@@ -19,7 +19,7 @@ jobs:
           name: shikanime
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
       - name: Build image
-        run: nix build .#nixosConfigurations.elkia.config.system.build.qcow
+        run: nix build .#nixosConfigurations.elkia.config.system.build.qcowImage
       - name: Export output path
         run: echo "RELEASE_PATH=$(readlink -f result)" >> $GITHUB_ENV
       - name: Export build artifacts

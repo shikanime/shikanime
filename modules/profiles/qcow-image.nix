@@ -19,7 +19,7 @@ with lib;
   boot.loader.grub.device = "/dev/vda";
   boot.loader.timeout = mkDefault 0;
 
-  system.build.qcow = import "${pkgs.path}/nixos/lib/make-disk-image.nix" {
+  system.build.qcowImage = import "${pkgs.path}/nixos/lib/make-disk-image.nix" {
     inherit lib config pkgs;
     diskSize = 64 * 1024;
     format = "qcow2";
