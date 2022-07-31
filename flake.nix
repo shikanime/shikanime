@@ -24,7 +24,7 @@
       elkia = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./modules/virtualisation/utm.nix
+          ./modules/profiles/qcow.nix
           ./modules/profiles/base.nix
           ./modules/profiles/development.nix
           ./modules/profiles/elkia.nix
