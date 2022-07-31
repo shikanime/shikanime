@@ -38,7 +38,7 @@ with lib;
         introducer = true;
       };
       "Elkia" = {
-        id = "ZVVBZTP-XDACKVZ-EZLK3BZ-7CDNUXA-ETKDK62-MWTROTP-JYEVSHJ-TM62IAU";
+        id = "L57TP3T-6TFLJLZ-SBCUSE5-SPKXVMU-SLMPO2N-7VF5CA7-S5DSJPJ-RLZQ7Q3";
         name = "Elkia";
       };
       "Elven Gard" = {
