@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, ... }:
+{ pkgs, ... }:
 
 {
   # TODO: I'm exclusively stealing the Syncthing service

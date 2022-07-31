@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, ... }:
+{ pkgs, ... }:
 
 {
   # Configure Home Manager to use NixOS global packages

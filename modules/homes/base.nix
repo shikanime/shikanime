@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, config, ... }:
+{ pkgs, config, ... }:
 
 {
   # Enable XDG base directories

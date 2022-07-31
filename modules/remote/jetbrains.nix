@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, ... }:
+{ pkgs, ... }:
 
 {
   systemd.user.services.jetbrains-remote-development-patcher = {

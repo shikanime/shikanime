@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, config, lib, modulesPath, ... }:
+{ pkgs, config, lib, modulesPath, ... }:
 
 {
   fileSystems."/" = {

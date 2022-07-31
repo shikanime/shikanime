@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }, ... }:
+{ pkgs, ... }:
 
 {
   # Let Home Manager install and manage itself
