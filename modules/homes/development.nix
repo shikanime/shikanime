@@ -4,6 +4,7 @@
   # Local programs
   home.sessionPath = [
     "${config.xdg.dataHome}/coursier/bin"
+    "${config.xdg.dataHome}/go/bin"
     "${config.home.homeDirectory}/.mix/escripts"
   ];
 
@@ -43,7 +44,7 @@
 
   programs.go = {
     enable = true;
-    goPath = "${config.xdg.dataHome}/go";
+    goPath = ".local/share/go";
   };
 
   programs.opam = {
