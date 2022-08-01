@@ -3,11 +3,13 @@
 {
   # Local programs
   home.sessionPath = [
+    "${config.xdg.dataHome}/coursier/bin"
     "${config.home.homeDirectory}/.mix/escripts"
   ];
 
   # Core global utilitary packages
   home.packages = [
+    pkgs.coursier
     pkgs.snowsql
     pkgs.sqlfluff
     pkgs.htop
