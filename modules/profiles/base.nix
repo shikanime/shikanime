@@ -39,6 +39,13 @@
     ];
   };
 
+  # Clearnup disk weekly
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   # Allow unfree software such as Cloudflared or CUDA
   nixpkgs.config.allowUnfree = true;
 
