@@ -54,6 +54,12 @@
   # Configure user home
   home-manager.users.devas.imports = [
     ../homes/base.nix
+    ../homes/mix.nix
+    ../homes/go.nix
+    ../homes/opam.nix
+    ../homes/rustup.nix
+    ../homes/node.nix
+    ../homes/coursier.nix
     ../homes/development.nix
   ];
 }

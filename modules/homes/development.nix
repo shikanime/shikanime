@@ -1,16 +1,8 @@
 { pkgs, config, ... }:
 
 {
-  # Local programs
-  home.sessionPath = [
-    "${config.xdg.dataHome}/coursier/bin"
-    "${config.xdg.dataHome}/go/bin"
-    "${config.home.homeDirectory}/.mix/escripts"
-  ];
-
   # Core global utilitary packages
   home.packages = [
-    pkgs.coursier
     pkgs.snowsql
     pkgs.sqlfluff
     pkgs.htop
@@ -26,8 +18,6 @@
     pkgs.aws
     pkgs.kubectl
     pkgs.github-cli
-    pkgs.rustup
-    pkgs.nodejs
     pkgs.python3
     pkgs.deno
     pkgs.poetry
@@ -41,17 +31,6 @@
     pkgs.nixpkgs-fmt
     pkgs.cachix
   ];
-
-  programs.go = {
-    enable = true;
-    goPath = ".local/share/go";
-  };
-
-  programs.opam = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
 
   programs.jq.enable = true;
 
