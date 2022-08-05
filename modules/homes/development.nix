@@ -64,13 +64,9 @@
   programs.ssh = {
     enable = true;
     matchBlocks = {
-      "coopelec.ssh.dev.azure.com" = {
+      "galec.ssh.dev.azure.com" = {
         hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/coopelec_rsa";
-      };
-      "celine.ssh.dev.azure.com" = {
-        hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/celine_ed25519";
+        identityFile = "~/.ssh/galec_rsa";
       };
       "gcmd.birdz.com" = {
         hostname = "gcmd.birdz.com";
