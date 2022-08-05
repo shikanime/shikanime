@@ -94,6 +94,7 @@ cask 'iterm2'
 cask 'obs'
 
 # System
+cask 'fujifilm-x-webcam'
 cask 'cloudflare-warp'
 cask 'android-file-transfer'
 cask 'the-unarchiver'
