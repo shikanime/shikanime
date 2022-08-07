@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "3386593e9d1cb0d54575689f122f283e2f80539d"
+        "revision": "17ceb5f97c36fde14bf7c09fbe847451ab860179"
       },
       "homebrew/cask-drivers": {
-        "revision": "8350ca9dc157a520df76e5a8b4665ce1b98efc51"
+        "revision": "8c5ec89cb668b3d019c20efdf7a3fa994f921725"
       }
     },
     "brew": {
@@ -2004,7 +2004,7 @@
         }
       },
       "docker": {
-        "version": "4.11.0,83626",
+        "version": "4.11.1,84025",
         "options": {
           "full_name": "docker"
         }
@@ -2130,7 +2130,7 @@
         }
       },
       "microsoft-edge": {
-        "version": "103.0.1264.77",
+        "version": "104.0.1293.47",
         "options": {
           "full_name": "microsoft-edge"
         }
@@ -2246,7 +2246,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.8",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "df23519dae466a289f4088b42bebeffe01bbf61e",
+        "Homebrew/homebrew-core": "3e46ad9edd0fd3f2bc4ea428e52c70bd67c82967",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.5"

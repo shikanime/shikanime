@@ -92,6 +92,7 @@ brew 'nushell'
 cask 'xquartz'
 cask 'iterm2'
 cask 'obs'
+cask 'google-drive'
 
 # System
 cask 'fujifilm-x-webcam'
