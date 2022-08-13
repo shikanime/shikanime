@@ -28,7 +28,7 @@ with lib;
         introducer = true;
       };
       "Ishtar" = {
-        id = "44E7RLD-RGPT2GJ-ZEKXV2V-KC65JST-O4KE4BE-6OUVCVD-3LTOMDI-DQTTXAH";
+        id = "GEEMT4X-4PECGER-AGXUK6Y-5CNS7ZU-LEKA7SC-YZDXSDO-PTOXWAQ-N5SZGAG";
         name = "Ishtar";
         introducer = true;
       };
@@ -42,7 +42,7 @@ with lib;
         name = "Elkia";
       };
       "Elven Gard" = {
-        id = "WCBMPFF-VJDNWMP-QQAKZVV-6ZO62QN-OYQJ2BZ-WQCGKR6-EC7IW6S-MLWWOAC";
+        id = "EJSFAVT-V4JWHW5-T2DBKNU-B52SKTO-XANEOTL-2TWBGEO-PGR624H-YROWTQS";
         name = "Elven Gard";
       };
     };
