@@ -61,5 +61,7 @@
     ../homes/node.nix
     ../homes/coursier.nix
     ../homes/development.nix
+    ../homes/shikanime.nix
+    ../homes/sfeir.nix
   ];
 }
