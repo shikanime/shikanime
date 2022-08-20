@@ -3,7 +3,7 @@
 {
   # Core global utilitary packages
   home.packages = [
-    pkgs.snowsql
+    pkgs.inotify-tools
     pkgs.sqlfluff
     pkgs.htop
     pkgs.openssl
@@ -12,21 +12,7 @@
     pkgs.curl
     pkgs.darcs
     pkgs.cloudflared
-    pkgs.minikube
-    pkgs.google-cloud-sdk
-    pkgs.azure-cli
-    pkgs.aws
-    pkgs.kubectl
     pkgs.github-cli
-    pkgs.python3
-    pkgs.deno
-    pkgs.poetry
-    pkgs.php
-    pkgs.gcc
-    pkgs.binutils
-    pkgs.gnumake
-    pkgs.dotnet-sdk
-    pkgs.terraform
     pkgs.bitwarden-cli
     pkgs.nixpkgs-fmt
     pkgs.cachix
@@ -39,36 +25,16 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    withNodeJs = true;
-    withRuby = true;
-    withPython3 = true;
   };
 
   programs.zsh.oh-my-zsh.plugins = [
     "git"
-    "gcloud"
-    "aws"
-    "python"
-    "docker"
-    "kubectl"
-    "rust"
-    "node"
-    "minikube"
-    "golang"
-    "yarn"
     "vim-interaction"
   ];
 
   programs.gpg.enable = true;
 
-  programs.ssh = {
-    enable = true;
-    extraConfig = ''
-      IdentitiesOnly yes
-      HostKeyAlgorithms +ssh-rsa
-      PubkeyAcceptedKeyTypes +ssh-rsa
-    '';
-  };
+  programs.ssh.enable = true;
 
   programs.mercurial.enable = true;
 
@@ -92,8 +58,6 @@
       rebase.autostash = true;
       push.autoSetupRemote = true;
       init.defaultBranch = "main";
-      credential."https://dev.azure.com".useHttpPath = true;
-      credential."https://source.developers.google.com".helper = "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
     };
   };
 }

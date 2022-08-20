@@ -1,5 +1,3 @@
-{ pkgs, config, ... }:
-
 {
   programs.ssh.matchBlocks = {
     "galec.ssh.dev.azure.com" = {

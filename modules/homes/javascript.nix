@@ -3,6 +3,7 @@
 {
   # Core global utilitary packages
   home.packages = [
+    pkgs.deno
     pkgs.nodejs
   ];
 
@@ -10,4 +11,11 @@
 
   home.file.".npmrc".source = config.lib.file.mkOutOfStoreSymlink ".config/npm/config";
   home.file.".npm".source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.dataHome}/npm";
+
+  programs.zsh.oh-my-zsh.plugins = [
+    "node"
+    "yarn"
+  ];
+
+  programs.neovim.withNodeJs = true;
 }

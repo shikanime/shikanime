@@ -9,4 +9,8 @@
 
   # Core global utilitary packages
   home.packages = [ pkgs.rustup ];
+
+  programs.zsh.oh-my-zsh.plugins = [
+    "rust"
+  ];
 }
