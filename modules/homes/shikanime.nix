@@ -1,5 +1,3 @@
-{ pkgs, config, ... }:
-
 {
   programs.mercurial = {
     userName = "Shikanime Deva";

@@ -54,13 +54,22 @@
   # Configure user home
   home-manager.users.devas.imports = [
     ../homes/base.nix
+    ../homes/development.nix
     ../homes/mix.nix
     ../homes/go.nix
     ../homes/opam.nix
     ../homes/rustup.nix
-    ../homes/node.nix
+    ../homes/python.nix
+    ../homes/javascript.nix
+    ../homes/php.nix
     ../homes/coursier.nix
-    ../homes/development.nix
+    ../homes/google.nix
+    ../homes/azure.nix
+    ../homes/terraform.nix
+    ../homes/snowflake.nix
+    ../homes/native.nix
+    ../homes/aws.nix
+    ../homes/kubernetes.nix
     ../homes/shikanime.nix
     ../homes/sfeir.nix
   ];

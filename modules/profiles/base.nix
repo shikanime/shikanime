@@ -17,6 +17,7 @@
       enable = true;
       plugins = [
         "sudo"
+        "docker"
       ];
     };
   };
@@ -78,6 +79,27 @@
 
   # Keep the system timezone up-to-date based on the current location
   services.localtime.enable = true;
+
+  # Virtualization settings
+  virtualisation = {
+    docker.enable = true;
+    containerd.enable = true;
+  };
+
+  # Cache SSH keys
+  programs.ssh = {
+    startAgent = true;
+    extraConfig = ''
+      AddKeysToAgent yes
+    '';
+  };
+
+  # Cache GnuPG keys
+  programs.gnupg.agent = {
+    enable = true;
+    enableExtraSocket = true;
+    pinentryFlavor = "tty";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
