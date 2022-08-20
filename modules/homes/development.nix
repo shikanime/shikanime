@@ -63,24 +63,6 @@
 
   programs.ssh = {
     enable = true;
-    matchBlocks = {
-      "galec.ssh.dev.azure.com" = {
-        hostname = "ssh.dev.azure.com";
-        identityFile = "~/.ssh/galec_rsa";
-      };
-      "gcmd.birdz.com" = {
-        hostname = "gcmd.birdz.com";
-        identityFile = "~/.ssh/birdz_ed25519";
-      };
-      "sfeir.gitlab.com" = {
-        hostname = "gitlab.com";
-        identityFile = "~/.ssh/sfeir_ed25519";
-      };
-      "sfeir.bitbucket.org" = {
-        hostname = "bitbucket.org";
-        identityFile = "~/.ssh/sfeir_ed25519";
-      };
-    };
     extraConfig = ''
       IdentitiesOnly yes
       HostKeyAlgorithms +ssh-rsa
@@ -88,23 +70,15 @@
     '';
   };
 
-  programs.mercurial = {
-    enable = true;
-    userName = "Shikanime Deva";
-    userEmail = "shikanime.deva@shikanime.studio";
-  };
+  programs.mercurial.enable = true;
 
   programs.git = {
     enable = true;
-
-    userName = "Shikanime Deva";
-    userEmail = "shikanime.deva@shikanime.studio";
-
+    lfs.enable = true;
     aliases = {
       adog = "log --all --decorate --oneline --graph";
       pouf = "push --force-with-lease";
     };
-
     ignores = [
       "*~"
       ".fuse_hidden*"
@@ -112,28 +86,6 @@
       ".Trash-*"
       ".nfs*"
     ];
-
-    lfs.enable = true;
-
-    signing = {
-      key = "B9443725856FF9EB";
-      signByDefault = true;
-    };
-
-    includes = [
-      {
-        condition = "gitdir:${config.home.homeDirectory}/Source/Repos/sfeir/";
-        contents = {
-          user = {
-            name = "William Phetsinorath";
-            email = "phetsinorath.w@sfeir.com";
-            signingKey = "9A31DF925449E15A";
-          };
-          commit.gpgSign = true;
-        };
-      }
-    ];
-
     extraConfig = {
       core.editor = "${pkgs.neovim}/bin/nvim";
       pull.rebase = true;
