@@ -13,7 +13,8 @@
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       with import nixpkgs { inherit system; }; {
         curriculum = callPackage ./pkgs/curriculum/default.nix { };
-      });
+      }
+    );
 
     devShell = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       with import nixpkgs { inherit system; };
