@@ -74,5 +74,6 @@
     ../homes/sfeir.nix
     ../homes/galec.nix
     ../homes/birdz.nix
+    ../homes/java.nix
   ];
 }
