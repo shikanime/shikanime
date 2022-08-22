@@ -2,7 +2,17 @@
 
 {
   # Enable XDG base directories
-  xdg.enable = true;
+  xdg = {
+    enable = true;
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+      extraConfig = {
+        XDG_SYNC_DIR = "$HOME/Sync";
+        XDG_SOURCE_DIR = "$HOME/Source";
+      };
+    };
+  };
 
   programs.dircolors.enable = true;
 
