@@ -72,5 +72,6 @@
     ../homes/kubernetes.nix
     ../homes/shikanime.nix
     ../homes/sfeir.nix
+    ../homes/java.nix
   ];
 }
