@@ -13,7 +13,9 @@
   home.file.".npm".source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.dataHome}/npm";
 
   programs.zsh.oh-my-zsh.plugins = [
+    "deno"
     "node"
+    "npm"
     "yarn"
   ];
 
