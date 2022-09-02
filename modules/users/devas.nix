@@ -73,5 +73,6 @@
     ../homes/shikanime.nix
     ../homes/sfeir.nix
     ../homes/java.nix
+    ../homes/dotnet.nix
   ];
 }
