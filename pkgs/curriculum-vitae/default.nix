@@ -6,7 +6,7 @@
 with lib;
 
 stdenv.mkDerivation {
-  name = "curriculum";
+  name = "curriculum-vitae";
   buildInputs = [ texlive.combined.scheme-full ];
   src = cleanSource ./.;
   buildPhase = "pdflatex *.tex";
