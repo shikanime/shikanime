@@ -1,3 +1,6 @@
+% !TEX program = xelatex
+% !TeX encoding = UTF-8
+
 \documentclass[letterpaper,11pt]{article}
 
 % Remove margins
@@ -15,18 +18,15 @@
 % Make tables more flexible
 \usepackage{tabularx}
 
-% Use T1 encoding for the font
-\usepackage[T1]{fontenc}
+% Multi-language support
+\usepackage[bidi=default]{babel}
 
-% Use English as the default language
-\usepackage[english]{babel}
+% Font support
+\usepackage{fontspec}
+\usepackage{microtype}
 
-% Use CJK for Chinese
-\usepackage{CJK}
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\input{glyphtounicode}
-\pdfgentounicode=1
+% Use CJK for asian languages
+\usepackage{xeCJK}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -342,7 +342,7 @@
 }
 \resumeItem{
   Integration of the DSL runtime in the browser with the integration of
-  js\textunderscore{}of\textunderscore{}ocaml in the build system and the build pipeline and making artifacts
+  js\textunderscore{}of\textunderscore{}OCaml in the build system and the build pipeline and making artifacts
   available to the different projects.
 }
 \resumeItem{
