@@ -9,6 +9,6 @@ stdenv.mkDerivation {
   name = "curriculum-vitae";
   buildInputs = [ texlive.combined.scheme-full ];
   src = cleanSource ./.;
-  buildPhase = "pdflatex *.tex";
+  buildPhase = "xelatex *.tex";
   installPhase = "cp *.pdf $out";
 }
