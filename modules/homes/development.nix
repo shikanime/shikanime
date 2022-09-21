@@ -3,7 +3,6 @@
 {
   # Core global utilitary packages
   home.packages = [
-    pkgs.inotify-tools
     pkgs.sqlfluff
     pkgs.htop
     pkgs.openssl
