@@ -84,6 +84,7 @@
   virtualisation = {
     docker.enable = true;
     containerd.enable = true;
+    containers.enable = true;
   };
 
   # Cache SSH keys
