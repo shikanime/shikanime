@@ -6,6 +6,15 @@ with lib;
   # Enable XDG base directories
   xdg.enable = true;
 
+  # Set target to Flake's Nix
+  nix.package = pkgs.nix;
+
+  # Enable experimental features so we can access flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Allow unfree software such as Cloudflared or CUDA
+  nixpkgs.config.allowUnfree = true;
+
   programs.dircolors.enable = true;
 
   programs.bash.enable = true;
