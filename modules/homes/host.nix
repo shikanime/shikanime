@@ -12,6 +12,7 @@
         identityFile = "~/.ssh/elkia_ed25519";
         user = "devas";
         forwardX11 = true;
+        forwardX11Trusted = true;
         forwardAgent = true;
       };
       "elvengard.local" = {
@@ -19,6 +20,7 @@
         identityFile = "~/.ssh/elvengard_ed25519";
         user = "devas";
         forwardX11 = true;
+        forwardX11Trusted = true;
         forwardAgent = true;
       };
     };
