@@ -7,6 +7,13 @@
   # Enable IPTable and debug module to be loaded
   security.lockKernelModules = true;
 
+  # Optional packages
+  environment.defaultPackages = [
+    pkgs.gcc
+    pkgs.binutils
+    pkgs.inotify-tools
+  ];
+
   virtualisation.docker = {
     enable = true;
     autoPrune.enable = true;
@@ -22,19 +29,7 @@
   };
 
   # Deploy a nice default user friendly shell prompt
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [
-        "sudo"
-        "docker"
-      ];
-    };
-  };
+  programs.zsh.enable = true;
 
   # Manage fonts
   fonts = {
