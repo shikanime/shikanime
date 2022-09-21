@@ -9,7 +9,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager }: {
+  outputs = { nixpkgs, home-manager }: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       with import nixpkgs { inherit system; }; {
         curriculumVitae = callPackage ./pkgs/curriculum-vitae/default.nix { };
@@ -67,6 +67,24 @@
         configuration = ./modules/homes/host.nix;
         extraModules = [
           ./modules/homes/base.nix
+          ./modules/homes/development.nix
+          ./modules/homes/mix.nix
+          ./modules/homes/go.nix
+          ./modules/homes/opam.nix
+          ./modules/homes/rustup.nix
+          ./modules/homes/python.nix
+          ./modules/homes/javascript.nix
+          ./modules/homes/php.nix
+          ./modules/homes/coursier.nix
+          ./modules/homes/google.nix
+          ./modules/homes/azure.nix
+          ./modules/homes/terraform.nix
+          ./modules/homes/aws.nix
+          ./modules/homes/kubernetes.nix
+          ./modules/homes/shikanime.nix
+          ./modules/homes/sfeir.nix
+          ./modules/homes/java.nix
+          ./modules/homes/dotnet.nix
         ];
       };
       devas = home-manager.lib.homeManagerConfiguration {
@@ -77,16 +95,24 @@
         configuration = ./modules/homes/host.nix;
         extraModules = [
           ./modules/homes/base.nix
-        ];
-      };
-      olva = home-manager.lib.homeManagerConfiguration {
-        system = "x86_64-darwin";
-        homeDirectory = "/Users/devas";
-        username = "devas";
-        stateVersion = "22.05";
-        configuration = ./modules/homes/host.nix;
-        extraModules = [
-          ./modules/homes/base.nix
+          ./modules/homes/development.nix
+          ./modules/homes/mix.nix
+          ./modules/homes/go.nix
+          ./modules/homes/opam.nix
+          ./modules/homes/rustup.nix
+          ./modules/homes/python.nix
+          ./modules/homes/javascript.nix
+          ./modules/homes/php.nix
+          ./modules/homes/coursier.nix
+          ./modules/homes/google.nix
+          ./modules/homes/azure.nix
+          ./modules/homes/terraform.nix
+          ./modules/homes/aws.nix
+          ./modules/homes/kubernetes.nix
+          ./modules/homes/shikanime.nix
+          ./modules/homes/sfeir.nix
+          ./modules/homes/java.nix
+          ./modules/homes/dotnet.nix
         ];
       };
     };

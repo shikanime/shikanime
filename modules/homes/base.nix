@@ -1,18 +1,10 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
+
+with lib;
 
 {
   # Enable XDG base directories
-  xdg = {
-    enable = true;
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-      extraConfig = {
-        XDG_SYNC_DIR = "$HOME/Sync";
-        XDG_SOURCE_DIR = "$HOME/Source";
-      };
-    };
-  };
+  xdg.enable = true;
 
   programs.dircolors.enable = true;
 
@@ -20,7 +12,16 @@
 
   programs.zsh = {
     enable = true;
-    oh-my-zsh.enable = true;
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "sudo"
+        "docker"
+      ];
+    };
   };
 
   programs.starship = {

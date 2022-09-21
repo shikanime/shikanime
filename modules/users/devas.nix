@@ -52,27 +52,36 @@
   };
 
   # Configure user home
-  home-manager.users.devas.imports = [
-    ../homes/base.nix
-    ../homes/development.nix
-    ../homes/mix.nix
-    ../homes/go.nix
-    ../homes/opam.nix
-    ../homes/rustup.nix
-    ../homes/python.nix
-    ../homes/javascript.nix
-    ../homes/php.nix
-    ../homes/coursier.nix
-    ../homes/google.nix
-    ../homes/azure.nix
-    ../homes/terraform.nix
-    ../homes/snowflake.nix
-    ../homes/native.nix
-    ../homes/aws.nix
-    ../homes/kubernetes.nix
-    ../homes/shikanime.nix
-    ../homes/sfeir.nix
-    ../homes/java.nix
-    ../homes/dotnet.nix
-  ];
+  home-manager.users.devas = {
+    imports = [
+      ../homes/base.nix
+      ../homes/development.nix
+      ../homes/mix.nix
+      ../homes/go.nix
+      ../homes/opam.nix
+      ../homes/rustup.nix
+      ../homes/python.nix
+      ../homes/javascript.nix
+      ../homes/php.nix
+      ../homes/coursier.nix
+      ../homes/google.nix
+      ../homes/azure.nix
+      ../homes/terraform.nix
+      ../homes/snowflake.nix
+      ../homes/aws.nix
+      ../homes/kubernetes.nix
+      ../homes/shikanime.nix
+      ../homes/sfeir.nix
+      ../homes/java.nix
+      ../homes/dotnet.nix
+    ];
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+      extraConfig = {
+        XDG_SYNC_DIR = "$HOME/Sync";
+        XDG_SOURCE_DIR = "$HOME/Source";
+      };
+    };
+  };
 }

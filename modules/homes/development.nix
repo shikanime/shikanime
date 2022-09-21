@@ -15,6 +15,7 @@
     pkgs.bitwarden-cli
     pkgs.nixpkgs-fmt
     pkgs.cachix
+    pkgs.gnumake
   ];
 
   programs.jq.enable = true;
