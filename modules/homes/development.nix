@@ -34,7 +34,12 @@
 
   programs.gpg.enable = true;
 
-  programs.ssh.enable = true;
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      AddKeysToAgent yes
+    '';
+  };
 
   programs.mercurial.enable = true;
 
