@@ -38,12 +38,7 @@
   };
 
   # Cache SSH keys
-  programs.ssh = {
-    startAgent = true;
-    extraConfig = ''
-      AddKeysToAgent yes
-    '';
-  };
+  programs.ssh.startAgent = true;
 
   # Cache GnuPG keys
   programs.gnupg.agent = {

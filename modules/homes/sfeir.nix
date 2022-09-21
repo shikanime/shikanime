@@ -12,6 +12,9 @@
         identityFile = "~/.ssh/sfeir_ed25519";
       };
     };
+    extraConfig = ''
+      AddKeysToAgent yes
+    '';
   };
 
   # TODO: extract to user base isolation
