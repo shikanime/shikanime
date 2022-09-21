@@ -27,9 +27,6 @@
     "2001:4860:4860::8844"
   ];
 
-  # Select internationalisation properties
-  i18n.defaultLocale = "en_US.UTF-8";
-
   # Keep the system timezone up-to-date based on the current location
   services.localtime.enable = true;
 
