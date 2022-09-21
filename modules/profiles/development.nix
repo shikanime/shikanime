@@ -7,8 +7,12 @@
   # Enable IPTable and debug module to be loaded
   security.lockKernelModules = true;
 
+  virtualisation.docker = {
+    enable = true;
+    autoPrune.enable = true;
+  };
+
   virtualisation = {
-    docker.enable = true;
     containerd.enable = true;
     containers.enable = true;
   };
