@@ -5,88 +5,12 @@
     "${modulesPath}/profiles/hardened.nix"
   ];
 
-  # Enable IPTable and debug module to be loaded
-  security.lockKernelModules = true;
-
-  # Configure Home Manager to use NixOS global packages
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-  };
-
-  # Deploy a nice default user friendly shell prompt
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [
-        "sudo"
-        "docker"
-      ];
-    };
-  };
-
-  # Cache SSH keys
-  programs.ssh = {
-    startAgent = true;
-    extraConfig = ''
-      AddKeysToAgent yes
-    '';
-  };
-
-  # Cache GnuPG keys
-  programs.gnupg.agent = {
-    enable = true;
-    enableExtraSocket = true;
-    pinentryFlavor = "tty";
-  };
-
-  # Virtualization settings
-  virtualisation = {
-    docker.enable = true;
-    containerd.enable = true;
-    containers.enable = true;
-  };
-
-  # Allow cgroup memory resize
-  boot.kernelParams = [ "cgroup_enable=memory" "swapaccount=1" ];
-
-  # Enable experimental features so we can access flakes
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
-
-  # Add personal caching server
-  nix.settings = {
-    substituters = [
-      "https://shikanime.cachix.org"
-    ];
-    trusted-public-keys = [
-      "shikanime.cachix.org-1:OrpjVTH6RzYf2R97IqcTWdLRejF6+XbpFNNZJxKG8Ts="
-    ];
-  };
-
   # Clearnup disk weekly
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
-
-  # Allow unfree software such as Cloudflared or CUDA
-  nixpkgs.config.allowUnfree = true;
-
-  # Manage fonts
-  fonts = {
-    fontDir.enable = true;
-    fonts = [ pkgs.fira-code ];
-  };
-
-  # Add ~/.local/bin/ to $PATH
-  environment.localBinInPath = true;
 
   # Enable modern IPv6 support
   networking.enableIPv6 = true;
