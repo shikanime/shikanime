@@ -27,6 +27,8 @@
         modules = [
           ./modules/profiles/qcow-image.nix
           ./modules/profiles/base.nix
+          ./modules/profiles/development.nix
+          ./modules/profiles/home.nix
           ./modules/profiles/elkia.nix
           ./modules/users/devas.nix
           ./modules/remote/ssh.nix
@@ -42,6 +44,8 @@
         modules = [
           ./modules/virtualisation/hyperv.nix
           ./modules/profiles/base.nix
+          ./modules/profiles/development.nix
+          ./modules/profiles/home.nix
           ./modules/profiles/elvengard.nix
           ./modules/users/devas.nix
           ./modules/remote/ssh.nix
