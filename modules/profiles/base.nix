@@ -1,6 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, modulesPath, ... }:
 
 {
+  imports = [
+    "${modulesPath}/profiles/hardened.nix"
+  ];
+
+  # Enable IPTable and debug module to be loaded
+  security.lockKernelModules = true;
+
   # Configure Home Manager to use NixOS global packages
   home-manager = {
     useGlobalPkgs = true;
@@ -20,6 +27,28 @@
         "docker"
       ];
     };
+  };
+
+  # Cache SSH keys
+  programs.ssh = {
+    startAgent = true;
+    extraConfig = ''
+      AddKeysToAgent yes
+    '';
+  };
+
+  # Cache GnuPG keys
+  programs.gnupg.agent = {
+    enable = true;
+    enableExtraSocket = true;
+    pinentryFlavor = "tty";
+  };
+
+  # Virtualization settings
+  virtualisation = {
+    docker.enable = true;
+    containerd.enable = true;
+    containers.enable = true;
   };
 
   # Allow cgroup memory resize
@@ -79,28 +108,6 @@
 
   # Keep the system timezone up-to-date based on the current location
   services.localtime.enable = true;
-
-  # Virtualization settings
-  virtualisation = {
-    docker.enable = true;
-    containerd.enable = true;
-    containers.enable = true;
-  };
-
-  # Cache SSH keys
-  programs.ssh = {
-    startAgent = true;
-    extraConfig = ''
-      AddKeysToAgent yes
-    '';
-  };
-
-  # Cache GnuPG keys
-  programs.gnupg.agent = {
-    enable = true;
-    enableExtraSocket = true;
-    pinentryFlavor = "tty";
-  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
