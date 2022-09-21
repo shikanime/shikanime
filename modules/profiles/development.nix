@@ -47,11 +47,6 @@
     pinentryFlavor = "tty";
   };
 
-  # Enable experimental features so we can access flakes
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
-
   # Add personal caching server
   nix.settings = {
     substituters = [
@@ -61,7 +56,4 @@
       "shikanime.cachix.org-1:OrpjVTH6RzYf2R97IqcTWdLRejF6+XbpFNNZJxKG8Ts="
     ];
   };
-
-  # Allow unfree software such as Cloudflared or CUDA
-  nixpkgs.config.allowUnfree = true;
 }
