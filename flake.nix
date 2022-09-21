@@ -59,7 +59,7 @@
     };
 
     homeConfigurations = {
-      williamphetsinorath = home-manager.lib.homeManagerConfiguration {
+      "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-darwin";
         homeDirectory = "/Users/williamphetsinorath";
         username = "williamphetsinorath";
@@ -89,13 +89,14 @@
           ./modules/homes/dotnet.nix
         ];
       };
-      devas = home-manager.lib.homeManagerConfiguration {
+      "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-linux";
         homeDirectory = "/home/devas";
         username = "devas";
         stateVersion = "22.05";
         configuration = ./modules/homes/host.nix;
         extraModules = [
+          ./modules/homes/ishtar.nix
           ./modules/homes/base.nix
           ./modules/homes/development.nix
           ./modules/homes/mix.nix
