@@ -66,6 +66,7 @@
         stateVersion = "22.05";
         configuration = ./modules/homes/host.nix;
         extraModules = [
+          ./modules/homes/altashar.nix
           ./modules/homes/base.nix
           ./modules/homes/development.nix
           ./modules/homes/mix.nix
