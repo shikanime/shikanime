@@ -1,14 +1,14 @@
 {
   programs.mercurial = {
-    userName = "Shikanime Deva";
-    userEmail = "shikanime.deva@shikanime.studio";
+    userName = "William Phetsinorath";
+    userEmail = "william.phetsinorath@shikanime.studio";
   };
 
   programs.git = {
-    userName = "Shikanime Deva";
-    userEmail = "shikanime.deva@shikanime.studio";
+    userName = "William Phetsinorath";
+    userEmail = "william.phetsinorath@shikanime.studio";
     signing = {
-      key = "B9443725856FF9EB";
+      key = "025CF1599FA70256";
       signByDefault = true;
     };
   };

@@ -25,9 +25,8 @@
         user = {
           name = "William Phetsinorath";
           email = "phetsinorath.w@sfeir.com";
-          signingKey = "9A31DF925449E15A";
+          signingKey = "AA83063619D0AAEF";
         };
-        commit.gpgSign = true;
       };
     }
   ];
