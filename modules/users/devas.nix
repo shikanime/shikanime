@@ -31,6 +31,18 @@
           "Elven Gard"
         ];
       };
+      "Sfeir" = {
+        enable = true;
+        id = "Sfeir";
+        path = "/home/devas/Sfeir";
+        devices = [
+          "Altashar"
+          "Ishtar"
+          "Olva"
+          "Elkia"
+          "Elven Gard"
+        ];
+      };
     };
   };
 

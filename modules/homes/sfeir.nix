@@ -20,7 +20,7 @@
   # TODO: extract to user base isolation
   programs.git.includes = [
     {
-      condition = "gitdir:${config.home.homeDirectory}/Source/Repos/sfeir/";
+      condition = "gitdir:${config.home.homeDirectory}/Sfeir/";
       contents = {
         user = {
           name = "William Phetsinorath";
