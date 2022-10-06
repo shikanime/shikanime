@@ -81,7 +81,6 @@
           ./modules/homes/azure.nix
           ./modules/homes/terraform.nix
           ./modules/homes/aws.nix
-          ./modules/homes/kubernetes.nix
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
           ./modules/homes/galec.nix
@@ -112,7 +111,6 @@
           ./modules/homes/azure.nix
           ./modules/homes/terraform.nix
           ./modules/homes/aws.nix
-          ./modules/homes/kubernetes.nix
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
           ./modules/homes/galec.nix
