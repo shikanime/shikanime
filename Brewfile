@@ -43,7 +43,7 @@ cask 'raspberry-pi-imager'
 
 # Brew virtualization
 cask 'utm'
-cask 'docker'
+cask 'rancher'
 
 # Multimedia
 cask 'mpv'
@@ -73,10 +73,6 @@ mas 'Pages', id: 409_201_541
 mas 'Numbers', id: 409_203_825
 mas 'Keynote', id: 409_183_694
 
-# Art
-cask 'blender'
-cask 'figma'
-
 # Productivity
 cask 'rectangle'
 mas 'Amphetamine', id: 937_984_704
@@ -96,7 +92,6 @@ cask 'google-drive'
 
 # System
 cask 'fujifilm-x-webcam'
-cask 'cloudflare-warp'
 cask 'android-file-transfer'
 cask 'the-unarchiver'
 cask 'appcleaner'
