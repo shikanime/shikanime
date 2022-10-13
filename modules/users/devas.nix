@@ -85,6 +85,7 @@
       ../homes/shikanime.nix
       ../homes/sfeir.nix
       ../homes/galec.nix
+      ../homes/lvmh.nix
       ../homes/birdz.nix
       ../homes/java.nix
       ../homes/dotnet.nix

@@ -84,6 +84,7 @@
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
           ./modules/homes/galec.nix
+          ./modules/homes/lvmh.nix
           ./modules/homes/birdz.nix
           ./modules/homes/java.nix
           ./modules/homes/dotnet.nix
@@ -114,6 +115,7 @@
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
           ./modules/homes/galec.nix
+          ./modules/homes/lvmh.nix
           ./modules/homes/birdz.nix
           ./modules/homes/java.nix
           ./modules/homes/dotnet.nix
