@@ -69,6 +69,7 @@
           ./modules/homes/altashar.nix
           ./modules/homes/base.nix
           ./modules/homes/development.nix
+          ./modules/homes/bazel.nix
           ./modules/homes/mix.nix
           ./modules/homes/go.nix
           ./modules/homes/opam.nix
@@ -100,6 +101,7 @@
           ./modules/homes/ishtar.nix
           ./modules/homes/base.nix
           ./modules/homes/development.nix
+          ./modules/homes/bazel.nix
           ./modules/homes/mix.nix
           ./modules/homes/go.nix
           ./modules/homes/opam.nix

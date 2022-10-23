@@ -68,6 +68,7 @@
     imports = [
       ../homes/base.nix
       ../homes/development.nix
+      ../homes/bazel.nix
       ../homes/mix.nix
       ../homes/go.nix
       ../homes/opam.nix
