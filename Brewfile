@@ -1,42 +1,29 @@
 # Essentials
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
-brew 'whalebrew'
 brew 'mas'
 
-# Interpreter Toolchains
-brew 'nodejs'
-brew 'python'
-brew 'openjdk'
+# Python
+brew 'python@3.10'
+brew 'python@3.9'
+brew 'python@3.8'
+brew 'python@3.7'
+cask 'miniconda'
 
 # Source control
-brew 'darcs'
-brew 'mercurial'
-brew 'subversion'
 cask 'github'
 
 # Native Toolchains
-brew 'rustup'
 brew 'llvm'
-brew 'make'
+brew 'ccache'
+brew 'ninja'
 cask 'cmake'
 mas 'xcode', id: 497_799_835
 
-# Cloud
-brew 'awscli'
-brew 'azure-cli'
-brew 'gh'
-brew 'cloudflared'
-cask 'google-cloud-sdk'
-
-# Python
-brew 'pipx'
-brew 'black'
-
 # Development Enviroment
-brew 'neovim'
 brew 'wireshark'
 cask 'visual-studio-code'
+cask 'android-studio'
 cask 'dbeaver-community'
 cask 'jetbrains-toolbox'
 cask 'raspberry-pi-imager'
@@ -80,11 +67,6 @@ mas 'Amphetamine', id: 937_984_704
 # Utils
 brew 'openssh'
 brew 'gnupg'
-brew 'htop'
-brew 'yq'
-brew 'curl'
-brew 'wget'
-brew 'nushell'
 cask 'xquartz'
 cask 'iterm2'
 cask 'obs'

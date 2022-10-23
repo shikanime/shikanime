@@ -9,6 +9,11 @@ with lib;
   # Set target to Flake's Nix
   nix.package = pkgs.nix;
 
+  home.packages = [
+    pkgs.nixpkgs-fmt
+    pkgs.cachix
+  ];
+
   # Enable experimental features so we can access flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
