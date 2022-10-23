@@ -70,6 +70,7 @@
           ./modules/homes/base.nix
           ./modules/homes/version-control.nix
           ./modules/homes/shell.nix
+          ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
           ./modules/homes/mix.nix
           ./modules/homes/go.nix
@@ -101,6 +102,7 @@
           ./modules/homes/base.nix
           ./modules/homes/version-control.nix
           ./modules/homes/shell.nix
+          ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
           ./modules/homes/mix.nix
           ./modules/homes/go.nix

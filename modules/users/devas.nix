@@ -71,6 +71,7 @@
       ../homes/shell.nix
       ../homes/android.nix
       ../homes/conda.nix
+      ../homes/ruby.nix
       ../homes/bazel.nix
       ../homes/mix.nix
       ../homes/go.nix
