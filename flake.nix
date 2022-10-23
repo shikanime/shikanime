@@ -68,7 +68,8 @@
         extraModules = [
           ./modules/homes/altashar.nix
           ./modules/homes/base.nix
-          ./modules/homes/development.nix
+          ./modules/homes/version-control.nix
+          ./modules/homes/shell.nix
           ./modules/homes/bazel.nix
           ./modules/homes/mix.nix
           ./modules/homes/go.nix
@@ -81,6 +82,7 @@
           ./modules/homes/google.nix
           ./modules/homes/azure.nix
           ./modules/homes/terraform.nix
+          ./modules/homes/sql.nix
           ./modules/homes/aws.nix
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
@@ -97,7 +99,8 @@
         extraModules = [
           ./modules/homes/ishtar.nix
           ./modules/homes/base.nix
-          ./modules/homes/development.nix
+          ./modules/homes/version-control.nix
+          ./modules/homes/shell.nix
           ./modules/homes/bazel.nix
           ./modules/homes/mix.nix
           ./modules/homes/go.nix
@@ -110,6 +113,7 @@
           ./modules/homes/google.nix
           ./modules/homes/azure.nix
           ./modules/homes/terraform.nix
+          ./modules/homes/sql.nix
           ./modules/homes/aws.nix
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix

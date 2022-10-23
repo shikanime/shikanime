@@ -67,7 +67,10 @@
   home-manager.users.devas = {
     imports = [
       ../homes/base.nix
-      ../homes/development.nix
+      ../homes/version-control.nix
+      ../homes/shell.nix
+      ../homes/android.nix
+      ../homes/conda.nix
       ../homes/bazel.nix
       ../homes/mix.nix
       ../homes/go.nix
@@ -80,7 +83,7 @@
       ../homes/google.nix
       ../homes/azure.nix
       ../homes/terraform.nix
-      ../homes/snowflake.nix
+      ../homes/sql.nix
       ../homes/aws.nix
       ../homes/kubernetes.nix
       ../homes/shikanime.nix

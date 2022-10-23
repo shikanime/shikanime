@@ -2,6 +2,6 @@
 
 {
   home.packages = [
-    pkgs.snowsql
+    pkgs.sqlfluff
   ];
 }
