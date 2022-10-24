@@ -7,13 +7,6 @@
   # Enable IPTable and debug module to be loaded
   security.lockKernelModules = true;
 
-  # Optional packages
-  environment.defaultPackages = [
-    pkgs.gcc
-    pkgs.binutils
-    pkgs.inotify-tools
-  ];
-
   virtualisation.docker = {
     enable = true;
     autoPrune.enable = true;
