@@ -4,8 +4,6 @@ let
   pythonEnv = pkgs.python3.withPackages (pypkgs: with pypkgs; [
     pip
     pipx
-    black
-    poetry
   ]);
 in
 {

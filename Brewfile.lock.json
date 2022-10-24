@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "4ab56a0c5534846e4d74ea31b0bbe892ea2b4052"
+        "revision": "d87426f3e114aa61ec4663018593482fb73064eb"
       },
       "homebrew/cask-drivers": {
-        "revision": "c3c38344c8f6733aa32690b2bb3e087d3c3ccbee"
+        "revision": "8c4a78929264a0b957b404b90b095281805fd876"
       }
     },
     "brew": {
@@ -1142,6 +1142,11 @@
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
+            "arm64_ventura": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:30dbc217ba91a3b7246dd21cc8662d1fd3bcf19d0f869c4bdfdb61a126711bf4",
+              "sha256": "30dbc217ba91a3b7246dd21cc8662d1fd3bcf19d0f869c4bdfdb61a126711bf4"
+            },
             "arm64_monterey": {
               "cellar": "/opt/homebrew/Cellar",
               "url": "https://ghcr.io/v2/homebrew/core/openssh/blobs/sha256:0a542c0f11d8d94245d96a26700dc2169a61d5e6712ae1f692a7eaa36aa0c91e",
@@ -2394,7 +2399,7 @@
         }
       },
       "dbeaver-community": {
-        "version": "22.2.2",
+        "version": "22.2.3",
         "options": {
           "full_name": "dbeaver-community"
         }
@@ -2466,7 +2471,7 @@
         }
       },
       "zoom": {
-        "version": "5.12.2.11434",
+        "version": "5.12.3.11845",
         "options": {
           "full_name": "zoom"
         }
@@ -2644,6 +2649,12 @@
         "options": {
           "full_name": "adoptopenjdk"
         }
+      },
+      "anaconda": {
+        "version": "2022.10",
+        "options": {
+          "full_name": "anaconda"
+        }
       }
     },
     "mas": {
@@ -2670,9 +2681,9 @@
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.6.6",
+        "HOMEBREW_VERSION": "3.6.7",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "21ffad03dba1632bd00d993650e2e66e8abf833e",
+        "Homebrew/homebrew-core": "22677816659377a654fd9527890d0ebdf95fa596",
         "CLT": "14.0.0.0.1.1661618636",
         "Xcode": "14.0.1",
         "macOS": "12.6"

@@ -8,7 +8,7 @@ brew 'python@3.10'
 brew 'python@3.9'
 brew 'python@3.8'
 brew 'python@3.7'
-cask 'miniconda'
+cask 'anaconda'
 
 # Source control
 cask 'github'
@@ -16,12 +16,10 @@ cask 'github'
 # Native Toolchains
 brew 'llvm'
 brew 'ccache'
-brew 'ninja'
 cask 'cmake'
 mas 'xcode', id: 497_799_835
 
 # Development Enviroment
-brew 'wireshark'
 cask 'visual-studio-code'
 cask 'android-studio'
 cask 'dbeaver-community'
