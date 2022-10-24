@@ -68,6 +68,7 @@
     imports = [
       ../homes/base.nix
       ../homes/version-control.nix
+      ./modules/homes/linux.nix
       ../homes/shell.nix
       ../homes/android.nix
       ../homes/ruby.nix
