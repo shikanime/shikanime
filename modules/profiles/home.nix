@@ -4,7 +4,4 @@
     useGlobalPkgs = true;
     useUserPackages = true;
   };
-
-  # Add ~/.local/bin/ to $PATH
-  environment.localBinInPath = true;
 }
