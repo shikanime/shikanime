@@ -6,6 +6,10 @@ with lib;
   # Enable XDG base directories
   xdg.enable = true;
 
+  home.sessionPath = [
+    "${config.home.homeDirectory}/.local/bin"
+  ];
+
   # Set target to Flake's Nix
   nix.package = pkgs.nix;
 
