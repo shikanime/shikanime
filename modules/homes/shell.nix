@@ -3,6 +3,7 @@
 {
   # Core global utilitary packages
   home.packages = [
+    pkgs.watch
     pkgs.htop
     pkgs.openssl
     pkgs.file
