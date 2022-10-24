@@ -61,6 +61,10 @@
     homeConfigurations = {
       "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-darwin";
+        pkgs = import nixpkgs {
+          system = "x86_64-darwin";
+          config.allowUnfree = true;
+        };
         homeDirectory = "/Users/williamphetsinorath";
         username = "williamphetsinorath";
         stateVersion = "22.05";
@@ -96,6 +100,10 @@
       };
       "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
         system = "x86_64-linux";
+        pkgs = import nixpkgs {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
         homeDirectory = "/home/devas";
         username = "devas";
         stateVersion = "22.05";
@@ -104,7 +112,8 @@
           ./modules/homes/ishtar.nix
           ./modules/homes/base.nix
           ./modules/homes/version-control.nix
-          ./modules/homes/linux.nix
+          ./modules/homes/cpp.nix
+          ./modules/homes/cuda.nix
           ./modules/homes/shell.nix
           ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
