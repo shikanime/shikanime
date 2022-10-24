@@ -9,5 +9,10 @@
     if [ -d $HOME/.rd ]; then
       export PATH=$HOME/.rd/bin:$PATH
     fi
+
+    # Source Anaconda3 if it exists
+    if [ -d /usr/local/anaconda3 ]; then
+      source /usr/local/anaconda3/bin/activate
+    fi
   '';
 }
