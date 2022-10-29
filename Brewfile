@@ -69,6 +69,7 @@ cask 'xquartz'
 cask 'iterm2'
 cask 'obs'
 cask 'google-drive'
+cask 'zerotier-one'
 
 # System
 cask 'fujifilm-x-webcam'
