@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "d87426f3e114aa61ec4663018593482fb73064eb"
+        "revision": "ebc9d21fea7b3519dbbce872f416a6e3ce9f706f"
       },
       "homebrew/cask-drivers": {
-        "revision": "8c4a78929264a0b957b404b90b095281805fd876"
+        "revision": "20d42c39c564c874d8864844ee139f61b813e5b0"
       }
     },
     "brew": {
@@ -2405,7 +2405,7 @@
         }
       },
       "jetbrains-toolbox": {
-        "version": "1.26.2,1.26.2.13244",
+        "version": "1.26.4,1.26.4.13374",
         "options": {
           "full_name": "jetbrains-toolbox"
         }
@@ -2441,13 +2441,13 @@
         }
       },
       "brave-browser-dev": {
-        "version": "1.45.105.0,145.105",
+        "version": "1.46.82.0,146.82",
         "options": {
           "full_name": "brave-browser-dev"
         }
       },
       "google-chrome-dev": {
-        "version": "108.0.5359.10",
+        "version": "109.0.5384.0",
         "options": {
           "full_name": "google-chrome-dev"
         }
@@ -2483,13 +2483,13 @@
         }
       },
       "workplace-chat": {
-        "version": "155.0.0.46.218",
+        "version": "155.0.0.52.218",
         "options": {
           "full_name": "workplace-chat"
         }
       },
       "google-drive": {
-        "version": "65.0.4",
+        "version": "66.0.3",
         "options": {
           "full_name": "google-drive"
         }
@@ -2501,13 +2501,13 @@
         }
       },
       "microsoft-remote-desktop": {
-        "version": "10.7.9",
+        "version": "10.7.10",
         "options": {
           "full_name": "microsoft-remote-desktop"
         }
       },
       "iterm2": {
-        "version": "3.4.16",
+        "version": "3.4.17",
         "options": {
           "full_name": "iterm2"
         }
@@ -2537,7 +2537,7 @@
         }
       },
       "microsoft-edge": {
-        "version": "106.0.1370.52",
+        "version": "107.0.1418.24",
         "options": {
           "full_name": "microsoft-edge"
         }
@@ -2597,7 +2597,7 @@
         }
       },
       "rectangle": {
-        "version": "0.60,66",
+        "version": "0.61,67",
         "options": {
           "full_name": "rectangle"
         }
@@ -2627,7 +2627,7 @@
         }
       },
       "rancher": {
-        "version": "1.6.0",
+        "version": "1.6.1",
         "options": {
           "full_name": "rancher"
         }
@@ -2655,6 +2655,12 @@
         "options": {
           "full_name": "anaconda"
         }
+      },
+      "zerotier-one": {
+        "version": "1.10.1",
+        "options": {
+          "full_name": "zerotier-one"
+        }
       }
     },
     "mas": {
@@ -2662,15 +2668,15 @@
       "slack": null,
       "Pages": {
         "id": "409201541",
-        "version": "12.1"
+        "version": "12.2"
       },
       "Numbers": {
         "id": "409203825",
-        "version": "12.1"
+        "version": "12.2"
       },
       "Keynote": {
         "id": "409183694",
-        "version": "12.1"
+        "version": "12.2"
       },
       "Amphetamine": {
         "id": "937984704",
@@ -2687,6 +2693,14 @@
         "CLT": "14.0.0.0.1.1661618636",
         "Xcode": "14.0.1",
         "macOS": "12.6"
+      },
+      "ventura": {
+        "HOMEBREW_VERSION": "3.6.7",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "4917c76d4d2fe5e87106b038a77bab914788201e",
+        "CLT": "",
+        "Xcode": "14.0.1",
+        "macOS": "13.0"
       }
     }
   }
