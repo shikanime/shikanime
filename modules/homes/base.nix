@@ -52,6 +52,7 @@ with lib;
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 
   # This value determines the Home Manager release that your
