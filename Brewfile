@@ -21,7 +21,6 @@ mas 'xcode', id: 497_799_835
 
 # Development Enviroment
 cask 'visual-studio-code'
-cask 'android-studio'
 cask 'dbeaver-community'
 cask 'jetbrains-toolbox'
 cask 'raspberry-pi-imager'
