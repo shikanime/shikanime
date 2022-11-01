@@ -69,7 +69,7 @@
       ../homes/base.nix
       ../homes/version-control.nix
       ../homes/cpp.nix
-      ../homes/shell.nix
+      ../homes/development.nix
       ../homes/android.nix
       ../homes/ruby.nix
       ../homes/bazel.nix
