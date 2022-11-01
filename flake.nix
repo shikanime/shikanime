@@ -56,6 +56,22 @@
           home-manager.nixosModules.home-manager
         ];
       };
+      oceando = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./modules/profiles/base.nix
+          ./modules/profiles/development.nix
+          ./modules/profiles/home.nix
+          ./modules/profiles/oceando.nix
+          ./modules/users/devas.nix
+          ./modules/remote/ssh.nix
+          ./modules/remote/syncthing.nix
+          ./modules/remote/time.nix
+          ./modules/remote/jetbrains.nix
+          ./modules/remote/vscode.nix
+          home-manager.nixosModules.home-manager
+        ];
+      };
     };
 
     homeConfigurations = {
@@ -73,7 +89,7 @@
           ./modules/homes/altashar.nix
           ./modules/homes/base.nix
           ./modules/homes/version-control.nix
-          ./modules/homes/shell.nix
+          ./modules/homes/development.nix
           ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
           ./modules/homes/mix.nix
@@ -114,7 +130,7 @@
           ./modules/homes/version-control.nix
           ./modules/homes/cpp.nix
           ./modules/homes/cuda.nix
-          ./modules/homes/shell.nix
+          ./modules/homes/development.nix
           ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
           ./modules/homes/mix.nix
