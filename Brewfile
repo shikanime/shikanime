@@ -47,6 +47,7 @@ mas 'slack', id: 803_453_959
 
 # Data storage
 brew 'syncthing'
+brew 'aria2'
 cask 'google-drive'
 cask 'transmission'
 
