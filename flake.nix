@@ -88,6 +88,7 @@
         extraModules = [
           ./modules/homes/altashar.nix
           ./modules/homes/base.nix
+          ./modules/homes/totalenergies.nix
           ./modules/homes/version-control.nix
           ./modules/homes/development.nix
           ./modules/homes/ruby.nix
@@ -127,6 +128,7 @@
         extraModules = [
           ./modules/homes/ishtar.nix
           ./modules/homes/base.nix
+          ./modules/homes/totalenergies.nix
           ./modules/homes/version-control.nix
           ./modules/homes/cpp.nix
           ./modules/homes/cuda.nix

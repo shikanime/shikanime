@@ -67,6 +67,7 @@
   home-manager.users.devas = {
     imports = [
       ../homes/base.nix
+      ../homes/totalenergies.nix
       ../homes/version-control.nix
       ../homes/cpp.nix
       ../homes/development.nix
