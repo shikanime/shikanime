@@ -1,23 +1,6 @@
 { pkgs, config, ... }:
 
 {
-  programs.ssh = {
-    matchBlocks = {
-      "sfeir.gitlab.com" = {
-        hostname = "gitlab.com";
-        identityFile = "~/.ssh/sfeir_ed25519";
-      };
-      "sfeir.bitbucket.org" = {
-        hostname = "bitbucket.org";
-        identityFile = "~/.ssh/sfeir_ed25519";
-      };
-    };
-    extraConfig = ''
-      AddKeysToAgent yes
-    '';
-  };
-
-  # TODO: extract to user base isolation
   programs.git.includes = [
     {
       condition = "gitdir:${config.home.homeDirectory}/Sfeir/";
@@ -27,6 +10,7 @@
           email = "phetsinorath.w@sfeir.com";
           signingKey = "AA83063619D0AAEF";
         };
+        core.sshCommand = "${pkgs.openssh}/bin/ssh -i ${config.home.homeDirectory}/.ssh/sfeir_ed25519";
       };
     }
   ];
