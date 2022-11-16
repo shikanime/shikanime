@@ -13,6 +13,8 @@
     pkgs.github-cli
     pkgs.bitwarden-cli
     pkgs.gnumake
+    pkgs.graphviz
+    pkgs.pprof
   ];
 
   programs.jq.enable = true;
