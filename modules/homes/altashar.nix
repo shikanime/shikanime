@@ -14,5 +14,10 @@
     if [ -d /usr/local/anaconda3 ]; then
       source /usr/local/anaconda3/bin/activate
     fi
+
+    # Source Google Cloud SDK if it exists
+    if [ -d /usr/local/Caskroom/google-cloud-sdk ]; then
+      source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+    fi
   '';
 }
