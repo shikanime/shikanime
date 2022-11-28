@@ -63,8 +63,6 @@ cask 'rectangle'
 mas 'Amphetamine', id: 937_984_704
 
 # Utils
-brew 'openssh'
-brew 'gnupg'
 cask 'xquartz'
 cask 'iterm2'
 cask 'obs'
