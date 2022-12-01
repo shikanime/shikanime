@@ -1,6 +1,9 @@
 { config, ... }:
 
 {
+  home.homeDirectory = "/home/devas";
+  home.username = "devas";
+
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
