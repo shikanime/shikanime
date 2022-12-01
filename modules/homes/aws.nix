@@ -3,7 +3,7 @@
 {
   # Core global utilitary packages
   home.packages = [
-    pkgs.aws
+    pkgs.awscli2
   ];
 
   programs.zsh.oh-my-zsh.plugins = [

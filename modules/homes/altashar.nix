@@ -1,4 +1,7 @@
 {
+  home.homeDirectory = "/Users/williamphetsinorath";
+  home.username = "williamphetsinorath";
+
   programs.zsh.initExtra = ''
     # Enable Brew integration
     if which brew > /dev/null; then
