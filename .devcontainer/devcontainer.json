@@ -1,0 +1,15 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {
+      "version": "2.11.1",
+      "flakeUri": "nixpkgs#direnv"
+    }
+  },
+  "extensions": [
+    "jnoortheen.nix-ide",
+    "mkhl.direnv",
+    "James-Yu.latex-workshop",
+    "yzhang.markdown-all-in-one"
+  ]
+}
