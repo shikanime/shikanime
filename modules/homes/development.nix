@@ -9,6 +9,7 @@
     pkgs.file
     pkgs.wget
     pkgs.curl
+    pkgs.aria
     pkgs.cloudflared
     pkgs.github-cli
     pkgs.glab
