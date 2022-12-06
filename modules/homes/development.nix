@@ -11,6 +11,7 @@
     pkgs.curl
     pkgs.cloudflared
     pkgs.github-cli
+    pkgs.glab
     pkgs.bitwarden-cli
     pkgs.gnumake
     pkgs.graphviz
