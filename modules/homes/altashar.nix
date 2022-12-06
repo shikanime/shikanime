@@ -24,7 +24,12 @@
     fi
   '';
 
-  programs.ssh.extraConfig = ''
-    UseKeychain Yes
-  '';
+  programs.ssh = {
+    extraConfig = ''
+      UseKeychain Yes
+    '';
+    extraOptionOverrides = {
+      IgnoreUnknown = "UseKeychain";
+    };
+  };
 }
