@@ -7,7 +7,6 @@ brew 'mas'
 brew 'python@3.10'
 brew 'python@3.9'
 brew 'python@3.8'
-brew 'python@3.7'
 cask 'anaconda'
 
 # Source control
@@ -74,4 +73,3 @@ cask 'fujifilm-x-webcam'
 cask 'android-file-transfer'
 cask 'the-unarchiver'
 cask 'appcleaner'
-cask 'yubico-yubikey-manager'
