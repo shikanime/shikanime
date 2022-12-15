@@ -17,4 +17,6 @@
       source ${config.xdg.dataHome}/anaconda3/bin/activate
     fi
   '';
+
+  programs.git.extraConfig.credential.helper = "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe";
 }
