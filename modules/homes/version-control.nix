@@ -28,8 +28,17 @@
       ".Trash-*"
       ".nfs*"
     ];
+    includes = [
+      {
+        condition = "gitdir:${config.home.homeDirectory}/";
+        contents = {
+          core.editor = "${pkgs.neovim}/bin/nvim";
+          commit.gpgSign = true;
+          tag.gpgSign = true;
+        };
+      }
+    ];
     extraConfig = {
-      core.editor = "${pkgs.neovim}/bin/nvim";
       pull.rebase = true;
       rebase.autostash = true;
       push.autoSetupRemote = true;
