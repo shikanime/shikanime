@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   home.packages = [
@@ -11,7 +11,11 @@
   programs.zsh.oh-my-zsh.plugins = [
     "gcloud"
   ];
-
-  programs.git.extraConfig.credential."https://source.developers.google.com".helper =
-    "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
+  programs.git.includes = [
+    {
+      condition = "gitdir:${config.home.homeDirectory}/";
+      contents.extraConfig.credential."https://source.developers.google.com".helper =
+        "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
+    }
+  ];
 }

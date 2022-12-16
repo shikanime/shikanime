@@ -1,3 +1,5 @@
+{ pkgs, config, ... }:
+
 {
   programs.mercurial = {
     userName = "William Phetsinorath";
@@ -7,9 +9,17 @@
   programs.git = {
     userName = "William Phetsinorath";
     userEmail = "william.phetsinorath@shikanime.studio";
-    signing = {
-      key = "025CF1599FA70256";
-      signByDefault = true;
-    };
+    includes = [
+      {
+        condition = "gitdir:${config.home.homeDirectory}/Source/";
+        contents = {
+          user = {
+            name = "William Phetsinorath";
+            email = "william.phetsinorath@shikanime.studio";
+            signingKey = "025CF1599FA70256";
+          };
+        };
+      }
+    ];
   };
 }
