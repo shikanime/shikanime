@@ -3,8 +3,8 @@
 {
   # Core global utilitary packages
   home.packages = [
-    pkgs.clang
-    pkgs.inotify-tools
     pkgs.cmake
+    pkgs.ccache
+    pkgs.ninja
   ];
 }

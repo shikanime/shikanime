@@ -1,14 +1,16 @@
 { pkgs, ... }:
 
 let
-  pythonEnv = pkgs.python3.withPackages (pypkgs: with pypkgs; [
+  python3 = pkgs.python3.withPackages (pypkgs: with pypkgs; [
     pip
-    pipx
   ]);
 in
 {
   home.packages = [
-    pythonEnv
+    python3
+    pkgs.poetry
+    pkgs.python3Packages.pipx
+    pkgs.python3Packages.black
   ];
 
   programs.neovim.withPython3 = true;

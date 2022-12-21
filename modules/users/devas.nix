@@ -61,6 +61,9 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7pi5OYqzuMkTymIbJUJteIU3dz+OgduiF5O9cA+B7u devas@ishtar"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFChPMDHee+8F8tuchk8nLqdzVj1SOfLFv70NH95K6Yf williamphetsinorath@altashar"
     ];
+    packages = [
+      pkgs.inotify-tools
+    ];
   };
 
   # Configure user home
@@ -74,7 +77,7 @@
       ../homes/android.nix
       ../homes/ruby.nix
       ../homes/bazel.nix
-      ../homes/mix.nix
+      ../homes/beam.nix
       ../homes/go.nix
       ../homes/opam.nix
       ../homes/rustup.nix
@@ -95,14 +98,7 @@
       ../homes/birdz.nix
       ../homes/java.nix
       ../homes/dotnet.nix
+      ../homes/xdg.nix
     ];
-    xdg.userDirs = {
-      enable = true;
-      createDirectories = true;
-      extraConfig = {
-        XDG_SYNC_DIR = "$HOME/Sync";
-        XDG_SOURCE_DIR = "$HOME/Source";
-      };
-    };
   };
 }

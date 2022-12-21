@@ -18,7 +18,13 @@
 
     devShell = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       with import nixpkgs { inherit system; };
-      callPackage ./shell.nix { }
+      pkgs.mkShell {
+        buildInputs = [
+          pkgs.texlive.combined.scheme-full
+          pkgs.rubocop
+          pkgs.nixpkgs-fmt
+        ];
+      }
     );
 
     nixosConfigurations = {
@@ -86,10 +92,11 @@
           ./modules/homes/base.nix
           ./modules/homes/totalenergies.nix
           ./modules/homes/version-control.nix
+          ./modules/homes/cpp.nix
           ./modules/homes/development.nix
           ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
-          ./modules/homes/mix.nix
+          ./modules/homes/beam.nix
           ./modules/homes/go.nix
           ./modules/homes/opam.nix
           ./modules/homes/rustup.nix
@@ -102,6 +109,7 @@
           ./modules/homes/terraform.nix
           ./modules/homes/sql.nix
           ./modules/homes/aws.nix
+          ./modules/homes/kubernetes.nix
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
           ./modules/homes/galec.nix
@@ -127,7 +135,7 @@
           ./modules/homes/development.nix
           ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
-          ./modules/homes/mix.nix
+          ./modules/homes/beam.nix
           ./modules/homes/go.nix
           ./modules/homes/opam.nix
           ./modules/homes/rustup.nix
@@ -140,6 +148,7 @@
           ./modules/homes/terraform.nix
           ./modules/homes/sql.nix
           ./modules/homes/aws.nix
+          ./modules/homes/kubernetes.nix
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
           ./modules/homes/galec.nix
@@ -147,6 +156,7 @@
           ./modules/homes/birdz.nix
           ./modules/homes/java.nix
           ./modules/homes/dotnet.nix
+          ./modules/homes/xdg.nix
         ];
       };
     };
