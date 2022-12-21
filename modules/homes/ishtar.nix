@@ -4,11 +4,6 @@
   home.homeDirectory = "/home/devas";
   home.username = "devas";
 
-  xdg.userDirs = {
-    enable = true;
-    createDirectories = true;
-  };
-
   targets.genericLinux.enable = true;
 
   programs.zsh.initExtra = ''
@@ -18,5 +13,6 @@
     fi
   '';
 
-  programs.git.extraConfig.credential.helper = "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe";
+  programs.git.extraConfig.credential.helper =
+    "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe";
 }

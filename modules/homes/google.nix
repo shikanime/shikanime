@@ -1,11 +1,22 @@
 { pkgs, config, ... }:
 
+let
+  google-cloud-sdk = pkgs.google-cloud-sdk.withExtraComponents (with pkgs.google-cloud-sdk.components; [
+    alpha
+    beta
+    bq
+    gsutil
+    nomos
+    gke-gcloud-auth-plugin
+    gcloud-crc32c
+  ]);
+in
 {
   home.packages = [
-    pkgs.google-cloud-sdk
+    google-cloud-sdk
   ];
 
-  # GCP auth plugin is deprecated in v1.22+, unavailable in v1.26+
+  # TODO: GCP auth plugin is deprecated in v1.22+, unavailable in v1.26+
   home.sessionVariables.USE_GKE_GCLOUD_AUTH_PLUGIN = "True";
 
   programs.zsh.oh-my-zsh.plugins = [

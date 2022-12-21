@@ -13,8 +13,6 @@ cask 'anaconda'
 cask 'github'
 
 # Native Toolchains
-brew 'llvm'
-brew 'ccache'
 cask 'cmake'
 mas 'xcode', id: 497_799_835
 
@@ -35,7 +33,7 @@ cask 'mpv'
 cask 'brave-browser-dev'
 cask 'google-chrome-dev'
 cask 'firefox-developer-edition'
-cask 'microsoft-edge'
+cask 'microsoft-edge-dev'
 
 # Communcation
 cask 'signal'
@@ -46,7 +44,6 @@ mas 'slack', id: 803_453_959
 
 # Data storage
 brew 'syncthing'
-brew 'aria2'
 cask 'google-drive'
 cask 'transmission'
 
@@ -63,7 +60,6 @@ mas 'Amphetamine', id: 937_984_704
 
 # Utils
 cask 'xquartz'
-cask 'iterm2'
 cask 'obs'
 cask 'google-drive'
 cask 'zerotier-one'
