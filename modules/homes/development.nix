@@ -42,5 +42,8 @@
     extraConfig = ''
       AddKeysToAgent yes
     '';
+    extraOptionOverrides = {
+      IgnoreUnknown = "UseKeychain,PubkeyAcceptedAlgorithms";
+    };
   };
 }
