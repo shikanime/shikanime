@@ -25,8 +25,5 @@
     extraConfig = ''
       UseKeychain Yes
     '';
-    extraOptionOverrides = {
-      IgnoreUnknown = "UseKeychain";
-    };
   };
 }
