@@ -3,19 +3,25 @@
 with lib;
 
 {
-  # Enable XDG base directories
-  xdg.enable = true;
-
-  home.sessionPath = [
-    "${config.home.homeDirectory}/.local/bin"
-  ];
-
   # Set target to Flake's Nix
   nix.package = pkgs.nix;
 
   home.packages = [
     pkgs.nixpkgs-fmt
     pkgs.cachix
+    pkgs.watch
+    pkgs.htop
+    pkgs.openssl
+    pkgs.file
+    pkgs.wget
+    pkgs.curl
+    pkgs.aria
+    pkgs.nmap
+    pkgs.bitwarden-cli
+    pkgs.gnumake
+    pkgs.graphviz
+    pkgs.tlaplus
+    pkgs.pprof
   ];
 
   # Enable experimental features so we can access flakes
@@ -36,6 +42,8 @@ with lib;
     oh-my-zsh = {
       enable = true;
       plugins = [
+        "vim-interaction"
+        "nmap"
         "sudo"
         "docker"
       ];
@@ -53,6 +61,60 @@ with lib;
     enableBashIntegration = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
+  };
+
+  programs.jq.enable = true;
+
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+    plugins = [
+      pkgs.vimPlugins.lush-nvim
+      pkgs.vimPlugins.vim-fugitive
+      pkgs.vimPlugins.vim-gitgutter
+      pkgs.vimPlugins.vim-airline
+      pkgs.vimPlugins.vim-commentary
+      pkgs.vimPlugins.vim-surround
+      pkgs.vimPlugins.vim-repeat
+      pkgs.vimPlugins.nerdtree
+      pkgs.vimPlugins.telescope-nvim
+      pkgs.vimPlugins.fzf-vim
+      (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+        json
+        toml
+        make
+        markdown
+        rst
+        dot
+        nix
+        comment
+        diff
+        git_rebase
+        gitattributes
+        help
+        jq
+        markdown_inline
+        regex
+        vim
+      ]))
+    ];
+  };
+
+  programs.gpg.enable = true;
+
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      AddKeysToAgent yes
+    '';
+    extraOptionOverrides = {
+      IgnoreUnknown = lib.concatStringsSep "," [
+        "UseKeychain"
+        "PubkeyAcceptedAlgorithms"
+      ];
+    };
   };
 
   # This value determines the Home Manager release that your

@@ -9,4 +9,8 @@
       XDG_SOURCE_DIR = "${config.home.homeDirectory}/Source";
     };
   };
+
+  home.sessionPath = [
+    "${config.home.homeDirectory}/.local/bin"
+  ];
 }

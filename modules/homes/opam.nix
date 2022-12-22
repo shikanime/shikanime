@@ -9,4 +9,13 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
   };
+
+  programs.neovim.plugins = [
+    (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+      ocaml
+      ocaml_interface
+      ocamllex
+      menhir
+    ]))
+  ];
 }

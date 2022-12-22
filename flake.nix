@@ -92,7 +92,6 @@
           ./modules/homes/base.nix
           ./modules/homes/version-control.nix
           ./modules/homes/cpp.nix
-          ./modules/homes/development.nix
           ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
           ./modules/homes/beam.nix
@@ -100,15 +99,11 @@
           ./modules/homes/opam.nix
           ./modules/homes/rustup.nix
           ./modules/homes/python.nix
-          ./modules/homes/javascript.nix
+          ./modules/homes/web.nix
           ./modules/homes/php.nix
-          ./modules/homes/coursier.nix
-          ./modules/homes/google.nix
-          ./modules/homes/azure.nix
-          ./modules/homes/terraform.nix
+          ./modules/homes/latex.nix
           ./modules/homes/sql.nix
-          ./modules/homes/aws.nix
-          ./modules/homes/kubernetes.nix
+          ./modules/homes/cloud.nix
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
           ./modules/homes/java.nix
@@ -127,7 +122,6 @@
           ./modules/homes/version-control.nix
           ./modules/homes/cpp.nix
           ./modules/homes/cuda.nix
-          ./modules/homes/development.nix
           ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
           ./modules/homes/beam.nix
@@ -135,15 +129,11 @@
           ./modules/homes/opam.nix
           ./modules/homes/rustup.nix
           ./modules/homes/python.nix
-          ./modules/homes/javascript.nix
+          ./modules/homes/web.nix
           ./modules/homes/php.nix
-          ./modules/homes/coursier.nix
-          ./modules/homes/google.nix
-          ./modules/homes/azure.nix
-          ./modules/homes/terraform.nix
+          ./modules/homes/latex.nix
           ./modules/homes/sql.nix
-          ./modules/homes/aws.nix
-          ./modules/homes/kubernetes.nix
+          ./modules/homes/cloud.nix
           ./modules/homes/shikanime.nix
           ./modules/homes/sfeir.nix
           ./modules/homes/java.nix

@@ -16,5 +16,19 @@
     "yarn"
   ];
 
-  programs.neovim.withNodeJs = true;
+  programs.neovim = {
+    withNodeJs = true;
+    plugins = [
+      (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+        javascript
+        typescript
+        css
+        scss
+        vue
+        html
+        graphql
+        prisma
+      ]))
+    ];
+  };
 }

@@ -13,4 +13,10 @@
   programs.zsh.oh-my-zsh.plugins = [
     "rust"
   ];
+
+  programs.neovim.plugins = [
+    (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+      rust
+    ]))
+  ];
 }

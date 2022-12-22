@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 
 {
   # Local programs
@@ -11,8 +11,14 @@
     goPath = ".local/share/go";
   };
 
-
   programs.zsh.oh-my-zsh.plugins = [
     "golang"
+  ];
+
+  programs.neovim.plugins = [
+    (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+      go
+      gomod
+    ]))
   ];
 }

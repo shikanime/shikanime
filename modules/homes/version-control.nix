@@ -5,6 +5,7 @@
   home.packages = [
     pkgs.darcs
     pkgs.github-cli
+    pkgs.glab
     pkgs.subversion
   ];
 

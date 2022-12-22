@@ -72,8 +72,7 @@
       ../homes/base.nix
       ../homes/version-control.nix
       ../homes/cpp.nix
-      ../homes/development.nix
-      ../homes/android.nix
+      ../homes/cuda.nix
       ../homes/ruby.nix
       ../homes/bazel.nix
       ../homes/beam.nix
@@ -81,15 +80,11 @@
       ../homes/opam.nix
       ../homes/rustup.nix
       ../homes/python.nix
-      ../homes/javascript.nix
+      ../homes/web.nix
       ../homes/php.nix
-      ../homes/coursier.nix
-      ../homes/google.nix
-      ../homes/azure.nix
-      ../homes/terraform.nix
+      ../homes/latex.nix
       ../homes/sql.nix
-      ../homes/aws.nix
-      ../homes/kubernetes.nix
+      ../homes/cloud.nix
       ../homes/shikanime.nix
       ../homes/sfeir.nix
       ../homes/java.nix
