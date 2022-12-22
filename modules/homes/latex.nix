@@ -1,18 +1,13 @@
 { pkgs, ... }:
 
 {
-  home.packages = [
-    pkgs.ruby
-    pkgs.rubocop
-  ];
-
-  programs.zsh.oh-my-zsh.plugins = [
-    "ruby"
+  home.packages = with pkgs; [
+    pkgs.texlive.combined.scheme-full
   ];
 
   programs.neovim.plugins = [
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
-      ruby
+      latex
     ]))
   ];
 }

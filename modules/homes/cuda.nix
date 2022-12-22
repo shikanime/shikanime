@@ -10,4 +10,10 @@
       "/run/opengl-drivers-32/lib"
     ];
   };
+
+  programs.neovim.plugins = [
+    (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+      cuda
+    ]))
+  ];
 }
