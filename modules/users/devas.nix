@@ -71,7 +71,7 @@
     imports = [
       ../homes/base.nix
       ../homes/totalenergies.nix
-      ../homes/version-control.nix
+      ../homes/vcs.nix
       ../homes/cpp.nix
       ../homes/cuda.nix
       ../homes/ruby.nix

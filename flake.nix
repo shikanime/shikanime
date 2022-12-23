@@ -90,7 +90,7 @@
           ./modules/homes/altashar.nix
           ./modules/homes/base.nix
           ./modules/homes/totalenergies.nix
-          ./modules/homes/version-control.nix
+          ./modules/homes/vcs.nix
           ./modules/homes/cpp.nix
           ./modules/homes/ruby.nix
           ./modules/homes/bazel.nix
@@ -120,7 +120,7 @@
           ./modules/homes/ishtar.nix
           ./modules/homes/base.nix
           ./modules/homes/totalenergies.nix
-          ./modules/homes/version-control.nix
+          ./modules/homes/vcs.nix
           ./modules/homes/cpp.nix
           ./modules/homes/cuda.nix
           ./modules/homes/ruby.nix
