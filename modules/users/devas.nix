@@ -70,7 +70,7 @@
   home-manager.users.devas = {
     imports = [
       ../homes/base.nix
-      ../homes/version-control.nix
+      ../homes/vcs.nix
       ../homes/cpp.nix
       ../homes/cuda.nix
       ../homes/ruby.nix
