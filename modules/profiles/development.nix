@@ -39,14 +39,4 @@
     enableExtraSocket = true;
     pinentryFlavor = "tty";
   };
-
-  # Add personal caching server
-  nix.settings = {
-    substituters = [
-      "https://shikanime.cachix.org"
-    ];
-    trusted-public-keys = [
-      "shikanime.cachix.org-1:OrpjVTH6RzYf2R97IqcTWdLRejF6+XbpFNNZJxKG8Ts="
-    ];
-  };
 }

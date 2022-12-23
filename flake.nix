@@ -9,15 +9,17 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager }: {
+  nixConfig.allowUnfree = true;
+
+  outputs = { self, nixpkgs, home-manager }: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      with import nixpkgs { inherit system; }; {
-        curriculumVitae = callPackage ./pkgs/curriculum-vitae/default.nix { };
+      let pkgs = import nixpkgs.legacyPackages.${system}; in {
+        curriculumVitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
       }
     );
 
     devShell = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      with import nixpkgs { inherit system; };
+      let pkgs = nixpkgs.legacyPackages.${system}; in
       pkgs.mkShell {
         buildInputs = [
           pkgs.texlive.combined.scheme-full
@@ -82,10 +84,7 @@
 
     homeConfigurations = {
       "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = "x86_64-darwin";
-          config.allowUnfree = true;
-        };
+        pkgs = nixpkgs.legacyPackages.x86_64-darwin;
         modules = [
           ./modules/homes/host.nix
           ./modules/homes/altashar.nix
@@ -111,10 +110,7 @@
         ];
       };
       "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = "x86_64-linux";
-          config.allowUnfree = true;
-        };
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           ./modules/homes/host.nix
           ./modules/homes/ishtar.nix

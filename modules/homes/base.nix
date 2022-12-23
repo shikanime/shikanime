@@ -27,6 +27,16 @@ with lib;
   # Enable experimental features so we can access flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Add personal caching server
+  nix.settings = {
+    trusted-substituters = [
+      "https://shikanime.cachix.org"
+    ];
+    trusted-public-keys = [
+      "shikanime.cachix.org-1:OrpjVTH6RzYf2R97IqcTWdLRejF6+XbpFNNZJxKG8Ts="
+    ];
+  };
+
   # Allow unfree software such as Cloudflared or CUDA
   nixpkgs.config.allowUnfree = true;
 
