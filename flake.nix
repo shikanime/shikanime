@@ -145,6 +145,14 @@
           ./modules/homes/xdg.nix
         ];
       };
+      vscode = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [
+          ./modules/homes/devcontainer.nix
+          ./modules/homes/base.nix
+          ./modules/homes/xdg.nix
+        ];
+      };
     };
   };
 }

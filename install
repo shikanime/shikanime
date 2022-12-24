@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+yes | nix shell nixpkgs#home-manager -c home-manager switch --flake . -b backup-before-nix
