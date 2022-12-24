@@ -7,20 +7,13 @@ with lib;
   nix.package = pkgs.nix;
 
   home.packages = [
-    pkgs.nixpkgs-fmt
-    pkgs.cachix
     pkgs.watch
-    pkgs.htop
     pkgs.openssl
     pkgs.file
     pkgs.wget
     pkgs.curl
-    pkgs.aria
-    pkgs.nmap
-    pkgs.bitwarden-cli
     pkgs.gnumake
     pkgs.graphviz
-    pkgs.tlaplus
     pkgs.pprof
   ];
 
@@ -53,7 +46,6 @@ with lib;
       enable = true;
       plugins = [
         "vim-interaction"
-        "nmap"
         "sudo"
         "docker"
       ];
