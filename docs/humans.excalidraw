@@ -193,8 +193,8 @@
     },
     {
       "type": "text",
-      "version": 788,
-      "versionNonce": 1021327701,
+      "version": 789,
+      "versionNonce": 1361323868,
       "isDeleted": false,
       "id": "8jcJFeWZ8TcttWq8P5U3C",
       "fillStyle": "hachure",
@@ -280,9 +280,13 @@
         {
           "id": "LgJz3Y1nOyHa2Ho29Cn3l",
           "type": "arrow"
+        },
+        {
+          "id": "OSMq4yMBO3nx0ud9fqF5I",
+          "type": "arrow"
         }
       ],
-      "updated": 1670541789609,
+      "updated": 1672154469075,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2664,8 +2668,8 @@
     },
     {
       "type": "text",
-      "version": 415,
-      "versionNonce": 445270555,
+      "version": 416,
+      "versionNonce": 952930012,
       "isDeleted": false,
       "id": "0xJnfSyRTQcY3__TjM1TE",
       "fillStyle": "hachure",
@@ -2719,9 +2723,13 @@
         {
           "id": "FqMqV_A3zWpbtUP2uWtCU",
           "type": "arrow"
+        },
+        {
+          "id": "IF4VYxdEwXUXi80bwrYCe",
+          "type": "arrow"
         }
       ],
-      "updated": 1670541789611,
+      "updated": 1672154504843,
       "link": "https://www.themuse.com/advice/30-brilliant-networking-conversation-starters",
       "locked": false,
       "fontSize": 20,
@@ -4964,8 +4972,8 @@
     },
     {
       "type": "text",
-      "version": 249,
-      "versionNonce": 1928014107,
+      "version": 250,
+      "versionNonce": 410372196,
       "isDeleted": false,
       "id": "idRs11QpMzm8KyMFEmGu3",
       "fillStyle": "hachure",
@@ -4987,9 +4995,13 @@
         {
           "id": "jIdEUwLOvw5ct1e34K_js",
           "type": "arrow"
+        },
+        {
+          "id": "RMUB7aOO3iM_3HXPKXaiO",
+          "type": "arrow"
         }
       ],
-      "updated": 1670541789612,
+      "updated": 1672154738627,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -5052,8 +5064,8 @@
     },
     {
       "type": "text",
-      "version": 225,
-      "versionNonce": 1132285371,
+      "version": 226,
+      "versionNonce": 272024676,
       "isDeleted": false,
       "id": "qQ97wqBeC_yI7WwJ-yHb7",
       "fillStyle": "hachure",
@@ -5087,9 +5099,13 @@
         {
           "id": "fLQl2ISCdMzmw1yJKuDba",
           "type": "arrow"
+        },
+        {
+          "id": "7z_i0OSG1rXkdYGVtVrMZ",
+          "type": "arrow"
         }
       ],
-      "updated": 1670541789612,
+      "updated": 1672154009887,
       "link": "https://smallfuel.com/blog/entry/how-to-introduce-yourself-to-someone-youve-never-met/",
       "locked": false,
       "fontSize": 20,
@@ -9033,8 +9049,8 @@
     },
     {
       "type": "arrow",
-      "version": 590,
-      "versionNonce": 550751541,
+      "version": 618,
+      "versionNonce": 315045724,
       "isDeleted": false,
       "id": "LgJz3Y1nOyHa2Ho29Cn3l",
       "fillStyle": "hachure",
@@ -9047,24 +9063,24 @@
       "y": 494.4106818584899,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
-      "width": 3877.5310309059482,
-      "height": 537.6699393021415,
+      "width": 3661.1856523255115,
+      "height": 543.1090578316489,
       "seed": 828189017,
       "groupIds": [],
       "strokeSharpness": "round",
       "boundElements": [],
-      "updated": 1670541789615,
+      "updated": 1672154140487,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "oA8zr-AEp5reUEOMJ87b1",
-        "focus": -0.4161727579888683,
-        "gap": 10.131402267688486
+        "focus": -0.43677664328203164,
+        "gap": 10.131402267687918
       },
       "endBinding": {
         "elementId": "8jcJFeWZ8TcttWq8P5U3C",
-        "focus": 0.5850428518465668,
-        "gap": 15.92613663590987
+        "focus": -0.013986463596560842,
+        "gap": 10.487018106402502
       },
       "lastCommittedPoint": null,
       "startArrowhead": null,
@@ -9075,8 +9091,8 @@
           0
         ],
         [
-          3877.5310309059482,
-          537.6699393021415
+          3661.1856523255115,
+          543.1090578316489
         ]
       ]
     },
@@ -9408,26 +9424,26 @@
       ]
     },
     {
-      "id": "DwFClLQd8WuMHGcOijgj_",
       "type": "text",
-      "x": 8702.613087014099,
-      "y": -369.28976535385084,
-      "width": 126,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 197,
+      "versionNonce": 1529210651,
+      "isDeleted": false,
+      "id": "DwFClLQd8WuMHGcOijgj_",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 8702.613087014099,
+      "y": -369.28976535385084,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 126,
+      "height": 25,
+      "seed": 1288451259,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1288451259,
-      "version": 197,
-      "versionNonce": 1529210651,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "m0yFjBa92hIjWGmN298Ds",
@@ -9453,36 +9469,36 @@
       "updated": 1670541789615,
       "link": "https://resources.workable.com/tutorial/hr-interview-questions",
       "locked": false,
-      "text": "HR Interview",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "HR Interview",
+      "baseline": 18,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "HR Interview"
     },
     {
-      "id": "PL9ZIwIBM3Akic3CIRtId",
       "type": "text",
-      "x": 7318.734178396785,
-      "y": -185.83790874750048,
-      "width": 408,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 15,
+      "versionNonce": 1071901717,
+      "isDeleted": false,
+      "id": "PL9ZIwIBM3Akic3CIRtId",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 7318.734178396785,
+      "y": -185.83790874750048,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 408,
+      "height": 25,
+      "seed": 588867509,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 588867509,
-      "version": 15,
-      "versionNonce": 1071901717,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "m0yFjBa92hIjWGmN298Ds",
@@ -9496,36 +9512,36 @@
       "updated": 1670541789615,
       "link": null,
       "locked": false,
-      "text": "Why did you decide to apply to this role?",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "Why did you decide to apply to this role?",
+      "baseline": 18,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "Why did you decide to apply to this role?"
     },
     {
-      "id": "N_JKjAvg5Y9zVvze9owKJ",
       "type": "text",
-      "x": 7197.451349226509,
-      "y": -29.614538028231436,
-      "width": 603,
-      "height": 125,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 32,
+      "versionNonce": 296766395,
+      "isDeleted": false,
+      "id": "N_JKjAvg5Y9zVvze9owKJ",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 7197.451349226509,
+      "y": -29.614538028231436,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 603,
+      "height": 125,
+      "seed": 1895961941,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1895961941,
-      "version": 32,
-      "versionNonce": 296766395,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "smKSCIuPma-vVmLXnKwkt",
@@ -9535,51 +9551,40 @@
       "updated": 1670541789615,
       "link": null,
       "locked": false,
-      "text": "This question aims to evaluate the candidate’s interest\nin the role. Are they really motivated to get hired for this\nspecific job or do they just mass-apply to every job ad\nunder the sun? Candidates should show that this application\nwas a conscious decision on their part.",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "This question aims to evaluate the candidate’s interest\nin the role. Are they really motivated to get hired for this\nspecific job or do they just mass-apply to every job ad\nunder the sun? Candidates should show that this application\nwas a conscious decision on their part.",
+      "baseline": 118,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 118,
       "containerId": null,
       "originalText": "This question aims to evaluate the candidate’s interest\nin the role. Are they really motivated to get hired for this\nspecific job or do they just mass-apply to every job ad\nunder the sun? Candidates should show that this application\nwas a conscious decision on their part."
     },
     {
-      "id": "m0yFjBa92hIjWGmN298Ds",
       "type": "arrow",
-      "x": 8695.402422463496,
-      "y": -337.85385682527635,
-      "width": 1077.2094052485509,
-      "height": 142.62491462179923,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 377,
+      "versionNonce": 1494720885,
+      "isDeleted": false,
+      "id": "m0yFjBa92hIjWGmN298Ds",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 8695.402422463496,
+      "y": -337.85385682527635,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1077.2094052485509,
+      "height": 142.62491462179923,
+      "seed": 44570805,
       "groupIds": [],
       "strokeSharpness": "round",
-      "seed": 44570805,
-      "version": 377,
-      "versionNonce": 1494720885,
-      "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1670541789615,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -1077.2094052485509,
-          142.62491462179923
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "DwFClLQd8WuMHGcOijgj_",
         "focus": -0.46260661205693254,
@@ -9590,45 +9595,45 @@
         "focus": -0.23417006241192767,
         "gap": 9.39103345597664
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "smKSCIuPma-vVmLXnKwkt",
-      "type": "arrow",
-      "x": 7513.579836014643,
-      "y": -149.34641044653756,
-      "width": 4.049212446991078,
-      "height": 100.20519409959059,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "strokeSharpness": "round",
-      "seed": 1357529845,
-      "version": 38,
-      "versionNonce": 516234331,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1670541789615,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          -4.049212446991078,
-          100.20519409959059
+          -1077.2094052485509,
+          142.62491462179923
         ]
-      ],
-      "lastCommittedPoint": null,
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 38,
+      "versionNonce": 516234331,
+      "isDeleted": false,
+      "id": "smKSCIuPma-vVmLXnKwkt",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 7513.579836014643,
+      "y": -149.34641044653756,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 4.049212446991078,
+      "height": 100.20519409959059,
+      "seed": 1357529845,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1670541789615,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "PL9ZIwIBM3Akic3CIRtId",
         "focus": 0.04002278844521917,
@@ -9639,30 +9644,41 @@
         "focus": 0.0238948361286002,
         "gap": 19.52667831871554
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -4.049212446991078,
+          100.20519409959059
+        ]
+      ]
     },
     {
-      "id": "yXH1J15CYHT9_9RmgNUkC",
       "type": "text",
-      "x": 7884.518449671285,
-      "y": -185.72098133111183,
-      "width": 660,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 45,
+      "versionNonce": 1894623957,
+      "isDeleted": false,
+      "id": "yXH1J15CYHT9_9RmgNUkC",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 7884.518449671285,
+      "y": -185.72098133111183,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 660,
+      "height": 25,
+      "seed": 1434580827,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1434580827,
-      "version": 45,
-      "versionNonce": 1894623957,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "wCCLhC-vORDzqUHFIvna_",
@@ -9676,36 +9692,36 @@
       "updated": 1670541789615,
       "link": null,
       "locked": false,
-      "text": "What experience do you have that would be relevant to this role?",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "What experience do you have that would be relevant to this role?",
+      "baseline": 18,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "What experience do you have that would be relevant to this role?"
     },
     {
-      "id": "UcJv5fMY56Kg_eNyQ3YyS",
       "type": "text",
-      "x": 7891.173568454068,
-      "y": -21.702649737449065,
-      "width": 666,
-      "height": 100,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 40,
+      "versionNonce": 506910971,
+      "isDeleted": false,
+      "id": "UcJv5fMY56Kg_eNyQ3YyS",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 7891.173568454068,
+      "y": -21.702649737449065,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 666,
+      "height": 100,
+      "seed": 1728471323,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1728471323,
-      "version": 40,
-      "versionNonce": 506910971,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "C2ZksWx_7uZ7P2VPS_WbR",
@@ -9715,51 +9731,40 @@
       "updated": 1670541789615,
       "link": null,
       "locked": false,
-      "text": "With this question, recruiters can assess whether candidates\nhave truly understood the role’s requirements and whether\nthey think they can do the job. The best candidates will\nreadily explain how their previous experience relates to the job ad.",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "With this question, recruiters can assess whether candidates\nhave truly understood the role’s requirements and whether\nthey think they can do the job. The best candidates will\nreadily explain how their previous experience relates to the job ad.",
+      "baseline": 93,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 93,
       "containerId": null,
       "originalText": "With this question, recruiters can assess whether candidates\nhave truly understood the role’s requirements and whether\nthey think they can do the job. The best candidates will\nreadily explain how their previous experience relates to the job ad."
     },
     {
-      "id": "wCCLhC-vORDzqUHFIvna_",
       "type": "arrow",
-      "x": 8700.153870125552,
-      "y": -334.69845501112763,
-      "width": 385.22537699509303,
-      "height": 139.26448939261292,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 415,
+      "versionNonce": 670795829,
+      "isDeleted": false,
+      "id": "wCCLhC-vORDzqUHFIvna_",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 8700.153870125552,
+      "y": -334.69845501112763,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 385.22537699509303,
+      "height": 139.26448939261292,
+      "seed": 1801853685,
       "groupIds": [],
       "strokeSharpness": "round",
-      "seed": 1801853685,
-      "version": 415,
-      "versionNonce": 670795829,
-      "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1670541789615,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -385.22537699509303,
-          139.26448939261292
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "DwFClLQd8WuMHGcOijgj_",
         "focus": 0.04454220083917246,
@@ -9770,45 +9775,45 @@
         "focus": 0.106879464978978,
         "gap": 9.71298428740289
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "C2ZksWx_7uZ7P2VPS_WbR",
-      "type": "arrow",
-      "x": 8194.812845688288,
-      "y": -149.39766630029703,
-      "width": 5.586888059771809,
-      "height": 119.99849629300502,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "strokeSharpness": "round",
-      "seed": 1171629691,
-      "version": 31,
-      "versionNonce": 227017115,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1670541789615,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          5.586888059771809,
-          119.99849629300502
+          -385.22537699509303,
+          139.26448939261292
         ]
-      ],
-      "lastCommittedPoint": null,
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 31,
+      "versionNonce": 227017115,
+      "isDeleted": false,
+      "id": "C2ZksWx_7uZ7P2VPS_WbR",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8194.812845688288,
+      "y": -149.39766630029703,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 5.586888059771809,
+      "height": 119.99849629300502,
+      "seed": 1171629691,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1670541789615,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "yXH1J15CYHT9_9RmgNUkC",
         "focus": 0.06296401826982923,
@@ -9819,30 +9824,41 @@
         "focus": -0.06288650927687611,
         "gap": 7.696520269842949
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          5.586888059771809,
+          119.99849629300502
+        ]
+      ]
     },
     {
-      "id": "MaQW1P7ZSneG_dYFeA75o",
       "type": "text",
-      "x": 8764.04460704325,
-      "y": -204.5188247566075,
-      "width": 345,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 42,
+      "versionNonce": 1881586069,
+      "isDeleted": false,
+      "id": "MaQW1P7ZSneG_dYFeA75o",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 8764.04460704325,
+      "y": -204.5188247566075,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 345,
+      "height": 25,
+      "seed": 516032795,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 516032795,
-      "version": 42,
-      "versionNonce": 1881586069,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "iOhLCQkx3_-yK0AvLNaQQ",
@@ -9856,36 +9872,36 @@
       "updated": 1670541789615,
       "link": null,
       "locked": false,
-      "text": "Tell me about your experience in …",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "Tell me about your experience in …",
+      "baseline": 18,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "Tell me about your experience in …"
     },
     {
-      "id": "dqbvDzrvJjvgnJ1gYXMAJ",
       "type": "text",
-      "x": 8655.669309941684,
-      "y": -38.813428772003704,
-      "width": 723,
-      "height": 100,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 42,
+      "versionNonce": 367728187,
+      "isDeleted": false,
+      "id": "dqbvDzrvJjvgnJ1gYXMAJ",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 8655.669309941684,
+      "y": -38.813428772003704,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 723,
+      "height": 100,
+      "seed": 203203131,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 203203131,
-      "version": 42,
-      "versionNonce": 367728187,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "CgQ-Hz0kWNrYfI_o77WWo",
@@ -9895,51 +9911,40 @@
       "updated": 1670541789616,
       "link": null,
       "locked": false,
-      "text": "While similar to the previous question, this question proactively\nasks about the most important aspects of the role. For example,\nif a company is hiring for a copywriter, they’ll certainly ask\nabout the candidate’s experience in different types of writing or editing.",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "While similar to the previous question, this question proactively\nasks about the most important aspects of the role. For example,\nif a company is hiring for a copywriter, they’ll certainly ask\nabout the candidate’s experience in different types of writing or editing.",
+      "baseline": 93,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 93,
       "containerId": null,
       "originalText": "While similar to the previous question, this question proactively\nasks about the most important aspects of the role. For example,\nif a company is hiring for a copywriter, they’ll certainly ask\nabout the candidate’s experience in different types of writing or editing."
     },
     {
-      "id": "iOhLCQkx3_-yK0AvLNaQQ",
       "type": "arrow",
-      "x": 8743.359745072945,
-      "y": -337.87084646436927,
-      "width": 284.10034748673024,
-      "height": 122.06728399461076,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 416,
+      "versionNonce": 1654963957,
+      "isDeleted": false,
+      "id": "iOhLCQkx3_-yK0AvLNaQQ",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 8743.359745072945,
+      "y": -337.87084646436927,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 284.10034748673024,
+      "height": 122.06728399461076,
+      "seed": 290038779,
       "groupIds": [],
       "strokeSharpness": "round",
-      "seed": 290038779,
-      "version": 416,
-      "versionNonce": 1654963957,
-      "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1670541789616,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          284.10034748673024,
-          122.06728399461076
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "DwFClLQd8WuMHGcOijgj_",
         "focus": 0.7198280001817703,
@@ -9950,45 +9955,45 @@
         "focus": 0.7255835344913304,
         "gap": 11.284737713151003
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "CgQ-Hz0kWNrYfI_o77WWo",
-      "type": "arrow",
-      "x": 8942.597577104916,
-      "y": -167.68452691681546,
-      "width": 1.383908051502658,
-      "height": 122.0145598742073,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "strokeSharpness": "round",
-      "seed": 848429269,
-      "version": 80,
-      "versionNonce": 373462747,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1670541789616,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          1.383908051502658,
-          122.0145598742073
+          284.10034748673024,
+          122.06728399461076
         ]
-      ],
-      "lastCommittedPoint": null,
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 80,
+      "versionNonce": 373462747,
+      "isDeleted": false,
+      "id": "CgQ-Hz0kWNrYfI_o77WWo",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8942.597577104916,
+      "y": -167.68452691681546,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1.383908051502658,
+      "height": 122.0145598742073,
+      "seed": 848429269,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1670541789616,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "MaQW1P7ZSneG_dYFeA75o",
         "focus": -0.0334621595421175,
@@ -9999,30 +10004,41 @@
         "focus": -0.2003577446336126,
         "gap": 6.85653827060446
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1.383908051502658,
+          122.0145598742073
+        ]
+      ]
     },
     {
-      "id": "K_6zyPyR_Ia47UCfLhYsd",
       "type": "text",
-      "x": 9501.725661766346,
-      "y": -210.62111513105617,
-      "width": 495,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 49,
+      "versionNonce": 1442519125,
+      "isDeleted": false,
+      "id": "K_6zyPyR_Ia47UCfLhYsd",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 9501.725661766346,
+      "y": -210.62111513105617,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 495,
+      "height": 25,
+      "seed": 1774550459,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1774550459,
-      "version": 49,
-      "versionNonce": 1442519125,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "w_ewY5FzzHeOv2DMMuzVM",
@@ -10036,36 +10052,36 @@
       "updated": 1670541789616,
       "link": null,
       "locked": false,
-      "text": "What did you like most about the job description?",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "What did you like most about the job description?",
+      "baseline": 18,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "What did you like most about the job description?"
     },
     {
-      "id": "G_Os9O6gOAmT4gBSbiM4-",
       "type": "text",
-      "x": 9485.93231834795,
-      "y": -47.341722095757746,
-      "width": 601,
-      "height": 100,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 49,
+      "versionNonce": 1830880123,
+      "isDeleted": false,
+      "id": "G_Os9O6gOAmT4gBSbiM4-",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 9485.93231834795,
+      "y": -47.341722095757746,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 601,
+      "height": 100,
+      "seed": 1524198453,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1524198453,
-      "version": 49,
-      "versionNonce": 1830880123,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "w_ewY5FzzHeOv2DMMuzVM",
@@ -10075,51 +10091,40 @@
       "updated": 1670541789616,
       "link": null,
       "locked": false,
-      "text": "This is one of the best HR interview questions to ask\nto start a conversation on requirements and responsibilities.\nAnd, it’s useful to assess how much the candidate has\nunderstood the role.",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "This is one of the best HR interview questions to ask\nto start a conversation on requirements and responsibilities.\nAnd, it’s useful to assess how much the candidate has\nunderstood the role.",
+      "baseline": 93,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 93,
       "containerId": null,
       "originalText": "This is one of the best HR interview questions to ask\nto start a conversation on requirements and responsibilities.\nAnd, it’s useful to assess how much the candidate has\nunderstood the role."
     },
     {
-      "id": "w_ewY5FzzHeOv2DMMuzVM",
       "type": "arrow",
-      "x": 9729.558332163157,
-      "y": -169.9170930886371,
-      "width": 0.8457215870312211,
-      "height": 109.30310814188078,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 29,
+      "versionNonce": 872367541,
+      "isDeleted": false,
+      "id": "w_ewY5FzzHeOv2DMMuzVM",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 9729.558332163157,
+      "y": -169.9170930886371,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 0.8457215870312211,
+      "height": 109.30310814188078,
+      "seed": 38586075,
       "groupIds": [],
       "strokeSharpness": "round",
-      "seed": 38586075,
-      "version": 29,
-      "versionNonce": 872367541,
-      "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1670541789616,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -0.8457215870312211,
-          109.30310814188078
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "K_6zyPyR_Ia47UCfLhYsd",
         "focus": 0.0785515416952668,
@@ -10130,45 +10135,45 @@
         "focus": -0.1934589915477833,
         "gap": 13.272262850998573
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "fJTa-FhW7bZjY_JYQlHdj",
-      "type": "arrow",
-      "x": 8776.767664952291,
-      "y": -337.73416418767783,
-      "width": 1031.8340848902935,
-      "height": 117.28734193458365,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "strokeSharpness": "round",
-      "seed": 1116336187,
-      "version": 399,
-      "versionNonce": 46717979,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1670541789616,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          1031.8340848902935,
-          117.28734193458365
+          -0.8457215870312211,
+          109.30310814188078
         ]
-      ],
-      "lastCommittedPoint": null,
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 399,
+      "versionNonce": 46717979,
+      "isDeleted": false,
+      "id": "fJTa-FhW7bZjY_JYQlHdj",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8776.767664952291,
+      "y": -337.73416418767783,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1031.8340848902935,
+      "height": 117.28734193458365,
+      "seed": 1116336187,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1670541789616,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "DwFClLQd8WuMHGcOijgj_",
         "focus": 0.9047803938983279,
@@ -10179,30 +10184,41 @@
         "focus": 0.7155488347041271,
         "gap": 9.825707122038011
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1031.8340848902935,
+          117.28734193458365
+        ]
+      ]
     },
     {
-      "id": "Eg3kbZkmuXa4pcNwSAJPp",
       "type": "text",
-      "x": 10162.318312871697,
-      "y": -214.7507485465111,
-      "width": 371,
-      "height": 50,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 28,
+      "versionNonce": 265733909,
+      "isDeleted": false,
+      "id": "Eg3kbZkmuXa4pcNwSAJPp",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 10162.318312871697,
+      "y": -214.7507485465111,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 371,
+      "height": 50,
+      "seed": 1723794363,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1723794363,
-      "version": 28,
-      "versionNonce": 265733909,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "7qedz-fVzGVzKyWVd_605",
@@ -10216,36 +10232,36 @@
       "updated": 1670541789616,
       "link": null,
       "locked": false,
-      "text": "Why are you leaving your current job?\nWhy did you leave your previous job?",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "Why are you leaving your current job?\nWhy did you leave your previous job?",
+      "baseline": 43,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 43,
       "containerId": null,
       "originalText": "Why are you leaving your current job?\nWhy did you leave your previous job?"
     },
     {
-      "id": "8_V2eUtdUvoWJ9xuPj3u7",
       "type": "text",
-      "x": 10157.740123996455,
-      "y": -56.89566640984219,
-      "width": 533,
-      "height": 325,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 40,
+      "versionNonce": 321691835,
+      "isDeleted": false,
+      "id": "8_V2eUtdUvoWJ9xuPj3u7",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 10157.740123996455,
+      "y": -56.89566640984219,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 533,
+      "height": 325,
+      "seed": 1245735445,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1245735445,
-      "version": 40,
-      "versionNonce": 321691835,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "IIh3PtE8ps5RkyBRc6ynA",
@@ -10255,51 +10271,40 @@
       "updated": 1670541789616,
       "link": null,
       "locked": false,
-      "text": "The best candidates will cite good reasons for\nmoving on from their previous role. Being negative\nor badmouthing their employer is a red flag. Of\ncourse, there’s a balance – honest candidates\nwill often give an honest answer, and sometimes,\ntheir previous employer really is at fault for the\nend of their employment relationship. Attitude is\nwhat matters in these HR interview questions. For\nexample, it’d be reasonable if a candidate mentioned\nthey left their previous job because their employer\nwasn’t paying their workers the fair market rate.\nBut, it’d be a red flag if they launched a tirade on \nwhat a fraud their previous employer was.",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "The best candidates will cite good reasons for\nmoving on from their previous role. Being negative\nor badmouthing their employer is a red flag. Of\ncourse, there’s a balance – honest candidates\nwill often give an honest answer, and sometimes,\ntheir previous employer really is at fault for the\nend of their employment relationship. Attitude is\nwhat matters in these HR interview questions. For\nexample, it’d be reasonable if a candidate mentioned\nthey left their previous job because their employer\nwasn’t paying their workers the fair market rate.\nBut, it’d be a red flag if they launched a tirade on \nwhat a fraud their previous employer was.",
+      "baseline": 318,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 318,
       "containerId": null,
       "originalText": "The best candidates will cite good reasons for\nmoving on from their previous role. Being negative\nor badmouthing their employer is a red flag. Of\ncourse, there’s a balance – honest candidates\nwill often give an honest answer, and sometimes,\ntheir previous employer really is at fault for the\nend of their employment relationship. Attitude is\nwhat matters in these HR interview questions. For\nexample, it’d be reasonable if a candidate mentioned\nthey left their previous job because their employer\nwasn’t paying their workers the fair market rate.\nBut, it’d be a red flag if they launched a tirade on \nwhat a fraud their previous employer was."
     },
     {
-      "id": "7qedz-fVzGVzKyWVd_605",
       "type": "arrow",
-      "x": 8818.89557842023,
-      "y": -335.10616711283006,
-      "width": 1539.3243427440339,
-      "height": 111.28500115390972,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 58,
+      "versionNonce": 2079792245,
+      "isDeleted": false,
+      "id": "7qedz-fVzGVzKyWVd_605",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 8818.89557842023,
+      "y": -335.10616711283006,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1539.3243427440339,
+      "height": 111.28500115390972,
+      "seed": 283079413,
       "groupIds": [],
       "strokeSharpness": "round",
-      "seed": 283079413,
-      "version": 58,
-      "versionNonce": 2079792245,
-      "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1670541789616,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          1539.3243427440339,
-          111.28500115390972
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "DwFClLQd8WuMHGcOijgj_",
         "focus": 1.0455590404638788,
@@ -10310,45 +10315,45 @@
         "focus": 0.9065814378141915,
         "gap": 9.070417412409256
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "IIh3PtE8ps5RkyBRc6ynA",
-      "type": "arrow",
-      "x": 10357.228974658248,
-      "y": -155.71067895499573,
-      "width": 4.6130268383440125,
-      "height": 86.11837695805389,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "strokeSharpness": "round",
-      "seed": 746862843,
-      "version": 56,
-      "versionNonce": 938398043,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1670541789616,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          4.6130268383440125,
-          86.11837695805389
+          1539.3243427440339,
+          111.28500115390972
         ]
-      ],
-      "lastCommittedPoint": null,
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 56,
+      "versionNonce": 938398043,
+      "isDeleted": false,
+      "id": "IIh3PtE8ps5RkyBRc6ynA",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10357.228974658248,
+      "y": -155.71067895499573,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 4.6130268383440125,
+      "height": 86.11837695805389,
+      "seed": 746862843,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1670541789616,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "Eg3kbZkmuXa4pcNwSAJPp",
         "focus": -0.040608552361410956,
@@ -10359,15 +10364,194 @@
         "focus": -0.19263318984704517,
         "gap": 12.69663558709965
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          4.6130268383440125,
+          86.11837695805389
+        ]
+      ]
     },
     {
-      "id": "0cYG-dCVPC-MVM-Innt7B",
       "type": "text",
+      "version": 61,
+      "versionNonce": 539346389,
+      "isDeleted": false,
+      "id": "0cYG-dCVPC-MVM-Innt7B",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
       "x": 10834.980649707088,
       "y": -203.78005304672683,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
       "width": 571,
+      "height": 25,
+      "seed": 835145819,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [
+        {
+          "id": "6jDdGn8kK-xSYhCEcNb6d",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1670541789616,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "What do you know about our company’s product/services?",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "What do you know about our company’s product/services?"
+    },
+    {
+      "type": "text",
+      "version": 55,
+      "versionNonce": 845278715,
+      "isDeleted": false,
+      "id": "d7DNF41lxGZrLhQvsPwv0",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 10816.742976023148,
+      "y": -81.19908329772511,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 793,
+      "height": 175,
+      "seed": 1577250587,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [
+        {
+          "id": "6jDdGn8kK-xSYhCEcNb6d",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1670541789616,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "The purpose of these types of HR questions is clear: the HR professional\nwants to ensure that the candidate has researched the company and\nunderstands what they’re applying to. Candidates don’t need to show\ndeep knowledge of the company and its products, but they should\ncertainly know everything that can be discovered via a simple online\nsearch – of course, if they have already used the company’s products/services\nor they know someone who works there, that’s a plus.",
+      "baseline": 168,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "The purpose of these types of HR questions is clear: the HR professional\nwants to ensure that the candidate has researched the company and\nunderstands what they’re applying to. Candidates don’t need to show\ndeep knowledge of the company and its products, but they should\ncertainly know everything that can be discovered via a simple online\nsearch – of course, if they have already used the company’s products/services\nor they know someone who works there, that’s a plus."
+    },
+    {
+      "type": "arrow",
+      "version": 29,
+      "versionNonce": 259539765,
+      "isDeleted": false,
+      "id": "6jDdGn8kK-xSYhCEcNb6d",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 11099.618760509135,
+      "y": -167.95228536119475,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1.4180786206761695,
+      "height": 78.67773552065034,
+      "seed": 1489060501,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1670541789616,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "0cYG-dCVPC-MVM-Innt7B",
+        "focus": 0.0744853408279391,
+        "gap": 10.82776768553208
+      },
+      "endBinding": {
+        "elementId": "d7DNF41lxGZrLhQvsPwv0",
+        "focus": -0.2775429639612603,
+        "gap": 8.0754665428193
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1.4180786206761695,
+          78.67773552065034
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 93,
+      "versionNonce": 1971877531,
+      "isDeleted": false,
+      "id": "4btsbvRS49Qiu7-9cSyVm",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 8809.848920231707,
+      "y": -340.1121554966628,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 2292.802478291527,
+      "height": 129.04515448153575,
+      "seed": 1020241717,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1670541789616,
+      "link": null,
+      "locked": false,
+      "startBinding": null,
+      "endBinding": null,
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          2292.802478291527,
+          129.04515448153575
+        ]
+      ]
+    },
+    {
+      "id": "Z1fK7X-R8pADhyEip9iMh",
+      "type": "text",
+      "x": 1989.9942674085155,
+      "y": -1847.8697711464915,
+      "width": 100,
       "height": 25,
       "angle": 0,
       "strokeColor": "#000000",
@@ -10379,35 +10563,104 @@
       "opacity": 100,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 835145819,
-      "version": 61,
-      "versionNonce": 539346389,
+      "seed": 2131572316,
+      "version": 106,
+      "versionNonce": 1401193700,
       "isDeleted": false,
       "boundElements": [
         {
-          "id": "6jDdGn8kK-xSYhCEcNb6d",
+          "id": "7z_i0OSG1rXkdYGVtVrMZ",
+          "type": "arrow"
+        },
+        {
+          "id": "tQDJig5tCKWOY2YADgNJX",
+          "type": "arrow"
+        },
+        {
+          "id": "AMTbVIEy97vPvKohxKnMk",
+          "type": "arrow"
+        },
+        {
+          "id": "Q1ntsA0Z-pGjBDxxeLDLu",
+          "type": "arrow"
+        },
+        {
+          "id": "IF4VYxdEwXUXi80bwrYCe",
+          "type": "arrow"
+        },
+        {
+          "id": "0ItM-u864GIeTVBxk0h55",
           "type": "arrow"
         }
       ],
-      "updated": 1670541789616,
-      "link": null,
+      "updated": 1672154661824,
+      "link": "https://je-tu-elles.com/le-small-talk-comment-reussir-cet-exercice-social/",
       "locked": false,
-      "text": "What do you know about our company’s product/services?",
+      "text": "Small talk",
       "fontSize": 20,
       "fontFamily": 1,
       "textAlign": "left",
       "verticalAlign": "top",
       "baseline": 18,
       "containerId": null,
-      "originalText": "What do you know about our company’s product/services?"
+      "originalText": "Small talk"
     },
     {
-      "id": "d7DNF41lxGZrLhQvsPwv0",
+      "id": "7z_i0OSG1rXkdYGVtVrMZ",
+      "type": "arrow",
+      "x": 2004.152768771145,
+      "y": -1813.3558674017802,
+      "width": 3872.831668740958,
+      "height": 407.28322003540075,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1218656740,
+      "version": 156,
+      "versionNonce": 1041799900,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154478596,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -3872.831668740958,
+          407.28322003540075
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "Z1fK7X-R8pADhyEip9iMh",
+        "focus": -1.027364999679608,
+        "gap": 9.513903744711342
+      },
+      "endBinding": {
+        "elementId": "qQ97wqBeC_yI7WwJ-yHb7",
+        "focus": -0.9649675238964611,
+        "gap": 9.098769284625632
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "w1wIiyQ8atiYeCSfzcKWX",
       "type": "text",
-      "x": 10816.742976023148,
-      "y": -81.19908329772511,
-      "width": 793,
-      "height": 175,
+      "x": 1456.1444364913445,
+      "y": -1353.7820984102477,
+      "width": 199,
+      "height": 25,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -10418,35 +10671,35 @@
       "opacity": 100,
       "groupIds": [],
       "strokeSharpness": "sharp",
-      "seed": 1577250587,
-      "version": 55,
-      "versionNonce": 845278715,
+      "seed": 813609828,
+      "version": 49,
+      "versionNonce": 1130140636,
       "isDeleted": false,
       "boundElements": [
         {
-          "id": "6jDdGn8kK-xSYhCEcNb6d",
+          "id": "tQDJig5tCKWOY2YADgNJX",
           "type": "arrow"
         }
       ],
-      "updated": 1670541789616,
+      "updated": 1672154478596,
       "link": null,
       "locked": false,
-      "text": "The purpose of these types of HR questions is clear: the HR professional\nwants to ensure that the candidate has researched the company and\nunderstands what they’re applying to. Candidates don’t need to show\ndeep knowledge of the company and its products, but they should\ncertainly know everything that can be discovered via a simple online\nsearch – of course, if they have already used the company’s products/services\nor they know someone who works there, that’s a plus.",
+      "text": "Identify open people",
       "fontSize": 20,
       "fontFamily": 1,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 168,
+      "baseline": 18,
       "containerId": null,
-      "originalText": "The purpose of these types of HR questions is clear: the HR professional\nwants to ensure that the candidate has researched the company and\nunderstands what they’re applying to. Candidates don’t need to show\ndeep knowledge of the company and its products, but they should\ncertainly know everything that can be discovered via a simple online\nsearch – of course, if they have already used the company’s products/services\nor they know someone who works there, that’s a plus."
+      "originalText": "Identify open people"
     },
     {
-      "id": "6jDdGn8kK-xSYhCEcNb6d",
+      "id": "tQDJig5tCKWOY2YADgNJX",
       "type": "arrow",
-      "x": 11099.618760509135,
-      "y": -167.95228536119475,
-      "width": 1.4180786206761695,
-      "height": 78.67773552065034,
+      "x": 2013.9522373290179,
+      "y": -1810.6052407918344,
+      "width": 462.78340492444863,
+      "height": 447.16603503297915,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -10457,12 +10710,12 @@
       "opacity": 100,
       "groupIds": [],
       "strokeSharpness": "round",
-      "seed": 1489060501,
-      "version": 29,
-      "versionNonce": 259539765,
+      "seed": 1206659684,
+      "version": 181,
+      "versionNonce": 367722204,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1670541789616,
+      "updated": 1672154478912,
       "link": null,
       "locked": false,
       "points": [
@@ -10471,31 +10724,70 @@
           0
         ],
         [
-          1.4180786206761695,
-          78.67773552065034
+          -462.78340492444863,
+          447.16603503297915
         ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "elementId": "0cYG-dCVPC-MVM-Innt7B",
-        "focus": 0.0744853408279391,
-        "gap": 10.82776768553208
+        "elementId": "Z1fK7X-R8pADhyEip9iMh",
+        "focus": 0.006555699025919504,
+        "gap": 12.264530354657154
       },
       "endBinding": {
-        "elementId": "d7DNF41lxGZrLhQvsPwv0",
-        "focus": -0.2775429639612603,
-        "gap": 8.0754665428193
+        "elementId": "w1wIiyQ8atiYeCSfzcKWX",
+        "focus": -0.24375124877423282,
+        "gap": 9.657107348607497
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"
     },
     {
-      "id": "4btsbvRS49Qiu7-9cSyVm",
+      "id": "C9NmHaErv6ROk--a2xWMp",
+      "type": "text",
+      "x": 1911.5523442768508,
+      "y": -1352.6722239165777,
+      "width": 374,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1124505956,
+      "version": 44,
+      "versionNonce": 1086688100,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "AMTbVIEy97vPvKohxKnMk",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154478596,
+      "link": null,
+      "locked": false,
+      "text": "Ask neutral and open-ended questions",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Ask neutral and open-ended questions"
+    },
+    {
+      "id": "AMTbVIEy97vPvKohxKnMk",
       "type": "arrow",
-      "x": 8809.848920231707,
-      "y": -340.1121554966628,
-      "width": 2292.802478291527,
-      "height": 129.04515448153575,
+      "x": 2025.7934234086683,
+      "y": -1809.0096939159466,
+      "width": 70.84966850555816,
+      "height": 452.84163497934355,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -10506,12 +10798,12 @@
       "opacity": 100,
       "groupIds": [],
       "strokeSharpness": "round",
-      "seed": 1020241717,
-      "version": 93,
-      "versionNonce": 1971877531,
+      "seed": 875838300,
+      "version": 149,
+      "versionNonce": 912180060,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1670541789616,
+      "updated": 1672154478912,
       "link": null,
       "locked": false,
       "points": [
@@ -10520,13 +10812,908 @@
           0
         ],
         [
-          2292.802478291527,
-          129.04515448153575
+          70.84966850555816,
+          452.84163497934355
         ]
       ],
       "lastCommittedPoint": null,
-      "startBinding": null,
-      "endBinding": null,
+      "startBinding": {
+        "elementId": "Z1fK7X-R8pADhyEip9iMh",
+        "focus": 0.35270490654186465,
+        "gap": 13.860077230544903
+      },
+      "endBinding": {
+        "elementId": "C9NmHaErv6ROk--a2xWMp",
+        "focus": 0.0031403534825479914,
+        "gap": 3.4958350200254245
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "gqhMNW9XsU1CKkVG_gTis",
+      "type": "text",
+      "x": 2464.213809291238,
+      "y": -1356.486576995193,
+      "width": 159,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 2080994652,
+      "version": 43,
+      "versionNonce": 1183863132,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "Q1ntsA0Z-pGjBDxxeLDLu",
+          "type": "arrow"
+        },
+        {
+          "id": "OSMq4yMBO3nx0ud9fqF5I",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154478596,
+      "link": null,
+      "locked": false,
+      "text": "Showing interest",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Showing interest"
+    },
+    {
+      "id": "Q1ntsA0Z-pGjBDxxeLDLu",
+      "type": "arrow",
+      "x": 2039.612505914843,
+      "y": -1812.800648407505,
+      "width": 511.52060393183115,
+      "height": 451.0865634554739,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1751677540,
+      "version": 148,
+      "versionNonce": 216397788,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154478912,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          511.52060393183115,
+          451.0865634554739
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "Z1fK7X-R8pADhyEip9iMh",
+        "focus": 0.40474792355768074,
+        "gap": 10.069122738986607
+      },
+      "endBinding": {
+        "elementId": "gqhMNW9XsU1CKkVG_gTis",
+        "focus": 0.2938023423724022,
+        "gap": 5.227507956838053
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "OSMq4yMBO3nx0ud9fqF5I",
+      "type": "arrow",
+      "x": 2547.5657946872625,
+      "y": -1320.0486869753677,
+      "width": 2898.206397778913,
+      "height": 2354.4673899204445,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1933750236,
+      "version": 96,
+      "versionNonce": 399971812,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154478597,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -2898.206397778913,
+          2354.4673899204445
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "gqhMNW9XsU1CKkVG_gTis",
+        "focus": -0.35113240576597027,
+        "gap": 11.437890019825318
+      },
+      "endBinding": {
+        "elementId": "8jcJFeWZ8TcttWq8P5U3C",
+        "focus": 0.4385660887686488,
+        "gap": 13.588054851464676
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "IF4VYxdEwXUXi80bwrYCe",
+      "type": "arrow",
+      "x": 2020.8451728619802,
+      "y": -1815.940306825754,
+      "width": 3371.457295922937,
+      "height": 400.8407853365677,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1740171108,
+      "version": 57,
+      "versionNonce": 1932352740,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154504847,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -3371.457295922937,
+          400.8407853365677
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "Z1fK7X-R8pADhyEip9iMh",
+        "focus": -0.9299611412749029,
+        "gap": 6.929464320737452
+      },
+      "endBinding": {
+        "elementId": "0xJnfSyRTQcY3__TjM1TE",
+        "focus": -0.7917086889888232,
+        "gap": 9.605763977756851
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "NacR9TExyMgmdeLzlwVbi",
+      "type": "text",
+      "x": 2896.9412276873345,
+      "y": -1374.1778831423442,
+      "width": 856,
+      "height": 50,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 52327396,
+      "version": 37,
+      "versionNonce": 226493668,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "0ItM-u864GIeTVBxk0h55",
+          "type": "arrow"
+        },
+        {
+          "id": "ml84ZZwPS14HT2moPmD4O",
+          "type": "arrow"
+        },
+        {
+          "id": "RMUB7aOO3iM_3HXPKXaiO",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154738627,
+      "link": null,
+      "locked": false,
+      "text": "Talking at length about a subject unless someone is as passionate as you are\n(even if your daughter is wonderful, it is useless to try to convince your interlocutor)",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 43,
+      "containerId": null,
+      "originalText": "Talking at length about a subject unless someone is as passionate as you are\n(even if your daughter is wonderful, it is useless to try to convince your interlocutor)"
+    },
+    {
+      "id": "0ItM-u864GIeTVBxk0h55",
+      "type": "arrow",
+      "x": 2103.8852262837963,
+      "y": -1818.3213070705851,
+      "width": 2274.609096187137,
+      "height": 94.03791637042059,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 348969052,
+      "version": 274,
+      "versionNonce": 641680988,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154869578,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          2274.609096187137,
+          94.03791637042059
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "Z1fK7X-R8pADhyEip9iMh",
+        "focus": 0.9887356239643059,
+        "gap": 14.616677595286774
+      },
+      "endBinding": {
+        "elementId": "4ffBGK-as7oBppiTgr0K4",
+        "focus": 1.0848844254747787,
+        "gap": 10.237003122820624
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "130qVevECSO9nlmIJJLg0",
+      "type": "text",
+      "x": 3846.4220332942596,
+      "y": -1384.4140635753877,
+      "width": 266,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 288784228,
+      "version": 52,
+      "versionNonce": 627403740,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "iL8_vWTYXF-RFcvqnTXP0",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154703809,
+      "link": null,
+      "locked": false,
+      "text": "Use incomprehensible jargon",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Use incomprehensible jargon"
+    },
+    {
+      "id": "4ffBGK-as7oBppiTgr0K4",
+      "type": "text",
+      "x": 4387.7092636843445,
+      "y": -1719.8245689533321,
+      "width": 70,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 482650852,
+      "version": 124,
+      "versionNonce": 117358180,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "0ItM-u864GIeTVBxk0h55",
+          "type": "arrow"
+        },
+        {
+          "id": "ml84ZZwPS14HT2moPmD4O",
+          "type": "arrow"
+        },
+        {
+          "id": "iL8_vWTYXF-RFcvqnTXP0",
+          "type": "arrow"
+        },
+        {
+          "id": "ti5kyXjmkreUZg16iV1UU",
+          "type": "arrow"
+        },
+        {
+          "id": "pllBCvBGDwYUofqCuhDaq",
+          "type": "arrow"
+        },
+        {
+          "id": "NHBJSKVcifoTTs3Z38QrL",
+          "type": "arrow"
+        },
+        {
+          "id": "eaiy8wtlg-VLOkrJYeLkZ",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154896979,
+      "link": null,
+      "locked": false,
+      "text": "Do not",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Do not"
+    },
+    {
+      "id": "ml84ZZwPS14HT2moPmD4O",
+      "type": "arrow",
+      "x": 4380.740361647136,
+      "y": -1707.774702506071,
+      "width": 955.0986577259855,
+      "height": 321.4759047235848,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 132493796,
+      "version": 215,
+      "versionNonce": 1404967644,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154869578,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -955.0986577259855,
+          321.4759047235848
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "4ffBGK-as7oBppiTgr0K4",
+        "focus": 0.6002694027057054,
+        "gap": 6.968902037209546
+      },
+      "endBinding": {
+        "elementId": "NacR9TExyMgmdeLzlwVbi",
+        "focus": -0.019083267441871412,
+        "gap": 12.120914640142018
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "iL8_vWTYXF-RFcvqnTXP0",
+      "type": "arrow",
+      "x": 4381.930910103434,
+      "y": -1692.5204384508538,
+      "width": 329.54431399572513,
+      "height": 294.9891829156022,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1423461860,
+      "version": 159,
+      "versionNonce": 57565020,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154869579,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -329.54431399572513,
+          294.9891829156022
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "4ffBGK-as7oBppiTgr0K4",
+        "focus": 0.49480268679501854,
+        "gap": 6.22080280015939
+      },
+      "endBinding": {
+        "elementId": "130qVevECSO9nlmIJJLg0",
+        "focus": 0.3017506856574369,
+        "gap": 13.11719195986393
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "RMUB7aOO3iM_3HXPKXaiO",
+      "type": "arrow",
+      "x": 3318.9838254920974,
+      "y": -1311.1115336999155,
+      "width": 4416.146069791055,
+      "height": 3827.12651566519,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1510028132,
+      "version": 76,
+      "versionNonce": 687103964,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154738631,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -4416.146069791055,
+          3827.12651566519
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "NacR9TExyMgmdeLzlwVbi",
+        "focus": -0.08310780179053912,
+        "gap": 13.066349442428645
+      },
+      "endBinding": {
+        "elementId": "idRs11QpMzm8KyMFEmGu3",
+        "focus": 0.1259851850807994,
+        "gap": 3.1388901687537327
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "925N0P5_kHwS0AMS6hZPw",
+      "type": "text",
+      "x": 4254.61793946547,
+      "y": -1384.2656571140556,
+      "width": 435,
+      "height": 50,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1927413604,
+      "version": 32,
+      "versionNonce": 245420764,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "ti5kyXjmkreUZg16iV1UU",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154827937,
+      "link": null,
+      "locked": false,
+      "text": "Continuing to hold on to a person when they\nclearly want to end the conversation",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 43,
+      "containerId": null,
+      "originalText": "Continuing to hold on to a person when they\nclearly want to end the conversation"
+    },
+    {
+      "id": "ti5kyXjmkreUZg16iV1UU",
+      "type": "arrow",
+      "x": 4413.491819376153,
+      "y": -1685.5377731554152,
+      "width": 127.63196419112046,
+      "height": 293.4647900593959,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1906737252,
+      "version": 172,
+      "versionNonce": 1302467548,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154869579,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          127.63196419112046,
+          293.4647900593959
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "4ffBGK-as7oBppiTgr0K4",
+        "focus": 0.4620817586597529,
+        "gap": 9.286795797916966
+      },
+      "endBinding": {
+        "elementId": "925N0P5_kHwS0AMS6hZPw",
+        "focus": 0.3646414666471527,
+        "gap": 7.807325981963686
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "zr1JL0pMNvQ9cRMHVFIpX",
+      "type": "text",
+      "x": 4789.700580673788,
+      "y": -1388.2938204912618,
+      "width": 403,
+      "height": 50,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 633047140,
+      "version": 63,
+      "versionNonce": 997275364,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "pllBCvBGDwYUofqCuhDaq",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154837184,
+      "link": null,
+      "locked": false,
+      "text": "Choosing the wrong time: person obviously\nbusy or not wanting to interact",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 43,
+      "containerId": null,
+      "originalText": "Choosing the wrong time: person obviously\nbusy or not wanting to interact"
+    },
+    {
+      "id": "pllBCvBGDwYUofqCuhDaq",
+      "type": "arrow",
+      "x": 4437.026679979676,
+      "y": -1688.6492544488067,
+      "width": 577.1666470040673,
+      "height": 284.86994428857747,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1513460700,
+      "version": 105,
+      "versionNonce": 1886074972,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154869579,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          577.1666470040673,
+          284.86994428857747
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "4ffBGK-as7oBppiTgr0K4",
+        "focus": 0.3897341031988542,
+        "gap": 6.175314504525431
+      },
+      "endBinding": {
+        "elementId": "zr1JL0pMNvQ9cRMHVFIpX",
+        "focus": 0.41649206626340285,
+        "gap": 15.485489668967375
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "jFzeOPazHppUhvCG-V_pg",
+      "type": "text",
+      "x": 5247.853912197128,
+      "y": -1384.5925391853764,
+      "width": 731,
+      "height": 50,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1030411876,
+      "version": 68,
+      "versionNonce": 233808860,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "NHBJSKVcifoTTs3Z38QrL",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154875233,
+      "link": null,
+      "locked": false,
+      "text": "Asking questions that are too close-ended (inducing \"yes\" or \"no\" answers)\nthat will end the conversation before it has even begun",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 43,
+      "containerId": null,
+      "originalText": "Asking questions that are too close-ended (inducing \"yes\" or \"no\" answers)\nthat will end the conversation before it has even begun"
+    },
+    {
+      "id": "NHBJSKVcifoTTs3Z38QrL",
+      "type": "arrow",
+      "x": 4467.134065692322,
+      "y": -1700.912919151345,
+      "width": 1119.209110771616,
+      "height": 310.3668482810922,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 155716452,
+      "version": 61,
+      "versionNonce": 1160910820,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154875237,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1119.209110771616,
+          310.3668482810922
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "4ffBGK-as7oBppiTgr0K4",
+        "focus": -0.26604519625607514,
+        "gap": 9.424802007977632
+      },
+      "endBinding": {
+        "elementId": "jFzeOPazHppUhvCG-V_pg",
+        "focus": 0.18569060760852926,
+        "gap": 5.953531684876452
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "v7RJyksVY6rOah_ilIEUm",
+      "type": "text",
+      "x": 6102.953141423677,
+      "y": -1386.2291914529665,
+      "width": 728,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 767909084,
+      "version": 30,
+      "versionNonce": 887181796,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "eaiy8wtlg-VLOkrJYeLkZ",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1672154896979,
+      "link": null,
+      "locked": false,
+      "text": "Being too curious to the point of making the other person uncomfortable.",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Being too curious to the point of making the other person uncomfortable."
+    },
+    {
+      "id": "eaiy8wtlg-VLOkrJYeLkZ",
+      "type": "arrow",
+      "x": 4466.414486367536,
+      "y": -1718.6742429729043,
+      "width": 1954.798663285911,
+      "height": 318.6858873042338,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1884828516,
+      "version": 54,
+      "versionNonce": 33566300,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1672154896983,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1954.798663285911,
+          318.6858873042338
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "4ffBGK-as7oBppiTgr0K4",
+        "focus": -1.0147679362560682,
+        "gap": 8.705222683191096
+      },
+      "endBinding": {
+        "elementId": "v7RJyksVY6rOah_ilIEUm",
+        "focus": 0.26171722425401645,
+        "gap": 13.759164215704004
+      },
       "startArrowhead": null,
       "endArrowhead": "arrow"
     }
