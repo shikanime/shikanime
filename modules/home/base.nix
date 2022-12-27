@@ -3,9 +3,6 @@
 with lib;
 
 {
-  # Set target to Flake's Nix
-  nix.package = pkgs.nix;
-
   home.packages = [
     pkgs.watch
     pkgs.openssl
@@ -16,6 +13,9 @@ with lib;
     pkgs.graphviz
     pkgs.pprof
   ];
+
+  # Fix Nix package for nix.conf generation
+  nix.package = pkgs.nix;
 
   # Enable experimental features so we can access flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -123,7 +123,7 @@ with lib;
       AddKeysToAgent yes
     '';
     extraOptionOverrides = {
-      IgnoreUnknown = lib.concatStringsSep "," [
+      IgnoreUnknown = concatStringsSep "," [
         "UseKeychain"
         "PubkeyAcceptedAlgorithms"
       ];
