@@ -14,7 +14,7 @@
 
   outputs = { nixpkgs, home-manager, devenv, ... } @ inputs: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      let pkgs = import nixpkgs.legacyPackages.${system}; in {
+      let pkgs = import nixpkgs { inherit system; }; in {
         curriculumVitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
       }
     );
@@ -87,8 +87,9 @@
 
     homeConfigurations = {
       "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-darwin;
+        pkgs = import nixpkgs { system = "x86_64-darwin"; };
         modules = [
+          ./modules/home/darwin.nix
           ./modules/home/host.nix
           ./modules/home/altashar.nix
           ./modules/home/base.nix
@@ -117,8 +118,9 @@
         ];
       };
       "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        pkgs = import nixpkgs { system = "x86_64-linux"; };
         modules = [
+          ./modules/home/wsl.nix
           ./modules/home/host.nix
           ./modules/home/ishtar.nix
           ./modules/home/base.nix
