@@ -7,25 +7,28 @@
       url = "github:nix-community/home-manager/release-22.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    devenv.url = "github:cachix/devenv";
   };
 
   nixConfig.allowUnfree = true;
 
-  outputs = { self, nixpkgs, home-manager }: {
+  outputs = { nixpkgs, home-manager, devenv, ... } @ inputs: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       let pkgs = import nixpkgs.legacyPackages.${system}; in {
         curriculumVitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
       }
     );
 
-    devShell = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
-      let pkgs = nixpkgs.legacyPackages.${system}; in
-      pkgs.mkShell {
-        buildInputs = [
-          pkgs.texlive.combined.scheme-full
-          pkgs.rubocop
-          pkgs.nixpkgs-fmt
-        ];
+    devShells = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
+      let pkgs = import nixpkgs { inherit system; }; in {
+        default = devenv.lib.mkShell {
+          inherit inputs pkgs;
+          modules = [
+            ./modules/devenv/base.nix
+            ./modules/devenv/latex.nix
+            ./modules/devenv/nix.nix
+          ];
+        };
       }
     );
 
@@ -86,71 +89,71 @@
       "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-darwin;
         modules = [
-          ./modules/homes/host.nix
-          ./modules/homes/altashar.nix
-          ./modules/homes/base.nix
-          ./modules/homes/totalenergies.nix
-          ./modules/homes/vcs.nix
-          ./modules/homes/cpp.nix
-          ./modules/homes/ruby.nix
-          ./modules/homes/bazel.nix
-          ./modules/homes/beam.nix
-          ./modules/homes/go.nix
-          ./modules/homes/opam.nix
-          ./modules/homes/rustup.nix
-          ./modules/homes/python.nix
-          ./modules/homes/web.nix
-          ./modules/homes/php.nix
-          ./modules/homes/latex.nix
-          ./modules/homes/sql.nix
-          ./modules/homes/cloud.nix
-          ./modules/homes/shikanime.nix
-          ./modules/homes/sfeir.nix
-          ./modules/homes/galec.nix
-          ./modules/homes/lvmh.nix
-          ./modules/homes/birdz.nix
-          ./modules/homes/java.nix
-          ./modules/homes/dotnet.nix
+          ./modules/home/host.nix
+          ./modules/home/altashar.nix
+          ./modules/home/base.nix
+          ./modules/home/totalenergies.nix
+          ./modules/home/vcs.nix
+          ./modules/home/cpp.nix
+          ./modules/home/ruby.nix
+          ./modules/home/bazel.nix
+          ./modules/home/beam.nix
+          ./modules/home/go.nix
+          ./modules/home/opam.nix
+          ./modules/home/rustup.nix
+          ./modules/home/python.nix
+          ./modules/home/web.nix
+          ./modules/home/php.nix
+          ./modules/home/latex.nix
+          ./modules/home/sql.nix
+          ./modules/home/cloud.nix
+          ./modules/home/shikanime.nix
+          ./modules/home/sfeir.nix
+          ./modules/home/galec.nix
+          ./modules/home/lvmh.nix
+          ./modules/home/birdz.nix
+          ./modules/home/java.nix
+          ./modules/home/dotnet.nix
         ];
       };
       "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
-          ./modules/homes/host.nix
-          ./modules/homes/ishtar.nix
-          ./modules/homes/base.nix
-          ./modules/homes/totalenergies.nix
-          ./modules/homes/vcs.nix
-          ./modules/homes/cpp.nix
-          ./modules/homes/cuda.nix
-          ./modules/homes/ruby.nix
-          ./modules/homes/bazel.nix
-          ./modules/homes/beam.nix
-          ./modules/homes/go.nix
-          ./modules/homes/opam.nix
-          ./modules/homes/rustup.nix
-          ./modules/homes/python.nix
-          ./modules/homes/web.nix
-          ./modules/homes/php.nix
-          ./modules/homes/latex.nix
-          ./modules/homes/sql.nix
-          ./modules/homes/cloud.nix
-          ./modules/homes/shikanime.nix
-          ./modules/homes/sfeir.nix
-          ./modules/homes/galec.nix
-          ./modules/homes/lvmh.nix
-          ./modules/homes/birdz.nix
-          ./modules/homes/java.nix
-          ./modules/homes/dotnet.nix
-          ./modules/homes/xdg.nix
+          ./modules/home/host.nix
+          ./modules/home/ishtar.nix
+          ./modules/home/base.nix
+          ./modules/home/totalenergies.nix
+          ./modules/home/vcs.nix
+          ./modules/home/cpp.nix
+          ./modules/home/cuda.nix
+          ./modules/home/ruby.nix
+          ./modules/home/bazel.nix
+          ./modules/home/beam.nix
+          ./modules/home/go.nix
+          ./modules/home/opam.nix
+          ./modules/home/rustup.nix
+          ./modules/home/python.nix
+          ./modules/home/web.nix
+          ./modules/home/php.nix
+          ./modules/home/latex.nix
+          ./modules/home/sql.nix
+          ./modules/home/cloud.nix
+          ./modules/home/shikanime.nix
+          ./modules/home/sfeir.nix
+          ./modules/home/galec.nix
+          ./modules/home/lvmh.nix
+          ./modules/home/birdz.nix
+          ./modules/home/java.nix
+          ./modules/home/dotnet.nix
+          ./modules/home/xdg.nix
         ];
       };
       vscode = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
-          ./modules/homes/devcontainer.nix
-          ./modules/homes/base.nix
-          ./modules/homes/xdg.nix
+          ./modules/home/devcontainer.nix
+          ./modules/home/base.nix
+          ./modules/home/xdg.nix
         ];
       };
     };

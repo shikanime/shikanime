@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
+  home.packages = [
     pkgs.texlive.combined.scheme-full
   ];
 
