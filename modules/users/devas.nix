@@ -69,27 +69,27 @@
   # Configure user home
   home-manager.users.devas = {
     imports = [
-      ../homes/base.nix
-      ../homes/vcs.nix
-      ../homes/cpp.nix
-      ../homes/cuda.nix
-      ../homes/ruby.nix
-      ../homes/bazel.nix
-      ../homes/beam.nix
-      ../homes/go.nix
-      ../homes/opam.nix
-      ../homes/rustup.nix
-      ../homes/python.nix
-      ../homes/web.nix
-      ../homes/php.nix
-      ../homes/latex.nix
-      ../homes/sql.nix
-      ../homes/cloud.nix
-      ../homes/shikanime.nix
-      ../homes/sfeir.nix
-      ../homes/java.nix
-      ../homes/dotnet.nix
-      ../homes/xdg.nix
+      ../home/base.nix
+      ../home/vcs.nix
+      ../home/cpp.nix
+      ../home/cuda.nix
+      ../home/ruby.nix
+      ../home/bazel.nix
+      ../home/beam.nix
+      ../home/go.nix
+      ../home/opam.nix
+      ../home/rustup.nix
+      ../home/python.nix
+      ../home/web.nix
+      ../home/php.nix
+      ../home/latex.nix
+      ../home/sql.nix
+      ../home/cloud.nix
+      ../home/shikanime.nix
+      ../home/sfeir.nix
+      ../home/java.nix
+      ../home/dotnet.nix
+      ../home/xdg.nix
     ];
   };
 }

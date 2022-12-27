@@ -15,11 +15,11 @@ jobs:
         uses: cachix/cachix-action@v10
         with:
           name: shikanime
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
       - name: Compile documents
         run: nix build .#curriculumVitae
       - name: Export output path
-        run: echo "RELEASE_PATH=$(readlink -f result)" >> $GITHUB_ENV
+        run: echo "RELEASE_PATH=$(readlink -f result)" >> "$GITHUB_ENV"
       - name: Export build artifacts
         uses: actions/upload-artifact@v2
         with:

@@ -8,7 +8,9 @@
   home.sessionVariables.CARGO_HOME = "${config.xdg.dataHome}/rustup";
 
   # Core global utilitary packages
-  home.packages = [ pkgs.rustup ];
+  home.packages = [
+    pkgs.rustup
+  ];
 
   programs.zsh.oh-my-zsh.plugins = [
     "rust"
