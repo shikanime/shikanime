@@ -13,11 +13,17 @@
     "git"
   ];
 
-  programs.mercurial.enable = true;
+  programs.mercurial = {
+    enable = true;
+    userName = "William Phetsinorath";
+    userEmail = "william.phetsinorath@shikanime.studio";
+  };
 
   programs.git = {
     enable = true;
     lfs.enable = true;
+    userName = "William Phetsinorath";
+    userEmail = "william.phetsinorath@shikanime.studio";
     aliases = {
       adog = "log --all --decorate --oneline --graph";
       pouf = "push --force-with-lease";
