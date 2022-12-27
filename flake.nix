@@ -10,7 +10,16 @@
     devenv.url = "github:cachix/devenv";
   };
 
-  nixConfig.allowUnfree = true;
+  nixConfig = {
+    extra-public-keys = [
+      "shikanime.cachix.org-1:OrpjVTH6RzYf2R97IqcTWdLRejF6+XbpFNNZJxKG8Ts="
+      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+    ];
+    extra-substituters = [
+      "https://shikanime.cachix.org"
+      "https://devenv.cachix.org"
+    ];
+  };
 
   outputs = { nixpkgs, home-manager, devenv, ... } @ inputs: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
@@ -114,7 +123,10 @@
         ];
       };
       "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs { system = "x86_64-linux"; };
+        pkgs = import nixpkgs {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
         modules = [
           ./modules/home/wsl.nix
           ./modules/home/host.nix
