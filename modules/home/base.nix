@@ -9,6 +9,9 @@ with lib;
     pkgs.file
     pkgs.wget
     pkgs.curl
+    pkgs.rsync
+    pkgs.bzip2
+    pkgs.gnupatch
     pkgs.gnumake
     pkgs.graphviz
     pkgs.pprof
