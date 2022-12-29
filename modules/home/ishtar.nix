@@ -1,8 +1,12 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 
 {
   home.homeDirectory = "/home/devas";
   home.username = "devas";
+
+  home.packages = [
+    pkgs.gcc
+  ];
 
   programs.zsh.initExtra = ''
     # Source Anaconda3 if it exists
