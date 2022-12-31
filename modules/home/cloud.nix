@@ -43,6 +43,12 @@
     ]))
   ];
 
+  programs.zsh.initExtra = ''
+    if [ -d ${config.home.homeDirectory}/.rd ]; then
+      export PATH=${config.home.homeDirectory}/.rd/bin:$PATH
+    fi
+  '';
+
   programs.ssh.matchBlocks = {
     "ssh.dev.azure.com" = {
       extraOptions = {
