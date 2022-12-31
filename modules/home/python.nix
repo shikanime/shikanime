@@ -3,6 +3,7 @@
 {
   home.packages = [
     pkgs.poetry
+    pkgs.sphinx
     pkgs.python3Packages.pipx
     pkgs.python3Packages.black
     (pkgs.python3.withPackages (pypkgs: with pypkgs; [ pip ]))

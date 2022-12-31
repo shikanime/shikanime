@@ -4,6 +4,7 @@ with lib;
 
 {
   home.packages = [
+    pkgs.bashInteractive
     pkgs.watch
     pkgs.openssl
     pkgs.file
@@ -28,7 +29,10 @@ with lib;
 
   programs.dircolors.enable = true;
 
-  programs.bash.enable = true;
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+  };
 
   programs.zsh = {
     enable = true;

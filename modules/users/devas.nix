@@ -72,8 +72,7 @@
       ../home/base.nix
       ../home/totalenergies.nix
       ../home/vcs.nix
-      ../home/cpp.nix
-      ../home/cuda.nix
+      ../home/cc.nix
       ../home/ruby.nix
       ../home/bazel.nix
       ../home/beam.nix
