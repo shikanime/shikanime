@@ -96,14 +96,17 @@
 
     homeConfigurations = {
       "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs { system = "x86_64-darwin"; };
+        pkgs = import nixpkgs {
+          system = "x86_64-darwin";
+          config.allowUnfree = true;
+        };
         modules = [
           ./modules/home/darwin.nix
           ./modules/home/host.nix
           ./modules/home/altashar.nix
           ./modules/home/base.nix
           ./modules/home/vcs.nix
-          ./modules/home/cpp.nix
+          ./modules/home/cc.nix
           ./modules/home/ruby.nix
           ./modules/home/bazel.nix
           ./modules/home/beam.nix
@@ -133,8 +136,7 @@
           ./modules/home/ishtar.nix
           ./modules/home/base.nix
           ./modules/home/vcs.nix
-          ./modules/home/cpp.nix
-          ./modules/home/cuda.nix
+          ./modules/home/cc.nix
           ./modules/home/ruby.nix
           ./modules/home/bazel.nix
           ./modules/home/beam.nix

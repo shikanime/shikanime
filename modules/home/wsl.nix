@@ -11,4 +11,7 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
   };
+
+  # CUDA support
+  home.sessionVariables.LD_LIBRARY_PATH = "/usr/lib/wsl/lib";
 }

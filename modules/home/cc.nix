@@ -1,11 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+
+with lib;
 
 {
   # Core global utilitary packages
-  home.packages = [
-    pkgs.cmake
-    pkgs.ccache
-    pkgs.ninja
+  home.packages = optional pkgs.stdenv.hostPlatform.isLinux [
+    pkgs.cudaPackages.cudatoolkit
+    pkgs.cudaPackages.cudnn
+    pkgs.cudaPackages.tensorrt
   ];
 
   programs.neovim.plugins = [
@@ -16,6 +18,7 @@
       ninja
       llvm
       lua
+      cuda
     ]))
   ];
 }

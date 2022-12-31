@@ -13,6 +13,10 @@ cask 'anaconda'
 cask 'github'
 
 # Native Toolchains
+brew 'ccache'
+brew 'ninja'
+brew 'clang-format'
+brew 'libomp'
 cask 'cmake'
 mas 'xcode', id: 497_799_835
 
