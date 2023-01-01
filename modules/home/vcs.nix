@@ -1,14 +1,6 @@
 { pkgs, config, ... }:
 
 {
-  # Core global utilitary packages
-  home.packages = [
-    pkgs.darcs
-    pkgs.github-cli
-    pkgs.glab
-    pkgs.subversion
-  ];
-
   programs.zsh.oh-my-zsh.plugins = [
     "git"
   ];

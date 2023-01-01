@@ -9,15 +9,9 @@
   # Make Mix toolchain to be the XDG compliant by default
   home.sessionVariables.MIX_XDG = 1;
 
-  home.packages = [
-    pkgs.elixir
-    pkgs.erlang
-  ];
-
   programs.zsh.oh-my-zsh.plugins = [
     "mix"
   ];
-
 
   programs.neovim.plugins = [
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [

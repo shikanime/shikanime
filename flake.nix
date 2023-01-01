@@ -101,7 +101,6 @@
           config.allowUnfree = true;
         };
         modules = [
-          ./modules/home/darwin.nix
           ./modules/home/host.nix
           ./modules/home/altashar.nix
           ./modules/home/base.nix
@@ -109,11 +108,10 @@
           ./modules/home/vcs.nix
           ./modules/home/cc.nix
           ./modules/home/ruby.nix
-          ./modules/home/bazel.nix
           ./modules/home/beam.nix
           ./modules/home/go.nix
           ./modules/home/opam.nix
-          ./modules/home/rustup.nix
+          ./modules/home/rust.nix
           ./modules/home/python.nix
           ./modules/home/web.nix
           ./modules/home/php.nix
@@ -143,11 +141,10 @@
           ./modules/home/vcs.nix
           ./modules/home/cc.nix
           ./modules/home/ruby.nix
-          ./modules/home/bazel.nix
           ./modules/home/beam.nix
           ./modules/home/go.nix
           ./modules/home/opam.nix
-          ./modules/home/rustup.nix
+          ./modules/home/rust.nix
           ./modules/home/python.nix
           ./modules/home/web.nix
           ./modules/home/php.nix

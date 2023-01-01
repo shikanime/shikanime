@@ -3,11 +3,8 @@
 with lib;
 
 {
-  # Core global utilitary packages
-  home.packages = optional pkgs.stdenv.hostPlatform.isLinux [
-    pkgs.cudaPackages.cudatoolkit
-    pkgs.cudaPackages.cudnn
-    pkgs.cudaPackages.tensorrt
+  programs.zsh.oh-my-zsh.plugins = [
+    "bazel"
   ];
 
   programs.neovim.plugins = [

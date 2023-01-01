@@ -74,11 +74,10 @@
       ../home/vcs.nix
       ../home/cc.nix
       ../home/ruby.nix
-      ../home/bazel.nix
       ../home/beam.nix
       ../home/go.nix
       ../home/opam.nix
-      ../home/rustup.nix
+      ../home/rust.nix
       ../home/python.nix
       ../home/web.nix
       ../home/php.nix
