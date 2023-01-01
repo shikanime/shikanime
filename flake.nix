@@ -21,7 +21,7 @@
     ];
   };
 
-  outputs = { nixpkgs, home-manager, devenv, ... } @ inputs: {
+  outputs = { nixpkgs, home-manager, devenv, ... }@inputs: {
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       let pkgs = import nixpkgs { inherit system; }; in {
         curriculumVitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
@@ -35,7 +35,6 @@
           modules = [
             ./modules/devenv/base.nix
             ./modules/devenv/latex.nix
-            ./modules/devenv/nix.nix
           ];
         };
       }
