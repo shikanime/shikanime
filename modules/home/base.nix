@@ -3,21 +3,6 @@
 with lib;
 
 {
-  home.packages = [
-    pkgs.bashInteractive
-    pkgs.watch
-    pkgs.openssl
-    pkgs.file
-    pkgs.wget
-    pkgs.curl
-    pkgs.rsync
-    pkgs.bzip2
-    pkgs.gnupatch
-    pkgs.gnumake
-    pkgs.graphviz
-    pkgs.pprof
-  ];
-
   # Fix Nix package for nix.conf generation
   nix.package = pkgs.nix;
 
@@ -112,12 +97,16 @@ with lib;
     '';
   };
 
+  programs.tmux.enable = true;
+
   programs.gpg.enable = true;
 
   programs.ssh = {
     enable = true;
     extraConfig = ''
       AddKeysToAgent yes
+    '' + optionalString pkgs.stdenv.hostPlatform.isDarwin ''
+      UseKeychain yes
     '';
     extraOptionOverrides = {
       IgnoreUnknown = concatStringsSep "," [
@@ -126,6 +115,13 @@ with lib;
       ];
     };
   };
+
+  # Enable Brew integration
+  programs.zsh.initExtra = mkIf pkgs.stdenv.hostPlatform.isDarwin ''
+    if which brew > /dev/null; then
+      eval $(brew shellenv)
+    fi
+  '';
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

@@ -2,33 +2,82 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 brew 'mas'
+brew 'bash'
+brew 'zsh'
+brew 'gpatch'
+brew 'make'
+brew 'bzip2'
+brew 'graphviz'
+brew 'rsync'
+brew 'wget'
+brew 'curl'
+brew 'watch'
+brew 'openssl@3'
 
-# Python
+# Data
 brew 'python@3.10'
 brew 'python@3.9'
 brew 'python@3.8'
+brew 'poetry'
+brew 'sphinx'
+brew 'pipx'
+brew 'black'
+brew 'sqlfluff'
+brew 'huggingface-cli'
 cask 'anaconda'
 
-# Source control
-cask 'github'
+# Java
+brew 'gradle'
+brew 'coursier'
+cask 'temurin'
+
+# JavaScript
+brew 'nvm'
+brew 'node'
+brew 'yarn'
+
+# Beam
+brew 'erlang'
+brew 'elixir'
+
+# LaTeX
+brew 'texlive'
 
 # Native Toolchains
+brew 'rustup-init'
 brew 'ccache'
 brew 'ninja'
 brew 'clang-format'
 brew 'libomp'
+brew 'bazelisk'
 cask 'cmake'
 mas 'xcode', id: 497_799_835
 
 # Development Enviroment
+cask 'android-studio'
 cask 'visual-studio-code'
 cask 'dbeaver-community'
 cask 'jetbrains-toolbox'
 cask 'raspberry-pi-imager'
 
+# Cloud
+brew 'awscli'
+brew 'azure-cli'
+brew 'terraform'
+brew 'minikube'
+brew 'kustomize'
+brew 'skaffold'
+brew 'glab'
+brew 'cloudflared'
+brew 'darcs'
+brew 'gh'
+brew 'subversion'
+cask 'github'
+cask 'google-cloud-sdk'
+cask 'rancher'
+
 # Brew virtualization
 cask 'utm'
-cask 'rancher'
 
 # Multimedia
 cask 'mpv'
@@ -46,7 +95,7 @@ cask 'microsoft-teams'
 cask 'workplace-chat'
 mas 'slack', id: 803_453_959
 
-# Data storage
+# Data Sync
 brew 'syncthing'
 cask 'google-drive'
 cask 'transmission'

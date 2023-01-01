@@ -1,13 +1,6 @@
 { pkgs, ... }:
 
 {
-  programs.java.enable = true;
-
-  home.packages = [
-    pkgs.coursier
-    pkgs.gradle
-  ];
-
   programs.zsh.oh-my-zsh.plugins = [
     "gradle"
   ];
