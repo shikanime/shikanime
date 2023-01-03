@@ -94,6 +94,8 @@ with lib;
       noremap k n
       noremap K N
       noremap U <C-r>
+
+      set number relativenumber
     '';
   };
 
