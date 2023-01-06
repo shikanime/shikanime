@@ -3,6 +3,9 @@
 with lib;
 
 {
+  # Let Home Manager install and manage itself
+  programs.home-manager.enable = true;
+
   # Fix Nix package for nix.conf generation
   nix.package = pkgs.nix;
 

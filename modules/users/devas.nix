@@ -69,29 +69,31 @@
   # Configure user home
   home-manager.users.devas = {
     imports = [
-      ../home/base.nix
-      ../home/totalenergies.nix
-      ../home/vcs.nix
-      ../home/cc.nix
-      ../home/ruby.nix
-      ../home/beam.nix
-      ../home/go.nix
-      ../home/opam.nix
-      ../home/rust.nix
-      ../home/python.nix
-      ../home/web.nix
-      ../home/php.nix
-      ../home/latex.nix
-      ../home/sql.nix
-      ../home/cloud.nix
-      ../home/shikanime.nix
-      ../home/sfeir.nix
-      ../home/galec.nix
-      ../home/lvmh.nix
-      ../home/birdz.nix
-      ../home/java.nix
-      ../home/dotnet.nix
-      ../home/xdg.nix
+      ../home/users/totalenergies.nix
+      ../home/users/google.nix
+      ../home/users/shikanime.nix
+      ../home/users/sfeir.nix
+      ../home/users/galec.nix
+      ../home/users/lvmh.nix
+      ../home/users/birdz.nix
+      ../home/users/amadeus.nix
+      ../home/profiles/base.nix
+      ../home/profiles/xdg.nix
+      ../home/profiles/vcs.nix
+      ../home/profiles/cc.nix
+      ../home/profiles/ruby.nix
+      ../home/profiles/beam.nix
+      ../home/profiles/go.nix
+      ../home/profiles/opam.nix
+      ../home/profiles/rust.nix
+      ../home/profiles/python.nix
+      ../home/profiles/web.nix
+      ../home/profiles/php.nix
+      ../home/profiles/latex.nix
+      ../home/profiles/sql.nix
+      ../home/profiles/cloud.nix
+      ../home/profiles/java.nix
+      ../home/profiles/dotnet.nix
     ];
   };
 }

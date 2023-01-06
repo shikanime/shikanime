@@ -100,30 +100,31 @@
           config.allowUnfree = true;
         };
         modules = [
-          ./modules/home/host.nix
-          ./modules/home/altashar.nix
-          ./modules/home/base.nix
-          ./modules/home/totalenergies.nix
-          ./modules/home/vcs.nix
-          ./modules/home/cc.nix
-          ./modules/home/ruby.nix
-          ./modules/home/beam.nix
-          ./modules/home/go.nix
-          ./modules/home/opam.nix
-          ./modules/home/rust.nix
-          ./modules/home/python.nix
-          ./modules/home/web.nix
-          ./modules/home/php.nix
-          ./modules/home/latex.nix
-          ./modules/home/sql.nix
-          ./modules/home/cloud.nix
-          ./modules/home/shikanime.nix
-          ./modules/home/sfeir.nix
-          ./modules/home/galec.nix
-          ./modules/home/lvmh.nix
-          ./modules/home/birdz.nix
-          ./modules/home/java.nix
-          ./modules/home/dotnet.nix
+          ./modules/home/hosts/altashar.nix
+          ./modules/home/users/totalenergies.nix
+          ./modules/home/users/google.nix
+          ./modules/home/users/shikanime.nix
+          ./modules/home/users/sfeir.nix
+          ./modules/home/users/galec.nix
+          ./modules/home/users/lvmh.nix
+          ./modules/home/users/birdz.nix
+          ./modules/home/users/amadeus.nix
+          ./modules/home/profiles/base.nix
+          ./modules/home/profiles/vcs.nix
+          ./modules/home/profiles/cc.nix
+          ./modules/home/profiles/ruby.nix
+          ./modules/home/profiles/beam.nix
+          ./modules/home/profiles/go.nix
+          ./modules/home/profiles/opam.nix
+          ./modules/home/profiles/rust.nix
+          ./modules/home/profiles/python.nix
+          ./modules/home/profiles/web.nix
+          ./modules/home/profiles/php.nix
+          ./modules/home/profiles/latex.nix
+          ./modules/home/profiles/sql.nix
+          ./modules/home/profiles/cloud.nix
+          ./modules/home/profiles/java.nix
+          ./modules/home/profiles/dotnet.nix
         ];
       };
       "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -132,40 +133,42 @@
           config.allowUnfree = true;
         };
         modules = [
-          ./modules/home/wsl.nix
-          ./modules/home/host.nix
-          ./modules/home/ishtar.nix
-          ./modules/home/base.nix
-          ./modules/home/totalenergies.nix
-          ./modules/home/vcs.nix
-          ./modules/home/cc.nix
-          ./modules/home/ruby.nix
-          ./modules/home/beam.nix
-          ./modules/home/go.nix
-          ./modules/home/opam.nix
-          ./modules/home/rust.nix
-          ./modules/home/python.nix
-          ./modules/home/web.nix
-          ./modules/home/php.nix
-          ./modules/home/latex.nix
-          ./modules/home/sql.nix
-          ./modules/home/cloud.nix
-          ./modules/home/shikanime.nix
-          ./modules/home/sfeir.nix
-          ./modules/home/galec.nix
-          ./modules/home/lvmh.nix
-          ./modules/home/birdz.nix
-          ./modules/home/java.nix
-          ./modules/home/dotnet.nix
-          ./modules/home/xdg.nix
+          ./modules/home/hosts/ishtar.nix
+          ./modules/home/users/totalenergies.nix
+          ./modules/home/users/google.nix
+          ./modules/home/users/shikanime.nix
+          ./modules/home/users/sfeir.nix
+          ./modules/home/users/galec.nix
+          ./modules/home/users/lvmh.nix
+          ./modules/home/users/birdz.nix
+          ./modules/home/users/amadeus.nix
+          ./modules/home/profiles/wsl.nix
+          ./modules/home/profiles/base.nix
+          ./modules/home/profiles/xdg.nix
+          ./modules/home/profiles/vcs.nix
+          ./modules/home/profiles/cc.nix
+          ./modules/home/profiles/ruby.nix
+          ./modules/home/profiles/beam.nix
+          ./modules/home/profiles/go.nix
+          ./modules/home/profiles/opam.nix
+          ./modules/home/profiles/rust.nix
+          ./modules/home/profiles/python.nix
+          ./modules/home/profiles/web.nix
+          ./modules/home/profiles/php.nix
+          ./modules/home/profiles/latex.nix
+          ./modules/home/profiles/sql.nix
+          ./modules/home/profiles/cloud.nix
+          ./modules/home/profiles/java.nix
+          ./modules/home/profiles/dotnet.nix
         ];
       };
       vscode = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
-          ./modules/home/devcontainer.nix
-          ./modules/home/base.nix
-          ./modules/home/xdg.nix
+          ./modules/home/users/vscode.nix
+          ./modules/home/profiles/devcontainer.nix
+          ./modules/home/profiles/base.nix
+          ./modules/home/profiles/xdg.nix
         ];
       };
     };
