@@ -19,6 +19,7 @@
     aliases = {
       adog = "log --all --decorate --oneline --graph";
       pouf = "push --force-with-lease";
+      poi = "commit --amend --no-edit";
     };
     ignores = [
       "*~"
