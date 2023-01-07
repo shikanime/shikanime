@@ -86,9 +86,12 @@
     ];
     extraConfig = {
       pull.rebase = true;
-      rebase.autostash = true;
       push.autoSetupRemote = true;
       init.defaultBranch = "main";
+      rebase = {
+        autostash = true;
+        updateRefs = true;
+      };
     };
   };
 }
