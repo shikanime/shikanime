@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "6c7390b3da0e559e5b74e7a4a7ecf04040ca232f"
+        "revision": "b58242cee5efc1818b0e55c2d8fc90d3a1053529"
       },
       "homebrew/cask-drivers": {
         "revision": "b5aa5dfbcd6a739648b657ca3684543bc71b8c43"
@@ -3683,7 +3683,7 @@
         }
       },
       "dbeaver-community": {
-        "version": "22.3.1",
+        "version": "22.3.2",
         "options": {
           "full_name": "dbeaver-community"
         }
@@ -3755,7 +3755,7 @@
         }
       },
       "zoom": {
-        "version": "5.13.3.14165",
+        "version": "5.13.4.14461",
         "options": {
           "full_name": "zoom"
         }
@@ -3773,7 +3773,7 @@
         }
       },
       "google-drive": {
-        "version": "68.0.2",
+        "version": "69.0.0",
         "options": {
           "full_name": "google-drive"
         }
@@ -3957,6 +3957,12 @@
         "options": {
           "full_name": "temurin"
         }
+      },
+      "1kc-razer": {
+        "version": "0.4.10",
+        "options": {
+          "full_name": "1kc-razer"
+        }
       }
     },
     "mas": {
@@ -3991,9 +3997,9 @@
         "macOS": "12.6"
       },
       "ventura": {
-        "HOMEBREW_VERSION": "3.6.17",
+        "HOMEBREW_VERSION": "3.6.18",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "cf78bd47a7d593dd223c02d0690fbea01c17e246",
+        "Homebrew/homebrew-core": "282b8f3948c751a9eb61a4555b1c61e547489a6e",
         "CLT": "14.2.0.0.1.1668646533",
         "Xcode": "14.2",
         "macOS": "13.0.1"
