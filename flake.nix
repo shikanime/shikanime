@@ -109,6 +109,7 @@
           ./modules/home/users/lvmh.nix
           ./modules/home/users/birdz.nix
           ./modules/home/users/amadeus.nix
+          ./modules/home/users/renault.nix
           ./modules/home/profiles/base.nix
           ./modules/home/profiles/vcs.nix
           ./modules/home/profiles/cc.nix
@@ -142,6 +143,7 @@
           ./modules/home/users/lvmh.nix
           ./modules/home/users/birdz.nix
           ./modules/home/users/amadeus.nix
+          ./modules/home/users/renault.nix
           ./modules/home/profiles/wsl.nix
           ./modules/home/profiles/base.nix
           ./modules/home/profiles/xdg.nix
