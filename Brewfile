@@ -79,7 +79,7 @@ cask 'github'
 cask 'google-cloud-sdk'
 cask 'rancher'
 
-# Brew virtualization
+# Virtualization
 cask 'utm'
 
 # Multimedia
@@ -112,6 +112,7 @@ mas 'Keynote', id: 409_183_694
 
 # Productivity
 cask 'rectangle'
+cask 'krita'
 mas 'Amphetamine', id: 937_984_704
 
 # Utils
