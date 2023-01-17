@@ -134,6 +134,36 @@ with lib;
 
   programs.ssh = {
     enable = true;
+    matchBlocks = {
+      "elkia.local" = {
+        hostname = "elkia.local";
+        user = "devas";
+        forwardX11 = true;
+        forwardX11Trusted = true;
+        forwardAgent = true;
+      };
+      "elvengard.local" = {
+        hostname = "elvengard.local";
+        user = "devas";
+        forwardX11 = true;
+        forwardX11Trusted = true;
+        forwardAgent = true;
+      };
+      "altashar.local" = {
+        hostname = "altashar.local";
+        user = "devas";
+        forwardX11 = true;
+        forwardX11Trusted = true;
+        forwardAgent = true;
+      };
+      "ishtar.local" = {
+        hostname = "ishtar.local";
+        user = "devas";
+        forwardX11 = true;
+        forwardX11Trusted = true;
+        forwardAgent = true;
+      };
+    };
     extraConfig = ''
       AddKeysToAgent yes
     '' + optionalString pkgs.stdenv.hostPlatform.isDarwin ''
