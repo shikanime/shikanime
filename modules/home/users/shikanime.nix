@@ -13,23 +13,4 @@
       }
     ];
   };
-
-  programs.ssh.matchBlocks = {
-    "elkia.local" = {
-      hostname = "elkia.local";
-      identityFile = "${config.home.homeDirectory}/.ssh/elkia_ed25519";
-      user = "devas";
-      forwardX11 = true;
-      forwardX11Trusted = true;
-      forwardAgent = true;
-    };
-    "elvengard.local" = {
-      hostname = "elvengard.local";
-      identityFile = "${config.home.homeDirectory}/.ssh/elvengard_ed25519";
-      user = "devas";
-      forwardX11 = true;
-      forwardX11Trusted = true;
-      forwardAgent = true;
-    };
-  };
 }
