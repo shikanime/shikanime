@@ -138,7 +138,7 @@
           ./modules/home/hosts/ishtar.nix
           ./modules/home/users/totalenergies.nix
           ./modules/home/users/google.nix
-          d/modules/home/users/shikanime.nix
+          ./modules/home/users/shikanime.nix
           ./modules/home/users/sfeir.nix
           ./modules/home/users/paprec.nix
           ./modules/home/users/galec.nix
