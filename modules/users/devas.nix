@@ -73,6 +73,7 @@
       ../home/users/google.nix
       ../home/users/shikanime.nix
       ../home/users/sfeir.nix
+      ../home/users/paprec.nix
       ../home/users/galec.nix
       ../home/users/lvmh.nix
       ../home/users/birdz.nix
