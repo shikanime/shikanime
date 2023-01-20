@@ -6,9 +6,6 @@ with lib;
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
-  # Fix Nix package for nix.conf generation
-  nix.package = pkgs.nix;
-
   # Enable experimental features so we can access flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

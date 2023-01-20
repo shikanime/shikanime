@@ -28,7 +28,7 @@
   ];
 
   # Keep the system timezone up-to-date based on the current location
-  services.localtime.enable = true;
+  services.localtimed.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
