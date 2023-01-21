@@ -23,6 +23,7 @@ brew 'pipx'
 brew 'sqlfluff'
 brew 'flit'
 brew 'hatch'
+brew 'ruff'
 brew 'huggingface-cli'
 cask 'anaconda'
 
