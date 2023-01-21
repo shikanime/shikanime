@@ -146,20 +146,6 @@ with lib;
         forwardX11Trusted = true;
         forwardAgent = true;
       };
-      "altashar.local" = {
-        hostname = "altashar.local";
-        user = "devas";
-        forwardX11 = true;
-        forwardX11Trusted = true;
-        forwardAgent = true;
-      };
-      "ishtar.local" = {
-        hostname = "ishtar.local";
-        user = "devas";
-        forwardX11 = true;
-        forwardX11Trusted = true;
-        forwardAgent = true;
-      };
     };
     extraConfig = ''
       AddKeysToAgent yes
