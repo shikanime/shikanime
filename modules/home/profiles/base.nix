@@ -3,6 +3,22 @@
 with lib;
 
 {
+  home.packages = [
+    pkgs.git-branchless
+    pkgs.gnupatch
+    pkgs.gnumake
+    pkgs.gnused
+    pkgs.gnugrep
+    pkgs.less
+    pkgs.which
+    pkgs.bzip2
+    pkgs.graphviz
+    pkgs.rsync
+    pkgs.curl
+    pkgs.wget
+    pkgs.watch
+  ];
+
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
 
@@ -34,7 +50,14 @@ with lib;
     };
   };
 
-  programs.nushell.enable = true;
+  programs.nushell = {
+    enable = true;
+    extraConfig = ''
+      let-env config = {
+        show_banner: false
+      }
+    '';
+  };
 
   programs.starship = {
     enable = true;

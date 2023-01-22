@@ -2,17 +2,6 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 brew 'mas'
-brew 'bash'
-brew 'zsh'
-brew 'gpatch'
-brew 'make'
-brew 'bzip2'
-brew 'graphviz'
-brew 'rsync'
-brew 'wget'
-brew 'curl'
-brew 'watch'
-brew 'openssl@3'
 
 # Data
 brew 'python@3.10'
