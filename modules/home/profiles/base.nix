@@ -17,7 +17,7 @@ with lib;
     pkgs.curl
     pkgs.wget
     pkgs.watch
-    pkgs.darcs
+    pkgs.pprof
   ];
 
   # Let Home Manager install and manage itself

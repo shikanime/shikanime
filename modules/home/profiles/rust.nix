@@ -1,6 +1,10 @@
 { pkgs, config, ... }:
 
 {
+  home.packages = [
+    pkgs.rustup
+  ];
+
   # Make Rustup be XDG compliant
   home.sessionVariables.RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
 
