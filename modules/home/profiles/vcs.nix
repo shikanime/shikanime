@@ -1,6 +1,11 @@
 { pkgs, config, ... }:
 
 {
+  home.packages = [
+    pkgs.darcs
+    pkgs.subversion
+  ];
+
   programs.zsh.oh-my-zsh.plugins = [
     "git"
   ];

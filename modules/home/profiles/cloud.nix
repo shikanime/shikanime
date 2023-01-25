@@ -1,6 +1,33 @@
 { pkgs, config, ... }:
 
 {
+  home.packages = [
+    pkgs.kustomize
+    pkgs.skaffold
+    pkgs.kubectl
+    pkgs.kubernetes-helm
+    pkgs.minikube
+    pkgs.azure-cli
+    pkgs.awscli2
+    pkgs.cloudflared
+    pkgs.github-cli
+    pkgs.act
+    pkgs.glab
+    pkgs.terraform
+    pkgs.python310Packages.huggingface-hub
+    (pkgs.google-cloud-sdk.withExtraComponents (
+      with pkgs.google-cloud-sdk.components; [
+        alpha
+        beta
+        bq
+        gsutil
+        nomos
+        gke-gcloud-auth-plugin
+        gcloud-crc32c
+      ]
+    ))
+  ];
+
   programs.zsh.oh-my-zsh.plugins = [
     "kubectl"
     "helm"

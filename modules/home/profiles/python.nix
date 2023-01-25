@@ -3,6 +3,10 @@
 with lib;
 
 {
+  home.packages = [
+    pkgs.poetry
+  ];
+
   programs.neovim = {
     withPython3 = true;
     plugins = [
