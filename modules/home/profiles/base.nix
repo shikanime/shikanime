@@ -17,6 +17,7 @@ with lib;
     pkgs.wget
     pkgs.watch
     pkgs.pprof
+    pkgs.nixpkgs-fmt
   ];
 
   # Let Home Manager install and manage itself
