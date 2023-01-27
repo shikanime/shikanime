@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ config, pkgs, ... }:
 
 {
   # Make Opam toolchain to be XDG compliant
