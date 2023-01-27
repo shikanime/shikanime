@@ -4,7 +4,6 @@ with lib;
 
 {
   home.packages = [
-    pkgs.git-branchless
     pkgs.gnupatch
     pkgs.gnumake
     pkgs.gnused
