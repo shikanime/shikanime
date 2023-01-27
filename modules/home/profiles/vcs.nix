@@ -4,6 +4,7 @@
   home.packages = [
     pkgs.darcs
     pkgs.subversion
+    pkgs.jujutsu
   ];
 
   programs.zsh.oh-my-zsh.plugins = [
