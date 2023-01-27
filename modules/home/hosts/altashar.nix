@@ -1,4 +1,6 @@
-{ pkgs, ... }:
+{ config, pkgs, lib, ... }:
+
+with lib;
 
 {
   home.homeDirectory = "/Users/williamphetsinorath";
@@ -6,7 +8,7 @@
 
   nix.package = pkgs.nix;
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initExtra =  mkAfter ''
     if [ -d /usr/local/anaconda3 ]; then
       source /usr/local/anaconda3/bin/activate
     fi

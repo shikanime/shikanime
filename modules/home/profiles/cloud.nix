@@ -1,4 +1,6 @@
-{ pkgs, config, ... }:
+{ config, pkgs, lib, ... }:
+
+with lib;
 
 {
   home.packages = [
@@ -45,7 +47,7 @@
     ]))
   ];
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initExtra = mkAfter ''
     if [ -d ${config.home.homeDirectory}/.rd ]; then
       export PATH=${config.home.homeDirectory}/.rd/bin:$PATH
     fi
