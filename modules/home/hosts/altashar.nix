@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 with lib;
 
@@ -8,7 +8,7 @@ with lib;
 
   nix.package = pkgs.nix;
 
-  programs.zsh.initExtra =  mkAfter ''
+  programs.zsh.initExtra = mkAfter ''
     if [ -d /usr/local/anaconda3 ]; then
       source /usr/local/anaconda3/bin/activate
     fi
