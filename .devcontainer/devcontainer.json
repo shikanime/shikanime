@@ -1,16 +1,17 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
   "features": {
     "ghcr.io/devcontainers/features/nix:1": {
-      "version": "2.11.1",
-      "flakeUri": "nixpkgs#direnv"
-    }
+      "extraNixConfig": "experimental-features = nix-command flakes"
+    },
+    "ghcr.io/christophermacgown/devcontainer-features/direnv:1": {}
   },
   "extensions": [
     "jnoortheen.nix-ide",
     "mkhl.direnv",
+    "yzhang.markdown-all-in-one",
     "James-Yu.latex-workshop",
-    "yzhang.markdown-all-in-one"
+    "SonarSource.sonarlint-vscode"
   ],
-  "postCreateCommand": "direnv allow"
+  "updateContentCommand": "direnv allow"
 }
