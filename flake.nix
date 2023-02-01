@@ -2,9 +2,9 @@
   description = "Shikanime's home configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs";
     home-manager = {
-      url = "github:nix-community/home-manager/release-22.11";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     devenv = {
