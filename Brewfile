@@ -3,6 +3,10 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 brew 'mas'
 
+# Cloud
+brew 'terraform'
+brew 'huggingface-cli'
+
 # Data
 brew 'python@3.10'
 brew 'python@3.9'
@@ -11,16 +15,14 @@ brew 'pipx'
 brew 'sqlfluff'
 brew 'flit'
 brew 'ruff'
-brew 'huggingface-cli'
 cask 'anaconda'
 
 # Java
 brew 'gradle'
 brew 'coursier'
-cask 'temurin'
+brew 'openjdk'
 
 # JavaScript
-brew 'nvm'
 brew 'node'
 brew 'yarn'
 
@@ -87,11 +89,8 @@ mas 'Amphetamine', id: 937_984_704
 # Utils
 cask 'xquartz'
 cask 'obs'
-cask 'google-drive'
-cask 'zerotier-one'
 
 # System
-cask 'fujifilm-x-webcam'
 cask 'android-file-transfer'
 cask 'the-unarchiver'
 cask 'appcleaner'

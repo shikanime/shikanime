@@ -6,8 +6,6 @@ with lib;
   home.packages = [
     pkgs.kustomize
     pkgs.skaffold
-    pkgs.kubectl
-    pkgs.kubernetes-helm
     pkgs.minikube
     pkgs.azure-cli
     pkgs.awscli2
@@ -15,8 +13,6 @@ with lib;
     pkgs.github-cli
     pkgs.act
     pkgs.glab
-    pkgs.terraform
-    pkgs.python310Packages.huggingface-hub
     (pkgs.google-cloud-sdk.withExtraComponents (
       with pkgs.google-cloud-sdk.components; [
         alpha
