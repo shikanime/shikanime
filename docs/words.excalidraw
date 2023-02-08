@@ -1,0 +1,586 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "type": "text",
+      "version": 11,
+      "versionNonce": 886252636,
+      "isDeleted": false,
+      "id": "Rl36HDI0Aiykur4Y9ggc7",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 414,
+      "y": 288,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 143,
+      "height": 25,
+      "seed": 1327739851,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "y5CLyym2DlUFXtYyCNLib",
+          "type": "arrow"
+        },
+        {
+          "id": "8f6DStg0TnpywOzp01z5h",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1675900059625,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Ichimatsu Doll",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Ichimatsu Doll"
+    },
+    {
+      "type": "text",
+      "version": 8,
+      "versionNonce": 852729180,
+      "isDeleted": false,
+      "id": "vFniFtBVYGkCZsOnem8Mp",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 361,
+      "y": 491,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 120,
+      "height": 25,
+      "seed": 1205908133,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "c0kzfirKhyabzSTzf2IKf",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1675900029022,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Haori Kimono",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Haori Kimono"
+    },
+    {
+      "type": "text",
+      "version": 15,
+      "versionNonce": 1271166564,
+      "isDeleted": false,
+      "id": "eVwATScYBcGTbtfCtylBd",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1104,
+      "y": 416,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 119,
+      "height": 25,
+      "seed": 1828940677,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "eSeMYe_uHr1tow4FhdqzV",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1675900029022,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Mood Board",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Mood Board"
+    },
+    {
+      "type": "text",
+      "version": 11,
+      "versionNonce": 430936540,
+      "isDeleted": false,
+      "id": "oB_fq9Dtas1GbKzIrLtVg",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 652,
+      "y": 430,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 60,
+      "height": 25,
+      "seed": 738946475,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "y5CLyym2DlUFXtYyCNLib",
+          "type": "arrow"
+        },
+        {
+          "id": "c0kzfirKhyabzSTzf2IKf",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1675900029022,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Japan",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Japan"
+    },
+    {
+      "type": "arrow",
+      "version": 51,
+      "versionNonce": 1211107812,
+      "isDeleted": false,
+      "id": "y5CLyym2DlUFXtYyCNLib",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 652.625,
+      "y": 420.546875,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 153.8046875,
+      "height": 99.8046875,
+      "seed": 1601028139,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1675900029022,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "oB_fq9Dtas1GbKzIrLtVg",
+        "focus": 0.09045313027588535,
+        "gap": 9.453125
+      },
+      "endBinding": {
+        "elementId": "Rl36HDI0Aiykur4Y9ggc7",
+        "focus": 0.19693053309616215,
+        "gap": 7.7421875
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -153.8046875,
+          -99.8046875
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 51,
+      "versionNonce": 437843548,
+      "isDeleted": false,
+      "id": "c0kzfirKhyabzSTzf2IKf",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 644.84375,
+      "y": 447.296875,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 193.515625,
+      "height": 37.9296875,
+      "seed": 622714987,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1675900029022,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "oB_fq9Dtas1GbKzIrLtVg",
+        "focus": 0.13524792707704134,
+        "gap": 7.15625
+      },
+      "endBinding": {
+        "elementId": "vFniFtBVYGkCZsOnem8Mp",
+        "focus": -0.5081998585513999,
+        "gap": 5.7734375
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -193.515625,
+          37.9296875
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 19,
+      "versionNonce": 1759325540,
+      "isDeleted": false,
+      "id": "ZhzLzU_oOVeoK85vhM61a",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1008,
+      "y": 540,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 144,
+      "height": 25,
+      "seed": 533783371,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "eSeMYe_uHr1tow4FhdqzV",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1675900029022,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Graphic Design",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Graphic Design"
+    },
+    {
+      "type": "arrow",
+      "version": 30,
+      "versionNonce": 14797532,
+      "isDeleted": false,
+      "id": "eSeMYe_uHr1tow4FhdqzV",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1101.0859375,
+      "y": 532.84375,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 68.1796875,
+      "height": 82.9453125,
+      "seed": 811931109,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1675900029022,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "ZhzLzU_oOVeoK85vhM61a",
+        "focus": 0.059906829718326546,
+        "gap": 7.15625
+      },
+      "endBinding": {
+        "elementId": "eVwATScYBcGTbtfCtylBd",
+        "focus": -0.33471671085881594,
+        "gap": 8.8984375
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          68.1796875,
+          -82.9453125
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 3,
+      "versionNonce": 1327096036,
+      "isDeleted": false,
+      "id": "LvbIiM6TgysyS9JcSoHdK",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 620,
+      "y": 753,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 92,
+      "height": 25,
+      "seed": 1536242251,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [],
+      "updated": 1675900029022,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "John Doe",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "John Doe"
+    },
+    {
+      "id": "oAI2ljg_x8JgT8fEg3AKw",
+      "type": "text",
+      "x": 565.6146240234375,
+      "y": 97.77737426757812,
+      "width": 325,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 300738652,
+      "version": 121,
+      "versionNonce": 441533668,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "B8al3fU4A3NO3w11ExZVg",
+          "type": "arrow"
+        },
+        {
+          "id": "8f6DStg0TnpywOzp01z5h",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1675900070015,
+      "link": null,
+      "locked": false,
+      "text": "Sono Bisque Doll wa Koi wo Suru",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Sono Bisque Doll wa Koi wo Suru"
+    },
+    {
+      "id": "WL_nQIe9XkK-JHb9DOu-H",
+      "type": "text",
+      "x": 263,
+      "y": 164.5,
+      "width": 111,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 411315932,
+      "version": 4,
+      "versionNonce": 2051762780,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "B8al3fU4A3NO3w11ExZVg",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1675900056407,
+      "link": null,
+      "locked": false,
+      "text": "Bisque Doll",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Bisque Doll"
+    },
+    {
+      "id": "B8al3fU4A3NO3w11ExZVg",
+      "type": "arrow",
+      "x": 651.8993830090164,
+      "y": 132.28675842285156,
+      "width": 267.7104510416052,
+      "height": 37.03981937770675,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1056122844,
+      "version": 348,
+      "versionNonce": 2032076900,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1675900070015,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -267.7104510416052,
+          37.03981937770675
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "oAI2ljg_x8JgT8fEg3AKw",
+        "focus": -0.32795925854908453,
+        "gap": 9.509384155273438
+      },
+      "endBinding": {
+        "elementId": "WL_nQIe9XkK-JHb9DOu-H",
+        "focus": 0.07013041510200307,
+        "gap": 10.188931967411236
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "8f6DStg0TnpywOzp01z5h",
+      "type": "arrow",
+      "x": 728.7003381276858,
+      "y": 132.18362426757815,
+      "width": 262.90202877596306,
+      "height": 143.74606323242185,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 447069916,
+      "version": 264,
+      "versionNonce": 1349016548,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1675900070015,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -262.90202877596306,
+          143.74606323242185
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "oAI2ljg_x8JgT8fEg3AKw",
+        "focus": -0.2193133703164414,
+        "gap": 9.40625
+      },
+      "endBinding": {
+        "elementId": "Rl36HDI0Aiykur4Y9ggc7",
+        "focus": -0.6850150426477344,
+        "gap": 12.0703125
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
