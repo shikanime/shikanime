@@ -6,12 +6,16 @@
     },
     "ghcr.io/christophermacgown/devcontainer-features/direnv:1": {}
   },
-  "extensions": [
-    "jnoortheen.nix-ide",
-    "mkhl.direnv",
-    "yzhang.markdown-all-in-one",
-    "James-Yu.latex-workshop",
-    "SonarSource.sonarlint-vscode"
-  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jnoortheen.nix-ide",
+        "mkhl.direnv",
+        "yzhang.markdown-all-in-one",
+        "James-Yu.latex-workshop",
+        "SonarSource.sonarlint-vscode"
+      ]
+    }
+  },
   "updateContentCommand": "direnv allow"
 }
