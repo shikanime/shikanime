@@ -93,6 +93,7 @@
       pull.rebase = true;
       push.autoSetupRemote = true;
       init.defaultBranch = "main";
+      advice.skippedCherryPicks = false;
       rebase = {
         autostash = true;
         updateRefs = true;
