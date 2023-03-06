@@ -25,6 +25,7 @@
       adog = "log --all --decorate --oneline --graph";
       pouf = "push --force-with-lease";
       poi = "commit --amend --no-edit";
+      tape = "push --all --follow-tags blackbox";
     };
     ignores = [
       # Backup files
