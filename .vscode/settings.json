@@ -6,6 +6,7 @@
     "statusBarItem.remoteBackground": "#3422fd",
     "statusBarItem.remoteForeground": "#e7e7e7"
   },
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
   "peacock.remoteColor": "#3422fd",
   "peacock.color": "#cf086d"
 }
