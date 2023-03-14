@@ -1,10 +1,5 @@
-data "github_user" "reviewers" {
-  for_each = var.github.reviewers
-  username = each.value.username
-}
-
 data "github_repository" "default" {
-  full_name = "${var.github.organization}/${var.github.organization}"
+  full_name = "${data.github_user.current.username}/${var.github.owner}"
 }
 
 resource "github_repository_environment" "default" {
@@ -50,7 +45,7 @@ resource "github_actions_environment_secret" "wakabox_github_token" {
 }
 
 data "github_repository" "algorithm" {
-  full_name = "${var.github.organization}/algorithm"
+  full_name = "${data.github_user.current.username}/algorithm"
 }
 
 resource "github_repository_environment" "algorithm" {
