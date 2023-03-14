@@ -27,6 +27,13 @@ variable "github" {
   }
 }
 
+variable "ssh" {
+  type = map(object({
+    name       = string
+    public_key = string
+  }))
+}
+
 variable "cachix" {
   type = object({
     token = string
