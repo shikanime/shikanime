@@ -10,26 +10,6 @@ variable "environment" {
   default     = "studio"
 }
 
-variable "gitlab" {
-  type = object({
-    owner = string
-    ssh_keys = map(object({
-      name               = string
-      public_key_openssh = string
-    }))
-  })
-  description = "GitLab configuration"
-  default = {
-    owner = "shikalegend"
-    ssh_keys = {
-      shikanime = {
-        name               = "shikanime"
-        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAB8e13bjswnhfuYYpztBESPf/gkbkdGE46kC++tNOCX"
-      }
-    }
-  }
-}
-
 variable "github" {
   type = object({
     owner = string
