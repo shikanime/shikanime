@@ -52,15 +52,15 @@ variable "github" {
     ssh_keys = {
       shikanime = {
         name               = "shikanime"
-        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFpVHzBrvtlzh0eLr6qNttBd5NBZawNJ7PtcAuHJ6pc7 william.phetsinorath@shikanime.studio"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFpVHzBrvtlzh0eLr6qNttBd5NBZawNJ7PtcAuHJ6pc7"
       }
       sfeir = {
         name               = "sfeir"
-        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2+ZmUgNPNepyMTJnjcu6LoGxEJh5ny8Oxe7bLuFx9q phetsinorath.w@sfeir.com"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2+ZmUgNPNepyMTJnjcu6LoGxEJh5ny8Oxe7bLuFx9q"
       }
       paprec = {
         name               = "paprec"
-        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsdYurmBmZpWrDV5EJWZlcCPCU3yTyv1uoe7TzQsYAy phetsinorath.w@sfeir.com"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsdYurmBmZpWrDV5EJWZlcCPCU3yTyv1uoe7TzQsYAy"
       }
     }
   }
