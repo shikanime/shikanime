@@ -38,12 +38,14 @@ variable "cachix" {
   type = object({
     token = string
   })
+  sensitive = true
 }
 
 variable "wakatime" {
   type = object({
     api_key = string
   })
+  sensitive = true
 }
 
 variable "wakabox" {
@@ -51,4 +53,5 @@ variable "wakabox" {
     github_gist_id = string
     github_token   = string
   })
+  sensitive = true
 }
