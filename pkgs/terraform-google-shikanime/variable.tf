@@ -27,17 +27,6 @@ variable "github" {
   }
 }
 
-variable "google" {
-  type = object({
-    project = string
-    region  = string
-  })
-  default = {
-    project = "shikanime-studio"
-    region  = "europe-west1"
-  }
-}
-
 variable "cachix" {
   type = object({
     token = string
