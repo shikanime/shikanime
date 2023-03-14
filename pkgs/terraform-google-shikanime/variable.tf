@@ -27,10 +27,10 @@ variable "github" {
   }
 }
 
-variable "ssh" {
+variable "ssh_keys" {
   type = map(object({
-    name       = string
-    public_key = string
+    name               = string
+    public_key_openssh = string
   }))
 }
 
