@@ -13,5 +13,5 @@ resource "gitlab_user_sshkey" "default" {
   user_id    = data.gitlab_user.current.id
   title      = title(var.name)
   key        = each.value.public_key_openssh
-  expires_at = formatdate("YYYY-MM-DDTHH:MM:SSZ", time_rotating.gitlab_ssh_key_expiration.rotation_rfc3339)
+  expires_at = formatdate("YYYY-MM-DD'T'HH:mm:ssZ", time_rotating.gitlab_ssh_key_expiration.rotation_rfc3339)
 }
