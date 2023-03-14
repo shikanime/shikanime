@@ -66,26 +66,6 @@ variable "github" {
   }
 }
 
-variable "sfeir" {
-  type = object({
-    owner = string
-    ssh_keys = map(object({
-      name               = string
-      public_key_openssh = string
-    }))
-  })
-  description = "Sfeir Gitlab configuration"
-  default = {
-    owner = "phetsinorath.w"
-    ssh_keys = {
-      sfeir = {
-        name               = "sfeir"
-        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2+ZmUgNPNepyMTJnjcu6LoGxEJh5ny8Oxe7bLuFx9q phetsinorath.w@sfeir.com"
-      }
-    }
-  }
-}
-
 variable "cachix" {
   type = object({
     token = string
