@@ -1,5 +1,5 @@
 data "github_repository" "default" {
-  full_name = "${data.github_user.current.username}/${var.github.owner}"
+  full_name = "${data.github_user.default.username}/${var.github.owner}"
 }
 
 resource "github_repository_environment" "default" {
@@ -45,7 +45,7 @@ resource "github_actions_environment_secret" "wakabox_github_token" {
 }
 
 data "github_repository" "algorithm" {
-  full_name = "${data.github_user.current.username}/algorithm"
+  full_name = "${data.github_user.default.username}/algorithm"
 }
 
 resource "github_repository_environment" "algorithm" {

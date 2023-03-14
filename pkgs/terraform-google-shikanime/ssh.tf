@@ -10,7 +10,15 @@ resource "time_rotating" "gitlab_ssh_key_expiration" {
 
 resource "gitlab_user_sshkey" "default" {
   for_each   = var.gitlab.ssh_keys
-  user_id    = data.gitlab_user.current.id
+  user_id    = data.gitlab_user.default.id
+  title      = title(var.name)
+  key        = each.value.public_key_openssh
+  expires_at = formatdate("YYYY-MM-DD'T'HH:mm:ssZ", time_rotating.gitlab_ssh_key_expiration.rotation_rfc3339)
+}
+
+resource "gitlab_user_sshkey" "sfeir" {
+  for_each   = var.sfeir.ssh_keys
+  user_id    = data.gitlab_user.default.id
   title      = title(var.name)
   key        = each.value.public_key_openssh
   expires_at = formatdate("YYYY-MM-DD'T'HH:mm:ssZ", time_rotating.gitlab_ssh_key_expiration.rotation_rfc3339)
