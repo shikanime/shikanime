@@ -1,20 +1,24 @@
 variable "name" {
   type        = string
   description = "Release name"
-  default     = "shikanime-studio"
+  default     = "shikanime"
+}
+
+variable "environment" {
+  type        = string
+  description = "Environment name"
+  default     = "studio"
 }
 
 variable "github" {
   type = object({
     organization = string
-    repository   = string
     reviewers = map(object({
       username = string
     }))
   })
   default = {
     organization = "shikanime"
-    repository   = "shikanime"
     reviewers = {
       shikanime = {
         username = "shikanime"

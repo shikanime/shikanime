@@ -4,12 +4,12 @@ data "github_user" "reviewers" {
 }
 
 data "github_repository" "default" {
-  full_name = "${var.github.organization}/${var.github.repository}"
+  full_name = "${var.github.organization}/${var.github.organization}"
 }
 
 resource "github_repository_environment" "default" {
   repository  = data.github_repository.default.name
-  environment = var.name
+  environment = "${var.name}-${var.environment}"
   reviewers {
     users = [
       for user in data.github_user.reviewers : user.id
@@ -47,6 +47,31 @@ resource "github_actions_environment_secret" "wakatime" {
 resource "github_actions_environment_secret" "cachix_token" {
   repository      = data.github_repository.default.name
   environment     = github_repository_environment.default.environment
+  secret_name     = "CACHIX_AUTH_TOKEN"
+  encrypted_value = base64encode(var.cachix.token)
+}
+
+data "github_repository" "algorithm" {
+  full_name = "${var.github.organization}/algorithm"
+}
+
+resource "github_repository_environment" "algorithm" {
+  repository  = data.github_repository.algorithm.name
+  environment = "${var.name}-${var.environment}"
+  reviewers {
+    users = [
+      for user in data.github_user.reviewers : user.id
+    ]
+  }
+  deployment_branch_policy {
+    protected_branches     = true
+    custom_branch_policies = false
+  }
+}
+
+resource "github_actions_environment_secret" "algorithm_cachix_token" {
+  repository      = data.github_repository.algorithm.name
+  environment     = github_repository_environment.algorithm.environment
   secret_name     = "CACHIX_AUTH_TOKEN"
   encrypted_value = base64encode(var.cachix.token)
 }
