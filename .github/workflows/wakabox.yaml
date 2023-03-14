@@ -5,11 +5,12 @@ on:
   workflow_dispatch:
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    environment: shikanime-studio
     steps:
       - name: Update Github Gist
         uses: matchai/waka-box@v4.0.5
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: 18a5a8350c7bfe760adb6c37b6bbe5a9
+          GH_TOKEN: ${{ secrets.WAKABOX_GITHUB_TOKEN }}
+          GIST_ID: ${{ secrets.WAKABOX_GITHUB_GIST_ID }}
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
