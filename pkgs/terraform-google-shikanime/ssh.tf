@@ -1,5 +1,5 @@
 resource "github_user_ssh_key" "default" {
-  for_each = var.ssh_keys
+  for_each = var.github.ssh_keys
   title    = title(each.value.name)
   key      = each.value.public_key_openssh
 }
@@ -9,7 +9,7 @@ resource "time_rotating" "gitlab_ssh_key_expiration" {
 }
 
 resource "gitlab_user_sshkey" "default" {
-  for_each   = var.ssh_keys
+  for_each   = var.gitlab.ssh_keys
   user_id    = data.gitlab_user.current.id
   title      = title(var.name)
   key        = each.value.public_key_openssh

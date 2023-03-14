@@ -13,10 +13,20 @@ variable "environment" {
 variable "gitlab" {
   type = object({
     owner = string
+    ssh_keys = map(object({
+      name               = string
+      public_key_openssh = string
+    }))
   })
   description = "GitLab configuration"
   default = {
     owner = "shikalegend"
+    ssh_keys = {
+      shikanime = {
+        name               = "shikanime"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFpVHzBrvtlzh0eLr6qNttBd5NBZawNJ7PtcAuHJ6pc7 william.phetsinorath@shikanime.studio"
+      }
+    }
   }
 }
 
@@ -26,6 +36,10 @@ variable "github" {
     reviewers = map(object({
       username = string
     }))
+    ssh_keys = map(object({
+      name               = string
+      public_key_openssh = string
+    }))
   })
   description = "GitHub configuration"
   default = {
@@ -33,6 +47,20 @@ variable "github" {
     reviewers = {
       shikanime = {
         username = "shikanime"
+      }
+    }
+    ssh_keys = {
+      shikanime = {
+        name               = "shikanime"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFpVHzBrvtlzh0eLr6qNttBd5NBZawNJ7PtcAuHJ6pc7 william.phetsinorath@shikanime.studio"
+      }
+      sfeir = {
+        name               = "sfeir"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2+ZmUgNPNepyMTJnjcu6LoGxEJh5ny8Oxe7bLuFx9q phetsinorath.w@sfeir.com"
+      }
+      paprec = {
+        name               = "paprec"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsdYurmBmZpWrDV5EJWZlcCPCU3yTyv1uoe7TzQsYAy phetsinorath.w@sfeir.com"
       }
     }
   }
@@ -45,18 +73,6 @@ variable "ssh_keys" {
   }))
   description = "SSH keys"
   default = {
-    shikanime = {
-      name               = "shikanime"
-      public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFpVHzBrvtlzh0eLr6qNttBd5NBZawNJ7PtcAuHJ6pc7 william.phetsinorath@shikanime.studio"
-    }
-    sfeir = {
-      name               = "sfeir"
-      public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2+ZmUgNPNepyMTJnjcu6LoGxEJh5ny8Oxe7bLuFx9q phetsinorath.w@sfeir.com"
-    }
-    paprec = {
-      name               = "paprec"
-      public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsdYurmBmZpWrDV5EJWZlcCPCU3yTyv1uoe7TzQsYAy phetsinorath.w@sfeir.com"
-    }
     totalenergies = {
       name               = "totalenergies"
       public_key_openssh = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCz3G+r2ixyTKRWDsfA6jvKsUJlz659feL5OqFuX3ggvyF3Ckv7BOizIhrHoCEB4BLOPdJhwnyjtVyPaldxMtBOBdyc+IuwdDloLDQzUbLT9ux+cVsWekhBblOCJaR7RcQIpWcOnJJc6eJS5yXzOr8kAlqUTref4oPVOxeE+PO+JJbWjg/Y2jUEA4lHPnzfAjXiQe2keXS1qkpvliVoOD/F5V6IZaA6G00vaWGNuCzRSFddxpLtQEKT5oUCHYX9SWdhqbMxRCFVq1X7uMhWBr4cTBQYpCGSuc0hAUcPl2HTjp1Y8ZfSiyD9WE7lrCF65AH/6qxYGbYXF8HqXeLLxDgxRQTMyQuSs6CmL7CIDqIva77+rYffy5ZKYP7g0NMDtZftoCTRAR6lGXVxrpJkzEkEWlFp/tbm5pWrz1g3g5oqFkt3cmWpLVMKlteIxRIW9Y8ezbADN+szSemmI3nJysTFDFD3v8uvXV47/2LMQcneBkJb5fheNNDt4salDXEIS10= al1083054@admin.hubtotal.net"
