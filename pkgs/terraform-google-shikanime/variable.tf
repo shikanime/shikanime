@@ -56,3 +56,10 @@ variable "wakatime" {
     api_key = string
   })
 }
+
+variable "wakabox" {
+  type = object({
+    github_gist_id = string
+    github_token   = string
+  })
+}
