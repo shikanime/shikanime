@@ -10,7 +10,3 @@ data "github_user" "default" {
 data "gitlab_user" "default" {
   username = var.gitlab.owner
 }
-
-data "gitlab_user" "sfeir" {
-  username = var.sfeir.owner
-}
