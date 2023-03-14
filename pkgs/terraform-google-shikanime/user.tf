@@ -6,7 +6,3 @@ data "github_user" "reviewers" {
 data "github_user" "default" {
   username = var.github.owner
 }
-
-data "gitlab_user" "default" {
-  username = var.gitlab.owner
-}
