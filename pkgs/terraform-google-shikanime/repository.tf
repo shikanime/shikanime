@@ -21,22 +21,6 @@ resource "github_repository_environment" "default" {
   }
 }
 
-resource "github_actions_environment_secret" "rclone_config" {
-  repository  = data.github_repository.default.name
-  environment = github_repository_environment.default.environment
-  secret_name = "RCLONE_CONFIG"
-  encrypted_value = base64encode(
-    <<-EOF
-    [shikanime]
-    type = drive
-    client_id = ${var.rclone.client_id}
-    client_secret = ${var.rclone.client_secret}
-    scope = drive.appfolder
-    service_account_file = ~GOOGLE_APPLICATION_CREDENTIALS
-    EOF
-  )
-}
-
 resource "github_actions_environment_secret" "wakatime" {
   repository      = data.github_repository.default.name
   environment     = github_repository_environment.default.environment

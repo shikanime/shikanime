@@ -38,13 +38,6 @@ variable "google" {
   }
 }
 
-variable "rclone" {
-  type = object({
-    client_id     = string
-    client_secret = string
-  })
-}
-
 variable "cachix" {
   type = object({
     token = string
