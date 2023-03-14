@@ -6,4 +6,10 @@ terraform {
       version = "~> 5.18"
     }
   }
+  backend "remote" {
+    organization = "shikanime"
+    workspaces {
+      name = "shikanime-studio"
+    }
+  }
 }
