@@ -1,8 +1,5 @@
 name: Build Curriculum Vitae
-on:
-  push:
-    tags:
-      - v*.*.*
+on: push
 jobs:
   build:
     runs-on: ubuntu-22.04
