@@ -31,15 +31,15 @@ variable "github" {
     }
     ssh_keys = {
       shikanime = {
-        name               = "shikanime"
+        name               = "Shikanime"
         public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAB8e13bjswnhfuYYpztBESPf/gkbkdGE46kC++tNOCX"
       }
       sfeir = {
-        name               = "sfeir"
+        name               = "Sfeir"
         public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2+ZmUgNPNepyMTJnjcu6LoGxEJh5ny8Oxe7bLuFx9q"
       }
       paprec = {
-        name               = "paprec"
+        name               = "Paprec"
         public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsdYurmBmZpWrDV5EJWZlcCPCU3yTyv1uoe7TzQsYAy"
       }
     }
