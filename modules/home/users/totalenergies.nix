@@ -10,7 +10,7 @@
           email = "william.phetsinorath@external.totalenergies.com";
           signingKey = "FDEA7AEA663DC732";
         };
-        core.sshCommand = "${pkgs.openssh}/bin/ssh -i ${config.home.homeDirectory}/.ssh/totalenergies_rsa";
+        core.sshCommand = "${pkgs.openssh}/bin/ssh -i ${config.home.homeDirectory}/.ssh/totalenergies_ed25519";
       };
     }
   ];
