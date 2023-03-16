@@ -21,20 +21,20 @@ resource "github_actions_environment_secret" "wakabox_wakatime" {
   repository      = data.github_repository.default.name
   environment     = github_repository_environment.wakabox.environment
   secret_name     = "WAKATIME_API_KEY"
-  encrypted_value = base64encode(var.wakatime.api_key)
+  plaintext_value = var.wakatime.api_key
 }
-resource "github_actions_environment_secret" "wakabox_gist_id" {
-  repository      = data.github_repository.default.name
-  environment     = github_repository_environment.wakabox.environment
-  secret_name     = "WAKABOX_GITHUB_GIST_ID"
-  plaintext_value = var.wakabox.github_gist_id
+resource "github_actions_environment_variable" "wakabox_gist_id" {
+  repository    = data.github_repository.default.name
+  environment   = github_repository_environment.wakabox.environment
+  variable_name = "WAKABOX_GITHUB_GIST_ID"
+  value         = var.wakabox.github_gist_id
 }
 
 resource "github_actions_environment_secret" "wakabox_github_token" {
   repository      = data.github_repository.default.name
   environment     = github_repository_environment.wakabox.environment
   secret_name     = "WAKABOX_GITHUB_TOKEN"
-  encrypted_value = base64encode(var.wakabox.github_token)
+  plaintext_value = var.wakabox.github_token
 }
 
 data "github_repository" "algorithm" {
