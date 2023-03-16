@@ -2,18 +2,8 @@ data "github_repository" "default" {
   full_name = "${data.github_user.default.username}/${var.github.owner}"
 }
 
-resource "github_repository_environment" "default" {
-  repository  = data.github_repository.default.name
-  environment = "${var.name}-${var.environment}"
-  deployment_branch_policy {
-    protected_branches     = true
-    custom_branch_policies = false
-  }
-}
-
-resource "github_actions_environment_secret" "cachix_token" {
+resource "github_actions_secret" "cachix_token" {
   repository      = data.github_repository.default.name
-  environment     = github_repository_environment.default.environment
   secret_name     = "CACHIX_AUTH_TOKEN"
   encrypted_value = base64encode(var.cachix.token)
 }
