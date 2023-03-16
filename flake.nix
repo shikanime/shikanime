@@ -104,6 +104,7 @@
           config.allowUnfree = true;
         };
         modules = [
+          ./modules/home/profiles/experimental/github-copilot-cli.nix
           ./modules/home/hosts/altashar.nix
           ./modules/home/users/google.nix
           ./modules/home/users/shikanime.nix
