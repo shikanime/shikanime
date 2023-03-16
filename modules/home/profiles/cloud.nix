@@ -13,6 +13,8 @@ with lib;
     pkgs.github-cli
     pkgs.act
     pkgs.glab
+    pkgs.kubelogin
+    pkgs.kubelogin-oidc
     (pkgs.google-cloud-sdk.withExtraComponents (
       with pkgs.google-cloud-sdk.components; [
         alpha
