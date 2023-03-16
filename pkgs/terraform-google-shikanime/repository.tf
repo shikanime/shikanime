@@ -25,7 +25,7 @@ resource "github_actions_environment_secret" "cachix_token" {
 
 resource "github_repository_environment" "wakabox" {
   repository  = data.github_repository.default.name
-  environment = "${var.name}-${var.environment}"
+  environment = "${var.name}-${var.environment}-wakabox"
   deployment_branch_policy {
     protected_branches     = true
     custom_branch_policies = false
@@ -42,7 +42,7 @@ resource "github_actions_environment_secret" "wakabox_gist_id" {
   repository      = data.github_repository.default.name
   environment     = github_repository_environment.wakabox.environment
   secret_name     = "WAKABOX_GITHUB_GIST_ID"
-  encrypted_value = base64encode(var.wakabox.github_gist_id)
+  plaintext_value = var.wakabox.github_gist_id
 }
 
 resource "github_actions_environment_secret" "wakabox_github_token" {
