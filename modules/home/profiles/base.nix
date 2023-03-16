@@ -313,7 +313,7 @@ with lib;
   # Enable Brew integration
   programs.zsh.initExtra = mkIf pkgs.stdenv.hostPlatform.isDarwin ''
     if which brew > /dev/null; then
-      eval $(brew shellenv)
+      eval "$(brew shellenv)"
     fi
   '';
 
