@@ -1,5 +1,10 @@
 name: Build Curriculum Vitae
-on: push
+on:
+  push:
+    paths:
+      - pkgs/curriculum-vitae/*
+      - flake.nix
+      - flake.json
 jobs:
   build:
     runs-on: ubuntu-22.04

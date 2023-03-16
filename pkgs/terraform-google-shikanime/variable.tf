@@ -13,9 +13,6 @@ variable "environment" {
 variable "github" {
   type = object({
     owner = string
-    reviewers = map(object({
-      username = string
-    }))
     ssh_keys = map(object({
       name               = string
       public_key_openssh = string
@@ -24,11 +21,6 @@ variable "github" {
   description = "GitHub configuration"
   default = {
     owner = "shikanime"
-    reviewers = {
-      shikanime = {
-        username = "shikanime"
-      }
-    }
     ssh_keys = {
       shikanime = {
         name               = "Shikanime"
