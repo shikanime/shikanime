@@ -5,11 +5,6 @@ data "github_repository" "default" {
 resource "github_repository_environment" "default" {
   repository  = data.github_repository.default.name
   environment = "${var.name}-${var.environment}"
-  reviewers {
-    users = [
-      for user in data.github_user.reviewers : user.id
-    ]
-  }
   deployment_branch_policy {
     protected_branches     = true
     custom_branch_policies = false
@@ -59,11 +54,6 @@ data "github_repository" "algorithm" {
 resource "github_repository_environment" "algorithm" {
   repository  = data.github_repository.algorithm.name
   environment = "${var.name}-${var.environment}"
-  reviewers {
-    users = [
-      for user in data.github_user.reviewers : user.id
-    ]
-  }
   deployment_branch_policy {
     protected_branches     = true
     custom_branch_policies = false
