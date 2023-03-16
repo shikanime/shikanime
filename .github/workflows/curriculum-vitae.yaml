@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    environment: shikanime-studio
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
