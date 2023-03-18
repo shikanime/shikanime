@@ -90,6 +90,8 @@
         oceando = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            ./modules/virtualisation/docker.nix
+            ./modules/profiles/docker-container.nix
             ./modules/profiles/base.nix
             ./modules/profiles/development.nix
             ./modules/profiles/home.nix
