@@ -28,6 +28,7 @@
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.platforms.unix (system:
       let pkgs = import nixpkgs { inherit system; }; in {
         curriculumVitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
+        terraformGoogleShikanime = pkgs.callPackage ./pkgs/terraform-google-shikanime/default.nix { };
       }
     );
 
