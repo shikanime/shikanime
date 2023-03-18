@@ -13,8 +13,10 @@
   # Enable the OpenSSH daemon
   services.openssh = {
     enable = true;
-    passwordAuthentication = false;
-    permitRootLogin = "no";
-    forwardX11 = true;
+    settings = {
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
+      X11Forwarding = true;
+    };
   };
 }
