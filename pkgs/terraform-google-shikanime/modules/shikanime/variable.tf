@@ -1,13 +1,7 @@
 variable "name" {
   type        = string
-  description = "Release name"
+  description = "Project name"
   default     = "shikanime"
-}
-
-variable "environment" {
-  type        = string
-  description = "Environment name"
-  default     = "studio"
 }
 
 variable "github" {
@@ -22,21 +16,17 @@ variable "github" {
   default = {
     owner = "shikanime"
     ssh_keys = {
-      shikanime = {
-        name               = "Shikanime"
+      altashar = {
+        name               = "Altashar"
         public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAB8e13bjswnhfuYYpztBESPf/gkbkdGE46kC++tNOCX"
       }
-      sfeir = {
-        name               = "Sfeir"
+      altashar_sfeir = {
+        name               = "Altashar Sfeir"
         public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2+ZmUgNPNepyMTJnjcu6LoGxEJh5ny8Oxe7bLuFx9q"
       }
-      paprec = {
-        name               = "Paprec"
+      altashar_paprec = {
+        name               = "Altashar Paprec"
         public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsdYurmBmZpWrDV5EJWZlcCPCU3yTyv1uoe7TzQsYAy"
-      }
-      totalenergies = {
-        name               = "TotalEnergies"
-        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEcC9iJokc4BW6fTW9vz/X/0NhCHQf7WigeMz7ft2bi"
       }
     }
   }
