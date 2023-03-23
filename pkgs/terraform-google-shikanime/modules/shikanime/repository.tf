@@ -10,7 +10,7 @@ resource "github_actions_secret" "cachix_token" {
 
 resource "github_repository_environment" "wakabox" {
   repository  = data.github_repository.default.name
-  environment = "${var.name}-${var.environment}-wakabox"
+  environment = "${var.name}-wakabox"
   deployment_branch_policy {
     protected_branches     = true
     custom_branch_policies = false
@@ -43,7 +43,7 @@ data "github_repository" "algorithm" {
 
 resource "github_repository_environment" "algorithm" {
   repository  = data.github_repository.algorithm.name
-  environment = "${var.name}-${var.environment}"
+  environment = var.name
   deployment_branch_policy {
     protected_branches     = true
     custom_branch_policies = false
