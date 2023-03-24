@@ -6,7 +6,7 @@ on:
 jobs:
   update:
     runs-on: ubuntu-22.04
-    environment: shikanime-studio-wakabox
+    environment: shikanime-wakabox
     steps:
       - name: Update Github Gist
         uses: matchai/waka-box@v5.0.0
