@@ -2,6 +2,7 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 brew 'mas'
+brew 'diffutils'
 
 # Cloud
 brew 'terraform'
