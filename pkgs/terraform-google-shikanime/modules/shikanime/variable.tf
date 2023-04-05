@@ -19,6 +19,14 @@ variable "github" {
   default = {
     owner = "shikanime"
     ssh_keys = {
+      ishtar = {
+        name               = "Ishtar"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPW5kSIFStkESjXOavgJg75Wfxnsml7+ZT0grMnYNzwC"
+      }
+      ishtar_sfeir = {
+        name               = "Ishtar Sfeir"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIJP9KGbfSjJ4RxrapCoWeIYASQYjwS7Cd+jha3POFyy"
+      }
       altashar = {
         name               = "Altashar"
         public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAB8e13bjswnhfuYYpztBESPf/gkbkdGE46kC++tNOCX"
