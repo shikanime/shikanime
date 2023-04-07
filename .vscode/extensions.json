@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"jnoortheen.nix-ide",
+		"mkhl.direnv",
+		"yzhang.markdown-all-in-one",
+		"James-Yu.latex-workshop",
+		"SonarSource.sonarlint-vscode"
+	],
+}
