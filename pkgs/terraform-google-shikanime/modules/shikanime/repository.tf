@@ -5,7 +5,7 @@ data "github_repository" "default" {
 resource "github_actions_secret" "cachix_token" {
   repository      = data.github_repository.default.name
   secret_name     = "CACHIX_AUTH_TOKEN"
-  encrypted_value = base64encode(var.cachix.token)
+  plaintext_value = var.cachix.token
 }
 
 resource "github_repository_environment" "wakabox" {
@@ -54,5 +54,5 @@ resource "github_actions_environment_secret" "algorithm_cachix_token" {
   repository      = data.github_repository.algorithm.name
   environment     = github_repository_environment.algorithm.environment
   secret_name     = "CACHIX_AUTH_TOKEN"
-  encrypted_value = base64encode(var.cachix.token)
+  plaintext_value = var.cachix.token
 }
