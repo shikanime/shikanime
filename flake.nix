@@ -106,8 +106,9 @@
           modules = [
             ./modules/hosts/nishir.nix
             ./modules/profiles/base.nix
+            ./modules/users/automata.nix
             ./modules/remote/ssh.nix
-            nixos-hardware.nixosModules.raspberry-pi-4
+            # nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
       };
