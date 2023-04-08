@@ -1,8 +1,8 @@
-{ modulePath, ... }:
+{ modulesPath, ... }:
 
 {
   imports = [
-    "${modulePath}/installer/sd-card/sd-image-aarch64.nix"
+    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
   ];
 
   networking = {
@@ -14,12 +14,6 @@
         "wlan0"
       ];
     };
-  };
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/nixos";
-    fsType = "ext4";
-    options = [ "noatime" ];
   };
 
   boot = {
@@ -34,10 +28,6 @@
       "cgroup_memory=1"
       "cgroup_enable=memory"
     ];
-    loader.raspberryPi = {
-      enable = true;
-      version = 4;
-    };
   };
 
   hardware.raspberry-pi."4" = {

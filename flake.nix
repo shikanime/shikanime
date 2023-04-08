@@ -107,11 +107,10 @@
           ];
         };
         nishir = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          system = "aarch64-linux";
           modules = [
             ./modules/profiles/nishir.nix
             ./modules/profiles/base.nix
-            ./modules/profiles/iso-image.nix
             ./modules/remote/ssh.nix
             nixos-hardware.nixosModules.raspberry-pi-4
           ];
