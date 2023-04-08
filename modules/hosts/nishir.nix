@@ -17,6 +17,7 @@
   };
 
   boot = {
+    binfmt.emulatedSystems = [ "aarch64-linux" ];
     tmpOnTmpfs = true;
     kernelParams = [
       "8250.nr_uarts=1"
