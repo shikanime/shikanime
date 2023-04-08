@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # Deploy a nice default user friendly shell prompt
+  programs.zsh.enable = true;
+
   # TODO: I'm exclusively stealing the Syncthing service
   services.syncthing = {
     user = "devas";

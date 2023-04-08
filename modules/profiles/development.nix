@@ -19,9 +19,6 @@
     containers.enable = true;
   };
 
-  # Deploy a nice default user friendly shell prompt
-  programs.zsh.enable = true;
-
   # Cache SSH keys
   programs.ssh.startAgent = true;
 
