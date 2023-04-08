@@ -28,8 +28,8 @@ jobs:
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
       - name: Build
         run: |
-          echo "RELEASE_PATH=$(nix build .#${{ matrix.package }} --print-out-paths)" >> "$GITHUB_ENV"
+          echo "ARTIFACT_PATH=$(nix build .#${{ matrix.package }} --print-out-paths)" >> "$GITHUB_ENV"
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.package }}
-          path: ${{ env.RELEASE_PATH }}
+          path: ${{ env.ARTIFACT_PATH }}
