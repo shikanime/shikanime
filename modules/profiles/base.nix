@@ -1,10 +1,4 @@
-{ modulesPath, ... }:
-
 {
-  imports = [
-    "${modulesPath}/profiles/hardened.nix"
-  ];
-
   # Clearnup disk weekly
   nix.gc = {
     automatic = true;
