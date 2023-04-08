@@ -23,6 +23,9 @@
       "console=ttyAMA0,115200"
       "console=tty1"
       "cma=128M"
+      "cgroup_enable=cpuset"
+      "cgroup_memory=1"
+      "cgroup_enable=memory"
     ];
     loader.raspberryPi = {
       enable = true;
