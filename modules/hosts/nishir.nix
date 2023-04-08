@@ -1,4 +1,4 @@
-{ pkgs, modulesPath, ... }:
+{ modulesPath, ... }:
 
 {
   imports = [
@@ -14,9 +14,6 @@
     "cgroup_memory=1"
     "cgroup_enable=memory"
   ];
-
-  # https://github.com/NixOS/nixpkgs/issues/191095
-  boot.kernelPackages = pkgs.linuxKernel.kernels.linux_rpi4;
 
   hardware.raspberry-pi."4" = {
     fkms-3d.enable = true;
