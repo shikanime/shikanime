@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   # Allow cgroup memory resize
   boot.kernelParams = [ "cgroup_enable=memory" "swapaccount=1" ];
@@ -23,12 +21,6 @@
 
   # Deploy a nice default user friendly shell prompt
   programs.zsh.enable = true;
-
-  # Manage fonts
-  fonts = {
-    fontDir.enable = true;
-    fonts = [ pkgs.fira-code ];
-  };
 
   # Cache SSH keys
   programs.ssh.startAgent = true;
