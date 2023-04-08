@@ -112,6 +112,7 @@
             ./modules/profiles/nishir.nix
             ./modules/profiles/base.nix
             ./modules/profiles/iso-image.nix
+            ./modules/remote/ssh.nix
             nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
