@@ -1,9 +1,6 @@
 { pkgs, ... }:
 
 {
-  # Deploy a nice default user friendly shell prompt
-  programs.zsh.enable = true;
-
   # TODO: I'm exclusively stealing the Syncthing service
   services.syncthing = {
     user = "devas";
@@ -81,7 +78,7 @@
       ../home/users/lvmh.nix
       ../home/users/birdz.nix
       ../home/users/amadeus.nix
-      ../home/profiles/base.nix
+      ../home/profiles/workstation.nix
       ../home/profiles/xdg.nix
       ../home/profiles/vcs.nix
       ../home/profiles/cc.nix
