@@ -9,16 +9,11 @@
     hostName = "nishir";
     wireless = {
       enable = true;
-      interfaces = [
-        "eth0"
-        "wlan0"
-      ];
+      interfaces = [ "eth0" "wlan0" ];
     };
   };
 
   boot = {
-    binfmt.emulatedSystems = [ "aarch64-linux" ];
-    tmpOnTmpfs = true;
     kernelParams = [
       "8250.nr_uarts=1"
       "console=ttyAMA0,115200"
