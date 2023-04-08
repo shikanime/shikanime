@@ -62,12 +62,10 @@
             ./modules/hosts/elkia.nix
             ./modules/profiles/base.nix
             ./modules/profiles/development.nix
+            ./modules/profiles/syncthing.nix
+            ./modules/profiles/jetbrains.nix
+            ./modules/profiles/vscode.nix
             ./modules/users/devas.nix
-            ./modules/remote/ssh.nix
-            ./modules/remote/syncthing.nix
-            ./modules/remote/time.nix
-            ./modules/remote/jetbrains.nix
-            ./modules/remote/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
@@ -77,12 +75,10 @@
             ./modules/hosts/elvengard.nix
             ./modules/profiles/base.nix
             ./modules/profiles/development.nix
+            ./modules/profiles/syncthing.nix
+            ./modules/profiles/jetbrains.nix
+            ./modules/profiles/vscode.nix
             ./modules/users/devas.nix
-            ./modules/remote/ssh.nix
-            ./modules/remote/syncthing.nix
-            ./modules/remote/time.nix
-            ./modules/remote/jetbrains.nix
-            ./modules/remote/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
@@ -92,12 +88,10 @@
             ./modules/hosts/oceando.nix
             ./modules/profiles/base.nix
             ./modules/profiles/development.nix
+            ./modules/profiles/syncthing.nix
+            ./modules/profiles/jetbrains.nix
+            ./modules/profiles/vscode.nix
             ./modules/users/devas.nix
-            ./modules/remote/ssh.nix
-            ./modules/remote/syncthing.nix
-            ./modules/remote/time.nix
-            ./modules/remote/jetbrains.nix
-            ./modules/remote/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };

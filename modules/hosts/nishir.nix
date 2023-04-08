@@ -42,5 +42,19 @@
     role = "server";
   };
 
+  # Enable the Bonjour protocol for local network discovery
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      workstation = true;
+    };
+  };
+
+  # Enable Network Time Protocol
+  services.ntp.enable = true;
+
   networking.hostName = "nishir";
 }
