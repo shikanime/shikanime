@@ -46,7 +46,7 @@
           default = devenv.lib.mkShell {
             inherit inputs pkgs;
             modules = [
-              ./modules/devenv/machine.nix
+              ./modules/devenv/base.nix
               ./modules/devenv/latex.nix
               ./modules/devenv/cloud.nix
             ];
