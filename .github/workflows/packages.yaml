@@ -10,7 +10,7 @@ jobs:
   build:
     strategy:
       matrix:
-        package: [nishir curriculumVitae]
+        package: [nishir, curriculumVitae]
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
