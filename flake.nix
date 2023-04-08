@@ -57,7 +57,6 @@
           system = "x86_64-linux";
           modules = [
             ./modules/virtualisation/qemu.nix
-            ./modules/profiles/qcow-image.nix
             ./modules/profiles/base.nix
             ./modules/profiles/development.nix
             ./modules/profiles/home.nix
