@@ -60,7 +60,6 @@
           system = "x86_64-linux";
           modules = [
             ./modules/hosts/elkia.nix
-            ./modules/profiles/base.nix
             ./modules/profiles/machine.nix
             ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
