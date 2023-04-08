@@ -35,7 +35,6 @@
       packages = nixpkgs.lib.genAttrs supportedSystems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
-          terraform-google-shikanime = pkgs.callPackage ./pkgs/terraform-google-shikanime/default.nix { };
           elkia = self.nixosConfigurations.elkia.config.system.build.qcowImage;
           elvengard = self.nixosConfigurations.elvengard.config.system.build.hypervImage;
           nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
