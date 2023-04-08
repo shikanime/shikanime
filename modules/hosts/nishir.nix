@@ -15,13 +15,16 @@
     "cgroup_enable=memory"
   ];
 
-  # hardware.raspberry-pi."4" = {
-  #   fkms-3d.enable = true;
-  #   audio.enable = true;
-  #   dwc2.enable = true;
-  #   poe-hat.enable = true;
-  #   poe-plus-hat.enable = true;
-  # };
+  # https://github.com/NixOS/nixpkgs/issues/191095
+  boot.kernelPackages = pkgs.linuxKernel.kernels.linux_rpi4;
+
+  hardware.raspberry-pi."4" = {
+    fkms-3d.enable = true;
+    audio.enable = true;
+    dwc2.enable = true;
+    poe-hat.enable = true;
+    poe-plus-hat.enable = true;
+  };
 
   # https://github.com/NixOS/nixpkgs/issues/154163#issuecomment-1008362877
   nixpkgs.overlays = [
