@@ -33,6 +33,14 @@
   #   poe-plus-hat.enable = true;
   # };
 
+  # https://github.com/NixOS/nixpkgs/issues/154163#issuecomment-1008362877
+  nixpkgs.overlays = [
+    (_: super: {
+      makeModulesClosure = x:
+        super.makeModulesClosure (x // { allowMissing = true; });
+    })
+  ];
+
   # This is required so that pod can reach the API server (running on port 6443 by default)
   networking.firewall = {
     enable = true;
