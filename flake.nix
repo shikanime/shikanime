@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
+    nixos-hardware.url = "github:nixos/nixos-hardware";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,7 +25,7 @@
     ];
   };
 
-  outputs = { nixpkgs, home-manager, devenv, ... }@inputs:
+  outputs = { nixpkgs, nixos-hardware, home-manager, devenv, ... }@inputs:
     let
       supportedLinuxSystems = with nixpkgs.lib.platforms; nixpkgs.lib.lists.intersectLists x86_64 linux;
       supportedDarwinSystems = with nixpkgs.lib.platforms; nixpkgs.lib.lists.intersectLists x86_64 darwin;
@@ -103,6 +104,15 @@
             ./modules/remote/jetbrains.nix
             ./modules/remote/vscode.nix
             home-manager.nixosModules.home-manager
+          ];
+        };
+        nishir = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./modules/profiles/nishir.nix
+            ./modules/profiles/base.nix
+            ./modules/profiles/iso-image.nix
+            nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
       };
