@@ -27,11 +27,9 @@ jobs:
           name: shikanime
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
       - name: Build
-        run: nix build .#${{ matrix.package }}
-      - name: Export output path
-        run: echo "RELEASE_PATH=$(readlink -f result)" >> "$GITHUB_ENV"
-      - name: Export build artifacts
-        uses: actions/upload-artifact@v2
+        run: |
+          echo "RELEASE_PATH=$(readlink -f "$(nix build .#${{ matrix.package }} --print-out-paths)")" >> "$GITHUB_ENV"
+      - uses: actions/upload-artifact@v2
         with:
           name: Elven Gard
           path: ${{ env.RELEASE_PATH }}
