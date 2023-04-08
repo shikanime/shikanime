@@ -44,7 +44,7 @@
   # This is required so that pod can reach the API server (running on port 6443 by default)
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 6443 ];
+    allowedTCPPorts = [ 6443 22 ];
   };
 
   services.k3s = {
