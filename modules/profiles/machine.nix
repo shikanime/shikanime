@@ -1,17 +1,4 @@
-{ modulesPath, ... }:
-
 {
-  imports = [
-    "${modulesPath}/profiles/hardened.nix"
-  ];
-
-  # Clearnup disk weekly
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
-
   # Enable modern IPv6 support
   networking.enableIPv6 = true;
 
@@ -27,8 +14,29 @@
     "2001:4860:4860::8844"
   ];
 
+  # Enable the Bonjour protocol for local network discovery
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      workstation = true;
+    };
+  };
+
+  # Enable Network Time Protocol
+  services.ntp.enable = true;
+
   # Keep the system timezone up-to-date based on the current location
   services.localtimed.enable = true;
+
+  # Clearnup disk weekly
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

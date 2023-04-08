@@ -1,0 +1,1047 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "type": "text",
+      "version": 99,
+      "versionNonce": 458794506,
+      "isDeleted": false,
+      "id": "f3XNr_GZVnWxH7MiCqDTk",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -823.4465377927645,
+      "y": 271.5751717772264,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 473,
+      "height": 25,
+      "seed": 377909867,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "LtAMk5pcdIAnbpE5hDmoE",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987831760,
+      "link": "https://gist.github.com/nateinaction/79cc8254d1d3442afa92c0b404df6fb9",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Raspberry Pi 4 NixOS Kubernetes cluster config",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Raspberry Pi 4 NixOS Kubernetes cluster config"
+    },
+    {
+      "type": "text",
+      "version": 58,
+      "versionNonce": 1618220950,
+      "isDeleted": false,
+      "id": "Frpd4L7pSrFGHcIB9eofG",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -236.22113496073328,
+      "y": 265.68839199207014,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 385,
+      "height": 25,
+      "seed": 529089253,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "ksRNDFwE9n_MVNfW2BKTP",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987831760,
+      "link": "https://mgdm.net/weblog/nixos-on-raspberry-pi-4/",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Installing NixOS on the Raspberry Pi 4",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Installing NixOS on the Raspberry Pi 4"
+    },
+    {
+      "type": "text",
+      "version": 57,
+      "versionNonce": 573265098,
+      "isDeleted": false,
+      "id": "Dq8C1Uhf2EtTiPzUZYiL9",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 89.40325468770422,
+      "y": 91.51175624988264,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 353,
+      "height": 26,
+      "seed": 1343886475,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": "https://nix.dev/tutorials/installing-nixos-on-a-raspberry-pi",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Installing NixOS on a Raspberry Pi¶",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Installing NixOS on a Raspberry Pi¶"
+    },
+    {
+      "type": "text",
+      "version": 44,
+      "versionNonce": 1752741078,
+      "isDeleted": false,
+      "id": "YXNUcw-qohvrkmGhihRMq",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -323.87799531229575,
+      "y": 79.96488124988264,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 148,
+      "height": 25,
+      "seed": 1329735781,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "LtAMk5pcdIAnbpE5hDmoE",
+          "type": "arrow"
+        },
+        {
+          "id": "ksRNDFwE9n_MVNfW2BKTP",
+          "type": "arrow"
+        },
+        {
+          "id": "QKxoTgYYWVdeWfmCX-jtW",
+          "type": "arrow"
+        },
+        {
+          "id": "QbvmHxaOib07kqyME502e",
+          "type": "arrow"
+        },
+        {
+          "id": "ZAEDkl7DvABrDK-yZje_R",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Raspberry Pi 4",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Raspberry Pi 4"
+    },
+    {
+      "type": "arrow",
+      "version": 79,
+      "versionNonce": 3812234,
+      "isDeleted": false,
+      "id": "LtAMk5pcdIAnbpE5hDmoE",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -278.38580781229575,
+      "y": 112.42581874988264,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 143,
+      "height": 149.7578125,
+      "seed": 1478189419,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "YXNUcw-qohvrkmGhihRMq",
+        "focus": 0.10993783657225797,
+        "gap": 7.4609375
+      },
+      "endBinding": {
+        "elementId": "f3XNr_GZVnWxH7MiCqDTk",
+        "focus": 0.5822710070175812,
+        "gap": 9.39154052734375
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -143,
+          149.7578125
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 62,
+      "versionNonce": 1484237334,
+      "isDeleted": false,
+      "id": "ksRNDFwE9n_MVNfW2BKTP",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -246.97955781229575,
+      "y": 116.12894374988264,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 123.015625,
+      "height": 144.1640625,
+      "seed": 72811013,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "YXNUcw-qohvrkmGhihRMq",
+        "focus": 0.20426285641890055,
+        "gap": 11.1640625
+      },
+      "endBinding": {
+        "elementId": "Frpd4L7pSrFGHcIB9eofG",
+        "focus": -0.31980016280446005,
+        "gap": 5.3953857421875
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          123.015625,
+          144.1640625
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 267,
+      "versionNonce": 1270884938,
+      "isDeleted": false,
+      "id": "i3ImrDcy76HWgYWPO39B6",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -166.87799531229575,
+      "y": 92.73050624988264,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 245.1484375,
+      "height": 17.953125,
+      "seed": 59795531,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": null,
+      "endBinding": null,
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          245.1484375,
+          17.953125
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 53,
+      "versionNonce": 1868953430,
+      "isDeleted": false,
+      "id": "OQByPwkoBmOs69QqAUuns",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 65.29096693837278,
+      "y": -75.07549046377426,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 250,
+      "height": 26,
+      "seed": 1895211667,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "QKxoTgYYWVdeWfmCX-jtW",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987831760,
+      "link": "https://nix.dev/tutorials/installing-nixos-on-a-raspberry-pi",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Booting NixOS live image¶",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Booting NixOS live image¶"
+    },
+    {
+      "type": "arrow",
+      "version": 141,
+      "versionNonce": 462967050,
+      "isDeleted": false,
+      "id": "QKxoTgYYWVdeWfmCX-jtW",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -180.17402282387033,
+      "y": 68.92450953622574,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 288.8811566458575,
+      "height": 108,
+      "seed": 1573574707,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "YXNUcw-qohvrkmGhihRMq",
+        "focus": 0.06115037535605133,
+        "gap": 11.040371713656896
+      },
+      "endBinding": {
+        "elementId": "OQByPwkoBmOs69QqAUuns",
+        "focus": 0.1469920245074737,
+        "gap": 7
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          288.8811566458575,
+          -108
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 52,
+      "versionNonce": 1167629462,
+      "isDeleted": false,
+      "id": "vUX5D2uzVJdraYGzIuhAA",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -763.7090330616272,
+      "y": -151.07549046377426,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 833,
+      "height": 25,
+      "seed": 1207641523,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "QbvmHxaOib07kqyME502e",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987831760,
+      "link": "https://rbf.dev/blog/2020/05/custom-nixos-build-for-raspberry-pis/",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "NixOS on a Raspberry Pi: creating a custom SD image with OpenSSH out of the box",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "NixOS on a Raspberry Pi: creating a custom SD image with OpenSSH out of the box"
+    },
+    {
+      "type": "arrow",
+      "version": 84,
+      "versionNonce": 1933418442,
+      "isDeleted": false,
+      "id": "QbvmHxaOib07kqyME502e",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -239.70903306162722,
+      "y": 66.92450953622574,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 31,
+      "height": 182,
+      "seed": 1506720947,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "YXNUcw-qohvrkmGhihRMq",
+        "focus": 0.1907186787012404,
+        "gap": 13.040371713656896
+      },
+      "endBinding": {
+        "elementId": "vUX5D2uzVJdraYGzIuhAA",
+        "focus": -0.17317775838195051,
+        "gap": 11
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -31,
+          -182
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 85,
+      "versionNonce": 1935939658,
+      "isDeleted": false,
+      "id": "Xaj4ndGXQg29pfqEBQ3QG",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1622.5880478025301,
+      "y": 39.753380695788564,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 931,
+      "height": 25,
+      "seed": 734233994,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "ZAEDkl7DvABrDK-yZje_R",
+          "type": "arrow"
+        },
+        {
+          "id": "OtSrj_roEIOepLI9sINNT",
+          "type": "arrow"
+        },
+        {
+          "id": "SHqI9QasK6Ne7WTGGnHsa",
+          "type": "arrow"
+        },
+        {
+          "id": "t_8iFYIL-ParfaOesUqdo",
+          "type": "arrow"
+        },
+        {
+          "id": "FIQ0lBtwLWmoLBHIvKUZn",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987841602,
+      "link": "https://github.com/NixOS/nixpkgs/issues/154163",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Building a NixOS system with the linux_rpi* kernels fails with Module ... not found in directory",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Building a NixOS system with the linux_rpi* kernels fails with Module ... not found in directory"
+    },
+    {
+      "type": "arrow",
+      "version": 53,
+      "versionNonce": 785061514,
+      "isDeleted": false,
+      "id": "ZAEDkl7DvABrDK-yZje_R",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -329.5997665525301,
+      "y": 91.71077815672606,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 356.125,
+      "height": 35.1171875,
+      "seed": 299719882,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "YXNUcw-qohvrkmGhihRMq",
+        "focus": -0.35900216784282923,
+        "gap": 5.721771240234375
+      },
+      "endBinding": {
+        "elementId": "Xaj4ndGXQg29pfqEBQ3QG",
+        "focus": -0.721552694547272,
+        "gap": 5.86328125
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -356.125,
+          -35.1171875
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 23,
+      "versionNonce": 1207889686,
+      "isDeleted": false,
+      "id": "s7GMpv82p31G1LPfHpnXo",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1731.2638290525301,
+      "y": 184.67195979735106,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 383,
+      "height": 25,
+      "seed": 1965225034,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": "https://discourse.nixos.org/t/nixos-raspberry-pi-no-hdmi-during-boot/23100",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "NixOs raspberry pi: no hdmi during boot",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "NixOs raspberry pi: no hdmi during boot"
+    },
+    {
+      "type": "arrow",
+      "version": 149,
+      "versionNonce": 1861989706,
+      "isDeleted": false,
+      "id": "5-6hgLcN1Hn9HTDlzgXV6",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1262.1232040525301,
+      "y": 76.63265315672606,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 238.578125,
+      "height": 99.15625,
+      "seed": 347698826,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": null,
+      "endBinding": null,
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -238.578125,
+          99.15625
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 16,
+      "versionNonce": 1471978582,
+      "isDeleted": false,
+      "id": "JkfrII2riDQwDStmG6pTq",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1896.8278549314364,
+      "y": 113.79695979735106,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 129,
+      "height": 25,
+      "seed": 1562284438,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "OtSrj_roEIOepLI9sINNT",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987831760,
+      "link": "https://github.com/cwi-foosball/foosball",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Foosball CWI",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Foosball CWI"
+    },
+    {
+      "type": "arrow",
+      "version": 38,
+      "versionNonce": 86670346,
+      "isDeleted": false,
+      "id": "OtSrj_roEIOepLI9sINNT",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1511.0997665525301,
+      "y": 74.42952815672606,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 335.6953125,
+      "height": 28.234375,
+      "seed": 1165581130,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "Xaj4ndGXQg29pfqEBQ3QG",
+        "focus": 0.14711504524630162,
+        "gap": 9.6761474609375
+      },
+      "endBinding": {
+        "elementId": "JkfrII2riDQwDStmG6pTq",
+        "focus": -1.3863306552057815,
+        "gap": 11.133056640625
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -335.6953125,
+          28.234375
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 18,
+      "versionNonce": 366125462,
+      "isDeleted": false,
+      "id": "sDz1tEB-cbE1hWIQzqYf6",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1867.4186752439364,
+      "y": 321.58309260985106,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 941,
+      "height": 25,
+      "seed": 1918472778,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "SHqI9QasK6Ne7WTGGnHsa",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987831760,
+      "link": "https://github.com/NixOS/nixpkgs/issues/126755",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Cross-compiling SD card image for Rasperry Pi (armv6l) on nixos-unstable branch fails #126755",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Cross-compiling SD card image for Rasperry Pi (armv6l) on nixos-unstable branch fails #126755"
+    },
+    {
+      "type": "arrow",
+      "version": 54,
+      "versionNonce": 1599236810,
+      "isDeleted": false,
+      "id": "SHqI9QasK6Ne7WTGGnHsa",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1174.0216415525301,
+      "y": 75.12484065672606,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 161.3828125,
+      "height": 234.640625,
+      "seed": 1039649814,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "Xaj4ndGXQg29pfqEBQ3QG",
+        "focus": 0.0025372361860794097,
+        "gap": 10.3714599609375
+      },
+      "endBinding": {
+        "elementId": "sDz1tEB-cbE1hWIQzqYf6",
+        "focus": 0.0934859485708365,
+        "gap": 11.817626953125
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -161.3828125,
+          234.640625
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 23,
+      "versionNonce": 1165360854,
+      "isDeleted": false,
+      "id": "y6fqCI7g5_C0gUogZ5Je7",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1736.6860702634676,
+      "y": -122.39639957764894,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 883,
+      "height": 25,
+      "seed": 682940886,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "t_8iFYIL-ParfaOesUqdo",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987831760,
+      "link": "https://github.com/NixOS/nixpkgs/issues/179701",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Raspberry Pi 4: No HDMI console output after upgrade from 21.11 ceaca998029 #179701",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Raspberry Pi 4: No HDMI console output after upgrade from 21.11 ceaca998029 #179701"
+    },
+    {
+      "type": "arrow",
+      "version": 38,
+      "versionNonce": 1947107722,
+      "isDeleted": false,
+      "id": "t_8iFYIL-ParfaOesUqdo",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1303.4982040525301,
+      "y": 31.288903156726064,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 54.2265625,
+      "height": 113.84375,
+      "seed": 1984343114,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987831760,
+      "link": "",
+      "locked": false,
+      "startBinding": {
+        "elementId": "Xaj4ndGXQg29pfqEBQ3QG",
+        "focus": -0.289369157387974,
+        "gap": 8.4644775390625
+      },
+      "endBinding": {
+        "elementId": "y6fqCI7g5_C0gUogZ5Je7",
+        "focus": 0.16887129663019607,
+        "gap": 14.841552734375
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -54.2265625,
+          -113.84375
+        ]
+      ]
+    },
+    {
+      "id": "pbi9JKPJ03lEr7kFNdcoY",
+      "type": "text",
+      "x": -3376.2960751946493,
+      "y": 21.429116072945703,
+      "width": 1415,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1516381846,
+      "version": 55,
+      "versionNonce": 713884170,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "FIQ0lBtwLWmoLBHIvKUZn",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987847852,
+      "link": "https://github.com/NixOS/nixpkgs/issues/191095",
+      "locked": false,
+      "text": "Raspberry Pi 4 build of NixOS appears to be broken (boots to console and then black screen; green LED flashes twice intermittently) #191095",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Raspberry Pi 4 build of NixOS appears to be broken (boots to console and then black screen; green LED flashes twice intermittently) #191095"
+    },
+    {
+      "id": "FIQ0lBtwLWmoLBHIvKUZn",
+      "type": "arrow",
+      "x": -1628.707513182931,
+      "y": 49.442358566599395,
+      "width": 328.25671386718705,
+      "height": 9.600781572828367,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 18535178,
+      "version": 78,
+      "versionNonce": 935376470,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1680987842747,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -328.25671386718705,
+          -9.600781572828367
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "Xaj4ndGXQg29pfqEBQ3QG",
+        "focus": -0.4154240586679593,
+        "gap": 6.11946538040047
+      },
+      "endBinding": {
+        "elementId": "pbi9JKPJ03lEr7kFNdcoY",
+        "focus": -0.4491046288479839,
+        "gap": 4.33184814453125
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

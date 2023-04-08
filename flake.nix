@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
+    nixos-hardware.url = "github:nixos/nixos-hardware";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,17 +25,15 @@
     ];
   };
 
-  outputs = { nixpkgs, home-manager, devenv, ... }@inputs:
-    let
-      supportedLinuxSystems = with nixpkgs.lib.platforms; nixpkgs.lib.lists.intersectLists x86_64 linux;
-      supportedDarwinSystems = with nixpkgs.lib.platforms; nixpkgs.lib.lists.intersectLists x86_64 darwin;
-      supportedSystems = supportedLinuxSystems ++ supportedDarwinSystems;
-    in
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, devenv, ... }@inputs:
+    let supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" ]; in
     {
       packages = nixpkgs.lib.genAttrs supportedSystems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
-          curriculumVitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
-          terraformGoogleShikanime = pkgs.callPackage ./pkgs/terraform-google-shikanime/default.nix { };
+          curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
+          elkia = self.nixosConfigurations.elkia.config.system.build.qcowImage;
+          elvengard = self.nixosConfigurations.elvengard.config.system.build.hypervImage;
+          nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
         }
       );
 
@@ -55,54 +54,48 @@
         elkia = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/virtualisation/qemu.nix
-            ./modules/profiles/qcow-image.nix
-            ./modules/profiles/base.nix
-            ./modules/profiles/development.nix
-            ./modules/profiles/home.nix
-            ./modules/profiles/elkia.nix
+            ./modules/hosts/elkia.nix
+            ./modules/profiles/machine.nix
+            ./modules/profiles/workstation.nix
+            ./modules/profiles/syncthing.nix
+            ./modules/profiles/jetbrains.nix
+            ./modules/profiles/vscode.nix
             ./modules/users/devas.nix
-            ./modules/remote/ssh.nix
-            ./modules/remote/syncthing.nix
-            ./modules/remote/time.nix
-            ./modules/remote/jetbrains.nix
-            ./modules/remote/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
         elvengard = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/virtualisation/hyperv.nix
-            ./modules/profiles/base.nix
-            ./modules/profiles/development.nix
-            ./modules/profiles/home.nix
-            ./modules/profiles/elvengard.nix
+            ./modules/hosts/elvengard.nix
+            ./modules/profiles/machine.nix
+            ./modules/profiles/workstation.nix
+            ./modules/profiles/syncthing.nix
+            ./modules/profiles/jetbrains.nix
+            ./modules/profiles/vscode.nix
             ./modules/users/devas.nix
-            ./modules/remote/ssh.nix
-            ./modules/remote/syncthing.nix
-            ./modules/remote/time.nix
-            ./modules/remote/jetbrains.nix
-            ./modules/remote/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
         oceando = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/virtualisation/docker.nix
-            ./modules/profiles/docker-container.nix
-            ./modules/profiles/base.nix
-            ./modules/profiles/development.nix
-            ./modules/profiles/home.nix
-            ./modules/profiles/oceando.nix
+            ./modules/hosts/oceando.nix
+            ./modules/profiles/machine.nix
+            ./modules/profiles/workstation.nix
+            ./modules/profiles/syncthing.nix
+            ./modules/profiles/jetbrains.nix
+            ./modules/profiles/vscode.nix
             ./modules/users/devas.nix
-            ./modules/remote/ssh.nix
-            ./modules/remote/syncthing.nix
-            ./modules/remote/time.nix
-            ./modules/remote/jetbrains.nix
-            ./modules/remote/vscode.nix
             home-manager.nixosModules.home-manager
+          ];
+        };
+        nishir = nixpkgs.lib.nixosSystem {
+          system = "aarch64-linux";
+          modules = [
+            ./modules/hosts/nishir.nix
+            ./modules/profiles/machine.nix
+            nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
       };
@@ -126,7 +119,7 @@
             ./modules/home/users/birdz.nix
             ./modules/home/users/amadeus.nix
             ./modules/home/users/renault.nix
-            ./modules/home/profiles/base.nix
+            ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/vcs.nix
             ./modules/home/profiles/cc.nix
             ./modules/home/profiles/ruby.nix
@@ -162,7 +155,7 @@
             ./modules/home/users/amadeus.nix
             ./modules/home/users/renault.nix
             ./modules/home/profiles/wsl.nix
-            ./modules/home/profiles/base.nix
+            ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
             ./modules/home/profiles/vcs.nix
             ./modules/home/profiles/cc.nix
@@ -189,7 +182,7 @@
           modules = [
             ./modules/home/hosts/vscode.nix
             ./modules/home/profiles/devcontainer.nix
-            ./modules/home/profiles/base.nix
+            ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
           ];
         };

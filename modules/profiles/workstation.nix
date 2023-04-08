@@ -1,6 +1,23 @@
-{ pkgs, ... }:
-
 {
+  # Configure Home Manager to use NixOS global packages
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
+
+  # Deploy a nice default user friendly shell prompt
+  programs.zsh.enable = true;
+
+  # Enable the OpenSSH daemon
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
+      X11Forwarding = true;
+    };
+  };
+
   # Allow cgroup memory resize
   boot.kernelParams = [ "cgroup_enable=memory" "swapaccount=1" ];
 
@@ -19,15 +36,6 @@
   virtualisation = {
     containerd.enable = true;
     containers.enable = true;
-  };
-
-  # Deploy a nice default user friendly shell prompt
-  programs.zsh.enable = true;
-
-  # Manage fonts
-  fonts = {
-    fontDir.enable = true;
-    fonts = [ pkgs.fira-code ];
   };
 
   # Cache SSH keys

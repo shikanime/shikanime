@@ -1,10 +1,11 @@
 { config, pkgs, lib, modulesPath, ... }:
 
-with lib;
-
 {
   imports = [
     "${modulesPath}/profiles/qemu-guest.nix"
+    "${modulesPath}/profiles/headless.nix"
+    "${modulesPath}/profiles/hardened.nix"
+    "${modulesPath}/virtualisation/qemu-vm.nix"
   ];
 
   system.build.qcowImage = import "${pkgs.path}/nixos/lib/make-disk-image.nix" {
@@ -12,4 +13,6 @@ with lib;
     diskSize = 64 * 1024;
     format = "qcow2";
   };
+
+  networking.hostName = "elkia";
 }

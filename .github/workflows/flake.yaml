@@ -1,15 +1,18 @@
 name: Check Flake
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   check:
     runs-on: ubuntu-22.04
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Prepare Nix environment
-        uses: cachix/install-nix-action@v15
-      - name: Connect Shikanime Nix cache
-        uses: cachix/cachix-action@v10
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v19
+      - uses: cachix/cachix-action@v12
         with:
           name: shikanime
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}

@@ -78,7 +78,7 @@
       ../home/users/lvmh.nix
       ../home/users/birdz.nix
       ../home/users/amadeus.nix
-      ../home/profiles/base.nix
+      ../home/profiles/workstation.nix
       ../home/profiles/xdg.nix
       ../home/profiles/vcs.nix
       ../home/profiles/cc.nix
