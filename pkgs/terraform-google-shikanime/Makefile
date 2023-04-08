@@ -5,8 +5,8 @@ deps: shikanime-deps totalenergies-deps
 
 .PHONY: shikanime-deps
 shikanime-deps:
-	@terraform -chdir=modules/shikanime init
+	@terraform -chdir=modules/shikanime init -backend=false
 
 .PHONY: totalenergies-deps
 totalenergies-deps:
-	@terraform -chdir=modules/totalenergies init
+	@terraform -chdir=modules/totalenergies init -backend=false
