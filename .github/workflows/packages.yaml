@@ -3,12 +3,14 @@ on:
   push:
     tags:
       - v*.*.*
+    branches:
+      - feat/*
   workflow_dispatch:
 jobs:
   build:
     strategy:
       matrix:
-        package: [elkia elvengard curriculum-vitae]
+        package: [curriculumVitae]
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
