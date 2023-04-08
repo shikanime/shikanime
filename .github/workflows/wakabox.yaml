@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-22.04
     environment: shikanime-wakabox
     steps:
-      - name: Update Github Gist
-        uses: matchai/waka-box@v5.0.0
+      - uses: matchai/waka-box@v5.0.0
         env:
           GH_TOKEN: ${{ secrets.WAKABOX_GITHUB_TOKEN }}
           GIST_ID: ${{ vars.WAKABOX_GITHUB_GIST_ID }}
