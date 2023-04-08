@@ -61,7 +61,7 @@
           modules = [
             ./modules/hosts/elkia.nix
             ./modules/profiles/base.nix
-            ./modules/profiles/development.nix
+            ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
@@ -74,7 +74,7 @@
           modules = [
             ./modules/hosts/elvengard.nix
             ./modules/profiles/base.nix
-            ./modules/profiles/development.nix
+            ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
@@ -87,7 +87,7 @@
           modules = [
             ./modules/hosts/oceando.nix
             ./modules/profiles/base.nix
-            ./modules/profiles/development.nix
+            ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
