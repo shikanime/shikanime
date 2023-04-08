@@ -31,5 +31,5 @@ jobs:
           echo "RELEASE_PATH=$(readlink -f "$(nix build .#${{ matrix.package }} --print-out-paths)")" >> "$GITHUB_ENV"
       - uses: actions/upload-artifact@v2
         with:
-          name: Elven Gard
+          name: ${{ matrix.package }}
           path: ${{ env.RELEASE_PATH }}
