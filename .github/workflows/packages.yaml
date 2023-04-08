@@ -3,14 +3,16 @@ on:
   push:
     tags:
       - v*.*.*
-    branches:
-      - feat/*
   workflow_dispatch:
 jobs:
   build:
     strategy:
       matrix:
-        package: [nishir]
+        package:
+          - curriculumVitae
+          - terraformGoogleShikanime
+          - elkia
+          - elvengard
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
