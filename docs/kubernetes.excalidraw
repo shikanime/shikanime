@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 96,
-      "versionNonce": 380635030,
+      "version": 99,
+      "versionNonce": 458794506,
       "isDeleted": false,
       "id": "f3XNr_GZVnWxH7MiCqDTk",
       "fillStyle": "hachure",
@@ -30,7 +30,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680985491410,
+      "updated": 1680987831760,
       "link": "https://gist.github.com/nateinaction/79cc8254d1d3442afa92c0b404df6fb9",
       "locked": false,
       "fontSize": 20,
@@ -44,8 +44,8 @@
     },
     {
       "type": "text",
-      "version": 55,
-      "versionNonce": 1910924490,
+      "version": 58,
+      "versionNonce": 1618220950,
       "isDeleted": false,
       "id": "Frpd4L7pSrFGHcIB9eofG",
       "fillStyle": "hachure",
@@ -69,7 +69,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680985491410,
+      "updated": 1680987831760,
       "link": "https://mgdm.net/weblog/nixos-on-raspberry-pi-4/",
       "locked": false,
       "fontSize": 20,
@@ -83,8 +83,8 @@
     },
     {
       "type": "text",
-      "version": 54,
-      "versionNonce": 984186097,
+      "version": 57,
+      "versionNonce": 573265098,
       "isDeleted": false,
       "id": "Dq8C1Uhf2EtTiPzUZYiL9",
       "fillStyle": "hachure",
@@ -103,7 +103,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1680985943910,
+      "updated": 1680987831760,
       "link": "https://nix.dev/tutorials/installing-nixos-on-a-raspberry-pi",
       "locked": false,
       "fontSize": 20,
@@ -117,8 +117,8 @@
     },
     {
       "type": "text",
-      "version": 41,
-      "versionNonce": 1175665546,
+      "version": 44,
+      "versionNonce": 1752741078,
       "isDeleted": false,
       "id": "YXNUcw-qohvrkmGhihRMq",
       "fillStyle": "hachure",
@@ -158,7 +158,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -172,8 +172,8 @@
     },
     {
       "type": "arrow",
-      "version": 76,
-      "versionNonce": 1148688918,
+      "version": 79,
+      "versionNonce": 3812234,
       "isDeleted": false,
       "id": "LtAMk5pcdIAnbpE5hDmoE",
       "fillStyle": "hachure",
@@ -194,7 +194,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -223,8 +223,8 @@
     },
     {
       "type": "arrow",
-      "version": 59,
-      "versionNonce": 334969418,
+      "version": 62,
+      "versionNonce": 1484237334,
       "isDeleted": false,
       "id": "ksRNDFwE9n_MVNfW2BKTP",
       "fillStyle": "hachure",
@@ -245,7 +245,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -274,8 +274,8 @@
     },
     {
       "type": "arrow",
-      "version": 264,
-      "versionNonce": 904390486,
+      "version": 267,
+      "versionNonce": 1270884938,
       "isDeleted": false,
       "id": "i3ImrDcy76HWgYWPO39B6",
       "fillStyle": "hachure",
@@ -296,7 +296,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -317,8 +317,8 @@
     },
     {
       "type": "text",
-      "version": 50,
-      "versionNonce": 1013827231,
+      "version": 53,
+      "versionNonce": 1868953430,
       "isDeleted": false,
       "id": "OQByPwkoBmOs69QqAUuns",
       "fillStyle": "hachure",
@@ -342,7 +342,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680985943912,
+      "updated": 1680987831760,
       "link": "https://nix.dev/tutorials/installing-nixos-on-a-raspberry-pi",
       "locked": false,
       "fontSize": 20,
@@ -356,8 +356,8 @@
     },
     {
       "type": "arrow",
-      "version": 138,
-      "versionNonce": 1180470422,
+      "version": 141,
+      "versionNonce": 462967050,
       "isDeleted": false,
       "id": "QKxoTgYYWVdeWfmCX-jtW",
       "fillStyle": "hachure",
@@ -378,7 +378,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -407,8 +407,8 @@
     },
     {
       "type": "text",
-      "version": 49,
-      "versionNonce": 1156624330,
+      "version": 52,
+      "versionNonce": 1167629462,
       "isDeleted": false,
       "id": "vUX5D2uzVJdraYGzIuhAA",
       "fillStyle": "hachure",
@@ -432,7 +432,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": "https://rbf.dev/blog/2020/05/custom-nixos-build-for-raspberry-pis/",
       "locked": false,
       "fontSize": 20,
@@ -446,8 +446,8 @@
     },
     {
       "type": "arrow",
-      "version": 81,
-      "versionNonce": 1133152726,
+      "version": 84,
+      "versionNonce": 1933418442,
       "isDeleted": false,
       "id": "QbvmHxaOib07kqyME502e",
       "fillStyle": "hachure",
@@ -468,7 +468,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -497,8 +497,8 @@
     },
     {
       "type": "text",
-      "version": 81,
-      "versionNonce": 440391754,
+      "version": 85,
+      "versionNonce": 1935939658,
       "isDeleted": false,
       "id": "Xaj4ndGXQg29pfqEBQ3QG",
       "fillStyle": "hachure",
@@ -532,9 +532,13 @@
         {
           "id": "t_8iFYIL-ParfaOesUqdo",
           "type": "arrow"
+        },
+        {
+          "id": "FIQ0lBtwLWmoLBHIvKUZn",
+          "type": "arrow"
         }
       ],
-      "updated": 1680985598763,
+      "updated": 1680987841602,
       "link": "https://github.com/NixOS/nixpkgs/issues/154163",
       "locked": false,
       "fontSize": 20,
@@ -548,8 +552,8 @@
     },
     {
       "type": "arrow",
-      "version": 50,
-      "versionNonce": 2089213718,
+      "version": 53,
+      "versionNonce": 785061514,
       "isDeleted": false,
       "id": "ZAEDkl7DvABrDK-yZje_R",
       "fillStyle": "hachure",
@@ -570,7 +574,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -599,8 +603,8 @@
     },
     {
       "type": "text",
-      "version": 20,
-      "versionNonce": 455787850,
+      "version": 23,
+      "versionNonce": 1207889686,
       "isDeleted": false,
       "id": "s7GMpv82p31G1LPfHpnXo",
       "fillStyle": "hachure",
@@ -619,7 +623,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": "https://discourse.nixos.org/t/nixos-raspberry-pi-no-hdmi-during-boot/23100",
       "locked": false,
       "fontSize": 20,
@@ -633,8 +637,8 @@
     },
     {
       "type": "arrow",
-      "version": 117,
-      "versionNonce": 365333590,
+      "version": 149,
+      "versionNonce": 1861989706,
       "isDeleted": false,
       "id": "5-6hgLcN1Hn9HTDlzgXV6",
       "fillStyle": "hachure",
@@ -655,7 +659,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985491411,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -676,8 +680,8 @@
     },
     {
       "type": "text",
-      "version": 13,
-      "versionNonce": 544092054,
+      "version": 16,
+      "versionNonce": 1471978582,
       "isDeleted": false,
       "id": "JkfrII2riDQwDStmG6pTq",
       "fillStyle": "hachure",
@@ -701,7 +705,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680985506042,
+      "updated": 1680987831760,
       "link": "https://github.com/cwi-foosball/foosball",
       "locked": false,
       "fontSize": 20,
@@ -715,8 +719,8 @@
     },
     {
       "type": "arrow",
-      "version": 35,
-      "versionNonce": 142523594,
+      "version": 38,
+      "versionNonce": 86670346,
       "isDeleted": false,
       "id": "OtSrj_roEIOepLI9sINNT",
       "fillStyle": "hachure",
@@ -737,7 +741,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985506046,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -766,8 +770,8 @@
     },
     {
       "type": "text",
-      "version": 15,
-      "versionNonce": 1606160650,
+      "version": 18,
+      "versionNonce": 366125462,
       "isDeleted": false,
       "id": "sDz1tEB-cbE1hWIQzqYf6",
       "fillStyle": "hachure",
@@ -791,7 +795,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680985527157,
+      "updated": 1680987831760,
       "link": "https://github.com/NixOS/nixpkgs/issues/126755",
       "locked": false,
       "fontSize": 20,
@@ -805,8 +809,8 @@
     },
     {
       "type": "arrow",
-      "version": 51,
-      "versionNonce": 378592406,
+      "version": 54,
+      "versionNonce": 1599236810,
       "isDeleted": false,
       "id": "SHqI9QasK6Ne7WTGGnHsa",
       "fillStyle": "hachure",
@@ -827,7 +831,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985527162,
+      "updated": 1680987831760,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -856,8 +860,8 @@
     },
     {
       "type": "text",
-      "version": 20,
-      "versionNonce": 369198218,
+      "version": 23,
+      "versionNonce": 1165360854,
       "isDeleted": false,
       "id": "y6fqCI7g5_C0gUogZ5Je7",
       "fillStyle": "hachure",
@@ -881,7 +885,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680985607112,
+      "updated": 1680987831760,
       "link": "https://github.com/NixOS/nixpkgs/issues/179701",
       "locked": false,
       "fontSize": 20,
@@ -895,8 +899,8 @@
     },
     {
       "type": "arrow",
-      "version": 35,
-      "versionNonce": 740937162,
+      "version": 38,
+      "versionNonce": 1947107722,
       "isDeleted": false,
       "id": "t_8iFYIL-ParfaOesUqdo",
       "fillStyle": "hachure",
@@ -917,7 +921,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1680985603342,
+      "updated": 1680987831760,
       "link": "",
       "locked": false,
       "startBinding": {
@@ -943,6 +947,96 @@
           -113.84375
         ]
       ]
+    },
+    {
+      "id": "pbi9JKPJ03lEr7kFNdcoY",
+      "type": "text",
+      "x": -3376.2960751946493,
+      "y": 21.429116072945703,
+      "width": 1415,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1516381846,
+      "version": 55,
+      "versionNonce": 713884170,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "FIQ0lBtwLWmoLBHIvKUZn",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987847852,
+      "link": "https://github.com/NixOS/nixpkgs/issues/191095",
+      "locked": false,
+      "text": "Raspberry Pi 4 build of NixOS appears to be broken (boots to console and then black screen; green LED flashes twice intermittently) #191095",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Raspberry Pi 4 build of NixOS appears to be broken (boots to console and then black screen; green LED flashes twice intermittently) #191095"
+    },
+    {
+      "id": "FIQ0lBtwLWmoLBHIvKUZn",
+      "type": "arrow",
+      "x": -1628.707513182931,
+      "y": 49.442358566599395,
+      "width": 328.25671386718705,
+      "height": 9.600781572828367,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 18535178,
+      "version": 78,
+      "versionNonce": 935376470,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1680987842747,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -328.25671386718705,
+          -9.600781572828367
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "Xaj4ndGXQg29pfqEBQ3QG",
+        "focus": -0.4154240586679593,
+        "gap": 6.11946538040047
+      },
+      "endBinding": {
+        "elementId": "pbi9JKPJ03lEr7kFNdcoY",
+        "focus": -0.4491046288479839,
+        "gap": 4.33184814453125
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
     }
   ],
   "appState": {
