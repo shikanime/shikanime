@@ -47,7 +47,7 @@
           default = devenv.lib.mkShell {
             inherit inputs pkgs;
             modules = [
-              ./modules/devenv/base.nix
+              ./modules/devenv/machine.nix
               ./modules/devenv/latex.nix
               ./modules/devenv/cloud.nix
             ];
@@ -61,6 +61,7 @@
           modules = [
             ./modules/hosts/elkia.nix
             ./modules/profiles/base.nix
+            ./modules/profiles/machine.nix
             ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
@@ -73,7 +74,7 @@
           system = "x86_64-linux";
           modules = [
             ./modules/hosts/elvengard.nix
-            ./modules/profiles/base.nix
+            ./modules/profiles/machine.nix
             ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
@@ -86,7 +87,7 @@
           system = "x86_64-linux";
           modules = [
             ./modules/hosts/oceando.nix
-            ./modules/profiles/base.nix
+            ./modules/profiles/machine.nix
             ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
@@ -99,7 +100,7 @@
           system = "aarch64-linux";
           modules = [
             ./modules/hosts/nishir.nix
-            ./modules/profiles/base.nix
+            ./modules/profiles/machine.nix
             nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
@@ -117,7 +118,7 @@
             ./modules/home/users/google.nix
             ./modules/home/users/shikanime.nix
             ./modules/home/users/sfeir.nix
-            ./modules/home/profiles/base.nix
+            ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/vcs.nix
             ./modules/home/profiles/cc.nix
             ./modules/home/profiles/ruby.nix
@@ -146,7 +147,7 @@
             ./modules/home/users/shikanime.nix
             ./modules/home/users/sfeir.nix
             ./modules/home/profiles/wsl.nix
-            ./modules/home/profiles/base.nix
+            ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
             ./modules/home/profiles/vcs.nix
             ./modules/home/profiles/cc.nix
@@ -173,7 +174,7 @@
           modules = [
             ./modules/home/hosts/vscode.nix
             ./modules/home/profiles/devcontainer.nix
-            ./modules/home/profiles/base.nix
+            ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
           ];
         };
