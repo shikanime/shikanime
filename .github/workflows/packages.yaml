@@ -11,8 +11,8 @@ jobs:
     strategy:
       matrix:
         package:
-          - curriculumVitae
-          - terraformGoogleShikanime
+          - curriculum-vitae
+          - terraform-google-shikanime
           - elkia
           - elvengard
     runs-on: ubuntu-22.04
