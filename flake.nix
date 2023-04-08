@@ -25,7 +25,7 @@
     ];
   };
 
-  outputs = { nixpkgs, nixos-hardware, home-manager, devenv, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, devenv, ... }@inputs:
     let
       supportedLinuxSystems = with nixpkgs.lib.platforms; nixpkgs.lib.lists.intersectLists x86_64 linux;
       supportedDarwinSystems = with nixpkgs.lib.platforms; nixpkgs.lib.lists.intersectLists x86_64 darwin;
@@ -36,6 +36,9 @@
         let pkgs = import nixpkgs { inherit system; }; in {
           curriculumVitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
           terraformGoogleShikanime = pkgs.callPackage ./pkgs/terraform-google-shikanime/default.nix { };
+          elkia = self.nixosConfigurations.elkia.config.system.build.qcowImage;
+          elvengard = self.nixosConfigurations.elvengard.config.system.build.hypervImage;
+          nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
         }
       );
 
