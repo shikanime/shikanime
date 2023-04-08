@@ -3,7 +3,10 @@
     hostName = "nishir";
     wireless = {
       enable = true;
-      interfaces = [ "wlan0" ];
+      interfaces = [
+        "eth0"
+        "wlan0"
+      ];
     };
   };
 
