@@ -26,11 +26,7 @@
   };
 
   outputs = { self, nixpkgs, nixos-hardware, home-manager, devenv, ... }@inputs:
-    let
-      supportedLinuxSystems = with nixpkgs.lib.platforms; nixpkgs.lib.lists.intersectLists x86_64 linux;
-      supportedDarwinSystems = with nixpkgs.lib.platforms; nixpkgs.lib.lists.intersectLists x86_64 darwin;
-      supportedSystems = supportedLinuxSystems ++ supportedDarwinSystems;
-    in
+    let supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" ]; in
     {
       packages = nixpkgs.lib.genAttrs supportedSystems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
