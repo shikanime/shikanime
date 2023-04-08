@@ -56,11 +56,9 @@
         elkia = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/virtualisation/qemu.nix
+            ./modules/hosts/elkia.nix
             ./modules/profiles/base.nix
             ./modules/profiles/development.nix
-            ./modules/profiles/home.nix
-            ./modules/profiles/elkia.nix
             ./modules/users/devas.nix
             ./modules/remote/ssh.nix
             ./modules/remote/syncthing.nix
@@ -73,11 +71,9 @@
         elvengard = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/virtualisation/hyperv.nix
+            ./modules/hosts/elvengard.nix
             ./modules/profiles/base.nix
             ./modules/profiles/development.nix
-            ./modules/profiles/home.nix
-            ./modules/profiles/elvengard.nix
             ./modules/users/devas.nix
             ./modules/remote/ssh.nix
             ./modules/remote/syncthing.nix
@@ -90,12 +86,9 @@
         oceando = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/virtualisation/docker.nix
-            ./modules/profiles/docker-container.nix
+            ./modules/hosts/oceando.nix
             ./modules/profiles/base.nix
             ./modules/profiles/development.nix
-            ./modules/profiles/home.nix
-            ./modules/profiles/oceando.nix
             ./modules/users/devas.nix
             ./modules/remote/ssh.nix
             ./modules/remote/syncthing.nix
@@ -108,7 +101,7 @@
         nishir = nixpkgs.lib.nixosSystem {
           system = "aarch64-linux";
           modules = [
-            ./modules/profiles/nishir.nix
+            ./modules/hosts/nishir.nix
             ./modules/profiles/base.nix
             ./modules/remote/ssh.nix
             nixos-hardware.nixosModules.raspberry-pi-4
