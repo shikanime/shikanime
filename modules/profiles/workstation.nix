@@ -1,4 +1,13 @@
 {
+  # Configure Home Manager to use NixOS global packages
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
+
+  # Deploy a nice default user friendly shell prompt
+  programs.zsh.enable = true;
+
   # Enable the OpenSSH daemon
   services.openssh = {
     enable = true;
