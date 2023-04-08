@@ -30,8 +30,13 @@
     };
   };
 
-  # Enable GPU acceleration
-  hardware.raspberry-pi."4".fkms-3d.enable = true;
+  hardware.raspberry-pi."4" = {
+    fkms-3d.enable = true;
+    audio.enable = true;
+    dwc2.enable = true;
+    poe-hat.enable = true;
+    poe-plus-hat.enable = true;
+  };
 
   # This is required so that pod can reach the API server (running on port 6443 by default)
   networking.firewall.allowedTCPPorts = [ 6443 ];
