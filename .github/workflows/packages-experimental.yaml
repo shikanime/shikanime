@@ -1,0 +1,23 @@
+name: Build Packages
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    strategy:
+      matrix:
+        package: [nishir]
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker/setup-qemu-action@v2
+      - uses: cachix/install-nix-action@v15
+        with:
+          extra_nix_config: |
+            system-features = nixos-test benchmark big-parallel kvm aarch64-linux arm-linux
+      - uses: cachix/cachix-action@v10
+        with:
+          name: shikanime
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+      - name: Build
+        run: nix build .#${{ matrix.package }}
