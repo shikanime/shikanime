@@ -95,6 +95,7 @@
           modules = [
             ./modules/hosts/nishir.nix
             ./modules/profiles/machine.nix
+            ./modules/users/nixos.nix
             nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
