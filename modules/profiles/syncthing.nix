@@ -22,26 +22,26 @@ with lib;
     enable = true;
     relay.enable = true;
     devices = {
-      "Altashar" = {
+      Altashar = {
         id = "RK4UC45-4KD5VQ5-EIV5OMV-LTJLSBV-R5KZ3WU-FGWLOXA-M7X4D3I-NUPBXAH";
         name = "Altashar";
         introducer = true;
       };
-      "Ishtar" = {
+      Ishtar = {
         id = "GEEMT4X-4PECGER-AGXUK6Y-5CNS7ZU-LEKA7SC-YZDXSDO-PTOXWAQ-N5SZGAG";
         name = "Ishtar";
         introducer = true;
       };
-      "Olva" = {
+      Olva = {
         id = "TXGR6NJ-MXBKE3W-CDAKTK5-6DT57PO-7D6H5PQ-2YQFOSD-W6MCNCP-B76SLAX";
         name = "Olva";
         introducer = true;
       };
-      "Elkia" = {
+      Elkia = {
         id = "L57TP3T-6TFLJLZ-SBCUSE5-SPKXVMU-SLMPO2N-7VF5CA7-S5DSJPJ-RLZQ7Q3";
         name = "Elkia";
       };
-      "Elven Gard" = {
+      ElvenGard = {
         id = "EJSFAVT-V4JWHW5-T2DBKNU-B52SKTO-XANEOTL-2TWBGEO-PGR624H-YROWTQS";
         name = "Elven Gard";
       };
