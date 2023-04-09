@@ -4,6 +4,7 @@ with lib;
 
 {
   home.packages = [
+    pkgs.cachix
     pkgs.gnupatch
     pkgs.gnumake
     pkgs.gnused
