@@ -43,7 +43,7 @@ with lib;
       };
       ElvenGard = {
         id = "EJSFAVT-V4JWHW5-T2DBKNU-B52SKTO-XANEOTL-2TWBGEO-PGR624H-YROWTQS";
-        name = "Elven Gard";
+        name = "ElvenGard";
       };
     };
   };
