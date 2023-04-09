@@ -6,7 +6,7 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/virtualisation/qemu-vm.nix"
-    "${modulesPath}/installer/cd-dvd/installation-cd-base.nix"
+    "${modulesPath}/installer/cd-dvd/installation-cd-graphical-gnome.nix"
   ];
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_hardened;
