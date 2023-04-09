@@ -7,7 +7,7 @@
     "${modulesPath}/installer/sd-card/sd-image-aarch64-installer.nix"
   ];
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_hardened;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
 
   boot.kernelParams = [
     "8250.nr_uarts=1"
