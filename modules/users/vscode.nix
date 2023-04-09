@@ -64,6 +64,7 @@
       ../home/users/google.nix
       ../home/users/shikanime.nix
       ../home/users/sfeir.nix
+      ../home/profiles/base.nix
       ../home/profiles/workstation.nix
       ../home/profiles/xdg.nix
       ../home/profiles/vcs.nix
