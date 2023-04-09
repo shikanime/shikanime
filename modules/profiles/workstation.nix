@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   packages = [ pkgs.inotify-tools ];
 
