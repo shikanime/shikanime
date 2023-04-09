@@ -15,7 +15,7 @@
           "Ishtar"
           "Olva"
           "Elkia"
-          "Elven Gard"
+          "ElvenGard"
         ];
       };
       Source = {
@@ -27,7 +27,7 @@
           "Ishtar"
           "Olva"
           "Elkia"
-          "Elven Gard"
+          "ElvenGard"
         ];
       };
       Sfeir = {
@@ -39,7 +39,7 @@
           "Ishtar"
           "Olva"
           "Elkia"
-          "Elven Gard"
+          "ElvenGard"
         ];
       };
     };
