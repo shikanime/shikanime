@@ -28,6 +28,9 @@
   # Enable Network Time Protocol
   services.ntp.enable = true;
 
+  # Enable the Geoclue2 location service
+  services.geoclue2.enable = true;
+
   # Keep the system timezone up-to-date based on the current location
   services.localtimed.enable = true;
 }
