@@ -6,6 +6,7 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/virtualisation/qemu-vm.nix"
+    "${modulesPath}/installer/cd-dvd/installation-cd-base.nix"
   ];
 
   system.build.qcowImage = import "${pkgs.path}/nixos/lib/make-disk-image.nix" {
