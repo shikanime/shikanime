@@ -1,4 +1,6 @@
 {
+  packages = [ pkgs.inotify-tools ];
+
   # Configure Home Manager to use NixOS global packages
   home-manager = {
     useGlobalPkgs = true;
