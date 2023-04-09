@@ -14,6 +14,9 @@
     "console=ttyAMA0,115200"
     "console=tty1"
     "cma=128M"
+    "cgroup_enable=cpuset"
+    "cgroup_enable=memory"
+    "cgroup_memory=1"
   ];
 
   hardware.raspberry-pi."4" = {
