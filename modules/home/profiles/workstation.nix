@@ -26,6 +26,9 @@ with lib;
   # Enable experimental features so we can access flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Fix Nix package
+  nix.package = pkgs.nix;
+
   # Allow unfree software such as Cloudflared or CUDA
   nixpkgs.config.allowUnfree = true;
 
@@ -284,14 +287,14 @@ with lib;
     matchBlocks = {
       "elkia.local" = {
         hostname = "elkia.local";
-        user = "devas";
+        user = "vscode";
         forwardX11 = true;
         forwardX11Trusted = true;
         forwardAgent = true;
       };
       "elvengard.local" = {
         hostname = "elvengard.local";
-        user = "devas";
+        user = "vscode";
         forwardX11 = true;
         forwardX11Trusted = true;
         forwardAgent = true;
