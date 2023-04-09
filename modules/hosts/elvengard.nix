@@ -5,6 +5,7 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/virtualisation/hyperv-image.nix"
+    "${modulesPath}/installer/cd-dvd/installation-cd-base.nix"
   ];
 
   # Resize Hyper-V default disk size
