@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   # Configure Home Manager to use NixOS global packages
   home-manager = {
@@ -7,16 +9,6 @@
 
   # Deploy a nice default user friendly shell prompt
   programs.zsh.enable = true;
-
-  # Enable the OpenSSH daemon
-  services.openssh = {
-    enable = true;
-    settings = {
-      PasswordAuthentication = false;
-      PermitRootLogin = "no";
-      X11Forwarding = true;
-    };
-  };
 
   # Allow cgroup memory resize
   boot.kernelParams = [ "cgroup_enable=memory" "swapaccount=1" ];

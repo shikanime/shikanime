@@ -1,73 +1,67 @@
 { pkgs, ... }:
 
 {
-  # TODO: I'm exclusively stealing the Syncthing service
   services.syncthing = {
-    user = "devas";
+    user = "vscode";
     group = "users";
-    dataDir = "/home/devas";
+    dataDir = "/home/vscode";
     folders = {
-      "Default" = {
+      Default = {
         enable = true;
         id = "default";
-        path = "/home/devas/Sync";
+        path = "/home/vscode/Sync";
         devices = [
           "Altashar"
           "Ishtar"
           "Olva"
           "Elkia"
-          "Elven Gard"
+          "ElvenGard"
         ];
       };
-      "Source" = {
+      Source = {
         enable = true;
         id = "source";
-        path = "/home/devas/Source";
+        path = "/home/vscode/Source";
         devices = [
           "Altashar"
           "Ishtar"
           "Olva"
           "Elkia"
-          "Elven Gard"
+          "ElvenGard"
         ];
       };
-      "Sfeir" = {
+      Sfeir = {
         enable = true;
         id = "Sfeir";
-        path = "/home/devas/Sfeir";
+        path = "/home/vscode/Sfeir";
         devices = [
           "Altashar"
           "Ishtar"
           "Olva"
           "Elkia"
-          "Elven Gard"
+          "ElvenGard"
         ];
       };
     };
   };
 
   # Create user accounts
-  users.users.devas = {
+  users.users.vscode = {
     isNormalUser = true;
-    home = "/home/devas";
-    extraGroups = [
-      "docker"
-      "wheel"
-      "syncthing"
-    ];
+    home = "/home/vscode";
+    extraGroups = [ "docker" "wheel" "syncthing" ];
     shell = pkgs.zsh;
-    hashedPassword = "$6$YS5jCyZU2Z6i05wm$jFsx9fnINawEk2Vd5uZBdR71sOBHHgANUEBsp93fG3scp2uui3kYhzXh9c4eC4ZdHKq48//IWE00JwZ.ez.lg.";
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7pi5OYqzuMkTymIbJUJteIU3dz+OgduiF5O9cA+B7u devas@ishtar"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFChPMDHee+8F8tuchk8nLqdzVj1SOfLFv70NH95K6Yf williamphetsinorath@altashar"
-    ];
-    packages = [
-      pkgs.inotify-tools
+    initialHashedPassword = "";
+    openssh.authorizedKeys.keyFiles = [
+      (builtins.fetchurl {
+        url = "https://github.com/shikanime.keys";
+        sha256 = "sha256:0y83aiibdbh49zw9qrhy8m418556lrpdbpdh477d4qwdial650wh";
+      })
     ];
   };
 
   # Configure user home
-  home-manager.users.devas = {
+  home-manager.users.vscode = {
     imports = [
       ../home/users/totalenergies.nix
       ../home/users/google.nix
@@ -78,6 +72,7 @@
       ../home/users/lvmh.nix
       ../home/users/birdz.nix
       ../home/users/amadeus.nix
+      ../home/profiles/base.nix
       ../home/profiles/workstation.nix
       ../home/profiles/xdg.nix
       ../home/profiles/vcs.nix

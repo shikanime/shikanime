@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 
+set -o errexit
+set -o nounset
+set -o pipefail
+
 # Check if Nix is installed
-if ! command -v nix > /dev/null; then
+if ! command -v nix >/dev/null; then
   echo "Nix is not installed. Installing..."
 
   # Install Nix with experimental flake config
-  sh <(curl -L https://nixos.org/nix/install) --yes --daemon 
+  sh <(curl -L https://nixos.org/nix/install) --yes --daemon
 
   # Add Nix to PATH
+  # shellcheck source=/dev/null
   source /etc/profile.d/nix.sh
 fi
 

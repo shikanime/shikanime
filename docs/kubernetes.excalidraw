@@ -83,8 +83,8 @@
     },
     {
       "type": "text",
-      "version": 57,
-      "versionNonce": 573265098,
+      "version": 58,
+      "versionNonce": 601874896,
       "isDeleted": false,
       "id": "Dq8C1Uhf2EtTiPzUZYiL9",
       "fillStyle": "hachure",
@@ -98,18 +98,18 @@
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 353,
-      "height": 26,
+      "height": 29,
       "seed": 1343886475,
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1680987831760,
+      "updated": 1681042213442,
       "link": "https://nix.dev/tutorials/installing-nixos-on-a-raspberry-pi",
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
       "text": "Installing NixOS on a Raspberry Pi¶",
-      "baseline": 18,
+      "baseline": 22,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
@@ -317,8 +317,8 @@
     },
     {
       "type": "text",
-      "version": 53,
-      "versionNonce": 1868953430,
+      "version": 54,
+      "versionNonce": 1944314672,
       "isDeleted": false,
       "id": "OQByPwkoBmOs69QqAUuns",
       "fillStyle": "hachure",
@@ -332,7 +332,7 @@
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 250,
-      "height": 26,
+      "height": 29,
       "seed": 1895211667,
       "groupIds": [],
       "roundness": null,
@@ -342,13 +342,13 @@
           "type": "arrow"
         }
       ],
-      "updated": 1680987831760,
+      "updated": 1681042213443,
       "link": "https://nix.dev/tutorials/installing-nixos-on-a-raspberry-pi",
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
       "text": "Booting NixOS live image¶",
-      "baseline": 18,
+      "baseline": 22,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
@@ -497,8 +497,8 @@
     },
     {
       "type": "text",
-      "version": 85,
-      "versionNonce": 1935939658,
+      "version": 86,
+      "versionNonce": 1732654544,
       "isDeleted": false,
       "id": "Xaj4ndGXQg29pfqEBQ3QG",
       "fillStyle": "hachure",
@@ -536,9 +536,13 @@
         {
           "id": "FIQ0lBtwLWmoLBHIvKUZn",
           "type": "arrow"
+        },
+        {
+          "id": "qkri_RRgwVNsJEHOlgy1O",
+          "type": "arrow"
         }
       ],
-      "updated": 1680987841602,
+      "updated": 1681042256037,
       "link": "https://github.com/NixOS/nixpkgs/issues/154163",
       "locked": false,
       "fontSize": 20,
@@ -949,11 +953,101 @@
       ]
     },
     {
-      "id": "pbi9JKPJ03lEr7kFNdcoY",
       "type": "text",
+      "version": 55,
+      "versionNonce": 713884170,
+      "isDeleted": false,
+      "id": "pbi9JKPJ03lEr7kFNdcoY",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
       "x": -3376.2960751946493,
       "y": 21.429116072945703,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
       "width": 1415,
+      "height": 25,
+      "seed": 1516381846,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "FIQ0lBtwLWmoLBHIvKUZn",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1680987847852,
+      "link": "https://github.com/NixOS/nixpkgs/issues/191095",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Raspberry Pi 4 build of NixOS appears to be broken (boots to console and then black screen; green LED flashes twice intermittently) #191095",
+      "baseline": 18,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Raspberry Pi 4 build of NixOS appears to be broken (boots to console and then black screen; green LED flashes twice intermittently) #191095"
+    },
+    {
+      "type": "arrow",
+      "version": 78,
+      "versionNonce": 935376470,
+      "isDeleted": false,
+      "id": "FIQ0lBtwLWmoLBHIvKUZn",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1628.707513182931,
+      "y": 49.442358566599395,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 328.25671386718705,
+      "height": 9.600781572828367,
+      "seed": 18535178,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1680987842747,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "Xaj4ndGXQg29pfqEBQ3QG",
+        "focus": -0.4154240586679593,
+        "gap": 6.11946538040047
+      },
+      "endBinding": {
+        "elementId": "pbi9JKPJ03lEr7kFNdcoY",
+        "focus": -0.4491046288479839,
+        "gap": 4.33184814453125
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -328.25671386718705,
+          -9.600781572828367
+        ]
+      ]
+    },
+    {
+      "id": "bQf84rn5HSp7E1vVmrl7b",
+      "type": "text",
+      "x": -2465.9974437384863,
+      "y": -215.23948337366892,
+      "width": 698,
       "height": 25,
       "angle": 0,
       "strokeColor": "#000000",
@@ -965,35 +1059,35 @@
       "opacity": 100,
       "groupIds": [],
       "roundness": null,
-      "seed": 1516381846,
-      "version": 55,
-      "versionNonce": 713884170,
+      "seed": 1038089520,
+      "version": 110,
+      "versionNonce": 1134574032,
       "isDeleted": false,
       "boundElements": [
         {
-          "id": "FIQ0lBtwLWmoLBHIvKUZn",
+          "id": "qkri_RRgwVNsJEHOlgy1O",
           "type": "arrow"
         }
       ],
-      "updated": 1680987847852,
-      "link": "https://github.com/NixOS/nixpkgs/issues/191095",
+      "updated": 1681042257099,
+      "link": "https://github.com/devcontainers/features/issues/471",
       "locked": false,
-      "text": "Raspberry Pi 4 build of NixOS appears to be broken (boots to console and then black screen; green LED flashes twice intermittently) #191095",
+      "text": "docker-in-docker feature wastes RAM by mounting /tmp to tmpfs #471",
       "fontSize": 20,
       "fontFamily": 1,
       "textAlign": "left",
       "verticalAlign": "top",
       "baseline": 18,
       "containerId": null,
-      "originalText": "Raspberry Pi 4 build of NixOS appears to be broken (boots to console and then black screen; green LED flashes twice intermittently) #191095"
+      "originalText": "docker-in-docker feature wastes RAM by mounting /tmp to tmpfs #471"
     },
     {
-      "id": "FIQ0lBtwLWmoLBHIvKUZn",
+      "id": "qkri_RRgwVNsJEHOlgy1O",
       "type": "arrow",
-      "x": -1628.707513182931,
-      "y": 49.442358566599395,
-      "width": 328.25671386718705,
-      "height": 9.600781572828367,
+      "x": -1575.3702748667827,
+      "y": 26.538294404109706,
+      "width": 630.8376299604872,
+      "height": 210.00000000000006,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -1006,12 +1100,12 @@
       "roundness": {
         "type": 2
       },
-      "seed": 18535178,
-      "version": 78,
-      "versionNonce": 935376470,
+      "seed": 1659244848,
+      "version": 211,
+      "versionNonce": 219709392,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1680987842747,
+      "updated": 1681042257099,
       "link": null,
       "locked": false,
       "points": [
@@ -1020,20 +1114,20 @@
           0
         ],
         [
-          -328.25671386718705,
-          -9.600781572828367
+          -630.8376299604872,
+          -210.00000000000006
         ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "Xaj4ndGXQg29pfqEBQ3QG",
-        "focus": -0.4154240586679593,
-        "gap": 6.11946538040047
+        "focus": -0.6789483505764793,
+        "gap": 13.215086291678858
       },
       "endBinding": {
-        "elementId": "pbi9JKPJ03lEr7kFNdcoY",
-        "focus": -0.4491046288479839,
-        "gap": 4.33184814453125
+        "elementId": "bQf84rn5HSp7E1vVmrl7b",
+        "focus": 0.38059951276348025,
+        "gap": 6.777777777778567
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"

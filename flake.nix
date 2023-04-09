@@ -55,12 +55,13 @@
           system = "x86_64-linux";
           modules = [
             ./modules/hosts/elkia.nix
+            ./modules/profiles/base.nix
             ./modules/profiles/machine.nix
             ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
-            ./modules/users/devas.nix
+            ./modules/users/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
@@ -68,12 +69,13 @@
           system = "x86_64-linux";
           modules = [
             ./modules/hosts/elvengard.nix
+            ./modules/profiles/base.nix
             ./modules/profiles/machine.nix
             ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
-            ./modules/users/devas.nix
+            ./modules/users/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
@@ -81,12 +83,13 @@
           system = "x86_64-linux";
           modules = [
             ./modules/hosts/oceando.nix
+            ./modules/profiles/base.nix
             ./modules/profiles/machine.nix
             ./modules/profiles/workstation.nix
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
-            ./modules/users/devas.nix
+            ./modules/users/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
@@ -94,7 +97,9 @@
           system = "aarch64-linux";
           modules = [
             ./modules/hosts/nishir.nix
+            ./modules/profiles/base.nix
             ./modules/profiles/machine.nix
+            ./modules/users/nixos.nix
             nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
@@ -119,6 +124,7 @@
             ./modules/home/users/birdz.nix
             ./modules/home/users/amadeus.nix
             ./modules/home/users/renault.nix
+            ./modules/home/profiles/base.nix
             ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/vcs.nix
             ./modules/home/profiles/cc.nix
@@ -154,6 +160,7 @@
             ./modules/home/users/birdz.nix
             ./modules/home/users/amadeus.nix
             ./modules/home/users/renault.nix
+            ./modules/home/profiles/base.nix
             ./modules/home/profiles/wsl.nix
             ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
@@ -174,13 +181,14 @@
             ./modules/home/profiles/dotnet.nix
           ];
         };
-        vscode = home-manager.lib.homeManagerConfiguration {
+        devcontainer = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/vscode.nix
+            ./modules/home/hosts/devcontainer.nix
+            ./modules/home/profiles/base.nix
             ./modules/home/profiles/devcontainer.nix
             ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix

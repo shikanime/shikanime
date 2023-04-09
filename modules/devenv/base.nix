@@ -10,7 +10,9 @@
     deadnix.enable = true;
   };
   packages = [
+    pkgs.cachix
     pkgs.nixpkgs-fmt
     pkgs.rubocop
+    pkgs.qemu
   ];
 }

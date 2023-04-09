@@ -6,7 +6,10 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/virtualisation/qemu-vm.nix"
+    "${modulesPath}/installer/cd-dvd/installation-cd-graphical-gnome.nix"
   ];
+
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_hardened;
 
   system.build.qcowImage = import "${pkgs.path}/nixos/lib/make-disk-image.nix" {
     inherit lib config pkgs;
