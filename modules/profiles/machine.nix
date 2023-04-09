@@ -1,4 +1,9 @@
 {
+  # https://github.com/k3s-io/k3s/issues/2067
+  boot.kernelParams = [
+    "cgroup_enable=memory"
+  ];
+
   # Enable modern IPv6 support
   networking.enableIPv6 = true;
 

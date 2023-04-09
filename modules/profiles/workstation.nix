@@ -10,9 +10,6 @@
   # Deploy a nice default user friendly shell prompt
   programs.zsh.enable = true;
 
-  # Allow cgroup memory resize
-  boot.kernelParams = [ "cgroup_enable=memory" "swapaccount=1" ];
-
   # Enable IPTable and debug module to be loaded
   security.lockKernelModules = true;
 
