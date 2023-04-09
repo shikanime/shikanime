@@ -9,6 +9,8 @@
     "${modulesPath}/installer/cd-dvd/installation-cd-base.nix"
   ];
 
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_hardened;
+
   system.build.qcowImage = import "${pkgs.path}/nixos/lib/make-disk-image.nix" {
     inherit lib config pkgs;
     diskSize = 64 * 1024;

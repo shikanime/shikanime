@@ -1,10 +1,13 @@
-{ modulesPath, ... }:
+{ pkgs, modulesPath, ... }:
 
 {
   imports = [
     "${modulesPath}/profiles/headless.nix"
+    "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/installer/sd-card/sd-image-aarch64-installer.nix"
   ];
+
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_hardened;
 
   boot.kernelParams = [
     "8250.nr_uarts=1"
