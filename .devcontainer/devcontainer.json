@@ -2,7 +2,7 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/base:jammy",
   "features": {
     "ghcr.io/devcontainers/features/nix:1": {
-      "extraNixConfig": "experimental-features = nix-command flakes,extra-platforms = aarch64-linux arm-linux"
+      "extraNixConfig": "experimental-features = nix-command flakes,extra-platforms = aarch64-linux arm-linux,extra-trusted-substituter = https://shikanime.cachix.org https://devenv.cachix.org"
     },
     "ghcr.io/christophermacgown/devcontainer-features/direnv:1": {}
   },
