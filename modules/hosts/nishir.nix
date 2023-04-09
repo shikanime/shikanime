@@ -32,6 +32,9 @@
     })
   ];
 
+  # Enable Wake-on-LAN on the ethernet port
+  networking.interfaces.eth0.wakeOnLan.enable = true;
+
   # This is required so that pod can reach the API server (running on port 6443 by default)
   networking.firewall.allowedTCPPorts = [ 6443 ];
 
