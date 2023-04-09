@@ -43,15 +43,6 @@ with lib;
     };
   };
 
-  programs.nushell = {
-    enable = true;
-    extraConfig = ''
-      let-env config = {
-        show_banner: false
-      }
-    '';
-  };
-
   programs.starship = {
     enable = true;
     enableBashIntegration = true;
@@ -301,11 +292,4 @@ with lib;
       ];
     };
   };
-
-  # Enable Brew integration
-  programs.zsh.initExtra = mkIf pkgs.stdenv.hostPlatform.isDarwin ''
-    if which brew > /dev/null; then
-      eval "$(brew shellenv)"
-    fi
-  '';
 }

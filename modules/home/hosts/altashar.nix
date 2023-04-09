@@ -10,5 +10,8 @@ with lib;
     if [ -d /usr/local/anaconda3 ]; then
       source /usr/local/anaconda3/bin/activate
     fi
+    if ! command -v brew >/dev/null; then
+      eval "$(brew shellenv)"
+    fi
   '';
 }

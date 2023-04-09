@@ -112,7 +112,6 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/profiles/experimental/github-copilot-cli.nix
             ./modules/home/hosts/altashar.nix
             ./modules/home/users/google.nix
             ./modules/home/users/shikanime.nix
@@ -128,12 +127,11 @@
             ./modules/home/profiles/rust.nix
             ./modules/home/profiles/python.nix
             ./modules/home/profiles/web.nix
-            ./modules/home/profiles/php.nix
             ./modules/home/profiles/latex.nix
             ./modules/home/profiles/sql.nix
             ./modules/home/profiles/cloud.nix
             ./modules/home/profiles/java.nix
-            ./modules/home/profiles/dotnet.nix
+            ./modules/home/profiles/experimental/github-copilot-cli.nix
           ];
         };
         "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -147,7 +145,6 @@
             ./modules/home/users/shikanime.nix
             ./modules/home/users/sfeir.nix
             ./modules/home/profiles/base.nix
-            ./modules/home/profiles/wsl.nix
             ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
             ./modules/home/profiles/vcs.nix
@@ -159,12 +156,10 @@
             ./modules/home/profiles/rust.nix
             ./modules/home/profiles/python.nix
             ./modules/home/profiles/web.nix
-            ./modules/home/profiles/php.nix
             ./modules/home/profiles/latex.nix
             ./modules/home/profiles/sql.nix
             ./modules/home/profiles/cloud.nix
             ./modules/home/profiles/java.nix
-            ./modules/home/profiles/dotnet.nix
           ];
         };
         devcontainer = home-manager.lib.homeManagerConfiguration {
@@ -175,7 +170,6 @@
           modules = [
             ./modules/home/hosts/devcontainer.nix
             ./modules/home/profiles/base.nix
-            ./modules/home/profiles/devcontainer.nix
             ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
           ];

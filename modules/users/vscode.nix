@@ -78,12 +78,10 @@
       ../home/profiles/rust.nix
       ../home/profiles/python.nix
       ../home/profiles/web.nix
-      ../home/profiles/php.nix
       ../home/profiles/latex.nix
       ../home/profiles/sql.nix
       ../home/profiles/cloud.nix
       ../home/profiles/java.nix
-      ../home/profiles/dotnet.nix
     ];
   };
 }
