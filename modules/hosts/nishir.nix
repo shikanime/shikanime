@@ -22,7 +22,6 @@
   hardware.raspberry-pi."4" = {
     fkms-3d.enable = true;
     audio.enable = true;
-    dwc2.enable = true;
   };
 
   # https://github.com/NixOS/nixpkgs/issues/154163#issuecomment-1008362877
