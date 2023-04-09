@@ -2,7 +2,7 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/base:jammy",
   "features": {
     "ghcr.io/devcontainers/features/nix:1": {
-      "extraNixConfig": "experimental-features = nix-command flakes,extra-platforms = aarch64-linux arm-linux,trusted-users = root vscode"
+      "extraNixConfig": "experimental-features = nix-command flakes,extra-platforms = aarch64-linux arm-linux,trusted-users = root vscode,system-features = nixos-test benchmark big-parallel kvm"
     },
     "ghcr.io/christophermacgown/devcontainer-features/direnv:1": {}
   },
