@@ -2,6 +2,8 @@
 
 {
   imports = [
+    "${modulesPath}/profiles/headless.nix"
+    "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/installer/sd-card/sd-image-aarch64-installer.nix"
   ];
 
