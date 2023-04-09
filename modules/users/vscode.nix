@@ -6,7 +6,7 @@
     group = "users";
     dataDir = "/home/vscode";
     folders = {
-      "Default" = {
+      Default = {
         enable = true;
         id = "default";
         path = "/home/vscode/Sync";
@@ -18,7 +18,7 @@
           "Elven Gard"
         ];
       };
-      "Source" = {
+      Source = {
         enable = true;
         id = "source";
         path = "/home/vscode/Source";
@@ -30,7 +30,7 @@
           "Elven Gard"
         ];
       };
-      "Sfeir" = {
+      Sfeir = {
         enable = true;
         id = "Sfeir";
         path = "/home/vscode/Sfeir";
