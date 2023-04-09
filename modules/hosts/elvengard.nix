@@ -10,10 +10,7 @@
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_hardened;
 
-  # https://github.com/k2s-io/k3s/issues/2067
-  boot.kernelParams = [
-    "cgroup_enable=memory"
-  ];
+  boot.kernelParams = [ "cgroup_enable=memory" ];
 
   # Resize Hyper-V default disk size
   hyperv.baseImageSize = 64 * 1024;
