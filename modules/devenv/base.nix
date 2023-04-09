@@ -12,5 +12,6 @@
   packages = [
     pkgs.nixpkgs-fmt
     pkgs.rubocop
+    pkgs.qemu
   ];
 }
