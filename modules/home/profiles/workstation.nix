@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 with lib;
 
@@ -19,18 +19,6 @@ with lib;
     pkgs.pprof
     pkgs.nixpkgs-fmt
   ];
-
-  # Let Home Manager install and manage itself
-  programs.home-manager.enable = true;
-
-  # Enable experimental features so we can access flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Fix Nix package
-  nix.package = pkgs.nix;
-
-  # Allow unfree software such as Cloudflared or CUDA
-  nixpkgs.config.allowUnfree = true;
 
   programs.dircolors.enable = true;
 
@@ -319,14 +307,4 @@ with lib;
       eval "$(brew shellenv)"
     fi
   '';
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release
-  home.stateVersion = "22.11";
 }
