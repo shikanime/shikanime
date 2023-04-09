@@ -1,16 +1,15 @@
 { pkgs, ... }:
 
 {
-  # TODO: I'm exclusively stealing the Syncthing service
   services.syncthing = {
-    user = "devas";
+    user = "vscode";
     group = "users";
-    dataDir = "/home/devas";
+    dataDir = "/home/vscode";
     folders = {
       "Default" = {
         enable = true;
         id = "default";
-        path = "/home/devas/Sync";
+        path = "/home/vscode/Sync";
         devices = [
           "Altashar"
           "Ishtar"
@@ -22,7 +21,7 @@
       "Source" = {
         enable = true;
         id = "source";
-        path = "/home/devas/Source";
+        path = "/home/vscode/Source";
         devices = [
           "Altashar"
           "Ishtar"
@@ -34,7 +33,7 @@
       "Sfeir" = {
         enable = true;
         id = "Sfeir";
-        path = "/home/devas/Sfeir";
+        path = "/home/vscode/Sfeir";
         devices = [
           "Altashar"
           "Ishtar"
@@ -47,16 +46,12 @@
   };
 
   # Create user accounts
-  users.users.devas = {
+  users.users.vscode = {
     isNormalUser = true;
-    home = "/home/devas";
-    extraGroups = [
-      "docker"
-      "wheel"
-      "syncthing"
-    ];
+    home = "/home/vscode";
+    extraGroups = [ "docker" "wheel" "syncthing" ];
     shell = pkgs.zsh;
-    hashedPassword = "$6$YS5jCyZU2Z6i05wm$jFsx9fnINawEk2Vd5uZBdR71sOBHHgANUEBsp93fG3scp2uui3kYhzXh9c4eC4ZdHKq48//IWE00JwZ.ez.lg.";
+    initialHashedPassword = "";
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7pi5OYqzuMkTymIbJUJteIU3dz+OgduiF5O9cA+B7u"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFChPMDHee+8F8tuchk8nLqdzVj1SOfLFv70NH95K6Yf"
@@ -64,7 +59,7 @@
   };
 
   # Configure user home
-  home-manager.users.devas = {
+  home-manager.users.vscode = {
     imports = [
       ../home/users/totalenergies.nix
       ../home/users/google.nix

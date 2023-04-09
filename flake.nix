@@ -60,7 +60,7 @@
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
-            ./modules/users/devas.nix
+            ./modules/users/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
@@ -73,7 +73,7 @@
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
-            ./modules/users/devas.nix
+            ./modules/users/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
@@ -86,7 +86,7 @@
             ./modules/profiles/syncthing.nix
             ./modules/profiles/jetbrains.nix
             ./modules/profiles/vscode.nix
-            ./modules/users/devas.nix
+            ./modules/users/vscode.nix
             home-manager.nixosModules.home-manager
           ];
         };
