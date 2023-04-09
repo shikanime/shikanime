@@ -6,7 +6,6 @@ with lib;
   # Configure the kernel
   boot.kernel.sysctl = {
     "kernel.threads-max" = mkDefault 8192;
-    "fs.inotify.max_user_watches" = mkDefault 204800;
     "fs.file-max" = mkDefault 131072;
     "vm.max_map_count" = mkDefault 524288;
   };
