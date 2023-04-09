@@ -161,13 +161,13 @@
             ./modules/home/profiles/dotnet.nix
           ];
         };
-        vscode = home-manager.lib.homeManagerConfiguration {
+        devcontainer = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/vscode.nix
+            ./modules/home/hosts/devcontainer.nix
             ./modules/home/profiles/devcontainer.nix
             ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
