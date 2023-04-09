@@ -1,6 +1,8 @@
 {
-  users.users.nixos.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPW5kSIFStkESjXOavgJg75Wfxnsml7+ZT0grMnYNzwC"
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAB8e13bjswnhfuYYpztBESPf/gkbkdGE46kC++tNOCX"
+  users.users.nixos.openssh.authorizedKeys.keyFiles = [
+    (builtins.fetchurl {
+      url = "https://github.com/shikanime.keys";
+      sha256 = "sha256:0y83aiibdbh49zw9qrhy8m418556lrpdbpdh477d4qwdial650wh";
+    })
   ];
 }
