@@ -2287,8 +2287,8 @@
     },
     {
       "type": "text",
-      "version": 223,
-      "versionNonce": 211804441,
+      "version": 225,
+      "versionNonce": 1266920215,
       "isDeleted": false,
       "id": "UKxJ-iTu4SGmqHmcwVVjK",
       "fillStyle": "hachure",
@@ -2326,9 +2326,17 @@
         {
           "id": "C9kqOeP8u2rAf5CJOQBw4",
           "type": "arrow"
+        },
+        {
+          "id": "xno9JoMow0meglkrRp75l",
+          "type": "arrow"
+        },
+        {
+          "id": "BgJLE2VuFY2HgbfnNc6Lx",
+          "type": "arrow"
         }
       ],
-      "updated": 1681139308492,
+      "updated": 1681140826477,
       "link": "https://www.riotgames.com/en/urf-academy/the-curriculum",
       "locked": false,
       "fontSize": 20,
@@ -2342,8 +2350,8 @@
     },
     {
       "type": "text",
-      "version": 131,
-      "versionNonce": 508148694,
+      "version": 250,
+      "versionNonce": 1128582551,
       "isDeleted": false,
       "id": "EvS54iu9qIOLyB8hzc6ra",
       "fillStyle": "hachure",
@@ -2352,8 +2360,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 3.4974425391448563,
-      "y": -1368.7832251348016,
+      "x": 53.497442539144856,
+      "y": -1343.0689394205158,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 126,
@@ -2367,7 +2375,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681079334701,
+      "updated": 1681140833966,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2381,8 +2389,8 @@
     },
     {
       "type": "arrow",
-      "version": 388,
-      "versionNonce": 1694393752,
+      "version": 626,
+      "versionNonce": 1722090167,
       "isDeleted": false,
       "id": "ePCQ20LySqZ1vsX9ycNNH",
       "fillStyle": "hachure",
@@ -2391,19 +2399,19 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 71.83077587247823,
-      "y": -1333.1165584681348,
+      "x": 118.63688181252269,
+      "y": -1307.402272753849,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
-      "width": 52.11588977594696,
-      "height": 211.66666666666652,
+      "width": 93.83714763017127,
+      "height": 185.95238095238074,
       "seed": 712275659,
       "groupIds": [],
       "roundness": {
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681132069725,
+      "updated": 1681140833966,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2425,8 +2433,8 @@
           0
         ],
         [
-          -52.11588977594696,
-          211.66666666666652
+          -93.83714763017127,
+          185.95238095238074
         ]
       ]
     },
@@ -3759,6 +3767,96 @@
         "elementId": "8f2fLEFkhOicna6ytGDoC",
         "focus": 0.42120012648982824,
         "gap": 6.428571428570137
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "G9WDFQ2Io2JHapGSQxpWt",
+      "type": "text",
+      "x": 579.5626908226882,
+      "y": -1220.9447854514442,
+      "width": 613,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1655845625,
+      "version": 4,
+      "versionNonce": 237776951,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "BgJLE2VuFY2HgbfnNc6Lx",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681140826477,
+      "link": "https://users.cs.northwestern.edu/~hunicke/MDA.pdf",
+      "locked": false,
+      "text": "MDA: A Formal Approach to Game Design and Game Research",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "MDA: A Formal Approach to Game Design and Game Research"
+    },
+    {
+      "id": "BgJLE2VuFY2HgbfnNc6Lx",
+      "type": "arrow",
+      "x": 127.06269082268818,
+      "y": -1098.4447854514442,
+      "width": 440,
+      "height": 112.5,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 256232503,
+      "version": 64,
+      "versionNonce": 1578586809,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681140826480,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          440,
+          -112.5
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "UKxJ-iTu4SGmqHmcwVVjK",
+        "focus": 0.8332453187639794,
+        "gap": 12.31524828354327
+      },
+      "endBinding": {
+        "elementId": "G9WDFQ2Io2JHapGSQxpWt",
+        "focus": 0.9251211505393152,
+        "gap": 12.5
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"
