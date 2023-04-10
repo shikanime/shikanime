@@ -162,7 +162,7 @@
             ./modules/home/profiles/java.nix
           ];
         };
-        devcontainer = home-manager.lib.homeManagerConfiguration {
+        vscode = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
