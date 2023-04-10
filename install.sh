@@ -16,14 +16,21 @@ fi
 
 echo "Nix is installed."
 
-if [ "$REMOTE_CONTAINERS" == "true" ]; then
-  echo "Remote container detected. Setting up Nix..."
-  # Check if user environment variables are set because containers doesn't set
-  # them by default and Home Manager needs them to work properly
-  export USER=${USER:-$(whoami)}
-  # Devcontainer feature for Nix script make the per-user profile owned by root,
-  # so we need to change the owner to the current user
-  sudo chown -R "$USER" /nix/var/nix/profiles/per-user/"$USER"
+# Container run without USER env variable set so we need to set it manually
+# in oder to make home-manager work properly
+export USER=${USER:-$(whoami)}
+
+# Create per-user profile as it is not created by default
+if [[ ! -d /nix/var/nix/profiles/per-user/"$USER" ]]; then
+  echo "Creating per-user profile..."
+  sudo mkdir -p /nix/var/nix/profiles/per-user/"$USER"
+fi
+
+# As the per-user profile is created by root, we need to fix its permissions
+# so that the user can access itgit
+if [[ -d /nix/var/nix/profiles/per-user/"$USER" ]]; then
+  echo "Fix per-user profiles permissions..."
+  sudo chown "$USER" /nix/var/nix/profiles/per-user/"$USER"
 fi
 
 echo "Nix is set up."
