@@ -14,17 +14,6 @@
     };
   };
 
-  nixConfig = {
-    extra-public-keys = [
-      "shikanime.cachix.org-1:OrpjVTH6RzYf2R97IqcTWdLRejF6+XbpFNNZJxKG8Ts="
-      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
-    ];
-    extra-substituters = [
-      "https://shikanime.cachix.org"
-      "https://devenv.cachix.org"
-    ];
-  };
-
   outputs = { self, nixpkgs, nixos-hardware, home-manager, devenv, ... }@inputs:
     let supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" ]; in
     {
