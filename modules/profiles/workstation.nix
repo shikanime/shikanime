@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   # Configure Home Manager to use NixOS global packages
   home-manager = {
