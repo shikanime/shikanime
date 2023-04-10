@@ -1,0 +1,46 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "gfO3XthX9WLA4ACkE4pvS",
+      "type": "text",
+      "x": 390,
+      "y": 341,
+      "width": 654,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1049014384,
+      "version": 36,
+      "versionNonce": 1657005712,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681151182240,
+      "link": "https://www.confluent.io/blog/building-a-microservices-ecosystem-with-kafka-streams-and-ksql/",
+      "locked": false,
+      "text": "Building a Microservices Ecosystem with Kafka Streams and KSQL",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Building a Microservices Ecosystem with Kafka Streams and KSQL"
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
