@@ -3,6 +3,7 @@
 {
   home.sessionVariables = {
     NPM_CONFIG_USERCONFIG = "${config.xdg.configHome}/npm/config";
+    NPM_CONFIG_PREFIX = "${config.xdg.dataHome}/npm/lib/node_modules";
   };
 
   programs.zsh.oh-my-zsh.plugins = [
