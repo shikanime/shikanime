@@ -33,7 +33,7 @@ variable "github" {
       }
       altashar_sfeir = {
         name               = "Altashar Sfeir"
-        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM2+ZmUgNPNepyMTJnjcu6LoGxEJh5ny8Oxe7bLuFx9q"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKBei/1ZMgt7aiixXdHaHp5T0kmRfzNDD9oO1DkyxY/H"
       }
     }
     gpg_keys = {
