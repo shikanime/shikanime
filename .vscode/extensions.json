@@ -1,9 +1,10 @@
 {
-	"recommendations": [
-		"jnoortheen.nix-ide",
-		"mkhl.direnv",
-		"yzhang.markdown-all-in-one",
-		"James-Yu.latex-workshop",
-		"SonarSource.sonarlint-vscode"
-	],
+  "recommendations": [
+    "jnoortheen.nix-ide",
+    "mkhl.direnv",
+    "yzhang.markdown-all-in-one",
+    "james-yu.latex-workshop",
+    "sonarsource.sonarlint-vscode",
+    "hashicorp.terraform"
+  ],
 }
