@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 54,
-      "versionNonce": 800567588,
+      "version": 56,
+      "versionNonce": 1419806004,
       "isDeleted": false,
       "id": "gfO3XthX9WLA4ACkE4pvS",
       "fillStyle": "hachure",
@@ -24,8 +24,13 @@
       "seed": 1049014384,
       "groupIds": [],
       "roundness": null,
-      "boundElements": [],
-      "updated": 1681309750374,
+      "boundElements": [
+        {
+          "id": "8P2BD_jtoLf3KTK_X6gcJ",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681310149449,
       "link": "https://www.confluent.io/blog/building-a-microservices-ecosystem-with-kafka-streams-and-ksql/",
       "locked": false,
       "fontSize": 20,
@@ -39,8 +44,8 @@
     },
     {
       "type": "text",
-      "version": 100,
-      "versionNonce": 1091680551,
+      "version": 101,
+      "versionNonce": 662476812,
       "isDeleted": false,
       "id": "QD6ilhBtLQ2EOtOII-1Y_",
       "fillStyle": "hachure",
@@ -58,8 +63,8 @@
       "seed": 1584517916,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": "https://gist.github.com/nateinaction/79cc8254d1d3442afa92c0b404df6fb9",
       "locked": false,
       "fontSize": 20,
@@ -73,8 +78,8 @@
     },
     {
       "type": "text",
-      "version": 59,
-      "versionNonce": 1558122697,
+      "version": 60,
+      "versionNonce": 239189684,
       "isDeleted": false,
       "id": "pKi5y7ZkmeT9dKm3zmEPv",
       "fillStyle": "hachure",
@@ -92,8 +97,8 @@
       "seed": 1486716068,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": "https://mgdm.net/weblog/nixos-on-raspberry-pi-4/",
       "locked": false,
       "fontSize": 20,
@@ -107,8 +112,8 @@
     },
     {
       "type": "text",
-      "version": 60,
-      "versionNonce": 820902983,
+      "version": 61,
+      "versionNonce": 1053144716,
       "isDeleted": false,
       "id": "8D8ynqbLztS2mGl627P1v",
       "fillStyle": "hachure",
@@ -126,8 +131,8 @@
       "seed": 662769564,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": "https://nix.dev/tutorials/installing-nixos-on-a-raspberry-pi",
       "locked": false,
       "fontSize": 20,
@@ -141,8 +146,8 @@
     },
     {
       "type": "text",
-      "version": 46,
-      "versionNonce": 439619497,
+      "version": 47,
+      "versionNonce": 1115670580,
       "isDeleted": false,
       "id": "MDao9WkWHDmxyy3yET6DX",
       "fillStyle": "hachure",
@@ -160,8 +165,8 @@
       "seed": 1485719588,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -175,8 +180,8 @@
     },
     {
       "type": "arrow",
-      "version": 81,
-      "versionNonce": 886709020,
+      "version": 82,
+      "versionNonce": 2087126284,
       "isDeleted": false,
       "id": "cht6ZmBQio_5uWW_v4F-o",
       "fillStyle": "hachure",
@@ -196,8 +201,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -226,8 +231,8 @@
     },
     {
       "type": "arrow",
-      "version": 64,
-      "versionNonce": 834516132,
+      "version": 65,
+      "versionNonce": 624992692,
       "isDeleted": false,
       "id": "wvdgvvL47Y7xkXlmHlvwq",
       "fillStyle": "hachure",
@@ -247,8 +252,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -277,8 +282,8 @@
     },
     {
       "type": "arrow",
-      "version": 268,
-      "versionNonce": 1850922631,
+      "version": 269,
+      "versionNonce": 1171948428,
       "isDeleted": false,
       "id": "c5LYVnlP1bLleTrQCfv0Q",
       "fillStyle": "hachure",
@@ -298,8 +303,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -320,8 +325,8 @@
     },
     {
       "type": "text",
-      "version": 56,
-      "versionNonce": 1976629609,
+      "version": 57,
+      "versionNonce": 2108312372,
       "isDeleted": false,
       "id": "xdnB-qkbVqHRlUqZ2_0zp",
       "fillStyle": "hachure",
@@ -339,8 +344,8 @@
       "seed": 187535140,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": "https://nix.dev/tutorials/installing-nixos-on-a-raspberry-pi",
       "locked": false,
       "fontSize": 20,
@@ -354,8 +359,8 @@
     },
     {
       "type": "arrow",
-      "version": 143,
-      "versionNonce": 429938588,
+      "version": 144,
+      "versionNonce": 1096430092,
       "isDeleted": false,
       "id": "EDM5J-CDVVSnLxqEef_E2",
       "fillStyle": "hachure",
@@ -375,8 +380,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -405,8 +410,8 @@
     },
     {
       "type": "text",
-      "version": 104,
-      "versionNonce": 1512039497,
+      "version": 105,
+      "versionNonce": 1042465972,
       "isDeleted": false,
       "id": "XZkuASkUpnTHSzCLpL3Cl",
       "fillStyle": "hachure",
@@ -424,8 +429,8 @@
       "seed": 343411364,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": "https://rbf.dev/blog/2020/05/custom-nixos-build-for-raspberry-pis/",
       "locked": false,
       "fontSize": 20,
@@ -439,8 +444,8 @@
     },
     {
       "type": "arrow",
-      "version": 188,
-      "versionNonce": 283607076,
+      "version": 189,
+      "versionNonce": 1038094476,
       "isDeleted": false,
       "id": "fy4NreIjYl5byzZXx8zwk",
       "fillStyle": "hachure",
@@ -460,8 +465,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -490,8 +495,8 @@
     },
     {
       "type": "text",
-      "version": 87,
-      "versionNonce": 1863217961,
+      "version": 88,
+      "versionNonce": 475008564,
       "isDeleted": false,
       "id": "UKxtctFs8KSOLGgJb93AF",
       "fillStyle": "hachure",
@@ -509,8 +514,8 @@
       "seed": 367466020,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": "https://github.com/NixOS/nixpkgs/issues/154163",
       "locked": false,
       "fontSize": 20,
@@ -524,8 +529,8 @@
     },
     {
       "type": "arrow",
-      "version": 55,
-      "versionNonce": 1936393244,
+      "version": 56,
+      "versionNonce": 455483148,
       "isDeleted": false,
       "id": "eYnF2Z6iMF7N5zGW3r-NI",
       "fillStyle": "hachure",
@@ -545,8 +550,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149449,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -575,8 +580,8 @@
     },
     {
       "type": "text",
-      "version": 24,
-      "versionNonce": 1225270793,
+      "version": 25,
+      "versionNonce": 689448884,
       "isDeleted": false,
       "id": "euQiGoE1uoPhKvvptIw-v",
       "fillStyle": "hachure",
@@ -594,8 +599,8 @@
       "seed": 1013494180,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744260,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": "https://discourse.nixos.org/t/nixos-raspberry-pi-no-hdmi-during-boot/23100",
       "locked": false,
       "fontSize": 20,
@@ -609,8 +614,8 @@
     },
     {
       "type": "arrow",
-      "version": 150,
-      "versionNonce": 1199299335,
+      "version": 151,
+      "versionNonce": 832986508,
       "isDeleted": false,
       "id": "xraOgevgXH_02uiUuzdht",
       "fillStyle": "hachure",
@@ -630,8 +635,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -652,8 +657,8 @@
     },
     {
       "type": "text",
-      "version": 17,
-      "versionNonce": 1661500649,
+      "version": 18,
+      "versionNonce": 1755386164,
       "isDeleted": false,
       "id": "pFT3-HNwpL4YrjY3FK5r2",
       "fillStyle": "hachure",
@@ -671,8 +676,8 @@
       "seed": 1730862372,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": "https://github.com/cwi-foosball/foosball",
       "locked": false,
       "fontSize": 20,
@@ -686,8 +691,8 @@
     },
     {
       "type": "arrow",
-      "version": 40,
-      "versionNonce": 265018276,
+      "version": 41,
+      "versionNonce": 983223308,
       "isDeleted": false,
       "id": "P-M4E8U1C4yDXQEmmcDyR",
       "fillStyle": "hachure",
@@ -707,8 +712,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -737,8 +742,8 @@
     },
     {
       "type": "text",
-      "version": 19,
-      "versionNonce": 1285224393,
+      "version": 20,
+      "versionNonce": 1783679668,
       "isDeleted": false,
       "id": "PldGguKhtvZJNocGef36E",
       "fillStyle": "hachure",
@@ -756,8 +761,8 @@
       "seed": 1604032676,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": "https://github.com/NixOS/nixpkgs/issues/126755",
       "locked": false,
       "fontSize": 20,
@@ -771,8 +776,8 @@
     },
     {
       "type": "arrow",
-      "version": 56,
-      "versionNonce": 137109660,
+      "version": 57,
+      "versionNonce": 939354764,
       "isDeleted": false,
       "id": "sF0JPghwVP_QjppYDHElH",
       "fillStyle": "hachure",
@@ -792,8 +797,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -822,8 +827,8 @@
     },
     {
       "type": "text",
-      "version": 24,
-      "versionNonce": 400234153,
+      "version": 25,
+      "versionNonce": 1624069172,
       "isDeleted": false,
       "id": "TsYtR1ZRk8H5tTiRWysyN",
       "fillStyle": "hachure",
@@ -841,8 +846,8 @@
       "seed": 292086820,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": "https://github.com/NixOS/nixpkgs/issues/179701",
       "locked": false,
       "fontSize": 20,
@@ -856,8 +861,8 @@
     },
     {
       "type": "arrow",
-      "version": 40,
-      "versionNonce": 2023278372,
+      "version": 41,
+      "versionNonce": 1552431372,
       "isDeleted": false,
       "id": "qzBINqVlUhsr2cDK7LBHP",
       "fillStyle": "hachure",
@@ -877,8 +882,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": "",
       "locked": false,
       "startBinding": {
@@ -907,8 +912,8 @@
     },
     {
       "type": "text",
-      "version": 56,
-      "versionNonce": 125065609,
+      "version": 57,
+      "versionNonce": 972860852,
       "isDeleted": false,
       "id": "Sk9L_KSukJUBG7aDCbl1_",
       "fillStyle": "hachure",
@@ -926,8 +931,8 @@
       "seed": 1115733924,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": "https://github.com/NixOS/nixpkgs/issues/191095",
       "locked": false,
       "fontSize": 20,
@@ -941,8 +946,8 @@
     },
     {
       "type": "arrow",
-      "version": 80,
-      "versionNonce": 261467420,
+      "version": 81,
+      "versionNonce": 1941256076,
       "isDeleted": false,
       "id": "S6C_9deH3kroH16I7v5vE",
       "fillStyle": "hachure",
@@ -962,8 +967,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744262,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -992,8 +997,8 @@
     },
     {
       "type": "text",
-      "version": 111,
-      "versionNonce": 2091008105,
+      "version": 112,
+      "versionNonce": 923064116,
       "isDeleted": false,
       "id": "dNtEcjgJPYHhTDwVyGPIN",
       "fillStyle": "hachure",
@@ -1011,8 +1016,8 @@
       "seed": 1259416356,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": "https://github.com/devcontainers/features/issues/471",
       "locked": false,
       "fontSize": 20,
@@ -1026,8 +1031,8 @@
     },
     {
       "type": "arrow",
-      "version": 213,
-      "versionNonce": 532431524,
+      "version": 214,
+      "versionNonce": 1237214732,
       "isDeleted": false,
       "id": "fh4_SY706XT4sVjBf1SYC",
       "fillStyle": "hachure",
@@ -1047,8 +1052,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744262,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1077,8 +1082,8 @@
     },
     {
       "type": "text",
-      "version": 49,
-      "versionNonce": 623921993,
+      "version": 50,
+      "versionNonce": 72077492,
       "isDeleted": false,
       "id": "yR-yYQRvqS3EgShTs3mC6",
       "fillStyle": "hachure",
@@ -1096,8 +1101,8 @@
       "seed": 1300768420,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": "https://github.com/containerd/containerd/issues/4604#issuecomment-1027293621",
       "locked": false,
       "fontSize": 20,
@@ -1111,8 +1116,8 @@
     },
     {
       "type": "arrow",
-      "version": 198,
-      "versionNonce": 2065279388,
+      "version": 199,
+      "versionNonce": 329106572,
       "isDeleted": false,
       "id": "p7BZTxIpLGeRA6Scia9ZW",
       "fillStyle": "hachure",
@@ -1132,8 +1137,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744262,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1162,8 +1167,8 @@
     },
     {
       "type": "text",
-      "version": 64,
-      "versionNonce": 847113705,
+      "version": 65,
+      "versionNonce": 1366792756,
       "isDeleted": false,
       "id": "Wak59IZCiTeBEsKLu4u38",
       "fillStyle": "hachure",
@@ -1181,8 +1186,8 @@
       "seed": 1855173156,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1196,8 +1201,8 @@
     },
     {
       "type": "text",
-      "version": 11,
-      "versionNonce": 503303623,
+      "version": 12,
+      "versionNonce": 1460491020,
       "isDeleted": false,
       "id": "6J7QFTNuWrrn1R3mnWZ_a",
       "fillStyle": "hachure",
@@ -1215,8 +1220,8 @@
       "seed": 995291676,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1230,8 +1235,8 @@
     },
     {
       "type": "text",
-      "version": 54,
-      "versionNonce": 1855436553,
+      "version": 55,
+      "versionNonce": 1768829876,
       "isDeleted": false,
       "id": "4mbSZzXSgbj3zEJsS7FT8",
       "fillStyle": "hachure",
@@ -1249,8 +1254,8 @@
       "seed": 220319140,
       "groupIds": [],
       "roundness": null,
-      "boundElements": null,
-      "updated": 1681309744261,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1264,8 +1269,8 @@
     },
     {
       "type": "arrow",
-      "version": 59,
-      "versionNonce": 467947044,
+      "version": 60,
+      "versionNonce": 1384583564,
       "isDeleted": false,
       "id": "OWaOeKW5HSMzBVZNENczG",
       "fillStyle": "hachure",
@@ -1285,8 +1290,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744262,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1315,8 +1320,8 @@
     },
     {
       "type": "arrow",
-      "version": 36,
-      "versionNonce": 1038751260,
+      "version": 37,
+      "versionNonce": 1247124788,
       "isDeleted": false,
       "id": "DeZYFLeCarKdswpK1lI74",
       "fillStyle": "hachure",
@@ -1336,8 +1341,8 @@
       "roundness": {
         "type": 2
       },
-      "boundElements": null,
-      "updated": 1681309744262,
+      "boundElements": [],
+      "updated": 1681310149450,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1363,6 +1368,507 @@
           -102.4739649214672
         ]
       ]
+    },
+    {
+      "id": "j9Zq5dwMQ4BifYaUG1qcj",
+      "type": "text",
+      "x": -14.50288795696099,
+      "y": 366.0588628289541,
+      "width": 60,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1070749196,
+      "version": 9,
+      "versionNonce": 1699020812,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "8P2BD_jtoLf3KTK_X6gcJ",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681310149450,
+      "link": null,
+      "locked": false,
+      "text": "Kafka",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Kafka"
+    },
+    {
+      "id": "8P2BD_jtoLf3KTK_X6gcJ",
+      "type": "arrow",
+      "x": 7.624121221962298,
+      "y": 362.18250220415956,
+      "width": 158.6926734107082,
+      "height": 203.01446208763264,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1674751284,
+      "version": 52,
+      "versionNonce": 1033098932,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681310149450,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -158.6926734107082,
+          -203.01446208763264
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "j9Zq5dwMQ4BifYaUG1qcj",
+        "focus": 0.12391206552969612,
+        "gap": 3.876360624794529
+      },
+      "endBinding": {
+        "elementId": "gfO3XthX9WLA4ACkE4pvS",
+        "focus": 0.019476782316729696,
+        "gap": 10.35025134035999
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "9FMdOw0TiKYGpKVywmpo2",
+      "type": "text",
+      "x": -588.9929416912671,
+      "y": -862.0198788433247,
+      "width": 73,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 2109478708,
+      "version": 112,
+      "versionNonce": 345943860,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "ZiECfrpbXw6xX-AV-eaK6",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681310189819,
+      "link": null,
+      "locked": false,
+      "text": "Azurite",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Azurite"
+    },
+    {
+      "id": "RahgKx0tdDl4s2Q8EYDwG",
+      "type": "text",
+      "x": -750.446196693163,
+      "y": -629.7555428331996,
+      "width": 627,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 700651188,
+      "version": 49,
+      "versionNonce": 1089120436,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "ZiECfrpbXw6xX-AV-eaK6",
+          "type": "arrow"
+        },
+        {
+          "id": "H8fggbr8nROXAiTxiuI29",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681310189820,
+      "link": "https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite",
+      "locked": false,
+      "text": "Use the Azurite emulator for local Azure Storage development",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Use the Azurite emulator for local Azure Storage development"
+    },
+    {
+      "id": "o6K37AluN2qqAHCEcV4G9",
+      "type": "text",
+      "x": -388.11278138092194,
+      "y": -422.2308799743972,
+      "width": 288,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 746283276,
+      "version": 68,
+      "versionNonce": 1522378036,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "H8fggbr8nROXAiTxiuI29",
+          "type": "arrow"
+        },
+        {
+          "id": "5dFtwzqhEYdEl49XEL6ea",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681310198883,
+      "link": "https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview",
+      "locked": false,
+      "text": "What are Durable Functions?",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "What are Durable Functions?"
+    },
+    {
+      "id": "ZiECfrpbXw6xX-AV-eaK6",
+      "type": "arrow",
+      "x": -392.7211630782167,
+      "y": -636.1987198829895,
+      "width": 161.3396867718784,
+      "height": 186.30239405776388,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1013569676,
+      "version": 160,
+      "versionNonce": 671526580,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681310190013,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -161.3396867718784,
+          -186.30239405776388
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "RahgKx0tdDl4s2Q8EYDwG",
+        "focus": 0.1869420691937458,
+        "gap": 6.443177049789938
+      },
+      "endBinding": {
+        "elementId": "9FMdOw0TiKYGpKVywmpo2",
+        "focus": 0.5275511332456038,
+        "gap": 14.51876490257132
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "H8fggbr8nROXAiTxiuI29",
+      "type": "arrow",
+      "x": -274.3348869390694,
+      "y": -434.03138678383016,
+      "width": 95.77686671045979,
+      "height": 159.6709750284905,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 2093307660,
+      "version": 97,
+      "versionNonce": 908507188,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681310190013,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -95.77686671045979,
+          -159.6709750284905
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "o6K37AluN2qqAHCEcV4G9",
+        "focus": -0.10327342244029446,
+        "gap": 11.800506809432932
+      },
+      "endBinding": {
+        "elementId": "RahgKx0tdDl4s2Q8EYDwG",
+        "focus": -0.1641951985823948,
+        "gap": 11.053181020878924
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "laQl3PzWRjcnAjaWVQzMv",
+      "type": "text",
+      "x": -153.2965014284306,
+      "y": -211.88641826708738,
+      "width": 157,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 139803444,
+      "version": 19,
+      "versionNonce": 1433889716,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "5dFtwzqhEYdEl49XEL6ea",
+          "type": "arrow"
+        },
+        {
+          "id": "xqwG7VwNScro8-MPderlY",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681310215593,
+      "link": null,
+      "locked": false,
+      "text": "Azure Functions",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Azure Functions"
+    },
+    {
+      "id": "5dFtwzqhEYdEl49XEL6ea",
+      "type": "arrow",
+      "x": -88.73680121687835,
+      "y": -217.65187653617738,
+      "width": 148.4254700704115,
+      "height": 170.91674471437835,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 203997364,
+      "version": 38,
+      "versionNonce": 1967224844,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681310198887,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -148.4254700704115,
+          -170.91674471437835
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "laQl3PzWRjcnAjaWVQzMv",
+        "focus": 0.021504877364099746,
+        "gap": 5.765458269090004
+      },
+      "endBinding": {
+        "elementId": "o6K37AluN2qqAHCEcV4G9",
+        "focus": 0.07379133701653624,
+        "gap": 8.66225872384149
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "5G56n0EeZjkR7zhHCpmeZ",
+      "type": "text",
+      "x": 31.540227115370044,
+      "y": -425.0604231598021,
+      "width": 537,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1089377932,
+      "version": 13,
+      "versionNonce": 1350030644,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "xqwG7VwNScro8-MPderlY",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681310215594,
+      "link": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-host-json#functiontimeout",
+      "locked": false,
+      "text": "host.json reference for Azure Functions 2.x and later",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "host.json reference for Azure Functions 2.x and later"
+    },
+    {
+      "id": "xqwG7VwNScro8-MPderlY",
+      "type": "arrow",
+      "x": -62.086123239507515,
+      "y": -217.7365894350247,
+      "width": 315.2166966109247,
+      "height": 172.102725298241,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 664678708,
+      "version": 48,
+      "versionNonce": 1937917964,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681310215597,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          315.2166966109247,
+          -172.102725298241
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "laQl3PzWRjcnAjaWVQzMv",
+        "focus": -0.20611652811321682,
+        "gap": 5.850171167937333
+      },
+      "endBinding": {
+        "elementId": "5G56n0EeZjkR7zhHCpmeZ",
+        "focus": 0.018169697268910205,
+        "gap": 10.221108426536375
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
     }
   ],
   "appState": {
