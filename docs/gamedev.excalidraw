@@ -76,8 +76,8 @@
     },
     {
       "type": "text",
-      "version": 79,
-      "versionNonce": 470767157,
+      "version": 80,
+      "versionNonce": 1668024415,
       "isDeleted": false,
       "id": "xs4XhpaR7t26diep3V5yX",
       "fillStyle": "hachure",
@@ -99,9 +99,13 @@
         {
           "id": "MlAnOcNcTksEzr47yn6r2",
           "type": "arrow"
+        },
+        {
+          "id": "a_mE3s7k19CoLTPddD_yf",
+          "type": "arrow"
         }
       ],
-      "updated": 1680821819093,
+      "updated": 1681419754292,
       "link": "https://medium.com/@lordned/ue4-rendering-part-6-adding-a-new-shading-model-e2972b40d72d",
       "locked": false,
       "fontSize": 20,
@@ -1891,8 +1895,8 @@
     },
     {
       "type": "text",
-      "version": 65,
-      "versionNonce": 87493819,
+      "version": 67,
+      "versionNonce": 1057563711,
       "isDeleted": false,
       "id": "1Scn5s3HzWK5r4LTSwiub",
       "fillStyle": "hachure",
@@ -1922,9 +1926,17 @@
         {
           "id": "hxp9gfVejmCFvUWGx9PaD",
           "type": "arrow"
+        },
+        {
+          "id": "-tXnrPv-Y2nHguW25JO-F",
+          "type": "arrow"
+        },
+        {
+          "id": "u2jtW9oT7t4DOLiDyFSCm",
+          "type": "arrow"
         }
       ],
-      "updated": 1680821891762,
+      "updated": 1681419719651,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3866,26 +3878,26 @@
       ]
     },
     {
-      "id": "5mSQEy7X9bICFHN9ObT46",
       "type": "text",
-      "x": -1097.9686433505854,
-      "y": 462.6106850724601,
-      "width": 206,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 19,
+      "versionNonce": 1398555367,
+      "isDeleted": false,
+      "id": "5mSQEy7X9bICFHN9ObT46",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": -1097.9686433505854,
+      "y": 462.6106850724601,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 206,
+      "height": 25,
+      "seed": 807647399,
       "groupIds": [],
       "roundness": null,
-      "seed": 807647399,
-      "version": 19,
-      "versionNonce": 1398555367,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "CP-jzbAjydUEb42T6Tspp",
@@ -3899,53 +3911,42 @@
       "updated": 1681288495785,
       "link": null,
       "locked": false,
-      "text": "Unreal Post Process",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "Unreal Post Process",
+      "baseline": 18,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "Unreal Post Process"
     },
     {
-      "id": "CP-jzbAjydUEb42T6Tspp",
       "type": "arrow",
-      "x": 455.60795339794527,
-      "y": 190.01135767198696,
-      "width": 1346.3432428559804,
-      "height": 268.3243602688267,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 61,
+      "versionNonce": 1048053159,
+      "isDeleted": false,
+      "id": "CP-jzbAjydUEb42T6Tspp",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 455.60795339794527,
+      "y": 190.01135767198696,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1346.3432428559804,
+      "height": 268.3243602688267,
+      "seed": 1501992135,
       "groupIds": [],
       "roundness": {
         "type": 2
       },
-      "seed": 1501992135,
-      "version": 61,
-      "versionNonce": 1048053159,
-      "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1681288484082,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -1346.3432428559804,
-          268.3243602688267
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "Ijy4UovEdDbPeu20o9A0S",
         "focus": 0.7248870265465871,
@@ -3956,30 +3957,41 @@
         "focus": 0.12106777427251138,
         "gap": 4.274967131646463
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -1346.3432428559804,
+          268.3243602688267
+        ]
+      ]
     },
     {
-      "id": "jVPEKE6jzKGdYHgNPYkfL",
       "type": "text",
-      "x": -1534.9047043693486,
-      "y": 777.811207718871,
-      "width": 254,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 5,
+      "versionNonce": 1101125769,
+      "isDeleted": false,
+      "id": "jVPEKE6jzKGdYHgNPYkfL",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": -1534.9047043693486,
+      "y": 777.811207718871,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 254,
+      "height": 25,
+      "seed": 866343721,
       "groupIds": [],
       "roundness": null,
-      "seed": 866343721,
-      "version": 5,
-      "versionNonce": 1101125769,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "Ne-UJTjiQTTMaEkwh80lC",
@@ -3993,53 +4005,42 @@
       "updated": 1681288536191,
       "link": "https://unrealcommunity.wiki/cel-shading-post-process-6t8vztk6",
       "locked": false,
-      "text": "Cel Shading Post Process",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "Cel Shading Post Process",
+      "baseline": 18,
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "Cel Shading Post Process"
     },
     {
-      "id": "Ne-UJTjiQTTMaEkwh80lC",
       "type": "arrow",
-      "x": -1070.293933547073,
-      "y": 494.40700793990817,
-      "width": 330.4616694732133,
-      "height": 272.3133898009963,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 47,
+      "versionNonce": 1833417193,
+      "isDeleted": false,
+      "id": "Ne-UJTjiQTTMaEkwh80lC",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": -1070.293933547073,
+      "y": 494.40700793990817,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 330.4616694732133,
+      "height": 272.3133898009963,
+      "seed": 1703109865,
       "groupIds": [],
       "roundness": {
         "type": 2
       },
-      "seed": 1703109865,
-      "version": 47,
-      "versionNonce": 1833417193,
-      "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1681288495790,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -330.4616694732133,
-          272.3133898009963
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "5mSQEy7X9bICFHN9ObT46",
         "focus": 0.4392730684655853,
@@ -4050,36 +4051,60 @@
         "focus": -0.15108167854359708,
         "gap": 11.0908099779665
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -330.4616694732133,
+          272.3133898009963
+        ]
+      ]
     },
     {
-      "id": "3ICnN6a9Fdw7qUESyQ3A8",
       "type": "arrow",
-      "x": 2301.828255453739,
-      "y": -264.18870001059156,
-      "width": 4072.7204788077024,
-      "height": 1446.195604587443,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 355,
+      "versionNonce": 2145912423,
+      "isDeleted": false,
+      "id": "3ICnN6a9Fdw7qUESyQ3A8",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 2301.828255453739,
+      "y": -264.18870001059156,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 4072.7204788077024,
+      "height": 1446.195604587443,
+      "seed": 2100466311,
       "groupIds": [],
       "roundness": {
         "type": 2
       },
-      "seed": 2100466311,
-      "version": 355,
-      "versionNonce": 2145912423,
-      "isDeleted": false,
       "boundElements": [],
       "updated": 1681288554689,
       "link": null,
       "locked": false,
+      "startBinding": {
+        "elementId": "im04HM5coSDL25B7IhDLg",
+        "focus": -0.2768814383789163,
+        "gap": 8.699161208286569
+      },
+      "endBinding": {
+        "elementId": "jVPEKE6jzKGdYHgNPYkfL",
+        "focus": -0.07855584931339579,
+        "gap": 7.108418037629576
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
@@ -4101,17 +4126,367 @@
           -3578.0679388586996,
           1074.108325767092
         ]
+      ]
+    },
+    {
+      "id": "7STeNSTKI6t-DTLiCiXe7",
+      "type": "text",
+      "x": 1410.8393031877608,
+      "y": -849.1209800646238,
+      "width": 436,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 431145151,
+      "version": 4,
+      "versionNonce": 328916223,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681419691362,
+      "link": null,
+      "locked": false,
+      "text": "How to cell shade - shadows dos and donts",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "How to cell shade - shadows dos and donts"
+    },
+    {
+      "id": "u2jtW9oT7t4DOLiDyFSCm",
+      "type": "arrow",
+      "x": 1112.831141235933,
+      "y": -78.95711845016194,
+      "width": 475.32371526183215,
+      "height": 730.4778031394707,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1083304625,
+      "version": 122,
+      "versionNonce": 15703263,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1681419725919,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          475.32371526183215,
+          -730.4778031394707
+        ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "elementId": "im04HM5coSDL25B7IhDLg",
-        "focus": -0.2768814383789163,
-        "gap": 8.699161208286569
+        "elementId": "1Scn5s3HzWK5r4LTSwiub",
+        "focus": -0.015285679368824951,
+        "gap": 9.34860364954443
+      },
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "0unH3JVxBOfQFaodV0dIP",
+      "type": "text",
+      "x": -621.9499848721093,
+      "y": 1273.1819139866718,
+      "width": 459,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1814507807,
+      "version": 15,
+      "versionNonce": 892707839,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "a_mE3s7k19CoLTPddD_yf",
+          "type": "arrow"
+        },
+        {
+          "id": "IIZgZk9-4VKpvZBren1CS",
+          "type": "arrow"
+        },
+        {
+          "id": "QjqdKvsZpel9JpwRrxO3S",
+          "type": "arrow"
+        },
+        {
+          "id": "ljG_Po1nx5O0YQY2e_-3X",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681419809103,
+      "link": "https://medium.com/@lordned/unreal-engine-4-rendering-overview-part-1-c47f2da65346",
+      "locked": false,
+      "text": "Unreal Engine 4 Rendering Part 1: Introduction",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Unreal Engine 4 Rendering Part 1: Introduction"
+    },
+    {
+      "id": "a_mE3s7k19CoLTPddD_yf",
+      "type": "arrow",
+      "x": -157.60941276103813,
+      "y": 746.0788996264812,
+      "width": 240.60085471721027,
+      "height": 513.124320873334,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 585993695,
+      "version": 42,
+      "versionNonce": 1636837105,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681419754296,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -240.60085471721027,
+          513.124320873334
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "xs4XhpaR7t26diep3V5yX",
+        "focus": 0.022445049834865213,
+        "gap": 14.049602751481189
       },
       "endBinding": {
-        "elementId": "jVPEKE6jzKGdYHgNPYkfL",
-        "focus": -0.07855584931339579,
-        "gap": 7.108418037629576
+        "elementId": "0unH3JVxBOfQFaodV0dIP",
+        "focus": -0.07722590651204593,
+        "gap": 13.978693486856628
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "FC2xZV6pYr3ILkE7ItOg-",
+      "type": "text",
+      "x": -32.71621182063541,
+      "y": 1395.398802518057,
+      "width": 263,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 128983249,
+      "version": 4,
+      "versionNonce": 1006554143,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "ljG_Po1nx5O0YQY2e_-3X",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681419809103,
+      "link": "https://www.intel.com/content/www/us/en/developer/articles/technical/forward-clustered-shading.html",
+      "locked": false,
+      "text": "Forward Clustered Shading",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Forward Clustered Shading"
+    },
+    {
+      "id": "pbI1vxzEPWglNemQjFL5g",
+      "type": "text",
+      "x": -375.94571077307364,
+      "y": 1608.2918133220364,
+      "width": 409,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1784671487,
+      "version": 3,
+      "versionNonce": 2114338143,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "QjqdKvsZpel9JpwRrxO3S",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681419804209,
+      "link": "https://gamedevelopment.tutsplus.com/articles/forward-rendering-vs-deferred-rendering--gamedev-12342",
+      "locked": false,
+      "text": "Forward Rendering vs. Deferred Rendering",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Forward Rendering vs. Deferred Rendering"
+    },
+    {
+      "id": "QjqdKvsZpel9JpwRrxO3S",
+      "type": "arrow",
+      "x": -395.43192296580287,
+      "y": 1308.7409141536887,
+      "width": 206.22120391354906,
+      "height": 290.5354547300044,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 275885841,
+      "version": 47,
+      "versionNonce": 2056129553,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681419804211,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          206.22120391354906,
+          290.5354547300044
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "0unH3JVxBOfQFaodV0dIP",
+        "focus": 0.08117190959176299,
+        "gap": 10.559000167016848
+      },
+      "endBinding": {
+        "elementId": "pbI1vxzEPWglNemQjFL5g",
+        "focus": -0.011685714299022461,
+        "gap": 9.015444438343366
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "ljG_Po1nx5O0YQY2e_-3X",
+      "type": "arrow",
+      "x": -339.39252514675127,
+      "y": 1309.40242475189,
+      "width": 420.5317374279598,
+      "height": 73.46547700595397,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1177893247,
+      "version": 42,
+      "versionNonce": 557500753,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681419809107,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          420.5317374279598,
+          73.46547700595397
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "0unH3JVxBOfQFaodV0dIP",
+        "focus": 0.27478153667467276,
+        "gap": 11.22051076521825
+      },
+      "endBinding": {
+        "elementId": "FC2xZV6pYr3ILkE7ItOg-",
+        "focus": 0.6187437248918221,
+        "gap": 12.530900760212944
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"
