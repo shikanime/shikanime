@@ -157,7 +157,6 @@
             ./modules/home/profiles/base.nix
             ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
-            ./modules/home/profiles/vcs.nix
           ];
         };
       };
