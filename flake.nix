@@ -107,7 +107,6 @@
             ./modules/home/users/paprec.nix
             ./modules/home/users/galec.nix
             ./modules/home/users/birdz.nix
-            ./modules/home/users/amadeus.nix
             ./modules/home/users/renault.nix
             ./modules/home/profiles/base.nix
             ./modules/home/profiles/workstation.nix
@@ -139,7 +138,6 @@
             ./modules/home/users/paprec.nix
             ./modules/home/users/galec.nix
             ./modules/home/users/birdz.nix
-            ./modules/home/users/amadeus.nix
             ./modules/home/users/renault.nix
             ./modules/home/profiles/base.nix
             ./modules/home/profiles/workstation.nix
