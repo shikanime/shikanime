@@ -102,7 +102,6 @@
           };
           modules = [
             ./modules/home/hosts/altashar.nix
-            ./modules/home/users/shikanime.nix
             ./modules/home/users/sfeir.nix
             ./modules/home/profiles/base.nix
             ./modules/home/profiles/workstation.nix
@@ -129,7 +128,6 @@
           };
           modules = [
             ./modules/home/hosts/ishtar.nix
-            ./modules/home/users/shikanime.nix
             ./modules/home/users/sfeir.nix
             ./modules/home/profiles/base.nix
             ./modules/home/profiles/workstation.nix

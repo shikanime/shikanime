@@ -21,6 +21,10 @@
     lfs.enable = true;
     userName = "William Phetsinorath";
     userEmail = "william.phetsinorath@shikanime.studio";
+    signing = {
+      key = "025CF1599FA70256";
+      signByDefault = true;
+    };
     aliases = {
       adog = "log --all --decorate --oneline --graph";
       pouf = "push --force-with-lease";
@@ -80,17 +84,8 @@
       "Temporary Items"
       ".apdisk"
     ];
-    includes = [
-      {
-        condition = "gitdir:${config.home.homeDirectory}/";
-        contents = {
-          core.editor = "${pkgs.neovim}/bin/nvim";
-          commit.gpgSign = true;
-          tag.gpgSign = true;
-        };
-      }
-    ];
     extraConfig = {
+      core.editor = "${pkgs.neovim}/bin/nvim";
       pull.rebase = true;
       push.autoSetupRemote = true;
       init.defaultBranch = "main";

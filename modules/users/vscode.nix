@@ -63,7 +63,6 @@
   # Configure user home
   home-manager.users.vscode = {
     imports = [
-      ../home/users/shikanime.nix
       ../home/users/sfeir.nix
       ../home/profiles/base.nix
       ../home/profiles/workstation.nix
