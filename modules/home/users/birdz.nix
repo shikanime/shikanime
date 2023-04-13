@@ -2,7 +2,7 @@
 
 {
   programs.ssh.matchBlocks = {
-    "gitlab.galec.x.shikanime.studio" = {
+    "gitlab.birdz.x.shikanime.studio" = {
       identityFile = "${config.home.homeDirectory}/.ssh/birdz_ed25519";
     };
   };
