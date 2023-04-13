@@ -68,7 +68,6 @@
       ../home/users/paprec.nix
       ../home/users/galec.nix
       ../home/users/birdz.nix
-      ../home/users/amadeus.nix
       ../home/profiles/base.nix
       ../home/profiles/workstation.nix
       ../home/profiles/xdg.nix
