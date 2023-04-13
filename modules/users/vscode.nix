@@ -64,11 +64,9 @@
   home-manager.users.vscode = {
     imports = [
       ../home/users/totalenergies.nix
-      ../home/users/shikanime.nix
       ../home/users/sfeir.nix
       ../home/users/paprec.nix
       ../home/users/galec.nix
-      ../home/users/lvmh.nix
       ../home/users/birdz.nix
       ../home/users/amadeus.nix
       ../home/profiles/base.nix
