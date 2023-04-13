@@ -1,16 +1,19 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
+  programs.ssh.matchBlocks = {
+    "github.demeter.x.shikanime.studio" = {
+      identityFile = "${config.home.homeDirectory}/.ssh/totalenergies_ed25519";
+    };
+  };
+
   programs.git.includes = [
     {
-      condition = "gitdir:${config.home.homeDirectory}/TotalEnergies/";
-      contents = {
-        user = {
-          name = "William Phetsinorath";
-          email = "william.phetsinorath@external.totalenergies.com";
-          signingKey = "FDEA7AEA663DC732";
-        };
-        core.sshCommand = "${pkgs.openssh}/bin/ssh -i ${config.home.homeDirectory}/.ssh/totalenergies_ed25519";
+      condition = "hasconfig:remote.*.url:git@github.demeter.x.shikanime.studio:**";
+      contents.user = {
+        name = "William Phetsinorath";
+        email = "william.phetsinorath@external.totalenergies.com";
+        signingKey = "FDEA7AEA663DC732";
       };
     }
   ];
