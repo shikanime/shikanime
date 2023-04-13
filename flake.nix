@@ -103,11 +103,9 @@
           modules = [
             ./modules/home/hosts/altashar.nix
             ./modules/home/users/totalenergies.nix
-            ./modules/home/users/shikanime.nix
             ./modules/home/users/sfeir.nix
             ./modules/home/users/paprec.nix
             ./modules/home/users/galec.nix
-            ./modules/home/users/lvmh.nix
             ./modules/home/users/birdz.nix
             ./modules/home/users/amadeus.nix
             ./modules/home/users/renault.nix
@@ -137,11 +135,9 @@
           modules = [
             ./modules/home/hosts/ishtar.nix
             ./modules/home/users/totalenergies.nix
-            ./modules/home/users/shikanime.nix
             ./modules/home/users/sfeir.nix
             ./modules/home/users/paprec.nix
             ./modules/home/users/galec.nix
-            ./modules/home/users/lvmh.nix
             ./modules/home/users/birdz.nix
             ./modules/home/users/amadeus.nix
             ./modules/home/users/renault.nix

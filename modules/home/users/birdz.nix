@@ -1,16 +1,19 @@
 { config, pkgs, ... }:
 
 {
+  programs.ssh.matchBlocks = {
+    "gitlab.galec.x.shikanime.studio" = {
+      identityFile = "${config.home.homeDirectory}/.ssh/birdz_ed25519";
+    };
+  };
+
   programs.git.includes = [
     {
-      condition = "gitdir:${config.home.homeDirectory}/Birdz/";
-      contents = {
-        user = {
-          name = "William Phetsinorath";
-          email = "phetsinorath.w@sfeir.com";
-          signingKey = "AA83063619D0AAEF";
-        };
-        core.sshCommand = "${pkgs.openssh}/bin/ssh -i ${config.home.homeDirectory}/.ssh/birdz_ed25519";
+      condition = "hasconfig:remote.*.url:git@gitlab.birdz.x.shikanime.studio:**";
+      contents.user = {
+        name = "William Phetsinorath";
+        email = "phetsinorath.w@sfeir.com";
+        signingKey = "AA83063619D0AAEF";
       };
     }
   ];
