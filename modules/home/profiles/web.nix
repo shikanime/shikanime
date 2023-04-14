@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = [
+    pkgs.nodejs
+    pkgs.yarn
+  ];
+
   home.sessionVariables = {
     NPM_CONFIG_USERCONFIG = "${config.xdg.configHome}/npm/config";
     NPM_CONFIG_PREFIX = "${config.xdg.dataHome}/npm/lib/node_modules";

@@ -5,6 +5,7 @@ with lib;
 {
   home.packages = [
     pkgs.poetry
+    pkgs.sqlfluff
   ];
 
   programs.neovim = {

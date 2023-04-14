@@ -5,7 +5,7 @@
         "revision": "d6137af629e5ebb17d13eae5a18fc0c14e8057a1"
       },
       "homebrew/cask-drivers": {
-        "revision": "ab9730b3293d4a9cc8184c90e2be5bed3f21f1f4"
+        "revision": "451e9085b1721c6861666ccfad30cd4f65866239"
       }
     },
     "brew": {
@@ -3845,7 +3845,7 @@
         }
       },
       "microsoft-edge-dev": {
-        "version": "113.0.1774.7",
+        "version": "114.0.1788.0",
         "options": {
           "full_name": "microsoft-edge-dev"
         }
@@ -4065,6 +4065,12 @@
         "options": {
           "full_name": "1kc-razer"
         }
+      },
+      "wireshark": {
+        "version": "4.0.5",
+        "options": {
+          "full_name": "wireshark"
+        }
       }
     },
     "mas": {
@@ -4099,7 +4105,7 @@
         "macOS": "12.6"
       },
       "ventura": {
-        "HOMEBREW_VERSION": "4.0.13-17-g9912dca",
+        "HOMEBREW_VERSION": "4.0.13-28-g4fe3436",
         "HOMEBREW_PREFIX": "/usr/local",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.0.0.1.1679647830",
