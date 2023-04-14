@@ -1782,8 +1782,7 @@
           }
         }
       },
-      "vagrant": {
-      },
+      "vagrant": {},
       "packer": {
         "version": "1.8.0",
         "bottle": {

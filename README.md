@@ -1,5 +1,8 @@
-<!-- markdownlint-disable-next-line first-line-heading -->
+<!-- markdownlint-disable first-line-heading -->
+
 ![header.png](https://raw.githubusercontent.com/Shikanime/Shikanime/master/assets/github-header.png)
+
+<!-- markdownlint-enable first-line-heading -->
 
 ## About me
 
