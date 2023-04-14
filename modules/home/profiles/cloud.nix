@@ -4,8 +4,10 @@ with lib;
 
 {
   home.packages = [
+    pkgs.terraform
     pkgs.kustomize
     pkgs.skaffold
+    pkgs.kind
     pkgs.minikube
     pkgs.azure-cli
     pkgs.awscli2

@@ -6,33 +6,18 @@ brew 'diffutils'
 brew 'gnupg'
 brew 'pinentry-mac'
 
-# Cloud
-brew 'terraform'
-brew 'huggingface-cli'
-
 # Data
 brew 'python@3.10'
 brew 'python@3.9'
 brew 'python@3.8'
 brew 'pipx'
-brew 'sqlfluff'
+brew 'huggingface-cli'
 cask 'anaconda'
 
 # Java
 brew 'gradle'
 brew 'coursier'
 brew 'openjdk'
-
-# JavaScript
-brew 'node'
-brew 'yarn'
-
-# Beam
-brew 'erlang'
-brew 'elixir'
-
-# LaTeX
-brew 'texlive'
 
 # Native Toolchains
 brew 'ccache'
@@ -49,6 +34,7 @@ cask 'visual-studio-code'
 cask 'dbeaver-community'
 cask 'jetbrains-toolbox'
 cask 'raspberry-pi-imager'
+cask 'wireshark'
 
 # Virtualization
 cask 'rancher'
@@ -88,7 +74,6 @@ cask 'krita'
 mas 'Amphetamine', id: 937_984_704
 
 # Utils
-cask 'xquartz'
 cask 'obs'
 
 # System
