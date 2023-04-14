@@ -3,6 +3,8 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 brew 'mas'
 brew 'diffutils'
+brew 'gnupg'
+brew 'pinentry-mac'
 
 # Cloud
 brew 'terraform'
@@ -14,8 +16,6 @@ brew 'python@3.9'
 brew 'python@3.8'
 brew 'pipx'
 brew 'sqlfluff'
-brew 'flit'
-brew 'ruff'
 cask 'anaconda'
 
 # Java
