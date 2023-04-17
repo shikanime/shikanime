@@ -41,18 +41,8 @@ data "github_repository" "algorithm" {
   full_name = "${data.github_user.default.username}/algorithm"
 }
 
-resource "github_repository_environment" "algorithm" {
-  repository  = data.github_repository.algorithm.name
-  environment = var.name
-  deployment_branch_policy {
-    protected_branches     = true
-    custom_branch_policies = false
-  }
-}
-
-resource "github_actions_environment_secret" "algorithm_cachix_token" {
+resource "github_actions_secret" "algorithm_cachix_token" {
   repository      = data.github_repository.algorithm.name
-  environment     = github_repository_environment.algorithm.environment
   secret_name     = "CACHIX_AUTH_TOKEN"
   plaintext_value = var.cachix.token
 }
