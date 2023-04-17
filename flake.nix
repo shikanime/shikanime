@@ -165,6 +165,11 @@
           };
           modules = [
             ./modules/home/hosts/devcontainer.nix
+            ./modules/home/users/totalenergies.nix
+            ./modules/home/users/sfeir.nix
+            ./modules/home/users/paprec.nix
+            ./modules/home/users/galec.nix
+            ./modules/home/users/birdz.nix
             ./modules/home/profiles/base.nix
             ./modules/home/profiles/workstation.nix
             ./modules/home/profiles/xdg.nix
