@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 168,
-      "versionNonce": 1915098373,
+      "version": 203,
+      "versionNonce": 276661925,
       "isDeleted": false,
       "id": "g8QIdfdSwgun7jBbeGsEo",
       "fillStyle": "hachure",
@@ -15,8 +15,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 623.702469725448,
-      "y": -664.4051117709139,
+      "x": 778.6403045478428,
+      "y": -843.9871667584025,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 141.03990173339844,
@@ -36,9 +36,13 @@
         {
           "id": "tAycNXx0-jth0SxvEjfk9",
           "type": "arrow"
+        },
+        {
+          "id": "Spvp1b20fZMIFNPOFVWyC",
+          "type": "arrow"
         }
       ],
-      "updated": 1681810172230,
+      "updated": 1681812760868,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -106,10 +110,10 @@
     {
       "id": "4g6MwTngihqCvXY3euZad",
       "type": "arrow",
-      "x": 695.6598825239927,
-      "y": -630.9648957064608,
-      "width": 47.501425528863365,
-      "height": 536.7065186312655,
+      "x": 845.8698008056328,
+      "y": -810.5469506939494,
+      "width": 98.19407922777282,
+      "height": 716.2885736187541,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -123,11 +127,11 @@
         "type": 2
       },
       "seed": 1004404235,
-      "version": 271,
-      "versionNonce": 84356197,
+      "version": 339,
+      "versionNonce": 1992256005,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1681810172231,
+      "updated": 1681812760869,
       "link": null,
       "locked": false,
       "points": [
@@ -136,8 +140,8 @@
           0
         ],
         [
-          47.501425528863365,
-          536.7065186312655
+          -98.19407922777282,
+          716.2885736187541
         ]
       ],
       "lastCommittedPoint": null,
@@ -3720,10 +3724,10 @@
     {
       "id": "d0mSFovhaIuj78bBd7zCk",
       "type": "arrow",
-      "x": 641.9886918121992,
-      "y": -631.9324361754853,
-      "width": 302.6512092721854,
-      "height": 350.13329435218424,
+      "x": 796.9311382493559,
+      "y": -811.514491162974,
+      "width": 457.6039920114275,
+      "height": 529.7102053631751,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -3737,11 +3741,11 @@
         "type": 2
       },
       "seed": 1761894149,
-      "version": 95,
-      "versionNonce": 2123257797,
+      "version": 163,
+      "versionNonce": 900587877,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1681810172231,
+      "updated": 1681812760869,
       "link": null,
       "locked": false,
       "points": [
@@ -3750,8 +3754,8 @@
           0
         ],
         [
-          -302.6512092721854,
-          350.13329435218424
+          -457.6039920114275,
+          529.7102053631751
         ]
       ],
       "lastCommittedPoint": null,
@@ -4301,10 +4305,10 @@
     {
       "id": "tAycNXx0-jth0SxvEjfk9",
       "type": "arrow",
-      "x": 715.6598423263107,
-      "y": -629.7882971428922,
-      "width": 380.7710713625794,
-      "height": 200.8588258538433,
+      "x": 848.028232764108,
+      "y": -809.370352130381,
+      "width": 277.2146421007956,
+      "height": 380.44088084133205,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -4318,11 +4322,11 @@
         "type": 2
       },
       "seed": 424899307,
-      "version": 178,
-      "versionNonce": 199181259,
+      "version": 246,
+      "versionNonce": 848719045,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1681810246217,
+      "updated": 1681812760870,
       "link": null,
       "locked": false,
       "points": [
@@ -4331,8 +4335,8 @@
           0
         ],
         [
-          380.7710713625794,
-          200.8588258538433
+          277.2146421007956,
+          380.44088084133205
         ]
       ],
       "lastCommittedPoint": null,
@@ -5676,6 +5680,283 @@
         "focus": 0.7828858287421084,
         "gap": 13.271304428128133
       },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "nPyyKthFYrVMeYwA7s657",
+      "type": "text",
+      "x": 107.86918703475783,
+      "y": -639.4116846332765,
+      "width": 236.9798126220703,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 36792203,
+      "version": 19,
+      "versionNonce": 1593467691,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "Spvp1b20fZMIFNPOFVWyC",
+          "type": "arrow"
+        },
+        {
+          "id": "jmwnKaUFMjpKwwoQvW5ab",
+          "type": "arrow"
+        },
+        {
+          "id": "wMdUjVqxXtMM8jvizvY1B",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681812742022,
+      "link": null,
+      "locked": false,
+      "text": "Cloud Native Telco Day",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Cloud Native Telco Day",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "3ZZcGLqu0ksGhKAQH0COI",
+      "type": "text",
+      "x": -1334.4704451567563,
+      "y": -649.3940088834529,
+      "width": 274.6197509765625,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 71662533,
+      "version": 245,
+      "versionNonce": 3104229,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "jmwnKaUFMjpKwwoQvW5ab",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681812714226,
+      "link": null,
+      "locked": false,
+      "text": "Sylva Open Source Platform",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Sylva Open Source Platform",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "Spvp1b20fZMIFNPOFVWyC",
+      "type": "arrow",
+      "x": 768.2951005367486,
+      "y": -822.2239415068186,
+      "width": 461.4995667086035,
+      "height": 173.78527809494074,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 308518213,
+      "version": 115,
+      "versionNonce": 1293323301,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681812760870,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -461.4995667086035,
+          173.78527809494074
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "g8QIdfdSwgun7jBbeGsEo",
+        "focus": 0.5434065292904035,
+        "gap": 10.34520401109421
+      },
+      "endBinding": {
+        "elementId": "nPyyKthFYrVMeYwA7s657",
+        "focus": 0.15341024476948048,
+        "gap": 9.026978778601347
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "jmwnKaUFMjpKwwoQvW5ab",
+      "type": "arrow",
+      "x": -866.1212280364691,
+      "y": -639.8171335231009,
+      "width": 181.29897738580553,
+      "height": 5.542038928541274,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 2017531019,
+      "version": 519,
+      "versionNonce": 515448875,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681812714227,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -181.29897738580553,
+          5.542038928541274
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "BJ3-dFQazq2FBVxlbwDjD",
+        "focus": 0.3725572897139744,
+        "gap": 14.122259335993363
+      },
+      "endBinding": {
+        "elementId": "3ZZcGLqu0ksGhKAQH0COI",
+        "focus": 0.43098157466635156,
+        "gap": 12.430488757919193
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "BJ3-dFQazq2FBVxlbwDjD",
+      "type": "text",
+      "x": -851.9989687004758,
+      "y": -670.9749365169831,
+      "width": 757.3594360351562,
+      "height": 75,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1360725419,
+      "version": 74,
+      "versionNonce": 1045203339,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "jmwnKaUFMjpKwwoQvW5ab",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1681812714226,
+      "link": null,
+      "locked": false,
+      "text": "Panel: Looking Ahead to the Future with Project Sylva, Energy Efficiency\n & Telco Cloud Platforms - Niki Manoledaki, Weaveworks; Philippe \nEnsarguet, Orange Business Services; Jonne Soininen, Nokia; Tim Irnich, SUSE",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 68,
+      "containerId": null,
+      "originalText": "Panel: Looking Ahead to the Future with Project Sylva, Energy Efficiency\n & Telco Cloud Platforms - Niki Manoledaki, Weaveworks; Philippe \nEnsarguet, Orange Business Services; Jonne Soininen, Nokia; Tim Irnich, SUSE",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "wMdUjVqxXtMM8jvizvY1B",
+      "type": "arrow",
+      "x": 98.24952323886623,
+      "y": -630.6664697566703,
+      "width": 178.87814174955747,
+      "height": 2.7285709016711053,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 487099397,
+      "version": 112,
+      "versionNonce": 1270531531,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1681812746922,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -178.87814174955747,
+          2.7285709016711053
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "nPyyKthFYrVMeYwA7s657",
+        "focus": 0.39901967842463687,
+        "gap": 9.619663795891597
+      },
+      "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow"
     }
