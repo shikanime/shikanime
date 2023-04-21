@@ -24178,8 +24178,8 @@
       "groupIds": [],
       "roundness": null,
       "seed": 597057025,
-      "version": 121,
-      "versionNonce": 927893935,
+      "version": 122,
+      "versionNonce": 845045761,
       "isDeleted": false,
       "boundElements": [
         {
@@ -24193,9 +24193,13 @@
         {
           "id": "ljyb1PbMl9uUMMu1NBZRU",
           "type": "arrow"
+        },
+        {
+          "id": "cAT15_7cLYb16kYR1wNnh",
+          "type": "arrow"
         }
       ],
-      "updated": 1682087667176,
+      "updated": 1682087799822,
       "link": null,
       "locked": false,
       "text": "Day 4",
@@ -26830,6 +26834,192 @@
         "elementId": "cnHsDsA2jtD-O8uRTlA-a",
         "focus": -0.7358635118827466,
         "gap": 13.04167511889682
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "znZLOny2mMZuKUtHKpc7X",
+      "type": "text",
+      "x": -4684.4309562158305,
+      "y": -4926.0169205437205,
+      "width": 827.7793579101562,
+      "height": 50,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 786311329,
+      "version": 52,
+      "versionNonce": 2005144129,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "cAT15_7cLYb16kYR1wNnh",
+          "type": "arrow"
+        },
+        {
+          "id": "t4khkZVLIE-UFsopaGgej",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1682087811526,
+      "link": null,
+      "locked": false,
+      "text": "Enabling HPC and ML Workloads with the Latest Kubernetes Job Features - \nMichał Woźniak, Google & Vanessa Sochat, Lawrence Livermore National Laboratory",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 43,
+      "containerId": null,
+      "originalText": "Enabling HPC and ML Workloads with the Latest Kubernetes Job Features - \nMichał Woźniak, Google & Vanessa Sochat, Lawrence Livermore National Laboratory",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "cAT15_7cLYb16kYR1wNnh",
+      "type": "arrow",
+      "x": -2115.395116532459,
+      "y": -4603.025218544659,
+      "width": 2242.894713535422,
+      "height": 260.5760684501838,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1903026767,
+      "version": 77,
+      "versionNonce": 1435845345,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1682087805611,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -2242.894713535422,
+          -260.5760684501838
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "wofi_GMd65ar3ofmT4OmK",
+        "focus": 0.794717251177809,
+        "gap": 5.392002154734655
+      },
+      "endBinding": {
+        "elementId": "znZLOny2mMZuKUtHKpc7X",
+        "focus": 0.6514343766030911,
+        "gap": 12.41563354887785
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "2ZgIZa_-ds6ICXRtXVspx",
+      "type": "text",
+      "x": -4412.3592561894675,
+      "y": -5075.752573251384,
+      "width": 147.9598846435547,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 339669921,
+      "version": 39,
+      "versionNonce": 346694177,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "t4khkZVLIE-UFsopaGgej",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1682087811526,
+      "link": null,
+      "locked": false,
+      "text": "Flux Framework",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Flux Framework",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "t4khkZVLIE-UFsopaGgej",
+      "type": "arrow",
+      "x": -4339.461694913275,
+      "y": -4934.931991266919,
+      "width": 9.187312127662153,
+      "height": 112.3565507233725,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 812280111,
+      "version": 51,
+      "versionNonce": 2082032751,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1682087811533,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -9.187312127662153,
+          -112.3565507233725
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "znZLOny2mMZuKUtHKpc7X",
+        "focus": -0.15903297546521933,
+        "gap": 8.915070723198369
+      },
+      "endBinding": {
+        "elementId": "2ZgIZa_-ds6ICXRtXVspx",
+        "focus": 0.15432990118555612,
+        "gap": 3.464031261092714
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"
