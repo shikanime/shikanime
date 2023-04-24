@@ -12,7 +12,7 @@ KubeCon 2023 was held in Amsterdam, Netherlands. Which was a great location with
 a lot of great food and beer. The conference was held in the RAI Amsterdam
 Convention Centre which was a great venue with a lot of space but still a lot
 crowded at times. The conference was held over 3 days with 1 day of co-located
-CNCF events including CiliumConn, Cloud Native WASM Day and a few others. The
+CNCF events including CiliumCon, Cloud Native WASM Day and a few others. The
 other days were filled with keynotes, sessions, lightning talks and a lot of
 hallway track.
 
@@ -66,7 +66,7 @@ around it unless you provide it with a way to interact with it
 
 ## The service mesh stuffs
 
-Let's talk about the elephant in the room, CiliumConn was a co-located event
+Let's talk about the elephant in the room, CiliumCon was a co-located event
 about... Cilium, Yes you are right! You may have heard about it somehow if you
 are working with Kubernetes. Cilium is the most popular networking plugin for
 Kubernetes that took the community by storm a few years ago ([Try eBPF-powered
