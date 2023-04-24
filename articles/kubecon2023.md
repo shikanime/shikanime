@@ -165,11 +165,11 @@ the controller. I was really surprised to see that, I was expecting something
 weirder. Now you know, maybe someday this information will be useful.
 
 The experience was great, this is a great place to meet people from the
-community and learn about what is going on in the industry. While it could be a
+community and learn about what is going on in the industry. While it is a
 big investment, I think it could be worth it if you are working with Kubernetes
 or Cloud Native technologies.
 
 I would like to thank myself for YOLOing this trip and the many maintainers
 that took the time to talk to me about their projects.
 
-I hope to see you there next year!
+I hope to see you there next time!
