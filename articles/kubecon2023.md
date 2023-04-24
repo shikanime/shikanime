@@ -120,7 +120,7 @@ users but any re-partitioning need a complete processes eviction. The
 performance penalty is still there at around 9.25% of core and stream processor
 while it only work on Ampere and Hopper series of GPU.
 
-## You sometime want the Red Light but not too much
+## Red Light is not only a state
 
 I didn't spent much time in the Delivery Management side of the convention, but
 I had to mention how much this space have been gigantically growing in the last
