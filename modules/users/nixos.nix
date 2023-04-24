@@ -2,7 +2,7 @@
   users.users.nixos.openssh.authorizedKeys.keyFiles = [
     (builtins.fetchurl {
       url = "https://github.com/shikanime.keys";
-      sha256 = "sha256:0gz0n7rbxlxjn7h6gn6ag1i3d66ziqj39943cka52m827c2q9a5k";
+      sha256 = "sha256:0lgxy0j5bxy7q52f7yds03spckvb6g1j7q1h3mrm666fjmxz0zw0";
     })
   ];
 }
