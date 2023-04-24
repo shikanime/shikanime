@@ -1,6 +1,6 @@
 resource "tfe_organization" "default" {
   name  = var.name
-  email = "engineering@shikanime.studio"
+  email = var.email
   lifecycle {
     prevent_destroy = true
   }
