@@ -86,7 +86,6 @@ with lib;
         diff
         git_rebase
         gitattributes
-        help
         jq
         markdown_inline
         regex
