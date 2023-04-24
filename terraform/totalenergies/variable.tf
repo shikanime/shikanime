@@ -1,6 +1,5 @@
 variable "github" {
   type = object({
-    owner = string
     ssh_keys = map(object({
       name               = string
       public_key_openssh = string
@@ -11,7 +10,6 @@ variable "github" {
   })
   description = "GitHub configuration"
   default = {
-    owner = "shikanime"
     ssh_keys = {
       altashar = {
         name               = "Altashar"

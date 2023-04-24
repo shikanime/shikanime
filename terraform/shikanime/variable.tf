@@ -6,7 +6,6 @@ variable "name" {
 
 variable "github" {
   type = object({
-    owner = string
     ssh_keys = map(object({
       name               = string
       public_key_openssh = string
@@ -17,7 +16,6 @@ variable "github" {
   })
   description = "GitHub configuration"
   default = {
-    owner = "shikanime"
     ssh_keys = {
       ishtar = {
         name               = "Ishtar"
@@ -161,20 +159,23 @@ variable "cachix" {
   type = object({
     token = string
   })
-  sensitive = true
+  sensitive   = true
+  description = "Cachix"
 }
 
 variable "wakatime" {
   type = object({
     api_key = string
   })
-  sensitive = true
+  sensitive   = true
+  description = "Wakatime"
 }
 
 variable "wakabox" {
   type = object({
-    github_gist_id = string
+    github_gist_id = optional(string, "18a5a8350c7bfe760adb6c37b6bbe5a9")
     github_token   = string
   })
-  sensitive = true
+  sensitive   = true
+  description = "Wakabox"
 }
