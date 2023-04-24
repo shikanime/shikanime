@@ -4,6 +4,12 @@ variable "name" {
   default     = "shikanime"
 }
 
+variable "email" {
+  type        = string
+  description = "Support email"
+  default     = "engineering@shikanime.studio"
+}
+
 variable "github" {
   type = object({
     ssh_keys = map(object({
@@ -13,6 +19,7 @@ variable "github" {
     gpg_keys = map(object({
       public_key_armored = string
     }))
+    app_installation_id = string
   })
   description = "GitHub configuration"
   default = {
@@ -152,6 +159,7 @@ variable "github" {
       -----END PGP PUBLIC KEY BLOCK-----
       EOF
     }
+    app_installation_id = "ghain-jGUbBPSwRf4ceNGo"
   }
 }
 
