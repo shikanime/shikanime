@@ -1,5 +1,5 @@
 data "github_repository" "default" {
-  full_name = "${data.github_user.default.username}/${var.github.owner}"
+  full_name = "${var.name}/${var.name}"
 }
 
 resource "github_actions_secret" "cachix_token" {
@@ -38,7 +38,7 @@ resource "github_actions_environment_secret" "wakabox_github_token" {
 }
 
 data "github_repository" "algorithm" {
-  full_name = "${data.github_user.default.username}/algorithm"
+  full_name = "${var.name}/algorithm"
 }
 
 resource "github_actions_secret" "algorithm_cachix_token" {
