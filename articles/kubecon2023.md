@@ -130,6 +130,14 @@ ArgoCD is king of the hill, it is the singular project that I have heard about
 the most in all conversations I had during the convention. It even had its own
 co-located event!
 
+[KubeVela](https://kubevela.io/) is a new project that I never heard about
+before, it is a tool that helps you to manage your Kubernetes application by
+providing a higher level abstraction on top of the Kubernetes API. It is in
+between Operators and Helm, is is not as complex as Operators but it doesn't
+require the same level of expertise as Helm. It is a great tool to help you
+create a sane interface for your Kubernetes administrators and developers
+without learning the infrastructure implementation details.
+
 But, but, but, how about development cycle ? My favorite topic have always been
 about how to make the development experience better and therefore you and me
 happy ([You don’t have to ship your computer anymore
@@ -144,11 +152,11 @@ working but that's a whole other topic.
 as it existed, it is a tool that helps you to build, push and deploy your code
 and dependent systems to Kubernetes in a single command: skaffold dev. And yes,
 that's it, I never found anything better even though it is not perfect. Until
-maybe Telepresence? One the project that I found out at the convention, it is a
-tool that allows you to run a local process like in a Kubernetes cluster. It is
-a bit like a reverse proxy that intercepts the traffic and redirect it to your
-local process, yes imagine a world where you don't have to build and push your
-code to test it.
+maybe [Telepresence](https://www.telepresence.io/)? One the project that I found
+out at the convention, it is a tool that allows you to run a local process like
+in a Kubernetes cluster. It is a bit like a reverse proxy that intercepts the
+traffic and redirect it to your local process, yes imagine a world where you
+don't have to build and push your code to test it.
 
 ## Conclusion
 
