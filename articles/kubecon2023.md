@@ -1,6 +1,6 @@
 # KubeCon 2023
 
-This is my very first experience of KubeCon. I have been so exited since I got
+This is my very first experience of KubeCon. I have been so excited since I got
 the all access ticket in december 2022 which fortunately were quite affordable.
 I have been working with Kubernetes for a while now and I was really looking
 forward to meet the community and see what is going on around the world. And I
@@ -44,7 +44,7 @@ in 2016 using Unity. But the most surprising use case was from the people at
 Microsoft Flight Simulator who are using WASM as a plugin system principally for
 the Xbox platform ([Programming APIs
 WASM](https://docs.flightsimulator.com/html/Programming_Tools/WASM/WebAssembly.htm)).
-I tough it was an interesting use case for many years since most performance
+I thought it was an interesting use case for many years since most performance
 critical plugins were written in C++ and are not portable to other platforms,
 while could crash the whole application at any time (Open Broadcaster Software
 is a good example I have been working with).
@@ -56,14 +56,13 @@ and reactive than the current solutions such as AWS Lambda
 ([Knative](https://knative.dev/)) that rely on containers. The idea of using
 WASM modules as the foundation is not new, Cloudflare has been doing it for a
 while with [Cloudflare Workers](https://workers.cloudflare.com/) and Java itself
-did it for many years. While I
-never really looked into it, I was unsurprised to learn that the performance of
-the platform was impressive with isolation by design, but the current state of
-the ecosystem was not really ready for production yet, your favorite libraries
-are probably not available yet because of the isolation principle. Such as
-Haskell, WASM is pure, blind, innocent, it doesn't know about the environment
-around it unless you provide it with a way to interact with it
-([WASI](https://github.com/WebAssembly/WASI)).
+did it for many years. While I never really looked into it, I was unsurprised to
+learn that the performance of the platform was impressive with isolation by
+design, but the current state of the ecosystem was not really ready for
+production yet, your favorite libraries are probably not available yet because
+of the isolation principle. Such as Haskell, WASM is pure, blind, innocent, it
+doesn't know about the environment around it unless you provide it with a way to
+interact with it ([WASI](https://github.com/WebAssembly/WASI)).
 
 ## The service mesh stuffs
 
@@ -76,9 +75,9 @@ program!](https://cilium.io/blog/2021/12/01/cilium-service-mesh-beta/)). By
 using eBPF to implement a sidecar-less networking model. Since I'm not a network
 guy, I can't attest of the performance of the solution but it seems to be quite
 a joy for many Kubernetes administrators. Sorry if you were looking forward to
-this part, the only thing I know is that it now entered the service mesh war
-and I'm quite exited to see what it will bring to the table compared to Istio
-which is a bit of a pain to manage, upgrade and debug in production environment.
+this part, the only thing I know is that it now entered the service mesh war and
+I'm quite excited to see what it will bring to the table compared to Istio which
+is a bit of a pain to manage, upgrade and debug in production environment.
 
 Talking about Istio, there have been 3 major fields of interest, the first was
 around using [SPIFFE](https://spiffe.io/) and
@@ -91,7 +90,7 @@ The second was about the Gateway API, a lot, A LOT during the whole convention.
 This Kubernetes SIG project specify a way to manage ingress and egress traffic
 in a Kubernetes cluster. For many years we had few options, either use the
 built-in ingress, use a third party such as Traefik or Nginx or use a service
-mesh such as Istio. Compared to the other solution, Gateway API play nicely with
+mesh such as Istio. Compared to other solutions, Gateway API play nicely with
 the cloud provider by mapping the specification to the host services such as
 [AWS VPC Lattice](https://aws.amazon.com/vpc/lattice/) while also solving the
 double hop network problem.
@@ -166,11 +165,11 @@ the controller. I was really surprised to see that, I was expecting something
 weirder. Now you know, maybe someday this information will be useful.
 
 The experience was great, this is a great place to meet people from the
-community and learn about what is going on in the industry. While it is a
-big investment, I think it could be worth it if you are working with Kubernetes
-or Cloud Native technologies.
+community and learn about what is going on in the industry. While it is a big
+investment, I think it could be worth it if you are working with Kubernetes or
+Cloud Native technologies.
 
-I would like to thank myself for YOLOing this trip and the many maintainers
-that took the time to talk to me about their projects.
+I would like to thank myself for YOLOing this trip and the many maintainers that
+took the time to talk to me about their projects.
 
 I hope to see you there next time!
