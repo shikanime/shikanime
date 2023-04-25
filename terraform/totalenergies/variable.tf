@@ -15,6 +15,10 @@ variable "github" {
         name               = "Altashar"
         public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEcC9iJokc4BW6fTW9vz/X/0NhCHQf7WigeMz7ft2bi"
       }
+      ishtar = {
+        name               = "Ishtar"
+        public_key_openssh = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIHZVBUmDSLiLNRUCeJ1dWNwLWYlpIkxZvUXELWGXUmZ"
+      }
     }
     gpg_keys = {
       altashar = {
