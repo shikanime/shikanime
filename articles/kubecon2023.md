@@ -55,7 +55,8 @@ and reactive than the current solutions such as AWS Lambda
 ([Firecracker](https://firecracker-microvm.github.io/)) or Google Cloud
 ([Knative](https://knative.dev/)) that rely on containers. The idea of using
 WASM modules as the foundation is not new, Cloudflare has been doing it for a
-while with Cloudflare Workers and Java itself did it for many years. While I
+while with [Cloudflare Workers](https://workers.cloudflare.com/) and Java itself
+did it for many years. While I
 never really looked into it, I was unsurprised to learn that the performance of
 the platform was impressive with isolation by design, but the current state of
 the ecosystem was not really ready for production yet, your favorite libraries
@@ -133,7 +134,7 @@ co-located event!
 [KubeVela](https://kubevela.io/) is a new project that I never heard about
 before, it is a tool that helps you to manage your Kubernetes application by
 providing a higher level abstraction on top of the Kubernetes API. It is in
-between Operators and Helm, is is not as complex as Operators but it doesn't
+between Operators and Helm, is not as complex as Operators but it doesn't
 require the same level of expertise as Helm. It is a great tool to help you
 create a sane interface for your Kubernetes administrators and developers
 without learning the infrastructure implementation details.
