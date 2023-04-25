@@ -1360,8 +1360,8 @@
     },
     {
       "type": "text",
-      "version": 368,
-      "versionNonce": 562143762,
+      "version": 370,
+      "versionNonce": 351435346,
       "isDeleted": false,
       "id": "eBxmbPxaF25eHhFewlBCY",
       "fillStyle": "hachure",
@@ -1411,9 +1411,17 @@
         {
           "id": "mFMb4i58Cpj7wUwPUqaWR",
           "type": "arrow"
+        },
+        {
+          "id": "1w7Qh31xbqO2sGeTp3M2p",
+          "type": "arrow"
+        },
+        {
+          "id": "LdVAZ0a7qbu6fz6_bwBg3",
+          "type": "arrow"
         }
       ],
-      "updated": 1682451226544,
+      "updated": 1682451276944,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -6081,6 +6089,97 @@
           -266.4398245319936
         ]
       ]
+    },
+    {
+      "id": "npu8VgC3flgtkOG53FVQe",
+      "type": "text",
+      "x": 2216.7523242642014,
+      "y": -548.1923610647226,
+      "width": 62.47993469238281,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 587177934,
+      "version": 5,
+      "versionNonce": 18046994,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "LdVAZ0a7qbu6fz6_bwBg3",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1682451276944,
+      "link": "https://github.com/lilxyzw/lilToon",
+      "locked": false,
+      "text": "lilToon",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "lilToon",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "LdVAZ0a7qbu6fz6_bwBg3",
+      "type": "arrow",
+      "x": 1856.2777204343909,
+      "y": -160.8485030061422,
+      "width": 381.4701881471967,
+      "height": 356.11312535902687,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 313226770,
+      "version": 48,
+      "versionNonce": 1415569934,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1682451276949,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          381.4701881471967,
+          -356.11312535902687
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "eBxmbPxaF25eHhFewlBCY",
+        "focus": -0.002702839560244027,
+        "gap": 9.902183426064084
+      },
+      "endBinding": {
+        "elementId": "npu8VgC3flgtkOG53FVQe",
+        "focus": -0.22003285163252465,
+        "gap": 6.230732699553528
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
     }
   ],
   "appState": {
