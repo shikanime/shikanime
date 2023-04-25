@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 173,
-      "versionNonce": 765011307,
+      "version": 175,
+      "versionNonce": 1249720299,
       "isDeleted": false,
       "id": "Ijy4UovEdDbPeu20o9A0S",
       "fillStyle": "hachure",
@@ -62,7 +62,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -77,8 +77,8 @@
     },
     {
       "type": "text",
-      "version": 85,
-      "versionNonce": 1767612331,
+      "version": 87,
+      "versionNonce": 285397061,
       "isDeleted": false,
       "id": "xs4XhpaR7t26diep3V5yX",
       "fillStyle": "hachure",
@@ -114,7 +114,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755901492,
+      "updated": 1682447851300,
       "link": "https://medium.com/@lordned/ue4-rendering-part-6-adding-a-new-shading-model-e2972b40d72d",
       "locked": false,
       "fontSize": 20,
@@ -129,8 +129,8 @@
     },
     {
       "type": "text",
-      "version": 80,
-      "versionNonce": 1439121419,
+      "version": 82,
+      "versionNonce": 293929611,
       "isDeleted": false,
       "id": "LUoW9pRfaFeq09s74tn9p",
       "fillStyle": "hachure",
@@ -158,7 +158,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://forums.unrealengine.com/t/toon-shading-model-for-ue-4-20/218747/1",
       "locked": false,
       "fontSize": 20,
@@ -173,8 +173,8 @@
     },
     {
       "type": "arrow",
-      "version": 183,
-      "versionNonce": 1028971045,
+      "version": 184,
+      "versionNonce": 1999273893,
       "isDeleted": false,
       "id": "MlAnOcNcTksEzr47yn6r2",
       "fillStyle": "hachure",
@@ -195,7 +195,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -224,8 +224,8 @@
     },
     {
       "type": "text",
-      "version": 61,
-      "versionNonce": 312018603,
+      "version": 63,
+      "versionNonce": 1182431531,
       "isDeleted": false,
       "id": "P1uONNhg6G9myeHUpyiq6",
       "fillStyle": "hachure",
@@ -249,7 +249,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://forums.unrealengine.com/t/toon-shading-model/30226/1",
       "locked": false,
       "fontSize": 20,
@@ -264,8 +264,8 @@
     },
     {
       "type": "text",
-      "version": 105,
-      "versionNonce": 1147161989,
+      "version": 108,
+      "versionNonce": 461137413,
       "isDeleted": false,
       "id": "wmRyH-ReLENN5XwHaSpXH",
       "fillStyle": "hachure",
@@ -287,9 +287,13 @@
         {
           "id": "FCDMAhAOoYUq62g6R777i",
           "type": "arrow"
+        },
+        {
+          "id": "XvTIJXGBMF4Cw2yqk2Zqm",
+          "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447886983,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -304,8 +308,8 @@
     },
     {
       "type": "arrow",
-      "version": 330,
-      "versionNonce": 1790507339,
+      "version": 331,
+      "versionNonce": 919083979,
       "isDeleted": false,
       "id": "FCDMAhAOoYUq62g6R777i",
       "fillStyle": "hachure",
@@ -326,7 +330,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -355,8 +359,8 @@
     },
     {
       "type": "text",
-      "version": 71,
-      "versionNonce": 1952863461,
+      "version": 73,
+      "versionNonce": 238066277,
       "isDeleted": false,
       "id": "xOQDXgZeMQif5bacIL9AD",
       "fillStyle": "hachure",
@@ -380,7 +384,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://forums.unrealengine.com/t/anisotropy-material/12963/2",
       "locked": false,
       "fontSize": 20,
@@ -395,8 +399,8 @@
     },
     {
       "type": "text",
-      "version": 48,
-      "versionNonce": 729913323,
+      "version": 50,
+      "versionNonce": 512256619,
       "isDeleted": false,
       "id": "HgJcs6irU9Gvi5VapumiQ",
       "fillStyle": "hachure",
@@ -436,7 +440,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://forums.unrealengine.com/t/toon-shading-models-stylized-rendering-experiments/218895",
       "locked": false,
       "fontSize": 20,
@@ -451,8 +455,8 @@
     },
     {
       "type": "arrow",
-      "version": 166,
-      "versionNonce": 2029285445,
+      "version": 167,
+      "versionNonce": 1012532677,
       "isDeleted": false,
       "id": "0NxsdZU_MfbtOcHud9Iz0",
       "fillStyle": "hachure",
@@ -473,7 +477,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -502,8 +506,8 @@
     },
     {
       "type": "arrow",
-      "version": 206,
-      "versionNonce": 318595723,
+      "version": 207,
+      "versionNonce": 1384506635,
       "isDeleted": false,
       "id": "u1YaMsQlON-KtgXtrRw08",
       "fillStyle": "hachure",
@@ -524,7 +528,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -553,8 +557,8 @@
     },
     {
       "type": "arrow",
-      "version": 160,
-      "versionNonce": 803741605,
+      "version": 161,
+      "versionNonce": 1828652325,
       "isDeleted": false,
       "id": "TIlKT4vDF4E_BxBeDt4sp",
       "fillStyle": "hachure",
@@ -575,7 +579,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -604,8 +608,8 @@
     },
     {
       "type": "arrow",
-      "version": 51,
-      "versionNonce": 971430187,
+      "version": 52,
+      "versionNonce": 708512683,
       "isDeleted": false,
       "id": "T3l-FX1F6bhVvqqMb_VAw",
       "fillStyle": "hachure",
@@ -626,7 +630,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -655,8 +659,8 @@
     },
     {
       "type": "text",
-      "version": 61,
-      "versionNonce": 1601102597,
+      "version": 63,
+      "versionNonce": 1938626693,
       "isDeleted": false,
       "id": "wWomcYR_CFrbNUVx7BjxM",
       "fillStyle": "hachure",
@@ -696,7 +700,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://forums.unrealengine.com/t/wip-anime-toon-stylized-shading-model/135956",
       "locked": false,
       "fontSize": 20,
@@ -711,8 +715,8 @@
     },
     {
       "type": "text",
-      "version": 80,
-      "versionNonce": 1034451915,
+      "version": 82,
+      "versionNonce": 701652555,
       "isDeleted": false,
       "id": "Vm96uzXnXyrjN8rVtBTzb",
       "fillStyle": "hachure",
@@ -740,7 +744,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://forums.unrealengine.com/t/npr-toon-shading-model/626678",
       "locked": false,
       "fontSize": 20,
@@ -755,8 +759,8 @@
     },
     {
       "type": "text",
-      "version": 31,
-      "versionNonce": 738605669,
+      "version": 33,
+      "versionNonce": 1505869797,
       "isDeleted": false,
       "id": "BiyBgbOfFqirlodFQopFx",
       "fillStyle": "hachure",
@@ -784,7 +788,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://forums.unrealengine.com/t/make-the-engine-more-accommodating-for-custom-shading-models/544373",
       "locked": false,
       "fontSize": 20,
@@ -799,8 +803,8 @@
     },
     {
       "type": "text",
-      "version": 32,
-      "versionNonce": 710724203,
+      "version": 34,
+      "versionNonce": 1814453483,
       "isDeleted": false,
       "id": "jrFbVuhppHabCLyQ4JX12",
       "fillStyle": "hachure",
@@ -828,7 +832,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://dev.epicgames.com/community/learning/courses/92D/unreal-engine-strata-materials/vEaW/unreal-engine-strata-what-is-strata",
       "locked": false,
       "fontSize": 20,
@@ -843,8 +847,8 @@
     },
     {
       "type": "arrow",
-      "version": 111,
-      "versionNonce": 1316726213,
+      "version": 112,
+      "versionNonce": 363494213,
       "isDeleted": false,
       "id": "ZHYJeTHMrYCrVzu4o9GWi",
       "fillStyle": "hachure",
@@ -865,7 +869,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -894,8 +898,8 @@
     },
     {
       "type": "arrow",
-      "version": 186,
-      "versionNonce": 617497867,
+      "version": 187,
+      "versionNonce": 1287751563,
       "isDeleted": false,
       "id": "KjEe6tsao3OLs3KJ6xT09",
       "fillStyle": "hachure",
@@ -916,7 +920,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -945,8 +949,8 @@
     },
     {
       "type": "arrow",
-      "version": 307,
-      "versionNonce": 166503717,
+      "version": 308,
+      "versionNonce": 2141506213,
       "isDeleted": false,
       "id": "Wn_7e_jQS6ftqJCFpezVY",
       "fillStyle": "hachure",
@@ -967,7 +971,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -996,8 +1000,8 @@
     },
     {
       "type": "arrow",
-      "version": 551,
-      "versionNonce": 1417112491,
+      "version": 552,
+      "versionNonce": 1373527595,
       "isDeleted": false,
       "id": "ycbmbrWsOmxCGiX8RAhn-",
       "fillStyle": "hachure",
@@ -1018,7 +1022,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1047,8 +1051,8 @@
     },
     {
       "type": "text",
-      "version": 69,
-      "versionNonce": 1640413317,
+      "version": 71,
+      "versionNonce": 140389893,
       "isDeleted": false,
       "id": "M7vKubsgAI6m3XkQeXMo_",
       "fillStyle": "hachure",
@@ -1072,7 +1076,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://ruyo.github.io/VRM4U/02_toon/",
       "locked": false,
       "fontSize": 20,
@@ -1087,8 +1091,8 @@
     },
     {
       "type": "arrow",
-      "version": 153,
-      "versionNonce": 226672203,
+      "version": 154,
+      "versionNonce": 1449615563,
       "isDeleted": false,
       "id": "zceZRSieH0UvArcUb_Jn5",
       "fillStyle": "hachure",
@@ -1109,7 +1113,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1138,8 +1142,8 @@
     },
     {
       "type": "text",
-      "version": 33,
-      "versionNonce": 264724453,
+      "version": 35,
+      "versionNonce": 785655141,
       "isDeleted": false,
       "id": "P5OjnudOdW2RYLQp_L3k5",
       "fillStyle": "hachure",
@@ -1158,7 +1162,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": "https://www.bilibili.com/video/BV1yo4y1z7LN/?share_source=copy_web&vd_source=f6690aa3cbb4401066f3d37e0ee22574",
       "locked": false,
       "fontSize": 20,
@@ -1173,8 +1177,8 @@
     },
     {
       "type": "text",
-      "version": 299,
-      "versionNonce": 986365163,
+      "version": 301,
+      "versionNonce": 1945571179,
       "isDeleted": false,
       "id": "qaI53KdhIfk1JmFK2o4qk",
       "fillStyle": "hachure",
@@ -1202,7 +1206,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840364,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1217,8 +1221,8 @@
     },
     {
       "type": "arrow",
-      "version": 68,
-      "versionNonce": 972823365,
+      "version": 69,
+      "versionNonce": 911487173,
       "isDeleted": false,
       "id": "GudbIZ-kj8qpM1QcA9yuR",
       "fillStyle": "hachure",
@@ -1239,7 +1243,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1268,8 +1272,8 @@
     },
     {
       "type": "text",
-      "version": 201,
-      "versionNonce": 131721099,
+      "version": 203,
+      "versionNonce": 752347659,
       "isDeleted": false,
       "id": "cSI7vXIHezDWSVEDfdHal",
       "fillStyle": "hachure",
@@ -1293,7 +1297,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1308,8 +1312,8 @@
     },
     {
       "type": "text",
-      "version": 56,
-      "versionNonce": 1757571749,
+      "version": 58,
+      "versionNonce": 477876261,
       "isDeleted": false,
       "id": "z7c24bMV9GDkAW2dxM6KF",
       "fillStyle": "hachure",
@@ -1337,7 +1341,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": "https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample",
       "locked": false,
       "fontSize": 20,
@@ -1352,8 +1356,8 @@
     },
     {
       "type": "text",
-      "version": 363,
-      "versionNonce": 1256898091,
+      "version": 365,
+      "versionNonce": 1443131563,
       "isDeleted": false,
       "id": "eBxmbPxaF25eHhFewlBCY",
       "fillStyle": "hachure",
@@ -1405,7 +1409,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1420,8 +1424,8 @@
     },
     {
       "type": "arrow",
-      "version": 516,
-      "versionNonce": 1019727365,
+      "version": 517,
+      "versionNonce": 1329103749,
       "isDeleted": false,
       "id": "CHCen4FrsHmcrdzAzW_om",
       "fillStyle": "hachure",
@@ -1442,7 +1446,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1471,8 +1475,8 @@
     },
     {
       "type": "arrow",
-      "version": 405,
-      "versionNonce": 786940107,
+      "version": 406,
+      "versionNonce": 1093083979,
       "isDeleted": false,
       "id": "ctqYag_hUORF3OyYRwX_C",
       "fillStyle": "hachure",
@@ -1493,7 +1497,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1522,8 +1526,8 @@
     },
     {
       "type": "text",
-      "version": 73,
-      "versionNonce": 1695139173,
+      "version": 75,
+      "versionNonce": 583518949,
       "isDeleted": false,
       "id": "fiq9l_urVPfBGlboWhsKJ",
       "fillStyle": "hachure",
@@ -1547,7 +1551,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": "https://github.com/unity3d-jp/UnityChanToonShaderVer2_Project",
       "locked": false,
       "fontSize": 20,
@@ -1562,8 +1566,8 @@
     },
     {
       "type": "arrow",
-      "version": 390,
-      "versionNonce": 493580139,
+      "version": 391,
+      "versionNonce": 647660011,
       "isDeleted": false,
       "id": "f2KE_81phKDSLvYhxaYJS",
       "fillStyle": "hachure",
@@ -1584,7 +1588,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1613,8 +1617,8 @@
     },
     {
       "type": "text",
-      "version": 30,
-      "versionNonce": 1423298757,
+      "version": 32,
+      "versionNonce": 129443397,
       "isDeleted": false,
       "id": "XbwrzYyGyODFtOGjxHsN_",
       "fillStyle": "hachure",
@@ -1638,7 +1642,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851300,
       "link": "https://github.com/ColinLeung-NiloCat/UnityURP-MobileDrawMeshInstancedIndirectExample",
       "locked": false,
       "fontSize": 20,
@@ -1653,8 +1657,8 @@
     },
     {
       "type": "arrow",
-      "version": 35,
-      "versionNonce": 1757432331,
+      "version": 36,
+      "versionNonce": 1332284555,
       "isDeleted": false,
       "id": "_-ocUfa7LZwZ_AnHH9ry1",
       "fillStyle": "hachure",
@@ -1675,7 +1679,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1704,8 +1708,8 @@
     },
     {
       "type": "text",
-      "version": 76,
-      "versionNonce": 969502757,
+      "version": 78,
+      "versionNonce": 14947749,
       "isDeleted": false,
       "id": "ZxWRIaRyhskE5X2M0CLJX",
       "fillStyle": "hachure",
@@ -1729,7 +1733,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": "https://github.com/DeJhon-Huang/FernNPR",
       "locked": false,
       "fontSize": 20,
@@ -1744,8 +1748,8 @@
     },
     {
       "type": "arrow",
-      "version": 175,
-      "versionNonce": 903925931,
+      "version": 176,
+      "versionNonce": 2135769899,
       "isDeleted": false,
       "id": "AVDoR1V93a4gtECli-Df8",
       "fillStyle": "hachure",
@@ -1766,7 +1770,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1795,8 +1799,8 @@
     },
     {
       "type": "text",
-      "version": 7,
-      "versionNonce": 835855237,
+      "version": 9,
+      "versionNonce": 1501305093,
       "isDeleted": false,
       "id": "zEcoXqcUtx4D4OXm9yMwx",
       "fillStyle": "hachure",
@@ -1815,7 +1819,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": "https://github.com/unity3d-jp/RaytracedHardShadow",
       "locked": false,
       "fontSize": 20,
@@ -1830,8 +1834,8 @@
     },
     {
       "type": "arrow",
-      "version": 112,
-      "versionNonce": 645366603,
+      "version": 113,
+      "versionNonce": 514958795,
       "isDeleted": false,
       "id": "VjpDZp88rjQvak_q4lHLV",
       "fillStyle": "hachure",
@@ -1852,7 +1856,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -1873,8 +1877,8 @@
     },
     {
       "type": "arrow",
-      "version": 184,
-      "versionNonce": 1093495525,
+      "version": 185,
+      "versionNonce": 452767845,
       "isDeleted": false,
       "id": "jWSBg9Pk_qOAmgwifphJO",
       "fillStyle": "hachure",
@@ -1895,7 +1899,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -1928,8 +1932,8 @@
     },
     {
       "type": "text",
-      "version": 70,
-      "versionNonce": 1121903083,
+      "version": 72,
+      "versionNonce": 615560299,
       "isDeleted": false,
       "id": "1Scn5s3HzWK5r4LTSwiub",
       "fillStyle": "hachure",
@@ -1965,7 +1969,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1980,8 +1984,8 @@
     },
     {
       "type": "arrow",
-      "version": 95,
-      "versionNonce": 141084229,
+      "version": 96,
+      "versionNonce": 1127439301,
       "isDeleted": false,
       "id": "ebmhiNVVgR7RjTZDVXXd9",
       "fillStyle": "hachure",
@@ -2002,7 +2006,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2031,8 +2035,8 @@
     },
     {
       "type": "arrow",
-      "version": 125,
-      "versionNonce": 606170251,
+      "version": 126,
+      "versionNonce": 1091890955,
       "isDeleted": false,
       "id": "1PYqmUl7vUmY29fvLQfgq",
       "fillStyle": "hachure",
@@ -2053,7 +2057,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2082,8 +2086,8 @@
     },
     {
       "type": "arrow",
-      "version": 235,
-      "versionNonce": 979482021,
+      "version": 236,
+      "versionNonce": 977115941,
       "isDeleted": false,
       "id": "hxp9gfVejmCFvUWGx9PaD",
       "fillStyle": "hachure",
@@ -2104,7 +2108,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2149,8 +2153,8 @@
     },
     {
       "type": "text",
-      "version": 40,
-      "versionNonce": 1576641323,
+      "version": 42,
+      "versionNonce": 1180226987,
       "isDeleted": false,
       "id": "FmjsHlL0ZczCA8M2IXDYy",
       "fillStyle": "hachure",
@@ -2178,7 +2182,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": "https://80.lv/articles/experimenting-with-techniques-for-stylized-art-in-ue5/",
       "locked": false,
       "fontSize": 20,
@@ -2193,8 +2197,8 @@
     },
     {
       "type": "text",
-      "version": 30,
-      "versionNonce": 1380301061,
+      "version": 32,
+      "versionNonce": 143191685,
       "isDeleted": false,
       "id": "OavwbaTdjjF9sWHewVkb2",
       "fillStyle": "hachure",
@@ -2218,7 +2222,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": "https://www.artstation.com/artwork/1xNwvK",
       "locked": false,
       "fontSize": 20,
@@ -2233,8 +2237,8 @@
     },
     {
       "type": "arrow",
-      "version": 64,
-      "versionNonce": 684852683,
+      "version": 65,
+      "versionNonce": 1403447371,
       "isDeleted": false,
       "id": "P6okyMW2fv--d3Za0hiyR",
       "fillStyle": "hachure",
@@ -2255,7 +2259,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2284,8 +2288,8 @@
     },
     {
       "type": "arrow",
-      "version": 55,
-      "versionNonce": 160583781,
+      "version": 56,
+      "versionNonce": 1288885733,
       "isDeleted": false,
       "id": "5dJ_bgVHHvq37CaVxyIa_",
       "fillStyle": "hachure",
@@ -2306,7 +2310,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2335,8 +2339,8 @@
     },
     {
       "type": "text",
-      "version": 228,
-      "versionNonce": 1271207019,
+      "version": 311,
+      "versionNonce": 94275979,
       "isDeleted": false,
       "id": "UKxJ-iTu4SGmqHmcwVVjK",
       "fillStyle": "hachure",
@@ -2345,8 +2349,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -81.25255746085509,
-      "y": -1114.033225134799,
+      "x": -1588.1766577379065,
+      "y": -1494.8745936345967,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 193.9598846435547,
@@ -2380,7 +2384,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447857654,
       "link": "https://www.riotgames.com/en/urf-academy/the-curriculum",
       "locked": false,
       "fontSize": 20,
@@ -2395,8 +2399,8 @@
     },
     {
       "type": "text",
-      "version": 253,
-      "versionNonce": 236256197,
+      "version": 336,
+      "versionNonce": 1745686213,
       "isDeleted": false,
       "id": "EvS54iu9qIOLyB8hzc6ra",
       "fillStyle": "hachure",
@@ -2405,8 +2409,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 53.497442539144856,
-      "y": -1343.0689394205158,
+      "x": -1453.4266577379065,
+      "y": -1723.9103079203135,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 123.85990905761719,
@@ -2420,7 +2424,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447857654,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2435,8 +2439,8 @@
     },
     {
       "type": "arrow",
-      "version": 627,
-      "versionNonce": 1184714507,
+      "version": 879,
+      "versionNonce": 924162923,
       "isDeleted": false,
       "id": "ePCQ20LySqZ1vsX9ycNNH",
       "fillStyle": "hachure",
@@ -2445,8 +2449,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 118.63688181252269,
-      "y": -1307.402272753849,
+      "x": -1388.2872184645287,
+      "y": -1688.2436412536467,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 93.83714763017127,
@@ -2457,17 +2461,17 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447858053,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "EvS54iu9qIOLyB8hzc6ra",
-        "focus": -0.20083299274050823,
+        "focus": -0.21835512042218513,
         "gap": 10.666666666666742
       },
       "endBinding": {
         "elementId": "UKxJ-iTu4SGmqHmcwVVjK",
-        "focus": -0.019157284203355752,
+        "focus": -0.009470603132312945,
         "gap": 7.416666666669244
       },
       "lastCommittedPoint": null,
@@ -2486,8 +2490,8 @@
     },
     {
       "type": "text",
-      "version": 277,
-      "versionNonce": 2011904805,
+      "version": 279,
+      "versionNonce": 635986085,
       "isDeleted": false,
       "id": "7NsclBCr8esysZjAT9TWZ",
       "fillStyle": "hachure",
@@ -2515,7 +2519,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": "https://www.youtube.com/watch?v=mnxs6CR6Zrk",
       "locked": false,
       "fontSize": 20,
@@ -2530,8 +2534,8 @@
     },
     {
       "type": "arrow",
-      "version": 150,
-      "versionNonce": 1003828651,
+      "version": 151,
+      "versionNonce": 1405560875,
       "isDeleted": false,
       "id": "eSps_Stz8eJ8mjWuEC6KQ",
       "fillStyle": "hachure",
@@ -2552,7 +2556,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2581,8 +2585,8 @@
     },
     {
       "type": "arrow",
-      "version": 138,
-      "versionNonce": 2139262597,
+      "version": 139,
+      "versionNonce": 230622213,
       "isDeleted": false,
       "id": "h5RzhQjBa93zS7sU-r5-D",
       "fillStyle": "hachure",
@@ -2603,7 +2607,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2632,8 +2636,8 @@
     },
     {
       "type": "text",
-      "version": 94,
-      "versionNonce": 446122059,
+      "version": 96,
+      "versionNonce": 1957096139,
       "isDeleted": false,
       "id": "7-NV-SFKuoXeADTN34qH9",
       "fillStyle": "hachure",
@@ -2665,7 +2669,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": "https://youtu.be/g31NTpq9p-o",
       "locked": false,
       "fontSize": 20,
@@ -2680,8 +2684,8 @@
     },
     {
       "type": "arrow",
-      "version": 46,
-      "versionNonce": 1939371493,
+      "version": 47,
+      "versionNonce": 1034566501,
       "isDeleted": false,
       "id": "Y-WAfMLonK-GYVBxbnX6x",
       "fillStyle": "hachure",
@@ -2702,7 +2706,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840365,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2731,8 +2735,8 @@
     },
     {
       "type": "text",
-      "version": 108,
-      "versionNonce": 146671339,
+      "version": 110,
+      "versionNonce": 1974819179,
       "isDeleted": false,
       "id": "K166GBKeuFrCxoiGk0g0i",
       "fillStyle": "hachure",
@@ -2756,7 +2760,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447851301,
       "link": "https://youtu.be/SDNZ--exYNM",
       "locked": false,
       "fontSize": 20,
@@ -2771,8 +2775,8 @@
     },
     {
       "type": "arrow",
-      "version": 108,
-      "versionNonce": 1866101061,
+      "version": 109,
+      "versionNonce": 1844938437,
       "isDeleted": false,
       "id": "9IU5ybjyM3mOTrzCbIC7b",
       "fillStyle": "hachure",
@@ -2793,7 +2797,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2822,8 +2826,8 @@
     },
     {
       "type": "text",
-      "version": 75,
-      "versionNonce": 215216523,
+      "version": 77,
+      "versionNonce": 876409867,
       "isDeleted": false,
       "id": "MgWV_vtWKbgEpeEHFL82P",
       "fillStyle": "hachure",
@@ -2847,7 +2851,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447851301,
       "link": "https://www.unrealengine.com/marketplace/en-US/product/paperzd",
       "locked": false,
       "fontSize": 20,
@@ -2862,8 +2866,8 @@
     },
     {
       "type": "arrow",
-      "version": 158,
-      "versionNonce": 1338376357,
+      "version": 159,
+      "versionNonce": 1900308005,
       "isDeleted": false,
       "id": "iVwL2b7KroPvaHb_hxBW5",
       "fillStyle": "hachure",
@@ -2884,7 +2888,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -2913,8 +2917,8 @@
     },
     {
       "type": "text",
-      "version": 6,
-      "versionNonce": 2014545963,
+      "version": 8,
+      "versionNonce": 3685035,
       "isDeleted": false,
       "id": "eniTLSuypK6DfZtQUVBmr",
       "fillStyle": "hachure",
@@ -2938,7 +2942,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447851301,
       "link": "https://youtu.be/kXH1-uY0wjY",
       "locked": false,
       "fontSize": 20,
@@ -2953,8 +2957,8 @@
     },
     {
       "type": "arrow",
-      "version": 110,
-      "versionNonce": 1793631237,
+      "version": 111,
+      "versionNonce": 1786665349,
       "isDeleted": false,
       "id": "tSQLZaFNPDLLxw0xaJc3Z",
       "fillStyle": "hachure",
@@ -2975,7 +2979,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851301,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -3004,8 +3008,8 @@
     },
     {
       "type": "image",
-      "version": 122,
-      "versionNonce": 275204811,
+      "version": 188,
+      "versionNonce": 444609195,
       "isDeleted": false,
       "id": "mq8jgv-tz-MLL73FrNsXy",
       "fillStyle": "hachure",
@@ -3014,8 +3018,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 22.948163999303006,
-      "y": -806.0400235466841,
+      "x": -1483.019926660955,
+      "y": -1185.9891164041414,
       "strokeColor": "transparent",
       "backgroundColor": "transparent",
       "width": 643.8481012658227,
@@ -3029,7 +3033,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447857654,
       "link": null,
       "locked": false,
       "status": "pending",
@@ -3041,8 +3045,8 @@
     },
     {
       "type": "text",
-      "version": 96,
-      "versionNonce": 77585253,
+      "version": 179,
+      "versionNonce": 1155179851,
       "isDeleted": false,
       "id": "IOKtuI475JynSc1z_DNXC",
       "fillStyle": "hachure",
@@ -3051,8 +3055,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -212.1277853677857,
-      "y": -960.0400235466841,
+      "x": -1719.051885644837,
+      "y": -1340.8813920464818,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 536.7596435546875,
@@ -3070,7 +3074,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447857654,
       "link": "https://youtu.be/QHHg99hwQGY",
       "locked": false,
       "fontSize": 20,
@@ -3085,8 +3089,8 @@
     },
     {
       "type": "arrow",
-      "version": 137,
-      "versionNonce": 2053749099,
+      "version": 389,
+      "versionNonce": 608499211,
       "isDeleted": false,
       "id": "8GfsbkVWvjqn6VdCNxB_x",
       "fillStyle": "hachure",
@@ -3095,8 +3099,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 6.734354843329047,
-      "y": -1078.040023546684,
+      "x": -1500.1897454337222,
+      "y": -1458.8813920464818,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 42.96521296332868,
@@ -3107,17 +3111,17 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447858054,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "UKxJ-iTu4SGmqHmcwVVjK",
-        "focus": 0.18088050825820848,
+        "focus": 0.1776362930008247,
         "gap": 10.993201588114971
       },
       "endBinding": {
         "elementId": "IOKtuI475JynSc1z_DNXC",
-        "focus": -0.00045456267282851625,
+        "focus": 0.003643512932056854,
         "gap": 7
       },
       "lastCommittedPoint": null,
@@ -3136,8 +3140,8 @@
     },
     {
       "type": "arrow",
-      "version": 62,
-      "versionNonce": 87631557,
+      "version": 297,
+      "versionNonce": 1945107627,
       "isDeleted": false,
       "id": "aeKq9HmQ5JhMCeISXDW8P",
       "fillStyle": "hachure",
@@ -3146,8 +3150,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 45.87221463221431,
-      "y": -924.0400235466841,
+      "x": -1461.051885644837,
+      "y": -1304.8813920464818,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 269,
@@ -3158,18 +3162,18 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447858054,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "IOKtuI475JynSc1z_DNXC",
-        "focus": 0.23948328315891754,
+        "focus": 0.23665028836055685,
         "gap": 11
       },
       "endBinding": {
         "elementId": "mq8jgv-tz-MLL73FrNsXy",
-        "focus": 0.666922969257814,
-        "gap": 14
+        "focus": 0.6683492205837946,
+        "gap": 14.892275642340337
       },
       "lastCommittedPoint": null,
       "startArrowhead": null,
@@ -3187,8 +3191,8 @@
     },
     {
       "type": "image",
-      "version": 95,
-      "versionNonce": 1667585035,
+      "version": 177,
+      "versionNonce": 1834103717,
       "isDeleted": false,
       "id": "5Cs9Fs0lnxcVGgLRFh0i9",
       "fillStyle": "hachure",
@@ -3197,8 +3201,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -806.9792705163005,
-      "y": -892.0400235466841,
+      "x": -2313.9033707933518,
+      "y": -1272.8813920464818,
       "strokeColor": "transparent",
       "backgroundColor": "transparent",
       "width": 421.7029702970297,
@@ -3212,7 +3216,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447857655,
       "link": null,
       "locked": false,
       "status": "pending",
@@ -3224,8 +3228,8 @@
     },
     {
       "type": "text",
-      "version": 8,
-      "versionNonce": 1867646501,
+      "version": 91,
+      "versionNonce": 242644741,
       "isDeleted": false,
       "id": "WGwT0NQigGSLaZGAOKSzx",
       "fillStyle": "hachure",
@@ -3234,8 +3238,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -607.1277853677857,
-      "y": -1016.0400235466841,
+      "x": -2114.051885644837,
+      "y": -1396.8813920464818,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 168.99989318847656,
@@ -3253,7 +3257,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447857655,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3268,8 +3272,8 @@
     },
     {
       "type": "arrow",
-      "version": 71,
-      "versionNonce": 1800706731,
+      "version": 323,
+      "versionNonce": 834744139,
       "isDeleted": false,
       "id": "Ra8gNpWauEWGI4Ki2mA_P",
       "fillStyle": "hachure",
@@ -3278,8 +3282,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -37.776431460891956,
-      "y": -1082.040023546684,
+      "x": -1544.7005317379433,
+      "y": -1462.8813920464818,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 455.1637289254532,
@@ -3290,17 +3294,17 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447858054,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "UKxJ-iTu4SGmqHmcwVVjK",
-        "focus": -0.5080554233289101,
+        "focus": -0.5099152858022722,
         "gap": 6.993201588114971
       },
       "endBinding": {
         "elementId": "WGwT0NQigGSLaZGAOKSzx",
-        "focus": -0.7200019377028534,
+        "focus": -0.7184684229313705,
         "gap": 8
       },
       "lastCommittedPoint": null,
@@ -3319,8 +3323,8 @@
     },
     {
       "type": "arrow",
-      "version": 41,
-      "versionNonce": 366475653,
+      "version": 293,
+      "versionNonce": 269684203,
       "isDeleted": false,
       "id": "pmrFH4XKldXLpR3PAFBy9",
       "fillStyle": "hachure",
@@ -3329,8 +3333,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -525.1277853677857,
-      "y": -985.0400235466841,
+      "x": -2032.051885644837,
+      "y": -1365.8813920464818,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 55,
@@ -3341,12 +3345,12 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447858054,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "WGwT0NQigGSLaZGAOKSzx",
-        "focus": -0.10120301773941413,
+        "focus": -0.1130046900305468,
         "gap": 6
       },
       "endBinding": {
@@ -3370,8 +3374,8 @@
     },
     {
       "type": "image",
-      "version": 60,
-      "versionNonce": 1323437387,
+      "version": 142,
+      "versionNonce": 482275595,
       "isDeleted": false,
       "id": "n__Q6KJd_TSIe54dA2RaR",
       "fillStyle": "hachure",
@@ -3380,8 +3384,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -1450.4849282249284,
-      "y": -1044.540023546684,
+      "x": -2957.4090285019797,
+      "y": -1425.3813920464818,
       "strokeColor": "transparent",
       "backgroundColor": "transparent",
       "width": 463,
@@ -3395,7 +3399,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447857655,
       "link": null,
       "locked": false,
       "status": "pending",
@@ -3407,8 +3411,8 @@
     },
     {
       "type": "text",
-      "version": 11,
-      "versionNonce": 302547173,
+      "version": 94,
+      "versionNonce": 1634899883,
       "isDeleted": false,
       "id": "CakW8oMRMldL6loRuIxuu",
       "fillStyle": "hachure",
@@ -3417,8 +3421,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -1047.5563567963577,
-      "y": -1187.611452118113,
+      "x": -2554.480457073409,
+      "y": -1568.4528206179107,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 39.999969482421875,
@@ -3436,7 +3440,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447857655,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3451,8 +3455,8 @@
     },
     {
       "type": "arrow",
-      "version": 99,
-      "versionNonce": 1365781483,
+      "version": 351,
+      "versionNonce": 300947595,
       "isDeleted": false,
       "id": "qZJxXwIX8X4VKMKRes353",
       "fillStyle": "hachure",
@@ -3461,8 +3465,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -91.84207108207215,
-      "y": -1105.7543092609699,
+      "x": -1598.7661713591235,
+      "y": -1486.5956777607676,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 905.7142857142857,
@@ -3473,18 +3477,18 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447858054,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "UKxJ-iTu4SGmqHmcwVVjK",
-        "focus": -0.20780378969492763,
+        "focus": -0.2046803257933416,
         "gap": 10.589513621217066
       },
       "endBinding": {
         "elementId": "CakW8oMRMldL6loRuIxuu",
-        "focus": -0.20421838603654888,
-        "gap": 7.999999999999886
+        "focus": -0.2108447314875303,
+        "gap": 10.000030517578125
       },
       "lastCommittedPoint": null,
       "startArrowhead": null,
@@ -3502,8 +3506,8 @@
     },
     {
       "type": "arrow",
-      "version": 53,
-      "versionNonce": 2037455941,
+      "version": 305,
+      "versionNonce": 1964166955,
       "isDeleted": false,
       "id": "5bxUXQMT-QhMXDkZVm4f9",
       "fillStyle": "hachure",
@@ -3512,8 +3516,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -1054.699213939215,
-      "y": -1151.4685949752557,
+      "x": -2561.6233142162664,
+      "y": -1532.3099634750533,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 145.71428571428578,
@@ -3524,12 +3528,12 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447858054,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "CakW8oMRMldL6loRuIxuu",
-        "focus": -0.24579346750247763,
+        "focus": -0.27675449937683433,
         "gap": 11.142857142857338
       },
       "endBinding": {
@@ -3553,8 +3557,8 @@
     },
     {
       "type": "text",
-      "version": 79,
-      "versionNonce": 1727100555,
+      "version": 162,
+      "versionNonce": 725921605,
       "isDeleted": false,
       "id": "dqSie0KWh8E8gRvLawKMr",
       "fillStyle": "hachure",
@@ -3563,8 +3567,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -1218.9849282249293,
-      "y": -1450.0400235466843,
+      "x": -2725.9090285019806,
+      "y": -1830.881392046482,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 867.21923828125,
@@ -3578,7 +3582,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447857655,
       "link": "https://youtu.be/jVL4st0blGU",
       "locked": false,
       "fontSize": 20,
@@ -3593,8 +3597,8 @@
     },
     {
       "type": "arrow",
-      "version": 60,
-      "versionNonce": 1408191397,
+      "version": 312,
+      "versionNonce": 1541779915,
       "isDeleted": false,
       "id": "C9kqOeP8u2rAf5CJOQBw4",
       "fillStyle": "hachure",
@@ -3603,8 +3607,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -18.98492822492949,
-      "y": -1127.1828806895414,
+      "x": -1525.9090285019809,
+      "y": -1508.0242491893391,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 682.8571428571427,
@@ -3615,17 +3619,17 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447858054,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "UKxJ-iTu4SGmqHmcwVVjK",
-        "focus": 0.19354687425334355,
+        "focus": 0.20317786487238992,
         "gap": 13.149655554742367
       },
       "endBinding": {
         "elementId": "dqSie0KWh8E8gRvLawKMr",
-        "focus": -0.0748131018681089,
+        "focus": -0.07687984895675092,
         "gap": 7.85714285714289
       },
       "lastCommittedPoint": null,
@@ -3644,8 +3648,8 @@
     },
     {
       "type": "text",
-      "version": 24,
-      "versionNonce": 507014443,
+      "version": 26,
+      "versionNonce": 144875435,
       "isDeleted": false,
       "id": "8f2fLEFkhOicna6ytGDoC",
       "fillStyle": "hachure",
@@ -3669,7 +3673,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": "https://github.com/IronWarrior/UnityToonShader",
       "locked": false,
       "fontSize": 20,
@@ -3684,8 +3688,8 @@
     },
     {
       "type": "text",
-      "version": 13,
-      "versionNonce": 1370525445,
+      "version": 15,
+      "versionNonce": 1075364997,
       "isDeleted": false,
       "id": "im04HM5coSDL25B7IhDLg",
       "fillStyle": "hachure",
@@ -3717,7 +3721,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": "https://roystan.net/articles/toon-shader/",
       "locked": false,
       "fontSize": 20,
@@ -3732,8 +3736,8 @@
     },
     {
       "type": "arrow",
-      "version": 59,
-      "versionNonce": 1252495307,
+      "version": 60,
+      "versionNonce": 2116514379,
       "isDeleted": false,
       "id": "mFMb4i58Cpj7wUwPUqaWR",
       "fillStyle": "hachure",
@@ -3754,7 +3758,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -3783,8 +3787,8 @@
     },
     {
       "type": "arrow",
-      "version": 62,
-      "versionNonce": 1093822053,
+      "version": 63,
+      "versionNonce": 1878518757,
       "isDeleted": false,
       "id": "TOfYrfDRCOI9I99dcjJSV",
       "fillStyle": "hachure",
@@ -3805,7 +3809,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -3834,8 +3838,8 @@
     },
     {
       "type": "text",
-      "version": 7,
-      "versionNonce": 1851350635,
+      "version": 90,
+      "versionNonce": 1525672491,
       "isDeleted": false,
       "id": "G9WDFQ2Io2JHapGSQxpWt",
       "fillStyle": "hachure",
@@ -3844,8 +3848,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 579.5626908226882,
-      "y": -1220.9447854514442,
+      "x": -927.3614094543632,
+      "y": -1601.7861539512419,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 611.379638671875,
@@ -3859,7 +3863,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447857655,
       "link": "https://users.cs.northwestern.edu/~hunicke/MDA.pdf",
       "locked": false,
       "fontSize": 20,
@@ -3874,8 +3878,8 @@
     },
     {
       "type": "arrow",
-      "version": 65,
-      "versionNonce": 1161974213,
+      "version": 317,
+      "versionNonce": 931348587,
       "isDeleted": false,
       "id": "BgJLE2VuFY2HgbfnNc6Lx",
       "fillStyle": "hachure",
@@ -3884,8 +3888,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 127.06269082268818,
-      "y": -1098.4447854514442,
+      "x": -1379.8614094543632,
+      "y": -1479.2861539512419,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
       "width": 440,
@@ -3896,17 +3900,17 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447858055,
       "link": null,
       "locked": false,
       "startBinding": {
         "elementId": "UKxJ-iTu4SGmqHmcwVVjK",
-        "focus": 0.8332453187639794,
-        "gap": 12.31524828354327
+        "focus": 0.8460651648404193,
+        "gap": 14.355363639988582
       },
       "endBinding": {
         "elementId": "G9WDFQ2Io2JHapGSQxpWt",
-        "focus": 0.9251211505393152,
+        "focus": 0.9249500590592769,
         "gap": 12.5
       },
       "lastCommittedPoint": null,
@@ -3925,8 +3929,8 @@
     },
     {
       "type": "text",
-      "version": 22,
-      "versionNonce": 1679317259,
+      "version": 24,
+      "versionNonce": 1977719691,
       "isDeleted": false,
       "id": "5mSQEy7X9bICFHN9ObT46",
       "fillStyle": "hachure",
@@ -3954,7 +3958,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3969,8 +3973,8 @@
     },
     {
       "type": "arrow",
-      "version": 62,
-      "versionNonce": 1258148133,
+      "version": 63,
+      "versionNonce": 121632421,
       "isDeleted": false,
       "id": "CP-jzbAjydUEb42T6Tspp",
       "fillStyle": "hachure",
@@ -3991,7 +3995,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -4020,8 +4024,8 @@
     },
     {
       "type": "text",
-      "version": 8,
-      "versionNonce": 1230962603,
+      "version": 10,
+      "versionNonce": 98300459,
       "isDeleted": false,
       "id": "jVPEKE6jzKGdYHgNPYkfL",
       "fillStyle": "hachure",
@@ -4049,7 +4053,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": "https://unrealcommunity.wiki/cel-shading-post-process-6t8vztk6",
       "locked": false,
       "fontSize": 20,
@@ -4064,8 +4068,8 @@
     },
     {
       "type": "arrow",
-      "version": 48,
-      "versionNonce": 1070752901,
+      "version": 49,
+      "versionNonce": 1270077957,
       "isDeleted": false,
       "id": "Ne-UJTjiQTTMaEkwh80lC",
       "fillStyle": "hachure",
@@ -4086,7 +4090,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -4115,8 +4119,8 @@
     },
     {
       "type": "arrow",
-      "version": 356,
-      "versionNonce": 676844107,
+      "version": 357,
+      "versionNonce": 1569879243,
       "isDeleted": false,
       "id": "3ICnN6a9Fdw7qUESyQ3A8",
       "fillStyle": "hachure",
@@ -4137,7 +4141,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -4178,8 +4182,8 @@
     },
     {
       "type": "text",
-      "version": 7,
-      "versionNonce": 125668325,
+      "version": 9,
+      "versionNonce": 1385451877,
       "isDeleted": false,
       "id": "7STeNSTKI6t-DTLiCiXe7",
       "fillStyle": "hachure",
@@ -4198,7 +4202,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1681755840366,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4213,8 +4217,8 @@
     },
     {
       "type": "arrow",
-      "version": 123,
-      "versionNonce": 1641894123,
+      "version": 124,
+      "versionNonce": 211788651,
       "isDeleted": false,
       "id": "u2jtW9oT7t4DOLiDyFSCm",
       "fillStyle": "hachure",
@@ -4235,7 +4239,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -4260,8 +4264,8 @@
     },
     {
       "type": "text",
-      "version": 18,
-      "versionNonce": 839698245,
+      "version": 20,
+      "versionNonce": 1227807941,
       "isDeleted": false,
       "id": "0unH3JVxBOfQFaodV0dIP",
       "fillStyle": "hachure",
@@ -4293,7 +4297,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": "https://medium.com/@lordned/unreal-engine-4-rendering-overview-part-1-c47f2da65346",
       "locked": false,
       "fontSize": 20,
@@ -4308,8 +4312,8 @@
     },
     {
       "type": "arrow",
-      "version": 43,
-      "versionNonce": 1467612043,
+      "version": 44,
+      "versionNonce": 1263402507,
       "isDeleted": false,
       "id": "a_mE3s7k19CoLTPddD_yf",
       "fillStyle": "hachure",
@@ -4330,7 +4334,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -4359,8 +4363,8 @@
     },
     {
       "type": "text",
-      "version": 7,
-      "versionNonce": 1910347429,
+      "version": 9,
+      "versionNonce": 1461779493,
       "isDeleted": false,
       "id": "FC2xZV6pYr3ILkE7ItOg-",
       "fillStyle": "hachure",
@@ -4384,7 +4388,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": "https://www.intel.com/content/www/us/en/developer/articles/technical/forward-clustered-shading.html",
       "locked": false,
       "fontSize": 20,
@@ -4399,8 +4403,8 @@
     },
     {
       "type": "text",
-      "version": 6,
-      "versionNonce": 1432900139,
+      "version": 8,
+      "versionNonce": 1687684267,
       "isDeleted": false,
       "id": "pbI1vxzEPWglNemQjFL5g",
       "fillStyle": "hachure",
@@ -4424,7 +4428,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": "https://gamedevelopment.tutsplus.com/articles/forward-rendering-vs-deferred-rendering--gamedev-12342",
       "locked": false,
       "fontSize": 20,
@@ -4439,8 +4443,8 @@
     },
     {
       "type": "arrow",
-      "version": 48,
-      "versionNonce": 1369274885,
+      "version": 49,
+      "versionNonce": 1415065477,
       "isDeleted": false,
       "id": "QjqdKvsZpel9JpwRrxO3S",
       "fillStyle": "hachure",
@@ -4461,7 +4465,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -4490,8 +4494,8 @@
     },
     {
       "type": "arrow",
-      "version": 43,
-      "versionNonce": 1016255691,
+      "version": 44,
+      "versionNonce": 1613248331,
       "isDeleted": false,
       "id": "ljG_Po1nx5O0YQY2e_-3X",
       "fillStyle": "hachure",
@@ -4512,7 +4516,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -4541,8 +4545,8 @@
     },
     {
       "type": "text",
-      "version": 74,
-      "versionNonce": 709488997,
+      "version": 76,
+      "versionNonce": 1058141925,
       "isDeleted": false,
       "id": "5GJDa05PKrp4hRiyZ8ffE",
       "fillStyle": "hachure",
@@ -4566,7 +4570,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": "https://zhuanlan.zhihu.com/p/551343308",
       "locked": false,
       "fontSize": 20,
@@ -4581,8 +4585,8 @@
     },
     {
       "type": "arrow",
-      "version": 149,
-      "versionNonce": 1821639531,
+      "version": 150,
+      "versionNonce": 1817777643,
       "isDeleted": false,
       "id": "fxrz6kmYQjXB9nHhXFtzt",
       "fillStyle": "hachure",
@@ -4603,7 +4607,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -4632,8 +4636,8 @@
     },
     {
       "type": "text",
-      "version": 15,
-      "versionNonce": 1496349893,
+      "version": 17,
+      "versionNonce": 1910231621,
       "isDeleted": false,
       "id": "Cj44JOHGdJECD80LLz2zI",
       "fillStyle": "hachure",
@@ -4652,7 +4656,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": "https://www.blog.udonis.co/mobile-marketing/mobile-games/genshin-impact-advertising",
       "locked": false,
       "fontSize": 20,
@@ -4667,8 +4671,8 @@
     },
     {
       "type": "text",
-      "version": 13,
-      "versionNonce": 1840668171,
+      "version": 15,
+      "versionNonce": 137699467,
       "isDeleted": false,
       "id": "Y6qJNMndLDVwHsIuSlyaB",
       "fillStyle": "hachure",
@@ -4687,7 +4691,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1681755840367,
+      "updated": 1682447851302,
       "link": "https://store.steampowered.com/app/2214880/Europa/",
       "locked": false,
       "fontSize": 20,
@@ -4701,26 +4705,26 @@
       "baseline": 18
     },
     {
-      "id": "9qfSi_1BIEHY2GCGlRMv9",
       "type": "text",
-      "x": -1535.4179332386475,
-      "y": 1005.5600245794694,
-      "width": 295.03985595703125,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 99,
+      "versionNonce": 429080997,
+      "isDeleted": false,
+      "id": "9qfSi_1BIEHY2GCGlRMv9",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": -1535.4179332386475,
+      "y": 1005.5600245794694,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 295.03985595703125,
+      "height": 25,
+      "seed": 1653437099,
       "groupIds": [],
       "roundness": null,
-      "seed": 1653437099,
-      "version": 97,
-      "versionNonce": 1864956171,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "UAG6lei8qLTCYzHBZZEDH",
@@ -4735,40 +4739,40 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681755901492,
+      "updated": 1682447851302,
       "link": "https://qiita.com/dgtanaka/items/41f96ef2090820035609",
       "locked": false,
-      "text": "UE4のShading Modelを拡張する",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "UE4のShading Modelを拡張する",
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "UE4のShading Modelを拡張する",
-      "lineHeight": 1.25
+      "lineHeight": 1.25,
+      "baseline": 18
     },
     {
-      "id": "G54R7NfANX3xtQlYgHXOZ",
       "type": "text",
-      "x": -1869.3070495592005,
-      "y": 1313.1683432795182,
-      "width": 750.5194091796875,
-      "height": 75,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 58,
+      "versionNonce": 1836504875,
+      "isDeleted": false,
+      "id": "G54R7NfANX3xtQlYgHXOZ",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": -1869.3070495592005,
+      "y": 1313.1683432795182,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 750.5194091796875,
+      "height": 75,
+      "seed": 200841035,
       "groupIds": [],
       "roundness": null,
-      "seed": 200841035,
-      "version": 56,
-      "versionNonce": 641534309,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "UAG6lei8qLTCYzHBZZEDH",
@@ -4787,10 +4791,6 @@
           "type": "arrow"
         },
         {
-          "id": "_QwElJA7JfC_x5oFQZsn6",
-          "type": "arrow"
-        },
-        {
           "id": "LcvDmiv8zuwZCGFIKJK4P",
           "type": "arrow"
         },
@@ -4803,57 +4803,46 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681756205873,
+      "updated": 1682447851302,
       "link": "https://twitter.com/SamFbrumby/status/1528461352322207745?cxt=HHwWgsCg4Y7gl7YqAAAA",
       "locked": false,
-      "text": "A early RT stylized shader and workflow test.Howls Moving Castle has my\n favorite painterly style, even unique within Ghibli films #UnrealEngine #UE5\n#gamedevelopment #indiedev #shader #gameart #gamedev #techart",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "A early RT stylized shader and workflow test.Howls Moving Castle has my\n favorite painterly style, even unique within Ghibli films #UnrealEngine #UE5\n#gamedevelopment #indiedev #shader #gameart #gamedev #techart",
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 68,
       "containerId": null,
       "originalText": "A early RT stylized shader and workflow test.Howls Moving Castle has my\n favorite painterly style, even unique within Ghibli films #UnrealEngine #UE5\n#gamedevelopment #indiedev #shader #gameart #gamedev #techart",
-      "lineHeight": 1.25
+      "lineHeight": 1.25,
+      "baseline": 68
     },
     {
-      "id": "UAG6lei8qLTCYzHBZZEDH",
       "type": "arrow",
-      "x": -1481.5900551481327,
-      "y": 1302.0524426749955,
-      "width": 110.60215099590687,
-      "height": 261.9350869039672,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 105,
+      "versionNonce": 1801831685,
+      "isDeleted": false,
+      "id": "UAG6lei8qLTCYzHBZZEDH",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": -1481.5900551481327,
+      "y": 1302.0524426749955,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 110.60215099590687,
+      "height": 261.9350869039672,
+      "seed": 1572489573,
       "groupIds": [],
       "roundness": {
         "type": 2
       },
-      "seed": 1572489573,
-      "version": 104,
-      "versionNonce": 810059083,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1681755892066,
+      "boundElements": [],
+      "updated": 1682447851302,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          110.60215099590687,
-          -261.9350869039672
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "G54R7NfANX3xtQlYgHXOZ",
         "focus": -0.02134113788181745,
@@ -4864,47 +4853,47 @@
         "focus": -0.1716240049880104,
         "gap": 9.557331191558887
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "CD1UOIrS2jofzpXU9y5FJ",
-      "type": "arrow",
-      "x": -1401.4462888751955,
-      "y": 1302.870736871278,
-      "width": 1093.6517742707342,
-      "height": 558.8198941407557,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "seed": 527848901,
-      "version": 157,
-      "versionNonce": 1916551941,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1681755896438,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          1093.6517742707342,
-          -558.8198941407557
+          110.60215099590687,
+          -261.9350869039672
         ]
-      ],
-      "lastCommittedPoint": null,
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 158,
+      "versionNonce": 982038987,
+      "isDeleted": false,
+      "id": "CD1UOIrS2jofzpXU9y5FJ",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1401.4462888751955,
+      "y": 1302.870736871278,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 1093.6517742707342,
+      "height": 558.8198941407557,
+      "seed": 527848901,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1682447851302,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "G54R7NfANX3xtQlYgHXOZ",
         "focus": -0.002100495294601078,
@@ -4915,47 +4904,47 @@
         "focus": 0.3631700898933914,
         "gap": 12.02154585552239
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "CenJrZlYzOnl6qjEoVrFu",
-      "type": "arrow",
-      "x": -1305.511412372787,
-      "y": 998.8628493972988,
-      "width": 878.8235149456707,
-      "height": 256.2285283048542,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "seed": 283188171,
-      "version": 70,
-      "versionNonce": 594527365,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1681755901497,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          878.8235149456707,
-          -256.2285283048542
+          1093.6517742707342,
+          -558.8198941407557
         ]
-      ],
-      "lastCommittedPoint": null,
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 71,
+      "versionNonce": 449895525,
+      "isDeleted": false,
+      "id": "CenJrZlYzOnl6qjEoVrFu",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1305.511412372787,
+      "y": 998.8628493972988,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 878.8235149456707,
+      "height": 256.2285283048542,
+      "seed": 283188171,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1682447851302,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "9qfSi_1BIEHY2GCGlRMv9",
         "focus": 0.08689031433822435,
@@ -4966,87 +4955,87 @@
         "focus": 0.5943589835726276,
         "gap": 10.605024217444566
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "0liqwzu_xuP4hzgd74v3Y",
-      "type": "text",
-      "x": -1969.2529799291922,
-      "y": 1771.5146948984793,
-      "width": 107.93997192382812,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": null,
-      "seed": 1664217323,
-      "version": 21,
-      "versionNonce": 857466757,
-      "isDeleted": false,
-      "boundElements": [
-        {
-          "id": "qL_3ZwWhdqsQuPmYDiqtc",
-          "type": "arrow"
-        }
-      ],
-      "updated": 1681756265572,
-      "link": null,
-      "locked": false,
-      "text": "Sam G🧸🎏",
-      "fontSize": 20,
-      "fontFamily": 1,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "baseline": 18,
-      "containerId": null,
-      "originalText": "Sam G🧸🎏",
-      "lineHeight": 1.25
-    },
-    {
-      "id": "qL_3ZwWhdqsQuPmYDiqtc",
-      "type": "arrow",
-      "x": -1911.3779279453056,
-      "y": 1761.0863975057741,
-      "width": 353.27696726930526,
-      "height": 356.86901801970816,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "seed": 366094149,
-      "version": 78,
-      "versionNonce": 2090774245,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1681756265573,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          353.27696726930526,
-          -356.86901801970816
+          878.8235149456707,
+          -256.2285283048542
         ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 23,
+      "versionNonce": 1552238699,
+      "isDeleted": false,
+      "id": "0liqwzu_xuP4hzgd74v3Y",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1969.2529799291922,
+      "y": 1771.5146948984793,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 107.93997192382812,
+      "height": 25,
+      "seed": 1664217323,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "qL_3ZwWhdqsQuPmYDiqtc",
+          "type": "arrow"
+        }
       ],
-      "lastCommittedPoint": null,
+      "updated": 1682447851303,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Sam G🧸🎏",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Sam G🧸🎏",
+      "lineHeight": 1.25,
+      "baseline": 18
+    },
+    {
+      "type": "arrow",
+      "version": 79,
+      "versionNonce": 262277061,
+      "isDeleted": false,
+      "id": "qL_3ZwWhdqsQuPmYDiqtc",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1911.3779279453056,
+      "y": 1761.0863975057741,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 353.27696726930526,
+      "height": 356.86901801970816,
+      "seed": 366094149,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1682447851303,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "0liqwzu_xuP4hzgd74v3Y",
         "focus": -0.2832786486896415,
@@ -5057,30 +5046,41 @@
         "focus": 0.026779947911886065,
         "gap": 16.049036206547726
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          353.27696726930526,
+          -356.86901801970816
+        ]
+      ]
     },
     {
-      "id": "VaO03nSyjlEbsd4HczfVT",
       "type": "text",
-      "x": -1339.4385811481195,
-      "y": 1632.233096915385,
-      "width": 596.1195068359375,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 28,
+      "versionNonce": 959906571,
+      "isDeleted": false,
+      "id": "VaO03nSyjlEbsd4HczfVT",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": -1339.4385811481195,
+      "y": 1632.233096915385,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 596.1195068359375,
+      "height": 25,
+      "seed": 857539973,
       "groupIds": [],
       "roundness": null,
-      "seed": 857539973,
-      "version": 26,
-      "versionNonce": 459549509,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "kadCVMhrPKdFP3Y-P-_io",
@@ -5091,57 +5091,46 @@
           "type": "arrow"
         }
       ],
-      "updated": 1681756033371,
+      "updated": 1682447851303,
       "link": "https://kidswithsticks.com/creating-stylized-art-inspired-by-ghibli-using-unreal-engine-4/",
       "locked": false,
-      "text": "Creating stylized art inspired by Ghibli using Unreal Engine 4",
       "fontSize": 20,
       "fontFamily": 1,
+      "text": "Creating stylized art inspired by Ghibli using Unreal Engine 4",
       "textAlign": "left",
       "verticalAlign": "top",
-      "baseline": 18,
       "containerId": null,
       "originalText": "Creating stylized art inspired by Ghibli using Unreal Engine 4",
-      "lineHeight": 1.25
+      "lineHeight": 1.25,
+      "baseline": 18
     },
     {
-      "id": "kadCVMhrPKdFP3Y-P-_io",
       "type": "arrow",
-      "x": -1412.4115786597158,
-      "y": 1406.4433420601877,
-      "width": 313.7258161285413,
-      "height": 214.00269280787165,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 42,
+      "versionNonce": 1542899493,
+      "isDeleted": false,
+      "id": "kadCVMhrPKdFP3Y-P-_io",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": -1412.4115786597158,
+      "y": 1406.4433420601877,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 313.7258161285413,
+      "height": 214.00269280787165,
+      "seed": 1485211851,
       "groupIds": [],
       "roundness": {
         "type": 2
       },
-      "seed": 1485211851,
-      "version": 41,
-      "versionNonce": 1446638571,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1681755942343,
+      "boundElements": [],
+      "updated": 1682447851303,
       "link": null,
       "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          313.7258161285413,
-          214.00269280787165
-        ]
-      ],
-      "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "G54R7NfANX3xtQlYgHXOZ",
         "focus": 0.0003017573414336427,
@@ -5152,87 +5141,87 @@
         "focus": -0.0685948107535084,
         "gap": 11.787062047325662
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "988SnmLUmdGOwt3lyjNPt",
-      "type": "text",
-      "x": -890.5607913536835,
-      "y": 1810.6629685032096,
-      "width": 117.63987731933594,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": null,
-      "seed": 1597519147,
-      "version": 7,
-      "versionNonce": 44595877,
-      "isDeleted": false,
-      "boundElements": [
-        {
-          "id": "dO2BLJjdd-O-MXXkQjYhG",
-          "type": "arrow"
-        }
-      ],
-      "updated": 1681756033371,
-      "link": "https://store.steampowered.com/app/1554970/Rogue_Spirit/",
-      "locked": false,
-      "text": "Rogue Spirit",
-      "fontSize": 20,
-      "fontFamily": 1,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "baseline": 18,
-      "containerId": null,
-      "originalText": "Rogue Spirit",
-      "lineHeight": 1.25
-    },
-    {
-      "id": "dO2BLJjdd-O-MXXkQjYhG",
-      "type": "arrow",
-      "x": -1062.3283738205134,
-      "y": 1668.5942798804335,
-      "width": 226.333176400281,
-      "height": 140.38403967463364,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "seed": 1335400869,
-      "version": 48,
-      "versionNonce": 908963371,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1681756033375,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          226.333176400281,
-          140.38403967463364
+          313.7258161285413,
+          214.00269280787165
         ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 9,
+      "versionNonce": 421030315,
+      "isDeleted": false,
+      "id": "988SnmLUmdGOwt3lyjNPt",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -890.5607913536835,
+      "y": 1810.6629685032096,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 117.63987731933594,
+      "height": 25,
+      "seed": 1597519147,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "dO2BLJjdd-O-MXXkQjYhG",
+          "type": "arrow"
+        }
       ],
-      "lastCommittedPoint": null,
+      "updated": 1682447851303,
+      "link": "https://store.steampowered.com/app/1554970/Rogue_Spirit/",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Rogue Spirit",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Rogue Spirit",
+      "lineHeight": 1.25,
+      "baseline": 18
+    },
+    {
+      "type": "arrow",
+      "version": 49,
+      "versionNonce": 1916574341,
+      "isDeleted": false,
+      "id": "dO2BLJjdd-O-MXXkQjYhG",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1062.3283738205134,
+      "y": 1668.5942798804335,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 226.333176400281,
+      "height": 140.38403967463364,
+      "seed": 1335400869,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1682447851303,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "VaO03nSyjlEbsd4HczfVT",
         "focus": 0.1867290430559191,
@@ -5243,87 +5232,87 @@
         "focus": 0.23571044732594454,
         "gap": 1.684648948142467
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "1fWQIKEsswknT__QYxxQz",
-      "type": "text",
-      "x": -2139.672337336924,
-      "y": 1121.8654097218412,
-      "width": 366.99969482421875,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": null,
-      "seed": 1747419173,
-      "version": 49,
-      "versionNonce": 932340677,
-      "isDeleted": false,
-      "boundElements": [
-        {
-          "id": "LcvDmiv8zuwZCGFIKJK4P",
-          "type": "arrow"
-        }
-      ],
-      "updated": 1681756111481,
-      "link": "https://www.kodeco.com/100-unreal-engine-4-paint-filter-tutorial",
-      "locked": false,
-      "text": "Unreal Engine 4 Paint Filter Tutorial",
-      "fontSize": 20,
-      "fontFamily": 1,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "baseline": 18,
-      "containerId": null,
-      "originalText": "Unreal Engine 4 Paint Filter Tutorial",
-      "lineHeight": 1.25
-    },
-    {
-      "id": "LcvDmiv8zuwZCGFIKJK4P",
-      "type": "arrow",
-      "x": -1622.2962407054624,
-      "y": 1301.3714267103794,
-      "width": 376.5283147538862,
-      "height": 145.6254332254091,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "seed": 579603499,
-      "version": 59,
-      "versionNonce": 1522784581,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1681756114166,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          -376.5283147538862,
-          -145.6254332254091
+          226.333176400281,
+          140.38403967463364
         ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 51,
+      "versionNonce": 1364458571,
+      "isDeleted": false,
+      "id": "1fWQIKEsswknT__QYxxQz",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -2139.672337336924,
+      "y": 1121.8654097218412,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 366.99969482421875,
+      "height": 25,
+      "seed": 1747419173,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "LcvDmiv8zuwZCGFIKJK4P",
+          "type": "arrow"
+        }
       ],
-      "lastCommittedPoint": null,
+      "updated": 1682447851303,
+      "link": "https://www.kodeco.com/100-unreal-engine-4-paint-filter-tutorial",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Unreal Engine 4 Paint Filter Tutorial",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Unreal Engine 4 Paint Filter Tutorial",
+      "lineHeight": 1.25,
+      "baseline": 18
+    },
+    {
+      "type": "arrow",
+      "version": 60,
+      "versionNonce": 456196581,
+      "isDeleted": false,
+      "id": "LcvDmiv8zuwZCGFIKJK4P",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1622.2962407054624,
+      "y": 1301.3714267103794,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 376.5283147538862,
+      "height": 145.6254332254091,
+      "seed": 579603499,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1682447851303,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "G54R7NfANX3xtQlYgHXOZ",
         "focus": -0.0016667268089747033,
@@ -5334,87 +5323,87 @@
         "focus": 0.4537748367917946,
         "gap": 8.880583763129152
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "74urFMNL2szRPO-JsaUY7",
-      "type": "text",
-      "x": -3023.3127636237455,
-      "y": 1311.936475354975,
-      "width": 778.5394287109375,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": null,
-      "seed": 1094192133,
-      "version": 57,
-      "versionNonce": 1253865259,
-      "isDeleted": false,
-      "boundElements": [
-        {
-          "id": "bFOBFg1n7zqpLC2sbvtgx",
-          "type": "arrow"
-        }
-      ],
-      "updated": 1681756186444,
-      "link": "https://youtu.be/JWCponhcSao",
-      "locked": false,
-      "text": "Turn Your Game into a Panting In Unreal Using this Simple Postprocess Filter.",
-      "fontSize": 20,
-      "fontFamily": 1,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "baseline": 18,
-      "containerId": null,
-      "originalText": "Turn Your Game into a Panting In Unreal Using this Simple Postprocess Filter.",
-      "lineHeight": 1.25
-    },
-    {
-      "id": "bFOBFg1n7zqpLC2sbvtgx",
-      "type": "arrow",
-      "x": -1880.0525887771,
-      "y": 1324.5237230428206,
-      "width": 353.17984339934765,
-      "height": 11.762310055296666,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "seed": 1349937707,
-      "version": 115,
-      "versionNonce": 505043403,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1681756186445,
-      "link": null,
-      "locked": false,
+      "endArrowhead": "arrow",
       "points": [
         [
           0,
           0
         ],
         [
-          -353.17984339934765,
-          11.762310055296666
+          -376.5283147538862,
+          -145.6254332254091
         ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 59,
+      "versionNonce": 767834859,
+      "isDeleted": false,
+      "id": "74urFMNL2szRPO-JsaUY7",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -3023.3127636237455,
+      "y": 1311.936475354975,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 778.5394287109375,
+      "height": 25,
+      "seed": 1094192133,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "bFOBFg1n7zqpLC2sbvtgx",
+          "type": "arrow"
+        }
       ],
-      "lastCommittedPoint": null,
+      "updated": 1682447851303,
+      "link": "https://youtu.be/JWCponhcSao",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Turn Your Game into a Panting In Unreal Using this Simple Postprocess Filter.",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Turn Your Game into a Panting In Unreal Using this Simple Postprocess Filter.",
+      "lineHeight": 1.25,
+      "baseline": 18
+    },
+    {
+      "type": "arrow",
+      "version": 116,
+      "versionNonce": 736197957,
+      "isDeleted": false,
+      "id": "bFOBFg1n7zqpLC2sbvtgx",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1880.0525887771,
+      "y": 1324.5237230428206,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 353.17984339934765,
+      "height": 11.762310055296666,
+      "seed": 1349937707,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1682447851303,
+      "link": null,
+      "locked": false,
       "startBinding": {
         "elementId": "G54R7NfANX3xtQlYgHXOZ",
         "focus": 0.7810792181268872,
@@ -5425,15 +5414,117 @@
         "focus": 0.9895506926887039,
         "gap": 11.540902736360067
       },
+      "lastCommittedPoint": null,
       "startArrowhead": null,
-      "endArrowhead": "arrow"
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -353.17984339934765,
+          11.762310055296666
+        ]
+      ]
     },
     {
-      "id": "lurJNoQ_67P40hyIGW2M8",
       "type": "text",
+      "version": 7,
+      "versionNonce": 452175243,
+      "isDeleted": false,
+      "id": "lurJNoQ_67P40hyIGW2M8",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
       "x": -2602.6540030662018,
       "y": 1554.571033356313,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
       "width": 522.9794921875,
+      "height": 25,
+      "seed": 1164863429,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "XrI_GVNOdzymXPyBuc6IU",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1682447851303,
+      "link": "https://www.artstation.com/artwork/wJBYew",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "How to Texture Stylized Rocks in Substance Painter",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "How to Texture Stylized Rocks in Substance Painter",
+      "lineHeight": 1.25,
+      "baseline": 18
+    },
+    {
+      "type": "arrow",
+      "version": 52,
+      "versionNonce": 2074840229,
+      "isDeleted": false,
+      "id": "XrI_GVNOdzymXPyBuc6IU",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -1846.8520197170121,
+      "y": 1403.0301994465344,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 326.13724381455563,
+      "height": 142.67745566009262,
+      "seed": 102854091,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1682447851303,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "G54R7NfANX3xtQlYgHXOZ",
+        "focus": 0.5056939567624497,
+        "gap": 14.861856167016185
+      },
+      "endBinding": {
+        "elementId": "lurJNoQ_67P40hyIGW2M8",
+        "focus": 0.4114345616066176,
+        "gap": 8.863378249685866
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -326.13724381455563,
+          142.67745566009262
+        ]
+      ]
+    },
+    {
+      "id": "nbwmDnXTPaya8jCuUDlBE",
+      "type": "text",
+      "x": 184.38759592365,
+      "y": -346.08145267518717,
+      "width": 51.67994689941406,
       "height": 25,
       "angle": 0,
       "strokeColor": "#000000",
@@ -5445,36 +5536,88 @@
       "opacity": 100,
       "groupIds": [],
       "roundness": null,
-      "seed": 1164863429,
-      "version": 5,
-      "versionNonce": 385914053,
+      "seed": 1459118507,
+      "version": 65,
+      "versionNonce": 249492811,
       "isDeleted": false,
       "boundElements": [
         {
-          "id": "XrI_GVNOdzymXPyBuc6IU",
+          "id": "XvTIJXGBMF4Cw2yqk2Zqm",
+          "type": "arrow"
+        },
+        {
+          "id": "1oSe9Kxv62VckF_Ody4vA",
           "type": "arrow"
         }
       ],
-      "updated": 1681756205873,
-      "link": "https://www.artstation.com/artwork/wJBYew",
+      "updated": 1682447890294,
+      "link": null,
       "locked": false,
-      "text": "How to Texture Stylized Rocks in Substance Painter",
+      "text": "Verse",
       "fontSize": 20,
       "fontFamily": 1,
       "textAlign": "left",
       "verticalAlign": "top",
       "baseline": 18,
       "containerId": null,
-      "originalText": "How to Texture Stylized Rocks in Substance Painter",
+      "originalText": "Verse",
       "lineHeight": 1.25
     },
     {
-      "id": "XrI_GVNOdzymXPyBuc6IU",
+      "id": "QEhaAPvNqTMD2Q6cTtWgP",
+      "type": "text",
+      "x": -147.31030302434306,
+      "y": -469.73924021551335,
+      "width": 456.31964111328125,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 427888133,
+      "version": 49,
+      "versionNonce": 553585989,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "1oSe9Kxv62VckF_Ody4vA",
+          "type": "arrow"
+        },
+        {
+          "id": "ItOSJUe8Z4EZyzsetHGBQ",
+          "type": "arrow"
+        },
+        {
+          "id": "bGEdvCK9V-vDUJksyRSXg",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1682447918955,
+      "link": "https://youtu.be/5prkKOIilJg",
+      "locked": false,
+      "text": "The Verse Programming Language | GDC 2023",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "The Verse Programming Language | GDC 2023",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "XvTIJXGBMF4Cw2yqk2Zqm",
       "type": "arrow",
-      "x": -1846.8520197170121,
-      "y": 1403.0301994465344,
-      "width": 326.13724381455563,
-      "height": 142.67745566009262,
+      "x": 607.1269197021647,
+      "y": 46.34130099420986,
+      "width": 393.55592046473475,
+      "height": 352.84897422754784,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -5487,12 +5630,12 @@
       "roundness": {
         "type": 2
       },
-      "seed": 102854091,
-      "version": 51,
-      "versionNonce": 1184089611,
+      "seed": 1613276421,
+      "version": 50,
+      "versionNonce": 1938773867,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1681756205877,
+      "updated": 1682447886986,
       "link": null,
       "locked": false,
       "points": [
@@ -5501,20 +5644,253 @@
           0
         ],
         [
-          -326.13724381455563,
-          142.67745566009262
+          -393.55592046473475,
+          -352.84897422754784
         ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "elementId": "G54R7NfANX3xtQlYgHXOZ",
-        "focus": 0.5056939567624497,
-        "gap": 14.861856167016185
+        "elementId": "wmRyH-ReLENN5XwHaSpXH",
+        "focus": 0.2886439516249028,
+        "gap": 7.910682648368265
       },
       "endBinding": {
-        "elementId": "lurJNoQ_67P40hyIGW2M8",
-        "focus": 0.4114345616066176,
-        "gap": 8.863378249685866
+        "elementId": "nbwmDnXTPaya8jCuUDlBE",
+        "focus": 0.6750218583510608,
+        "gap": 14.573779441849183
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "1oSe9Kxv62VckF_Ody4vA",
+      "type": "arrow",
+      "x": 200.44553853378125,
+      "y": -357.66509187871,
+      "width": 129.35578114799682,
+      "height": 77.5608005254677,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1363437765,
+      "version": 39,
+      "versionNonce": 2040771653,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1682447890298,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -129.35578114799682,
+          -77.5608005254677
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "nbwmDnXTPaya8jCuUDlBE",
+        "focus": 0.6508092063904467,
+        "gap": 11.583639203522807
+      },
+      "endBinding": {
+        "elementId": "QEhaAPvNqTMD2Q6cTtWgP",
+        "focus": 0.18663543936745897,
+        "gap": 9.513347811335677
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "Q4OEqEsyNZlpG6mt0mL3U",
+      "type": "text",
+      "x": 68.58108960610025,
+      "y": -615.6420718966752,
+      "width": 313.5997314453125,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 672999173,
+      "version": 29,
+      "versionNonce": 2039372491,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "ItOSJUe8Z4EZyzsetHGBQ",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1682447914944,
+      "link": null,
+      "locked": false,
+      "text": "Software Transactional Memory",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Software Transactional Memory",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "qF74YGi9SSx2gZQ7AKGUm",
+      "type": "text",
+      "x": -282.6878397215363,
+      "y": -608.5457298900564,
+      "width": 161.0598602294922,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": null,
+      "seed": 1686141349,
+      "version": 20,
+      "versionNonce": 379002021,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "bGEdvCK9V-vDUJksyRSXg",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1682447918955,
+      "link": null,
+      "locked": false,
+      "text": "Algebraic Effect",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 18,
+      "containerId": null,
+      "originalText": "Algebraic Effect",
+      "lineHeight": 1.25
+    },
+    {
+      "id": "ItOSJUe8Z4EZyzsetHGBQ",
+      "type": "arrow",
+      "x": 68.34546887541183,
+      "y": -471.23428407057656,
+      "width": 161.06755949007515,
+      "height": 110.32594213415359,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1406771045,
+      "version": 63,
+      "versionNonce": 1899088741,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1682447914947,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          161.06755949007515,
+          -110.32594213415359
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "QEhaAPvNqTMD2Q6cTtWgP",
+        "focus": -0.13366303196381948,
+        "gap": 1.4950438550632157
+      },
+      "endBinding": {
+        "elementId": "Q4OEqEsyNZlpG6mt0mL3U",
+        "focus": -0.2030286177242708,
+        "gap": 9.081845691945091
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "bGEdvCK9V-vDUJksyRSXg",
+      "type": "arrow",
+      "x": 67.73562698421802,
+      "y": -472.7727488415428,
+      "width": 265.835624388576,
+      "height": 101.21989389519138,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1278134635,
+      "version": 59,
+      "versionNonce": 393358379,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1682447918958,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -265.835624388576,
+          -101.21989389519138
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "QEhaAPvNqTMD2Q6cTtWgP",
+        "focus": 0.10606601717090539,
+        "gap": 3.033508626029459
+      },
+      "endBinding": {
+        "elementId": "qF74YGi9SSx2gZQ7AKGUm",
+        "focus": 0.47513255979574487,
+        "gap": 9.553087153322167
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"
