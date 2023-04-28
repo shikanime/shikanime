@@ -15,6 +15,5 @@
     pkgs.nixpkgs-fmt
     pkgs.rubocop
     pkgs.qemu
-    pkgs.nodejs
   ];
 }
