@@ -26,6 +26,8 @@
       signByDefault = true;
     };
     aliases = {
+      filing = "commit --amend --signoff --no-edit";
+      refiling = "rebase --exec 'git filing'";
       adog = "log --all --decorate --oneline --graph";
       pouf = "push --force-with-lease";
       poi = "commit --amend --no-edit";
