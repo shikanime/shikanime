@@ -32,8 +32,17 @@
     , home-manager
     , devenv
     , ...
-    }@inputs: {
-      packages = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
+    }@inputs:
+    let
+      systems = [
+        "aarch64-darwin"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "x86_64-linux"
+      ];
+    in
+    {
+      packages = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
           elvengard = self.nixosConfigurations.elvengard.config.system.build.hypervImage;
@@ -41,7 +50,7 @@
         }
       );
 
-      devShells = nixpkgs.lib.genAttrs [ "aarch64-darwin" "aarch64-linux" "x86_64-darwin" "x86_64-linux" ] (system:
+      devShells = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           default = devenv.lib.mkShell {
             inherit inputs pkgs;
