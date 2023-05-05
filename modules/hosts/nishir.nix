@@ -5,6 +5,9 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/installer/sd-card/sd-image-aarch64-installer.nix"
+    ../profiles/base.nix
+    ../profiles/machine.nix
+    ../users/nixos.nix
   ];
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;

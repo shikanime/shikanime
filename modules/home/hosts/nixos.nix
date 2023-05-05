@@ -1,12 +1,9 @@
-{ pkgs, lib, ... }:
-
-with lib;
-
 {
   imports = [
     ../identities/sfeir.nix
     ../profiles/base.nix
     ../profiles/workstation.nix
+    ../profiles/xdg.nix
     ../profiles/vcs.nix
     ../profiles/cc.nix
     ../profiles/ruby.nix
@@ -20,17 +17,5 @@ with lib;
     ../profiles/sql.nix
     ../profiles/cloud.nix
     ../profiles/java.nix
-    ../profiles/experimental/github-copilot-cli.nix
   ];
-
-  home.homeDirectory = "/Users/williamphetsinorath";
-  home.username = "williamphetsinorath";
-
-  nix.package = pkgs.nix;
-
-  programs.zsh.initExtra = mkAfter ''
-    if command -v brew >/dev/null; then
-      eval "$(brew shellenv)"
-    fi
-  '';
 }

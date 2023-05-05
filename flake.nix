@@ -52,27 +52,6 @@
         system = "x86_64-linux";
         modules = [
           ./modules/hosts/elvengard.nix
-          ./modules/profiles/base.nix
-          ./modules/profiles/machine.nix
-          ./modules/profiles/workstation.nix
-          ./modules/profiles/syncthing.nix
-          ./modules/profiles/jetbrains.nix
-          ./modules/profiles/vscode.nix
-          ./modules/users/vscode.nix
-          home-manager.nixosModules.home-manager
-        ];
-      };
-      oceando = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./modules/hosts/oceando.nix
-          ./modules/profiles/base.nix
-          ./modules/profiles/machine.nix
-          ./modules/profiles/workstation.nix
-          ./modules/profiles/syncthing.nix
-          ./modules/profiles/jetbrains.nix
-          ./modules/profiles/vscode.nix
-          ./modules/users/vscode.nix
           home-manager.nixosModules.home-manager
         ];
       };
@@ -80,9 +59,6 @@
         system = "aarch64-linux";
         modules = [
           ./modules/hosts/nishir.nix
-          ./modules/profiles/base.nix
-          ./modules/profiles/machine.nix
-          ./modules/users/nixos.nix
           nixos-hardware.nixosModules.raspberry-pi-4
         ];
       };
@@ -96,23 +72,6 @@
         };
         modules = [
           ./modules/home/hosts/altashar.nix
-          ./modules/home/users/sfeir.nix
-          ./modules/home/profiles/base.nix
-          ./modules/home/profiles/workstation.nix
-          ./modules/home/profiles/vcs.nix
-          ./modules/home/profiles/cc.nix
-          ./modules/home/profiles/ruby.nix
-          ./modules/home/profiles/beam.nix
-          ./modules/home/profiles/go.nix
-          ./modules/home/profiles/opam.nix
-          ./modules/home/profiles/rust.nix
-          ./modules/home/profiles/python.nix
-          ./modules/home/profiles/web.nix
-          ./modules/home/profiles/latex.nix
-          ./modules/home/profiles/sql.nix
-          ./modules/home/profiles/cloud.nix
-          ./modules/home/profiles/java.nix
-          ./modules/home/profiles/experimental/github-copilot-cli.nix
         ];
       };
       "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -122,23 +81,6 @@
         };
         modules = [
           ./modules/home/hosts/ishtar.nix
-          ./modules/home/users/sfeir.nix
-          ./modules/home/profiles/base.nix
-          ./modules/home/profiles/workstation.nix
-          ./modules/home/profiles/xdg.nix
-          ./modules/home/profiles/vcs.nix
-          ./modules/home/profiles/cc.nix
-          ./modules/home/profiles/ruby.nix
-          ./modules/home/profiles/beam.nix
-          ./modules/home/profiles/go.nix
-          ./modules/home/profiles/opam.nix
-          ./modules/home/profiles/rust.nix
-          ./modules/home/profiles/python.nix
-          ./modules/home/profiles/web.nix
-          ./modules/home/profiles/latex.nix
-          ./modules/home/profiles/sql.nix
-          ./modules/home/profiles/cloud.nix
-          ./modules/home/profiles/java.nix
         ];
       };
       vscode = home-manager.lib.homeManagerConfiguration {
@@ -148,10 +90,6 @@
         };
         modules = [
           ./modules/home/hosts/devcontainer.nix
-          ./modules/home/users/sfeir.nix
-          ./modules/home/profiles/base.nix
-          ./modules/home/profiles/workstation.nix
-          ./modules/home/profiles/xdg.nix
         ];
       };
     };

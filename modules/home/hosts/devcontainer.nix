@@ -3,6 +3,13 @@
 with lib;
 
 {
+  imports = [
+    ../identities/sfeir.nix
+    ../profiles/base.nix
+    ../profiles/workstation.nix
+    ../profiles/xdg.nix
+  ];
+
   home.homeDirectory = "/home/vscode";
   home.username = "vscode";
 
