@@ -29,7 +29,6 @@
     packages = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
       let pkgs = import nixpkgs { inherit system; }; in {
         curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
-        elkia = self.nixosConfigurations.elkia.config.system.build.qcowImage;
         elvengard = self.nixosConfigurations.elvengard.config.system.build.hypervImage;
         nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
       }
@@ -49,20 +48,6 @@
     );
 
     nixosConfigurations = {
-      elkia = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./modules/hosts/elkia.nix
-          ./modules/profiles/base.nix
-          ./modules/profiles/machine.nix
-          ./modules/profiles/workstation.nix
-          ./modules/profiles/syncthing.nix
-          ./modules/profiles/jetbrains.nix
-          ./modules/profiles/vscode.nix
-          ./modules/users/vscode.nix
-          home-manager.nixosModules.home-manager
-        ];
-      };
       elvengard = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
