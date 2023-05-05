@@ -59,29 +59,7 @@
   };
 
   # Configure user home
-  home-manager.users.vscode = {
-    imports = [
-      ../home/users/totalenergies.nix
-      ../home/users/sfeir.nix
-      ../home/users/paprec.nix
-      ../home/users/galec.nix
-      ../home/users/birdz.nix
-      ../home/profiles/base.nix
-      ../home/profiles/workstation.nix
-      ../home/profiles/xdg.nix
-      ../home/profiles/vcs.nix
-      ../home/profiles/cc.nix
-      ../home/profiles/ruby.nix
-      ../home/profiles/beam.nix
-      ../home/profiles/go.nix
-      ../home/profiles/opam.nix
-      ../home/profiles/rust.nix
-      ../home/profiles/python.nix
-      ../home/profiles/web.nix
-      ../home/profiles/latex.nix
-      ../home/profiles/sql.nix
-      ../home/profiles/cloud.nix
-      ../home/profiles/java.nix
-    ];
-  };
+  home-manager.users.vscode.imports = [
+    ../home/hosts/nixos.nix
+  ];
 }

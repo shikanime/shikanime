@@ -1,6 +1,31 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ../identities/totalenergies.nix
+    ../identities/sfeir.nix
+    ../identities/paprec.nix
+    ../identities/galec.nix
+    ../identities/birdz.nix
+    ../identities/renault.nix
+    ../profiles/base.nix
+    ../profiles/workstation.nix
+    ../profiles/xdg.nix
+    ../profiles/vcs.nix
+    ../profiles/cc.nix
+    ../profiles/ruby.nix
+    ../profiles/beam.nix
+    ../profiles/go.nix
+    ../profiles/opam.nix
+    ../profiles/rust.nix
+    ../profiles/python.nix
+    ../profiles/web.nix
+    ../profiles/latex.nix
+    ../profiles/sql.nix
+    ../profiles/cloud.nix
+    ../profiles/java.nix
+  ];
+
   home.homeDirectory = "/home/devas";
   home.username = "devas";
 

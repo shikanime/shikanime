@@ -3,6 +3,18 @@
 with lib;
 
 {
+  imports = [
+    ../identities/totalenergies.nix
+    ../identities/sfeir.nix
+    ../identities/paprec.nix
+    ../identities/galec.nix
+    ../identities/birdz.nix
+    ../identities/renault.nix
+    ../profiles/base.nix
+    ../profiles/workstation.nix
+    ../profiles/xdg.nix
+  ];
+
   home.homeDirectory = "/home/vscode";
   home.username = "vscode";
 
