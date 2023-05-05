@@ -25,73 +25,80 @@
     ];
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, devenv, ... }@inputs: {
-    packages = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
-      let pkgs = import nixpkgs { inherit system; }; in {
-        curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
-        elvengard = self.nixosConfigurations.elvengard.config.system.build.hypervImage;
-        nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
-      }
-    );
+  outputs =
+    { self
+    , nixpkgs
+    , nixos-hardware
+    , home-manager
+    , devenv
+    , ...
+    }@inputs: {
+      packages = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
+        let pkgs = import nixpkgs { inherit system; }; in {
+          curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
+          elvengard = self.nixosConfigurations.elvengard.config.system.build.hypervImage;
+          nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
+        }
+      );
 
-    devShells = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
-      let pkgs = import nixpkgs { inherit system; }; in {
-        default = devenv.lib.mkShell {
-          inherit inputs pkgs;
+      devShells = nixpkgs.lib.genAttrs [ "aarch64-darwin" "aarch64-linux" "x86_64-darwin" "x86_64-linux" ] (system:
+        let pkgs = import nixpkgs { inherit system; }; in {
+          default = devenv.lib.mkShell {
+            inherit inputs pkgs;
+            modules = [
+              ./modules/devenv/base.nix
+              ./modules/devenv/latex.nix
+              ./modules/devenv/cloud.nix
+            ];
+          };
+        }
+      );
+
+      nixosConfigurations = {
+        elvengard = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
           modules = [
-            ./modules/devenv/base.nix
-            ./modules/devenv/latex.nix
-            ./modules/devenv/cloud.nix
+            ./modules/hosts/elvengard.nix
+            home-manager.nixosModules.home-manager
           ];
         };
-      }
-    );
-
-    nixosConfigurations = {
-      elvengard = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./modules/hosts/elvengard.nix
-          home-manager.nixosModules.home-manager
-        ];
+        nishir = nixpkgs.lib.nixosSystem {
+          system = "aarch64-linux";
+          modules = [
+            ./modules/hosts/nishir.nix
+            nixos-hardware.nixosModules.raspberry-pi-4
+          ];
+        };
       };
-      nishir = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [
-          ./modules/hosts/nishir.nix
-          nixos-hardware.nixosModules.raspberry-pi-4
-        ];
+
+      homeConfigurations = {
+        "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-darwin";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/altashar.nix
+          ];
+        };
+        "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/ishtar.nix
+          ];
+        };
+        vscode = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/devcontainer.nix
+          ];
+        };
       };
     };
-
-    homeConfigurations = {
-      "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = "x86_64-darwin";
-          config.allowUnfree = true;
-        };
-        modules = [
-          ./modules/home/hosts/altashar.nix
-        ];
-      };
-      "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = "x86_64-linux";
-          config.allowUnfree = true;
-        };
-        modules = [
-          ./modules/home/hosts/ishtar.nix
-        ];
-      };
-      vscode = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = "x86_64-linux";
-          config.allowUnfree = true;
-        };
-        modules = [
-          ./modules/home/hosts/devcontainer.nix
-        ];
-      };
-    };
-  };
 }
