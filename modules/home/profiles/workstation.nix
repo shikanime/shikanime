@@ -263,22 +263,6 @@ with lib;
 
   programs.ssh = {
     enable = true;
-    matchBlocks = {
-      "elkia.local" = {
-        hostname = "elkia.local";
-        user = "vscode";
-        forwardX11 = true;
-        forwardX11Trusted = true;
-        forwardAgent = true;
-      };
-      "elvengard.local" = {
-        hostname = "elvengard.local";
-        user = "vscode";
-        forwardX11 = true;
-        forwardX11Trusted = true;
-        forwardAgent = true;
-      };
-    };
     extraConfig = ''
       AddKeysToAgent yes
     '' + optionalString pkgs.stdenv.hostPlatform.isDarwin ''
