@@ -33,12 +33,10 @@ cask 'android-studio'
 cask 'visual-studio-code'
 cask 'dbeaver-community'
 cask 'jetbrains-toolbox'
-cask 'raspberry-pi-imager'
 cask 'wireshark'
 
 # Virtualization
 cask 'rancher'
-cask 'utm'
 
 # Multimedia
 cask 'mpv'
