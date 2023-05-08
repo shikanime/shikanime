@@ -6,24 +6,10 @@ brew 'diffutils'
 brew 'gnupg'
 brew 'pinentry-mac'
 
-# Data
-brew 'python@3.10'
-brew 'python@3.9'
-brew 'python@3.8'
-brew 'pipx'
-brew 'huggingface-cli'
-cask 'anaconda'
-
-# Java
-brew 'gradle'
-brew 'coursier'
-brew 'openjdk'
-
 # Native Toolchains
 brew 'ccache'
 brew 'ninja'
 brew 'clang-format'
-brew 'libomp'
 brew 'bazelisk'
 cask 'cmake'
 mas 'xcode', id: 497_799_835
