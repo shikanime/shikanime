@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 186,
-      "versionNonce": 1101623285,
+      "version": 187,
+      "versionNonce": 913707844,
       "isDeleted": false,
       "id": "Ijy4UovEdDbPeu20o9A0S",
       "fillStyle": "hachure",
@@ -70,7 +70,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489437,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -85,8 +85,8 @@
     },
     {
       "type": "text",
-      "version": 115,
-      "versionNonce": 2105198581,
+      "version": 116,
+      "versionNonce": 572175100,
       "isDeleted": false,
       "id": "xs4XhpaR7t26diep3V5yX",
       "fillStyle": "hachure",
@@ -122,7 +122,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770189,
+      "updated": 1683649489438,
       "link": "https://medium.com/@lordned/ue4-rendering-part-6-adding-a-new-shading-model-e2972b40d72d",
       "locked": false,
       "fontSize": 20,
@@ -137,8 +137,8 @@
     },
     {
       "type": "text",
-      "version": 110,
-      "versionNonce": 1730028315,
+      "version": 111,
+      "versionNonce": 677055172,
       "isDeleted": false,
       "id": "LUoW9pRfaFeq09s74tn9p",
       "fillStyle": "hachure",
@@ -166,7 +166,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770189,
+      "updated": 1683649489439,
       "link": "https://forums.unrealengine.com/t/toon-shading-model-for-ue-4-20/218747/1",
       "locked": false,
       "fontSize": 20,
@@ -232,8 +232,8 @@
     },
     {
       "type": "text",
-      "version": 91,
-      "versionNonce": 2128500827,
+      "version": 92,
+      "versionNonce": 1724052348,
       "isDeleted": false,
       "id": "P1uONNhg6G9myeHUpyiq6",
       "fillStyle": "hachure",
@@ -257,7 +257,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770189,
+      "updated": 1683649489439,
       "link": "https://forums.unrealengine.com/t/toon-shading-model/30226/1",
       "locked": false,
       "fontSize": 20,
@@ -272,8 +272,8 @@
     },
     {
       "type": "text",
-      "version": 119,
-      "versionNonce": 1484258075,
+      "version": 120,
+      "versionNonce": 297079364,
       "isDeleted": false,
       "id": "wmRyH-ReLENN5XwHaSpXH",
       "fillStyle": "hachure",
@@ -309,7 +309,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489440,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -375,8 +375,8 @@
     },
     {
       "type": "text",
-      "version": 101,
-      "versionNonce": 533239035,
+      "version": 102,
+      "versionNonce": 1569661948,
       "isDeleted": false,
       "id": "xOQDXgZeMQif5bacIL9AD",
       "fillStyle": "hachure",
@@ -400,7 +400,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770189,
+      "updated": 1683649489440,
       "link": "https://forums.unrealengine.com/t/anisotropy-material/12963/2",
       "locked": false,
       "fontSize": 20,
@@ -415,8 +415,8 @@
     },
     {
       "type": "text",
-      "version": 78,
-      "versionNonce": 1837251995,
+      "version": 79,
+      "versionNonce": 1633823172,
       "isDeleted": false,
       "id": "HgJcs6irU9Gvi5VapumiQ",
       "fillStyle": "hachure",
@@ -456,7 +456,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770189,
+      "updated": 1683649489440,
       "link": "https://forums.unrealengine.com/t/toon-shading-models-stylized-rendering-experiments/218895",
       "locked": false,
       "fontSize": 20,
@@ -675,8 +675,8 @@
     },
     {
       "type": "text",
-      "version": 121,
-      "versionNonce": 1462769051,
+      "version": 122,
+      "versionNonce": 2088846460,
       "isDeleted": false,
       "id": "wWomcYR_CFrbNUVx7BjxM",
       "fillStyle": "hachure",
@@ -716,7 +716,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489441,
       "link": "https://forums.unrealengine.com/t/wip-anime-toon-stylized-shading-model/135956",
       "locked": false,
       "fontSize": 20,
@@ -731,8 +731,8 @@
     },
     {
       "type": "text",
-      "version": 140,
-      "versionNonce": 62514581,
+      "version": 141,
+      "versionNonce": 2055229764,
       "isDeleted": false,
       "id": "Vm96uzXnXyrjN8rVtBTzb",
       "fillStyle": "hachure",
@@ -760,7 +760,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489441,
       "link": "https://forums.unrealengine.com/t/npr-toon-shading-model/626678",
       "locked": false,
       "fontSize": 20,
@@ -775,8 +775,8 @@
     },
     {
       "type": "text",
-      "version": 91,
-      "versionNonce": 426814011,
+      "version": 92,
+      "versionNonce": 693851388,
       "isDeleted": false,
       "id": "BiyBgbOfFqirlodFQopFx",
       "fillStyle": "hachure",
@@ -804,7 +804,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489442,
       "link": "https://forums.unrealengine.com/t/make-the-engine-more-accommodating-for-custom-shading-models/544373",
       "locked": false,
       "fontSize": 20,
@@ -819,8 +819,8 @@
     },
     {
       "type": "text",
-      "version": 93,
-      "versionNonce": 1928489717,
+      "version": 94,
+      "versionNonce": 745375940,
       "isDeleted": false,
       "id": "jrFbVuhppHabCLyQ4JX12",
       "fillStyle": "hachure",
@@ -852,7 +852,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489442,
       "link": "https://dev.epicgames.com/community/learning/courses/92D/unreal-engine-strata-materials/vEaW/unreal-engine-strata-what-is-strata",
       "locked": false,
       "fontSize": 20,
@@ -1071,8 +1071,8 @@
     },
     {
       "type": "text",
-      "version": 129,
-      "versionNonce": 1036447771,
+      "version": 130,
+      "versionNonce": 1100961148,
       "isDeleted": false,
       "id": "M7vKubsgAI6m3XkQeXMo_",
       "fillStyle": "hachure",
@@ -1096,7 +1096,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489443,
       "link": "https://ruyo.github.io/VRM4U/02_toon/",
       "locked": false,
       "fontSize": 20,
@@ -1162,8 +1162,8 @@
     },
     {
       "type": "text",
-      "version": 93,
-      "versionNonce": 1833448635,
+      "version": 94,
+      "versionNonce": 717738052,
       "isDeleted": false,
       "id": "P5OjnudOdW2RYLQp_L3k5",
       "fillStyle": "hachure",
@@ -1182,7 +1182,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1683300724176,
+      "updated": 1683649489444,
       "link": "https://www.bilibili.com/video/BV1yo4y1z7LN/?share_source=copy_web&vd_source=f6690aa3cbb4401066f3d37e0ee22574",
       "locked": false,
       "fontSize": 20,
@@ -1197,8 +1197,8 @@
     },
     {
       "type": "text",
-      "version": 359,
-      "versionNonce": 302958709,
+      "version": 360,
+      "versionNonce": 579814908,
       "isDeleted": false,
       "id": "qaI53KdhIfk1JmFK2o4qk",
       "fillStyle": "hachure",
@@ -1226,7 +1226,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489444,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1292,8 +1292,8 @@
     },
     {
       "type": "text",
-      "version": 212,
-      "versionNonce": 1852305877,
+      "version": 213,
+      "versionNonce": 91039684,
       "isDeleted": false,
       "id": "cSI7vXIHezDWSVEDfdHal",
       "fillStyle": "hachure",
@@ -1317,7 +1317,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489444,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1332,8 +1332,8 @@
     },
     {
       "type": "text",
-      "version": 67,
-      "versionNonce": 27820539,
+      "version": 68,
+      "versionNonce": 825042556,
       "isDeleted": false,
       "id": "z7c24bMV9GDkAW2dxM6KF",
       "fillStyle": "hachure",
@@ -1361,7 +1361,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489445,
       "link": "https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample",
       "locked": false,
       "fontSize": 20,
@@ -1376,8 +1376,8 @@
     },
     {
       "type": "text",
-      "version": 376,
-      "versionNonce": 747958069,
+      "version": 377,
+      "versionNonce": 544968516,
       "isDeleted": false,
       "id": "eBxmbPxaF25eHhFewlBCY",
       "fillStyle": "hachure",
@@ -1433,7 +1433,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489445,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1550,8 +1550,8 @@
     },
     {
       "type": "text",
-      "version": 84,
-      "versionNonce": 633765691,
+      "version": 85,
+      "versionNonce": 1648031484,
       "isDeleted": false,
       "id": "fiq9l_urVPfBGlboWhsKJ",
       "fillStyle": "hachure",
@@ -1575,7 +1575,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489445,
       "link": "https://github.com/unity3d-jp/UnityChanToonShaderVer2_Project",
       "locked": false,
       "fontSize": 20,
@@ -1641,8 +1641,8 @@
     },
     {
       "type": "text",
-      "version": 41,
-      "versionNonce": 1221124059,
+      "version": 42,
+      "versionNonce": 743507652,
       "isDeleted": false,
       "id": "XbwrzYyGyODFtOGjxHsN_",
       "fillStyle": "hachure",
@@ -1666,7 +1666,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489446,
       "link": "https://github.com/ColinLeung-NiloCat/UnityURP-MobileDrawMeshInstancedIndirectExample",
       "locked": false,
       "fontSize": 20,
@@ -1732,8 +1732,8 @@
     },
     {
       "type": "text",
-      "version": 87,
-      "versionNonce": 1777740923,
+      "version": 88,
+      "versionNonce": 1111144316,
       "isDeleted": false,
       "id": "ZxWRIaRyhskE5X2M0CLJX",
       "fillStyle": "hachure",
@@ -1757,7 +1757,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489446,
       "link": "https://github.com/DeJhon-Huang/FernNPR",
       "locked": false,
       "fontSize": 20,
@@ -1823,8 +1823,8 @@
     },
     {
       "type": "text",
-      "version": 18,
-      "versionNonce": 1561388315,
+      "version": 19,
+      "versionNonce": 495685188,
       "isDeleted": false,
       "id": "zEcoXqcUtx4D4OXm9yMwx",
       "fillStyle": "hachure",
@@ -1843,7 +1843,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1683300724176,
+      "updated": 1683649489446,
       "link": "https://github.com/unity3d-jp/RaytracedHardShadow",
       "locked": false,
       "fontSize": 20,
@@ -1956,8 +1956,8 @@
     },
     {
       "type": "text",
-      "version": 81,
-      "versionNonce": 2115453813,
+      "version": 82,
+      "versionNonce": 2104387580,
       "isDeleted": false,
       "id": "1Scn5s3HzWK5r4LTSwiub",
       "fillStyle": "hachure",
@@ -1993,7 +1993,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724176,
+      "updated": 1683649489447,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2177,8 +2177,8 @@
     },
     {
       "type": "text",
-      "version": 70,
-      "versionNonce": 54615227,
+      "version": 71,
+      "versionNonce": 621356484,
       "isDeleted": false,
       "id": "FmjsHlL0ZczCA8M2IXDYy",
       "fillStyle": "hachure",
@@ -2206,7 +2206,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770190,
+      "updated": 1683649489447,
       "link": "https://80.lv/articles/experimenting-with-techniques-for-stylized-art-in-ue5/",
       "locked": false,
       "fontSize": 20,
@@ -2221,8 +2221,8 @@
     },
     {
       "type": "text",
-      "version": 61,
-      "versionNonce": 671083675,
+      "version": 62,
+      "versionNonce": 1742211196,
       "isDeleted": false,
       "id": "OavwbaTdjjF9sWHewVkb2",
       "fillStyle": "hachure",
@@ -2246,7 +2246,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300784997,
+      "updated": 1683649489447,
       "link": "https://www.artstation.com/artwork/1xNwvK",
       "locked": false,
       "fontSize": 20,
@@ -2363,8 +2363,8 @@
     },
     {
       "type": "text",
-      "version": 320,
-      "versionNonce": 1640194293,
+      "version": 321,
+      "versionNonce": 669502788,
       "isDeleted": false,
       "id": "UKxJ-iTu4SGmqHmcwVVjK",
       "fillStyle": "hachure",
@@ -2408,7 +2408,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489448,
       "link": "https://www.riotgames.com/en/urf-academy/the-curriculum",
       "locked": false,
       "fontSize": 20,
@@ -2423,8 +2423,8 @@
     },
     {
       "type": "text",
-      "version": 345,
-      "versionNonce": 391582939,
+      "version": 347,
+      "versionNonce": 621372924,
       "isDeleted": false,
       "id": "EvS54iu9qIOLyB8hzc6ra",
       "fillStyle": "hachure",
@@ -2446,9 +2446,13 @@
         {
           "id": "ePCQ20LySqZ1vsX9ycNNH",
           "type": "arrow"
+        },
+        {
+          "id": "Lg8qZzVhRIzvVa26yr_W4",
+          "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649528877,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2514,8 +2518,8 @@
     },
     {
       "type": "text",
-      "version": 288,
-      "versionNonce": 318095739,
+      "version": 289,
+      "versionNonce": 931497156,
       "isDeleted": false,
       "id": "7NsclBCr8esysZjAT9TWZ",
       "fillStyle": "hachure",
@@ -2543,7 +2547,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489449,
       "link": "https://www.youtube.com/watch?v=mnxs6CR6Zrk",
       "locked": false,
       "fontSize": 20,
@@ -2660,8 +2664,8 @@
     },
     {
       "type": "text",
-      "version": 105,
-      "versionNonce": 555788565,
+      "version": 106,
+      "versionNonce": 286595452,
       "isDeleted": false,
       "id": "7-NV-SFKuoXeADTN34qH9",
       "fillStyle": "hachure",
@@ -2693,7 +2697,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489449,
       "link": "https://youtu.be/g31NTpq9p-o",
       "locked": false,
       "fontSize": 20,
@@ -2759,8 +2763,8 @@
     },
     {
       "type": "text",
-      "version": 119,
-      "versionNonce": 1303690869,
+      "version": 120,
+      "versionNonce": 159403076,
       "isDeleted": false,
       "id": "K166GBKeuFrCxoiGk0g0i",
       "fillStyle": "hachure",
@@ -2784,7 +2788,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489449,
       "link": "https://youtu.be/SDNZ--exYNM",
       "locked": false,
       "fontSize": 20,
@@ -2850,8 +2854,8 @@
     },
     {
       "type": "text",
-      "version": 86,
-      "versionNonce": 1843341269,
+      "version": 87,
+      "versionNonce": 111970812,
       "isDeleted": false,
       "id": "MgWV_vtWKbgEpeEHFL82P",
       "fillStyle": "hachure",
@@ -2875,7 +2879,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489450,
       "link": "https://www.unrealengine.com/marketplace/en-US/product/paperzd",
       "locked": false,
       "fontSize": 20,
@@ -2941,8 +2945,8 @@
     },
     {
       "type": "text",
-      "version": 17,
-      "versionNonce": 1672832309,
+      "version": 18,
+      "versionNonce": 1874207684,
       "isDeleted": false,
       "id": "eniTLSuypK6DfZtQUVBmr",
       "fillStyle": "hachure",
@@ -2966,7 +2970,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489450,
       "link": "https://youtu.be/kXH1-uY0wjY",
       "locked": false,
       "fontSize": 20,
@@ -3069,8 +3073,8 @@
     },
     {
       "type": "text",
-      "version": 188,
-      "versionNonce": 180562235,
+      "version": 189,
+      "versionNonce": 687991420,
       "isDeleted": false,
       "id": "IOKtuI475JynSc1z_DNXC",
       "fillStyle": "hachure",
@@ -3098,7 +3102,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489450,
       "link": "https://youtu.be/QHHg99hwQGY",
       "locked": false,
       "fontSize": 20,
@@ -3252,8 +3256,8 @@
     },
     {
       "type": "text",
-      "version": 100,
-      "versionNonce": 1129338491,
+      "version": 101,
+      "versionNonce": 1346702148,
       "isDeleted": false,
       "id": "WGwT0NQigGSLaZGAOKSzx",
       "fillStyle": "hachure",
@@ -3281,7 +3285,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489451,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3435,8 +3439,8 @@
     },
     {
       "type": "text",
-      "version": 103,
-      "versionNonce": 1306735547,
+      "version": 104,
+      "versionNonce": 181877500,
       "isDeleted": false,
       "id": "CakW8oMRMldL6loRuIxuu",
       "fillStyle": "hachure",
@@ -3464,7 +3468,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489451,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3581,8 +3585,8 @@
     },
     {
       "type": "text",
-      "version": 171,
-      "versionNonce": 638206677,
+      "version": 172,
+      "versionNonce": 495649476,
       "isDeleted": false,
       "id": "dqSie0KWh8E8gRvLawKMr",
       "fillStyle": "hachure",
@@ -3606,7 +3610,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489452,
       "link": "https://youtu.be/jVL4st0blGU",
       "locked": false,
       "fontSize": 20,
@@ -3672,8 +3676,8 @@
     },
     {
       "type": "text",
-      "version": 35,
-      "versionNonce": 1036329013,
+      "version": 36,
+      "versionNonce": 380533628,
       "isDeleted": false,
       "id": "8f2fLEFkhOicna6ytGDoC",
       "fillStyle": "hachure",
@@ -3697,7 +3701,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489452,
       "link": "https://github.com/IronWarrior/UnityToonShader",
       "locked": false,
       "fontSize": 20,
@@ -3712,8 +3716,8 @@
     },
     {
       "type": "text",
-      "version": 24,
-      "versionNonce": 1153690011,
+      "version": 25,
+      "versionNonce": 1311115844,
       "isDeleted": false,
       "id": "im04HM5coSDL25B7IhDLg",
       "fillStyle": "hachure",
@@ -3745,7 +3749,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489452,
       "link": "https://roystan.net/articles/toon-shader/",
       "locked": false,
       "fontSize": 20,
@@ -3862,8 +3866,8 @@
     },
     {
       "type": "text",
-      "version": 99,
-      "versionNonce": 350770933,
+      "version": 100,
+      "versionNonce": 382315516,
       "isDeleted": false,
       "id": "G9WDFQ2Io2JHapGSQxpWt",
       "fillStyle": "hachure",
@@ -3887,7 +3891,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724177,
+      "updated": 1683649489452,
       "link": "https://users.cs.northwestern.edu/~hunicke/MDA.pdf",
       "locked": false,
       "fontSize": 20,
@@ -3953,8 +3957,8 @@
     },
     {
       "type": "text",
-      "version": 52,
-      "versionNonce": 208115861,
+      "version": 53,
+      "versionNonce": 1425285572,
       "isDeleted": false,
       "id": "5mSQEy7X9bICFHN9ObT46",
       "fillStyle": "hachure",
@@ -3982,7 +3986,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489453,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4048,8 +4052,8 @@
     },
     {
       "type": "text",
-      "version": 38,
-      "versionNonce": 1355822933,
+      "version": 39,
+      "versionNonce": 1026215036,
       "isDeleted": false,
       "id": "jVPEKE6jzKGdYHgNPYkfL",
       "fillStyle": "hachure",
@@ -4077,7 +4081,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489453,
       "link": "https://unrealcommunity.wiki/cel-shading-post-process-6t8vztk6",
       "locked": false,
       "fontSize": 20,
@@ -4206,8 +4210,8 @@
     },
     {
       "type": "text",
-      "version": 18,
-      "versionNonce": 1073187003,
+      "version": 19,
+      "versionNonce": 420694340,
       "isDeleted": false,
       "id": "7STeNSTKI6t-DTLiCiXe7",
       "fillStyle": "hachure",
@@ -4226,7 +4230,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1683300724177,
+      "updated": 1683649489453,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4288,8 +4292,8 @@
     },
     {
       "type": "text",
-      "version": 48,
-      "versionNonce": 19932693,
+      "version": 49,
+      "versionNonce": 731110652,
       "isDeleted": false,
       "id": "0unH3JVxBOfQFaodV0dIP",
       "fillStyle": "hachure",
@@ -4321,7 +4325,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489454,
       "link": "https://medium.com/@lordned/unreal-engine-4-rendering-overview-part-1-c47f2da65346",
       "locked": false,
       "fontSize": 20,
@@ -4387,8 +4391,8 @@
     },
     {
       "type": "text",
-      "version": 56,
-      "versionNonce": 318881531,
+      "version": 57,
+      "versionNonce": 1843495108,
       "isDeleted": false,
       "id": "FC2xZV6pYr3ILkE7ItOg-",
       "fillStyle": "hachure",
@@ -4412,7 +4416,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489454,
       "link": "https://www.intel.com/content/www/us/en/developer/articles/technical/forward-clustered-shading.html",
       "locked": false,
       "fontSize": 20,
@@ -4427,8 +4431,8 @@
     },
     {
       "type": "text",
-      "version": 46,
-      "versionNonce": 872818587,
+      "version": 47,
+      "versionNonce": 2072436092,
       "isDeleted": false,
       "id": "pbI1vxzEPWglNemQjFL5g",
       "fillStyle": "hachure",
@@ -4452,7 +4456,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489454,
       "link": "https://gamedevelopment.tutsplus.com/articles/forward-rendering-vs-deferred-rendering--gamedev-12342",
       "locked": false,
       "fontSize": 20,
@@ -4569,8 +4573,8 @@
     },
     {
       "type": "text",
-      "version": 193,
-      "versionNonce": 145475419,
+      "version": 194,
+      "versionNonce": 184338500,
       "isDeleted": false,
       "id": "5GJDa05PKrp4hRiyZ8ffE",
       "fillStyle": "hachure",
@@ -4594,7 +4598,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300783604,
+      "updated": 1683649489455,
       "link": "https://zhuanlan.zhihu.com/p/551343308",
       "locked": false,
       "fontSize": 20,
@@ -4660,8 +4664,8 @@
     },
     {
       "type": "text",
-      "version": 26,
-      "versionNonce": 1600369627,
+      "version": 27,
+      "versionNonce": 1178979836,
       "isDeleted": false,
       "id": "Cj44JOHGdJECD80LLz2zI",
       "fillStyle": "hachure",
@@ -4680,7 +4684,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1683300724178,
+      "updated": 1683649489455,
       "link": "https://www.blog.udonis.co/mobile-marketing/mobile-games/genshin-impact-advertising",
       "locked": false,
       "fontSize": 20,
@@ -4695,8 +4699,8 @@
     },
     {
       "type": "text",
-      "version": 24,
-      "versionNonce": 12995413,
+      "version": 25,
+      "versionNonce": 71507908,
       "isDeleted": false,
       "id": "Y6qJNMndLDVwHsIuSlyaB",
       "fillStyle": "hachure",
@@ -4715,7 +4719,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1683300724178,
+      "updated": 1683649489456,
       "link": "https://store.steampowered.com/app/2214880/Europa/",
       "locked": false,
       "fontSize": 20,
@@ -4730,8 +4734,8 @@
     },
     {
       "type": "text",
-      "version": 127,
-      "versionNonce": 707837877,
+      "version": 128,
+      "versionNonce": 752004732,
       "isDeleted": false,
       "id": "9qfSi_1BIEHY2GCGlRMv9",
       "fillStyle": "hachure",
@@ -4763,7 +4767,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489456,
       "link": "https://qiita.com/dgtanaka/items/41f96ef2090820035609",
       "locked": false,
       "fontSize": 20,
@@ -4778,8 +4782,8 @@
     },
     {
       "type": "text",
-      "version": 86,
-      "versionNonce": 1746077371,
+      "version": 87,
+      "versionNonce": 1104316228,
       "isDeleted": false,
       "id": "G54R7NfANX3xtQlYgHXOZ",
       "fillStyle": "hachure",
@@ -4827,7 +4831,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489457,
       "link": "https://twitter.com/SamFbrumby/status/1528461352322207745?cxt=HHwWgsCg4Y7gl7YqAAAA",
       "locked": false,
       "fontSize": 20,
@@ -4995,8 +4999,8 @@
     },
     {
       "type": "text",
-      "version": 51,
-      "versionNonce": 340553045,
+      "version": 52,
+      "versionNonce": 1609531132,
       "isDeleted": false,
       "id": "0liqwzu_xuP4hzgd74v3Y",
       "fillStyle": "hachure",
@@ -5009,7 +5013,7 @@
       "y": 1771.5291324056084,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
-      "width": 107.93997192382812,
+      "width": 118.86184692382812,
       "height": 25,
       "seed": 1664217323,
       "groupIds": [],
@@ -5020,7 +5024,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489457,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -5086,8 +5090,8 @@
     },
     {
       "type": "text",
-      "version": 56,
-      "versionNonce": 26998555,
+      "version": 57,
+      "versionNonce": 2013855428,
       "isDeleted": false,
       "id": "VaO03nSyjlEbsd4HczfVT",
       "fillStyle": "hachure",
@@ -5115,7 +5119,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489457,
       "link": "https://kidswithsticks.com/creating-stylized-art-inspired-by-ghibli-using-unreal-engine-4/",
       "locked": false,
       "fontSize": 20,
@@ -5181,8 +5185,8 @@
     },
     {
       "type": "text",
-      "version": 37,
-      "versionNonce": 183970907,
+      "version": 38,
+      "versionNonce": 673070972,
       "isDeleted": false,
       "id": "988SnmLUmdGOwt3lyjNPt",
       "fillStyle": "hachure",
@@ -5206,7 +5210,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489457,
       "link": "https://store.steampowered.com/app/1554970/Rogue_Spirit/",
       "locked": false,
       "fontSize": 20,
@@ -5272,8 +5276,8 @@
     },
     {
       "type": "text",
-      "version": 79,
-      "versionNonce": 659847221,
+      "version": 80,
+      "versionNonce": 528778820,
       "isDeleted": false,
       "id": "1fWQIKEsswknT__QYxxQz",
       "fillStyle": "hachure",
@@ -5297,7 +5301,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489458,
       "link": "https://www.kodeco.com/100-unreal-engine-4-paint-filter-tutorial",
       "locked": false,
       "fontSize": 20,
@@ -5363,8 +5367,8 @@
     },
     {
       "type": "text",
-      "version": 87,
-      "versionNonce": 546776635,
+      "version": 88,
+      "versionNonce": 1839263740,
       "isDeleted": false,
       "id": "74urFMNL2szRPO-JsaUY7",
       "fillStyle": "hachure",
@@ -5388,7 +5392,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489458,
       "link": "https://youtu.be/JWCponhcSao",
       "locked": false,
       "fontSize": 20,
@@ -5454,8 +5458,8 @@
     },
     {
       "type": "text",
-      "version": 35,
-      "versionNonce": 1052379221,
+      "version": 36,
+      "versionNonce": 1831017924,
       "isDeleted": false,
       "id": "lurJNoQ_67P40hyIGW2M8",
       "fillStyle": "hachure",
@@ -5479,7 +5483,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300770191,
+      "updated": 1683649489458,
       "link": "https://www.artstation.com/artwork/wJBYew",
       "locked": false,
       "fontSize": 20,
@@ -5647,8 +5651,8 @@
     },
     {
       "type": "text",
-      "version": 74,
-      "versionNonce": 620107029,
+      "version": 75,
+      "versionNonce": 1081708668,
       "isDeleted": false,
       "id": "Q4OEqEsyNZlpG6mt0mL3U",
       "fillStyle": "hachure",
@@ -5672,7 +5676,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489459,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -5687,8 +5691,8 @@
     },
     {
       "type": "text",
-      "version": 65,
-      "versionNonce": 1559311035,
+      "version": 66,
+      "versionNonce": 1241695556,
       "isDeleted": false,
       "id": "qF74YGi9SSx2gZQ7AKGUm",
       "fillStyle": "hachure",
@@ -5712,7 +5716,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489459,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -5866,8 +5870,8 @@
     },
     {
       "type": "text",
-      "version": 29,
-      "versionNonce": 2108293115,
+      "version": 30,
+      "versionNonce": 1617567996,
       "isDeleted": false,
       "id": "rSuZKWNlA4C9ALG6Iz55x",
       "fillStyle": "hachure",
@@ -5895,7 +5899,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489459,
       "link": "https://youtu.be/2NzUZkGHZFg",
       "locked": false,
       "fontSize": 20,
@@ -5961,8 +5965,8 @@
     },
     {
       "type": "text",
-      "version": 179,
-      "versionNonce": 33441947,
+      "version": 180,
+      "versionNonce": 1266777284,
       "isDeleted": false,
       "id": "l3eG12-RAGwbqlfZM_OXo",
       "fillStyle": "hachure",
@@ -5994,7 +5998,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489460,
       "link": "",
       "locked": false,
       "fontSize": 20,
@@ -6009,8 +6013,8 @@
     },
     {
       "type": "text",
-      "version": 152,
-      "versionNonce": 1516003989,
+      "version": 153,
+      "versionNonce": 1156882812,
       "isDeleted": false,
       "id": "EfiK0OmaVls6cSAFh3YIs",
       "fillStyle": "hachure",
@@ -6038,7 +6042,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489460,
       "link": "https://youtu.be/5prkKOIilJg",
       "locked": false,
       "fontSize": 20,
@@ -6104,8 +6108,8 @@
     },
     {
       "type": "text",
-      "version": 11,
-      "versionNonce": 708659189,
+      "version": 12,
+      "versionNonce": 725435460,
       "isDeleted": false,
       "id": "npu8VgC3flgtkOG53FVQe",
       "fillStyle": "hachure",
@@ -6129,7 +6133,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489460,
       "link": "https://github.com/lilxyzw/lilToon",
       "locked": false,
       "fontSize": 20,
@@ -6195,8 +6199,8 @@
     },
     {
       "type": "text",
-      "version": 20,
-      "versionNonce": 194675029,
+      "version": 21,
+      "versionNonce": 626725372,
       "isDeleted": false,
       "id": "wAJdErpjukAPSNJlvY35u",
       "fillStyle": "hachure",
@@ -6220,7 +6224,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489461,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -6235,8 +6239,8 @@
     },
     {
       "type": "text",
-      "version": 11,
-      "versionNonce": 1917364859,
+      "version": 12,
+      "versionNonce": 1058282436,
       "isDeleted": false,
       "id": "iYbDFzs2HPPXIIO1D9QZx",
       "fillStyle": "hachure",
@@ -6264,7 +6268,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489461,
       "link": "https://twitter.com/tasaki_yota",
       "locked": false,
       "fontSize": 20,
@@ -6330,8 +6334,8 @@
     },
     {
       "type": "text",
-      "version": 37,
-      "versionNonce": 1919132443,
+      "version": 38,
+      "versionNonce": 10449532,
       "isDeleted": false,
       "id": "9MOiE3LmgNe7tAHsuoMIY",
       "fillStyle": "hachure",
@@ -6355,7 +6359,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489462,
       "link": "https://twitter.com/i/status/1647478296848879616",
       "locked": false,
       "fontSize": 20,
@@ -6421,8 +6425,8 @@
     },
     {
       "type": "text",
-      "version": 47,
-      "versionNonce": 1909884859,
+      "version": 48,
+      "versionNonce": 1898185540,
       "isDeleted": false,
       "id": "J2oZ4qOppUhxKKuNnUPtF",
       "fillStyle": "hachure",
@@ -6450,7 +6454,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489462,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -6465,8 +6469,8 @@
     },
     {
       "type": "text",
-      "version": 7,
-      "versionNonce": 579020149,
+      "version": 8,
+      "versionNonce": 629392124,
       "isDeleted": false,
       "id": "BYpvYG-GmMP2nxNx_RuGD",
       "fillStyle": "hachure",
@@ -6490,7 +6494,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724178,
+      "updated": 1683649489463,
       "link": "https://youtu.be/m07_HNyYG18",
       "locked": false,
       "fontSize": 20,
@@ -6607,8 +6611,8 @@
     },
     {
       "type": "text",
-      "version": 73,
-      "versionNonce": 519967995,
+      "version": 74,
+      "versionNonce": 936049348,
       "isDeleted": false,
       "id": "nH0dqiHGoiY2LpXABW2CO",
       "fillStyle": "hachure",
@@ -6632,7 +6636,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300724179,
+      "updated": 1683649489463,
       "link": "https://youtu.be/joOIBteSo1w",
       "locked": false,
       "fontSize": 20,
@@ -6698,8 +6702,8 @@
     },
     {
       "type": "text",
-      "version": 153,
-      "versionNonce": 53172341,
+      "version": 154,
+      "versionNonce": 982123388,
       "isDeleted": false,
       "id": "z-c5LEUq-ByNEVV84-05f",
       "fillStyle": "hachure",
@@ -6727,7 +6731,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1683300790636,
+      "updated": 1683649489463,
       "link": "https://youtu.be/SonheTAwcUI",
       "locked": false,
       "fontSize": 20,
@@ -6792,26 +6796,26 @@
       ]
     },
     {
-      "id": "5wr6ml6mTpITDAiIHIZK-",
       "type": "text",
-      "x": 332.2601345471229,
-      "y": 1756.1024045241695,
-      "width": 66.49993896484375,
-      "height": 25,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
+      "version": 63,
+      "versionNonce": 229048900,
+      "isDeleted": false,
+      "id": "5wr6ml6mTpITDAiIHIZK-",
       "fillStyle": "hachure",
       "strokeWidth": 1,
       "strokeStyle": "solid",
       "roughness": 1,
       "opacity": 100,
+      "angle": 0,
+      "x": 332.2601345471229,
+      "y": 1756.1024045241695,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 66.49993896484375,
+      "height": 25,
+      "seed": 990198139,
       "groupIds": [],
       "roundness": null,
-      "seed": 990198139,
-      "version": 62,
-      "versionNonce": 1271758645,
-      "isDeleted": false,
       "boundElements": [
         {
           "id": "Ywf_Ovr1nf6_tLCA0RYf4",
@@ -6822,33 +6826,222 @@
           "type": "arrow"
         },
         {
-          "id": "GP_umiZGL6Vus0wLZXclq",
+          "id": "n4hcnKYe9xnea-W_ytg0N",
           "type": "arrow"
-        },
+        }
+      ],
+      "updated": 1683649489463,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Foliage",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Foliage",
+      "lineHeight": 1.25,
+      "baseline": 18
+    },
+    {
+      "type": "text",
+      "version": 31,
+      "versionNonce": 1173631996,
+      "isDeleted": false,
+      "id": "Rt4FpQlGLNRhrIj3htR1e",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 251.4347021954942,
+      "y": 1975.5469357743293,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 212.2798309326172,
+      "height": 25,
+      "seed": 1823758741,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [
         {
           "id": "n4hcnKYe9xnea-W_ytg0N",
           "type": "arrow"
         }
       ],
+      "updated": 1683649489464,
+      "link": "https://www.youtube.com/@akbutea_art",
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": " Victoria Zavhorodnia",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": " Victoria Zavhorodnia",
+      "lineHeight": 1.25,
+      "baseline": 18
+    },
+    {
+      "type": "arrow",
+      "version": 84,
+      "versionNonce": 1419890837,
+      "isDeleted": false,
+      "id": "Ywf_Ovr1nf6_tLCA0RYf4",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 608.5052957608996,
+      "y": 210.81859618914166,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 239.2763950364308,
+      "height": 1539.5486755126858,
+      "seed": 974793691,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
       "updated": 1683300790636,
       "link": null,
       "locked": false,
-      "text": "Foliage",
-      "fontSize": 20,
-      "fontFamily": 1,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "baseline": 18,
-      "containerId": null,
-      "originalText": "Foliage",
-      "lineHeight": 1.25
+      "startBinding": {
+        "elementId": "Ijy4UovEdDbPeu20o9A0S",
+        "focus": -0.08190813041665714,
+        "gap": 8.053032224297908
+      },
+      "endBinding": {
+        "elementId": "5wr6ml6mTpITDAiIHIZK-",
+        "focus": 0.02513859396665851,
+        "gap": 5.735132822341939
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -239.2763950364308,
+          1539.5486755126858
+        ]
+      ]
     },
     {
-      "id": "Rt4FpQlGLNRhrIj3htR1e",
+      "type": "arrow",
+      "version": 122,
+      "versionNonce": 512646677,
+      "isDeleted": false,
+      "id": "1Kn0UTY9u9yLSlHqfPJDJ",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 1002.6399430997594,
+      "y": 1543.1390356619424,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 629.8792821358982,
+      "height": 201.24838678925835,
+      "seed": 665510299,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1683300791107,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "z-c5LEUq-ByNEVV84-05f",
+        "focus": -0.0294577464859366,
+        "gap": 12.20893670569285
+      },
+      "endBinding": {
+        "elementId": "5wr6ml6mTpITDAiIHIZK-",
+        "focus": -0.9470208418490464,
+        "gap": 11.714982072968724
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -629.8792821358982,
+          201.24838678925835
+        ]
+      ]
+    },
+    {
+      "type": "arrow",
+      "version": 116,
+      "versionNonce": 497275765,
+      "isDeleted": false,
+      "id": "n4hcnKYe9xnea-W_ytg0N",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 365.5816020649827,
+      "y": 1796.7534733293933,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 6.729145125923878,
+      "height": 176.17058431415853,
+      "seed": 1479817083,
+      "groupIds": [],
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1683300791107,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "5wr6ml6mTpITDAiIHIZK-",
+        "focus": -0.034001334392721724,
+        "gap": 15.651068805223758
+      },
+      "endBinding": {
+        "elementId": "Rt4FpQlGLNRhrIj3htR1e",
+        "focus": 0.0065673570158569046,
+        "gap": 2.622878130777508
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -6.729145125923878,
+          176.17058431415853
+        ]
+      ]
+    },
+    {
+      "id": "M77bmSHbSHpCOFmXI8Nwa",
       "type": "text",
-      "x": 251.4347021954942,
-      "y": 1975.5469357743293,
-      "width": 212.2798309326172,
+      "x": -1104.1277853677843,
+      "y": -1979.1233568800155,
+      "width": 671.099365234375,
       "height": 25,
       "angle": 0,
       "strokeColor": "#000000",
@@ -6860,36 +7053,36 @@
       "opacity": 100,
       "groupIds": [],
       "roundness": null,
-      "seed": 1823758741,
-      "version": 30,
-      "versionNonce": 2076528603,
+      "seed": 1715585092,
+      "version": 18,
+      "versionNonce": 526599804,
       "isDeleted": false,
       "boundElements": [
         {
-          "id": "n4hcnKYe9xnea-W_ytg0N",
+          "id": "Lg8qZzVhRIzvVa26yr_W4",
           "type": "arrow"
         }
       ],
-      "updated": 1683300790636,
-      "link": "https://www.youtube.com/@akbutea_art",
+      "updated": 1683649528877,
+      "link": "https://youtu.be/QyMsF31NdNc",
       "locked": false,
-      "text": " Victoria Zavhorodnia",
+      "text": "Breaking Conventions with The Legend of Zelda: Breath of the Wild",
       "fontSize": 20,
       "fontFamily": 1,
       "textAlign": "left",
       "verticalAlign": "top",
       "baseline": 18,
       "containerId": null,
-      "originalText": " Victoria Zavhorodnia",
+      "originalText": "Breaking Conventions with The Legend of Zelda: Breath of the Wild",
       "lineHeight": 1.25
     },
     {
-      "id": "Ywf_Ovr1nf6_tLCA0RYf4",
+      "id": "Lg8qZzVhRIzvVa26yr_W4",
       "type": "arrow",
-      "x": 608.5052957608996,
-      "y": 210.81859618914166,
-      "width": 239.2763950364308,
-      "height": 1539.5486755126858,
+      "x": -1376.1277853677843,
+      "y": -1729.1233568800155,
+      "width": 514,
+      "height": 210,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -6902,12 +7095,12 @@
       "roundness": {
         "type": 2
       },
-      "seed": 974793691,
-      "version": 84,
-      "versionNonce": 1419890837,
+      "seed": 1461383876,
+      "version": 45,
+      "versionNonce": 1882681156,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1683300790636,
+      "updated": 1683649528880,
       "link": null,
       "locked": false,
       "points": [
@@ -6916,122 +7109,20 @@
           0
         ],
         [
-          -239.2763950364308,
-          1539.5486755126858
+          514,
+          -210
         ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
-        "elementId": "Ijy4UovEdDbPeu20o9A0S",
-        "focus": -0.08190813041665714,
-        "gap": 8.053032224297908
+        "elementId": "EvS54iu9qIOLyB8hzc6ra",
+        "focus": -0.3024676565395085,
+        "gap": 5.213048959702064
       },
       "endBinding": {
-        "elementId": "5wr6ml6mTpITDAiIHIZK-",
-        "focus": 0.02513859396665851,
-        "gap": 5.735132822341939
-      },
-      "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "1Kn0UTY9u9yLSlHqfPJDJ",
-      "type": "arrow",
-      "x": 1002.6399430997594,
-      "y": 1543.1390356619424,
-      "width": 629.8792821358982,
-      "height": 201.24838678925835,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "seed": 665510299,
-      "version": 122,
-      "versionNonce": 512646677,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1683300791107,
-      "link": null,
-      "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -629.8792821358982,
-          201.24838678925835
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": {
-        "elementId": "z-c5LEUq-ByNEVV84-05f",
-        "focus": -0.0294577464859366,
-        "gap": 12.20893670569285
-      },
-      "endBinding": {
-        "elementId": "5wr6ml6mTpITDAiIHIZK-",
-        "focus": -0.9470208418490464,
-        "gap": 11.714982072968724
-      },
-      "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "id": "n4hcnKYe9xnea-W_ytg0N",
-      "type": "arrow",
-      "x": 365.5816020649827,
-      "y": 1796.7534733293933,
-      "width": 6.729145125923878,
-      "height": 176.17058431415853,
-      "angle": 0,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "seed": 1479817083,
-      "version": 116,
-      "versionNonce": 497275765,
-      "isDeleted": false,
-      "boundElements": null,
-      "updated": 1683300791107,
-      "link": null,
-      "locked": false,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -6.729145125923878,
-          176.17058431415853
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": {
-        "elementId": "5wr6ml6mTpITDAiIHIZK-",
-        "focus": -0.034001334392721724,
-        "gap": 15.651068805223758
-      },
-      "endBinding": {
-        "elementId": "Rt4FpQlGLNRhrIj3htR1e",
-        "focus": 0.0065673570158569046,
-        "gap": 2.622878130777508
+        "elementId": "M77bmSHbSHpCOFmXI8Nwa",
+        "focus": 0.07166604621090188,
+        "gap": 15
       },
       "startArrowhead": null,
       "endArrowhead": "arrow"
