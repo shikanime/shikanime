@@ -1,10 +1,12 @@
 # Essentials
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
+tap 'microsoft/git'
 brew 'mas'
 brew 'diffutils'
 brew 'gnupg'
 brew 'pinentry-mac'
+cask 'git-credential-manager-core'
 
 # Native Toolchains
 brew 'ccache'
