@@ -20,14 +20,15 @@ echo "Nix is installed."
 # in oder to make home-manager work properly
 export USER=${USER:-$(whoami)}
 
-# Create per-user profile as it is not created by default
+# Create per-user profile as it may not have been created by default in
+# container environment
 if [[ ! -d /nix/var/nix/profiles/per-user/"$USER" ]]; then
 	echo "Creating per-user profile..."
 	sudo mkdir -p /nix/var/nix/profiles/per-user/"$USER"
 fi
 
-# As the per-user profile is created by root, we need to fix its permissions
-# so that the user can access itgit
+# As the per-user profile may have been created by root, we need to fix its
+# permissions so that the user can access it
 if [[ -d /nix/var/nix/profiles/per-user/"$USER" ]]; then
 	echo "Fix per-user profiles permissions..."
 	sudo chown "$USER" /nix/var/nix/profiles/per-user/"$USER"
