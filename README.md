@@ -1,6 +1,6 @@
 <!-- markdownlint-disable first-line-heading -->
 
-![header.png](https://raw.githubusercontent.com/Shikanime/Shikanime/master/assets/github-header.png)
+![header.png](https://raw.githubusercontent.com/shikanime/shikanime/main/assets/github-header.png)
 
 <!-- markdownlint-enable first-line-heading -->
 
