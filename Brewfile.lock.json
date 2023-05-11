@@ -5,7 +5,10 @@
         "revision": "d6137af629e5ebb17d13eae5a18fc0c14e8057a1"
       },
       "homebrew/cask-drivers": {
-        "revision": "39bc6198e8a15c08bff66d72f64f576a0648ad6b"
+        "revision": "8b60a84087125387b2869afac27eb4724f010485"
+      },
+      "microsoft/git": {
+        "revision": "b38c5121ed0eb0a90536fa3afca12049e87b4f35"
       }
     },
     "brew": {
@@ -3779,7 +3782,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.78.0",
+        "version": "1.78.1",
         "options": {
           "full_name": "visual-studio-code"
         }
@@ -3845,13 +3848,13 @@
         }
       },
       "microsoft-edge-dev": {
-        "version": "114.0.1807.6",
+        "version": "115.0.1843.0",
         "options": {
           "full_name": "microsoft-edge-dev"
         }
       },
       "signal": {
-        "version": "6.16.0",
+        "version": "6.17.0",
         "options": {
           "full_name": "signal"
         }
@@ -3863,7 +3866,7 @@
         }
       },
       "microsoft-teams": {
-        "version": "1.6.00.7354",
+        "version": "1.6.00.11156",
         "options": {
           "full_name": "microsoft-teams"
         }
@@ -3875,7 +3878,7 @@
         }
       },
       "google-drive": {
-        "version": "74.0.3",
+        "version": "75.0.1",
         "options": {
           "full_name": "google-drive"
         }
@@ -3935,7 +3938,7 @@
         }
       },
       "wacom-tablet": {
-        "version": "6.4.1-2",
+        "version": "6.4.2-1",
         "options": {
           "full_name": "wacom-tablet"
         }
@@ -4001,7 +4004,7 @@
         }
       },
       "obs": {
-        "version": "29.1.0",
+        "version": "29.1.1",
         "options": {
           "full_name": "obs"
         }
@@ -4071,6 +4074,12 @@
         "options": {
           "full_name": "wireshark"
         }
+      },
+      "git-credential-manager-core": {
+        "version": "2.1.2",
+        "options": {
+          "full_name": "git-credential-manager-core"
+        }
       }
     },
     "mas": {
@@ -4105,7 +4114,7 @@
         "macOS": "12.6"
       },
       "ventura": {
-        "HOMEBREW_VERSION": "4.0.17-12-g7d02626",
+        "HOMEBREW_VERSION": "4.0.17-63-g32f2258",
         "HOMEBREW_PREFIX": "/usr/local",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.0.0.1.1679647830",
