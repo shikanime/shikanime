@@ -6,6 +6,9 @@ brew 'mas'
 brew 'diffutils'
 brew 'gnupg'
 brew 'pinentry-mac'
+
+# VCS
+cask 'p4v'
 cask 'git-credential-manager-core'
 
 # Native Toolchains
