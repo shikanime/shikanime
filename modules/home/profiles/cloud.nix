@@ -12,7 +12,6 @@ with lib;
     pkgs.azure-cli
     pkgs.awscli2
     pkgs.cloudflared
-    pkgs.github-cli
     pkgs.act
     pkgs.glab
     pkgs.kubelogin
@@ -29,6 +28,8 @@ with lib;
       ]
     ))
   ];
+
+  programs.gh.enable = true;
 
   programs.zsh.oh-my-zsh.plugins = [
     "kubectl"
