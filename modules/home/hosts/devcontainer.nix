@@ -13,6 +13,7 @@ with lib;
     ../profiles/base.nix
     ../profiles/workstation.nix
     ../profiles/xdg.nix
+    ../profiles/vcs.nix
   ];
 
   home.homeDirectory = "/home/vscode";
