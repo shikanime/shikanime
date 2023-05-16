@@ -4,18 +4,6 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-# Check if Nix is installed
-if ! command -v nix >/dev/null; then
-	echo "Nix is not installed. Installing..."
-	# Install Nix with experimental flake config
-	sh <(curl -L https://nixos.org/nix/install) --yes --daemon
-	# Add Nix to PATH
-	# shellcheck source=/dev/null
-	source /etc/profile.d/nix.sh
-fi
-
-echo "Nix is installed."
-
 # Container run without USER env variable set so we need to set it manually
 # in oder to make home-manager work properly
 export USER=${USER:-$(whoami)}
