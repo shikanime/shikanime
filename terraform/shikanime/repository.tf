@@ -9,6 +9,18 @@ resource "github_repository" "default" {
   }
 }
 
+resource "github_branch_protection" "main" {
+  repository_id  = github_repository.default.node_id
+  pattern        = "main"
+  enforce_admins = true
+}
+
+resource "github_branch_protection" "releases" {
+  repository_id  = github_repository.default.node_id
+  pattern        = "release-*.*"
+  enforce_admins = true
+}
+
 resource "github_actions_secret" "cachix_token" {
   repository      = github_repository.default.name
   secret_name     = "CACHIX_AUTH_TOKEN"
@@ -52,6 +64,18 @@ resource "github_repository" "algorithm" {
   lifecycle {
     prevent_destroy = true
   }
+}
+
+resource "github_branch_protection" "algorithm_main" {
+  repository_id  = github_repository.algorithm.node_id
+  pattern        = "main"
+  enforce_admins = true
+}
+
+resource "github_branch_protection" "algorithm_releases" {
+  repository_id  = github_repository.algorithm.node_id
+  pattern        = "release-*.*"
+  enforce_admins = true
 }
 
 resource "github_actions_secret" "algorithm_cachix_token" {
