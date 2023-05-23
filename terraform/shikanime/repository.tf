@@ -21,6 +21,11 @@ resource "github_branch_protection" "releases" {
   enforce_admins = true
 }
 
+resource "github_repository_tag_protection" "default" {
+  repository = github_repository.default.name
+  pattern    = "v*.*.*"
+}
+
 resource "github_actions_secret" "cachix_token" {
   repository      = github_repository.default.name
   secret_name     = "CACHIX_AUTH_TOKEN"
@@ -76,6 +81,11 @@ resource "github_branch_protection" "algorithm_releases" {
   repository_id  = github_repository.algorithm.node_id
   pattern        = "release-*.*"
   enforce_admins = true
+}
+
+resource "github_repository_tag_protection" "algorithm" {
+  repository = github_repository.algorithm.name
+  pattern    = "v*.*.*"
 }
 
 resource "github_actions_secret" "algorithm_cachix_token" {
