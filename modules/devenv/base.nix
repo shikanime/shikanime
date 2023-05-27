@@ -2,7 +2,6 @@
 
 {
   pre-commit.hooks = {
-    actionlint.enable = true;
     markdownlint.enable = true;
     shfmt.enable = true;
     nixpkgs-fmt.enable = true;
@@ -12,7 +11,6 @@
   };
   packages = [
     pkgs.nixpkgs-fmt
-    pkgs.rubocop
     pkgs.qemu
   ];
 }

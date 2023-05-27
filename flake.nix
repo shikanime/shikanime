@@ -57,7 +57,8 @@
             modules = [
               ./modules/devenv/base.nix
               ./modules/devenv/latex.nix
-              ./modules/devenv/cloud.nix
+              ./modules/devenv/terraform.nix
+              ./modules/devenv/vcs.nix
             ];
           };
         }
