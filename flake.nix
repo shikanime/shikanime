@@ -67,14 +67,14 @@
         elvengard = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/hosts/elvengard.nix
+            ./modules/nixos/hosts/elvengard.nix
             home-manager.nixosModules.home-manager
           ];
         };
         nishir = nixpkgs.lib.nixosSystem {
           system = "aarch64-linux";
           modules = [
-            ./modules/hosts/nishir.nix
+            ./modules/nixos/hosts/nishir.nix
             nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
