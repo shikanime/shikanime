@@ -60,6 +60,6 @@
 
   # Configure user home
   home-manager.users.vscode.imports = [
-    ../home/hosts/nixos.nix
+    ../../home/hosts/nixos.nix
   ];
 }
