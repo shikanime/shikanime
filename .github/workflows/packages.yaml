@@ -21,6 +21,7 @@ jobs:
       - uses: cachix/install-nix-action@v21
         with:
           extra_nix_config: |
+            accept-flake-config = true
             system-features = nixos-test benchmark big-parallel kvm
             extra-platforms = aarch64-linux arm-linux
       - uses: cachix/cachix-action@v12
