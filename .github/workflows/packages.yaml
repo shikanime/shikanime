@@ -18,7 +18,7 @@ jobs:
       - uses: docker/setup-qemu-action@v2
         with:
           platforms: arm,arm64
-      - uses: cachix/install-nix-action@v19
+      - uses: cachix/install-nix-action@v21
         with:
           extra_nix_config: |
             system-features = nixos-test benchmark big-parallel kvm
