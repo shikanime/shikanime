@@ -9,7 +9,6 @@ jobs:
       matrix:
         package:
           - curriculum-vitae
-          - elvengard
           - nishir
     runs-on: ubuntu-22.04
     steps:
