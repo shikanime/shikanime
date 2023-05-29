@@ -7,7 +7,7 @@ jobs:
   build:
     strategy:
       matrix:
-        package:
+        name:
           - curriculum-vitae
           - nishir
     runs-on: ubuntu-22.04
@@ -29,14 +29,21 @@ jobs:
       - id: build
         name: Build
         run: |
-          echo "out_paths=$(nix build .#${{ matrix.package }} --print-out-paths)" >> "$GITHUB_ENV"
+          echo "out-paths=$(nix build .#${{ matrix.name }} --print-out-paths)" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.package }}
-          path: ${{ steps.build.outputs.out_paths }}
+          name: ${{ matrix.name }}
+          path: ${{ steps.build.outputs.out-paths }}
+  release:
+    permissions:
+      contents: write
+    needs: build
+    runs-on: ubuntu-22.04
+    steps:
       - name: Release
         run: |
-          gh release create ${{ github.ref_name }} ${{ steps.build.outputs.out_paths }} \
+          gh release create ${{ github.ref_name }} \
+            --repo ${{ github.repository }} \
             --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
