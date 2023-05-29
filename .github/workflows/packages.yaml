@@ -34,3 +34,9 @@ jobs:
         with:
           name: ${{ matrix.package }}
           path: ${{ env.ARTIFACT_PATH }}
+      - name: Release
+        run: |
+          gh release create ${{ github.ref_name }} ${{ env.ARTIFACT_PATH }} \
+            --generate-notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
