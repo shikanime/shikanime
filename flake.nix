@@ -45,7 +45,6 @@
       packages = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
-          elvengard = self.nixosConfigurations.elvengard.config.system.build.hypervImage;
           nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
         }
       );
@@ -64,21 +63,12 @@
         }
       );
 
-      nixosConfigurations = {
-        elvengard = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./modules/nixos/hosts/elvengard.nix
-            home-manager.nixosModules.home-manager
-          ];
-        };
-        nishir = nixpkgs.lib.nixosSystem {
-          system = "aarch64-linux";
-          modules = [
-            ./modules/nixos/hosts/nishir.nix
-            nixos-hardware.nixosModules.raspberry-pi-4
-          ];
-        };
+      nixosConfigurations.nishir = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [
+          ./modules/nixos/hosts/nishir.nix
+          nixos-hardware.nixosModules.raspberry-pi-4
+        ];
       };
 
       homeConfigurations = {
