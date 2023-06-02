@@ -65,6 +65,24 @@ variable "github" {
           -----END PGP PUBLIC KEY BLOCK-----
           EOF
       }
+      ishtar_sfeir = {
+        public_key_armored = <<-EOF
+          -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+          mDMEZHoW+hYJKwYBBAHaRw8BAQdApHjcS3pKHjp/kgW1TlvsGScVLM5zLCsUJM3e
+          eeuBY+W0L1dpbGxpYW0gUGhldHNpbm9yYXRoIDxwaGV0c2lub3JhdGgud0BzZmVp
+          ci5jb20+iJkEExYKAEEWIQQAdghOBIsREBZAmzIuxrxYR+k0YAUCZHoW+gIbAwUJ
+          AeEzgAULCQgHAgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRAuxrxYR+k0YGTWAP9C
+          +50i4bS6L2GyOEM2KQ+ODmlu2pO0s/G0nhHwAfdQfgD/WYpMGXeXaTnUxBe+35Fz
+          nEGXsmiE5PjV4/Bwq3jpmgC4OARkehb6EgorBgEEAZdVAQUBAQdAR4RS+tli1m0e
+          9Vvzhxe1w4fciQeTF8NRpUvSAo0t7n8DAQgHiH4EGBYKACYWIQQAdghOBIsREBZA
+          mzIuxrxYR+k0YAUCZHoW+gIbDAUJAeEzgAAKCRAuxrxYR+k0YG6MAP4yBFWTMUkR
+          GVYujqdu1JQR3b4fyAbKtCuvKINoRi2ZwwEAouff0utpEdxJvvBYvzftAzTgvIXi
+          ivgYK8maP9CrMgA=
+          =YZc2
+          -----END PGP PUBLIC KEY BLOCK-----
+          EOF
+      }
       altashar = {
         public_key_armored = <<-EOF
         -----BEGIN PGP PUBLIC KEY BLOCK-----
