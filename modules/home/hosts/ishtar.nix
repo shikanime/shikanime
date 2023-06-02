@@ -21,8 +21,8 @@
     ../profiles/java.nix
   ];
 
-  home.homeDirectory = "/home/devas";
-  home.username = "devas";
+  home.homeDirectory = "/home/shika";
+  home.username = "shika";
 
   nix.package = pkgs.nix;
 
