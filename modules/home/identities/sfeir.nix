@@ -16,7 +16,7 @@
       contents.user = {
         name = "William Phetsinorath";
         email = "phetsinorath.w@sfeir.com";
-        signingKey = "AA83063619D0AAEF";
+        signingKey = "2EC6BC5847E93460";
       };
     }
     {
@@ -24,7 +24,7 @@
       contents.user = {
         name = "William Phetsinorath";
         email = "phetsinorath.w@sfeir.com";
-        signingKey = "AA83063619D0AAEF";
+        signingKey = "2EC6BC5847E93460";
       };
     }
   ];
