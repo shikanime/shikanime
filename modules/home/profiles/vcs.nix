@@ -22,7 +22,7 @@
     userName = "William Phetsinorath";
     userEmail = "william.phetsinorath@shikanime.studio";
     signing = {
-      key = "025CF1599FA70256";
+      key = "B2E6C45782BA18D7";
       signByDefault = true;
     };
     aliases = {
