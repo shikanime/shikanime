@@ -42,6 +42,25 @@ variable "github" {
       }
     }
     gpg_keys = {
+      ishtar = {
+        public_key_armored = <<-EOF
+          -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+          mDMEZHoWABYJKwYBBAHaRw8BAQdA+sqU9FGTbIw1y+XlgJii8HT1ao4sC56FJATP
+          9rvDRT20XFdpbGxpYW0gUGhldHNpbm9yYXRoIChMZXQncyBtYWtlIGxpZmUgZnVu
+          IHlldCBhZ2FpbikgPHdpbGxpYW0ucGhldHNpbm9yYXRoQHNoaWthbmltZS5zdHVk
+          aW8+iJkEExYKAEEWIQRp3iPbXOnacpRb3UOy5sRXgroY1wUCZHoWAAIbAwUJAeEz
+          gAULCQgHAgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRCy5sRXgroY13sFAQCF0Bi9
+          8ufgug+ePtMZsX1Bd+/a0nBUba1M7Mxm8rNtuQD/WKtivC5frltUJujSqYJ0BcCF
+          ru/d/H/fjzwCvG3/mQC4OARkehYAEgorBgEEAZdVAQUBAQdArgjzjRrYT87NNUot
+          1Vw/j+j1bdprrJ4kFEqngs9rCFkDAQgHiH4EGBYKACYWIQRp3iPbXOnacpRb3UOy
+          5sRXgroY1wUCZHoWAAIbDAUJAeEzgAAKCRCy5sRXgroY1/ESAQDPOl7tkcq58ONy
+          iE/gOqq6z7f+HCLnHioHgCtXQtTmsAEA9cB0Seoe9gSzIwaiGk/dLiCvT1BsLwOH
+          63ZqrUE5zgk=
+          =NVVx
+          -----END PGP PUBLIC KEY BLOCK-----
+          EOF
+      }
       altashar = {
         public_key_armored = <<-EOF
         -----BEGIN PGP PUBLIC KEY BLOCK-----
