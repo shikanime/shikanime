@@ -81,7 +81,7 @@
             ./modules/home/hosts/altashar.nix
           ];
         };
-        "devas@ishtar" = home-manager.lib.homeManagerConfiguration {
+        "shika@ishtar" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
