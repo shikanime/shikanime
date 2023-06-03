@@ -5,10 +5,6 @@ terraform {
       source  = "integrations/github"
       version = "~> 5.18"
     }
-    time = {
-      source  = "hashicorp/time"
-      version = "~> 0.9"
-    }
   }
   backend "remote" {
     organization = "shikanime"
