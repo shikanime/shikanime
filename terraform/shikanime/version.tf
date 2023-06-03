@@ -9,6 +9,10 @@ terraform {
       source  = "hashicorp/tfe"
       version = "~> 0.44"
     }
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 4.67"
+    }
   }
   backend "remote" {
     organization = "shikanime"
