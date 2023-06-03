@@ -18,11 +18,11 @@ resource "tfe_workspace" "labs" {
   organization = tfe_organization.default.name
   auto_apply   = true
   vcs_repo {
-    identifier                 = "${var.name}/labs"
+    identifier                 = "${var.name}/${var.name}"
     github_app_installation_id = var.github.app_installation_id
   }
-  working_directory = "terraform/labs"
-  description       = "Shikanime Inovation Labs"
+  working_directory = "terraform/shikanime-labs"
+  description       = "Inovation Labs"
   lifecycle {
     prevent_destroy = true
   }
@@ -36,7 +36,7 @@ resource "tfe_workspace" "totalenergies" {
     identifier                 = "${var.name}/${var.name}"
     github_app_installation_id = var.github.app_installation_id
   }
-  working_directory = "terraform/totalenergies"
+  working_directory = "terraform/shikanime-totalenergies"
   description       = "TotalEnergies"
   lifecycle {
     prevent_destroy = true
