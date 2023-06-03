@@ -5,3 +5,7 @@ resource "tfe_organization" "default" {
     prevent_destroy = true
   }
 }
+
+data "tfe_organization" "default" {
+  name = tfe_organization.default.name
+}

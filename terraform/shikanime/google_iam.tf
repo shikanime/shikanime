@@ -1,20 +1,18 @@
 resource "google_iam_workload_identity_pool" "tfc_pool" {
-  for_each                  = local.google_projects
-  project                   = module.google_project[each.key].project_id
+  project                   = module.google_project.project_id
   workload_identity_pool_id = "tfc-pool"
   display_name              = "TFC Pool"
   description               = "Identity pool for Terraform Cloud Dynamic Credentials integration"
 }
 
 resource "google_iam_workload_identity_pool_provider" "tfc_pool_provider" {
-  for_each                           = local.google_projects
-  project                            = module.google_project[each.key].project_id
-  workload_identity_pool_id          = google_iam_workload_identity_pool.tfc_pool[each.key].workload_identity_pool_id
+  project                            = module.google_project.project_id
+  workload_identity_pool_id          = google_iam_workload_identity_pool.tfc_pool.workload_identity_pool_id
   workload_identity_pool_provider_id = "tfc-provider"
   display_name                       = "TFC Pool Provider"
   description                        = "OIDC identity pool provider for Terraform Cloud Dynamic Credentials integration"
   # Use condition to make sure only token generated for a specific TFC Org can be used across org workspaces
-  attribute_condition = "attribute.terraform_organization_id == \"${tfe_organization.default.id}\""
+  attribute_condition = "attribute.terraform_organization_id == \"${data.tfe_organization.default.external_id}\""
   attribute_mapping = {
     "google.subject"                        = "assertion.sub"
     "attribute.aud"                         = "assertion.aud"
