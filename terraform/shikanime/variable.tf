@@ -1,13 +1,7 @@
-variable "name" {
+variable "billing_account" {
   type        = string
-  description = "Project name"
-  default     = "shikanime"
-}
-
-variable "email" {
-  type        = string
-  description = "Support email"
-  default     = "engineering@shikanime.studio"
+  description = "Billing account ID"
+  default     = "018C2E-353598-F0F3A5"
 }
 
 variable "github" {

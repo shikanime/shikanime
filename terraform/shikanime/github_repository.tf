@@ -1,5 +1,5 @@
 resource "github_repository" "default" {
-  name                 = var.name
+  name                 = "shikanime"
   description          = "あらあらー\u3000( ⓛ ω ⓛ *)"
   has_downloads        = true
   has_issues           = true
@@ -34,7 +34,7 @@ resource "github_actions_secret" "cachix_token" {
 
 resource "github_repository_environment" "wakabox" {
   repository  = github_repository.default.name
-  environment = "${var.name}-wakabox"
+  environment = "shikanime-wakabox"
   deployment_branch_policy {
     protected_branches     = true
     custom_branch_policies = false
