@@ -13,6 +13,21 @@ resource "tfe_workspace" "default" {
   }
 }
 
+resource "tfe_workspace" "labs" {
+  name         = "labs"
+  organization = tfe_organization.default.name
+  auto_apply   = true
+  vcs_repo {
+    identifier                 = "${var.name}/labs"
+    github_app_installation_id = var.github.app_installation_id
+  }
+  working_directory = "terraform/labs"
+  description       = "Shikanime Inovation Labs"
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
 resource "tfe_workspace" "totalenergies" {
   name         = "totalenergies"
   organization = tfe_organization.default.name
