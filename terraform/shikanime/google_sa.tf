@@ -15,7 +15,8 @@ module "tfc_google_sa" {
     "${module.google_project.project_id}" = [
       "roles/browser",
       "roles/iam.securityAdmin",
-      "roles/iam.workloadIdentityPoolAdmin"
+      "roles/iam.workloadIdentityPoolAdmin",
+      "roles/serviceusage.serviceUsageAdmin"
     ]
   }
 }
