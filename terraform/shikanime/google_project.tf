@@ -7,7 +7,12 @@ module "google_project" {
     "iamcredentials.googleapis.com",
     "cloudresourcemanager.googleapis.com",
     "iam.googleapis.com",
-    "serviceusage.googleapis.com"
+    "serviceusage.googleapis.com",
+    "aiplatform.googleapis.com",
+    "storage-component.googleapis.com",
+    "notebooks.googleapis.com",
+    "dataflow.googleapis.com",
+    "artifactregistry.googleapis.com"
   ]
 }
 
