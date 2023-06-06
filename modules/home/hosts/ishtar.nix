@@ -26,10 +26,14 @@
     ../profiles/java.nix
   ];
 
-  home.homeDirectory = "/home/shika";
-  home.username = "shika";
+  home = {
+    homeDirectory = "/home/shika";
+    username = "shika";
+    packages = [ pkgs.wslu ];
+  };
 
   nix.package = pkgs.nix;
+
 
   services.gpg-agent = {
     enable = true;
