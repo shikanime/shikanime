@@ -12,7 +12,8 @@ module "google_project" {
     "storage-component.googleapis.com",
     "notebooks.googleapis.com",
     "dataflow.googleapis.com",
-    "artifactregistry.googleapis.com"
+    "artifactregistry.googleapis.com",
+    "drive.googleapis.com"
   ]
 }
 
