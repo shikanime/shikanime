@@ -25,17 +25,17 @@ variable "github" {
         public_key_armored = <<-EOF
         -----BEGIN PGP PUBLIC KEY BLOCK-----
 
-        mDMEY3Ii9BYJKwYBBAHaRw8BAQdAVm+ciEoZQodnh3IfMFn4/I/ErCv0SCwCk374
-        BcNATku0M1dpbGxpYW0gUGhldHNpbm9yYXRoIDxhbDEwODMwNTRAYWRtaW4uaHVi
-        dG90YWwubmV0PoiUBBMWCgA8FiEEvrJWm9gXiXcn9wc+9B+Cdfwu0ukFAmNyIvQC
-        GwMFCQHhM4AECwkIBwQVCgkIBRYCAwEAAh4FAheAAAoJEPQfgnX8LtLpaaoBAM4L
-        VNnA/omAYlG1OkbLvD7vt7GzJnrWvLOppcYuli/EAQDI16ypThtveOAkR67JfoOv
-        hPmhMCJ9s5+NTUl2Uj3mDrg4BGNyIvQSCisGAQQBl1UBBQEBB0DAIIkv30ji54mO
-        Wf3V2wK4vxMjLwlD5PjQ+0na2LqSGQMBCAeIfgQYFgoAJhYhBL6yVpvYF4l3J/cH
-        PvQfgnX8LtLpBQJjciL0AhsMBQkB4TOAAAoJEPQfgnX8LtLpPtoA/3yOZysAWb1S
-        umKn/EB154P/KwaNgpQ3y7qQipyDtlvyAQDAzkSeUIVJARXBMf5M53yC1Ru1qvk9
-        Q0LZRV4zbtmgDA==
-        =HDY8
+        mDMEZIGqyhYJKwYBBAHaRw8BAQdARNEqfN4qo/YY4pX7NbkluOJRfxG0JVIWM5fF
+        JdGfIr+0RldpbGxpYW0gUGhldHNpbm9yYXRoIDx3aWxsaWFtLnBoZXRzaW5vcmF0
+        aEBleHRlcm5hbC50b3RhbGVuZXJnaWVzLmNvbT6ImQQTFgoAQRYhBP355Y5rd1Nt
+        IMLgfxtjjOsqktRYBQJkgarKAhsDBQkB4TOABQsJCAcCAiICBhUKCQgLAgQWAgMB
+        Ah4HAheAAAoJEBtjjOsqktRY7pwA/jwR6Md2gWr/XlHW0GK0iMArB5J2RasfP3ev
+        hbz/jur0AQD7z5qR0C8TqdkgyaA8q1my6xa5MiIg5b9NvJa0Ht/8C7g4BGSBqsoS
+        CisGAQQBl1UBBQEBB0CM+3HSwbVEVVGeKUT3Saajx+md5/DWl3WuH+cJrcZ3MAMB
+        CAeIfgQYFgoAJhYhBP355Y5rd1NtIMLgfxtjjOsqktRYBQJkgarKAhsMBQkB4TOA
+        AAoJEBtjjOsqktRYDUYA/j7M/Fii9FOOBGRXXVIGs/6mOjvoBKeCBwVPaATeReqo
+        AQDQxHhLwqhRbmv50p5B5AdPj8rcZ88wuREXQOf80hpcBQ==
+        =Ts2r
         -----END PGP PUBLIC KEY BLOCK-----
         EOF
       }
