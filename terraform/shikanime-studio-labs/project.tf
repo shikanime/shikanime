@@ -13,7 +13,8 @@ module "google_project" {
     "notebooks.googleapis.com",
     "dataflow.googleapis.com",
     "artifactregistry.googleapis.com",
-    "drive.googleapis.com"
+    "drive.googleapis.com",
+    "run.googleapis.com"
   ]
 }
 
