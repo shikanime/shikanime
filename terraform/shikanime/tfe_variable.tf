@@ -44,7 +44,7 @@ resource "tfe_variable" "tfc_google_provider_auth" {
 resource "tfe_variable" "tfc_google_project_number" {
   for_each        = tfe_variable_set.google_provider
   key             = "TFC_GCP_PROJECT_NUMBER"
-  value           = data.tfe_outputs.default[each.key].values.project_number
+  value           = lookup(data.tfe_outputs.default[each.key].values, "project_number", null)
   category        = "env"
   description     = "Project number"
   variable_set_id = tfe_variable_set.google_provider[each.key].id
@@ -53,7 +53,7 @@ resource "tfe_variable" "tfc_google_project_number" {
 resource "tfe_variable" "tfc_google_workload_pool_id" {
   for_each        = tfe_variable_set.google_provider
   key             = "TFC_GCP_WORKLOAD_POOL_ID"
-  value           = data.tfe_outputs.default[each.key].values.workload_identity_pool_id
+  value           = lookup(data.tfe_outputs.default[each.key].values, "workload_identity_pool_id", null)
   category        = "env"
   description     = "Workload pool id"
   variable_set_id = tfe_variable_set.google_provider[each.key].id
@@ -62,7 +62,7 @@ resource "tfe_variable" "tfc_google_workload_pool_id" {
 resource "tfe_variable" "tfc_workload_provider_id" {
   for_each        = tfe_variable_set.google_provider
   key             = "TFC_GCP_WORKLOAD_PROVIDER_ID"
-  value           = data.tfe_outputs.default[each.key].values.workload_identity_pool_provider_id
+  value           = lookup(data.tfe_outputs.default[each.key].values, "workload_identity_pool_provider_id", null)
   category        = "env"
   description     = "Workload provider id"
   variable_set_id = tfe_variable_set.google_provider[each.key].id
@@ -71,7 +71,7 @@ resource "tfe_variable" "tfc_workload_provider_id" {
 resource "tfe_variable" "tfc_run_service_account_email" {
   for_each        = tfe_variable_set.google_provider
   key             = "TFC_GCP_RUN_SERVICE_ACCOUNT_EMAIL"
-  value           = data.tfe_outputs.default[each.key].values.run_service_account_email
+  value           = lookup(data.tfe_outputs.default[each.key].values, "run_service_account_email", null)
   category        = "env"
   description     = "Run service account email"
   variable_set_id = tfe_variable_set.google_provider[each.key].id
