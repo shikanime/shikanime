@@ -1,5 +1,5 @@
-output "project_id" {
-  value       = module.google_project.project_id
+output "project_number" {
+  value       = module.google_project.number
   description = "Project id"
 }
 

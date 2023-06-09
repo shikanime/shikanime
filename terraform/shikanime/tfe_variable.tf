@@ -8,7 +8,7 @@ resource "tfe_variable_set" "tfc" {
 resource "tfe_variable" "tfc_organization_id" {
   for_each        = tfe_workspace.default
   key             = "tfc_organization_id"
-  value           = data.tfe_organization.default.id
+  value           = data.tfe_organization.default.external_id
   category        = "terraform"
   description     = "Organization id"
   variable_set_id = tfe_variable_set.tfc[each.key].id
@@ -44,7 +44,7 @@ resource "tfe_variable" "tfc_google_provider_auth" {
 resource "tfe_variable" "tfc_google_project_number" {
   for_each        = tfe_variable_set.google_provider
   key             = "TFC_GCP_PROJECT_NUMBER"
-  value           = data.tfe_outputs.default[each.key].values.project_id
+  value           = data.tfe_outputs.default[each.key].values.project_number
   category        = "env"
   description     = "Project number"
   variable_set_id = tfe_variable_set.google_provider[each.key].id
