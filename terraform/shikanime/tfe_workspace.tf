@@ -6,6 +6,12 @@ resource "tfe_workspace" "default" {
       description       = "Shikanime"
       working_directory = "terraform/shikanime"
     }
+    github = {
+      name              = "shikanime-github"
+      display_name      = "Shikanime GitHub"
+      description       = "Shikanime GitHub"
+      working_directory = "terraform/shikanime-github"
+    }
     studio = {
       name              = "shikanime-studio"
       display_name      = "Shikanime Studio"
@@ -23,8 +29,8 @@ resource "tfe_workspace" "default" {
   organization = tfe_organization.default.name
   auto_apply   = true
   vcs_repo {
-    identifier                 = "shikanime/shikanime"
-    github_app_installation_id = var.github.app_installation_id
+    identifier                 = var.github_repository
+    github_app_installation_id = var.github_app_installation_id
   }
   working_directory = each.value.working_directory
   description       = each.value.description
