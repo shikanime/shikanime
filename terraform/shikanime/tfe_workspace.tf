@@ -33,11 +33,18 @@ resource "tfe_workspace" "default" {
   }
 }
 
-resource "tfe_workspace_variable_set" "google_provider" {
+resource "tfe_workspace_variable_set" "tfc" {
   for_each = {
-    shikanime = {}
-    studio    = {}
+    studio = {}
   }
   workspace_id    = tfe_workspace.default[each.key].id
-  variable_set_id = tfe_variable_set.google_provider.id
+  variable_set_id = tfe_variable_set.tfc[each.key].id
+}
+
+resource "tfe_workspace_variable_set" "google_provider" {
+  for_each = {
+    studio = {}
+  }
+  workspace_id    = tfe_workspace.default[each.key].id
+  variable_set_id = tfe_variable_set.google_provider[each.key].id
 }

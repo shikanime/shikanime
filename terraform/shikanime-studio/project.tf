@@ -2,7 +2,7 @@ module "google_project" {
   source          = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/project"
   name            = "shikanime-studio"
   project_create  = true
-  billing_account = var.billing_account
+  billing_account = "018C2E-353598-F0F3A5"
   services = [
     "iamcredentials.googleapis.com",
     "cloudresourcemanager.googleapis.com",

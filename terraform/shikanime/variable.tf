@@ -1,9 +1,3 @@
-variable "billing_account" {
-  type        = string
-  description = "Billing account ID"
-  default     = "018C2E-353598-F0F3A5"
-}
-
 variable "github" {
   type = object({
     ssh_keys = map(object({
