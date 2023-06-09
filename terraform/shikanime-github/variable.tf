@@ -34,7 +34,7 @@ variable "gpg_keys" {
   }))
   description = "GPG keys to add to the GitHub user"
   default = {
-    ishtar = {
+    default = {
       public_key_armored = <<-EOF
           -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -53,7 +53,7 @@ variable "gpg_keys" {
           -----END PGP PUBLIC KEY BLOCK-----
           EOF
     }
-    ishtar_sfeir = {
+    sfeir = {
       public_key_armored = <<-EOF
           -----BEGIN PGP PUBLIC KEY BLOCK-----
 
