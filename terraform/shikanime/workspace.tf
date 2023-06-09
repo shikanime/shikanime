@@ -29,8 +29,8 @@ resource "tfe_workspace" "default" {
   organization = tfe_organization.default.name
   auto_apply   = true
   vcs_repo {
-    identifier                 = var.github_repository
-    github_app_installation_id = var.github_app_installation_id
+    identifier                 = "shikanime/shikanime"
+    github_app_installation_id = "ghain-jGUbBPSwRf4ceNGo"
   }
   working_directory = each.value.working_directory
   description       = each.value.description
