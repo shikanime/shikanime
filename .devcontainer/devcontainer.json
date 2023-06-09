@@ -21,24 +21,26 @@
     }
   ],
   "customizations": {
-    "extensions": [
-      "jnoortheen.nix-ide",
-      "mkhl.direnv",
-      "yzhang.markdown-all-in-one",
-      "james-yu.latex-workshop",
-      "sonarsource.sonarlint-vscode",
-      "hashicorp.terraform",
-      "github.vscode-pull-request-github",
-      "github.vscode-github-actions",
-      "streetsidesoftware.code-spell-checker",
-      "foxundermoon.shell-format",
-      "snyk-security.snyk-vulnerability-scanner"
-    ],
-    "settings": {
-      "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
-      "sonarlint.connectedMode.project": {
-        "connectionId": "shikanime",
-        "projectKey": "shikanime_shikanime"
+    "vscode": {
+      "extensions": [
+        "jnoortheen.nix-ide",
+        "mkhl.direnv",
+        "yzhang.markdown-all-in-one",
+        "james-yu.latex-workshop",
+        "sonarsource.sonarlint-vscode",
+        "hashicorp.terraform",
+        "github.vscode-pull-request-github",
+        "github.vscode-github-actions",
+        "streetsidesoftware.code-spell-checker",
+        "foxundermoon.shell-format",
+        "snyk-security.snyk-vulnerability-scanner"
+      ],
+      "settings": {
+        "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+        "sonarlint.connectedMode.project": {
+          "connectionId": "shikanime",
+          "projectKey": "shikanime_shikanime"
+        }
       }
     }
   }
