@@ -7,10 +7,10 @@ resource "tfe_workspace" "default" {
       working_directory = "terraform/shikanime"
     }
     github = {
-      name              = "shikanime-github"
+      name              = "github"
       display_name      = "Shikanime GitHub"
       description       = "Shikanime GitHub"
-      working_directory = "terraform/shikanime-github"
+      working_directory = "terraform/github"
     }
     studio = {
       name              = "shikanime-studio"
@@ -25,10 +25,10 @@ resource "tfe_workspace" "default" {
       working_directory = "terraform/shikanime-studio-labs"
     }
     totalenergies = {
-      name              = "shikanime-totalenergies"
+      name              = "totalenergies"
       display_name      = "Shikanime TotalEnergies"
       description       = "Shikanime TotalEnergies"
-      working_directory = "terraform/shikanime-totalenergies"
+      working_directory = "terraform/totalenergies"
     }
   }
   name         = each.value.name
