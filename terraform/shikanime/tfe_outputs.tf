@@ -6,6 +6,9 @@ data "tfe_outputs" "default" {
     studio = {
       workspace_name = "shikanime-studio"
     }
+    studio-labs = {
+      workspace_name = "shikanime-studio-labs"
+    }
     totalenergies = {
       workspace_name = "shikanime-totalenergies"
     }
