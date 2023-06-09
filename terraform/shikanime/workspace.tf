@@ -18,6 +18,12 @@ resource "tfe_workspace" "default" {
       description       = "Shikanime Studio"
       working_directory = "terraform/shikanime-studio"
     }
+    studio-labs = {
+      name              = "shikanime-studio-labs"
+      display_name      = "Shikanime Studio Labs"
+      description       = "Shikanime Studio Labs"
+      working_directory = "terraform/shikanime-studio-labs"
+    }
     totalenergies = {
       name              = "shikanime-totalenergies"
       display_name      = "Shikanime TotalEnergies"
@@ -41,7 +47,8 @@ resource "tfe_workspace" "default" {
 
 resource "tfe_workspace_variable_set" "tfc" {
   for_each = {
-    studio = {}
+    studio      = {}
+    studio-labs = {}
   }
   workspace_id    = tfe_workspace.default[each.key].id
   variable_set_id = tfe_variable_set.tfc[each.key].id
@@ -49,7 +56,8 @@ resource "tfe_workspace_variable_set" "tfc" {
 
 resource "tfe_workspace_variable_set" "google_provider" {
   for_each = {
-    studio = {}
+    studio      = {}
+    studio-labs = {}
   }
   workspace_id    = tfe_workspace.default[each.key].id
   variable_set_id = tfe_variable_set.google_provider[each.key].id
