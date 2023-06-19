@@ -29,7 +29,10 @@ with lib;
     ))
   ];
 
-  programs.gh.enable = true;
+  programs.gh = {
+    enable = true;
+    settings.git_protocol = "ssh";
+  };
 
   programs.zsh.oh-my-zsh.plugins = [
     "kubectl"
