@@ -14,7 +14,9 @@ module "google_project" {
     "dataflow.googleapis.com",
     "artifactregistry.googleapis.com",
     "drive.googleapis.com",
-    "run.googleapis.com"
+    "run.googleapis.com",
+    "firebasehosting.googleapis.com",
+    "runapps.googleapis.com"
   ]
 }
 
