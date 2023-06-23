@@ -1,34 +1,34 @@
 resource "tfe_workspace" "default" {
   for_each = {
     shikanime = {
-      name              = "shikanime"
-      display_name      = "Shikanime"
-      description       = "Shikanime"
-      working_directory = "terraform/shikanime"
+      name              = "tfe-shikanime"
+      display_name      = "Terrafom Cloud Shikanime"
+      description       = "Terrafom Cloud Shikanime"
+      working_directory = "terraform/tfe-shikanime"
     }
     github = {
-      name              = "github"
-      display_name      = "Shikanime GitHub"
-      description       = "Shikanime GitHub"
-      working_directory = "terraform/github"
+      name              = "github-shikanime"
+      display_name      = "GitHub Shikanime"
+      description       = "GitHub Shikanime"
+      working_directory = "terraform/github-shikanime"
     }
     studio = {
-      name              = "shikanime-studio"
-      display_name      = "Shikanime Studio"
-      description       = "Shikanime Studio"
-      working_directory = "terraform/shikanime-studio"
+      name              = "google-shikanime-studio"
+      display_name      = "Google Shikanime Studio"
+      description       = "Google Shikanime Studio"
+      working_directory = "terraform/google-shikanime-studio"
     }
     studio-labs = {
-      name              = "shikanime-studio-labs"
-      display_name      = "Shikanime Studio Labs"
-      description       = "Shikanime Studio Labs"
-      working_directory = "terraform/shikanime-studio-labs"
+      name              = "google-shikanime-studio-labs"
+      display_name      = "Google Shikanime Studio Labs"
+      description       = "Google Shikanime Studio Labs"
+      working_directory = "terraform/google-shikanime-studio-labs"
     }
     totalenergies = {
-      name              = "totalenergies"
-      display_name      = "Shikanime TotalEnergies"
-      description       = "Shikanime TotalEnergies"
-      working_directory = "terraform/totalenergies"
+      name              = "github-totalenergies"
+      display_name      = "GitHub TotalEnergies"
+      description       = "GitHub TotalEnergies"
+      working_directory = "terraform/github-totalenergies"
     }
   }
   name         = each.value.name
