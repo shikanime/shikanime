@@ -96,3 +96,13 @@ resource "tfe_workspace_variable_set" "github_provider" {
   workspace_id    = tfe_workspace.default[each.key].id
   variable_set_id = each.value.variable_set_id
 }
+
+resource "tfe_workspace_variable_set" "wakatime" {
+  for_each = {
+    github-shikanime = {
+      variable_set_id = tfe_variable_set.wakatime["shikanime"].id
+    }
+  }
+  workspace_id    = tfe_workspace.default[each.key].id
+  variable_set_id = each.value.variable_set_id
+}

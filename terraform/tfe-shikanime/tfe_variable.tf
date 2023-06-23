@@ -138,3 +138,15 @@ resource "tfe_variable_set" "cloudflare_provider" {
     prevent_destroy = true
   }
 }
+
+resource "tfe_variable_set" "wakatime" {
+  for_each = {
+    shikanime = {}
+  }
+  name         = "Wakatime (${each.key})"
+  description  = "Wakatime variables for ${each.key}"
+  organization = tfe_organization.default.name
+  lifecycle {
+    prevent_destroy = true
+  }
+}
