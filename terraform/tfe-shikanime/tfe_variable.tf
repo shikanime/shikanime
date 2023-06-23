@@ -1,6 +1,7 @@
 resource "tfe_variable_set" "tfc" {
   for_each = {
-    tfe-shikanime = {}
+    google-shikanime-studio      = {}
+    google-shikanime-studio-labs = {}
   }
   name         = "TFC (${each.key})"
   description  = "TFC variables for ${each.key}"

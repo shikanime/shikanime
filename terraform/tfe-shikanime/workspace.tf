@@ -54,7 +54,10 @@ resource "tfe_workspace" "default" {
 resource "tfe_workspace_variable_set" "tfc" {
   for_each = {
     google-shikanime-studio = {
-      variable_set_id = tfe_variable_set.tfc["tfe-shikanime"].id
+      variable_set_id = tfe_variable_set.tfc["google-shikanime-studio"].id
+    }
+    google-shikanime-studio-labs = {
+      variable_set_id = tfe_variable_set.tfc["google-shikanime-studio-labs"].id
     }
   }
   workspace_id    = tfe_workspace.default[each.key].id
