@@ -68,3 +68,11 @@ resource "tfe_workspace_variable_set" "google_provider" {
   workspace_id    = tfe_workspace.default[each.key].id
   variable_set_id = tfe_variable_set.google_provider[each.key].id
 }
+
+resource "tfe_workspace_variable_set" "cloudflare_provider" {
+  for_each = {
+    cloudflare-shikanime-studio = {}
+  }
+  workspace_id    = tfe_workspace.default[each.key].id
+  variable_set_id = tfe_variable_set.cloudflare_provider[each.key].id
+}
