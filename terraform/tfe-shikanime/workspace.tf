@@ -36,6 +36,12 @@ resource "tfe_workspace" "default" {
       description       = "Cloudflare Shikanime Studio"
       working_directory = "terraform/cloudflare-shikanime-studio"
     }
+    vercel-shikanime-studio = {
+      name              = "vercel-shikanime-studio"
+      display_name      = "Vercel Shikanime Studio"
+      description       = "Vercel Shikanime Studio"
+      working_directory = "terraform/vercel-shikanime-studio"
+    }
   }
   name         = each.value.name
   organization = tfe_organization.default.name
