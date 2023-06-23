@@ -54,3 +54,12 @@ module "tfc_service_account" {
     ]
   }
 }
+
+resource "null_resource" "tfc_service_account" {
+  triggers = {
+    id = module.tfc_service_account.id
+  }
+  lifecycle {
+    prevent_destroy = true
+  }
+}

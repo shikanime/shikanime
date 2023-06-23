@@ -20,7 +20,7 @@ module "google_project" {
 
 resource "null_resource" "google_project" {
   triggers = {
-    project_id = module.google_project.project_id
+    id = module.google_project.id
   }
   lifecycle {
     prevent_destroy = true
