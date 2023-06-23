@@ -53,26 +53,46 @@ resource "tfe_workspace" "default" {
 
 resource "tfe_workspace_variable_set" "tfc" {
   for_each = {
-    google-shikanime-studio      = {}
-    google-shikanime-studio-labs = {}
+    google-shikanime-studio = {
+      variable_set_id = tfe_variable_set.tfc["tfe-shikanime"].id
+    }
   }
   workspace_id    = tfe_workspace.default[each.key].id
-  variable_set_id = tfe_variable_set.tfc[each.key].id
+  variable_set_id = each.value.variable_set_id
 }
 
 resource "tfe_workspace_variable_set" "google_provider" {
   for_each = {
-    google-shikanime-studio      = {}
-    google-shikanime-studio-labs = {}
+    google-shikanime-studio = {
+      variable_set_id = tfe_variable_set.google_provider["shikanime-studio"].id
+    }
+    google-shikanime-studio-labs = {
+      variable_set_id = tfe_variable_set.google_provider["shikanime-studio-labs"].id
+    }
   }
   workspace_id    = tfe_workspace.default[each.key].id
-  variable_set_id = tfe_variable_set.google_provider[each.key].id
+  variable_set_id = each.value.variable_set_id
 }
 
 resource "tfe_workspace_variable_set" "cloudflare_provider" {
   for_each = {
-    cloudflare-shikanime-studio = {}
+    cloudflare-shikanime-studio = {
+      variable_set_id = tfe_variable_set.cloudflare_provider["shikanime-studio"].id
+    }
   }
   workspace_id    = tfe_workspace.default[each.key].id
-  variable_set_id = tfe_variable_set.cloudflare_provider[each.key].id
+  variable_set_id = each.value.variable_set_id
+}
+
+resource "tfe_workspace_variable_set" "github_provider" {
+  for_each = {
+    github-shikanime = {
+      variable_set_id = tfe_variable_set.github_provider["shikanime"].id
+    }
+    github-totalenergies = {
+      variable_set_id = tfe_variable_set.github_provider["totalenergies"].id
+    }
+  }
+  workspace_id    = tfe_workspace.default[each.key].id
+  variable_set_id = each.value.variable_set_id
 }
