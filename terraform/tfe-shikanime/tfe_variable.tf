@@ -25,8 +25,8 @@ resource "tfe_variable" "tfc_workspace_id" {
 
 resource "tfe_variable_set" "google_provider" {
   for_each = {
-    studio      = {}
-    studio-labs = {}
+    google-shikanime-studio      = {}
+    google-shikanime-studio-labs = {}
   }
   name         = "Google Provider (${each.key})"
   description  = "Google Provider variables for ${each.key}"
