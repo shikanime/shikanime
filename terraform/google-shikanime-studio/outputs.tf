@@ -14,6 +14,6 @@ output "workload_identity_pool_provider_id" {
 }
 
 output "run_service_account_email" {
-  value       = module.tfc_google_sa.email
+  value       = module.tfc_service_account.email
   description = "Run service account email"
 }
