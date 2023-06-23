@@ -1,12 +1,16 @@
 resource "tfe_variable_set" "tfc" {
-  for_each     = tfe_workspace.default
+  for_each = {
+    tfe-shikanime-studio = {}
+  }
   name         = "TFC (${each.value.name})"
   description  = "TFC variables for ${each.value.name}"
   organization = tfe_organization.default.name
 }
 
 resource "tfe_variable" "tfc_organization_id" {
-  for_each        = tfe_workspace.default
+  for_each = {
+    tfe-shikanime-studio = {}
+  }
   key             = "tfc_organization_id"
   value           = data.tfe_organization.default.external_id
   category        = "terraform"
@@ -21,6 +25,15 @@ resource "tfe_variable" "tfc_workspace_id" {
   category        = "terraform"
   description     = "Workspace id"
   variable_set_id = tfe_variable_set.tfc[each.key].id
+}
+
+resource "tfe_variable_set" "cloudflare_provider" {
+  for_each = {
+    cloudflare-shikanime-studio = {}
+  }
+  name         = "Cloudflare Provider (${each.value.name})"
+  description  = "Cloudflare Provider variables for ${each.value.name}"
+  organization = tfe_organization.default.name
 }
 
 resource "tfe_variable_set" "google_provider" {
