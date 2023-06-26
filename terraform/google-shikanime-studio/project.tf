@@ -16,7 +16,8 @@ module "google_project" {
     "drive.googleapis.com",
     "run.googleapis.com",
     "firebasehosting.googleapis.com",
-    "runapps.googleapis.com"
+    "runapps.googleapis.com",
+    "firestore.googleapis.com"
   ]
 }
 
