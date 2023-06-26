@@ -23,7 +23,7 @@ resource "tfe_variable" "tfc_organization_id" {
 resource "tfe_variable" "tfc_workspace_id" {
   for_each        = tfe_variable_set.tfc
   key             = "tfc_workspace_id"
-  value           = each.value.id
+  value           = tfe_workspace.default[each.key].id
   category        = "terraform"
   description     = "Workspace id"
   variable_set_id = tfe_variable_set.tfc[each.key].id
