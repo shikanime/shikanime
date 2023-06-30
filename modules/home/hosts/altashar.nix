@@ -13,19 +13,10 @@ with lib;
     ../profiles/base.nix
     ../profiles/workstation.nix
     ../profiles/vcs.nix
-    ../profiles/cc.nix
-    ../profiles/ruby.nix
-    ../profiles/beam.nix
-    ../profiles/go.nix
-    ../profiles/opam.nix
-    ../profiles/rust.nix
-    ../profiles/python.nix
-    ../profiles/web.nix
-    ../profiles/latex.nix
-    ../profiles/sql.nix
     ../profiles/cloud.nix
-    ../profiles/java.nix
-    ../profiles/experimental/github-copilot-cli.nix
+    ../profiles/javascript.nix
+    ../profiles/python.nix
+    ../profiles/rust.nix
   ];
 
   home.homeDirectory = "/Users/williamphetsinorath";
