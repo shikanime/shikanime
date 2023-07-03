@@ -1,16 +1,15 @@
 resource "vercel_project" "default" {
-  name                       = "shikanime-studio"
+  name                       = "links-shikanime-studio"
   framework                  = "nextjs"
   serverless_function_region = "fra1"
-  root_directory             = "pkgs/shikanime-studio"
+  root_directory             = "pkgs/links-shikanime-studio"
   git_repository = {
     type = "github"
     repo = "shikanime/shikanime"
   }
 }
 
-resource "vercel_project_domain" "canary" {
+resource "vercel_project_domain" "links" {
   project_id = vercel_project.default.id
-  domain     = "canary.shikanime.studio"
-  git_branch = "feat/add-page"
+  domain     = "links.shikanime.studio"
 }
