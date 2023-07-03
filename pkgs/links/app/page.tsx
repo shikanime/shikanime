@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="hero min-h-screen">
-      <div className="hero-content flex-col space-y-4 my-4">
+      <div className="hero-content flex-col space-y-2 my-4">
         <label className="swap">
           <input type="checkbox" />
           <div className="swap-on">
