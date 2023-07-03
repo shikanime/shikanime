@@ -37,25 +37,29 @@ export default function Home() {
           </p>
         </div>
 
-        <a href="https://twitter.com/shikalegend" className="no-underline">
-          <div className="w-full btn btn-primary btn-circle">🦜 Twitter</div>
+        <a
+          href="https://twitter.com/shikalegend"
+          className="w-full btn btn-primary btn-circle"
+        >
+          🦜 Twitter
         </a>
-        <a href="https://github.com/shikanime" className="no-underline">
-          <div className="w-full btn btn-primary btn-circle">💾 Github</div>
+        <a
+          href="https://github.com/shikanime"
+          className="w-full btn btn-primary btn-circle"
+        >
+          💾 Github
         </a>
         <a
           href="https://linkedin.com/williamphetsinorath"
-          className="no-underline"
+          className="w-full btn btn-primary btn-circle"
         >
-          <div className="w-full btn btn-primary btn-circle">🗺️ LinkedIn</div>
+          🗺️ LinkedIn
         </a>
         <a
           href="https://myanimelist.net/profile/Shikalegend"
-          className="no-underline"
+          className="w-full btn btn-primary btn-circle"
         >
-          <div className="w-full btn btn-primary btn-circle">
-            🎏 MyAnimeList
-          </div>
+          🎏 MyAnimeList
         </a>
       </div>
     </div>
