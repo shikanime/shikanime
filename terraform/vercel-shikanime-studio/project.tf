@@ -1,8 +1,8 @@
 resource "vercel_project" "links" {
-  name                       = "links-shikanime-studio"
+  name                       = "links"
   framework                  = "nextjs"
   serverless_function_region = "fra1"
-  root_directory             = "pkgs/links-shikanime-studio"
+  root_directory             = "pkgs/links"
   git_repository = {
     type = "github"
     repo = "shikanime/shikanime"
