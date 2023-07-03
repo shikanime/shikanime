@@ -1,11 +1,11 @@
 resource "vercel_project" "default" {
   for_each = {
     links = {
-      name = "links"
+      name           = "links"
       root_directory = "pkgs/links"
     }
     infinity_horizons = {
-      name = "infinity-horizons"
+      name           = "infinity-horizons"
       root_directory = "pkgs/infinity-horizons"
     }
   }
