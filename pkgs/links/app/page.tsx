@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="hero min-h-screen bg-gradient-to-br from-purple-600 to-yellow-200">
+    <div className="hero min-h-screen bg-black">
       <div className="hero-content flex-col space-y-4">
         <div className="mt-16">
           <label className="swap">
