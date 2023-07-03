@@ -37,32 +37,26 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="w-full btn btn-primary btn-circle">
-          <a href="https://twitter.com/shikalegend" className="no-underline">
-            🦜 Twitter
-          </a>
-        </div>
-        <div className="w-full btn btn-primary btn-circle">
-          <a href="https://github.com/shikanime" className="no-underline">
-            💾 Github
-          </a>
-        </div>
-        <div className="w-full btn btn-primary btn-circle">
-          <a
-            href="https://linkedin.com/williamphetsinorath"
-            className="no-underline"
-          >
-            🗺️ LinkedIn
-          </a>
-        </div>
-        <div className="w-full btn btn-primary btn-circle">
-          <a
-            href="https://myanimelist.net/profile/Shikalegend"
-            className="no-underline"
-          >
+        <a href="https://twitter.com/shikalegend" className="no-underline">
+          <div className="w-full btn btn-primary btn-circle">🦜 Twitter</div>
+        </a>
+        <a href="https://github.com/shikanime" className="no-underline">
+          <div className="w-full btn btn-primary btn-circle">💾 Github</div>
+        </a>
+        <a
+          href="https://linkedin.com/williamphetsinorath"
+          className="no-underline"
+        >
+          <div className="w-full btn btn-primary btn-circle">🗺️ LinkedIn</div>
+        </a>
+        <a
+          href="https://myanimelist.net/profile/Shikalegend"
+          className="no-underline"
+        >
+          <div className="w-full btn btn-primary btn-circle">
             🎏 MyAnimeList
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
   );
