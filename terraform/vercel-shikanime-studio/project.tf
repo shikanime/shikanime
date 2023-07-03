@@ -1,4 +1,4 @@
-resource "vercel_project" "default" {
+resource "vercel_project" "links" {
   name                       = "links-shikanime-studio"
   framework                  = "nextjs"
   serverless_function_region = "fra1"
@@ -10,6 +10,6 @@ resource "vercel_project" "default" {
 }
 
 resource "vercel_project_domain" "links" {
-  project_id = vercel_project.default.id
+  project_id = vercel_project.links.id
   domain     = "links.shikanime.studio"
 }
