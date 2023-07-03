@@ -9,8 +9,8 @@ export default function Home() {
             <input type="checkbox" />
             <div className="swap-on">
               <Image
-                src="/avatar-insane.webp"
-                alt="avatar-insane#user"
+                src="/avatar-happy.webp"
+                alt="avatar-happy#user"
                 width={150}
                 height={150}
                 className="rounded-full border-2 border-white"
