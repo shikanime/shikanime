@@ -1,9 +1,11 @@
 module "google_project" {
-  source          = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/project"
-  name            = "shikanime-studio-labs"
-  project_create  = true
-  billing_account = "018C2E-353598-F0F3A5"
-  services = [
+  source  = "terraform-google-modules/project-factory/google"
+  version = "~> 14.2"
+
+  name            = var.name
+  org_id          = var.org_id
+  billing_account = var.billing_account
+  activate_apis = [
     "iamcredentials.googleapis.com",
     "cloudresourcemanager.googleapis.com",
     "iam.googleapis.com",
@@ -14,15 +16,11 @@ module "google_project" {
     "dataflow.googleapis.com",
     "artifactregistry.googleapis.com",
     "drive.googleapis.com",
-    "run.googleapis.com"
+    "run.googleapis.com",
+    "firebasehosting.googleapis.com",
+    "runapps.googleapis.com",
+    "firestore.googleapis.com",
+    "cloudbuild.googleapis.com",
+    "container.googleapis.com",
   ]
-}
-
-resource "null_resource" "google_project" {
-  triggers = {
-    id = module.google_project.id
-  }
-  lifecycle {
-    prevent_destroy = true
-  }
 }
