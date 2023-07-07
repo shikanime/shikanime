@@ -18,17 +18,17 @@ resource "tfe_workspace" "default" {
       description       = "GitHub TotalEnergies"
       working_directory = "terraform/github-totalenergies"
     }
-    google-shikanime-studio = {
-      name              = "google-shikanime-studio"
+    google-project-shikanime-studio = {
+      name              = "google-project-shikanime-studio"
       display_name      = "Google Shikanime Studio"
       description       = "Google Shikanime Studio"
-      working_directory = "terraform/google-shikanime-studio"
+      working_directory = "terraform/google-project"
     }
-    google-shikanime-studio-labs = {
-      name              = "google-shikanime-studio-labs"
+    google-project-shikanime-studio-labs = {
+      name              = "google-project-shikanime-studio-labs"
       display_name      = "Google Shikanime Studio Labs"
       description       = "Google Shikanime Studio Labs"
-      working_directory = "terraform/google-shikanime-studio-labs"
+      working_directory = "terraform/google-project"
     }
     cloudflare-shikanime-studio = {
       name              = "cloudflare-shikanime-studio"
@@ -57,13 +57,29 @@ resource "tfe_workspace" "default" {
   }
 }
 
+resource "tfe_variable" "google_project_name" {
+  for_each = {
+    google-project-shikanime-studio = {
+      name = "shikanime-studio"
+    }
+    google-project-shikanime-studio-labs = {
+      name = "shikanime-studio-labs"
+    }
+  }
+  key          = "name"
+  value        = each.value.name
+  category     = "terraform"
+  workspace_id = tfe_workspace.default[each.key].id
+  description  = "Project Factory"
+}
+
 resource "tfe_workspace_variable_set" "tfc" {
   for_each = {
-    google-shikanime-studio = {
-      variable_set_id = tfe_variable_set.tfc["google-shikanime-studio"].id
+    google-project-shikanime-studio = {
+      variable_set_id = tfe_variable_set.tfc["google-project-shikanime-studio"].id
     }
-    google-shikanime-studio-labs = {
-      variable_set_id = tfe_variable_set.tfc["google-shikanime-studio-labs"].id
+    google-project-shikanime-studio-labs = {
+      variable_set_id = tfe_variable_set.tfc["google-project-shikanime-studio-labs"].id
     }
   }
   workspace_id    = tfe_workspace.default[each.key].id
@@ -72,10 +88,10 @@ resource "tfe_workspace_variable_set" "tfc" {
 
 resource "tfe_workspace_variable_set" "google_provider" {
   for_each = {
-    google-shikanime-studio = {
+    google-project-shikanime-studio = {
       variable_set_id = tfe_variable_set.google_provider["shikanime-studio"].id
     }
-    google-shikanime-studio-labs = {
+    google-project-shikanime-studio-labs = {
       variable_set_id = tfe_variable_set.google_provider["shikanime-studio-labs"].id
     }
   }
