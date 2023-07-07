@@ -1,9 +1,9 @@
 resource "tfe_run_trigger" "tfc" {
   for_each = {
-    google-shikanime-studio = {
+    google-project-shikanime-studio = {
       workspace_id = tfe_workspace.default["tfe-shikanime"].id
     }
-    google-shikanime-studio-labs = {
+    google-project-shikanime-studio-labs = {
       workspace_id = tfe_workspace.default["tfe-shikanime"].id
     }
   }

@@ -13,7 +13,7 @@ output "workload_identity_pool_provider_id" {
   description = "Workload provider id"
 }
 
-output "run_service_account_email" {
+output "tfc_run_service_account_email" {
   value       = module.tfc_service_account.email
   description = "Run service account email"
 }

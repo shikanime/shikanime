@@ -1,7 +1,7 @@
 resource "tfe_variable_set" "tfc" {
   for_each = {
-    google-shikanime-studio      = {}
-    google-shikanime-studio-labs = {}
+    google-project-shikanime-studio      = {}
+    google-project-shikanime-studio-labs = {}
   }
   name         = "TFC (${each.key})"
   description  = "TFC variables for ${each.key}"
@@ -54,10 +54,10 @@ resource "tfe_variable" "tfc_google_provider_auth" {
 resource "tfe_variable" "tfc_google_project_number" {
   for_each = {
     shikanime-studio = {
-      value = lookup(data.tfe_outputs.default["google-shikanime-studio"].values, "project_number", null)
+      value = lookup(data.tfe_outputs.default["google-project-shikanime-studio"].values, "project_number", null)
     }
     shikanime-studio-labs = {
-      value = lookup(data.tfe_outputs.default["google-shikanime-studio-labs"].values, "project_number", null)
+      value = lookup(data.tfe_outputs.default["google-project-shikanime-studio-labs"].values, "project_number", null)
     }
   }
   key             = "TFC_GCP_PROJECT_NUMBER"
@@ -70,10 +70,10 @@ resource "tfe_variable" "tfc_google_project_number" {
 resource "tfe_variable" "tfc_google_workload_pool_id" {
   for_each = {
     shikanime-studio = {
-      value = lookup(data.tfe_outputs.default["google-shikanime-studio"].values, "workload_identity_pool_id", null)
+      value = lookup(data.tfe_outputs.default["google-project-shikanime-studio"].values, "workload_identity_pool_id", null)
     }
     shikanime-studio-labs = {
-      value = lookup(data.tfe_outputs.default["google-shikanime-studio-labs"].values, "workload_identity_pool_id", null)
+      value = lookup(data.tfe_outputs.default["google-project-shikanime-studio-labs"].values, "workload_identity_pool_id", null)
     }
   }
   key             = "TFC_GCP_WORKLOAD_POOL_ID"
@@ -86,10 +86,10 @@ resource "tfe_variable" "tfc_google_workload_pool_id" {
 resource "tfe_variable" "tfc_workload_provider_id" {
   for_each = {
     shikanime-studio = {
-      value = lookup(data.tfe_outputs.default["google-shikanime-studio"].values, "workload_identity_pool_provider_id", null)
+      value = lookup(data.tfe_outputs.default["google-project-shikanime-studio"].values, "workload_identity_pool_provider_id", null)
     }
     shikanime-studio-labs = {
-      value = lookup(data.tfe_outputs.default["google-shikanime-studio-labs"].values, "workload_identity_pool_provider_id", null)
+      value = lookup(data.tfe_outputs.default["google-project-shikanime-studio-labs"].values, "workload_identity_pool_provider_id", null)
     }
   }
   key             = "TFC_GCP_WORKLOAD_PROVIDER_ID"
@@ -102,10 +102,10 @@ resource "tfe_variable" "tfc_workload_provider_id" {
 resource "tfe_variable" "tfc_run_service_account_email" {
   for_each = {
     shikanime-studio = {
-      value = lookup(data.tfe_outputs.default["google-shikanime-studio"].values, "run_service_account_email", null)
+      value = lookup(data.tfe_outputs.default["google-project-shikanime-studio"].values, "tfc_run_service_account_email", null)
     }
     shikanime-studio-labs = {
-      value = lookup(data.tfe_outputs.default["google-shikanime-studio-labs"].values, "run_service_account_email", null)
+      value = lookup(data.tfe_outputs.default["google-project-shikanime-studio-labs"].values, "tfc_run_service_account_email", null)
     }
   }
   key             = "TFC_GCP_RUN_SERVICE_ACCOUNT_EMAIL"

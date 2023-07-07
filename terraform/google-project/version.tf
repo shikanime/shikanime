@@ -9,7 +9,7 @@ terraform {
   backend "remote" {
     organization = "shikanime"
     workspaces {
-      name = "google-shikanime-studio"
+      prefix = "google-project-"
     }
   }
 }
