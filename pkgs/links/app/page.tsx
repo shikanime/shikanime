@@ -36,12 +36,6 @@ export default function Home() {
         </div>
 
         <a
-          href="https://twitter.com/shikalegend"
-          className="w-full btn btn-primary btn-circle"
-        >
-          🦜 Twitter
-        </a>
-        <a
           href="https://github.com/shikanime"
           className="w-full btn btn-primary btn-circle"
         >
