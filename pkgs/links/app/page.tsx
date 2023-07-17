@@ -42,7 +42,7 @@ export default function Home() {
           💾 Github
         </a>
         <a
-          href="https://linkedin.com/williamphetsinorath"
+          href="https://linkedin.com/in/williamphetsinorath"
           className="w-full btn btn-primary btn-circle"
         >
           🗺️ LinkedIn
