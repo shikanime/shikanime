@@ -58,13 +58,10 @@ with lib;
   '';
 
   programs.git = {
-    extraConfig.credential."https://dev.azure.com".useHttpPath = true;
-    includes = [
-      {
-        condition = "gitdir:${config.home.homeDirectory}/";
-        contents.extraConfig.credential."https://source.developers.google.com".helper =
-          "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
-      }
-    ];
+    extraConfig = {
+      credential."https://dev.azure.com".useHttpPath = true;
+      credential."https://source.developers.google.com".helper =
+        "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
+    };
   };
 }
