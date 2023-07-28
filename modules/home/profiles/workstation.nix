@@ -268,11 +268,5 @@ with lib;
     '' + optionalString pkgs.stdenv.hostPlatform.isDarwin ''
       UseKeychain yes
     '';
-    extraOptionOverrides = {
-      IgnoreUnknown = concatStringsSep "," [
-        "UseKeychain"
-        "PubkeyAcceptedAlgorithms"
-      ];
-    };
   };
 }
