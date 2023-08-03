@@ -57,6 +57,16 @@ with lib;
     fi
   '';
 
+  programs.ssh.matchBlocks = {
+    "ssh.dev.azure.com" = {
+      extraOptions = {
+        IdentitiesOnly = "yes";
+        HostkeyAlgorithms = "+ssh-rsa";
+        PubkeyAcceptedKeyTypes = "+ssh-rsa";
+      };
+    };
+  };
+
   programs.git = {
     extraConfig = {
       credential."https://dev.azure.com".useHttpPath = true;
