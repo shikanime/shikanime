@@ -9,7 +9,7 @@
 
   programs.git.includes = [
     {
-      condition = "hasconfig:remote.*.url:git@gitlab.com:*/Sfeir/**";
+      condition = "hasconfig:remote.*.url:git@gitlab.com:Sfeir/**";
       contents.user = {
         name = "William Phetsinorath";
         email = "phetsinorath.w@sfeir.com";
