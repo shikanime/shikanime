@@ -42,6 +42,11 @@
       ];
     in
     {
+      formatter = nixpkgs.lib.genAttrs systems (system:
+        let pkgs = import nixpkgs { inherit system; }; in
+        pkgs.nixpkgs-fmt
+      );
+
       packages = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
