@@ -31,8 +31,7 @@
         "github.vscode-pull-request-github",
         "github.vscode-github-actions",
         "streetsidesoftware.code-spell-checker",
-        "foxundermoon.shell-format",
-        "bradlc.vscode-tailwindcss"
+        "foxundermoon.shell-format"
       ],
       "settings": {
         "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
