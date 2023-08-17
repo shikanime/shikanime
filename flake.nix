@@ -71,6 +71,7 @@
         system = "aarch64-linux";
         modules = [
           ./modules/nixos/hosts/nishir.nix
+          home-manager.nixosModules.home-manager
           nixos-hardware.nixosModules.raspberry-pi-4
         ];
       };
