@@ -23,6 +23,8 @@
       "https://shikanime.cachix.org"
       "https://devenv.cachix.org"
     ];
+    extra-platforms = "aarch64-linux arm-linux";
+    system-features = "nixos-test benchmark big-parallel kvm";
   };
 
   outputs =
