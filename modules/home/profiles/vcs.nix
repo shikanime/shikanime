@@ -10,6 +10,16 @@
     "git"
   ];
 
+  programs.jujutsu = {
+    enable = true;
+    settings.user = {
+      name = "William Phetsinorath";
+      email = "william.phetsinorath@shikanime.studio";
+    };
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
+
   programs.mercurial = {
     enable = true;
     userName = "William Phetsinorath";
@@ -85,6 +95,8 @@
       "Network Trash Folder"
       "Temporary Items"
       ".apdisk"
+      # Jujutsu
+      ".jj"
     ];
     extraConfig = {
       core.editor = "${pkgs.neovim}/bin/nvim";
