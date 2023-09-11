@@ -7,6 +7,6 @@
 
   # Configure user home
   home-manager.users.nixos.imports = [
-    ../../home/hosts/nixos.nix
+    ../../home/profiles/base.nix
   ];
 }
