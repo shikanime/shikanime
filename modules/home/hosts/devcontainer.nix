@@ -6,6 +6,7 @@ with lib;
   imports = [
     ../identities/sfeir.nix
     ../profiles/base.nix
+    ../profiles/javascript.nix
     ../profiles/workstation.nix
     ../profiles/xdg.nix
     ../profiles/vcs.nix
