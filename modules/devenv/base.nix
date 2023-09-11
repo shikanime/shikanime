@@ -12,5 +12,6 @@
   packages = [
     pkgs.nixpkgs-fmt
     pkgs.qemu
+    pkgs.nodejs
   ];
 }
