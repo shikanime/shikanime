@@ -13,6 +13,7 @@ with lib;
     ../profiles/javascript.nix
     ../profiles/python.nix
     ../profiles/rust.nix
+    ../profiles/beam.nix
   ];
 
   home.homeDirectory = "/home/vscode";

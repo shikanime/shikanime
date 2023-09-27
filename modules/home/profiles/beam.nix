@@ -18,13 +18,4 @@
   programs.zsh.oh-my-zsh.plugins = [
     "mix"
   ];
-
-  programs.neovim.plugins = [
-    (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
-      elixir
-      erlang
-      heex
-      eex
-    ]))
-  ];
 }

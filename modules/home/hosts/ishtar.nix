@@ -11,6 +11,7 @@
     ../profiles/javascript.nix
     ../profiles/python.nix
     ../profiles/rust.nix
+    ../profiles/beam.nix
   ];
 
   home = {

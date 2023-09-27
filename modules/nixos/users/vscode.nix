@@ -69,5 +69,6 @@
     ../../home/profiles/javascript.nix
     ../../home/profiles/python.nix
     ../../home/profiles/rust.nix
+    ../../home/profiles/beam.nix
   ];
 }
