@@ -11,6 +11,8 @@ with lib;
     ../profiles/vcs.nix
     ../profiles/cloud.nix
     ../profiles/javascript.nix
+    ../profiles/python.nix
+    ../profiles/rust.nix
   ];
 
   home.homeDirectory = "/home/vscode";
