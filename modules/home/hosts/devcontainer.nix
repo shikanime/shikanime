@@ -14,6 +14,7 @@ with lib;
     ../profiles/python.nix
     ../profiles/rust.nix
     ../profiles/beam.nix
+    ../profiles/go.nix
   ];
 
   home.homeDirectory = "/home/vscode";
