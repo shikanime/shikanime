@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "jnoortheen.nix-ide",
+    "mkhl.direnv",
+    "yzhang.markdown-all-in-one",
+    "james-yu.latex-workshop",
+    "sonarsource.sonarlint-vscode",
+    "github.vscode-pull-request-github",
+    "github.vscode-github-actions",
+    "streetsidesoftware.code-spell-checker",
+    "foxundermoon.shell-format"
+  ]
+}
