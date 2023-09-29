@@ -13,7 +13,9 @@ with lib;
     pkgs.awscli2
     pkgs.cloudflared
     pkgs.act
+    pkgs.gh
     pkgs.glab
+    pkgs.graphite-cli
     pkgs.kubelogin
     pkgs.kubelogin-oidc
     (pkgs.google-cloud-sdk.withExtraComponents (
