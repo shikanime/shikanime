@@ -1,24 +1,20 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
+with lib;
+
+let
+  iniFormat = pkgs.formats.ini { };
+in
 {
   home.packages = [
     pkgs.darcs
     pkgs.subversion
+    pkgs.sapling
   ];
 
   programs.zsh.oh-my-zsh.plugins = [
     "git"
   ];
-
-  programs.jujutsu = {
-    enable = true;
-    settings.user = {
-      name = "William Phetsinorath";
-      email = "william.phetsinorath@shikanime.studio";
-    };
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
 
   programs.mercurial = {
     enable = true;
@@ -95,8 +91,6 @@
       "Network Trash Folder"
       "Temporary Items"
       ".apdisk"
-      # Jujutsu
-      ".jj"
     ];
     extraConfig = {
       core.editor = "${pkgs.neovim}/bin/nvim";
@@ -108,6 +102,18 @@
         autostash = true;
         updateRefs = true;
       };
+    };
+  };
+
+  xdg.configFile = lib.attrsets.optionalAttrs pkgs.stdenv.isLinux {
+    "sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
+      ui.username = "William Phetsinorath <william.phetsinorath@shikanime.studio>";
+    };
+  };
+
+  home.file = lib.attrsets.optionalAttrs pkgs.stdenv.isDarwin {
+    "Library/Preferences/sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
+      ui.username = "William Phetsinorath <william.phetsinorath@shikanime.studio>";
     };
   };
 }
