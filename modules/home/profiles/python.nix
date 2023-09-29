@@ -9,7 +9,7 @@
   ];
 
   home.packages = [
-    pkgs.python3Full
+    pkgs.python3Minimal
     pkgs.poetry
     pkgs.pdm
   ];
