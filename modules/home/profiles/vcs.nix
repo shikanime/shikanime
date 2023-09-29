@@ -32,7 +32,7 @@
     userName = "William Phetsinorath";
     userEmail = "william.phetsinorath@shikanime.studio";
     signing = {
-      key = "B2E6C45782BA18D7";
+      key = "EB584D3ACB58F471";
       signByDefault = true;
     };
     aliases = {
