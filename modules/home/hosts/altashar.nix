@@ -23,6 +23,6 @@ in
 
   nix.package = pkgs.nix;
 
-  programs.zsh.initExtra = initExtra;
-  programs.bash.initExtra = initExtra;
+  programs.zsh = { inherit initExtra; };
+  programs.bash = { inherit initExtra; };
 }
