@@ -47,6 +47,6 @@ in
   home.sessionVariables.LD_LIBRARY_PATH = "/usr/lib/wsl/lib";
 
   # Enable Graphical Applications
-  programs.zsh.initExtra = initExtra;
-  programs.bash.initExtra = initExtra;
+  programs.zsh = { inherit initExtra; };
+  programs.bash = { inherit initExtra; };
 }
