@@ -1,5 +1,12 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
+with lib;
+
+let
+  initExtra = mkAfter ''
+    export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+  '';
+in
 {
   imports = [
     ../identities/sfeir.nix
@@ -23,7 +30,6 @@
 
   nix.package = pkgs.nix;
 
-
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
@@ -39,4 +45,8 @@
 
   # CUDA support
   home.sessionVariables.LD_LIBRARY_PATH = "/usr/lib/wsl/lib";
+
+  # Enable Graphical Applications
+  programs.zsh.initExtra = initExtra;
+  programs.bash.initExtra = initExtra;
 }
