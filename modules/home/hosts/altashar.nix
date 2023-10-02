@@ -2,6 +2,13 @@
 
 with lib;
 
+let
+  initExtra = mkAfter ''
+    if command -v brew >/dev/null; then
+      eval "$(brew shellenv)"
+    fi
+  '';
+in
 {
   imports = [
     ../identities/sfeir.nix
@@ -16,9 +23,6 @@ with lib;
 
   nix.package = pkgs.nix;
 
-  programs.zsh.initExtra = mkAfter ''
-    if command -v brew >/dev/null; then
-      eval "$(brew shellenv)"
-    fi
-  '';
+  programs.zsh.initExtra = initExtra;
+  programs.bash.initExtra = initExtra;
 }
