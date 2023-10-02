@@ -4,6 +4,9 @@ with lib;
 
 let
   iniFormat = pkgs.formats.ini { };
+  userName = "William Phetsinorath";
+  userEmail = "william.phetsinorath@shikanime.studio";
+  signingKey = "EB584D3ACB58F471";
 in
 {
   home.packages = [
@@ -17,18 +20,16 @@ in
   ];
 
   programs.mercurial = {
+    inherit userName userEmail;
     enable = true;
-    userName = "William Phetsinorath";
-    userEmail = "william.phetsinorath@shikanime.studio";
   };
 
   programs.git = {
+    inherit userName userEmail;
     enable = true;
     lfs.enable = true;
-    userName = "William Phetsinorath";
-    userEmail = "william.phetsinorath@shikanime.studio";
     signing = {
-      key = "EB584D3ACB58F471";
+      key = signingKey;
       signByDefault = true;
     };
     aliases = {
@@ -107,13 +108,15 @@ in
 
   xdg.configFile = lib.attrsets.optionalAttrs pkgs.stdenv.isLinux {
     "sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
-      ui.username = "William Phetsinorath <william.phetsinorath@shikanime.studio>";
+      ui.username = "${userName} <${userEmail}>";
+      gpg.key = signingKey;
     };
   };
 
   home.file = lib.attrsets.optionalAttrs pkgs.stdenv.isDarwin {
     "Library/Preferences/sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
-      ui.username = "William Phetsinorath <william.phetsinorath@shikanime.studio>";
+      ui.username = "${userName} <${userEmail}>";
+      gpg.key = signingKey;
     };
   };
 }
