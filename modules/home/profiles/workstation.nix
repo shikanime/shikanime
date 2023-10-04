@@ -43,16 +43,27 @@ with lib;
     };
   };
 
+  programs.nushell = {
+    enable = true;
+    extraConfig = ''
+      $env.config = {
+        show_banner: false,
+      }
+    '';
+  };
+
   programs.starship = {
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    enableNushellIntegration = true;
   };
 
   programs.direnv = {
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    enableNushellIntegration = true;
     nix-direnv.enable = true;
   };
 
