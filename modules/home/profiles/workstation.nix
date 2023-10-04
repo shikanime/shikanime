@@ -257,8 +257,6 @@ with lib;
     '';
   };
 
-  programs.tmux.enable = true;
-
   programs.gpg.enable = true;
 
   programs.ssh = {
