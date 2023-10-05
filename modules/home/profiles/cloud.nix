@@ -76,8 +76,10 @@ with lib;
         helper = "${pkgs.glab}/bin/glab auth git-credential";
       };
       "https://dev.azure.com".useHttpPath = true;
-      "https://source.developers.google.com".helper =
-        "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
+      "https://source.developers.google.com" = {
+        useHttpPath = true;
+        helper =   "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
+        };
     };
   };
 }
