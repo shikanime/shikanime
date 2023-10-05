@@ -69,9 +69,11 @@ with lib;
   };
 
   programs.git = {
-    extraConfig = {
-      credential."https://dev.azure.com".useHttpPath = true;
-      credential."https://source.developers.google.com".helper =
+    extraConfig.credential = {
+      "https://github.com".useHttpPath = true;
+      "https://gitlab.com".useHttpPath = true;
+      "https://dev.azure.com".useHttpPath = true;
+      "https://source.developers.google.com".helper =
         "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
     };
   };
