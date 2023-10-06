@@ -5,6 +5,8 @@ with lib;
 {
   home.packages = [
     pkgs.terraform
+    pkgs.kubectl
+    pkgs.kubernetes-helm
     pkgs.kustomize
     pkgs.skaffold
     pkgs.kind
