@@ -2,11 +2,6 @@
 
 with lib;
 
-let
-  initExtra = mkAfter ''
-    export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
-  '';
-in
 {
   imports = [
     ../identities/sfeir.nix
@@ -45,8 +40,4 @@ in
 
   # CUDA support
   home.sessionVariables.LD_LIBRARY_PATH = "/usr/lib/wsl/lib";
-
-  # Enable Graphical Applications
-  programs.zsh = { inherit initExtra; };
-  programs.bash = { inherit initExtra; };
 }
