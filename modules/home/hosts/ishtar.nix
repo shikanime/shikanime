@@ -31,6 +31,7 @@ with lib;
     enableExtraSocket = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    defaultCacheTtl = 6 * 60 * 60;
   };
 
   targets.genericLinux.enable = true;
