@@ -13,7 +13,7 @@
       contents.user = {
         name = "William Phetsinorath";
         email = "william.phetsinorath@ext.webedia-group.com";
-        signingKey = "2EC6BC5847E93460";
+        signingKey = "0EE52A8E3A05142A";
       };
     }
     {
@@ -21,7 +21,7 @@
       contents.user = {
         name = "William Phetsinorath";
         email = "william.phetsinorath@ext.webedia-group.com";
-        signingKey = "2EC6BC5847E93460";
+        signingKey = "0EE52A8E3A05142A";
       };
     }
   ];
