@@ -28,6 +28,7 @@ with lib;
         nomos
         gke-gcloud-auth-plugin
         gcloud-crc32c
+        cloud_sql_proxy
       ]
     ))
   ];
@@ -80,8 +81,8 @@ with lib;
       "https://dev.azure.com".useHttpPath = true;
       "https://source.developers.google.com" = {
         useHttpPath = true;
-        helper =   "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
-        };
+        helper = "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
+      };
     };
   };
 }
