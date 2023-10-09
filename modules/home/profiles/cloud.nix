@@ -19,6 +19,7 @@ with lib;
     pkgs.glab
     pkgs.kubelogin
     pkgs.kubelogin-oidc
+    pkgs.postgresql
     (pkgs.google-cloud-sdk.withExtraComponents (
       with pkgs.google-cloud-sdk.components; [
         alpha
