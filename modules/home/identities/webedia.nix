@@ -3,24 +3,24 @@
 {
   programs.ssh.matchBlocks = {
     "gitlab.com" = {
-      identityFile = [ "${config.home.homeDirectory}/.ssh/sfeir_ed25519" ];
+      identityFile = [ "${config.home.homeDirectory}/.ssh/webedia_ed25519" ];
     };
   };
 
   programs.git.includes = [
     {
-      condition = "hasconfig:remote.*.url:git@gitlab.com:Sfeir/**";
+      condition = "hasconfig:remote.*.url:git@gitlab.com:webediagroup/**";
       contents.user = {
         name = "William Phetsinorath";
-        email = "phetsinorath.w@sfeir.com";
+        email = "william.phetsinorath@ext.webedia-group.com";
         signingKey = "2EC6BC5847E93460";
       };
     }
     {
-      condition = "hasconfig:remote.*.url:git@gitlab.com:phetsinorath.w/**";
+      condition = "hasconfig:remote.*.url:git@gitlab.com:william.phetsinorath/**";
       contents.user = {
         name = "William Phetsinorath";
-        email = "phetsinorath.w@sfeir.com";
+        email = "william.phetsinorath@ext.webedia-group.com";
         signingKey = "2EC6BC5847E93460";
       };
     }
