@@ -5,6 +5,11 @@ with lib;
 {
   imports = [
     ../identities/sfeir.nix
+    ../identities/paprec.nix
+    ../identities/galec.nix
+    ../identities/tagheuer.nix
+    ../identities/totalenergies.nix
+    ../identities/webedia.nix
     ../profiles/base.nix
     ../profiles/workstation.nix
     ../profiles/xdg.nix
@@ -31,6 +36,7 @@ with lib;
     enableExtraSocket = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    defaultCacheTtl = 6 * 60 * 60;
   };
 
   targets.genericLinux.enable = true;

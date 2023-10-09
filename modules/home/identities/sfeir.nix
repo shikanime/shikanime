@@ -1,4 +1,12 @@
+{ config, ... }:
+
 {
+  programs.ssh.matchBlocks = {
+    "gitlab.com" = {
+      identityFile = [ "${config.home.homeDirectory}/.ssh/sfeir_ed25519" ];
+    };
+  };
+
   programs.git.includes = [
     {
       condition = "hasconfig:remote.*.url:git@gitlab.com:Sfeir/**";
