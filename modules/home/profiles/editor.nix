@@ -1,35 +1,6 @@
 { config, pkgs, lib, ... }:
 
 let
-  plugins = [
-    pkgs.vimPlugins.lush-nvim
-    pkgs.vimPlugins.vim-fugitive
-    pkgs.vimPlugins.vim-gitgutter
-    pkgs.vimPlugins.vim-airline
-    pkgs.vimPlugins.vim-commentary
-    pkgs.vimPlugins.vim-surround
-    pkgs.vimPlugins.vim-repeat
-    pkgs.vimPlugins.nerdtree
-    pkgs.vimPlugins.telescope-nvim
-    pkgs.vimPlugins.fzf-vim
-    (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
-      json
-      toml
-      make
-      markdown
-      rst
-      dot
-      nix
-      comment
-      diff
-      git_rebase
-      gitattributes
-      jq
-      markdown_inline
-      regex
-      vim
-    ]))
-  ];
   extraConfig = ''
     "  Colemak layout:                  |                 QWERTY layout:
     "  `12345 67890-=     Move around:  |  (instead of)   `12345 67890-=
@@ -196,13 +167,42 @@ let
 in
 {
   programs.neovim = {
-    inherit plugins extraConfig;
+    inherit extraConfig;
     enable = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
     defaultEditor = true;
+    plugins = [
+      pkgs.vimPlugins.lush-nvim
+      pkgs.vimPlugins.vim-fugitive
+      pkgs.vimPlugins.vim-gitgutter
+      pkgs.vimPlugins.vim-airline
+      pkgs.vimPlugins.vim-commentary
+      pkgs.vimPlugins.vim-surround
+      pkgs.vimPlugins.vim-repeat
+      pkgs.vimPlugins.nerdtree
+      pkgs.vimPlugins.telescope-nvim
+      pkgs.vimPlugins.fzf-vim
+      (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+        json
+        toml
+        make
+        markdown
+        rst
+        dot
+        nix
+        comment
+        diff
+        git_rebase
+        gitattributes
+        jq
+        markdown_inline
+        regex
+        vim
+      ]))
+    ];
   };
 
-  programs.vim = {
-    inherit plugins extraConfig;
-    enable = true;
-  };
+  home.file.".vimrc".text = extraConfig;
 }
