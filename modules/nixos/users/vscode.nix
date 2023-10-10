@@ -62,6 +62,7 @@
   home-manager.users.vscode.imports = [
     ../../home/identities/sfeir.nix
     ../../home/profiles/base.nix
+    ../../home/profiles/editor.nix
     ../../home/profiles/workstation.nix
     ../../home/profiles/xdg.nix
     ../../home/profiles/vcs.nix
