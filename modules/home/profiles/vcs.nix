@@ -94,7 +94,6 @@ in
       ".apdisk"
     ];
     extraConfig = {
-      core.editor = "${pkgs.neovim}/bin/nvim";
       pull.rebase = true;
       push.autoSetupRemote = true;
       init.defaultBranch = "main";
