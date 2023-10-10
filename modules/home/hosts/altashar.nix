@@ -13,6 +13,7 @@ in
   imports = [
     ../identities/sfeir.nix
     ../profiles/base.nix
+    ../profiles/editor.nix
     ../profiles/workstation.nix
     ../profiles/vcs.nix
     ../profiles/cloud.nix
