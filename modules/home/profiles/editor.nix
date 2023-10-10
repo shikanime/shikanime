@@ -198,9 +198,6 @@ in
   programs.neovim = {
     inherit plugins extraConfig;
     enable = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
     defaultEditor = true;
   };
 
