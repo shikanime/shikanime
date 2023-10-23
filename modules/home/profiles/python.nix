@@ -12,5 +12,6 @@
     pkgs.python3Minimal
     pkgs.poetry
     pkgs.pdm
+    pkgs.pipx
   ];
 }
