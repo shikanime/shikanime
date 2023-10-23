@@ -1,5 +1,10 @@
 { pkgs, ... }:
 
+let
+  python = pkgs.python3Minimal.withPackages (ps: [
+    ps.virtualenv
+  ]);
+in
 {
   programs.neovim.withPython3 = true;
 
@@ -9,7 +14,7 @@
   ];
 
   home.packages = [
-    pkgs.python3Minimal
+    python
     pkgs.poetry
     pkgs.pdm
     pkgs.pipx
