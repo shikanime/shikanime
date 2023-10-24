@@ -69,7 +69,7 @@
     ../../home/profiles/cloud.nix
     ../../home/profiles/javascript.nix
     ../../home/profiles/python.nix
-    ../../home/profiles/rust.nix
+    ../../home/profiles/native.nix
     ../../home/profiles/beam.nix
   ];
 }

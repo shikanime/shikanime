@@ -13,7 +13,7 @@ with lib;
     ../profiles/cloud.nix
     ../profiles/javascript.nix
     ../profiles/python.nix
-    ../profiles/rust.nix
+    ../profiles/native.nix
     ../profiles/beam.nix
     ../profiles/go.nix
   ];
