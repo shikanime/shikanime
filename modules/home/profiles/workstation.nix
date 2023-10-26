@@ -10,6 +10,7 @@ with lib;
     pkgs.gnused
     pkgs.gnugrep
     pkgs.less
+    pkgs.zip
     pkgs.which
     pkgs.bzip2
     pkgs.graphviz
