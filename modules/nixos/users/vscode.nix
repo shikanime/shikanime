@@ -62,13 +62,14 @@
   home-manager.users.vscode.imports = [
     ../../home/identities/sfeir.nix
     ../../home/profiles/base.nix
+    ../../home/profiles/editor.nix
     ../../home/profiles/workstation.nix
     ../../home/profiles/xdg.nix
     ../../home/profiles/vcs.nix
     ../../home/profiles/cloud.nix
     ../../home/profiles/javascript.nix
     ../../home/profiles/python.nix
-    ../../home/profiles/rust.nix
+    ../../home/profiles/native.nix
     ../../home/profiles/beam.nix
   ];
 }

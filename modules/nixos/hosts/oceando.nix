@@ -7,6 +7,7 @@
     "${modulesPath}/profiles/hardened.nix"
     ../profiles/base.nix
     ../profiles/machine.nix
+    ../profiles/editor.nix
     ../profiles/workstation.nix
     ../profiles/syncthing.nix
     ../profiles/jetbrains.nix
