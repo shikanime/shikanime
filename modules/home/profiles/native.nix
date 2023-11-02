@@ -9,6 +9,7 @@
     pkgs.rustup
     pkgs.cmake
     pkgs.meson
+    pkgs.muon
     pkgs.ninja
     pkgs.ccache
     pkgs.gdb
