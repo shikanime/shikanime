@@ -13,6 +13,7 @@ in
     pkgs.darcs
     pkgs.subversion
     pkgs.sapling
+    pkgs.graphite-cli
   ];
 
   programs.zsh.oh-my-zsh.plugins = [
