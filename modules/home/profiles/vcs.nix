@@ -106,6 +106,16 @@ in
     };
   };
 
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+        name = userName;
+        email = userEmail;
+      };
+    };
+  };
+
   xdg.configFile = lib.attrsets.optionalAttrs pkgs.stdenv.isLinux {
     "sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
       ui.username = "${userName} <${userEmail}>";
