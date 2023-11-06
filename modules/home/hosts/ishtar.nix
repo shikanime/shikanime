@@ -30,8 +30,6 @@ with lib;
     enable = true;
     enableSshSupport = true;
     enableExtraSocket = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
     defaultCacheTtl = 4 * 60 * 60;
   };
 
