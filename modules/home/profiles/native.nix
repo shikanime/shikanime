@@ -13,5 +13,6 @@
     pkgs.ccache
     pkgs.gdb
     pkgs.lldb
+    pkgs.clang-tools
   ];
 }

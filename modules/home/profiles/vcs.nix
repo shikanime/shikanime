@@ -13,6 +13,7 @@ in
     pkgs.darcs
     pkgs.subversion
     pkgs.sapling
+    pkgs.graphite-cli
   ];
 
   programs.zsh.oh-my-zsh.plugins = [
@@ -101,6 +102,16 @@ in
       rebase = {
         autostash = true;
         updateRefs = true;
+      };
+    };
+  };
+
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+        name = userName;
+        email = userEmail;
       };
     };
   };

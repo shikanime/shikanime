@@ -54,18 +54,10 @@ with lib;
     '';
   };
 
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    enableNushellIntegration = true;
-  };
+  programs.starship.enable = true;
 
   programs.direnv = {
     enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    enableNushellIntegration = true;
     nix-direnv.enable = true;
   };
 
