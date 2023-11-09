@@ -67,14 +67,6 @@ with lib;
 
   programs.ssh = {
     enable = true;
-    matchBlocks = {
-      "github.com" = {
-        identityFile = [ "${config.home.homeDirectory}/.ssh/id_ed25519" ];
-      };
-      "gitlab.com" = {
-        identityFile = [ "${config.home.homeDirectory}/.ssh/id_ed25519" ];
-      };
-    };
     extraConfig = ''
       AddKeysToAgent yes
     '' + optionalString pkgs.stdenv.hostPlatform.isDarwin ''
