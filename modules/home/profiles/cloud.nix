@@ -62,14 +62,9 @@ with lib;
     fi
   '';
 
-  programs.ssh.matchBlocks = {
-    "ssh.dev.azure.com" = {
-      extraOptions = {
-        IdentitiesOnly = "yes";
-        HostkeyAlgorithms = "+ssh-rsa";
-        PubkeyAcceptedKeyTypes = "+ssh-rsa";
-      };
-    };
+  programs.ssh.matchBlocks."ssh.dev.azure.com".extraOptions = {
+    HostkeyAlgorithms = "+ssh-rsa";
+    PubkeyAcceptedKeyTypes = "+ssh-rsa";
   };
 
   programs.git = {
