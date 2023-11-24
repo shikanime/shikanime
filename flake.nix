@@ -51,7 +51,6 @@
 
       packages = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
-          curriculum-vitae = pkgs.callPackage ./pkgs/curriculum-vitae/default.nix { };
           nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
         }
       );
@@ -62,7 +61,6 @@
             inherit inputs pkgs;
             modules = [
               ./modules/devenv/base.nix
-              ./modules/devenv/latex.nix
               ./modules/devenv/vcs.nix
             ];
           };
