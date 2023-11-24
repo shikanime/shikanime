@@ -20,8 +20,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: curriculum-vitae
-            target: curriculum-vitae
           - name: nishir
             target: nishir-aarch64-unknown-linux-gnu
     runs-on: ubuntu-22.04
