@@ -31,4 +31,6 @@ with lib;
     # them by default and Home Manager needs them to work properly
     export USER=''${USER:-$(whoami)}
   '';
+
+  home.packages = [ pkgs.iputils ];
 }
