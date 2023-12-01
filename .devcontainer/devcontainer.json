@@ -9,12 +9,5 @@
     },
     "ghcr.io/christophermacgown/devcontainer-features/direnv:1": {}
   },
-  "updateContentCommand": "nix develop --build --impure",
-  "mounts": [
-    {
-      "source": "nix",
-      "target": "/nix",
-      "type": "volume"
-    }
-  ]
+  "updateContentCommand": "nix develop --build --impure"
 }
