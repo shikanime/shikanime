@@ -29,6 +29,7 @@ with lib;
         nomos
         gke-gcloud-auth-plugin
         gcloud-crc32c
+        cloud-run-proxy
         cloud_sql_proxy
       ]
     ))
