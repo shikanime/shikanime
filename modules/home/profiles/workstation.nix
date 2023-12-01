@@ -20,7 +20,6 @@ with lib;
     pkgs.wget
     pkgs.watch
     pkgs.pprof
-    pkgs.iputils
     pkgs.nixpkgs-fmt
   ];
 
