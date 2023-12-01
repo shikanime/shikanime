@@ -30,6 +30,7 @@ with lib;
         gke-gcloud-auth-plugin
         gcloud-crc32c
         cloud-run-proxy
+        log-streaming
         cloud_sql_proxy
       ]
     ))
