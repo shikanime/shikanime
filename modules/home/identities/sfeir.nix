@@ -1,5 +1,17 @@
+{ config, ... }:
+
 {
+  programs.ssh.matchBlocks = {
+    "sfeir.internal" = {
+      identityFile = [ "${config.home.homeDirectory}/.ssh/sfeir_ed25519" ];
+    };
+  };
+
   programs.git.includes = [
+    {
+      condition = "hasconfig:remote.*.url:git@gitlab.com:**";
+      contents.url."git@gitlab.com:**".insteadOf = "git@sfeir.internal:**";
+    }
     {
       condition = "hasconfig:remote.*.url:git@gitlab.com:Sfeir/**";
       contents.user = {
