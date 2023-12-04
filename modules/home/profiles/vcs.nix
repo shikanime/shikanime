@@ -93,6 +93,8 @@ in
       "Network Trash Folder"
       "Temporary Items"
       ".apdisk"
+      # Git
+      ".git"
     ];
     extraConfig = {
       pull.rebase = true;
