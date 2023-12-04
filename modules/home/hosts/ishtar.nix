@@ -32,6 +32,7 @@ with lib;
     enableSshSupport = true;
     enableExtraSocket = true;
     defaultCacheTtl = 4 * 60 * 60;
+    pinentryFlavor = "tty";
   };
 
   targets.genericLinux.enable = true;
