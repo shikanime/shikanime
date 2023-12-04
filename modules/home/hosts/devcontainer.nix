@@ -5,6 +5,11 @@ with lib;
 {
   imports = [
     ../identities/sfeir.nix
+    ../identities/paprec.nix
+    ../identities/galec.nix
+    ../identities/tagheuer.nix
+    ../identities/totalenergies.nix
+    ../identities/webedia.nix
     ../profiles/base.nix
     ../profiles/editor.nix
     ../profiles/workstation.nix
