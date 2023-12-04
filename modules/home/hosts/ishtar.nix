@@ -2,6 +2,14 @@
 
 with lib;
 
+let
+  initExtra = mkAfter ''
+    if [[ -z "$SSH_AUTH_SOCK" ]]; then
+      #start ssh-agent
+      eval "$(ssh-agent -s)"
+    fi
+  '';
+in
 {
   imports = [
     ../identities/sfeir.nix
@@ -29,7 +37,6 @@ with lib;
 
   services.gpg-agent = {
     enable = true;
-    enableSshSupport = true;
     enableExtraSocket = true;
     defaultCacheTtl = 4 * 60 * 60;
     pinentryFlavor = "tty";
@@ -42,4 +49,7 @@ with lib;
 
   # CUDA support
   home.sessionVariables.LD_LIBRARY_PATH = "/usr/lib/wsl/lib";
+
+  programs.zsh = { inherit initExtra; };
+  programs.bash = { inherit initExtra; };
 }
