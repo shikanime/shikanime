@@ -3,7 +3,7 @@
 {
   imports = [
     "${modulesPath}/profiles/headless.nix"
-    "${modulesPath}/installer/sd-card/sd-image-aarch64-installer.nix"
+    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
     ../profiles/base.nix
     ../profiles/machine.nix
     ../users/nixos.nix
@@ -40,9 +40,11 @@
   # This is required so that pod can reach the API server (running on port 6443 by default)
   networking.firewall.allowedTCPPorts = [ 6443 ];
 
-  services.k3s = {
-    enable = true;
-    role = "server";
+  services.kubernetes = {
+    roles = [ "master" "node" ];
+    masterAddress = "nishir.";
+    apiserverAddress = "https://nishir.local:6443";
+    addons.dns.enable = true;
   };
 
   networking.hostName = "nishir";

@@ -13,7 +13,7 @@
       contents.user = {
         name = "William Phetsinorath";
         email = "william.phetsinorath@external.totalenergies.com";
-        signingKey = "FDEA7AEA663DC732";
+        signingKey = "A2EBDC71894852E4";
       };
     }
     {
@@ -21,7 +21,7 @@
       contents.user = {
         name = "William Phetsinorath";
         email = "william.phetsinorath@external.totalenergies.com";
-        signingKey = "FDEA7AEA663DC732";
+        signingKey = "A2EBDC71894852E4";
       };
     }
   ];
