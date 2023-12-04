@@ -61,6 +61,11 @@
   # Configure user home
   home-manager.users.vscode.imports = [
     ../../home/identities/sfeir.nix
+    ../../home/identities/paprec.nix
+    ../../home/identities/galec.nix
+    ../../home/identities/tagheuer.nix
+    ../../home/identities/totalenergies.nix
+    ../../home/identities/webedia.nix
     ../../home/profiles/base.nix
     ../../home/profiles/editor.nix
     ../../home/profiles/workstation.nix
