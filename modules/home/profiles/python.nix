@@ -3,6 +3,9 @@
 let
   python = pkgs.python3Full.withPackages (ps: [
     ps.virtualenv
+    ps.poetry
+    ps.pdm
+    ps.pipx
   ]);
 in
 {
@@ -15,8 +18,5 @@ in
 
   home.packages = [
     python
-    pkgs.poetry
-    pkgs.pdm
-    pkgs.pipx
   ];
 }
