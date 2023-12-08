@@ -3,6 +3,7 @@
 let
   python = pkgs.python3Full.withPackages (ps: [
     ps.virtualenv
+    ps.pipx
   ]);
 in
 {
@@ -16,7 +17,5 @@ in
   home.packages = [
     python
     pkgs.poetry
-    pkgs.pdm
-    pkgs.pipx
   ];
 }
