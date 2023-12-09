@@ -1,6 +1,4 @@
-{ pkgs, lib, ... }:
-
-with lib;
+{ pkgs, ... }:
 
 let
   initExtra = mkAfter ''
