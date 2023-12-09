@@ -3,7 +3,7 @@
 {
   imports = [
     "${modulesPath}/profiles/headless.nix"
-    "${modulesPath}/installer/sd-card/sd-image-aarch64-installer.nix"
+    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
     ../profiles/base.nix
     ../profiles/machine.nix
     ../users/nixos.nix
