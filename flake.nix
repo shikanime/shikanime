@@ -52,6 +52,7 @@
       packages = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
+          metatube = pkgs.callPackage ./pkgs/metatube { };
         }
       );
 
