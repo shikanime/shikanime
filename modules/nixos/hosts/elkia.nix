@@ -7,14 +7,14 @@
     "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/virtualisation/qemu-vm.nix"
     "${modulesPath}/installer/cd-dvd/installation-cd-graphical-gnome.nix"
-    ../profiles/base.nix
-    ../profiles/machine.nix
-    ../profiles/editor.nix
-    ../profiles/workstation.nix
-    ../profiles/syncthing.nix
-    ../profiles/jetbrains.nix
-    ../profiles/vscode.nix
-    ../users/vscode.nix
+../../home/profiles/base.nix
+../../home/profiles/machine.nix
+../../home/profiles/editor.nix
+../../home/profiles/workstation.nix
+../../home/profiles/syncthing.nix
+../../home/profiles/jetbrains.nix
+../../home/profiles/vscode.nix
+../../home/users/vscode.nix
   ];
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_hardened;

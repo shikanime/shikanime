@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ lib, pkgs, ... }:
 
 with lib;
 
@@ -11,18 +11,18 @@ let
 in
 {
   imports = [
-    ../identities/sfeir.nix
-    ../profiles/base.nix
-    ../profiles/editor.nix
-    ../profiles/workstation.nix
-    ../profiles/vcs.nix
-    ../profiles/cloud.nix
-    ../profiles/javascript.nix
-    ../profiles/java.nix
-    ../profiles/python.nix
-    ../profiles/native.nix
-    ../profiles/beam.nix
-    ../profiles/go.nix
+../../home/identities/sfeir.nix
+../../home/profiles/base.nix
+../../home/profiles/editor.nix
+../../home/profiles/workstation.nix
+../../home/profiles/vcs.nix
+../../home/profiles/cloud.nix
+../../home/profiles/javascript.nix
+../../home/profiles/java.nix
+../../home/profiles/python.nix
+../../home/profiles/native.nix
+../../home/profiles/beam.nix
+../../home/profiles/go.nix
   ];
 
   home.homeDirectory = "/Users/williamphetsinorath";

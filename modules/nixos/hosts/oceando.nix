@@ -5,21 +5,15 @@
     "${modulesPath}/profiles/docker-container.nix"
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/profiles/hardened.nix"
-    ../profiles/base.nix
-    ../profiles/machine.nix
-    ../profiles/editor.nix
-    ../profiles/workstation.nix
-    ../profiles/syncthing.nix
-    ../profiles/jetbrains.nix
-    ../profiles/vscode.nix
-    ../users/vscode.nix
+../../home/profiles/base.nix
+../../home/profiles/machine.nix
+../../home/profiles/editor.nix
+../../home/profiles/workstation.nix
+../../home/profiles/syncthing.nix
+../../home/profiles/jetbrains.nix
+../../home/profiles/vscode.nix
+../../home/users/vscode.nix
   ];
-
-  # Configure Home Manager to use NixOS global packages
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-  };
 
   environment.noXlibs = false;
 

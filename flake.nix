@@ -52,6 +52,9 @@
       packages = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
+          altashar = self.homeConfigurations."williamphetsinorath@altashar".activationPackage;
+          ishtar = self.homeConfigurations."shika@ishtar".activationPackage;
+          devcontainer = self.homeConfigurations.vscode.activationPackage;
           metatube = pkgs.callPackage ./pkgs/metatube { };
         }
       );
@@ -61,8 +64,8 @@
           default = devenv.lib.mkShell {
             inherit inputs pkgs;
             modules = [
-              ./modules/devenv/base.nix
-              ./modules/devenv/vcs.nix
+         ../../home/modules/devenv/base.nix
+         ../../home/modules/devenv/vcs.nix
             ];
           };
         }
@@ -71,7 +74,7 @@
       nixosConfigurations.nishir = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules = [
-          ./modules/nixos/hosts/nishir.nix
+     ../../home/modules/nixos/hosts/nishir.nix
           home-manager.nixosModules.home-manager
           nixos-hardware.nixosModules.raspberry-pi-4
         ];
@@ -84,7 +87,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/altashar.nix
+       ../../home/modules/home/hosts/altashar.nix
           ];
         };
         "shika@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -93,7 +96,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/ishtar.nix
+       ../../home/modules/home/hosts/ishtar.nix
           ];
         };
         vscode = home-manager.lib.homeManagerConfiguration {
@@ -102,7 +105,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/devcontainer.nix
+       ../../home/modules/home/hosts/devcontainer.nix
           ];
         };
       };
