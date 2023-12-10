@@ -67,10 +67,6 @@ with lib;
 
   programs.ssh = {
     enable = true;
-    extraConfig = ''
-      AddKeysToAgent yes
-    '' + optionalString pkgs.stdenv.hostPlatform.isDarwin ''
-      UseKeychain yes
-    '';
+    package = pkgs.openssh;
   };
 }
