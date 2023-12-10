@@ -25,6 +25,20 @@
     };
   };
 
+  # Enable SSH access
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
+  };
+
+  # Enable VPN access
+  services.tailscale = {
+    enable = true;
+    openFirewall = true;
+    useRoutingFeatures = "server";
+    extraUpFlags = [ "--ssh" "--advertise-exit-node" ];
+  };
+
   # Enable Network Time Protocol
   services.ntp.enable = true;
 }
