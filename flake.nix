@@ -52,6 +52,9 @@
       packages = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
+          altashar = self.homeConfigurations."williamphetsinorath@altashar".activationPackage;
+          ishtar = self.homeConfigurations."shika@ishtar".activationPackage;
+          devcontainer = self.homeConfigurations.vscode.activationPackage;
           metatube = pkgs.callPackage ./pkgs/metatube { };
         }
       );
