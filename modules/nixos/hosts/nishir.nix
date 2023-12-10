@@ -3,10 +3,10 @@
 {
   imports = [
     "${modulesPath}/profiles/headless.nix"
-    "${modulesPath}/installer/sd-card/sd-image-aarch64-installer.nix"
-    ../profiles/base.nix
-    ../profiles/machine.nix
-    ../users/nixos.nix
+    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
+../../home/profiles/base.nix
+../../home/profiles/machine.nix
+../../home/users/nixos.nix
   ];
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
@@ -40,10 +40,17 @@
   # This is required so that pod can reach the API server (running on port 6443 by default)
   networking.firewall.allowedTCPPorts = [ 6443 ];
 
+  # Enable Kubernetes
   services.k3s = {
     enable = true;
     role = "server";
   };
+
+  # Enable YubiKey support
+  services.udev.packages = [ pkgs.yubikey-personalization ];
+
+  # Enable disk auto-mounting
+  services.gvfs.enable = true;
 
   networking.hostName = "nishir";
 }
