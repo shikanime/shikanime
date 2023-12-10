@@ -52,6 +52,9 @@
       packages = nixpkgs.lib.genAttrs systems (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
+          altashar = self.homeConfigurations."williamphetsinorath@altashar".activationPackage;
+          ishtar = self.homeConfigurations."shika@ishtar".activationPackage;
+          devcontainer = self.homeConfigurations.vscode.activationPackage;
           metatube = pkgs.callPackage ./pkgs/metatube { };
         }
       );
@@ -84,7 +87,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/altashar.nix
+            ./modules/home/users/altashar.nix
           ];
         };
         "shika@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -93,7 +96,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/ishtar.nix
+            ./modules/home/users/ishtar.nix
           ];
         };
         vscode = home-manager.lib.homeManagerConfiguration {
@@ -102,7 +105,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/devcontainer.nix
+            ./modules/home/users/devcontainer.nix
           ];
         };
       };
