@@ -27,11 +27,4 @@
 
   # Cache SSH keys
   programs.ssh.startAgent = true;
-
-  # Cache GnuPG keys
-  programs.gnupg.agent = {
-    enable = true;
-    enableExtraSocket = true;
-    pinentryFlavor = "tty";
-  };
 }
