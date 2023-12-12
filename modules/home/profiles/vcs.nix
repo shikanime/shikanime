@@ -135,7 +135,7 @@ in
     "Library/Preferences/sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
       ui = {
         username = "${userName} <${userEmail}>";
-        ignore.gitconfig = "${config.home.homeDirectory}/.config/git/ignore"
+        ignore.gitconfig = "${config.home.homeDirectory}/.config/git/ignore";
       };
       gpg.key = signingKey;
       hooks = {
