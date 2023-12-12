@@ -133,7 +133,10 @@ in
 
   home.file = lib.attrsets.optionalAttrs pkgs.stdenv.isDarwin {
     "Library/Preferences/sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
-      ui.username = "${userName} <${userEmail}>";
+      ui = {
+        username = "${userName} <${userEmail}>";
+        ignore.gitconfig = "${config.home.homeDirectory}/.config/git/ignore"
+      };
       gpg.key = signingKey;
       hooks = {
         post-init = "git init --separate-git-dir .sl/store/git .";
