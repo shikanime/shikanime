@@ -15,7 +15,6 @@ with lib;
     pkgs.awscli2
     pkgs.cloudflared
     pkgs.act
-    pkgs.gh
     pkgs.glab
     pkgs.kubelogin
     pkgs.kubelogin-oidc
