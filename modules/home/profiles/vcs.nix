@@ -3,7 +3,6 @@
 with lib;
 
 let
-  iniFormat = pkgs.formats.ini { };
   userName = "William Phetsinorath";
   userEmail = "william.phetsinorath@shikanime.studio";
   signingKey = "EB584D3ACB58F471";
@@ -118,21 +117,9 @@ in
     };
   };
 
-  xdg.configFile = lib.attrsets.optionalAttrs pkgs.stdenv.isLinux {
-    "sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
-      ui.username = "${userName} <${userEmail}>";
-      gpg.key = signingKey;
-      hooks = {
-        post-init = "git init --separate-git-dir .sl/store/git .";
-        post-clone = "git init --separate-git-dir .sl/store/git .";
-        txclose = "git update-ref HEAD `sl whereami`";
-        update = "git update-ref HEAD $HG_PARENT1";
-      };
-    };
-  };
-
-  home.file = lib.attrsets.optionalAttrs pkgs.stdenv.isDarwin {
-    "Library/Preferences/sapling/sapling.conf".source = iniFormat.generate "sapling.conf" {
+  programs.sapling = {
+    enable = true;
+    settings = {
       ui = {
         username = "${userName} <${userEmail}>";
         "ignore.gitconfig" = "${config.home.homeDirectory}/.config/git/ignore";
