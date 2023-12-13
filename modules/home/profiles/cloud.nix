@@ -38,7 +38,10 @@ with lib;
 
   programs.gh = {
     enable = true;
-    settings.git_protocol = "ssh";
+    settings = {
+      version = 1;
+      git_protocol = "ssh";
+    };
   };
 
   programs.zsh.oh-my-zsh.plugins = [
