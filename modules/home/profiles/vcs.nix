@@ -137,6 +137,13 @@ in
         username = "${userName} <${userEmail}>";
         "ignore.gitconfig" = "${config.home.homeDirectory}/.config/git/ignore";
       };
+      merge-tools = {
+        "code.args" = "--wait --diff $local $other";
+        "code.gui" = true;
+        "code.priority" = 10;
+        "nvim.args" = "-d $local $other $base - c 'redraw | echomsg \"hg merge conflict, type \":cq\" to abort vimdiff\"'";
+        "nvim.priority" = 100;
+      };
       gpg.key = signingKey;
       hooks = {
         post-init = "git init --separate-git-dir .sl/store/git .";
