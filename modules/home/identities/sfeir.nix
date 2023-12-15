@@ -5,6 +5,7 @@
     "gitlab.sfeir.internal" = {
       hostname = "gitlab.com";
       identityFile = [ "${config.home.homeDirectory}/.ssh/sfeir_ed25519" ];
+      identitiesOnly = true;
     };
   };
 
