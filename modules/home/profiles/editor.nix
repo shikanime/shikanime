@@ -1,5 +1,24 @@
 { pkgs, ... }:
 
+let
+  treesitter = pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
+    json
+    toml
+    make
+    markdown
+    rst
+    dot
+    nix
+    comment
+    diff
+    git_rebase
+    gitattributes
+    jq
+    markdown_inline
+    regex
+    vim
+  ]);
+in
 {
   programs.neovim = {
     enable = true;
@@ -16,27 +35,25 @@
       pkgs.vimPlugins.vim-commentary
       pkgs.vimPlugins.vim-surround
       pkgs.vimPlugins.vim-repeat
-      pkgs.vimPlugins.nerdtree
       pkgs.vimPlugins.telescope-nvim
       pkgs.vimPlugins.fzf-vim
-      (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
-        json
-        toml
-        make
-        markdown
-        rst
-        dot
-        nix
-        comment
-        diff
-        git_rebase
-        gitattributes
-        jq
-        markdown_inline
-        regex
-        vim
-      ]))
+      pkgs.vimPlugins.catppuccin-nvim
+      treesitter
     ];
+    extraLuaConfig = ''
+      vim.g.catppuccin_flavour = "latte"
+      vim.g.airline_theme = "catppuccin"
+      require("catppuccin").setup({
+        integrations = {
+          gitgutter = true,
+          treesitter = true,
+          telescope = {
+            enabled = true,
+          }
+        }
+      })
+      vim.cmd [[colorscheme catppuccin]]
+    '';
     extraConfig = ''
       set number relativenumber
     '';
