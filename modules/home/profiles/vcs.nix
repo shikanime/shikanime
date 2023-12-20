@@ -118,12 +118,10 @@ in
   };
 
   programs.sapling = {
+    inherit userName userEmail;
     enable = true;
-    settings = {
-      ui = {
-        username = "${userName} <${userEmail}>";
-        "ignore.gitconfig" = "${config.home.homeDirectory}/.config/git/ignore";
-      };
+    extraConfig = {
+      ui."ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       merge-tools = {
         "nvim.args" = "-d $local $other $base -c 'redraw | echomsg \"hg merge conflict, type \":cq\" to abort vimdiff\"'";
         "nvim.priority" = 10;
