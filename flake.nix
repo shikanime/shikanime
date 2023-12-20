@@ -87,7 +87,6 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/programs/sapling.nix
             ./modules/home/hosts/altashar.nix
           ];
         };
@@ -97,7 +96,6 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/programs/sapling.nix
             ./modules/home/hosts/ishtar.nix
           ];
         };
@@ -107,7 +105,6 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/programs/sapling.nix
             ./modules/home/hosts/devcontainer.nix
           ];
         };
