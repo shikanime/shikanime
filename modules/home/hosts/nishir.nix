@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ../profiles/base.nix
