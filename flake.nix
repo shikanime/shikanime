@@ -99,6 +99,15 @@
             ./modules/home/hosts/ishtar.nix
           ];
         };
+        "shika@nishir" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "aarch64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/nishir.nix
+          ];
+        };
         vscode = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";

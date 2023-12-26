@@ -2,6 +2,13 @@
 
 with lib;
 
+let
+  initExtra = mkAfter ''
+    # Check if user environment variables are set because containers doesn't set
+    # them by default and Home Manager needs them to work properly
+    export USER=''${USER:-$(whoami)}
+  '';
+in
 {
   imports = [
     ../identities/sfeir.nix
@@ -19,18 +26,17 @@ with lib;
     ../profiles/go.nix
   ];
 
-  home.homeDirectory = "/home/vscode";
-  home.username = "vscode";
+  home = {
+    homeDirectory = "/home/vscode";
+    username = "vscode";
+  };
 
   targets.genericLinux.enable = true;
 
   nix.package = pkgs.nix;
 
-  programs.zsh.initExtra = mkBefore ''
-    # Check if user environment variables are set because containers doesn't set
-    # them by default and Home Manager needs them to work properly
-    export USER=''${USER:-$(whoami)}
-  '';
+  programs.zsh = { inherit initExtra; };
+  programs.bash = { inherit initExtra; };
 
   home.packages = [ pkgs.iputils ];
 }
