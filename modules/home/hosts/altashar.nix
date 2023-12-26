@@ -25,8 +25,10 @@ in
     ../profiles/go.nix
   ];
 
-  home.homeDirectory = "/Users/williamphetsinorath";
-  home.username = "williamphetsinorath";
+  home = {
+    homeDirectory = "/Users/williamphetsinorath";
+    username = "williamphetsinorath";
+  };
 
   nix.package = pkgs.nix;
 
