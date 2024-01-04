@@ -53,5 +53,35 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
 
+  # Add wireless service
+  networking.wireless.enable = true;
+
+  # Set up wireless access point
+  services.hostapd = {
+    enable = true;
+    radios = {
+      # Simple 2.4GHz AP
+      wlp2s0 = {
+        networks.wlp2s0 = {
+          ssid = "Vintage Korean 2.4GHz";
+          authentication.saePasswords = [{ password = "6P6d&8WmYH!rvv"; }];
+        };
+      };
+
+      # WiFi 5 (5GHz) with two advertised networks
+      wlp3s0 = {
+        band = "5g";
+        # Enable automatic channel selection (ACS)
+        networks.wlp3s0 = {
+          ssid = "Vintage Korean";
+          authentication.saePasswords = [{ password = "6P6d&8WmYH!rvv"; }];
+        };
+      };
+    };
+  };
+
+  # Bridge ethernet and wifi
+  networking.bridges.br0.interfaces = [ "eth0" "wlp2s0" "wlp3s0" ];
+
   networking.hostName = "nishir";
 }
