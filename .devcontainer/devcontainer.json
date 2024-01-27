@@ -2,7 +2,7 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/base:jammy",
   "features": {
     "ghcr.io/devcontainers/features/nix:1": {
-      "extraNixConfig": "experimental-features = nix-command flakes,accept-flake-config = true,trusted-users = root vscode"
+      "extraNixConfig": "experimental-features = nix-command flakes configurable-impure-env,accept-flake-config = true,trusted-users = root vscode"
     },
     "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true
