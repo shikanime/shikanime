@@ -15,8 +15,6 @@ in
 
   home.packages = [
     python
-    pkgs.poetry
-    pkgs.pdm
     pkgs.pipx
   ];
 }
