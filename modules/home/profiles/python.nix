@@ -1,10 +1,5 @@
 { pkgs, ... }:
 
-let
-  python = pkgs.python3Full.withPackages (ps: [
-    ps.virtualenv
-  ]);
-in
 {
   programs.neovim.withPython3 = true;
 
@@ -14,7 +9,7 @@ in
   ];
 
   home.packages = [
-    python
+    pkgs.python3Full
     pkgs.pipx
   ];
 }
