@@ -5,6 +5,7 @@ with lib;
 {
   home.packages = [
     pkgs.terraform
+    pkgs.docker
     pkgs.kubectl
     pkgs.kubernetes-helm
     pkgs.kustomize
