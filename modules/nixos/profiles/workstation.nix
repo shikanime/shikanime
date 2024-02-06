@@ -5,6 +5,9 @@
     useUserPackages = true;
   };
 
+  # Desktop environment
+  programs.hyprland.enable = true;
+
   # Deploy a nice default user friendly shell prompt
   programs.zsh.enable = true;
 
