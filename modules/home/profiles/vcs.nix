@@ -8,13 +8,6 @@ let
   signingKey = "EB584D3ACB58F471";
 in
 {
-  home.packages = [
-    pkgs.darcs
-    pkgs.subversion
-    pkgs.sapling
-    pkgs.graphite-cli
-  ];
-
   programs.zsh.oh-my-zsh.plugins = [
     "git"
   ];
@@ -103,16 +96,6 @@ in
       rebase = {
         autostash = true;
         updateRefs = true;
-      };
-    };
-  };
-
-  programs.jujutsu = {
-    enable = true;
-    settings = {
-      user = {
-        name = userName;
-        email = userEmail;
       };
     };
   };
