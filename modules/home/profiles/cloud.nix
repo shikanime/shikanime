@@ -15,6 +15,7 @@ with lib;
     pkgs.azure-cli
     pkgs.awscli2
     pkgs.cloudflared
+    pkgs.tailscale
     pkgs.act
     pkgs.glab
     pkgs.kubelogin
