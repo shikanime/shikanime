@@ -12,6 +12,7 @@ in
 {
   imports = [
     ../identities/sfeir.nix
+    ../identities/shikanime.nix
     ../profiles/base.nix
     ../profiles/editor.nix
     ../profiles/workstation.nix

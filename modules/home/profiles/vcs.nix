@@ -1,30 +1,16 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
-with lib;
-
-let
-  userName = "William Phetsinorath";
-  userEmail = "william.phetsinorath@shikanime.studio";
-  signingKey = "EB584D3ACB58F471";
-in
 {
   programs.zsh.oh-my-zsh.plugins = [
     "git"
   ];
 
-  programs.mercurial = {
-    inherit userName userEmail;
-    enable = true;
-  };
+  programs.mercurial.enable = true;
 
   programs.git = {
-    inherit userName userEmail;
     enable = true;
     lfs.enable = true;
-    signing = {
-      key = signingKey;
-      signByDefault = true;
-    };
+    signing.signByDefault = true;
     aliases = {
       filing = "commit --amend --signoff --no-edit --reset-author";
       refiling = "rebase --exec 'git filing'";
@@ -101,7 +87,6 @@ in
   };
 
   programs.sapling = {
-    inherit userName userEmail;
     enable = true;
     extraConfig = {
       ui."ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
@@ -109,7 +94,6 @@ in
         "nvim.args" = "-d $local $other $base -c 'redraw | echomsg \"hg merge conflict, type \":cq\" to abort vimdiff\"'";
         "nvim.priority" = 10;
       };
-      gpg.key = signingKey;
       hooks = {
         post-init = "git init --separate-git-dir .sl/store/git .";
         post-clone = "git init --separate-git-dir .sl/store/git .";
