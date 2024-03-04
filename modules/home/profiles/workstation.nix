@@ -69,5 +69,19 @@ with lib;
   programs.ssh = {
     enable = true;
     package = pkgs.openssh;
+    matchBlocks = {
+      "ishtar.tail9fed3.ts.net" = {
+        extraOptions.User = "shika";
+      };
+      "ishtar-ubuntu.tail9fed3.ts.net" = {
+        extraOptions.User = "shika";
+      };
+      "altashar.tail9fed3.ts.net" = {
+        extraOptions.User = "williamphetsinorath";
+      };
+      "nishir.tail9fed3.ts.net" = {
+        extraOptions.User = "shika";
+      };
+    };
   };
 }
