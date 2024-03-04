@@ -69,5 +69,6 @@ with lib;
   programs.ssh = {
     enable = true;
     package = pkgs.openssh;
+    addKeysToAgent = "yes";
   };
 }
