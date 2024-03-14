@@ -4,24 +4,12 @@ with lib;
 
 {
   home.packages = [
-    pkgs.terraform
-    pkgs.docker
-    pkgs.kubectl
-    pkgs.kubernetes-helm
-    pkgs.kustomize
-    pkgs.skaffold
-    pkgs.kind
-    pkgs.minikube
     pkgs.azure-cli
     pkgs.awscli2
-    pkgs.cloudflared
     pkgs.aliyun-cli
-    pkgs.tailscale
-    pkgs.act
     pkgs.glab
     pkgs.kubelogin
     pkgs.kubelogin-oidc
-    pkgs.postgresql
     (pkgs.google-cloud-sdk.withExtraComponents (
       with pkgs.google-cloud-sdk.components; [
         alpha

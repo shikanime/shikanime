@@ -19,7 +19,6 @@ in
     ../profiles/vcs.nix
     ../profiles/cloud.nix
     ../profiles/javascript.nix
-    ../profiles/java.nix
     ../profiles/python.nix
     ../profiles/native.nix
     ../profiles/beam.nix
