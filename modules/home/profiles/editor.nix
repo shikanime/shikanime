@@ -54,8 +54,5 @@ in
       })
       vim.cmd [[colorscheme catppuccin]]
     '';
-    extraConfig = ''
-      set number relativenumber
-    '';
   };
 }
