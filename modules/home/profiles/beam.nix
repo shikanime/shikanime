@@ -1,12 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [
-    pkgs.elixir
-    pkgs.erlang
-    pkgs.rebar3
-  ];
-
   # Local programs
   home.sessionPath = [
     "${config.xdg.dataHome}/mix/escripts"

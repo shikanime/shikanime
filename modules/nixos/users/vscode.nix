@@ -25,7 +25,6 @@
     ../../home/profiles/vcs.nix
     ../../home/profiles/cloud.nix
     ../../home/profiles/javascript.nix
-    ../../home/profiles/java.nix
     ../../home/profiles/python.nix
     ../../home/profiles/native.nix
     ../../home/profiles/beam.nix
