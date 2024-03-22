@@ -27,11 +27,12 @@
 
   services.gpg-agent = {
     enable = true;
-    enableSshSupport = true;
     enableExtraSocket = true;
     defaultCacheTtl = 4 * 60 * 60;
     pinentryFlavor = "gtk2";
   };
+
+  services.ssh-agent.enable = true;
 
   targets.genericLinux.enable = true;
 
