@@ -34,6 +34,8 @@
     })
   ];
 
+  networking.networkmanager.enable = true;
+
   # Enable Wake-on-LAN on the ethernet port
   networking.interfaces.eth0.wakeOnLan.enable = true;
 
@@ -47,8 +49,29 @@
   };
 
   # Enable disk auto-mounting
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
+  systemd.mounts = [
+    {
+      what = "/dev/disk/by-label/Satellite";
+      where = "/mnt/satellite";
+      description = "Mount the Satellite disk";
+    }
+  ];
+  systemd.automounts = [
+    {
+      where = "/mnt/satellite";
+      description = "Automount the Satellite disk";
+      wantedBy = ["multi-user.target"];
+    }
+  ];
+
+  # Longhorn requires open-iscsi
+  services.openiscsi = {
+    enable = true;
+    name = "iqn.2024-03.studio.shikanime.nishir:1";
+  };
+
+  # Enable cross platform build
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   # Longhorn requires open-iscsi
   services.openiscsi = {
