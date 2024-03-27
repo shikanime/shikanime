@@ -6,7 +6,7 @@
     "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
     ../profiles/base.nix
     ../profiles/machine.nix
-    ../users/nixos.nix
+    ../users/shika.nix
   ];
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
@@ -46,12 +46,18 @@
     role = "server";
   };
 
-  # Enable YubiKey support
-  services.udev.packages = [ pkgs.yubikey-personalization ];
-
   # Enable disk auto-mounting
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+
+  # Longhorn requires open-iscsi
+  services.openiscsi = {
+    enable = true;
+    name = "iqn.2024-03.studio.shikanime.nishir:1";
+  };
+
+  # Enable cross platform build
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   networking.hostName = "nishir";
 }
