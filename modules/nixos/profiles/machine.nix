@@ -37,7 +37,13 @@
     enable = true;
     openFirewall = true;
     useRoutingFeatures = "server";
-    extraUpFlags = [ "--ssh" "--advertise-exit-node" ];
+    extraUpFlags = [
+      "--ssh"
+      "--accept-dns"
+      "--advertise-exit-node"
+      "--advertise-tags"
+      "tag:server,tag:ssh"
+    ];
   };
 
   # Enable Network Time Protocol
