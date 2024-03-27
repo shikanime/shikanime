@@ -6,7 +6,6 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/profiles/hardened.nix"
     "${modulesPath}/virtualisation/qemu-vm.nix"
-    "${modulesPath}/installer/cd-dvd/installation-cd-graphical-gnome.nix"
     ../profiles/base.nix
     ../profiles/machine.nix
     ../profiles/editor.nix
