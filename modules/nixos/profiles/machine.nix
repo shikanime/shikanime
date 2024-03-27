@@ -1,7 +1,4 @@
 {
-  # Enable modern IPv6 support
-  networking.enableIPv6 = true;
-
   # Enable well known secure DNS servers
   networking.nameservers = [
     "1.1.1.1"
