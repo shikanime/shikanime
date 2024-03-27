@@ -3,7 +3,7 @@
 with lib;
 
 let
-  initExtra = mkAfter ''
+  initExtra = ''
     if command -v brew >/dev/null; then
       eval "$(brew shellenv)"
     fi

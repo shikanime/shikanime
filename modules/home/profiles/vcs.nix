@@ -97,8 +97,8 @@
       hooks = {
         post-init = "git init --separate-git-dir .sl/store/git .";
         post-clone = "git init --separate-git-dir .sl/store/git .";
-        txclose = "git update-ref HEAD `sl whereami`";
-        update = "git update-ref HEAD $HG_PARENT1";
+        txclose = "git update-ref HEAD `sl whereami` && git read-tree HEAD";
+        update = "git update-ref HEAD $HG_PARENT1 && git read-tree HEAD";
       };
     };
   };

@@ -45,15 +45,6 @@ with lib;
     };
   };
 
-  programs.nushell = {
-    enable = true;
-    extraConfig = ''
-      $env.config = {
-        show_banner: false,
-      }
-    '';
-  };
-
   programs.starship.enable = true;
 
   programs.direnv = {
@@ -69,19 +60,6 @@ with lib;
   programs.ssh = {
     enable = true;
     package = pkgs.openssh;
-    matchBlocks = {
-      "ishtar.tail9fed3.ts.net" = {
-        extraOptions.User = "shika";
-      };
-      "ishtar-ubuntu.tail9fed3.ts.net" = {
-        extraOptions.User = "shika";
-      };
-      "altashar.tail9fed3.ts.net" = {
-        extraOptions.User = "williamphetsinorath";
-      };
-      "nishir.tail9fed3.ts.net" = {
-        extraOptions.User = "shika";
-      };
-    };
+    addKeysToAgent = "yes";
   };
 }
