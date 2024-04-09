@@ -6,7 +6,7 @@
     "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
     ../profiles/base.nix
     ../profiles/machine.nix
-    ../users/nixos.nix
+    ../users/shika.nix
   ];
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
@@ -46,12 +46,40 @@
     role = "server";
   };
 
-  # Enable YubiKey support
-  services.udev.packages = [ pkgs.yubikey-personalization ];
-
   # Enable disk auto-mounting
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
+  systemd.mounts = [
+    {
+      what = "/dev/disk/by-label/Satellite";
+      where = "/mnt/satellite";
+      description = "Mount the Satellite disk";
+    }
+    {
+      what = "/dev/disk/by-label/Voyager";
+      where = "/mnt/voyager";
+      description = "Mount the Voyager disk";
+    }
+  ];
+  systemd.automounts = [
+    {
+      where = "/mnt/satellite";
+      description = "Automount the Satellite disk";
+      wantedBy = [ "multi-user.target" ];
+    }
+    {
+      where = "/mnt/voyager";
+      description = "Automount the Voyager disk";
+      wantedBy = [ "multi-user.target" ];
+    }
+  ];
+
+  # Longhorn requires open-iscsi
+  services.openiscsi = {
+    enable = true;
+    name = "iqn.2024-03.studio.shikanime:nishir";
+  };
+
+  # Enable cross platform build
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   networking.hostName = "nishir";
 }
