@@ -32,32 +32,35 @@
     , home-manager
     , devenv
     , ...
-    }@inputs:
-    let
-      systems = [
-        "aarch64-darwin"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "x86_64-linux"
-      ];
-    in
-    {
-      formatter = nixpkgs.lib.genAttrs systems (system:
+    }@inputs: {
+      formatter = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
         let pkgs = import nixpkgs { inherit system; }; in
         pkgs.nixpkgs-fmt
       );
 
-      packages = nixpkgs.lib.genAttrs systems (system:
-        let pkgs = import nixpkgs { inherit system; }; in {
-          nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
-          altashar = self.homeConfigurations."williamphetsinorath@altashar".activationPackage;
-          ishtar = self.homeConfigurations."shika@ishtar".activationPackage;
-          devcontainer = self.homeConfigurations.vscode.activationPackage;
-          metatube = pkgs.callPackage ./pkgs/metatube { };
-        }
-      );
+      packages = nixpkgs.lib.mergeAttrsList [
+        (nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
+          let pkgs = import nixpkgs { inherit system; }; in {
+            elkia-qemu-image =
+              self.nixosConfigurations.elkia-qemu.config.system.build.qcowImage;
+            elvengard-hyperv-image =
+              self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
+            oceando-docker =
+              self.nixosConfigurations.oceando-docker.config.system.build.tarball;
+            metatube = pkgs.callPackage ./pkgs/metatube { };
+          }
+        ))
+        (nixpkgs.lib.genAttrs [ "aarch64-linux" ] (system:
+          let pkgs = import nixpkgs { inherit system; }; in {
+            nishir-virtualbox-image =
+              self.nixosConfigurations.nishir-virtualbox.config.system.build.virtualBoxOVA;
+            nishir-raspeberry-pi4-image =
+              self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
+          }
+        ))
+      ];
 
-      devShells = nixpkgs.lib.genAttrs systems (system:
+      devShells = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           default = devenv.lib.mkShell {
             inherit inputs pkgs;
@@ -69,13 +72,43 @@
         }
       );
 
-      nixosConfigurations.nishir = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [
-          ./modules/nixos/hosts/nishir.nix
-          home-manager.nixosModules.home-manager
-          nixos-hardware.nixosModules.raspberry-pi-4
-        ];
+      nixosConfigurations = {
+        elkia-qemu = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./modules/nixos/hosts/elkia-qemu.nix
+            home-manager.nixosModules.home-manager
+          ];
+        };
+        elvengard-hyperv = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./modules/nixos/hosts/elvengard-hyperv.nix
+            home-manager.nixosModules.home-manager
+          ];
+        };
+        nishir-raspeberry-pi4 = nixpkgs.lib.nixosSystem {
+          system = "aarch64-linux";
+          modules = [
+            ./modules/nixos/hosts/nishir-raspberry-pi-4.nix
+            home-manager.nixosModules.home-manager
+            nixos-hardware.nixosModules.raspberry-pi-4
+          ];
+        };
+        nishir-virtualbox = nixpkgs.lib.nixosSystem {
+          system = "aarch64-linux";
+          modules = [
+            ./modules/nixos/hosts/nishir-virtualbox.nix
+            home-manager.nixosModules.home-manager
+          ];
+        };
+        oceando-docker = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./modules/nixos/hosts/oceando-docker.nix
+            home-manager.nixosModules.home-manager
+          ];
+        };
       };
 
       homeConfigurations = {
