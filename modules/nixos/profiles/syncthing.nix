@@ -3,13 +3,6 @@
 with lib;
 
 {
-  # Configure the kernel
-  boot.kernel.sysctl = {
-    "kernel.threads-max" = mkDefault 8192;
-    "fs.file-max" = mkDefault 131072;
-    "vm.max_map_count" = mkDefault 524288;
-  };
-
   # Increase security limits
   security.pam.loginLimits = [
     { domain = "*"; item = "nofile"; type = "-"; value = "131072"; }
@@ -20,7 +13,7 @@ with lib;
   services.syncthing = {
     enable = true;
     relay.enable = true;
-    devices = {
+    settings.devices = {
       Altashar = {
         id = "RK4UC45-4KD5VQ5-EIV5OMV-LTJLSBV-R5KZ3WU-FGWLOXA-M7X4D3I-NUPBXAH";
         name = "Altashar";
