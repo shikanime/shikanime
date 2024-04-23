@@ -32,32 +32,29 @@
     , home-manager
     , devenv
     , ...
-    }@inputs:
-    let
-      systems = [
-        "aarch64-darwin"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "x86_64-linux"
-      ];
-    in
-    {
-      formatter = nixpkgs.lib.genAttrs systems (system:
+    }@inputs: {
+      formatter = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
         let pkgs = import nixpkgs { inherit system; }; in
         pkgs.nixpkgs-fmt
       );
 
-      packages = nixpkgs.lib.genAttrs systems (system:
-        let pkgs = import nixpkgs { inherit system; }; in {
-          nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
-          altashar = self.homeConfigurations."williamphetsinorath@altashar".activationPackage;
-          ishtar = self.homeConfigurations."shika@ishtar".activationPackage;
-          devcontainer = self.homeConfigurations.vscode.activationPackage;
-          metatube = pkgs.callPackage ./pkgs/metatube { };
-        }
-      );
+      packages = nixpkgs.lib.mergeAttrsList [
+        (nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
+          let pkgs = import nixpkgs { inherit system; }; in {
+            elvengard-hyperv-image =
+              self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
+            metatube = pkgs.callPackage ./pkgs/metatube { };
+          }
+        ))
+        (nixpkgs.lib.genAttrs [ "aarch64-linux" ] (system:
+          let pkgs = import nixpkgs { inherit system; }; in {
+            nishir-raspeberry-pi4-image =
+              self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
+          }
+        ))
+      ];
 
-      devShells = nixpkgs.lib.genAttrs systems (system:
+      devShells = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           default = devenv.lib.mkShell {
             inherit inputs pkgs;
@@ -69,13 +66,22 @@
         }
       );
 
-      nixosConfigurations.nishir = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [
-          ./modules/nixos/hosts/nishir.nix
-          home-manager.nixosModules.home-manager
-          nixos-hardware.nixosModules.raspberry-pi-4
-        ];
+      nixosConfigurations = {
+        elvengard-hyperv = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./modules/nixos/hosts/elvengard-hyperv.nix
+            home-manager.nixosModules.home-manager
+          ];
+        };
+        nishir-raspeberry-pi4 = nixpkgs.lib.nixosSystem {
+          system = "aarch64-linux";
+          modules = [
+            ./modules/nixos/hosts/nishir-raspberry-pi-4.nix
+            home-manager.nixosModules.home-manager
+            nixos-hardware.nixosModules.raspberry-pi-4
+          ];
+        };
       };
 
       homeConfigurations = {
