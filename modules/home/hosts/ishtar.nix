@@ -30,7 +30,6 @@
     enableSshSupport = true;
     enableExtraSocket = true;
     defaultCacheTtl = 4 * 60 * 60;
-    pinentryFlavor = "gtk2";
   };
 
   targets.genericLinux.enable = true;
