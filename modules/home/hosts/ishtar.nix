@@ -39,4 +39,7 @@
 
   # CUDA support
   home.sessionVariables.LD_LIBRARY_PATH = "/usr/lib/wsl/lib";
+
+  # Browser open support
+  home.sessionVariables.BROWSER = "${pkgs.wslu}/bin/wslview";
 }
