@@ -30,6 +30,7 @@
     enableSshSupport = true;
     enableExtraSocket = true;
     defaultCacheTtl = 4 * 60 * 60;
+    pinentryPackage = pkgs.pinentry-qt;
   };
 
   targets.genericLinux.enable = true;
