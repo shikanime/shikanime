@@ -64,7 +64,10 @@ with lib;
 
   programs.git = {
     extraConfig.credential = {
-      "https://github.com".useHttpPath = true;
+      "https://github.com" = {
+        useHttpPath = true;
+        helper = "${pkgs.gh}/bin/gh auth git-credential";
+      };
       "https://gitlab.com" = {
         useHttpPath = true;
         helper = "${pkgs.glab}/bin/glab auth git-credential";
