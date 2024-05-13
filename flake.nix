@@ -43,7 +43,6 @@
           let pkgs = import nixpkgs { inherit system; }; in {
             elvengard-hyperv-image =
               self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
-            metatube = pkgs.callPackage ./pkgs/metatube { };
           }
         ))
         (nixpkgs.lib.genAttrs [ "aarch64-linux" ] (system:
