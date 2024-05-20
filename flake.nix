@@ -84,7 +84,7 @@
       };
 
       homeConfigurations = {
-        "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
+        altashar = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-darwin";
             config.allowUnfree = true;
@@ -93,7 +93,7 @@
             ./modules/home/hosts/altashar.nix
           ];
         };
-        "shika@ishtar" = home-manager.lib.homeManagerConfiguration {
+        ishtar = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
@@ -102,7 +102,7 @@
             ./modules/home/hosts/ishtar.nix
           ];
         };
-        "shika@nishir" = home-manager.lib.homeManagerConfiguration {
+        nishir = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "aarch64-linux";
             config.allowUnfree = true;
