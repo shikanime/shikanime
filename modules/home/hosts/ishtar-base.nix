@@ -17,11 +17,7 @@
     ../profiles/go.nix
   ];
 
-  home = {
-    homeDirectory = "/home/shika";
-    username = "shika";
-    packages = [ pkgs.wslu ];
-  };
+  home.packages = [ pkgs.wslu ];
 
   nix.package = pkgs.nix;
 
