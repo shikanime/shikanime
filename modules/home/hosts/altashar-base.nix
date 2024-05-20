@@ -25,11 +25,6 @@ in
     ../profiles/go.nix
   ];
 
-  home = {
-    homeDirectory = "/Users/williamphetsinorath";
-    username = "williamphetsinorath";
-  };
-
   nix.package = pkgs.nix;
 
   programs.zsh = { inherit initExtra; };
