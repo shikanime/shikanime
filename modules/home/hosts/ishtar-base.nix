@@ -32,7 +32,7 @@
   targets.genericLinux.enable = true;
 
   programs.git.extraConfig.credential.helper =
-    "/mnt/c/User/willi/scoop/shims/git-credential-manager.exe";
+    "/mnt/c/Users/willi/scoop/shims/git-credential-manager.exe";
 
   # CUDA support
   home.sessionVariables.LD_LIBRARY_PATH = "/usr/lib/wsl/lib";
