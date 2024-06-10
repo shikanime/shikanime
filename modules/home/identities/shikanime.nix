@@ -26,4 +26,12 @@ in
     inherit userName userEmail;
     extraConfig.gpg.key = signingKey;
   };
+
+  programs.jujutsu.settings = {
+    signing = {
+      sign-all = true;
+      backend = "gpg";
+      key = userEmail;
+    };
+  };
 }

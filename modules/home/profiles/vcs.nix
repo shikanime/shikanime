@@ -102,4 +102,9 @@
       };
     };
   };
+
+  programs.jujutsu = {
+    enable = true;
+    settings.core.excludesfile = "${config.home.homeDirectory}/.config/git/ignore";
+  };
 }
