@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -32,7 +32,7 @@
   targets.genericLinux.enable = true;
 
   programs.git.extraConfig.credential.helper =
-    "/mnt/c/Users/willi/scoop/shims/git-credential-manager.exe";
+    "/mnt/c/Users/${config.home.username}/scoop/shims/git-credential-manager.exe";
 
   # CUDA support
   home.sessionVariables.LD_LIBRARY_PATH = "/usr/lib/wsl/lib";
