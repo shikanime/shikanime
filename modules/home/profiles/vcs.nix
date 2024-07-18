@@ -106,8 +106,12 @@
   programs.jujutsu = {
     enable = true;
     settings = {
-      core.excludesfile = "${config.home.homeDirectory}/.config/git/ignore";
+      core = {
+        fsmonitor = "watchman";
+        watchman.register_snapshot_trigger = true;
+        excludesfile = "${config.home.homeDirectory}/.config/git/ignore";
+      };
       ui.default-command = "log";
+      git.push-branch-prefix = "trunks/shikanime/";
     };
-  };
-}
+  }
