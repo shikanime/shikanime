@@ -1,34 +1,42 @@
-{ config, ... }:
-
+let
+  user = "phetsinorath.w";
+  organization = "Sfeir";
+  userName = "William Phetsinorath";
+  userEmail = "${userName}@sfeir.com";
+in
 {
-  programs.ssh.matchBlocks = {
-    "gitlab.sfeir.internal" = {
-      hostname = "gitlab.com";
-      identityFile = [ "${config.home.homeDirectory}/.ssh/sfeir_ed25519" ];
-      identitiesOnly = true;
-      forwardAgent = true;
-    };
-  };
-
   programs.git.includes =
-    let
-      name = "William Phetsinorath";
-      email = "phetsinorath.w@sfeir.com";
-      signingKey = "2EC6BC5847E93460";
-    in
+    let signingKey = "2EC6BC5847E93460"; in
     [
       {
-        condition = "hasconfig:remote.*.url:git@gitlab.com:Sfeir/**";
-        contents.user = { inherit name email signingKey; };
+        condition = "hasconfig:remote.*.url:gitlab.com/${organization}/**";
+        contents.user = {
+          inherit signingKey;
+          name = userName;
+          email = userEmail;
+        };
       }
       {
-        condition = "hasconfig:remote.*.url:git@gitlab.com:phetsinorath.w/**";
+        condition = "hasconfig:remote.*.url:gitlab.com/${user}/**";
         contents.user = { inherit name email signingKey; };
       }
     ];
 
-  programs.git.extraConfig.url = {
-    "ssh://git@gitlab.sfeir.internal/Sfeir".insteadOf = "ssh://git@gitlab.com/Sfeir";
-    "ssh://git@gitlab.sfeir.internal/phetsinorath.w".insteadOf = "ssh://git@gitlab.com/phetsinorath.w";
+  programs.git.extraConfig.credential =
+    {
+      "https://gitlab.com/${organization}".username = user;
+      "https://gitlab.com/${user}".username = user;
+    };
+
+  programs.jujutsu.settings = {
+    user = {
+      name = userName;
+      email = userEmail;
+    };
+    signing = {
+      sign-all = true;
+      backend = "gpg";
+      key = userEmail;
+    };
   };
 }
