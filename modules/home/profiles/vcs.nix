@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = [
+    pkgs.watchman
+  ];
+
   programs.zsh.oh-my-zsh.plugins = [
     "git"
   ];
