@@ -4,35 +4,10 @@ with lib;
 
 {
   home.packages = [
-    pkgs.azure-cli
-    pkgs.awscli2
-    pkgs.aliyun-cli
     pkgs.glab
-    pkgs.kubelogin
-    pkgs.kubelogin-oidc
-    (pkgs.google-cloud-sdk.withExtraComponents (
-      with pkgs.google-cloud-sdk.components; [
-        alpha
-        beta
-        bq
-        gsutil
-        nomos
-        gke-gcloud-auth-plugin
-        gcloud-crc32c
-        cloud-run-proxy
-        log-streaming
-        cloud_sql_proxy
-      ]
-    ))
   ];
 
-  programs.gh = {
-    enable = true;
-    settings = {
-      version = 1;
-      git_protocol = "ssh";
-    };
-  };
+  programs.gh.enable = true;
 
   programs.zsh.oh-my-zsh.plugins = [
     "kubectl"
