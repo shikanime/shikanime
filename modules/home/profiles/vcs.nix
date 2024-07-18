@@ -114,4 +114,5 @@
       ui.default-command = "log";
       git.push-branch-prefix = "trunks/shikanime/";
     };
-  }
+  };
+}
