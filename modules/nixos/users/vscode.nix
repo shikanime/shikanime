@@ -16,7 +16,6 @@
 
   # Configure user home
   home-manager.users.vscode.imports = [
-    ../../home/identities/sfeir.nix
     ../../home/identities/shikanime.nix
     ../../home/profiles/base.nix
     ../../home/profiles/editor.nix
