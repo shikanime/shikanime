@@ -36,22 +36,4 @@ with lib;
     HostkeyAlgorithms = "+ssh-rsa";
     PubkeyAcceptedKeyTypes = "+ssh-rsa";
   };
-
-  programs.git = {
-    extraConfig.credential = {
-      "https://github.com" = {
-        useHttpPath = true;
-        helper = "${pkgs.gh}/bin/gh auth git-credential";
-      };
-      "https://gitlab.com" = {
-        useHttpPath = true;
-        helper = "${pkgs.glab}/bin/glab auth git-credential";
-      };
-      "https://dev.azure.com".useHttpPath = true;
-      "https://source.developers.google.com" = {
-        useHttpPath = true;
-        helper = "${pkgs.google-cloud-sdk}/bin/git-credential-gcloud.sh";
-      };
-    };
-  };
 }
