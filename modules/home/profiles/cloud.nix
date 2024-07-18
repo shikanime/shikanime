@@ -7,13 +7,7 @@ with lib;
     pkgs.glab
   ];
 
-  programs.gh = {
-    enable = true;
-    settings = {
-      version = 1;
-      git_protocol = "ssh";
-    };
-  };
+  programs.gh.enable = true;
 
   programs.zsh.oh-my-zsh.plugins = [
     "kubectl"
