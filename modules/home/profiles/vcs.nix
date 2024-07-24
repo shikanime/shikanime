@@ -105,6 +105,9 @@
 
   programs.jujutsu = {
     enable = true;
-    settings.core.excludesfile = "${config.home.homeDirectory}/.config/git/ignore";
+    settings = {
+      core.excludesfile = "${config.home.homeDirectory}/.config/git/ignore";
+      ui.default-command = "log";
+    };
   };
 }
