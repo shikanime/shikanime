@@ -4,6 +4,9 @@ with lib;
 
 let
   initExtra = ''
+    # Fix GPG TTY
+    export GPG_TTY=$(tty)
+
     if command -v brew >/dev/null; then
       eval "$(brew shellenv)"
     fi
