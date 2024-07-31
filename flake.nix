@@ -93,15 +93,6 @@
             ./modules/home/hosts/kaltashar-shikanimedeva.nix
           ];
         };
-        "williamphetsinorath@altashar" = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs {
-            system = "x86_64-darwin";
-            config.allowUnfree = true;
-          };
-          modules = [
-            ./modules/home/hosts/altashar-williamphetsinorath.nix
-          ];
-        };
         "shika@ishtar" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
