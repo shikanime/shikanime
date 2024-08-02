@@ -24,11 +24,6 @@ in
     ../profiles/go.nix
   ];
 
-  home = {
-    homeDirectory = "/home/vscode";
-    username = "vscode";
-  };
-
   targets.genericLinux.enable = true;
 
   nix.package = pkgs.nix;
