@@ -11,7 +11,6 @@ let
 in
 {
   imports = [
-    ../identities/shikanime.nix
     ../profiles/base.nix
     ../profiles/editor.nix
     ../profiles/workstation.nix
