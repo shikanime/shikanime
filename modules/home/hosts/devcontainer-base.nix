@@ -11,7 +11,6 @@ let
 in
 {
   imports = [
-    ../identities/shikanime.nix
     ../profiles/base.nix
     ../profiles/editor.nix
     ../profiles/workstation.nix
@@ -24,11 +23,6 @@ in
     ../profiles/beam.nix
     ../profiles/go.nix
   ];
-
-  home = {
-    homeDirectory = "/home/vscode";
-    username = "vscode";
-  };
 
   targets.genericLinux.enable = true;
 
