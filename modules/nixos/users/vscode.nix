@@ -16,6 +16,7 @@
 
   # Configure user home
   home-manager.users.vscode.imports = [
+    ../../home/identities/shika.nix
     ../../home/profiles/base.nix
     ../../home/profiles/editor.nix
     ../../home/profiles/workstation.nix
