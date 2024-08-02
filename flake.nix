@@ -114,7 +114,7 @@
             ./modules/home/identities/shika.nix
           ];
         };
-        vscode = home-manager.lib.homeManagerConfiguration {
+        "vscode@shika" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
@@ -122,6 +122,36 @@
           modules = [
             ./modules/home/hosts/devcontainer-vscode.nix
             ./modules/home/identities/shika.nix
+          ];
+        };
+        "vscode@servier" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/devcontainer-vscode.nix
+            ./modules/home/identities/servier.nix
+          ];
+        };
+        "vscode@sfeir" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/devcontainer-vscode.nix
+            ./modules/home/identities/sfeir.nix
+          ];
+        };
+        "vscode@tagheuer" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/devcontainer-vscode.nix
+            ./modules/home/identities/tagheuer.nix
           ];
         };
       };
