@@ -91,7 +91,7 @@
           };
           modules = [
             ./modules/home/hosts/kaltashar-shikanimedeva.nix
-            ./modules/home/identities/shika.nix
+            ./modules/home/identities/shikanime.nix
           ];
         };
         "shika@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -101,7 +101,7 @@
           };
           modules = [
             ./modules/home/hosts/ishtar-shika.nix
-            ./modules/home/identities/shika.nix
+            ./modules/home/identities/shikanime.nix
           ];
         };
         "willi@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -111,7 +111,7 @@
           };
           modules = [
             ./modules/home/hosts/ishtar-willi.nix
-            ./modules/home/identities/shika.nix
+            ./modules/home/identities/shikanime.nix
           ];
         };
         vscode = home-manager.lib.homeManagerConfiguration {
@@ -121,7 +121,7 @@
           };
           modules = [
             ./modules/home/hosts/devcontainer-vscode.nix
-            ./modules/home/identities/shika.nix
+            ./modules/home/identities/shikanime.nix
           ];
         };
       };

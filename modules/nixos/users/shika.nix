@@ -10,7 +10,7 @@
   # Configure user home
   home-manager.users.shika = {
     imports = [
-      ../../home/identities/shika.nix
+      ../../home/identities/shikanime.nix
       ../../home/profiles/base.nix
     ];
 
