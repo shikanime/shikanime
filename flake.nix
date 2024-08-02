@@ -91,6 +91,7 @@
           };
           modules = [
             ./modules/home/hosts/kaltashar-shikanimedeva.nix
+            ./modules/home/identities/shika.nix
           ];
         };
         "shika@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -100,6 +101,7 @@
           };
           modules = [
             ./modules/home/hosts/ishtar-shika.nix
+            ./modules/home/identities/shika.nix
           ];
         };
         "willi@ishtar" = home-manager.lib.homeManagerConfiguration {
@@ -109,24 +111,17 @@
           };
           modules = [
             ./modules/home/hosts/ishtar-willi.nix
+            ./modules/home/identities/shika.nix
           ];
         };
-        "shika@nishir" = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs {
-            system = "aarch64-linux";
-            config.allowUnfree = true;
-          };
-          modules = [
-            ./modules/home/hosts/nishir-shika.nix
-          ];
-        };
-        vscode = home-manager.lib.homeManagerConfiguration {
+        "vscode@shika" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;
           };
           modules = [
             ./modules/home/hosts/devcontainer-vscode.nix
+            ./modules/home/identities/shika.nix
           ];
         };
       };

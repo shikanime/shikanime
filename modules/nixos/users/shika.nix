@@ -11,6 +11,7 @@
   home-manager.users.shika = {
     imports = [
       ../../home/profiles/base.nix
+      ../../identities/shika.nix
     ];
 
     programs.gpg.enable = true;
