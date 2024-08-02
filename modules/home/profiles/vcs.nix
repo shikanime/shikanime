@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 
+let
+  userName = "William Phetsinorath";
+  userEmail = "william.phetsinorath@shikanime.studio";
+  signingKey = "EB584D3ACB58F471";
+in
 {
   home.packages = [
     pkgs.watchman
@@ -9,12 +14,19 @@
     "git"
   ];
 
-  programs.mercurial.enable = true;
+  programs.mercurial = {
+    inherit userName userEmail;
+    enable = true;
+  };
 
   programs.git = {
+    inherit userName userEmail;
     enable = true;
     lfs.enable = true;
-    signing.signByDefault = true;
+    signing = {
+      signByDefault = true;
+      key = signingKey;
+    };
     aliases = {
       filing = "commit --amend --signoff --no-edit --reset-author";
       refiling = "rebase --exec 'git filing'";
@@ -91,9 +103,11 @@
   };
 
   programs.sapling = {
+    inherit userName userEmail;
     enable = true;
     extraConfig = {
       ui."ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
+      gpg.key = signingKey;
       merge-tools = {
         "nvim.args" = "-d $local $other $base -c 'redraw | echomsg \"hg merge conflict, type \":cq\" to abort vimdiff\"'";
         "nvim.priority" = 10;
@@ -114,6 +128,15 @@
         fsmonitor = "watchman";
         watchman.register_snapshot_trigger = true;
         excludesfile = "${config.home.homeDirectory}/.config/git/ignore";
+      };
+      user = {
+        name = userName;
+        email = userEmail;
+      };
+      signing = {
+        sign-all = true;
+        backend = "gpg";
+        key = userEmail;
       };
       ui.default-command = "log";
       git.push-branch-prefix = "trunks/shikanime/";

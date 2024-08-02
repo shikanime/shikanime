@@ -126,7 +126,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ./modules/home/hosts/vscode.nix
+            ./modules/home/hosts/devcontainer-vscode.nix
           ];
         };
       };
