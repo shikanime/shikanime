@@ -114,6 +114,16 @@
             ./modules/home/identities/shikanime.nix
           ];
         };
+        "phetsinorathwilliam@baltashar" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "aarch64-darwin";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/baltashar-phetsinorathwilliam.nix
+            ./modules/home/identities/shikanime.nix
+          ];
+        };
         vscode = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
