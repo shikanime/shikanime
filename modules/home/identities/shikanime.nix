@@ -8,9 +8,12 @@ in
     inherit userName userEmail;
   };
 
-  programs.git.signing = {
-    signByDefault = true;
-    key = signingKey;
+  programs.git = {
+    inherit userName userEmail;
+    signing = {
+      signByDefault = true;
+      key = signingKey;
+    };
   };
 
   programs.sapling = {
