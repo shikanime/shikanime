@@ -124,9 +124,29 @@
             ./modules/home/identities/shikanime.nix
           ];
         };
-        vscode = home-manager.lib.homeManagerConfiguration {
+        "vscode@kaltashar" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/devcontainer-vscode.nix
+            ./modules/home/identities/shikanime.nix
+          ];
+        };
+        "vscode@ishtar" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [
+            ./modules/home/hosts/devcontainer-vscode.nix
+            ./modules/home/identities/shikanime.nix
+          ];
+        };
+        "vscode@baltashar" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "aarch64-linux";
             config.allowUnfree = true;
           };
           modules = [
