@@ -76,6 +76,10 @@
       ".apdisk"
       # Git
       ".git"
+      # Sapling
+      ".sl"
+      # Jujutsu
+      ".jj"
     ];
     extraConfig = {
       pull.rebase = true;
