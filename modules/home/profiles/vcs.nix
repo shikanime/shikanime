@@ -103,6 +103,7 @@
         txclose = "git update-ref HEAD `sl whereami`; git read-tree HEAD";
         update = "git update-ref HEAD $HG_PARENT1; git read-tree HEAD";
       };
+      github.pr_workflow = "single";
     };
   };
 
