@@ -7,7 +7,10 @@ with lib;
     pkgs.glab
   ];
 
-  programs.gh.enable = true;
+  programs.gh = {
+    enable = true;
+    extensions = [pkgs.gh-copilot];
+  };
 
   programs.zsh.oh-my-zsh.plugins = [
     "kubectl"
