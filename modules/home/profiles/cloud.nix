@@ -36,4 +36,7 @@ with lib;
     HostkeyAlgorithms = "+ssh-rsa";
     PubkeyAcceptedKeyTypes = "+ssh-rsa";
   };
+
+  programs.git.extraConfig.credential."https://gitlab.com".helper =
+    "${pkgs.glab}/bin/glab auth git-credential";
 }
