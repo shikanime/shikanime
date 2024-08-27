@@ -5,6 +5,7 @@ with lib;
 {
   home.packages = [
     pkgs.glab
+    pkgs.tea
   ];
 
   programs.gh = {
