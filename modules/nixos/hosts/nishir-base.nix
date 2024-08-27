@@ -1,4 +1,6 @@
-{ pkgs, modulesPath, ... }:
+{ pkgs, lib, modulesPath, ... }:
+
+with lib;
 
 {
   imports = [
@@ -36,7 +38,11 @@
   };
 
   # Enable cross platform build
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+  boot.binfmt.emulatedSystems = (
+    lists.subtractLists
+     [ pkgs.stdenv.hostPlatform.system ]
+     [ "aarch64-linux" ]
+  );
 
   networking.hostName = "nishir";
 }
