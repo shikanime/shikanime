@@ -10,7 +10,7 @@ with lib;
 
   programs.gh = {
     enable = true;
-    extensions = [pkgs.gh-copilot];
+    extensions = [ pkgs.gh-copilot ];
   };
 
   programs.zsh.oh-my-zsh.plugins = [
