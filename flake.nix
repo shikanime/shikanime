@@ -33,13 +33,13 @@
     , devenv
     , ...
     }@inputs: {
-      formatter = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
+      formatter = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ] (system:
         let pkgs = import nixpkgs { inherit system; }; in
         pkgs.nixpkgs-fmt
       );
 
       packages = nixpkgs.lib.mergeAttrsList [
-        (nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
+        (nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ] (system:
           let pkgs = import nixpkgs { inherit system; }; in {
             elvengard-hyperv-image =
               self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
@@ -53,7 +53,7 @@
         ))
       ];
 
-      devShells = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" ] (system:
+      devShells = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ] (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           default = devenv.lib.mkShell {
             inherit inputs pkgs;
