@@ -33,7 +33,7 @@
     , devenv
     , ...
     }@inputs: {
-      formatter = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ] (system:
+      formatter = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
         let pkgs = import nixpkgs { inherit system; }; in
         pkgs.nixpkgs-fmt
       );
@@ -53,7 +53,7 @@
         ))
       ];
 
-      devShells = nixpkgs.lib.genAttrs [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ] (system:
+      devShells = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
         let pkgs = import nixpkgs { inherit system; }; in {
           default = devenv.lib.mkShell {
             inherit inputs pkgs;
