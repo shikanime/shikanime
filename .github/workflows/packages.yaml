@@ -7,7 +7,7 @@ jobs:
   release:
     permissions:
       contents: write
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Release
         run: |
@@ -22,10 +22,10 @@ jobs:
         include:
           - name: nishir
             target: nishir-aarch64-unknown-linux-gnu
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: release
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: docker/setup-qemu-action@v2
         with:
           platforms: arm,arm64
