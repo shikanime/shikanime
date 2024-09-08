@@ -29,9 +29,9 @@ jobs:
       - uses: docker/setup-qemu-action@v2
         with:
           platforms: arm,arm64
-      - uses: cachix/install-nix-action@v21
+      - uses: DeterminateSystems/nix-installer-action@v13
         with:
-          extra_nix_config: |
+          extra-conf: |
             accept-flake-config = true
             system-features = nixos-test benchmark big-parallel kvm
             extra-platforms = aarch64-linux arm-linux

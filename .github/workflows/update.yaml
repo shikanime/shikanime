@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: achix/install-nix-action@v21
+      - uses: DeterminateSystems/nix-installer-action@v13
         with:
-          extra_nix_config: |
+          extra-conf: |
             accept-flake-config = true
             system-features = nixos-test benchmark big-parallel kvm
             extra-platforms = aarch64-linux arm-linux
