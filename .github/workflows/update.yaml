@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@v21
+      - uses: achix/install-nix-action@v21
         with:
           extra_nix_config: |
             accept-flake-config = true
