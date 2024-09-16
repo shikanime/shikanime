@@ -15,6 +15,7 @@ jobs:
             extra-platforms = aarch64-linux arm-linux
       - uses: DeterminateSystems/update-flake-lock@v23
         with:
-          pr-title: Update Flake Lock
-          pr-labels: dependencies
           branch: github/update_flake
+          commit-msg: Update Flake
+          pr-title: Update Flake
+          pr-labels: dependencies
