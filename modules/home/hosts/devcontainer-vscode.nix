@@ -9,6 +9,7 @@
   };
 
   home.packages = [
+    pkgs.cargo
     pkgs.texlive.combined.scheme-full
     pkgs.nodejs_22
     pkgs.terraform
