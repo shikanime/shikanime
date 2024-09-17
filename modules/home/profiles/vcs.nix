@@ -98,8 +98,8 @@
     extraConfig = {
       ui."ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       merge-tools = {
-        "nvim.args" = "-d $local $other $base -c 'redraw | echomsg \"hg merge conflict, type \":cq\" to abort vimdiff\"'";
-        "nvim.priority" = 10;
+        "code.args" = "code --wait --merge $other $local $base $output";
+        "code.priority" = 10;
       };
       hooks = {
         post-init = "git init --separate-git-dir .sl/store/git .";
