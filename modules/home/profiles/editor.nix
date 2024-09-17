@@ -25,7 +25,6 @@ in
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    defaultEditor = true;
     plugins = [
       pkgs.vimPlugins.lush-nvim
       pkgs.vimPlugins.vim-colemak
