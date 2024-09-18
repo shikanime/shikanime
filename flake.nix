@@ -56,6 +56,11 @@
         };
         devenv.shells.default = {
           containers = pkgs.lib.mkForce { };
+          languages.nix.enable = true;
+          cachix = {
+            enable = true;
+            push = "shikanime";
+          };
           packages = [
             pkgs.gh
           ];
