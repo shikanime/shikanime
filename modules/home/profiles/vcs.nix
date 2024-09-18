@@ -98,7 +98,7 @@
     extraConfig = {
       ui."ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       merge-tools = {
-        "code.args" = "code --wait --merge $other $local $base $output";
+        "code.args" = "--wait --merge $local $other $base $output";
         "code.priority" = 10;
       };
       hooks = {
