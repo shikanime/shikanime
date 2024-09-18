@@ -1,4 +1,4 @@
-{ config, ... }:
+_:
 
 {
   programs.zsh.oh-my-zsh.plugins = [
