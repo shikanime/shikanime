@@ -38,11 +38,9 @@ with lib;
   };
 
   # Enable cross platform build
-  boot.binfmt.emulatedSystems = (
-    lists.subtractLists
-     [ pkgs.stdenv.hostPlatform.system ]
-     [ "aarch64-linux" ]
-  );
+  boot.binfmt.emulatedSystems = lists.subtractLists
+    [ pkgs.stdenv.hostPlatform.system ]
+    [ "aarch64-linux" ];
 
   networking.hostName = "nishir";
 }
