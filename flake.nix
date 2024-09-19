@@ -41,7 +41,19 @@
         "aarch64-linux"
         "aarch64-darwin"
       ];
-      perSystem = { pkgs, ... }: {
+      perSystem = { pkgs, system, ... }: {
+        packages = {
+          "vscode" = home-manager.lib.homeManagerConfiguration {
+            pkgs = import nixpkgs {
+              system = "aarch64-linux";
+              config.allowUnfree = true;
+            };
+            modules = [
+              ./modules/home/hosts/devcontainer-vscode.nix
+              ./modules/home/identities/shikanime.nix
+            ];
+          };
+        };
         treefmt = {
           projectRootFile = "flake.nix";
           enableDefaultExcludes = true;
@@ -128,36 +140,6 @@
             };
             modules = [
               ./modules/home/hosts/baltashar-phetsinorathwilliam.nix
-              ./modules/home/identities/shikanime.nix
-            ];
-          };
-          "vscode@kaltashar" = home-manager.lib.homeManagerConfiguration {
-            pkgs = import nixpkgs {
-              system = "x86_64-linux";
-              config.allowUnfree = true;
-            };
-            modules = [
-              ./modules/home/hosts/devcontainer-vscode.nix
-              ./modules/home/identities/shikanime.nix
-            ];
-          };
-          "vscode@ishtar" = home-manager.lib.homeManagerConfiguration {
-            pkgs = import nixpkgs {
-              system = "x86_64-linux";
-              config.allowUnfree = true;
-            };
-            modules = [
-              ./modules/home/hosts/devcontainer-vscode.nix
-              ./modules/home/identities/shikanime.nix
-            ];
-          };
-          "vscode@baltashar" = home-manager.lib.homeManagerConfiguration {
-            pkgs = import nixpkgs {
-              system = "aarch64-linux";
-              config.allowUnfree = true;
-            };
-            modules = [
-              ./modules/home/hosts/devcontainer-vscode.nix
               ./modules/home/identities/shikanime.nix
             ];
           };
