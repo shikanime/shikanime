@@ -36,7 +36,6 @@
       ];
       systems = [
         "x86_64-linux"
-        "i686-linux"
         "x86_64-darwin"
         "aarch64-linux"
         "aarch64-darwin"
@@ -68,10 +67,28 @@
       };
       flake = {
         packages = {
-          x86_64-linux.elvengard-hyperv-image =
-            self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
-          aarch64-linux.nishir-raspeberry-pi4-image =
-            self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
+          x86_64-linux = {
+            elvengard-hyperv-image =
+              self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
+            shika-ishtar-activationPackage =
+              self.homeConfigurations."shika@ishtar".activationPackage;
+            willi-ishtar-activationPackage =
+              self.homeConfigurations."willi@ishtar".activationPackage;
+            vscode-kaltashar-activationPackage =
+              self.homeConfigurations."vscode@kaltashar".activationPackage;
+            vscode-ishtar-activationPackage =
+              self.homeConfigurations."vscode@ishtar".activationPackage;
+          };
+          x86_64-darwin.shikanimedeva-kaltashar-activationPackage =
+            self.homeConfigurations."shikanimedeva@kaltashar".activationPackage;
+          aarch64-linux = {
+            nishir-raspeberry-pi4-image =
+              self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
+            vscode-baltashar-activationPackage =
+              self.homeConfigurations."vscode@baltashar".activationPackage;
+          };
+          aarch64-darwin.phetsinorathwilliam-baltashar-activationPackage =
+            self.homeConfigurations."phetsinorathwilliam@baltashar".activationPackage;
         };
         nixosConfigurations = {
           elvengard-hyperv = nixpkgs.lib.nixosSystem {

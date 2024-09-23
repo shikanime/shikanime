@@ -31,6 +31,7 @@ jobs:
           nix flake check \
             --no-build \
             --impure \
-            --show-trace
+            --show-trace \
+            --all-systems
         env:
           NIXPKGS_ALLOW_UNFREE: "1"
