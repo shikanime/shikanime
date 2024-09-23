@@ -12,6 +12,7 @@ on:
   pull_request:
     branches:
       - main
+      - gh/*/*/base
 jobs:
   check:
     runs-on: ubuntu-latest
