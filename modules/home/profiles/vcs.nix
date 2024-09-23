@@ -101,6 +101,11 @@
         "code.args" = "--wait --merge $local $other $base $output";
         "code.priority" = 10;
       };
+      diff-tools = {
+        "code.args" = "--wait --diff $local $other";
+        "code.gui" = true;
+        "code.priority" = 10;
+      };
       hooks = {
         post-init = "git init --separate-git-dir .sl/store/git .";
         post-clone = "git init --separate-git-dir .sl/store/git .";
