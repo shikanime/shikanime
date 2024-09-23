@@ -71,24 +71,24 @@
             elvengard-hyperv-image =
               self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
             shika-ishtar-activation-package =
-              self.homeConfigurations."shika@ishtar".config.system.build.home.activationPackage;
+              self.homeConfigurations."shika@ishtar".activationPackage;
             willi-ishtar-activation-package =
-              self.homeConfigurations."willi@ishtar".config.system.build.home.activationPackage;
+              self.homeConfigurations."willi@ishtar".activationPackage;
             vscode-kaltashar-activation-package =
-              self.homeConfigurations."vscode@kaltashar".config.system.build.home.activationPackage;
+              self.homeConfigurations."vscode@kaltashar".activationPackage;
             vscode-ishtar-activation-package =
-              self.homeConfigurations."vscode@ishtar".config.system.build.home.activationPackage;
+              self.homeConfigurations."vscode@ishtar".activationPackage;
           };
           x86_64-darwin.shikanimedeva-kaltashar-activation-package =
-            self.homeConfigurations."shikanimedeva@kaltashar".config.system.build.home.activationPackage;
+            self.homeConfigurations."shikanimedeva@kaltashar".activationPackage;
           aarch64-linux = {
             nishir-raspeberry-pi4-image =
               self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
             vscode-baltashar-activation-package =
-              self.homeConfigurations."vscode@baltashar".config.system.build.home.activationPackage;
+              self.homeConfigurations."vscode@baltashar".activationPackage;
           };
           aarch64-darwin.phetsinorathwilliam-baltashar-activation-package =
-            self.homeConfigurations."phetsinorathwilliam@baltashar".config.system.build.home.activationPackage;
+            self.homeConfigurations."phetsinorathwilliam@baltashar".activationPackage;
         };
         nixosConfigurations = {
           elvengard-hyperv = nixpkgs.lib.nixosSystem {
