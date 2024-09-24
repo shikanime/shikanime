@@ -82,6 +82,7 @@
       ".jj"
     ];
     extraConfig = {
+      core.editor = "code --wait";
       pull.rebase = true;
       push.autoSetupRemote = true;
       init.defaultBranch = "main";
@@ -96,7 +97,10 @@
   programs.sapling = {
     enable = true;
     extraConfig = {
-      ui."ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
+      ui = {
+        "editor" = "code --wait";
+        "ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
+      };
       merge-tools = {
         "code.args" = "--wait --merge $local $other $base $output";
         "code.priority" = 10;
