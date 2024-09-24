@@ -9,8 +9,6 @@
     "git"
   ];
 
-  programs.mercurial.enable = true;
-
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -113,18 +111,6 @@
         update = "git update-ref HEAD $HG_PARENT1; git read-tree HEAD";
       };
       github.pr_workflow = "single";
-    };
-  };
-
-  programs.jujutsu = {
-    enable = true;
-    settings = {
-      core = {
-        fsmonitor = "watchman";
-        watchman.register_snapshot_trigger = true;
-        excludesfile = "${config.home.homeDirectory}/.config/git/ignore";
-      };
-      ui.default-command = "log";
     };
   };
 }
