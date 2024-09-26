@@ -1,10 +1,10 @@
-name: Update Wakatime Stats
+name: Wakabox
 on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
 jobs:
-  update:
+  wakabox:
     runs-on: ubuntu-latest
     environment: shikanime-wakabox
     steps:
