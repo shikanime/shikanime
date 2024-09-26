@@ -8,11 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@v13
-        with:
-          extra-conf: |
-            accept-flake-config = true
-            system-features = nixos-test benchmark big-parallel kvm
-            extra-platforms = aarch64-linux arm-linux
       - uses: DeterminateSystems/update-flake-lock@v23
         with:
           branch: github/update_flake

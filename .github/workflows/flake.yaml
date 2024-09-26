@@ -18,10 +18,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: docker/setup-qemu-action@v2
+        with:
+          platforms: arm64
       - uses: DeterminateSystems/nix-installer-action@v13
         with:
           extra-conf: |
             accept-flake-config = true
+            system-features = nixos-test benchmark big-parallel kvm
+            extra-platforms = aarch64-linux arm-linux
+      - uses: DeterminateSystems/magic-nix-cache-action@v8
       - uses: cachix/cachix-action@v12
         with:
           name: shikanime
@@ -29,7 +35,6 @@ jobs:
       - name: Check Nix Flake
         run: |
           nix flake check \
-            --no-build \
             --impure \
             --show-trace \
             --all-systems
