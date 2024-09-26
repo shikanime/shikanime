@@ -11,6 +11,10 @@
         nixpkgs-fmt.enable = true;
         prettier.enable = true;
       };
+      settings.global.excludes = [
+        "*.png"
+        "LICENSE"
+      ];
     };
     devenv.shells.default = {
       containers = pkgs.lib.mkForce { };
