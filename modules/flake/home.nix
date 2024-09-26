@@ -26,7 +26,7 @@
       "shikanimedeva@kaltashar" = withSystem "x86_64-darwin" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs {
-            system = "x86_64-linux";
+            inherit system;
             config.allowUnfree = true;
           };
           modules = [
@@ -37,7 +37,7 @@
       "shika@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs {
-            system = "x86_64-linux";
+            inherit system;
             config.allowUnfree = true;
           };
           modules = [
@@ -48,7 +48,7 @@
       "willi@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs {
-            system = "x86_64-linux";
+            inherit system;
             config.allowUnfree = true;
           };
           modules = [
@@ -59,7 +59,7 @@
       "phetsinorathwilliam@baltashar" = withSystem "aarch64-darwin" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs {
-            system = "x86_64-linux";
+            inherit system;
             config.allowUnfree = true;
           };
           modules = [
@@ -70,7 +70,7 @@
       "vscode@kaltashar" = withSystem "x86_64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs {
-            system = "x86_64-linux";
+            inherit system;
             config.allowUnfree = true;
           };
           modules = [
@@ -81,7 +81,7 @@
       "vscode@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs {
-            system = "x86_64-linux";
+            inherit system;
             config.allowUnfree = true;
           };
           modules = [
@@ -92,7 +92,7 @@
       "vscode@baltashar" = withSystem "aarch64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = import inputs.nixpkgs {
-            system = "x86_64-linux";
+            inherit system;
             config.allowUnfree = true;
           };
           modules = [
