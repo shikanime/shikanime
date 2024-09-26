@@ -21,14 +21,19 @@
     ];
   };
 
-  outputs = inputs@{ flake-parts, ... }:
+  outputs =
+    inputs@{ devenv
+    , flake-parts
+    , treefmt-nix
+    , ...
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         ./modules/flake/devenv.nix
         ./modules/flake/home.nix
         ./modules/flake/nixos.nix
-        inputs.devenv.flakeModule
-        inputs.treefmt-nix.flakeModule
+        devenv.flakeModule
+        treefmt-nix.flakeModule
       ];
       systems = [
         "x86_64-linux"
