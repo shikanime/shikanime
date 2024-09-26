@@ -24,7 +24,6 @@
   outputs =
     inputs@{ devenv
     , flake-parts
-    , nixpkgs
     , treefmt-nix
     , ...
     }:
