@@ -26,7 +26,7 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@v13
       - uses: DeterminateSystems/flakehub-push@v5
         with:
-          visibility: "public"
-          name: "shikanime/shikanime"
-          tag: "${{ inputs.tag }}"
+          visibility: public
+          name: ${{ github.repository }}
+          tag: ${{ github.ref_name }}
           include-output-paths: true
