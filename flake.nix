@@ -42,11 +42,5 @@
         "aarch64-linux"
         "aarch64-darwin"
       ];
-      perSystem = { system, ... }: {
-        _module.args.pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-      };
     };
 }
