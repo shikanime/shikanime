@@ -17,6 +17,7 @@
       ];
     };
     devenv.shells.default = {
+      root = "/workspaces/Shikanime/shikanime"; # TODO: Wait for https://github.com/cachix/devenv/issues/1461
       containers = pkgs.lib.mkForce { };
       languages.nix.enable = true;
       cachix = {
