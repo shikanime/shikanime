@@ -1,4 +1,4 @@
-name: Check Flake
+name: Check
 on:
   push:
     branches:
