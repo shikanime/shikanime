@@ -9,33 +9,8 @@
         deadnix.enable = true;
         shfmt.enable = true;
         nixpkgs-fmt.enable = true;
-        prettier = {
-          enable = true;
-          includes = [
-            "*.css"
-            "*.js"
-            "*.json"
-            "*.jsx"
-            "*.md"
-            "*.mjs"
-            "*.ts"
-            "*.tsx"
-            "*.yaml"
-          ];
-          settings.plugins = [
-            "prettier-plugin-astro"
-            "prettier-plugin-tailwindcss"
-          ];
-        };
+        prettier.enable = true;
       };
-      settings.global.excludes = [
-        "**/node_modules"
-        "*.jpg"
-        "*.png"
-        "*.gif"
-        "*.webp"
-        "*.ico"
-      ];
     };
     devenv.shells.default = {
       containers = pkgs.lib.mkForce { };
@@ -46,7 +21,6 @@
       };
       packages = [
         pkgs.gh
-        pkgs.glab
       ];
     };
   };
