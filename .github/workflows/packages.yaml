@@ -2,7 +2,7 @@ name: Build Packages
 on:
   push:
     tags:
-      - v*.*.*
+      - v?[0-9]+.[0-9]+.[0-9]+*
 jobs:
   release:
     permissions:
@@ -16,6 +16,20 @@ jobs:
             --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  hub:
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v13
+      - uses: DeterminateSystems/flakehub-push@v5
+        with:
+          visibility: "public"
+          name: "shikanime/shikanime"
+          tag: "${{ inputs.tag }}"
+          include-output-paths: true
   build:
     strategy:
       matrix:
