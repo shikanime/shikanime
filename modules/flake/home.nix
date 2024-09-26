@@ -23,57 +23,78 @@
         self.homeConfigurations."phetsinorathwilliam@baltashar".activationPackage;
     };
     homeConfigurations = {
-      "shikanimedeva@kaltashar" = withSystem "x86_64-darwin" ({ pkgs, ... }:
+      "shikanimedeva@kaltashar" = withSystem "x86_64-darwin" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
           modules = [
             ../home/hosts/kaltashar-shikanimedeva.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "shika@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
+      "shika@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
           modules = [
             ../home/hosts/ishtar-shika.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "willi@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
+      "willi@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
           modules = [
             ../home/hosts/ishtar-willi.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "phetsinorathwilliam@baltashar" = withSystem "aarch64-darwin" ({ pkgs, ... }:
+      "phetsinorathwilliam@baltashar" = withSystem "aarch64-darwin" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
           modules = [
             ../home/hosts/baltashar-phetsinorathwilliam.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "vscode@kaltashar" = withSystem "x86_64-linux" ({ pkgs, ... }:
+      "vscode@kaltashar" = withSystem "x86_64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
           modules = [
             ../home/hosts/devcontainer-vscode.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "vscode@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
+      "vscode@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
           modules = [
             ../home/hosts/devcontainer-vscode.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "vscode@baltashar" = withSystem "aarch64-linux" ({ pkgs, ... }:
+      "vscode@baltashar" = withSystem "aarch64-linux" ({ system, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import inputs.nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
           modules = [
             ../home/hosts/devcontainer-vscode.nix
             ../home/identities/shikanime.nix
