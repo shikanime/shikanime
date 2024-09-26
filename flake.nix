@@ -21,14 +21,20 @@
     ];
   };
 
-  outputs = inputs@{ flake-parts, ... }:
+  outputs =
+    inputs@{ devenv
+    , flake-parts
+    , nixpkgs
+    , treefmt-nix
+    , ...
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         ./modules/flake/devenv.nix
         ./modules/flake/home.nix
         ./modules/flake/nixos.nix
-        inputs.devenv.flakeModule
-        inputs.treefmt-nix.flakeModule
+        devenv.flakeModule
+        treefmt-nix.flakeModule
       ];
       systems = [
         "x86_64-linux"
@@ -36,5 +42,11 @@
         "aarch64-linux"
         "aarch64-darwin"
       ];
+      perSystem = { system, ... }: {
+        _module.args.pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      };
     };
 }
