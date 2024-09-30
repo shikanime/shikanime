@@ -1,5 +1,6 @@
 name: Update
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * 0"
 jobs:
@@ -14,3 +15,5 @@ jobs:
           commit-msg: Update Flake
           pr-title: Update Flake
           pr-labels: dependencies
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
