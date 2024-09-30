@@ -1,7 +1,7 @@
 let
   userName = "William Phetsinorath";
   userEmail = "william.phetsinorath@shikanime.studio";
-  signingKey = "EB584D3ACB58F471";
+  signingKey = "EF31089F1F165C80";
 in
 {
   programs.mercurial = {
