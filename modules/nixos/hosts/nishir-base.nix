@@ -34,7 +34,7 @@ with lib;
   # Longhorn requires open-iscsi
   services.openiscsi = {
     enable = true;
-    name = "iqn.2024-04.studio.shikanime:nishir";
+    name = "iqn.2011-11.studio.shikanime:nishir";
   };
 
   # Enable cross platform build
