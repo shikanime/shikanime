@@ -19,31 +19,28 @@
     })
   ];
 
-  # Enable Wake-on-LAN on the ethernet port
-  networking.interfaces.eth0.wakeOnLan.enable = true;
-
   # Enable disk auto-mounting
   systemd.mounts = [
     {
-      what = "/dev/disk/by-label/Satellite";
-      where = "/mnt/satellite";
-      description = "Mount the Satellite disk";
+      what = "/dev/disk/by-label/flandre";
+      where = "/mnt/flandre";
+      description = "Mount Flandre";
     }
     {
-      what = "/dev/disk/by-label/Voyager";
-      where = "/mnt/voyager";
-      description = "Mount the Voyager disk";
+      what = "/dev/disk/by-label/remilia";
+      where = "/mnt/remilia";
+      description = "Mount Remilia";
     }
   ];
   systemd.automounts = [
     {
-      where = "/mnt/satellite";
-      description = "Automount the Satellite disk";
+      where = "/mnt/flandre";
+      description = "Automount Flandre";
       wantedBy = [ "multi-user.target" ];
     }
     {
-      where = "/mnt/voyager";
-      description = "Automount the Voyager disk";
+      where = "/mnt/remilia";
+      description = "Automount Remilia";
       wantedBy = [ "multi-user.target" ];
     }
   ];
