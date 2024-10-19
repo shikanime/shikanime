@@ -1,7 +1,7 @@
 { self, inputs, withSystem, ... }:
 
 {
-  perSystem = _: {
+  flake = {
     packages = {
       nishir-raspeberry-pi4-remilia-image =
         self.nixosConfigurations.nishir-raspeberry-pi4-remilia.config.system.build.sdImage;
