@@ -10,11 +10,6 @@
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
 
-  services.k3s = {
-    enable = true;
-    role = "server";
-  };
-
   boot.kernelParams = [
     "8250.nr_uarts=1"
     "console=ttyAMA0,115200"
@@ -34,6 +29,11 @@
     "user.max_inotify_instances" = 8192;
     "user.max_inotify_watches" = 524288;
     "vm.max_map_count" = 1048576;
+  };
+
+  services.k3s = {
+    enable = true;
+    role = "server";
   };
 
   # Longhorn requires open-iscsi
