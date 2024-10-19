@@ -1,7 +1,7 @@
 { self, inputs, withSystem, ... }:
 
 {
-  perSystem = _: {
+  flake = {
     packages = {
       aarch64-linux = {
         nishir-raspeberry-pi4-image =
