@@ -1,7 +1,7 @@
 { self, inputs, withSystem, ... }:
 
 {
-  perSystem =  _: {
+  perSystem = _: {
     packages = {
       nishir-raspeberry-pi4-image =
         self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
