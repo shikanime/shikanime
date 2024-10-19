@@ -19,7 +19,6 @@ in
 {
   imports = [
     ../profiles/base.nix
-    ../profiles/editor.nix
     ../profiles/workstation.nix
     ../profiles/vcs.nix
     ../profiles/cloud.nix
