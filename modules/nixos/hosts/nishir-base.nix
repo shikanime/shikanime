@@ -1,6 +1,4 @@
-{ pkgs, lib, modulesPath, ... }:
-
-with lib;
+{ pkgs, modulesPath, ... }:
 
 {
   imports = [
@@ -22,10 +20,17 @@ with lib;
     "cgroup_memory=1"
   ];
 
-  # This is required so that pod can reach the API server (running on port 6443 by default)
-  networking.firewall.allowedTCPPorts = [ 6443 ];
+  boot.kernel.sysctl = {
+    "kernel.threads-max" = 8192;
+    "fs.inotify.max_user_watches" = 524288;
+    "fs.inotify.max_user_instances" = 8192;
+    "fs.inotify.max_queued_events" = 16384;
+    "fs.file-max" = 131072;
+    "user.max_inotify_instances" = 8192;
+    "user.max_inotify_watches" = 524288;
+    "vm.max_map_count" = 1048576;
+  };
 
-  # Enable Kubernetes
   services.k3s = {
     enable = true;
     role = "server";
@@ -36,11 +41,6 @@ with lib;
     enable = true;
     name = "iqn.2011-11.studio.shikanime:nishir";
   };
-
-  # Enable cross platform build
-  boot.binfmt.emulatedSystems = lists.subtractLists
-    [ pkgs.stdenv.hostPlatform.system ]
-    [ "aarch64-linux" ];
 
   networking.hostName = "nishir";
 }

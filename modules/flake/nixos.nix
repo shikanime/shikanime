@@ -1,13 +1,13 @@
 { self, inputs, withSystem, ... }:
 
 {
-  flake = {
+  perSystem = _: {
     packages = {
-      aarch64-linux = {
-        nishir-raspeberry-pi4-image =
-          self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
-      };
+      nishir-raspeberry-pi4-image =
+        self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
     };
+  };
+  flake = {
     nixosConfigurations = {
       nishir-raspeberry-pi4 = withSystem "aarch64-linux" ({ system, ... }:
         inputs.nixpkgs.lib.nixosSystem {
