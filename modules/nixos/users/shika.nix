@@ -12,7 +12,6 @@
     imports = [
       ../../home/profiles/base.nix
     ];
-
     home.homeDirectory = "/home/shika";
     home.username = "shika";
   };
