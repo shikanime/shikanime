@@ -8,11 +8,7 @@
   };
 
   # Configure user home
-  home-manager.users.shika = {
-    imports = [
-      ../../home/profiles/base.nix
-    ];
-    home.homeDirectory = "/home/shika";
-    home.username = "shika";
-  };
+  home-manager.users.shika.imports = [
+    ../../home/hosts/nishir-shika.nix
+  ];
 }
