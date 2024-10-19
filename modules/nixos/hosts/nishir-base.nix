@@ -7,6 +7,7 @@ with lib;
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
     ../profiles/machine.nix
+    ../profiles/k3s.nix
     ../users/shika.nix
   ];
 
@@ -17,30 +18,9 @@ with lib;
     "console=ttyAMA0,115200"
     "console=tty1"
     "cma=128M"
-    "cgroup_enable=cpuset"
-    "cgroup_enable=memory"
-    "cgroup_memory=1"
   ];
 
-  # This is required so that pod can reach the API server (running on port 6443 by default)
-  networking.firewall.allowedTCPPorts = [ 6443 ];
-
-  # Enable Kubernetes
-  services.k3s = {
-    enable = true;
-    role = "server";
-  };
-
-  # Longhorn requires open-iscsi
-  services.openiscsi = {
-    enable = true;
-    name = "iqn.2011-11.studio.shikanime:nishir";
-  };
-
-  # Enable cross platform build
-  boot.binfmt.emulatedSystems = lists.subtractLists
-    [ pkgs.stdenv.hostPlatform.system ]
-    [ "aarch64-linux" ];
+  services.openiscsi.name = "iqn.2011-11.studio.shikanime:nishir";
 
   networking.hostName = "nishir";
 }
