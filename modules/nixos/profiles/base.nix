@@ -15,13 +15,6 @@
     flake = "github:shikanime/shikanime";
   };
 
-  # Increase the number of file descriptors and processes
-  boot.kernel.sysctl = {
-    "kernel.threads-max" = 8192;
-    "fs.file-max" = 131072;
-    "vm.max_map_count" = 1048576;
-  };
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken It‘s perfectly fine and recommended to leave

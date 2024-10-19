@@ -36,6 +36,12 @@
     useRoutingFeatures = "server";
   };
 
+  boot.kernel.sysctl = {
+    "net.core.rmem_default" = 7340032;
+    "net.ipv4.ip_forward" = 1;
+    "net.ipv6.conf.all.forwarding" = 1;
+  };
+
   # Enable Network Time Protocol
   services.ntp.enable = true;
 }

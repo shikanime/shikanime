@@ -1,4 +1,6 @@
-{ modulesPath, ... }:
+{ pkgs, lib, modulesPath, ... }:
+
+with lib;
 
 {
   imports = [
@@ -19,29 +21,13 @@
     })
   ];
 
-  # Enable disk auto-mounting
-  systemd.mounts = [
-    {
-      what = "/dev/disk/by-label/flandre";
-      where = "/mnt/flandre";
-      description = "Mount Flandre";
-    }
-    {
-      what = "/dev/disk/by-label/remilia";
-      where = "/mnt/remilia";
-      description = "Mount Remilia";
-    }
-  ];
-  systemd.automounts = [
-    {
-      where = "/mnt/flandre";
-      description = "Automount Flandre";
-      wantedBy = [ "multi-user.target" ];
-    }
-    {
-      where = "/mnt/remilia";
-      description = "Automount Remilia";
-      wantedBy = [ "multi-user.target" ];
-    }
-  ];
+  boot = {
+    kernelParams = [
+      "8250.nr_uarts=1"
+      "console=ttyAMA0,115200"
+      "console=tty1"
+      "cma=128M"
+    ];
+    kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
+  };
 }
