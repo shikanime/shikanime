@@ -6,6 +6,4 @@
     "npm"
     "yarn"
   ];
-
-  programs.neovim.withNodeJs = true;
 }
