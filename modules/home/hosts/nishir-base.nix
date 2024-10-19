@@ -7,6 +7,4 @@
   ];
 
   targets.genericLinux.enable = true;
-
-  nix.package = pkgs.nix;
 }
