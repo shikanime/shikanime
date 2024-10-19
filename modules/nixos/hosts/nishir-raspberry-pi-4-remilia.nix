@@ -3,20 +3,7 @@
     ./nishir-raspberry-pi-4.nix
   ];
 
-  systemd.mounts = [
-    {
-      what = "/dev/disk/by-label/remilia";
-      where = "/mnt/remilia";
-      description = "Mount Remilia";
-    }
-  ];
-  systemd.automounts = [
-    {
-      where = "/mnt/remilia";
-      description = "Automount Remilia";
-      wantedBy = [ "multi-user.target" ];
-    }
-  ];
+  fileSystems."/mnt/remilia".device = "/dev/disk/by-label/remilia";
 
   services.k3s.tokenFile = "/mnt/remilia/secrets/k3s-token";
 
