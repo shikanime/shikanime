@@ -21,15 +21,6 @@ with lib;
     "gcloud"
   ];
 
-  programs.neovim.plugins = [
-    (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: with p; [
-      yaml
-      dockerfile
-      proto
-      hcl
-    ]))
-  ];
-
   programs.zsh.initExtra = mkAfter ''
     if [ -d ${config.home.homeDirectory}/.rd ]; then
       export PATH=${config.home.homeDirectory}/.rd/bin:$PATH
