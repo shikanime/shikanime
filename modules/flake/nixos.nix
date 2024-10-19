@@ -1,17 +1,15 @@
 { self, inputs, withSystem, ... }:
 
 {
-  flake = {
+  perSystem = _: {
     packages = {
-      x86_64-linux = {
-        elvengard-hyperv-image =
-          self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
-      };
-      aarch64-linux = {
-        nishir-raspeberry-pi4-image =
-          self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
-      };
+      elvengard-hyperv-image =
+        self.nixosConfigurations.elvengard-hyperv.config.system.build.hypervImage;
+      nishir-raspeberry-pi4-image =
+        self.nixosConfigurations.nishir-raspeberry-pi4.config.system.build.sdImage;
     };
+  };
+  flake = {
     nixosConfigurations = {
       elvengard-hyperv = withSystem "x86_64-linux" ({ system, ... }:
         inputs.nixpkgs.lib.nixosSystem {
