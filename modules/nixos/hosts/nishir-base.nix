@@ -29,7 +29,7 @@
     "vm.max_map_count" = 1048576;
   };
 
-  # Longhorn requires open-
+  # Longhorn requires open-iscsi
   services.openiscsi = {
     enable = true;
     name = "iqn.2011-11.studio.shikanime:nishir";
