@@ -8,8 +8,6 @@
     ../users/shika.nix
   ];
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
-
   boot.kernelParams = [
     "cgroup_enable=cpuset"
     "cgroup_enable=memory"
