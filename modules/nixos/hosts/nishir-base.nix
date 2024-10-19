@@ -33,8 +33,5 @@
   };
 
   # Longhorn requires open-iscsi
-  services.openiscsi = {
-    enable = true;
-    name = "iqn.2011-11.studio.shikanime:nishir";
-  };
+  services.openiscsi.enable = true;
 }
