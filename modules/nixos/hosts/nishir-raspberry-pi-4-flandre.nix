@@ -1,7 +1,3 @@
-{ lib, ... }:
-
-with lib;
-
 {
   imports = [
     ./nishir-raspberry-pi-4.nix
