@@ -41,6 +41,4 @@
     enable = true;
     name = "iqn.2011-11.studio.shikanime:nishir";
   };
-
-  networking.hostName = "nishir";
 }
