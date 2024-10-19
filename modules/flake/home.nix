@@ -17,56 +17,41 @@
         self.homeConfigurations."shikanimedeva@kaltashar".activationPackage;
     };
     homeConfigurations = {
-      "shikanimedeva@kaltashar" = withSystem "x86_64-darwin" ({ system, ... }:
+      "shikanimedeva@kaltashar" = withSystem "x86_64-darwin" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
+          inherit pkgs;
           modules = [
             ../home/hosts/kaltashar-shikanimedeva.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "shika@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
+      "shika@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
+          inherit pkgs;
           modules = [
             ../home/hosts/ishtar-shika.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "willi@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
+      "willi@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
+          inherit pkgs;
           modules = [
             ../home/hosts/ishtar-willi.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "vscode@kaltashar" = withSystem "x86_64-linux" ({ system, ... }:
+      "vscode@kaltashar" = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
+          inherit pkgs;
           modules = [
             ../home/hosts/devcontainer-vscode.nix
             ../home/identities/shikanime.nix
           ];
         });
-      "vscode@ishtar" = withSystem "x86_64-linux" ({ system, ... }:
+      "vscode@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
+          inherit pkgs;
           modules = [
             ../home/hosts/devcontainer-vscode.nix
             ../home/identities/shikanime.nix
