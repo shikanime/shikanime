@@ -23,6 +23,14 @@ with lib;
     pkgs.nixpkgs-fmt
   ];
 
+  # Make Mix toolchain to be the XDG compliant by default
+  home.sessionVariables.MIX_XDG = 1;
+
+  home.sessionPath = [
+    "${config.home.homeDirectory}/.local/bin"
+    "${config.xdg.dataHome}/mix/escripts"
+  ];
+
   programs.dircolors.enable = true;
 
   programs.bash = {
@@ -38,9 +46,18 @@ with lib;
     oh-my-zsh = {
       enable = true;
       plugins = [
-        "vim-interaction"
         "sudo"
+        "deno"
         "docker"
+        "golang"
+        "node"
+        "npm"
+        "python"
+        "poetry"
+        "mix"
+        "rust"
+        "bun"
+        "yarn"
       ];
     };
   };
