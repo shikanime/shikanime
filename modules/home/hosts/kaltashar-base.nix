@@ -22,11 +22,6 @@ in
     ../profiles/workstation.nix
     ../profiles/vcs.nix
     ../profiles/cloud.nix
-    ../profiles/javascript.nix
-    ../profiles/python.nix
-    ../profiles/native.nix
-    ../profiles/beam.nix
-    ../profiles/go.nix
   ];
 
   nix.package = pkgs.nix;
