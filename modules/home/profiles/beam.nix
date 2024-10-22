@@ -3,7 +3,7 @@
 {
   # Local programs
   home.sessionPath = [
-    "${config.xdg.dataHome}/mix/escripts"
+    "${config.xdg.configHome}/mix/escripts"
   ];
 
   # Make Mix toolchain to be the XDG compliant by default

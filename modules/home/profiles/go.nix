@@ -2,10 +2,10 @@
 
 {
   home.sessionPath = [
-    "${config.xdg.dataHome}/go/bin"
+    "${config.xdg.configHome}/go/bin"
   ];
 
-  home.sessionVariables.GOPATH = "${config.xdg.dataHome}/go";
+  home.sessionVariables.GOPATH = "${config.xdg.configHome}/go";
 
   programs.zsh.oh-my-zsh.plugins = [
     "golang"

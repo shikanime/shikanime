@@ -2,10 +2,10 @@
 
 {
   home.sessionPath = [
-    "${config.xdg.dataHome}/cargo/bin"
+    "${config.xdg.configHome}/cargo/bin"
   ];
 
-  home.sessionVariables.CARGO_HOME = "${config.xdg.dataHome}/cargo";
+  home.sessionVariables.CARGO_HOME = "${config.xdg.configHome}/cargo";
 
   programs.zsh.oh-my-zsh.plugins = [
     "rust"
