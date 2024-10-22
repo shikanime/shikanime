@@ -9,7 +9,7 @@
     ../profiles/cloud.nix
     ../profiles/javascript.nix
     ../profiles/python.nix
-    ../profiles/native.nix
+    ../profiles/cargo.nix
     ../profiles/beam.nix
     ../profiles/go.nix
   ];
