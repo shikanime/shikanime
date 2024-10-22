@@ -11,7 +11,7 @@
   };
 
   home.packages = [
-    pkgs.cargo
+    pkgs.rustup
     pkgs.texlive.combined.scheme-full
     pkgs.fnm
     pkgs.tenv
