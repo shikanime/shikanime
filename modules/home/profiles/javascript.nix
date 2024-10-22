@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   home.sessionVariables = {
     NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
