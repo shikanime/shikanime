@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   home.sessionPath = [
     "${config.xdg.dataHome}/cargo/bin"
