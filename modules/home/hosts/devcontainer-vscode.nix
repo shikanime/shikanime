@@ -13,8 +13,9 @@
   home.packages = [
     pkgs.cargo
     pkgs.texlive.combined.scheme-full
-    pkgs.nodejs_22
-    pkgs.terraform
+    pkgs.fnm
+    pkgs.tenv
+    pkgs.uv
     (pkgs.google-cloud-sdk.withExtraComponents (
       with pkgs.google-cloud-sdk.components; [
         alpha
