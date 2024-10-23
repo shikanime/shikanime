@@ -17,4 +17,8 @@
   home.packages = [
     pkgs.fnm
   ];
+
+  programs.zsh.initExtra = ''
+    eval "$(${pkgs.fnm}/bin/fnm env)"
+  '';
 }
