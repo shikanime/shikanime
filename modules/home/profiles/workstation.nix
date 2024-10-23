@@ -3,6 +3,12 @@
 with lib;
 
 {
+  xdg.enable = true;
+
+  home.sessionPath = [
+    "${config.home.homeDirectory}/.local/bin"
+  ];
+
   home.packages = [
     pkgs.cachix
     pkgs.gnupatch
