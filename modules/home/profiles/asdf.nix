@@ -8,8 +8,6 @@
   ];
 
   programs.zsh.initExtra = ''
-    if [ -e "${config.home.homeDirectory}/.asdf/asdf.sh" ]; then
-      . "${config.home.homeDirectory}/.asdf/asdf.sh"
-    fi
+    . "${pkgs.asdf-vm}/share/asdf-vm/asdf.sh"
   '';
 }
