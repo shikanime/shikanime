@@ -3,4 +3,8 @@
     "python"
     "poetry"
   ];
+
+  home.packages = [
+    pkgs.uv
+  ];
 }
