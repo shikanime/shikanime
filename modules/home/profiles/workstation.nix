@@ -28,6 +28,8 @@ with lib;
     pkgs.pprof
   ];
 
+  programs.mise.enable = true;
+
   programs.dircolors.enable = true;
 
   programs.zsh = {
@@ -38,7 +40,6 @@ with lib;
     oh-my-zsh = {
       enable = true;
       plugins = [
-        "vim-interaction"
         "sudo"
         "docker"
       ];
