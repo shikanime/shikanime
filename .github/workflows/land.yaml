@@ -1,0 +1,14 @@
+name: Land
+on:
+  repository_dispatch:
+    types: [land-command]
+jobs:
+  land:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v13
+      - run: |
+          sl config --global ui.username \
+            "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          sl ghstack land
