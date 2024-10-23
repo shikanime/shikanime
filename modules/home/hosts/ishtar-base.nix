@@ -4,7 +4,6 @@
   imports = [
     ../profiles/base.nix
     ../profiles/workstation.nix
-    ../profiles/xdg.nix
     ../profiles/vcs.nix
     ../profiles/cloud.nix
     ../profiles/javascript.nix
@@ -13,6 +12,15 @@
     ../profiles/beam.nix
     ../profiles/go.nix
   ];
+
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+    extraConfig = {
+      XDG_SYNC_DIR = "${config.home.homeDirectory}/Sync";
+      XDG_SOURCE_DIR = "${config.home.homeDirectory}/Source";
+    };
+  };
 
   home.packages = [ pkgs.wslu ];
 
