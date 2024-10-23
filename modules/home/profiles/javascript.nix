@@ -13,4 +13,8 @@
     "npm"
     "yarn"
   ];
+
+  home.packages = [
+    pkgs.fnm
+  ];
 }
