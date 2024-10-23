@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
+  imports = [
+    ./asdf.nix
+  ];
+
   # Local programs
   home.sessionPath = [
     "${config.xdg.configHome}/mix/escripts"
@@ -11,9 +15,5 @@
 
   programs.zsh.oh-my-zsh.plugins = [
     "mix"
-  ];
-
-  home.packages = [
-    pkgs.asdf-vm
   ];
 }
