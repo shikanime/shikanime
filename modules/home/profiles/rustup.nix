@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   home.sessionPath = [
@@ -6,7 +6,7 @@
   ];
 
   home.packages = [
-    pkgst.rustup
+    pkgs.rustup
   ];
 
   home.sessionVariables = {
