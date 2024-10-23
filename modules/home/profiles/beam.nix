@@ -1,10 +1,6 @@
 { config, ... }:
 
 {
-  imports = [
-    ./asdf.nix
-  ];
-
   # Local programs
   home.sessionPath = [
     "${config.xdg.configHome}/mix/escripts"
