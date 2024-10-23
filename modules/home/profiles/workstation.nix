@@ -30,11 +30,6 @@ with lib;
 
   programs.dircolors.enable = true;
 
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-  };
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;
