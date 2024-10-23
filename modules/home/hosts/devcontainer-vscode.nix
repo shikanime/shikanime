@@ -11,11 +11,8 @@
   };
 
   home.packages = [
-    pkgs.rustup
     pkgs.texlive.combined.scheme-full
-    pkgs.fnm
     pkgs.tenv
-    pkgs.uv
     (pkgs.google-cloud-sdk.withExtraComponents (
       with pkgs.google-cloud-sdk.components; [
         alpha

@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   # Local programs
@@ -11,5 +11,9 @@
 
   programs.zsh.oh-my-zsh.plugins = [
     "mix"
+  ];
+
+  home.packages = [
+    pkgs.asdf-vm
   ];
 }
