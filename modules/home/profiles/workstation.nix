@@ -26,7 +26,6 @@ with lib;
     pkgs.wget
     pkgs.watch
     pkgs.pprof
-    pkgs.nixpkgs-fmt
   ];
 
   programs.dircolors.enable = true;

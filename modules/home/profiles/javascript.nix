@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   home.sessionVariables = {
@@ -12,5 +12,9 @@
     "bun"
     "npm"
     "yarn"
+  ];
+
+  home.packages = [
+    pkgs.fnm
   ];
 }
