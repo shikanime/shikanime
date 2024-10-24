@@ -19,6 +19,7 @@ jobs:
           reaction: eyes
           allowed_contexts: pull_request
           permissions: maintain
+          allowlist: shikanime
       - run: |
           nix run .#sapling sl config --global ui.username \
             "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
