@@ -17,6 +17,6 @@ jobs:
         with:
           command: "/land"
       - run: |
-          sl config --global ui.username \
+          nix run .#sapling sl config --global ui.username \
             "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
-          sl ghstack land
+          nix run .#sapling sl ghstack land
