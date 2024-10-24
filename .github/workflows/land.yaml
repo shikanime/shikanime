@@ -1,0 +1,22 @@
+name: Land
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  pull-requests: write
+  issues: write
+  checks: read
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@v13
+      - uses: github/command@v1
+        id: command
+        with:
+          command: "/land"
+      - run: |
+          sl config --global ui.username \
+            "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          sl ghstack land
