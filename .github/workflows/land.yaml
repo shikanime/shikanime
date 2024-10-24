@@ -23,4 +23,4 @@ jobs:
       - run: |
           nix run .#sapling sl config --global ui.username \
             "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
-          nix run .#sapling sl ghstack land
+          nix run .#sapling sl ghstack land "${{ github.event.issue.pull_request.url }}"
