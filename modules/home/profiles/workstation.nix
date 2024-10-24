@@ -28,7 +28,10 @@ with lib;
     pkgs.pprof
   ];
 
-  programs.mise.enable = true;
+  programs.mise = {
+    enable = true;
+    globalConfig.settings.experimental = true;
+  };
 
   xdg.configFile."direnv/lib/hm-mise.sh".text = ''
     eval "$(${config.programs.mise.package}/bin/mise direnv activate)"
