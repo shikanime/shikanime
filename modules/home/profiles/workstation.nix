@@ -30,6 +30,10 @@ with lib;
 
   programs.mise.enable = true;
 
+  xdg.configFile."direnv/lib/hm-mise.sh".text = ''
+    eval "$(${config.programs.mise.package}/bin/mise direnv activate)"
+  '';
+
   programs.dircolors.enable = true;
 
   programs.zsh = {
