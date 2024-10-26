@@ -33,10 +33,6 @@ with lib;
     globalConfig.settings.experimental = true;
   };
 
-  xdg.configFile."direnv/lib/hm-mise.sh".text = ''
-    eval "$(${config.programs.mise.package}/bin/mise direnv activate)"
-  '';
-
   programs.dircolors.enable = true;
 
   programs.zsh = {
@@ -58,6 +54,7 @@ with lib;
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
+    mise.enable = true;
     config.global.load_dotenv = true;
   };
 
