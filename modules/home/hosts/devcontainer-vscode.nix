@@ -12,7 +12,6 @@
 
   home.packages = [
     pkgs.texlive.combined.scheme-full
-    pkgs.tenv
     (pkgs.google-cloud-sdk.withExtraComponents (
       with pkgs.google-cloud-sdk.components; [
         alpha
