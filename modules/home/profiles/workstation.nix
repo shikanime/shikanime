@@ -54,7 +54,6 @@ with lib;
     extraConfig = ''
       $env.config = { show_banner: false }
       use ${pkgs.nu_scripts}/share/nu_scripts/themes/nu-themes/catppuccin-latte.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/nu-hooks/nu-hooks/command_not_found/did_you_mean.nu
       use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/curl/curl-completions.nu
       use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/cargo/cargo-completions.nu
       use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/docker/docker-completions.nu
