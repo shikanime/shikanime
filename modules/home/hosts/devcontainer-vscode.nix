@@ -20,9 +20,6 @@
         gsutil
         gke-gcloud-auth-plugin
         gcloud-crc32c
-        kubectl
-        kustomize
-        skaffold
       ]
     ))
   ];
