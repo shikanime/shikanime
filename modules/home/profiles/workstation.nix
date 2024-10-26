@@ -70,11 +70,11 @@ with lib;
       use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/tar/tar-completions.nu
       use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/vscode/vscode-completions.nu
       use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/yarn/yarn-v4-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/modules/argx
-      use ${pkgs.nu_scripts}/share/nu_scripts/modules/lg
-      use ${pkgs.nu_scripts}/share/nu_scripts/modules/system
-      use ${pkgs.nu_scripts}/share/nu_scripts/modules/docker
-      use ${pkgs.nu_scripts}/share/nu_scripts/modules/kubernetes
+      use ${pkgs.nu_scripts}/share/nu_scripts/modules/argx *
+      use ${pkgs.nu_scripts}/share/nu_scripts/modules/lg *
+      use ${pkgs.nu_scripts}/share/nu_scripts/modules/system *
+      use ${pkgs.nu_scripts}/share/nu_scripts/modules/docker *
+      use ${pkgs.nu_scripts}/share/nu_scripts/modules/kubernetes *
     '';
   };
 
