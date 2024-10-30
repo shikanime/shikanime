@@ -19,7 +19,6 @@
   ];
 
   programs.nushell.extraConfig = ''
-    use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/cargo/cargo-completions.nu
-    use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/rustup/rustup-completions.nu
+    source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/cargo/cargo-completions.nu
   '';
 }

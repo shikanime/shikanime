@@ -8,8 +8,7 @@
   ];
 
   programs.nushell.extraConfig = ''
-    use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/gradlew/gradlew-completions.nu
-    use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/mvn/mvn-completions.nu
-    use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/sbt/sbt-completions.nu
+    source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/auto-generate/completions/sbt.nu
+    source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/mvn/mvn-completions.nu
   '';
 }

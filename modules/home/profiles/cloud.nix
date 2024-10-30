@@ -36,7 +36,6 @@ with lib;
     "${pkgs.glab}/bin/glab auth git-credential";
 
   programs.nushell.extraConfig = ''
-    use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/gh/gh-completions.nu
     use ${pkgs.nu_scripts}/share/nu_scripts/modules/kubernetes *
   '';
 }

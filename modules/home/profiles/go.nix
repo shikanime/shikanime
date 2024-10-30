@@ -6,6 +6,6 @@
   ];
 
   programs.nushell.extraConfig = ''
-    use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/auto-generate/completions/godoc.nu
+    source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/godoc/godoc-completions.nu
   '';
 }

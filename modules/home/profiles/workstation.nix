@@ -53,20 +53,20 @@ with lib;
     enable = true;
     extraConfig = ''
       $env.config = { show_banner: false }
-      use ${pkgs.nu_scripts}/share/nu_scripts/themes/nu-themes/catppuccin-latte.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/curl/curl-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/docker/docker-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/git/git-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/less/less-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/make/make-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/man/man-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/ssh/ssh-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/tar/tar-completions.nu
-      use ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/vscode/vscode-completions.nu
+
       use ${pkgs.nu_scripts}/share/nu_scripts/modules/argx *
       use ${pkgs.nu_scripts}/share/nu_scripts/modules/lg *
       use ${pkgs.nu_scripts}/share/nu_scripts/modules/system *
       use ${pkgs.nu_scripts}/share/nu_scripts/modules/docker *
+
+      source ${pkgs.nu_scripts}/share/nu_scripts/themes/nu-themes/catppuccin-latte.nu
+
+      source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/curl/curl-completions.nu
+      source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/less/less-completions.nu
+      source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/make/make-completions.nu
+      source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/man/man-completions.nu
+      source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/tar/tar-completions.nu
+      source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/vscode/vscode-completions.nu
     '';
   };
 
