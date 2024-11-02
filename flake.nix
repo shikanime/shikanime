@@ -5,6 +5,7 @@
     devenv.url = "github:cachix/devenv";
     flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager.url = "github:nix-community/home-manager";
+    mk-shell-bin.url = "github:rrbutani/nix-mk-shell-bin";
     nix2container.url = "github:nlewo/nix2container";
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";

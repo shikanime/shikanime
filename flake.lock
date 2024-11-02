@@ -781,6 +781,7 @@
         "devenv": "devenv",
         "flake-parts": "flake-parts_2",
         "home-manager": "home-manager",
+        "mk-shell-bin": "mk-shell-bin",
         "nix2container": "nix2container",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_6",
