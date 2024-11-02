@@ -12,6 +12,9 @@
         prettier.enable = true;
       };
       settings.global.excludes = [
+        ".devenv/*"
+        ".direnv/*"
+        ".sl/*"
         "*.png"
         "LICENSE"
       ];
