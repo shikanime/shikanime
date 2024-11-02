@@ -28,10 +28,7 @@
         enable = true;
         push = "shikanime";
       };
-      packages = [
-        pkgs.gh
-        pkgs.qemu
-      ];
+      packages = [ pkgs.gh ];
     };
   };
 }
