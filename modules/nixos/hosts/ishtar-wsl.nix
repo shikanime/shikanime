@@ -1,6 +1,6 @@
 {
   imports = [
-    ../ishtar-base.nix
+    ./ishtar-base.nix
   ];
 
   wsl = {
