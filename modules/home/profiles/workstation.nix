@@ -59,8 +59,6 @@ with lib;
       use ${pkgs.nu_scripts}/share/nu_scripts/modules/system *
       use ${pkgs.nu_scripts}/share/nu_scripts/modules/docker *
 
-      source ${pkgs.nu_scripts}/share/nu_scripts/themes/nu-themes/catppuccin-latte.nu
-
       source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/curl/curl-completions.nu
       source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/less/less-completions.nu
       source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/make/make-completions.nu
