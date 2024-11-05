@@ -10,8 +10,8 @@
     home = "/home/shika";
     shell = pkgs.nushell;
     useDefaultShell = true;
-    extraGroups = [ "wheel" ];
     initialHashedPassword = "";
+    extraGroups = [ "wheel" ];
   };
 
   home-manager.users.shika.imports = [
