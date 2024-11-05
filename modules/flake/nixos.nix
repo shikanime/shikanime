@@ -20,7 +20,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ../nixos/hosts/ishtar-wsl.nix
+            ../nixos/hosts/ishtar.nix
             inputs.home-manager.nixosModules.home-manager
             inputs.nixos-wsl.nixosModules.default
           ];
