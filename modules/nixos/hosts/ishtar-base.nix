@@ -25,6 +25,8 @@
 
   programs.nix-ld.enable = true;
 
+  networking.hostName = "ishtar";
+
   wsl = {
     enable = true;
     defaultUser = "shika";

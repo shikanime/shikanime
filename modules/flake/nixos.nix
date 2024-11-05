@@ -13,7 +13,7 @@
   };
   flake = {
     nixosConfigurations = {
-      ishtar-wsl = withSystem "x86_64-linux" ({ system, ... }:
+      ishtar = withSystem "x86_64-linux" ({ system, ... }:
         inputs.nixpkgs.lib.nixosSystem {
           pkgs = import inputs.nixpkgs {
             inherit system;
