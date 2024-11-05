@@ -5,6 +5,10 @@
     ../profiles/base.nix
   ];
 
+  boot.binfmt.emulatedSystems = [
+    "aarch64-linux"
+  ];
+
   users.users.shika = {
     isNormalUser = true;
     home = "/home/shika";
@@ -16,10 +20,6 @@
   home-manager.users.shika.imports = [
     ../../home/hosts/ishtar-shika.nix
     ../../home/identities/shikanime.nix
-  ];
-
-  boot.binfmt.emulatedSystems = [
-    "aarch64-linux"
   ];
 
   programs.nix-ld.enable = true;
