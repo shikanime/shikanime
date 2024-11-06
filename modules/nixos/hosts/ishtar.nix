@@ -22,15 +22,24 @@
     ../../home/identities/shikanime.nix
   ];
 
+  hardware = {
+    nvidia.open = true;
+    nvidia-container-toolkit.enable = true;
+    graphics.enable32Bit = true;
+  };
+
   programs.nix-ld.enable = true;
 
   networking.hostName = "ishtar";
+
+  services.xserver.videoDrivers = ["nvidia"];
+
+  virtualisation.docker.enable = true;
 
   wsl = {
     enable = true;
     defaultUser = "shika";
     useWindowsDriver = true;
-    docker-desktop.enable = true;
     interop.register = true;
     usbip.enable = true;
   };
