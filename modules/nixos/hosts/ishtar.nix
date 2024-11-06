@@ -25,14 +25,18 @@
   hardware = {
     nvidia.open = true;
     nvidia-container-toolkit.enable = true;
-    graphics.enable32Bit = true;
+  };
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
   };
 
   programs.nix-ld.enable = true;
 
   networking.hostName = "ishtar";
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "intel" "nvidia" ];
 
   virtualisation.docker.enable = true;
 
