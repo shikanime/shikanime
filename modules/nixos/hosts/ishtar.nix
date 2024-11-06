@@ -60,7 +60,10 @@ in
 
   services.xserver.videoDrivers = [ "intel" "nvidia" ];
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    extraPackages = [ wsl-lib ];
+  };
 
   wsl = {
     enable = true;
