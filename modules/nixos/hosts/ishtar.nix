@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 let
   wsl-lib = pkgs.runCommand "wsl-lib" { } ''
@@ -62,7 +62,11 @@ in
 
   virtualisation.docker = {
     enable = true;
-    extraPackages = [ wsl-lib ];
+    package = pkgs.docker.overrideAttrs (old: {
+      moby = old.moby.overrideAttrs (old: {
+        extraPath = old.extraPath + lib.makeLibraryPath [ wsl-lib ];
+      });
+    });
   };
 
   wsl = {
