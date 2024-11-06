@@ -3,12 +3,12 @@
 {
   perSystem = _: {
     packages = {
-      ishtar-wsl-tarballBuilder =
-        self.nixosConfigurations.ishtar-wsl.config.system.build.tarballBuilder;
-      nishir-raspeberry-pi4-remilia-sdImage =
-        self.nixosConfigurations.nishir-raspeberry-pi4-remilia.config.system.build.sdImage;
-      nishir-raspeberry-pi4-flandre-sdImage =
-        self.nixosConfigurations.nishir-raspeberry-pi4-flandre.config.system.build.sdImage;
+      ishtar-tarballBuilder =
+        self.nixosConfigurations.ishtar.config.system.build.tarballBuilder;
+      remilia-sdImage =
+        self.nixosConfigurations.remilia.config.system.build.sdImage;
+      flandre-sdImage =
+        self.nixosConfigurations.flandre.config.system.build.sdImage;
     };
   };
   flake = {
@@ -25,7 +25,7 @@
             inputs.nixos-wsl.nixosModules.default
           ];
         });
-      nishir-raspeberry-pi4-remilia = withSystem "aarch64-linux" ({ system, ... }:
+      remilia = withSystem "aarch64-linux" ({ system, ... }:
         inputs.nixpkgs.lib.nixosSystem {
           pkgs = import inputs.nixpkgs {
             inherit system;
@@ -37,7 +37,7 @@
             inputs.nixos-hardware.nixosModules.raspberry-pi-4
           ];
         });
-      nishir-raspeberry-pi4-flandre = withSystem "aarch64-linux" ({ system, ... }:
+      flandre = withSystem "aarch64-linux" ({ system, ... }:
         inputs.nixpkgs.lib.nixosSystem {
           pkgs = import inputs.nixpkgs {
             inherit system;
