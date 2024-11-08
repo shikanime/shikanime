@@ -8,6 +8,7 @@
     ../profiles/machine.nix
   ];
 
+  # Enable accelerator
   hardware.raspberry-pi."4" = {
     fkms-3d.enable = true;
     apply-overlays-dtmerge.enable = true;
@@ -21,14 +22,19 @@
     })
   ];
 
+  # Common configuration on a Raspberry Pi 4
   boot.kernelParams = [
     "8250.nr_uarts=1"
-    "cgroup_enable=cpuset"
-    "cgroup_enable=memory"
-    "cgroup_memory=1"
     "console=ttyAMA0,115200"
     "console=tty1"
     "cma=128M"
+  ];
+
+  # Enable cgroup for K3s
+  boot.kernelParams = [
+      "cgroup_enable=cpuset"
+    "cgroup_enable=memory"
+    "cgroup_memory=1"
   ];
 
   # Remove common limitations for fs heavy services such as Syncthing
