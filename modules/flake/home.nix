@@ -33,14 +33,6 @@
             ../home/identities/shikanime.nix
           ];
         });
-      "willi@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
-        inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ../home/hosts/ishtar-willi.nix
-            ../home/identities/shikanime.nix
-          ];
-        });
       "vscode@kaltashar" = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
