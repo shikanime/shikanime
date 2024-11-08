@@ -29,6 +29,10 @@ in
     ../profiles/base.nix
   ];
 
+  environment.systemPackages = [
+    pkgs.docker-credential-helpers
+  ];
+
   boot.binfmt.emulatedSystems = [
     "aarch64-linux"
   ];
@@ -60,10 +64,17 @@ in
 
   networking.hostName = "ishtar";
 
-  services.xserver.videoDrivers = [ "intel" "nvidia" ];
+  services.xserver = {
+    enable = true;
+    desktopManager.gnome.enable = true;
+    videoDrivers = [ "intel" "nvidia" ];
+  };
+
+  services.passSecretService.enable = true;
 
   virtualisation.docker = {
     enable = true;
+    autoPrune.enable = true;
     daemon.settings.features.cdi = true;
   };
 
@@ -73,5 +84,6 @@ in
     useWindowsDriver = true;
     interop.register = true;
     usbip.enable = true;
+    wslConf.automount.ldconfig = true;
   };
 }
