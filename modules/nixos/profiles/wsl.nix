@@ -48,11 +48,7 @@ in
   services.passSecretService.enable = true;
 
   # Enable WSLg integration
-  services.xserver = {
-    enable = true;
-    desktopManager.gnome.enable = true;
-    videoDrivers = [ "intel" "nvidia" ];
-  };
+  services.xserver.videoDrivers = [ "intel" "nvidia" ];
 
   programs.nix-ld = {
     enable = true;
