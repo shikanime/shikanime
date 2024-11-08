@@ -32,7 +32,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ../nixos/hosts/nishir-raspberry-pi-4-remilia.nix
+            ../nixos/hosts/remilia.nix
             inputs.home-manager.nixosModules.home-manager
             inputs.nixos-hardware.nixosModules.raspberry-pi-4
           ];
@@ -44,7 +44,7 @@
             config.allowUnfree = true;
           };
           modules = [
-            ../nixos/hosts/nishir-raspberry-pi-4-flandre.nix
+            ../nixos/hosts/flandre.nix
             inputs.home-manager.nixosModules.home-manager
             inputs.nixos-hardware.nixosModules.raspberry-pi-4
           ];
