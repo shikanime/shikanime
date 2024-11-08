@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  programs.zsh.enable = true;
+
   users.users.shika = {
     isNormalUser = true;
     home = "/home/shika";
