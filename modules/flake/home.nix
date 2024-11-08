@@ -4,10 +4,8 @@
   flake = {
     packages = {
       x86_64-linux = {
-        vscode-kaltashar-activationPackage =
-          self.homeConfigurations."vscode@kaltashar".activationPackage;
-        vscode-ishtar-activationPackage =
-          self.homeConfigurations."vscode@ishtar".activationPackage;
+        vscode-activationPackage =
+          self.homeConfigurations.vscode.activationPackage;
       };
       x86_64-darwin.shikanimedeva-kaltashar-activationPackage =
         self.homeConfigurations."shikanimedeva@kaltashar".activationPackage;
@@ -20,7 +18,7 @@
             ../home/users/shikanimedeva-kaltashar.nix
           ];
         });
-      "vscode" = withSystem "x86_64-linux" ({ pkgs, ... }:
+      vscode = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
