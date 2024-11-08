@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   imports = [
     ../identities/shikanime.nix
