@@ -6,8 +6,6 @@
       x86_64-linux = {
         shika-ishtar-activationPackage =
           self.homeConfigurations."shika@ishtar".activationPackage;
-        willi-ishtar-activationPackage =
-          self.homeConfigurations."willi@ishtar".activationPackage;
         vscode-kaltashar-activationPackage =
           self.homeConfigurations."vscode@kaltashar".activationPackage;
         vscode-ishtar-activationPackage =
