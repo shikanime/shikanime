@@ -1,5 +1,3 @@
-{pkgs,...}:
-
 {
   # Set default time zone
   time.timeZone = "UTC";
