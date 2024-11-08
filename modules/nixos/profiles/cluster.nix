@@ -50,7 +50,7 @@
   };
 
   home-manager.users.shika.imports = [
-    ../../home/hosts/nishir-shika.nix
+    ../../home/hosts/shika-nishir.nix
   ];
 
   services.k3s = {
