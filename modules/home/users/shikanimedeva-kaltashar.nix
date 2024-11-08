@@ -1,14 +1,13 @@
-{ ... }:
-
 {
   imports = [
+    ../identities/shikanime.nix
     ../profiles/base.nix
     ../profiles/beam.nix
     ../profiles/cloud.nix
-    ../profiles/devcontainer.nix
     ../profiles/go.nix
     ../profiles/java.nix
     ../profiles/javascript.nix
+    ../profiles/kaltashar.nix
     ../profiles/python.nix
     ../profiles/rustup.nix
     ../profiles/vcs.nix
@@ -16,7 +15,7 @@
   ];
 
   home = {
-    homeDirectory = "/home/vscode";
-    username = "vscode";
+    homeDirectory = "/Users/shikanimedeva";
+    username = "shikanimedeva";
   };
 }
