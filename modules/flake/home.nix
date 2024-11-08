@@ -6,8 +6,6 @@
       x86_64-linux = {
         shika-ishtar-activationPackage =
           self.homeConfigurations."shika@ishtar".activationPackage;
-        willi-ishtar-activationPackage =
-          self.homeConfigurations."willi@ishtar".activationPackage;
         vscode-kaltashar-activationPackage =
           self.homeConfigurations."vscode@kaltashar".activationPackage;
         vscode-ishtar-activationPackage =
@@ -21,7 +19,7 @@
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/kaltashar-shikanimedeva.nix
+            ../home/hosts/shikanimedeva-kaltashar.nix
             ../home/identities/shikanime.nix
           ];
         });
@@ -29,15 +27,7 @@
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/ishtar-shika.nix
-            ../home/identities/shikanime.nix
-          ];
-        });
-      "willi@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
-        inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ../home/hosts/ishtar-willi.nix
+            ../home/hosts/shika-ishtar.nix
             ../home/identities/shikanime.nix
           ];
         });
@@ -45,7 +35,7 @@
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/devcontainer-vscode.nix
+            ../home/hosts/vscode-devcontainer.nix
             ../home/identities/shikanime.nix
           ];
         });
@@ -53,7 +43,7 @@
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/devcontainer-vscode.nix
+            ../home/hosts/vscode-devcontainer.nix
             ../home/identities/shikanime.nix
           ];
         });

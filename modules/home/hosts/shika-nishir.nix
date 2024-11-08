@@ -1,6 +1,6 @@
 {
   imports = [
-    ./ishtar-base.nix
+    ../profiles/base.nix
   ];
 
   home = {

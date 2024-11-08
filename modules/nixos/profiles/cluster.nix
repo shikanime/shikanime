@@ -1,19 +1,12 @@
-{ modulesPath, ... }:
-
 {
-  imports = [
-    "${modulesPath}/profiles/headless.nix"
-    ../profiles/base.nix
-    ../profiles/machine.nix
-    ../users/shika.nix
-  ];
-
+  # Enable cgroup for K3s
   boot.kernelParams = [
     "cgroup_enable=cpuset"
     "cgroup_enable=memory"
     "cgroup_memory=1"
   ];
 
+  # Remove common limitations for fs heavy services such as Syncthing
   boot.kernel.sysctl = {
     "kernel.threads-max" = 8192;
     "fs.inotify.max_user_watches" = 524288;
@@ -25,11 +18,7 @@
     "vm.max_map_count" = 1048576;
   };
 
-  services.k3s = {
-    enable = true;
-    role = "server";
-  };
+  services.k3s.enable = true;
 
-  # Longhorn requires open-iscsi
   services.openiscsi.enable = true;
 }

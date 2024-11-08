@@ -36,6 +36,7 @@
     useRoutingFeatures = "server";
   };
 
+  # Enable Tailscale traffic optimizations
   boot.kernel.sysctl = {
     "net.core.rmem_default" = 7340032;
     "net.ipv4.ip_forward" = 1;
