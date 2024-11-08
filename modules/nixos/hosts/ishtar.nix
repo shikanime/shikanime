@@ -64,13 +64,9 @@ in
 
   networking.hostName = "ishtar";
 
-  services.xserver = {
-    enable = true;
-    desktopManager.gnome.enable = true;
-    videoDrivers = [ "intel" "nvidia" ];
-  };
-
   services.passSecretService.enable = true;
+
+  services.xserver.videoDrivers = [ "intel" "nvidia" ];
 
   virtualisation.docker = {
     enable = true;
