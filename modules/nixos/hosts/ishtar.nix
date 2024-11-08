@@ -48,7 +48,7 @@ in
   };
 
   home-manager.users.shika.imports = [
-    ../../home/hosts/ishtar-shika.nix
+    ../../home/hosts/shika-ishtar.nix
     ../../home/identities/shikanime.nix
   ];
 
