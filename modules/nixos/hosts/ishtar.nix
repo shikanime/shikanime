@@ -18,7 +18,7 @@ with lib;
     configPath = "/etc/rancher/k3s/config.yaml";
     extraFlags = escapeShellArgs [
       "--node-ip"
-      "100.77.66.124, fd7a:115c:a1e0::1c01:427c"
+      "100.77.66.124,fd7a:115c:a1e0::1c01:427c"
     ];
   };
 
