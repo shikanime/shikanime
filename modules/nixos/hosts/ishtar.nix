@@ -25,7 +25,7 @@ let
   '';
 in
 {
-    imports = [
+  imports = [
     ../profiles/base.nix
     ../profiles/workstation.nix
   ];
