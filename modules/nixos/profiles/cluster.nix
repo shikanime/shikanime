@@ -31,6 +31,7 @@
     "cma=128M"
   ];
 
+  # Remove common limitations for fs heavy services such as Syncthing
   boot.kernel.sysctl = {
     "kernel.threads-max" = 8192;
     "fs.inotify.max_user_watches" = 524288;
@@ -53,10 +54,7 @@
     ../../home/hosts/shika-nishir.nix
   ];
 
-  services.k3s = {
-    enable = true;
-    role = "server";
-  };
+  services.k3s.enable = true;
 
   services.openiscsi.enable = true;
 }
