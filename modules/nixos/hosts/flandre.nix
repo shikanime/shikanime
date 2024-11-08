@@ -10,7 +10,6 @@ with lib;
     ../profiles/machine.nix
     ../profiles/cluster.nix
     ../profiles/nishir.nix
-    ../users/nishir.nix
   ];
 
   fileSystems."/mnt/flandre".device = "/dev/disk/by-label/flandre";
