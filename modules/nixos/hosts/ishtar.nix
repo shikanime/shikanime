@@ -25,19 +25,10 @@ let
   '';
 in
 {
-  imports = [
+    imports = [
     ../profiles/base.nix
+    ../profiles/workstation.nix
   ];
-
-  environment.systemPackages = [
-    pkgs.docker-credential-helpers
-  ];
-
-  boot.binfmt.emulatedSystems = [
-    "aarch64-linux"
-  ];
-
-  programs.zsh.enable = true;
 
   users.users.shika = {
     isNormalUser = true;
@@ -60,10 +51,7 @@ in
     };
   };
 
-  programs.nix-ld = {
-    enable = true;
-    libraries = [ wsl-lib ];
-  };
+  programs.nix-ld.libraries = [ wsl-lib ];
 
   networking.hostName = "ishtar";
 
@@ -75,11 +63,7 @@ in
     videoDrivers = [ "intel" "nvidia" ];
   };
 
-  virtualisation.docker = {
-    enable = true;
-    autoPrune.enable = true;
-    daemon.settings.features.cdi = true;
-  };
+  virtualisation.docker.daemon.settings.features.cdi = true;
 
   wsl = {
     enable = true;
