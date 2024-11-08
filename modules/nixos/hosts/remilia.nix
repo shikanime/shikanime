@@ -1,6 +1,6 @@
 {
   imports = [
-    ./nishir-raspberry-pi-4.nix
+    ../profiles/cluster.nix
   ];
 
   fileSystems."/mnt/remilia".device = "/dev/disk/by-label/remilia";

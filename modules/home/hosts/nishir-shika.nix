@@ -1,6 +1,6 @@
 {
   imports = [
-    ./nishir-base.nix
+    ../profiles/base.nix
   ];
 
   home = {

@@ -2,27 +2,21 @@
 
 {
   imports = [
-    ./devcontainer-base.nix
+    ../profiles/base.nix
+    ../profiles/beam.nix
+    ../profiles/cloud.nix
+    ../profiles/devcontainer.nix
+    ../profiles/go.nix
+    ../profiles/java.nix
+    ../profiles/javascript.nix
+    ../profiles/python.nix
+    ../profiles/rustup.nix
+    ../profiles/vcs.nix
+    ../profiles/workstation.nix
   ];
 
   home = {
     homeDirectory = "/home/vscode";
     username = "vscode";
   };
-
-  home.packages = [
-    pkgs.texlive.combined.scheme-full
-    (pkgs.google-cloud-sdk.withExtraComponents (
-      with pkgs.google-cloud-sdk.components; [
-        alpha
-        beta
-        bq
-        gsutil
-        gke-gcloud-auth-plugin
-        gcloud-crc32c
-      ]
-    ))
-  ];
-
-  programs.k9s.enable = true;
 }

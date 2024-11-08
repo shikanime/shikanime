@@ -1,21 +1,6 @@
 { lib, pkgs, ... }:
 
-with lib;
-
 {
-  imports = [
-    ../profiles/base.nix
-    ../profiles/beam.nix
-    ../profiles/cloud.nix
-    ../profiles/go.nix
-    ../profiles/java.nix
-    ../profiles/javascript.nix
-    ../profiles/python.nix
-    ../profiles/rustup.nix
-    ../profiles/vcs.nix
-    ../profiles/workstation.nix
-  ];
-
   nix.package = pkgs.nix;
 
   programs.zsh.initExtra = ''

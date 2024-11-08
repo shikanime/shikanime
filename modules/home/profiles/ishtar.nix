@@ -1,19 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../profiles/base.nix
-    ../profiles/beam.nix
-    ../profiles/cloud.nix
-    ../profiles/go.nix
-    ../profiles/java.nix
-    ../profiles/javascript.nix
-    ../profiles/python.nix
-    ../profiles/rustup.nix
-    ../profiles/vcs.nix
-    ../profiles/workstation.nix
-  ];
-
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
@@ -25,6 +12,8 @@
 
   home.packages = [ pkgs.wslu ];
 
+  nix.package = pkgs.nix;
+
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
@@ -32,6 +21,8 @@
     defaultCacheTtl = 4 * 60 * 60;
     pinentryPackage = pkgs.pinentry-qt;
   };
+
+  targets.genericLinux.enable = true;
 
   programs.git.extraConfig.credential.helper =
     "/mnt/c/Users/${config.home.username}/scoop/shims/git-credential-manager.exe";
