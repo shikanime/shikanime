@@ -18,7 +18,6 @@
           inherit pkgs;
           modules = [
             ../home/users/shikanimedeva-kaltashar.nix
-            ../home/identities/shikanime.nix
           ];
         });
       "vscode@kaltashar" = withSystem "x86_64-linux" ({ pkgs, ... }:
@@ -26,7 +25,6 @@
           inherit pkgs;
           modules = [
             ../home/users/vscode-devcontainer.nix
-            ../home/identities/shikanime.nix
           ];
         });
       "vscode@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
@@ -34,7 +32,6 @@
           inherit pkgs;
           modules = [
             ../home/users/vscode-devcontainer.nix
-            ../home/identities/shikanime.nix
           ];
         });
     };
