@@ -1,5 +1,3 @@
-_:
-
 {
   # Enable cgroup for K3s
   boot.kernelParams = [
