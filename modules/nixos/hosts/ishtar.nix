@@ -66,7 +66,11 @@ in
 
   services.passSecretService.enable = true;
 
-  services.xserver.videoDrivers = [ "intel" "nvidia" ];
+  services.xserver = {
+    enable = true;
+    desktopManager.gnome.enable = true;
+    videoDrivers = [ "intel" "nvidia" ];
+  };
 
   virtualisation.docker = {
     enable = true;
