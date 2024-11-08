@@ -29,6 +29,6 @@
   };
 
   home-manager.users.shika.imports = [
-    ../../home/hosts/shika-nishir.nix
+    ../../home/users/shika-nishir.nix
   ];
 }

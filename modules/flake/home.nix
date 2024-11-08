@@ -17,7 +17,7 @@
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/shikanimedeva-kaltashar.nix
+            ../home/users/shikanimedeva-kaltashar.nix
             ../home/identities/shikanime.nix
           ];
         });
@@ -25,7 +25,7 @@
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/vscode-devcontainer.nix
+            ../home/users/vscode-devcontainer.nix
             ../home/identities/shikanime.nix
           ];
         });
@@ -33,7 +33,7 @@
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/vscode-devcontainer.nix
+            ../home/users/vscode-devcontainer.nix
             ../home/identities/shikanime.nix
           ];
         });
