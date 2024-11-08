@@ -25,6 +25,8 @@
 
   home.packages = [ pkgs.wslu ];
 
+  nix.package = pkgs.nix;
+
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
@@ -32,6 +34,8 @@
     defaultCacheTtl = 4 * 60 * 60;
     pinentryPackage = pkgs.pinentry-qt;
   };
+
+  targets.genericLinux.enable = true;
 
   programs.git.extraConfig.credential.helper =
     "/mnt/c/Users/${config.home.username}/scoop/shims/git-credential-manager.exe";
