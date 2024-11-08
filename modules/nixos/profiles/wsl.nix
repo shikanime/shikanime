@@ -67,7 +67,6 @@ in
 
   wsl = {
     enable = true;
-    defaultUser = "shika";
     useWindowsDriver = true;
     interop.register = true;
     usbip.enable = true;
