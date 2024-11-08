@@ -1,4 +1,9 @@
+{pkgs,...}:
+
 {
+  # Set ZSH as global system shell
+  users.defaultUserShell = pkgs.zsh;
+
   # Set default time zone
   time.timeZone = "UTC";
 
