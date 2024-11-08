@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 let
   wsl-lib = pkgs.runCommand "wsl-lib" { } ''
@@ -33,12 +33,14 @@ in
     "aarch64-linux"
   ];
 
+  programs.zsh.enable = true;
+
   users.users.shika = {
     isNormalUser = true;
     home = "/home/shika";
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
     useDefaultShell = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "docker" "wheel" ];
   };
 
   home-manager.users.shika.imports = [
@@ -47,7 +49,7 @@ in
   ];
 
   hardware = {
-    nvidia.open = true;
+    nvidia.open = false;
     nvidia-container-toolkit.enable = true;
   };
 
@@ -62,11 +64,7 @@ in
 
   virtualisation.docker = {
     enable = true;
-    package = pkgs.docker.overrideAttrs (old: {
-      moby = old.moby.overrideAttrs (old: {
-        extraPath = old.extraPath + lib.makeLibraryPath [ wsl-lib ];
-      });
-    });
+    daemon.settings.features.cdi = true;
   };
 
   wsl = {
