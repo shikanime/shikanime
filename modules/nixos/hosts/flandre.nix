@@ -1,6 +1,11 @@
 {
   imports = [
+    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
+    "${modulesPath}/profiles/headless.nix"
+    ../profiles/base.nix
+    ../profiles/machine.nix
     ../profiles/cluster.nix
+    ../profiles/nishir.nix
   ];
 
   fileSystems."/mnt/flandre".device = "/dev/disk/by-label/flandre";
