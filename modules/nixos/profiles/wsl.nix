@@ -45,6 +45,7 @@ in
   };
 
   # Docker need a secret manager
+  services.gnome.gnome-keyring.enable = true;
   services.passSecretService.enable = true;
 
   # Enable WSLg integration
