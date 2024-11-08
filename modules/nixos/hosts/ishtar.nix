@@ -87,6 +87,5 @@ in
     useWindowsDriver = true;
     interop.register = true;
     usbip.enable = true;
-    wslConf.automount.ldconfig = true;
   };
 }
