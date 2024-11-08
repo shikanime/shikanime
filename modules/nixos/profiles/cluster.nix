@@ -32,7 +32,7 @@
 
   # Enable cgroup for K3s
   boot.kernelParams = [
-      "cgroup_enable=cpuset"
+    "cgroup_enable=cpuset"
     "cgroup_enable=memory"
     "cgroup_memory=1"
   ];

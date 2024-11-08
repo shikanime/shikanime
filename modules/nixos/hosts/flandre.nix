@@ -11,7 +11,10 @@
 
   services.openiscsi.name = "iqn.2011-11.studio.shikanime:flandre";
 
-  services.k3s.role = "agent";
+  services.k3s = {
+    role = "agent";
+    serverAddr = "remilia";
+  };
 
   networking.hostName = "flandre";
 }
