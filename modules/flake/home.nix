@@ -17,21 +17,21 @@
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/shikanimedeva-kaltashar.nix
+            ../home/users/shikanimedeva-kaltashar.nix
           ];
         });
       "vscode@kaltashar" = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/vscode-devcontainer.nix
+            ../home/users/vscode-devcontainer.nix
           ];
         });
       "vscode@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/hosts/vscode-devcontainer.nix
+            ../home/users/vscode-devcontainer.nix
           ];
         });
     };

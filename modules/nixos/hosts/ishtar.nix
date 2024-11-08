@@ -28,19 +28,7 @@ in
   imports = [
     ../profiles/base.nix
     ../profiles/workstation.nix
-  ];
-
-  users.users.shika = {
-    isNormalUser = true;
-    home = "/home/shika";
-    shell = pkgs.zsh;
-    useDefaultShell = true;
-    extraGroups = [ "docker" "wheel" ];
-  };
-
-  home-manager.users.shika.imports = [
-    ../../home/hosts/shika-ishtar.nix
-    ../../home/identities/shikanime.nix
+    ../users/shika.nix
   ];
 
   hardware = {
