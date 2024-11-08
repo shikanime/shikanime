@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../home/identities/shikanime.nix
+    ../identities/shikanime.nix
     ../profiles/base.nix
     ../profiles/beam.nix
     ../profiles/cloud.nix
