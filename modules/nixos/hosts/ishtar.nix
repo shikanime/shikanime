@@ -54,7 +54,10 @@ in
 
   hardware = {
     nvidia.open = false;
-    nvidia-container-toolkit.enable = true;
+    nvidia-container-toolkit = {
+      enable = true;
+      mount-nvidia-executables = false;
+    };
   };
 
   programs.nix-ld = {
