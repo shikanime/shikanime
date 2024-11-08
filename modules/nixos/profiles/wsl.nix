@@ -54,8 +54,6 @@ in
     videoDrivers = [ "intel" "nvidia" ];
   };
 
-  programs.zsh.enable = true;
-
   programs.nix-ld = {
     enable = true;
     libraries = [ wsl-lib ];
