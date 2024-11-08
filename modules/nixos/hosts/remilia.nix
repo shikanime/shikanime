@@ -21,6 +21,7 @@ with lib;
   services.k3s = {
     role = "server";
     tokenFile = "/mnt/remilia/secrets/k3s-token";
+    environmentFile = "/mnt/remilia/secrets/k3s-environment";
     extraFlags = escapeShellArgs ''
       --tls-san: nishir.taila659a.ts.net
       --cluster-cidr: 10.42.0.0/16,2001:cafe:42::/56
