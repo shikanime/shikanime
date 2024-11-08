@@ -20,18 +20,11 @@
             ../home/users/shikanimedeva-kaltashar.nix
           ];
         });
-      "vscode@kaltashar" = withSystem "x86_64-linux" ({ pkgs, ... }:
+      "vscode" = withSystem "x86_64-linux" ({ pkgs, ... }:
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ../home/users/vscode-devcontainer.nix
-          ];
-        });
-      "vscode@ishtar" = withSystem "x86_64-linux" ({ pkgs, ... }:
-        inputs.home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ../home/users/vscode-devcontainer.nix
+            ../home/users/vscode.nix
           ];
         });
     };
