@@ -12,8 +12,6 @@
 
   home.packages = [ pkgs.wslu ];
 
-  nix.package = pkgs.nix;
-
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
