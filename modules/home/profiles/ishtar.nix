@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [ pkgs.wslu ];
-
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
@@ -14,7 +12,4 @@
   # Re-use Windows credentials
   programs.git.extraConfig.credential.helper =
     "/mnt/c/Users/${config.home.username}/scoop/shims/git-credential-manager.exe";
-
-  # Browser open support
-  home.sessionVariables.BROWSER = "${pkgs.wslu}/bin/wslview";
 }
