@@ -1,7 +1,4 @@
 {
-  # Set default time zone
-  time.timeZone = "UTC";
-
   # Clearnup disk weekly
   nix.gc = {
     automatic = true;
