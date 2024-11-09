@@ -1,7 +1,4 @@
 {
-  # Set default time zone
-  time.timeZone = "FR";
-
   # Enable daemon service
   nix.useDaemon = true;
 
