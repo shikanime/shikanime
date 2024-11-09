@@ -1,13 +1,10 @@
 { pkgs, ... }:
 
-let
-  home = "/home/shikanimedeva";
-in
 {
   programs.zsh.enable = true;
 
   users.users.shikanimedeva = {
-    inherit home;
+    home = "/Users/shikanimedeva";
     shell = pkgs.zsh;
   };
 
@@ -27,7 +24,7 @@ in
     ];
 
     home = {
-      homeDirectory = home;
+      homeDirectory = "/Users/shikanimedeva";
       username = "shikanimedeva";
     };
   };
