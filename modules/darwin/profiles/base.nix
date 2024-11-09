@@ -9,6 +9,12 @@
     interval = [{ Weekday = 7; }];
   };
 
+  # Optimize nix store weekly
+  nix.optimise = {
+    automatic = true;
+    interval = [{ Weekday = 7; }];
+  };
+
   # Make home-manger use packages from system
   home-manager = {
     useGlobalPkgs = true;
