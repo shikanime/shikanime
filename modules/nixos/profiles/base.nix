@@ -12,7 +12,7 @@
   # Optimize nix store weekly
   nix.optimise = {
     automatic = true;
-    dates = "weekly";
+    dates = ["weekly"];
   };
 
   # Automatically upgrade NixOS
