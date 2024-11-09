@@ -11,7 +11,11 @@
     extraGroups = [ "docker" "wheel" ];
   };
 
-  home-manager.users.shika = {
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+
+    users.shika = {
     imports = [
       ../../home/profiles/base.nix
       ../../home/profiles/beam.nix
