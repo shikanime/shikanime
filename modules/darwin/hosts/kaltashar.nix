@@ -4,5 +4,7 @@
     ../users/shika.nix
   ];
 
+  nix.linux-builder.enable = true;
+
   homebrew.enable = true;
 }

@@ -9,6 +9,12 @@
     options = "--delete-older-than 30d";
   };
 
+  # Optimize nix store weekly
+  nix.optimise = {
+    automatic = true;
+    dates = "weekly";
+  };
+
   # Automatically upgrade NixOS
   system.autoUpgrade = {
     enable = true;
