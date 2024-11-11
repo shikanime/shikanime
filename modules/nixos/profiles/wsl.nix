@@ -69,7 +69,5 @@ in
   wsl = {
     enable = true;
     useWindowsDriver = true;
-    interop.register = true;
-    usbip.enable = true;
   };
 }
