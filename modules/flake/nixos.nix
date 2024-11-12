@@ -1,16 +1,6 @@
 { self, inputs, withSystem, ... }:
 
 {
-  perSystem = _: {
-    packages = {
-      ishtar-tarballBuilder =
-        self.nixosConfigurations.ishtar.config.system.build.tarballBuilder;
-      remilia-sdImage =
-        self.nixosConfigurations.remilia.config.system.build.sdImage;
-      flandre-sdImage =
-        self.nixosConfigurations.flandre.config.system.build.sdImage;
-    };
-  };
   flake.nixosConfigurations = {
     ishtar = withSystem "x86_64-linux" ({ system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
@@ -32,6 +22,7 @@
         };
         modules = [
           ../nixos/hosts/remilia.nix
+          inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
         ];
@@ -44,6 +35,7 @@
         };
         modules = [
           ../nixos/hosts/flandre.nix
+          inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
         ];
