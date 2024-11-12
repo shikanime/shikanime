@@ -20,7 +20,7 @@ with lib;
       partitions = {
         boot = {
           size = "1M";
-          type = "EF02"; # for grub MBR
+          type = "EF02";
         };
         ESP = {
           size = "1G";
