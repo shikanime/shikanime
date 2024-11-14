@@ -1,9 +1,10 @@
-{ lib, ... }:
+{ lib, modulesPath,... }:
 
 with lib;
 
 {
   imports = [
+    "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
     ../profiles/workstation.nix
     ../profiles/cluster.nix
