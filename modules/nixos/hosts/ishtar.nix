@@ -3,8 +3,9 @@
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
-    ../profiles/workstation.nix
     ../profiles/cluster.nix
+    ../profiles/networking.nix
+    ../profiles/workstation.nix
     ../profiles/wsl.nix
     ../users/shika.nix
   ];
