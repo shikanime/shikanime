@@ -4,6 +4,12 @@
     enable = true;
     openFirewall = true;
     useRoutingFeatures = "server";
+    extraUpFlags = [
+      "--ssh"
+      "--advertise-exit-node"
+      "--snat-subnet-routes"
+      "false"
+    ];
   };
 
   # Enable Tailscale traffic optimizations

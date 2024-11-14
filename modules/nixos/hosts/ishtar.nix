@@ -1,10 +1,12 @@
-{ modulesPath, ... }:
+{ lib, modulesPath, ... }:
+
+with lib;
+
 {
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
     ../profiles/cluster.nix
-    ../profiles/networking.nix
     ../profiles/workstation.nix
     ../profiles/wsl.nix
     ../users/shika.nix
@@ -15,7 +17,11 @@
   services.k3s = {
     role = "agent";
     serverAddr = "https://nishir.taila659a.ts.net:6443";
-    configPath = "/etc/rancher/k3s/config.yaml";
+    tokenFile = "/etc/secrets/k3s/token";
+    extraFlags = escapeShellArgs [
+      "--node-ip"
+      "100.86.141.66,fd7a:115c:a1e0::6601:8d42"
+    ];
   };
 
   networking.hostName = "ishtar";
