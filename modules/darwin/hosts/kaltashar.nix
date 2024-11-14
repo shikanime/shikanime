@@ -2,11 +2,8 @@
   imports = [
     ../profiles/base.nix
     ../profiles/workstation.nix
-    ../profiles/wsl.nix
     ../users/shika.nix
   ];
 
-  wsl.defaultUser = "shika";
-
-  networking.hostName = "ishtar";
+  networking.hostName = "kaltashar";
 }

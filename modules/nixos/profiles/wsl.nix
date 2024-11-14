@@ -27,8 +27,12 @@ in
 {
   # Required for Docker credential management
   environment.systemPackages = [
+    pkgs.wslu
     pkgs.docker-credential-helpers
   ];
+
+  # Browser open support
+  environment.sessionVariables.BROWSER = "${pkgs.wslu}/bin/wslview";
 
   # Enable cross compilation
   boot.binfmt.emulatedSystems = [
@@ -66,6 +70,5 @@ in
     enable = true;
     useWindowsDriver = true;
     interop.register = true;
-    usbip.enable = true;
   };
 }

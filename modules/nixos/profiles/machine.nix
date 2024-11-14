@@ -29,6 +29,9 @@
     openFirewall = true;
   };
 
+  # Enable dynamic timezone
+  services.tzupdate.enable = true;
+
   # Enable VPN access
   services.tailscale = {
     enable = true;
