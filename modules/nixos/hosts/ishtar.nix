@@ -1,7 +1,4 @@
-{ lib, modulesPath,... }:
-
-with lib;
-
+{ modulesPath, ... }:
 {
   imports = [
     "${modulesPath}/profiles/headless.nix"
