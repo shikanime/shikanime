@@ -3,8 +3,10 @@
 
   inputs = {
     devenv.url = "github:cachix/devenv";
+    disko.url = "github:nix-community/disko";
     flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager.url = "github:nix-community/home-manager";
+    nix-darwin.url = "github:LnL7/nix-darwin";
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -30,6 +32,7 @@
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
+        ./modules/flake/darwin.nix
         ./modules/flake/devenv.nix
         ./modules/flake/home.nix
         ./modules/flake/nixos.nix

@@ -5,6 +5,7 @@ with lib;
 {
   imports = [
     ../profiles/base.nix
+    ../profiles/workstation.nix
     ../profiles/cluster.nix
     ../profiles/wsl.nix
     ../users/shika.nix
