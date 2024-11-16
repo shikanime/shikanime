@@ -2,19 +2,6 @@
   # Allow wheel users to interact with the daemon
   nix.settings.trusted-users = [ "root" "@wheel" ];
 
-  # Clearnup disk weekly
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
-
-  # Optimize nix store weekly
-  nix.optimise = {
-    automatic = true;
-    dates = [ "weekly" ];
-  };
-
   # Automatically upgrade NixOS
   system.autoUpgrade = {
     enable = true;

@@ -9,6 +9,7 @@ with lib;
     ../profiles/cluster.nix
     ../profiles/longhorn.nix
     ../profiles/machine.nix
+    ../profiles/network.nix
     ../profiles/nishir.nix
     ../users/nishir.nix
   ];
