@@ -21,6 +21,8 @@ with lib;
     extraFlags = escapeShellArgs [
       "--node-ip"
       "100.86.141.66,fd7a:115c:a1e0::6601:8d42"
+      "--node-label"
+      "node.nishir/longhorn-unavailable"
     ];
   };
 
