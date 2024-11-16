@@ -6,8 +6,9 @@ with lib;
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
-    ../profiles/machine.nix
     ../profiles/cluster.nix
+    ../profiles/longhorn.nix
+    ../profiles/machine.nix
     ../profiles/nishir.nix
     ../users/nishir.nix
   ];
