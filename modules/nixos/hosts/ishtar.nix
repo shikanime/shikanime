@@ -1,4 +1,3 @@
-{ modulesPath, ... }:
 { lib, modulesPath, ... }:
 
 with lib;
