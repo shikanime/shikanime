@@ -10,6 +10,7 @@
         };
         modules = [
           ../nixos/hosts/ishtar.nix
+          inputs.determinate.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-wsl.nixosModules.default
         ];
@@ -22,6 +23,7 @@
         };
         modules = [
           ../nixos/hosts/remilia.nix
+          inputs.determinate.nixosModules.default
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
@@ -35,6 +37,7 @@
         };
         modules = [
           ../nixos/hosts/flandre.nix
+          inputs.determinate.nixosModules.default
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4

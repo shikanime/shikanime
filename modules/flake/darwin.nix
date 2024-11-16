@@ -9,6 +9,7 @@
       };
       modules = [
         ../darwin/hosts/kaltashar.nix
+        inputs.determinate.darwinModules.default
         inputs.home-manager.darwinModules.home-manager
       ];
     });

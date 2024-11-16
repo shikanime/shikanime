@@ -2,6 +2,7 @@
   description = "Shikanime's home configuration";
 
   inputs = {
+    determinate.url = "github:DeterminateSystems/determinate";
     devenv.url = "github:cachix/devenv";
     disko.url = "github:nix-community/disko";
     flake-parts.url = "github:hercules-ci/flake-parts";
