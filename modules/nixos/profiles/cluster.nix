@@ -1,4 +1,7 @@
 {
+  # For Flannel Wireguard backend
+  networking.nftables.enable = true;
+
   # Enable cgroup for K3s
   boot.kernelParams = [
     "cgroup_enable=cpuset"
@@ -19,4 +22,6 @@
   };
 
   services.k3s.enable = true;
+
+  services.netdata.enable = true;
 }
