@@ -6,8 +6,9 @@ with lib;
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
-    ../profiles/machine.nix
     ../profiles/cluster.nix
+    ../profiles/longhorn.nix
+    ../profiles/machine.nix
     ../profiles/nishir.nix
     ../users/nishir.nix
   ];
@@ -20,7 +21,7 @@ with lib;
       partitions = {
         boot = {
           size = "1M";
-          type = "EF02"; # for grub MBR
+          type = "EF02";
         };
         ESP = {
           size = "1G";
