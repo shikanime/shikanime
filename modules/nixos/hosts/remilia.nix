@@ -55,7 +55,7 @@ with lib;
   services.k3s = {
     role = "server";
     tokenFile = "/etc/secrets/k3s/token";
-    configPah = "/etc/secrets/k3s/config.yaml";
+    configPath = "/etc/secrets/k3s/config.yaml";
     extraFlags = escapeShellArgs [
       "--tls-san"
       "nishir.taila659a.ts.net"
