@@ -20,12 +20,12 @@ with lib;
     options = [ "defaults" "nofail" ];
   };
 
-  services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
+  services.tailscale.authKeyFile = "/etc/flandre/tailscale/authkey";
 
   services.k3s = {
     serverAddr = "https://nishir.taila659a.ts.net:6443";
-    tokenFile = "/etc/secrets/k3s/token";
-    configPath = "/etc/secrets/k3s/config.yaml"
+    tokenFile = "/etc/flandre/k3s/token";
+    configPath = "/etc/flandre/k3s/config.yaml"
   };
 
   networking.hostName = "flandre";

@@ -20,12 +20,12 @@ with lib;
     options = [ "defaults" "nofail" ];
   };
 
-  services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
+  services.tailscale.authKeyFile = "/etc/remilia/tailscale/authkey";
 
   services.k3s = {
     role = "server";
-    tokenFile = "/etc/secrets/k3s/token";
-    configPath = "/etc/secrets/k3s/config.yaml";
+    tokenFile = "/etc/remilia/k3s/token";
+    configPath = "/etc/remilia/k3s/config.yaml";
   };
 
   networking.hostName = "remilia";
