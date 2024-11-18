@@ -3,7 +3,6 @@
 
   inputs = {
     devenv.url = "github:cachix/devenv";
-    disko.url = "github:nix-community/disko";
     flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager.url = "github:nix-community/home-manager";
     nix-darwin.url = "github:LnL7/nix-darwin";
