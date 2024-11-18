@@ -37,7 +37,14 @@
           ../nixos/hosts/flandre.nix
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
-          # inputs.nixos-facter-modules.nixosModules.facter
+          inputs.nixos-facter-modules.nixosModules.facter
+        ];
+      });
+    sd-image-raspberrypi-installer = withSystem "aarch64-linux" ({ pkgs, ... }:
+      inputs.nixpkgs.lib.nixosSystem {
+        inherit pkgs;
+        modules = [
+          ../nixos/installers/sd-image-raspberrypi-installer.nix
         ];
       });
   };
