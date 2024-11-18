@@ -15,7 +15,10 @@ with lib;
     ../users/nishir.nix
   ];
 
-  fileSystems."/mnt/remilia".device = "/dev/disk/by-label/remilia";
+  fileSystems."/mnt/remilia" = {
+    device = "/dev/disk/by-label/remilia";
+    options = [ "defaults" "nofail" ];
+  };
 
   services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
 

@@ -15,7 +15,10 @@ with lib;
     ../users/nishir.nix
   ];
 
-  fileSystems."/mnt/flandre".device = "/dev/disk/by-label/flandre";
+  fileSystems."/mnt/flandre" = {
+    device = "/dev/disk/by-label/flandre";
+    options = [ "defaults" "nofail" ];
+  };
 
   services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
 
