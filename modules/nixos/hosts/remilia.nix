@@ -14,6 +14,8 @@ with lib;
     ../users/nishir.nix
   ];
 
+  config.facter.reportPath = ./remilia/facter.json;
+
   disko.devices.disk.main = {
     type = "disk";
     device = "/dev/sda";
