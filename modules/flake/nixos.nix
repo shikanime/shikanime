@@ -2,13 +2,16 @@
 
 {
   perSystem = { pkgs, ... }: {
-    packages.sd-image-raspberrypi-installer = sd-image-raspberrypi-installer = withSystem "aarch64-linux" ({ pkgs, ... }:
-      inputs.nixpkgs.lib.nixosSystem {
-        inherit pkgs;
-        modules = [
-          ../nixos/installers/sd-image-raspberrypi-installer.nix
-        ];
-      });
+    packages.sd-image-raspberrypi-installer =
+      let
+        config = inputs.nixpkgs.lib.nixosSystem {
+          inherit pkgs;
+          modules = [
+            ../nixos/installers/sd-image-raspberrypi-installer.nix
+          ];
+        };
+      in
+      config.system.build.sdImage;
   };
   flake.nixosConfigurations = {
     ishtar = withSystem "x86_64-linux" ({ system, ... }:
