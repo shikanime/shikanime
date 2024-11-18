@@ -48,7 +48,7 @@ with lib;
 
   fileSystems."/mnt/flandre".device = "/dev/disk/by-label/flandre";
 
-l  services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
+  services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
 
   services.openiscsi.name = "iqn.2011-11.studio.shikanime:flandre";
 
