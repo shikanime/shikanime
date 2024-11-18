@@ -22,6 +22,8 @@
 
   services.tailscale.authKeyFile = "/etc/remilia/tailscale/authkey";
 
+  services.openiscsi.name = "iqn.2011-11.studio.shikanime:remilia";
+
   services.k3s = {
     role = "server";
     tokenFile = "/etc/remilia/k3s/token";
