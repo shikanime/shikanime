@@ -4,14 +4,14 @@
   perSystem = { pkgs, ... }: {
     packages.sd-image-raspberrypi-installer =
       let
-        nixosConfiguration = inputs.nixpkgs.lib.nixosSystem {
+        installer = inputs.nixpkgs.lib.nixosSystem {
           inherit pkgs;
           modules = [
             ../nixos/installers/sd-image-raspberrypi-installer.nix
           ];
         };
       in
-      nixosConfiguration.config.system.build.sdImage;
+      installer.config.system.build.sdImage;
   };
   flake.nixosConfigurations = {
     ishtar = withSystem "x86_64-linux" ({ system, ... }:
