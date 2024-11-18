@@ -34,7 +34,7 @@
             ../nixos/hosts/remilia.nix
             inputs.disko.nixosModules.disko
             inputs.home-manager.nixosModules.home-manager
-            inputs.nixos-facter-modules.nixosModules.facter
+            inputs.nixos-hardware.nixosModules.raspberry-pi-4
           ];
         });
       flandre = withSystem "aarch64-linux" ({ pkgs, ... }:
@@ -44,7 +44,7 @@
             ../nixos/hosts/flandre.nix
             inputs.disko.nixosModules.disko
             inputs.home-manager.nixosModules.home-manager
-            inputs.nixos-facter-modules.nixosModules.facter
+            inputs.nixos-hardware.nixosModules.raspberry-pi-4
           ];
         });
     };
