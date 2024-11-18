@@ -53,7 +53,7 @@ with lib;
   services.openiscsi.name = "iqn.2011-11.studio.shikanime:flandre";
 
   services.k3s = {
-    serverAddr = "remilia.taila659a.ts.net";
+    serverAddr = "nishir.taila659a.ts.net";
     tokenFile = "/etc/secrets/k3s/token";
     extraFlags = escapeShellArgs [
       "--tls-san"
