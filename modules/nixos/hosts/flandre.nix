@@ -4,6 +4,7 @@ with lib;
 
 {
   imports = [
+    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
     ../profiles/cluster.nix
