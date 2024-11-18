@@ -9,5 +9,7 @@
     ../users/nishir.nix
   ];
 
+  security.sudo.wheelNeedsPassword = false;
+
   networking.hostName = "nixos";
 }
