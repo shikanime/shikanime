@@ -22,7 +22,6 @@
         };
         modules = [
           ../nixos/hosts/remilia.nix
-          inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
         ];
@@ -35,7 +34,6 @@
         };
         modules = [
           ../nixos/hosts/flandre.nix
-          inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
         ];
