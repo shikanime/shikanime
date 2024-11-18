@@ -20,6 +20,8 @@ with lib;
     options = [ "defaults" "nofail" ];
   };
 
+  programs.nix-ld.enable = true;
+
   services.tailscale.authKeyFile = "/etc/remilia/tailscale/authkey";
 
   services.k3s = {
