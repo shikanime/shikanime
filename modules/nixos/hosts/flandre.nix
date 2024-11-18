@@ -16,7 +16,7 @@ with lib;
 
   disko.devices.disk.main = {
     type = "disk";
-    device = "/dev/sda";
+    device = "/dev/mmcblk1";
     content = {
       type = "gpt";
       partitions = {
@@ -48,19 +48,21 @@ with lib;
 
   fileSystems."/mnt/flandre".device = "/dev/disk/by-label/flandre";
 
-  services.tailscale.authKeyFile = "/mnt/flandre/secrets/tailscale-authkey";
+  services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
 
   services.openiscsi.name = "iqn.2011-11.studio.shikanime:flandre";
 
   services.k3s = {
     role = "agent";
     serverAddr = "remilia.taila659a.ts.net";
-    tokenFile = "/mnt/flandre/secrets/k3s-token";
+    tokenFile = "/etc/secrets/k3s/token";
     extraFlags = escapeShellArgs [
       "--tls-san"
       "flandre.taila659a.ts.net"
       "--data-dir"
-      "/media/shika/flandre/rancher/k3s"
+      "/mnt/flandre/rancher/k3s"
+      "--flannel-backend"
+      "wireguard-native"
       "--node-ip"
       "100.127.139.42, fd7a:115c:a1e0::6601:8b2a"
       "--service-cidr"
