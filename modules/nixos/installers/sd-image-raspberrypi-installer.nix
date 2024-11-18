@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ${modulesPath}/installer/sd-card/sd-image-raspberrypi-installer.nix
+    "${modulesPath}/installer/sd-card/sd-image-raspberrypi-installer.nix"
     ../users/nishir.nix
   ];
 }
