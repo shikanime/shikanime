@@ -25,8 +25,8 @@ with lib;
   services.k3s = {
     serverAddr = "https://nishir.taila659a.ts.net:6443";
     tokenFile = "/etc/flandre/k3s/token";
-    configPath = "/etc/flandre/k3s/config.yaml"
-      };
+    configPath = "/etc/flandre/k3s/config.yaml";
+  };
 
-    networking.hostName = "flandre";
-  }
+  networking.hostName = "flandre";
+}
