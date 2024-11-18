@@ -53,7 +53,6 @@ with lib;
   services.openiscsi.name = "iqn.2011-11.studio.shikanime:flandre";
 
   services.k3s = {
-    role = "agent";
     serverAddr = "remilia.taila659a.ts.net";
     tokenFile = "/etc/secrets/k3s/token";
     extraFlags = escapeShellArgs [
@@ -67,6 +66,7 @@ with lib;
       "100.127.139.42, fd7a:115c:a1e0::6601:8b2a"
       "--service-cidr"
       "10.43.0.0/16,2001:cafe:43::/112"
+      "--disable-etcd"
     ];
   };
 
