@@ -22,8 +22,6 @@ with lib;
 
   services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
 
-  services.openiscsi.name = "iqn.2011-11.studio.shikanime:remilia";
-
   services.k3s = {
     role = "server";
     tokenFile = "/etc/secrets/k3s/token";
