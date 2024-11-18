@@ -28,28 +28,6 @@ with lib;
     role = "server";
     tokenFile = "/etc/secrets/k3s/token";
     configPath = "/etc/secrets/k3s/config.yaml";
-    extraFlags = escapeShellArgs [
-      "--tls-san"
-      "nishir.taila659a.ts.net"
-      "--cluster-cidr"
-      "10.42.0.0/16,2001:cafe:42::/56"
-      "--service-cidr"
-      "10.43.0.0/16,2001:cafe:43::/112"
-      "--data-dir"
-      "/mnt/remilia/rancher/k3s"
-      "--node-ip"
-      "100.93.169.85,fd7a:115c:a1e0::c301:a955"
-      "--flannel-backend"
-      "wireguard-native"
-      "--etcd-s3"
-      "true"
-      "--etcd-s3-endpoint"
-      "s3.fr-par.scw.cloud"
-      "--etcd-s3-region"
-      "fr-par"
-      "--etcd-s3-bucket"
-      "shikanime-studio-fr-par-etcd-backups"
-    ];
   };
 
   networking.hostName = "remilia";
