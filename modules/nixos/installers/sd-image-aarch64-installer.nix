@@ -10,6 +10,4 @@
   ];
 
   security.sudo.wheelNeedsPassword = false;
-
-  networking.hostName = "nixos";
 }
