@@ -64,7 +64,7 @@ with lib;
       "--service-cidr"
       "10.43.0.0/16,2001:cafe:43::/112"
       "--data-dir"
-      "/media/shika/remilia/rancher/k3s"
+      "/mnt/remilia/rancher/k3s"
       "--node-ip"
       "100.93.169.85,fd7a:115c:a1e0::c301:a955"
       "--cni"
