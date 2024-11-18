@@ -1,6 +1,4 @@
-{ lib, modulesPath, ... }:
-
-with lib;
+{ modulesPath, ... }:
 
 {
   imports = [
