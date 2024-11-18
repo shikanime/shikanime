@@ -58,16 +58,16 @@ with lib;
     extraFlags = escapeShellArgs [
       "--tls-san"
       "flandre.taila659a.ts.net"
+      "--cluster-cidr"
+      "10.42.0.0/16,2001:cafe:42::/56"
+      "--service-cidr"
+      "10.43.0.0/16,2001:cafe:43::/112"
       "--data-dir"
       "/mnt/flandre/rancher/k3s"
       "--flannel-backend"
       "wireguard-native"
       "--node-ip"
       "100.77.250.102,fd7a:115c:a1e0::b101:fa66"
-      "--cluster-cidr"
-      "10.42.0.0/16,2001:cafe:42::/56"
-      "--service-cidr"
-      "10.43.0.0/16,2001:cafe:43::/112"
       "--disable-etcd"
     ];
   };

@@ -55,7 +55,7 @@ with lib;
   services.k3s = {
     role = "server";
     tokenFile = "/etc/secrets/k3s/token";
-    environmentFile = "/etc/secrets/k3s/environment";
+    configPah = "/etc/secrets/k3s/config.yaml";
     extraFlags = escapeShellArgs [
       "--tls-san"
       "nishir.taila659a.ts.net"
@@ -67,8 +67,6 @@ with lib;
       "/mnt/remilia/rancher/k3s"
       "--node-ip"
       "100.93.169.85,fd7a:115c:a1e0::c301:a955"
-      "--cni"
-      "multus,canal"
       "--flannel-backend"
       "wireguard-native"
       "--etcd-s3"
