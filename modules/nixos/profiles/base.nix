@@ -1,6 +1,6 @@
 {
   # Allow wheel users to interact with the daemon
-  nix.settings.trusted-users = [ "root" "shika" "@wheel" ];
+  nix.settings.trusted-users = [ "root" "@wheel" ];
 
   # Clearnup disk weekly
   nix.gc = {
