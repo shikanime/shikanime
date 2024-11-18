@@ -40,13 +40,5 @@
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
         ];
       });
-    sd-image-aarch64-installer = withSystem "aarch64-linux" ({ pkgs, ... }:
-      inputs.nixpkgs.lib.nixosSystem {
-        inherit pkgs;
-        modules = [
-          ../nixos/installers/sd-image-aarch64-installer.nix
-          inputs.home-manager.nixosModules.home-manager
-        ];
-      });
   };
 }
