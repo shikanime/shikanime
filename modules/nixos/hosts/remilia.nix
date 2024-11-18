@@ -16,7 +16,7 @@ with lib;
 
   disko.devices.disk.main = {
     type = "disk";
-    device = "/dev/mmcblk1";
+    device = "/dev/sda";
     content = {
       type = "gpt";
       partitions = {
@@ -48,14 +48,14 @@ with lib;
 
   fileSystems."/mnt/remilia".device = "/dev/disk/by-label/remilia";
 
-  services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
+  services.tailscale.authKeyFile = "/mnt/remilia/secrets/tailscale-authkey";
 
   services.openiscsi.name = "iqn.2011-11.studio.shikanime:remilia";
 
   services.k3s = {
     role = "server";
-    tokenFile = "/etc/secrets/k3s/token";
-    environmentFile = "/etc/secrets/k3s/environment";
+    tokenFile = "/mnt/remilia/secrets/k3s-token";
+    environmentFile = "/mnt/remilia/secrets/k3s-environment";
     extraFlags = escapeShellArgs [
       "--tls-san"
       "nishir.taila659a.ts.net"
@@ -64,7 +64,7 @@ with lib;
       "--service-cidr"
       "10.43.0.0/16,2001:cafe:43::/112"
       "--data-dir"
-      "/mnt/remilia/rancher/k3s"
+      "/media/shika/remilia/rancher/k3s"
       "--node-ip"
       "100.93.169.85,fd7a:115c:a1e0::c301:a955"
       "--cni"
