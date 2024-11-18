@@ -8,6 +8,7 @@
           inherit pkgs;
           modules = [
             ../nixos/installers/sd-image-raspberrypi-installer.nix
+            inputs.home-manager.nixosModules.home-manager
           ];
         };
       in
