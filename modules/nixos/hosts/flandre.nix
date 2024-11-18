@@ -48,7 +48,7 @@ with lib;
 
   fileSystems."/mnt/flandre".device = "/dev/disk/by-label/flandre";
 
-  services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
+l  services.tailscale.authKeyFile = "/etc/secrets/tailscale/authkey";
 
   services.openiscsi.name = "iqn.2011-11.studio.shikanime:flandre";
 
@@ -63,7 +63,7 @@ with lib;
       "--flannel-backend"
       "wireguard-native"
       "--node-ip"
-      "100.127.139.42, fd7a:115c:a1e0::6601:8b2a"
+      "100.77.250.102, fd7a:115c:a1e0::b101:fa66"
       "--service-cidr"
       "10.43.0.0/16,2001:cafe:43::/112"
       "--disable-etcd"
