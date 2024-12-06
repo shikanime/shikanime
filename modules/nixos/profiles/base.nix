@@ -1,4 +1,9 @@
+{ pkgs, ... }:
+
 {
+  # Use ZSH by default
+  users.defaultUserShell = pkgs.zsh;
+
   # Allow wheel users to interact with the daemon
   nix.settings.trusted-users = [ "root" "@wheel" ];
 
