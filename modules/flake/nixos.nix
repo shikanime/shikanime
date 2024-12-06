@@ -2,7 +2,7 @@
 
 {
   flake.nixosConfigurations = {
-    devcontainer = withSystem "aarch64-linux" ({ system, ... }:
+    devcontainer = withSystem "x86_64-linux" ({ system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
         pkgs = import inputs.nixpkgs {
           inherit system;
