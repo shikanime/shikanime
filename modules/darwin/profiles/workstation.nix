@@ -4,6 +4,7 @@
   homebrew = {
     enable = true;
     brews = [
+      "pinentry"
       "pinentry-mac"
     ];
     casks = [
