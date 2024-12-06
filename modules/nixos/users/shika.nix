@@ -2,7 +2,7 @@
   users.users.shika = {
     isNormalUser = true;
     home = "/home/shika";
-    useDefaultShell = true;
+    shell = pkgs.zsh;
     extraGroups = [ "docker" "wheel" ];
   };
 
