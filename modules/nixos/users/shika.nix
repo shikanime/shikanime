@@ -1,13 +1,10 @@
 { pkgs, ... }:
 
 {
-  programs.zsh.enable = true;
-
   users.users.shika = {
     isNormalUser = true;
     home = "/home/shika";
     shell = pkgs.zsh;
-    useDefaultShell = true;
     extraGroups = [ "docker" "wheel" ];
   };
 
