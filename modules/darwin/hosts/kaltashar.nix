@@ -2,7 +2,7 @@
   imports = [
     ../profiles/base.nix
     ../profiles/workstation.nix
-    ../users/shika.nix
+    ../users/shikanimedeva.nix
   ];
 
   homebrew.casks = [

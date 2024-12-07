@@ -1,4 +1,7 @@
 {
+  # Allow admin users to interact with the daemon
+  nix.settings.trusted-users = [ "root" "@admin" ];
+
   # Enable daemon service
   nix.useDaemon = true;
 
