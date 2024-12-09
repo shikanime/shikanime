@@ -5,25 +5,32 @@
     ../users/shikanimedeva.nix
   ];
 
-  homebrew.casks = [
-    "appcleaner"
-    "discord"
-    "google-drive"
-    "jellyfin-media-player"
-    "microsoft-teams"
-    "obs"
-    "signal"
-    "sonarr"
-    "spotify"
-    "steam"
-    "stolendata-mpv"
-    "syncthing"
-    "tailscale"
-    "transmission"
-    "wacom-tablet"
-    "whatsapp"
-    "zoom"
-  ];
+  homebrew = {
+    brews = [
+      "jackett"
+    ];
+    casks = [
+      "appcleaner"
+      "discord"
+      "google-drive"
+      "jellyfin"
+      "jellyfin-media-player"
+      "microsoft-teams"
+      "obs"
+      "radarr"
+      "signal"
+      "sonarr"
+      "spotify"
+      "steam"
+      "stolendata-mpv"
+      "syncthing"
+      "tailscale"
+      "transmission"
+      "wacom-tablet"
+      "whatsapp"
+      "zoom"
+    ];
+  };
 
   networking.hostName = "kaltashar";
 }
