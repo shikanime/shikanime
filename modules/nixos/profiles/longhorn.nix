@@ -15,7 +15,10 @@
   services.openiscsi.enable = true;
 
   # Enable iscsi protocol support at kernel level
-  boot.kernelModules = [ "dm_crypt" "iscsi_tcp" ];
+  boot.kernelModules = [
+    "dm_crypt"
+    "iscsi_tcp"
+  ];
 
   # Enable NFS support at kernel level
   boot.supportedFilesystems = [ "nfs" ];

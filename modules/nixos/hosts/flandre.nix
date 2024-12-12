@@ -15,7 +15,10 @@
 
   fileSystems."/mnt/flandre" = {
     device = "/dev/disk/by-label/flandre";
-    options = [ "defaults" "nofail" ];
+    options = [
+      "defaults"
+      "nofail"
+    ];
   };
 
   programs.nix-ld.enable = true;
