@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  home.sessionVariables.MIX_XDG = "1";
+
   programs.zsh.oh-my-zsh.plugins = [
     "mix"
   ];
