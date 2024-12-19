@@ -1,9 +1,9 @@
 { pkgs, ... }:
 
 {
-  users.users.shika = {
+  users.users.vscode = {
     isNormalUser = true;
-    home = "/home/shika";
+    home = "/home/vscode";
     shell = pkgs.zsh;
     extraGroups = [
       "docker"
@@ -12,7 +12,7 @@
     initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
   };
 
-  home-manager.users.shika = {
+  home-manager.users.vscode = {
     imports = [
       ../../home/profiles/base.nix
       ../../home/profiles/beam.nix
@@ -29,8 +29,8 @@
     ];
 
     home = {
-      homeDirectory = "/home/shika";
-      username = "shika";
+      homeDirectory = "/home/vscode";
+      username = "vscode";
     };
   };
 }
