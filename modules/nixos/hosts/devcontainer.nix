@@ -14,15 +14,17 @@
     ../users/vscode.nix
   ];
 
-  system.activationScripts.installBinShScript = ''
-    ln -fs ${pkgs.bashInteractive}/bin/sh /bin/sh
-  '';
-
   system.build.dockerImage = pkgs.dockerTools.buildImage {
     name = "ghcr.io/shikanime/shikanime/devcontainer";
     tag = "latest";
     created = "now";
-    copyToRoot = config.system.build.toplevel;
+    copyToRoot = [
+      config.system.build.toplevel
+      pkgs.dockerTools.usrBinEnv
+      pkgs.dockerTools.binSh
+      pkgs.dockerTools.caCertificates
+      pkgs.dockerTools.fakeNss
+    ];
     includeNixDB = true;
     config = {
       Entrypoint = [ "/init" ];
