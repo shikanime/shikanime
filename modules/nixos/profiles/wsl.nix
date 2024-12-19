@@ -53,7 +53,10 @@ in
   services.passSecretService.enable = true;
 
   # Enable WSLg integration
-  services.xserver.videoDrivers = [ "intel" "nvidia" ];
+  services.xserver.videoDrivers = [
+    "intel"
+    "nvidia"
+  ];
 
   programs.nix-ld = {
     enable = true;

@@ -2,7 +2,7 @@
   imports = [
     ../profiles/base.nix
     ../profiles/workstation.nix
-    ../users/shika.nix
+    ../users/shikanimedeva.nix
   ];
 
   homebrew.casks = [
@@ -10,8 +10,11 @@
     "discord"
     "google-drive"
     "jellyfin-media-player"
+    "jellyfin"
     "microsoft-teams"
     "obs"
+    "prowlarr"
+    "radarr"
     "signal"
     "sonarr"
     "spotify"
@@ -20,7 +23,6 @@
     "syncthing"
     "tailscale"
     "transmission"
-    "wacom-tablet"
     "whatsapp"
     "zoom"
   ];

@@ -17,7 +17,10 @@
   };
 
   # Enable experimental features so we can access flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Allow unfree software such as Cloudflared or CUDA
   nixpkgs.config.allowUnfree = true;

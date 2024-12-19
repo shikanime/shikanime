@@ -24,10 +24,11 @@
   };
 
   outputs =
-    inputs@{ devenv
-    , flake-parts
-    , treefmt-nix
-    , ...
+    inputs@{
+      devenv,
+      flake-parts,
+      treefmt-nix,
+      ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
