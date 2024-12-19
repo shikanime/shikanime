@@ -14,6 +14,10 @@
     ../users/vscode.nix
   ];
 
+  system.activationScripts.installBinShScript = ''
+    ln -fs ${pkgs.bashInteractive}/bin/sh /bin/sh
+  '';
+
   system.build.dockerImage = pkgs.dockerTools.buildImage {
     name = "ghcr.io/shikanime/shikanime/devcontainer";
     tag = "latest";
