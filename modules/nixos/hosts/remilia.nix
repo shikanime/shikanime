@@ -15,7 +15,10 @@
 
   fileSystems."/mnt/remilia" = {
     device = "/dev/disk/by-label/remilia";
-    options = [ "defaults" "nofail" ];
+    options = [
+      "defaults"
+      "nofail"
+    ];
   };
 
   programs.nix-ld.enable = true;

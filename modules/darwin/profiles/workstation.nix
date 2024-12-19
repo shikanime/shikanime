@@ -4,8 +4,10 @@
   homebrew = {
     enable = true;
     brews = [
-      "pinentry"
+      "openssl"
       "pinentry-mac"
+      "pinentry"
+      "pkg-config"
     ];
     casks = [
       "android-studio"
