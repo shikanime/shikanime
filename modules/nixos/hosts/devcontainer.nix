@@ -14,16 +14,22 @@
     ../users/vscode.nix
   ];
 
-  system.build.dockerImage = pkgs.dockerTools.buildImage {
+  programs.nix-ld.enable = true;
+
+  system.build.dockerImage = pkgs.dockerTools.buildLayeredImage {
     name = "ghcr.io/shikanime/shikanime/devcontainer";
     tag = "latest";
     created = "now";
-    copyToRoot = [
+    contents = [
       config.system.build.toplevel
-      pkgs.dockerTools.usrBinEnv
+      pkgs.coreutils
       pkgs.dockerTools.binSh
       pkgs.dockerTools.caCertificates
       pkgs.dockerTools.fakeNss
+      pkgs.dockerTools.usrBinEnv
+      pkgs.gnutar
+      pkgs.gnugrep
+      pkgs.gzip
     ];
     includeNixDB = true;
     config = {
