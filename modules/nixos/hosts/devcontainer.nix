@@ -36,6 +36,7 @@
     includeNixDB = true;
     config = {
       Entrypoint = [ "/init" ];
+      User = "vscode";
       SHELL = [ "/run/current-system/sw/bin/bash" ];
     };
   };
