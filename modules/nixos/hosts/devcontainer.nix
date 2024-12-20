@@ -16,6 +16,8 @@
 
   programs.nix-ld.enable = true;
 
+  security.sudo.wheelNeedsPassword = false;
+
   system.build.dockerImage = pkgs.dockerTools.buildLayeredImage {
     name = "ghcr.io/shikanime/shikanime/devcontainer";
     tag = "latest";
