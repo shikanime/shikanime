@@ -27,8 +27,9 @@
       pkgs.dockerTools.caCertificates
       pkgs.dockerTools.fakeNss
       pkgs.dockerTools.usrBinEnv
-      pkgs.gnutar
       pkgs.gnugrep
+      pkgs.gnused
+      pkgs.gnutar
       pkgs.gzip
     ];
     includeNixDB = true;
