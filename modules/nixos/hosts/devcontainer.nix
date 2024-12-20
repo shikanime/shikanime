@@ -27,6 +27,7 @@
       pkgs.dockerTools.caCertificates
       pkgs.dockerTools.fakeNss
       pkgs.dockerTools.usrBinEnv
+      pkgs.git
       pkgs.gnugrep
       pkgs.gnused
       pkgs.gnutar
