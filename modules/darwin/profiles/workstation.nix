@@ -20,6 +20,7 @@
       "redisinsight"
       "virtualbox"
       "visual-studio-code"
+      "windows-app"
       "wireshark"
       "xquartz"
     ];
