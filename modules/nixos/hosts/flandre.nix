@@ -21,8 +21,6 @@
     ];
   };
 
-  programs.nix-ld.enable = true;
-
   services.tailscale.authKeyFile = "/etc/flandre/tailscale/authkey";
 
   services.openiscsi.name = "iqn.2011-11.studio.shikanime:flandre";

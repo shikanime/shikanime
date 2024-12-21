@@ -58,10 +58,7 @@ in
     "nvidia"
   ];
 
-  programs.nix-ld = {
-    enable = true;
-    libraries = [ wsl-lib ];
-  };
+  programs.nix-ld.libraries = [ wsl-lib ];
 
   virtualisation.docker = {
     enable = true;
