@@ -11,6 +11,12 @@
       modules = [
         ../darwin/hosts/kaltashar.nix
         inputs.home-manager.darwinModules.home-manager
+        {
+          home-manager.users.shikanimedeva.imports = [
+            inputs.identities.homeModules.default
+            inputs.identities.homeModules.richemont
+          ];
+        }
       ];
     }
   );

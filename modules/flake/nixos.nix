@@ -13,6 +13,12 @@
           ../nixos/hosts/ishtar.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-wsl.nixosModules.default
+          {
+            home-manager.users.shika.imports = [
+              inputs.identities.homeModules.default
+              inputs.identities.homeModules.richemont
+            ];
+          }
         ];
       }
     );
