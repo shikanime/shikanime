@@ -6,5 +6,6 @@
     enableSSHSupport = true;
     enableExtraSocket = true;
     pinentryPackage = pkgs.pinentry-gnome3;
+    settings.default-cache-ttl = 60 * 60;
   };
 }
