@@ -7,11 +7,12 @@
         enableDefaultExcludes = true;
         programs = {
           actionlint.enable = true;
-          statix.enable = true;
           deadnix.enable = true;
-          shfmt.enable = true;
           nixfmt.enable = true;
           prettier.enable = true;
+          shfmt.enable = true;
+          statix.enable = true;
+          terraform.enable = true;
         };
         settings.global.excludes = [
           ".devenv/*"
@@ -24,7 +25,13 @@
       devenv.shells.default = {
         pre-commit.hooks.flake-checker.enable = true;
         containers = pkgs.lib.mkForce { };
-        languages.nix.enable = true;
+        languages = {
+          nix.enable = true;
+          terraform = {
+            enable = true;
+            package = pkgs.opentofu;
+          };
+        };
         cachix = {
           enable = true;
           push = "shikanime";
