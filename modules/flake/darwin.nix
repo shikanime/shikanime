@@ -13,8 +13,8 @@
         inputs.home-manager.darwinModules.home-manager
         {
           home-manager.users.shikanimedeva.imports = [
-            inputs.identities.homeModules.default
-            inputs.identities.homeModules.richemont
+            inputs.identities.homeManagerModules.default
+            inputs.identities.homeManagerModules.richemont
           ];
         }
       ];

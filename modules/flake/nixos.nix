@@ -15,8 +15,8 @@
           inputs.nixos-wsl.nixosModules.default
           {
             home-manager.users.shika.imports = [
-              inputs.identities.homeModules.default
-              inputs.identities.homeModules.richemont
+              inputs.identities.homeManagerModules.default
+              inputs.identities.homeManagerModules.richemont
             ];
           }
         ];
