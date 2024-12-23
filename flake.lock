@@ -380,11 +380,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1734977624,
-        "narHash": "sha256-cqw2oKGsZf0n3O+rbV/Ij0QOw78nOT7ZS+65hrZ8YlE=",
+        "lastModified": 1734981185,
+        "narHash": "sha256-s+/bJYwsL05KYs9ixOyyQC3h87/tenVmO+Vc5hZFABQ=",
         "ref": "main",
-        "rev": "537221d12971b7784c31871192e143cebc89986c",
-        "revCount": 3,
+        "rev": "f378957ce22d96b86bb555a0bb695a3e609fce1c",
+        "revCount": 4,
         "type": "git",
         "url": "https://github.com/shikanime/identities"
       },
