@@ -7,8 +7,7 @@
       inherit pkgs;
       modules = [
         ../home/users/vscode.nix
-        inputs.identities.homeManagerModules.default
-        inputs.identities.homeManagerModules.richemont
+        inputs.identities.homeManagerModules.vscode
       ];
     }
   );
