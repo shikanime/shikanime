@@ -18,14 +18,33 @@ resource "github_repository_ruleset" "main" {
       exclude = []
     }
   }
+  rules {
+    required_linear_history = true
+    required_signatures     = true
+  }
+}
+
+resource "github_repository_ruleset" "main_landing" {
+  for_each = {
+    for k, v in var.repositories :
+    k => v if !data.github_repository.repo[k].private
+  }
+  name        = "Main branch landing protections"
+  repository  = each.value
+  target      = "branch"
+  enforcement = "active"
+  conditions {
+    ref_name {
+      include = ["refs/heads/main"]
+      exclude = []
+    }
+  }
   bypass_actors {
     actor_id    = 2 # Maintain
     actor_type  = "RepositoryRole"
     bypass_mode = "always"
   }
   rules {
-    required_linear_history = true
-    required_signatures     = true
     pull_request {
       require_code_owner_review         = true
       required_review_thread_resolution = true
@@ -40,12 +59,12 @@ resource "github_repository_ruleset" "main" {
   }
 }
 
-resource "github_repository_ruleset" "stack" {
+resource "github_repository_ruleset" "main_stacking" {
   for_each = {
     for k, v in var.repositories :
     k => v if !data.github_repository.repo[k].private
   }
-  name        = "Stack branch protections"
+  name        = "Main branch stacking protections"
   repository  = each.value
   target      = "branch"
   enforcement = "active"
@@ -56,8 +75,6 @@ resource "github_repository_ruleset" "stack" {
     }
   }
   rules {
-    required_linear_history = true
-    required_signatures     = true
     pull_request {
       require_code_owner_review         = true
       required_review_thread_resolution = true
