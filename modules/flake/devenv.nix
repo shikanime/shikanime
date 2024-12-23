@@ -30,7 +30,6 @@
       };
       packages = [
         pkgs.gh
-        pkgs.nixos-anywhere
       ];
     };
   };

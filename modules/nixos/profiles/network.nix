@@ -7,8 +7,6 @@
     extraUpFlags = [
       "--ssh"
       "--advertise-exit-node"
-      "--snat-subnet-routes"
-      "false"
     ];
   };
 
