@@ -21,6 +21,10 @@ resource "github_repository_ruleset" "default" {
   rules {
     required_linear_history = true
     required_signatures     = true
+    commit_message_pattern {
+      operator = "regex"
+      pattern  = "ghstack-source-id: [0-9]+"
+    }
   }
 }
 
@@ -38,11 +42,6 @@ resource "github_repository_ruleset" "main" {
       include = ["refs/heads/main"]
       exclude = []
     }
-  }
-  bypass_actors {
-    actor_id    = 2 # Maintain
-    actor_type  = "RepositoryRole"
-    bypass_mode = "always"
   }
   rules {
     pull_request {
@@ -73,11 +72,6 @@ resource "github_repository_ruleset" "release" {
       include = ["refs/heads/release-*.*"]
       exclude = []
     }
-  }
-  bypass_actors {
-    actor_id    = 2 # Maintain
-    actor_type  = "RepositoryRole"
-    bypass_mode = "always"
   }
   rules {
     pull_request {
