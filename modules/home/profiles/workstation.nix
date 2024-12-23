@@ -28,6 +28,13 @@ with lib;
     pkgs.pprof
   ];
 
+  programs.neovim = {
+    enable = true;
+    plugins = [
+      pkgs.vimPlugins.vim-colemak
+    ];
+  };
+
   programs.mise = {
     enable = true;
     globalConfig.settings.experimental = true;
