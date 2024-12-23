@@ -3,12 +3,33 @@ data "github_repository" "repo" {
   name     = each.value
 }
 
+resource "github_repository_ruleset" "default" {
+  for_each = {
+    for k, v in var.repositories :
+    k => v if !data.github_repository.repo[k].private
+  }
+  name        = "Branch protections"
+  repository  = each.value
+  target      = "branch"
+  enforcement = "active"
+  conditions {
+    ref_name {
+      include = ["refs/heads/main", "refs/heads/release-*.*"]
+      exclude = []
+    }
+  }
+  rules {
+    required_linear_history = true
+    required_signatures     = true
+  }
+}
+
 resource "github_repository_ruleset" "main" {
   for_each = {
     for k, v in var.repositories :
     k => v if !data.github_repository.repo[k].private
   }
-  name        = "Protect main branch"
+  name        = "Main branch protections"
   repository  = each.value
   target      = "branch"
   enforcement = "active"
@@ -24,8 +45,6 @@ resource "github_repository_ruleset" "main" {
     bypass_mode = "always"
   }
   rules {
-    required_linear_history = true
-    required_signatures     = true
     pull_request {
       require_code_owner_review         = true
       required_review_thread_resolution = true
@@ -45,7 +64,7 @@ resource "github_repository_ruleset" "release" {
     for k, v in var.repositories :
     k => v if !data.github_repository.repo[k].private
   }
-  name        = "Protect release branches"
+  name        = "Release branch protections"
   repository  = each.value
   target      = "branch"
   enforcement = "active"
@@ -61,8 +80,6 @@ resource "github_repository_ruleset" "release" {
     bypass_mode = "always"
   }
   rules {
-    required_linear_history = true
-    required_signatures     = true
     pull_request {
       require_code_owner_review         = true
       required_review_thread_resolution = true
