@@ -12,8 +12,8 @@
         modules = [
           ../nixos/hosts/ishtar.nix
           inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.ishtar
           inputs.nixos-wsl.nixosModules.default
-          inputs.identities.nixosModules.default
         ];
       }
     );
