@@ -24,12 +24,12 @@ resource "github_repository_ruleset" "main" {
   }
 }
 
-resource "github_repository_ruleset" "main_landing" {
+resource "github_repository_ruleset" "landing" {
   for_each = {
     for k, v in var.repositories :
     k => v if !data.github_repository.repo[k].private
   }
-  name        = "Main branch landing protections"
+  name        = "Landing protections"
   repository  = each.value
   target      = "branch"
   enforcement = "active"
@@ -59,12 +59,12 @@ resource "github_repository_ruleset" "main_landing" {
   }
 }
 
-resource "github_repository_ruleset" "main_stacking" {
+resource "github_repository_ruleset" "ghstack" {
   for_each = {
     for k, v in var.repositories :
     k => v if !data.github_repository.repo[k].private
   }
-  name        = "Main branch stacking protections"
+  name        = "ghstack branch protections"
   repository  = each.value
   target      = "branch"
   enforcement = "active"
@@ -75,10 +75,6 @@ resource "github_repository_ruleset" "main_stacking" {
     }
   }
   rules {
-    pull_request {
-      require_code_owner_review         = true
-      required_review_thread_resolution = true
-    }
     required_status_checks {
       required_check {
         context        = "check"
