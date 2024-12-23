@@ -26,7 +26,6 @@
       "syncthing"
       "tailscale"
       "transmission"
-      "wacom-tablet"
       "whatsapp"
       "zoom"
     ];
