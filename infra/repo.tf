@@ -3,34 +3,66 @@ data "github_repository" "repo" {
   name     = each.value
 }
 
-resource "github_branch_protection" "main" {
+resource "github_repository_ruleset" "main" {
   for_each = {
     for k, v in var.repositories :
     k => v if !data.github_repository.repo[k].private
   }
-  repository_id                   = each.value
-  pattern                         = "main"
-  require_signed_commits          = true
-  required_linear_history         = true
-  require_conversation_resolution = true
-  required_status_checks {
-    strict   = true
-    contexts = ["check"]
+  name        = "Protect main branch"
+  repository  = each.value
+  target      = "branch"
+  enforcement = "active"
+  conditions {
+    ref_name {
+      include = ["refs/heads/main"]
+      exclude = []
+    }
+  }
+  rules {
+    required_linear_history = true
+    required_signatures     = true
+    pull_request {
+      require_code_owner_review         = true
+      required_review_thread_resolution = true
+    }
+    required_status_checks {
+      required_check {
+        context        = "check"
+        integration_id = 15368 # GitHub Actions
+      }
+      strict_required_status_checks_policy = true
+    }
   }
 }
 
-resource "github_branch_protection" "release" {
+resource "github_repository_ruleset" "release" {
   for_each = {
     for k, v in var.repositories :
     k => v if !data.github_repository.repo[k].private
   }
-  repository_id                   = each.value
-  pattern                         = "release-*.*"
-  require_signed_commits          = true
-  required_linear_history         = true
-  require_conversation_resolution = true
-  required_status_checks {
-    strict   = true
-    contexts = ["check"]
+  name        = "Protect release branches"
+  repository  = each.value
+  target      = "branch"
+  enforcement = "active"
+  conditions {
+    ref_name {
+      include = ["refs/heads/release-*.*"]
+      exclude = []
+    }
+  }
+  rules {
+    required_linear_history = true
+    required_signatures     = true
+    pull_request {
+      require_code_owner_review         = true
+      required_review_thread_resolution = true
+    }
+    required_status_checks {
+      required_check {
+        context        = "check"
+        integration_id = 15368 # GitHub Actions
+      }
+      strict_required_status_checks_policy = true
+    }
   }
 }
