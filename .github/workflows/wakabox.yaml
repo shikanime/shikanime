@@ -6,7 +6,6 @@ on:
 jobs:
   wakabox:
     runs-on: ubuntu-latest
-    environment: shikanime-wakabox
     steps:
       - uses: matchai/waka-box@v5.0.0
         env:
