@@ -1,6 +1,9 @@
 {
   # Allow admin users to interact with the daemon
-  nix.settings.trusted-users = [ "root" "@admin" ];
+  nix.settings.trusted-users = [
+    "root"
+    "@admin"
+  ];
 
   # Enable daemon service
   nix.useDaemon = true;
@@ -9,13 +12,13 @@
   nix.gc = {
     automatic = true;
     options = "--delete-older-than 30d";
-    interval = [{ Weekday = 7; }];
+    interval = [ { Weekday = 7; } ];
   };
 
   # Optimize nix store weekly
   nix.optimise = {
     automatic = true;
-    interval = [{ Weekday = 7; }];
+    interval = [ { Weekday = 7; } ];
   };
 
   # Make home-manger use packages from system

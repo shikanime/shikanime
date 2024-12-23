@@ -8,8 +8,7 @@
   # https://github.com/NixOS/nixpkgs/issues/154163#issuecomment-1008362877
   nixpkgs.overlays = [
     (_: super: {
-      makeModulesClosure = x:
-        super.makeModulesClosure (x // { allowMissing = true; });
+      makeModulesClosure = x: super.makeModulesClosure (x // { allowMissing = true; });
     })
   ];
 
