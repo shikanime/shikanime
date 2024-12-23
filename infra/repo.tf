@@ -18,11 +18,6 @@ resource "github_repository_ruleset" "main" {
       exclude = []
     }
   }
-  bypass_actors {
-    actor_id    = 2 # Maintain
-    actor_type  = "RepositoryRole"
-    bypass_mode = "always"
-  }
   rules {
     required_linear_history = true
     required_signatures     = true
@@ -54,11 +49,6 @@ resource "github_repository_ruleset" "release" {
       include = ["refs/heads/release-*.*"]
       exclude = []
     }
-  }
-  bypass_actors {
-    actor_id    = 2 # Maintain
-    actor_type  = "RepositoryRole"
-    bypass_mode = "always"
   }
   rules {
     required_linear_history = true
