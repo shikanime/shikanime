@@ -4,4 +4,6 @@
     ../profiles/workstation.nix
     ../users/shika.nix
   ];
+
+  networking.hostName = "kaltashar";
 }
