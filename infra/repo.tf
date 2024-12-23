@@ -30,6 +30,10 @@ resource "github_repository_ruleset" "default" {
       operator = "regex"
       pattern  = "ghstack-source-id: [0-9]+"
     }
+    committer_email_pattern {
+      operator = "ends_with"
+      pattern  = "@shikanime.studio"
+    }
   }
 }
 
