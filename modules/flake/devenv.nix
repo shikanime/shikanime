@@ -28,7 +28,10 @@
         enable = true;
         push = "shikanime";
       };
-      packages = [ pkgs.gh ];
+      packages = [
+        pkgs.gh
+        pkgs.nixos-anywhere
+      ];
     };
   };
 }
