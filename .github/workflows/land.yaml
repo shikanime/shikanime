@@ -1,0 +1,19 @@
+name: land
+on:
+  issue_comment:
+    types: [created]
+permissions:
+  pull-requests: write
+  checks: read
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: github/command@v1
+        id: command
+        with:
+          command: ".land"
+          allowed_contexts: pull_request
+      - name: ping
+        if: ${{ steps.command.outputs.continue == 'true' }}
+        run: echo "I am going to ping some cool website now!"
