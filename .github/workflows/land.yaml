@@ -1,19 +1,37 @@
 name: Land
 on:
   issue_comment:
-    types: [created]
+    types:
+      - created
 permissions:
   pull-requests: write
-  checks: read
+  contents: write
 jobs:
-  demo:
+  land:
     runs-on: ubuntu-latest
     steps:
       - uses: github/command@v1
         id: command
         with:
           command: ".land"
+          reaction: rocket
           allowed_contexts: pull_request
-      - name: ping
+          permissions: maintain,admin
+          allowlist: shikanime
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: DeterminateSystems/nix-installer-action@v13
         if: ${{ steps.command.outputs.continue == 'true' }}
-        run: echo "I am going to ping some cool website now!"
+      - uses: DeterminateSystems/magic-nix-cache-action@v8
+        if: ${{ steps.command.outputs.continue == 'true' }}
+      - name: Land Pull Request
+        run: |
+          nix run nixpkgs#sapling -- config \
+            --local ui.username "github-actions[bot]" \
+            --local ui.email "github-actions[bot]@users.noreply.github.com"
+          nix run nixpkgs#sapling -- ghstack land \
+            ${{ github.event.issue.pull_request.html_url }}
+        if: ${{ steps.command.outputs.continue == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
