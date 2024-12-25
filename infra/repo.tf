@@ -40,6 +40,11 @@ resource "github_repository_ruleset" "landing" {
     }
   }
   bypass_actors {
+    actor_id    = 2
+    actor_type  = "RepositoryRole"
+    bypass_mode = "always"
+  }
+  bypass_actors {
     actor_id    = var.apps.operator
     actor_type  = "Integration"
     bypass_mode = "always"
