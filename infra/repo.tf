@@ -40,8 +40,8 @@ resource "github_repository_ruleset" "landing" {
     }
   }
   bypass_actors {
-    actor_id    = 2 # Maintain
-    actor_type  = "RepositoryRole"
+    actor_id    = var.apps.operator
+    actor_type  = "Integration"
     bypass_mode = "always"
   }
   rules {
@@ -52,7 +52,7 @@ resource "github_repository_ruleset" "landing" {
     required_status_checks {
       required_check {
         context        = "check"
-        integration_id = 15368 # GitHub Actions
+        integration_id = var.apps.github_actions
       }
       strict_required_status_checks_policy = true
     }

@@ -38,3 +38,17 @@ resource "github_actions_secret" "nix_github_token" {
   secret_name     = "NIX_GITHUB_TOKEN"
   plaintext_value = local.nix_data["githubToken"]
 }
+
+resource "github_actions_secret" "operator_private_key" {
+  for_each        = var.repositories
+  repository      = each.value
+  secret_name     = "OPERATOR_PRIVATE_KEY"
+  plaintext_value = local.operator_openssh_private_key
+}
+
+resource "github_actions_variable" "operator" {
+  for_each      = var.repositories
+  repository    = each.value
+  variable_name = "OPERATOR_APP_ID"
+  value         = var.apps.operator
+}
