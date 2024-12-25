@@ -12,15 +12,17 @@ variable "apps" {
 
 variable "repositories" {
   type = object({
-    shikanime  = string
-    features   = string
-    identities = string
+    shikanime       = string
+    ghstack-actions = string
+    features        = string
+    identities      = string
   })
   description = "GitHub repositories"
   default = {
-    shikanime  = "shikanime"
-    features   = "features"
-    identities = "identities"
+    features        = "features"
+    ghstack-actions = "ghstack-actions"
+    identities      = "identities"
+    shikanime       = "shikanime"
   }
 }
 
