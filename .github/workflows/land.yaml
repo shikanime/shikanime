@@ -10,7 +10,8 @@ jobs:
   land:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@v1
+      - id: createGithubAppToken
+        uses: actions/create-github-app-token@v1
         with:
           app-id: ${{ vars.OPERATOR_APP_ID }}
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
@@ -21,11 +22,11 @@ jobs:
           reaction: rocket
           allowed_contexts: pull_request
           permissions: maintain,admin
-          github_token: ${{ steps.create-github-app-token.outputs.token }}
+          github_token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ steps.create-github-app-token.outputs.token }}
+          token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: DeterminateSystems/nix-installer-action@v13
         if: ${{ steps.command.outputs.continue == 'true' }}
       - uses: DeterminateSystems/magic-nix-cache-action@v8
@@ -39,4 +40,4 @@ jobs:
             ${{ github.event.issue.pull_request.html_url }}
         if: ${{ steps.command.outputs.continue == 'true' }}
         env:
-          GH_TOKEN: ${{ steps.create-github-app-token.outputs.token }}
+          GH_TOKEN: ${{ steps.createGithubAppToken.outputs.token }}
