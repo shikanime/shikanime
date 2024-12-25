@@ -1,19 +1,11 @@
 variable "apps" {
   type = object({
+    github_actions = number
     operator = number
   })
   description = "Application names"
   default = {
     operator = 1095999
-  }
-}
-
-variable "installations" {
-  type = object({
-    github_actions = number
-  })
-  description = "GitHub installations"
-  default = {
     github_actions = 15368
   }
 }

@@ -52,7 +52,7 @@ resource "github_repository_ruleset" "landing" {
     required_status_checks {
       required_check {
         context        = "check"
-        integration_id = var.installations.github_actions
+        integration_id = var.apps.github_actions
       }
       strict_required_status_checks_policy = true
     }
