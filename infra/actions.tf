@@ -43,7 +43,7 @@ resource "github_actions_secret" "operator_private_key" {
   for_each        = var.repositories
   repository      = each.value
   secret_name     = "OPERATOR_PRIVATE_KEY"
-  plaintext_value = local.operator_openssh_private_key
+  plaintext_value = local.operator_data["ssh_private_key"]
 }
 
 resource "github_actions_variable" "operator" {
