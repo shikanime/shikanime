@@ -1,8 +1,7 @@
 locals {
-  wakabox_data = jsondecode(base64decode(data.scaleway_secret_version.wakabox.data))
-  nix_data     = jsondecode(base64decode(data.scaleway_secret_version.nix.data))
-
-  operator_openssh_private_key = base64decode(data.scaleway_secret_version.operator.data)
+  wakabox_data  = jsondecode(base64decode(data.scaleway_secret_version.wakabox.data))
+  nix_data      = jsondecode(base64decode(data.scaleway_secret_version.nix.data))
+  operator_data = jsondecode(base64decode(data.scaleway_secret_version.operator.data))
 }
 
 data "scaleway_secret_version" "wakabox" {
