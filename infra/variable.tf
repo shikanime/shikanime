@@ -32,8 +32,8 @@ variable "secrets" {
   })
   description = "Scaleway secrets ID"
   default = {
-    wakabox  = "677816c8-59be-4daf-acaf-1ef71c8d2f9a"
-    nix      = "5363081a-f553-45b5-8260-8b74a0a04d93"
+    wakabox  = "41ec1000-749b-429d-98e9-57d3c2e646a3"
+    nix      = "f617ec38-db68-4055-92d6-5913bd4f4b42"
     operator = "993e60fe-8192-4207-bf1c-110115d4ae46"
   }
 }
