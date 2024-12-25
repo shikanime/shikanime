@@ -58,24 +58,6 @@ resource "github_repository_ruleset" "landing" {
     }
   }
 }
-
-resource "github_repository_ruleset" "stacking" {
-  for_each = {
-    for k, v in var.repositories :
-    k => v if !data.github_repository.repo[k].private
-  }
-  name        = "Stacking protections"
-  repository  = each.value
-  target      = "branch"
-  enforcement = "active"
-  conditions {
-    ref_name {
-      include = ["refs/heads/gh/*/*/base"]
-      exclude = []
-    }
-  }
-  bypass_actors {
-    actor_id    = 4 # Write
     actor_type  = "RepositoryRole"
     bypass_mode = "always"
   }
@@ -87,11 +69,6 @@ resource "github_repository_ruleset" "stacking" {
     required_status_checks {
       required_check {
         context        = "check"
-        integration_id = var.apps.github_actions
-      }
-      required_check {
-        context        = "land"
-        integration_id = var.apps.operator
       }
       strict_required_status_checks_policy = true
     }
