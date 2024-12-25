@@ -57,19 +57,4 @@ resource "github_repository_ruleset" "landing" {
       strict_required_status_checks_policy = true
     }
   }
-    actor_type  = "RepositoryRole"
-    bypass_mode = "always"
-  }
-  rules {
-    pull_request {
-      require_code_owner_review         = true
-      required_review_thread_resolution = true
-    }
-    required_status_checks {
-      required_check {
-        context        = "check"
-      }
-      strict_required_status_checks_policy = true
-    }
-  }
 }
