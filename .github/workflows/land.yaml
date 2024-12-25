@@ -3,11 +3,41 @@ on:
   issue_comment:
     types:
       - created
+permissions:
+  pull-requests: write
+  contents: write
 jobs:
   land:
     runs-on: ubuntu-latest
     steps:
-      - uses: shikanime/ghstack-action@v1
+      - id: createGithubAppToken
+        uses: actions/create-github-app-token@v1
         with:
           app-id: ${{ vars.OPERATOR_APP_ID }}
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
+      - uses: github/command@v1
+        id: command
+        with:
+          command: ".land"
+          reaction: rocket
+          allowed_contexts: pull_request
+          permissions: maintain,admin
+          github_token: ${{ steps.createGithubAppToken.outputs.token }}
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.createGithubAppToken.outputs.token }}
+      - uses: DeterminateSystems/nix-installer-action@v13
+        if: ${{ steps.command.outputs.continue == 'true' }}
+      - uses: DeterminateSystems/magic-nix-cache-action@v8
+        if: ${{ steps.command.outputs.continue == 'true' }}
+      - name: Land Pull Request
+        run: |
+          nix run nixpkgs#sapling -- config \
+            --local ui.username "github-actions[bot]" \
+            --local ui.email "github-actions[bot]@users.noreply.github.com"
+          nix run nixpkgs#sapling -- ghstack land \
+            ${{ github.event.issue.pull_request.html_url }}
+        if: ${{ steps.command.outputs.continue == 'true' }}
+        env:
+          GH_TOKEN: ${{ steps.createGithubAppToken.outputs.token }}
