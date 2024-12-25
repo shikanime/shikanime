@@ -14,7 +14,6 @@ variable "repositories" {
   type = object({
     shikanime      = string
     ghstack_action = string
-      ghstack_poc     = string
     features       = string
     identities     = string
   })
@@ -22,7 +21,6 @@ variable "repositories" {
   default = {
     features       = "features"
     ghstack_action = "ghstack-action"
-    ghstack_poc     = "ghstack-poc"
     identities     = "identities"
     shikanime      = "shikanime"
   }
