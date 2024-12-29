@@ -15,6 +15,7 @@ variable "repositories" {
     shikanime      = string
     ghstack_action = string
     features       = string
+    manifests      = string
     identities     = string
   })
   description = "GitHub repositories"
@@ -22,6 +23,7 @@ variable "repositories" {
     features       = "features"
     ghstack_action = "ghstack-action"
     identities     = "identities"
+    manifests      = "manifests"
     shikanime      = "shikanime"
   }
 }
