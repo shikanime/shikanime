@@ -5,8 +5,7 @@ resource "github_actions_secret" "wakabox_github_token" {
 }
 
 resource "github_actions_secret" "wakatime_api_key" {
-  for_each        = var.repositories
-  repository      = each.value
+  repository      = var.repositories.shikanime
   secret_name     = "WAKATIME_API_KEY"
   plaintext_value = local.wakabox_data["wakatime_api_key"]
 }
