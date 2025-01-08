@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  home.packages = [
+    pkgs.uv
+  ];
+
   programs.zsh.oh-my-zsh.plugins = [
     "python"
     "poetry"
