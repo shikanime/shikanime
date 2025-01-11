@@ -61,6 +61,8 @@ with lib;
     };
   };
 
+  programs.zoxide.enable = true;
+
   programs.nushell = {
     enable = true;
     extraConfig = ''
