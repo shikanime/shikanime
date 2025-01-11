@@ -82,7 +82,7 @@ with lib;
 
   programs.starship.enable = true;
 
-  programs.caraparce.enable = true;
+  programs.carapace.enable = true;
 
   programs.direnv = {
     enable = true;
