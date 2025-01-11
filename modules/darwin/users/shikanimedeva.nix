@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   users.users.shikanimedeva.home = "/Users/shikanimedeva";
 
