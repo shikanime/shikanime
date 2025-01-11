@@ -1,10 +1,5 @@
 {
-  programs.zsh.enable = true;
-
-  users.users.shikanimedeva = {
-    home = "/Users/shikanimedeva";
-    shell = pkgs.zsh;
-  };
+  users.users.shikanimedeva.home = "/Users/shikanimedeva";
 
   home-manager.users.shikanimedeva = {
     imports = [
