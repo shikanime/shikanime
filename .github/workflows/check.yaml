@@ -23,8 +23,8 @@ jobs:
           platforms: arm64
       - uses: DeterminateSystems/nix-installer-action@v13
         with:
+          github-token: ${{ secrets.NIX_GITHUB_TOKEN }}
           extra-conf: |
-            accept-flake-config = true
             system-features = nixos-test benchmark big-parallel kvm
             extra-platforms = aarch64-linux arm-linux
       - uses: DeterminateSystems/magic-nix-cache-action@v8
@@ -34,4 +34,4 @@ jobs:
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
       - name: Check Nix Flake
         run: |
-          nix flake check --show-trace --all-systems
+          nix flake check --show-trace --all-systems --no-pure-eval --accept-flake-config

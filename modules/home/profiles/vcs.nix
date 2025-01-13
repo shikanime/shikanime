@@ -111,4 +111,6 @@
       github.pr_workflow = "single";
     };
   };
+
+  programs.jujutsu.enable = true;
 }

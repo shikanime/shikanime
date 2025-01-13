@@ -11,6 +11,7 @@
       modules = [
         ../darwin/hosts/kaltashar.nix
         inputs.home-manager.darwinModules.home-manager
+        inputs.identities.darwinModules.kaltashar
       ];
     }
   );
