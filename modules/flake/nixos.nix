@@ -12,6 +12,7 @@
         modules = [
           ../nixos/hosts/devcontainer.nix
           inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.ishtar
         ];
       }
     );
