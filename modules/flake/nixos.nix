@@ -2,6 +2,20 @@
 
 {
   flake.nixosConfigurations = {
+    devcontainer = withSystem "x86_64-linux" (
+      { system, ... }:
+      inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        modules = [
+          ../nixos/hosts/devcontainer.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.ishtar
+        ];
+      }
+    );
     ishtar = withSystem "x86_64-linux" (
       { system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
