@@ -17,7 +17,6 @@
           ".devenv/*"
           ".direnv/*"
           "*.png"
-          ".terraform.lock.hcl"
           "LICENSE"
         ];
       };
@@ -25,10 +24,7 @@
         containers = pkgs.lib.mkForce { };
         languages = {
           nix.enable = true;
-          terraform = {
-            enable = true;
-            package = pkgs.opentofu;
-          };
+          opentofu.enable = true;
         };
         cachix = {
           enable = true;
@@ -38,6 +34,8 @@
           actionlint.enable = true;
           deadnix.enable = true;
           flake-checker.enable = true;
+          terraform-validate.enable = true;
+          tflint.enable = true;
         };
         packages = [
           pkgs.gh
