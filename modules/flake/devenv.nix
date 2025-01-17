@@ -34,7 +34,6 @@
           actionlint.enable = true;
           deadnix.enable = true;
           flake-checker.enable = true;
-          terraform-validate.enable = true;
           tflint.enable = true;
         };
         packages = [
