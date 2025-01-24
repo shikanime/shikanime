@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  home.programs = [
+    pkgs.jdt-language-server
+  ];
+
   programs.zsh.oh-my-zsh.plugins = [
     "sbt"
     "scala"

@@ -6,6 +6,10 @@
     NPM_CONFIG_USERCONFIG = "${config.xdg.configHome}/npm";
   };
 
+  home.packages = [
+    pkgs.typescript-language-server
+  ];
+
   programs.zsh.oh-my-zsh.plugins = [
     "node"
     "deno"

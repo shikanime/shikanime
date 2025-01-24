@@ -31,6 +31,7 @@ with lib;
     pkgs.wget
     pkgs.watch
     pkgs.pprof
+    pkgs.bash-language-server
   ];
 
   programs.neovim = {
@@ -44,9 +45,6 @@ with lib;
     enable = true;
     languages = {
       language-server = {
-        gopls.command = "${pkgs.gopls}/bin/gopls";
-        jedi.command =
-          "${pkgs.python312Packages.jedi-language-server}/bin/jedi-language-server";
         lsp-ai = {
           command = "${pkgs.lsp-ai}/bin/lsp-ai";
           config = {
@@ -58,18 +56,27 @@ with lib;
             completion.model = "deepseek-coder";
           };
         };
-        ruff.command = "${pkgs.ruff}/bin/ruff";
-        rust-analyzer.command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-        typescript-language-server.command =
-          "${pkgs.typescript-language-server}/bin/typescript-language-server";
       };
       language = [
         {
-          name = "python";
+          name = "bash";
           language-servers = [
             "lsp-ai"
-            "ruff"
-            "jedi"
+            "bash-language-server"
+          ];
+        }
+        {
+          name = "elixir";
+          language-servers = [
+            "lsp-ai"
+            "elixir-ls"
+          ];
+        }
+        {
+          name = "erlang";
+          language-servers = [
+            "lsp-ai"
+            "erlang-ls"
           ];
         }
         {
@@ -80,10 +87,32 @@ with lib;
           ];
         }
         {
+          name = "java";
+          language-servers = [
+            "lsp-ai"
+            "jdt"
+          ];
+        }
+        {
           name = "javascript";
           language-servers = [
             "lsp-ai"
             "typescript-language-server"
+          ];
+        }
+        {
+          name = "python";
+          language-servers = [
+            "lsp-ai"
+            "ruff"
+            "jedi"
+          ];
+        }
+        {
+          name = "rust";
+          language-servers = [
+            "lsp-ai"
+            "rust-analyzer"
           ];
         }
       ];

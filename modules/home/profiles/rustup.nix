@@ -11,6 +11,7 @@
   };
 
   home.packages = [
+    pkgs.rust-analyzer
     pkgs.rustup
   ];
 

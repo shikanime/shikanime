@@ -1,7 +1,15 @@
 { config, pkgs, ... }:
 
 {
-  home.sessionVariables.GOPATH = "${config.xdg.dataHome}/go";
+  home.packages = [
+    pkgs.gopls
+  ];
+
+  programs.go = {
+    enable = true;
+    goPath = "${config.xdg.dataHome}/go";
+    telemetry.mode = "off";
+  };
 
   programs.zsh.oh-my-zsh.plugins = [
     "golang"

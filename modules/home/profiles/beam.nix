@@ -1,6 +1,13 @@
 { pkgs, ... }:
 
 {
+  home.packages = [
+    pkgs.elixir
+    pkgs.elixir-ls
+    pkgs.erlang
+    pkgs.erlang-ls
+  ];
+
   home.sessionVariables.MIX_XDG = "1";
 
   programs.zsh.oh-my-zsh.plugins = [

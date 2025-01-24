@@ -2,6 +2,8 @@
 
 {
   home.packages = [
+    pkgs.python312Packages.jedi-language-server
+    pkgs.ruff
     pkgs.uv
   ];
 
