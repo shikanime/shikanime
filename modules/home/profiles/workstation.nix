@@ -44,7 +44,7 @@ with lib;
     enable = true;
     languages = {
       language-server.lsp-ai = {
-        command = "${pkgs.lsp-ai}/bin/lsp-ai";
+        command = "lsp-ai";
         config = {
           memory.file_store = { };
           models.deepseek-coder = {
@@ -56,16 +56,75 @@ with lib;
       };
       language = [
         {
-          name = "python";
-          language-servers = [ "lsp-ai" ];
+          name = "bash";
+          language-servers = [
+            "bash-language-server"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "dockerfile";
+          language-servers = [
+            "dockerfile-langserver"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "docker-compose";
+          language-servers = [
+            "docker-compose-language-server"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "elixir";
+          language-servers = [
+            "elixir-ls"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "erlang";
+          language-servers = [
+            "erlang-ls"
+            "lsp-ai"
+          ];
         }
         {
           name = "go";
-          language-servers = [ "lsp-ai" ];
+          language-servers = [
+            "gopls"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "java";
+          language-servers = [
+            "jdt"
+            "lsp-ai"
+          ];
         }
         {
           name = "javascript";
-          language-servers = [ "lsp-ai" ];
+          language-servers = [
+            "typescript-language-server"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "python";
+          language-servers = [
+            "ruff"
+            "jedi"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "rust";
+          language-servers = [
+            "rust-analyzer"
+            "lsp-ai"
+          ];
         }
       ];
     };
