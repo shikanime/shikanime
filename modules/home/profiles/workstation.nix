@@ -42,6 +42,33 @@ with lib;
 
   programs.helix = {
     enable = true;
+    languages = {
+      language-server.lsp-ai = {
+        command = "${pkgs.lsp-ai}/bin/lsp-ai";
+        config = {
+          memory.file_store = { };
+          models.deepseek-coder = {
+            type = "ollama";
+            path = "deepseek-coder";
+          };
+          completion.model = "deepseek-coder";
+        };
+      };
+      language = [
+        {
+          name = "python";
+          language-servers = [ "lsp-ai" ];
+        }
+        {
+          name = "go";
+          language-servers = [ "lsp-ai" ];
+        }
+        {
+          name = "javascript";
+          language-servers = [ "lsp-ai" ];
+        }
+      ];
+    };
     settings = {
       theme = "catppuccin_latte";
 
