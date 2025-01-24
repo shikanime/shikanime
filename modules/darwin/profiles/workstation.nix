@@ -18,7 +18,6 @@
       "mongodb-compass"
       "rancher"
       "redisinsight"
-      "virtualbox"
       "visual-studio-code"
       "windows-app"
       "wireshark"
