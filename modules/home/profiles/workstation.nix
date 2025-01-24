@@ -62,13 +62,6 @@ with lib;
       };
 
       keys.normal = {
-        # -------------------------
-        # from @mattmc3 (https://github.com/helix-editor/helix/issues/5520#issuecomment-1386428351)
-        # QWERTY to Colemak remaps
-        # [JY] [LU] [UI] [..]
-        #  [..] [NJ] [EK] [IL]
-        #   [KN] [..] [..] [..]
-        # -------------------------
         # N <=> K (K is in the QWERTY N position)
         n = "move_char_left";
         N = "keep_selections";
@@ -92,13 +85,6 @@ with lib;
       };
 
       keys.select = {
-        # -------------------------
-        # from @mattmc3 (https://github.com/helix-editor/helix/issues/5520#issuecomment-1386428351)
-        # QWERTY to Colemak remaps
-        # [JY] [LU] [UI] [..]
-        #  [..] [NJ] [EK] [IL]
-        #   [KN] [..] [..] [..]
-        # -------------------------
         # N <=> K (K is in the QWERTY N position)
         n = "extend_char_left";
         N = "keep_selections";
@@ -122,28 +108,28 @@ with lib;
       };
     };
     themes.catppuccin_latte = {
-      "attribute" = "yellow";
+      attribute = "yellow";
 
-      "type" = "yellow";
+      type = "yellow";
       "type.enum.variant" = "teal";
 
-      "constructor" = "sapphire";
+      constructor = "sapphire";
 
-      "constant" = "peach";
+      constant = "peach";
       "constant.character" = "teal";
       "constant.character.escape" = "pink";
 
-      "string" = "green";
+      string = "green";
       "string.regexp" = "pink";
       "string.special" = "blue";
       "string.special.symbol" = "red";
 
-      "comment" = {
+      comment = {
         fg = "overlay2";
         modifiers = [ "italic" ];
       };
 
-      "variable" = "text";
+      variable = "text";
       "variable.parameter" = {
         fg = "maroon";
         modifiers = [ "italic" ];
@@ -151,30 +137,30 @@ with lib;
       "variable.builtin" = "red";
       "variable.other.member" = "blue";
 
-      "label" = "sapphire";
+      label = "sapphire";
 
-      "punctuation" = "overlay2";
+      punctuation = "overlay2";
       "punctuation.special" = "sky";
 
-      "keyword" = "mauve";
+      keyword = "mauve";
       "keyword.control.conditional" = {
         fg = "mauve";
         modifiers = [ "italic" ];
       };
 
-      "operator" = "sky";
+      operator = "sky";
 
-      "function" = "blue";
+      function = "blue";
       "function.macro" = "mauve";
 
-      "tag" = "blue";
+      tag = "blue";
 
-      "namespace" = {
+      namespace = {
         fg = "yellow";
         modifiers = [ "italic" ];
       };
 
-      "special" = "blue";
+      special = "blue";
 
       "markup.heading.1" = "red";
       "markup.heading.2" = "peach";
@@ -429,7 +415,6 @@ with lib;
       };
     };
   };
-
   programs.mise = {
     enable = true;
     globalConfig.settings.experimental = true;
