@@ -421,5 +421,4 @@
       warning = "yellow";
     };
   };
-
 }
