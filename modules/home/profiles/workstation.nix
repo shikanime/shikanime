@@ -43,29 +43,48 @@ with lib;
   programs.helix = {
     enable = true;
     languages = {
-      language-server.lsp-ai = {
-        command = "${pkgs.lsp-ai}/bin/lsp-ai";
-        config = {
-          memory.file_store = { };
-          models.deepseek-coder = {
-            type = "ollama";
-            model = "deepseek-coder";
+      language-server = {
+        gopls.command = "${pkgs.gopls}/bin/gopls";
+        jedi.command =
+          "${pkgs.python312Packages.jedi-language-server}/bin/jedi-language-server";
+        lsp-ai = {
+          command = "${pkgs.lsp-ai}/bin/lsp-ai";
+          config = {
+            memory.file_store = { };
+            models.deepseek-coder = {
+              type = "ollama";
+              model = "deepseek-coder";
+            };
+            completion.model = "deepseek-coder";
           };
-          completion.model = "deepseek-coder";
         };
+        ruff.command = "${pkgs.ruff}/bin/ruff";
+        rust-analyzer.command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+        typescript-language-server.command =
+          "${pkgs.typescript-language-server}/bin/typescript-language-server";
       };
       language = [
         {
           name = "python";
-          language-servers = [ "lsp-ai" ];
+          language-servers = [
+            "lsp-ai"
+            "ruff"
+            "jedi"
+          ];
         }
         {
           name = "go";
-          language-servers = [ "lsp-ai" ];
+          language-servers = [
+            "lsp-ai"
+            "gopls"
+          ];
         }
         {
           name = "javascript";
-          language-servers = [ "lsp-ai" ];
+          language-servers = [
+            "lsp-ai"
+            "typescript-language-server"
+          ];
         }
       ];
     };
