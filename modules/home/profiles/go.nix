@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  home.sessionVariables.GOPATH = "${config.xdg.dataHome}/go";
+  programs.go = {
+    enable = true;
+    goPath = "${config.xdg.dataHome}/go";
+    telemetry.mode = "off";
+  };
 
   programs.helix.languages.language-server = {
     gopls.command = "${pkgs.gopls}/bin/gopls";
