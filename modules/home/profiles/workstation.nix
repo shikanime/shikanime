@@ -15,24 +15,24 @@ with lib;
   ];
 
   home.packages = [
-    pkgs.cachix
-    pkgs.gnupatch
-    pkgs.gnumake
-    pkgs.gnused
-    pkgs.gnugrep
-    pkgs.less
-    pkgs.zip
-    pkgs.unzip
-    pkgs.which
-    pkgs.bzip2
-    pkgs.graphviz
-    pkgs.rsync
-    pkgs.curl
-    pkgs.wget
-    pkgs.watch
-    pkgs.pprof
     pkgs.bash-language-server
+    pkgs.bzip2
+    pkgs.cachix
+    pkgs.curl
+    pkgs.gnugrep
+    pkgs.gnumake
+    pkgs.gnupatch
+    pkgs.gnused
+    pkgs.graphviz
+    pkgs.less
     pkgs.lsp-ai
+    pkgs.pprof
+    pkgs.rsync
+    pkgs.unzip
+    pkgs.watch
+    pkgs.wget
+    pkgs.which
+    pkgs.zip
   ];
 
   programs.neovim = {
