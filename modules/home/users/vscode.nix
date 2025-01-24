@@ -5,6 +5,7 @@
     ../profiles/cloud.nix
     ../profiles/devcontainer.nix
     ../profiles/go.nix
+    ../profiles/helix.nix
     ../profiles/java.nix
     ../profiles/javascript.nix
     ../profiles/python.nix

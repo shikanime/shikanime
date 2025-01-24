@@ -5,6 +5,7 @@
       ../../home/profiles/beam.nix
       ../../home/profiles/cloud.nix
       ../../home/profiles/go.nix
+      ../../home/profiles/helix.nix
       ../../home/profiles/java.nix
       ../../home/profiles/javascript.nix
       ../../home/profiles/python.nix

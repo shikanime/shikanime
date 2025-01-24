@@ -4,6 +4,7 @@
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
+    ../profiles/helix.nix
     ../profiles/workstation.nix
     ../profiles/wsl.nix
     ../users/shika.nix

@@ -1,6 +1,7 @@
 {
   imports = [
     ../profiles/base.nix
+    ../profiles/helix.nix
     ../profiles/workstation.nix
     ../users/shikanimedeva.nix
   ];
