@@ -1,21 +1,14 @@
 {
   config,
-  pkgs,
   lib,
+  pkgs,
   ...
 }:
 
 with lib;
 
 {
-  xdg.enable = true;
-
-  home.sessionPath = [
-    "${config.home.homeDirectory}/.local/bin"
-  ];
-
   home.packages = [
-    pkgs.bash-language-server
     pkgs.bzip2
     pkgs.cachix
     pkgs.curl
@@ -25,7 +18,6 @@ with lib;
     pkgs.gnused
     pkgs.graphviz
     pkgs.less
-    pkgs.lsp-ai
     pkgs.pprof
     pkgs.rsync
     pkgs.unzip
@@ -35,421 +27,181 @@ with lib;
     pkgs.zip
   ];
 
-  programs.neovim = {
+  home.sessionPath = [
+    "${config.home.homeDirectory}/.local/bin"
+  ];
+
+  programs.carapace.enable = true;
+
+  programs.dircolors.enable = true;
+
+  programs.direnv = {
     enable = true;
-    plugins = [
-      pkgs.vimPlugins.vim-colemak
-    ];
+    mise.enable = true;
+    nix-direnv.enable = true;
+    config.global.load_dotenv = true;
   };
+
+  programs.gpg.enable = true;
 
   programs.helix = {
     enable = true;
     languages = {
-      language-server.lsp-ai = {
-        command = "lsp-ai";
-        config = {
-          memory.file_store = { };
-          models.deepseek-coder = {
-            type = "ollama";
-            model = "deepseek-coder";
-          };
-          completion.model = "deepseek-coder";
-        };
-      };
       language = [
         {
-          name = "bash";
           language-servers = [
             "bash-language-server"
             "lsp-ai"
           ];
+          name = "bash";
         }
         {
-          name = "dockerfile";
-          language-servers = [
-            "dockerfile-langserver"
-            "lsp-ai"
-          ];
-        }
-        {
-          name = "docker-compose";
           language-servers = [
             "docker-compose-language-server"
             "lsp-ai"
           ];
+          name = "docker-compose";
         }
         {
-          name = "elixir";
+          language-servers = [
+            "dockerfile-langserver"
+            "lsp-ai"
+          ];
+          name = "dockerfile";
+        }
+        {
           language-servers = [
             "elixir-ls"
             "lsp-ai"
           ];
+          name = "elixir";
         }
         {
-          name = "erlang";
           language-servers = [
             "erlang-ls"
             "lsp-ai"
           ];
+          name = "erlang";
         }
         {
-          name = "go";
           language-servers = [
             "gopls"
             "lsp-ai"
           ];
+          name = "go";
         }
         {
-          name = "java";
           language-servers = [
             "jdt"
             "lsp-ai"
           ];
+          name = "java";
         }
         {
-          name = "javascript";
           language-servers = [
             "typescript-language-server"
             "lsp-ai"
           ];
+          name = "javascript";
         }
         {
-          name = "python";
           language-servers = [
             "ruff"
             "jedi"
             "lsp-ai"
           ];
+          name = "python";
         }
         {
-          name = "rust";
           language-servers = [
             "rust-analyzer"
             "lsp-ai"
           ];
+          name = "rust";
         }
       ];
+      language-server = {
+        lsp-ai = {
+          command = "${pkgs.lsp-ai}/bin/lsp-ai";
+          config = {
+            completion.model = "deepseek-coder";
+            memory.file_store = { };
+            models.deepseek-coder = {
+              model = "deepseek-coder";
+              type = "ollama";
+            };
+          };
+        };
+        taplo.command = "${pkgs.taplo}/bin/taplo";
+        vscode-json-language-server.command = "${pkgs.vscode-langservers-extracted}/bin/vscode-json-language-server";
+        yaml-language-server.command = "${pkgs.yaml-language-server}/bin/yaml-language-server";
+      };
     };
     settings = {
-      theme = "catppuccin_latte";
-
       editor = {
-        line-number = "relative";
-        cursorline = true;
         color-modes = true;
-
         cursor-shape = {
           insert = "bar";
           normal = "block";
           select = "underline";
         };
-
+        cursorline = true;
         indent-guides = {
           render = true;
         };
+        line-number = "relative";
       };
-
       keys.normal = {
-        # N <=> K (K is in the QWERTY N position)
-        n = "move_char_left";
-        N = "keep_selections";
-        k = "search_next";
-        K = "search_prev";
-        # E <=> J (J now 'jumps words')
-        e = "move_line_down";
         E = "join_selections";
-        j = "move_next_word_end";
+        H = "insert_at_line_start";
+        I = "no_op";
         J = "move_next_long_word_end";
-        # H <=> I (H is just a sideways I)
-        i = "move_char_right";
-        I = "no_op";
-        h = "insert_mode";
-        H = "insert_at_line_start";
-        # U <=> L (L is in the QWERTY U position)
-        u = "move_line_up";
-        U = "no_op";
-        l = "undo";
+        K = "search_prev";
         L = "redo";
-      };
-
-      keys.select = {
-        # N <=> K (K is in the QWERTY N position)
-        n = "extend_char_left";
         N = "keep_selections";
-        k = "extend_search_next";
-        K = "extend_search_prev";
-        # E <=> J (J now 'jumps words')
-        e = "extend_visual_line_down";
-        E = "join_selections";
-        j = "extend_next_word_end";
-        J = "extend_next_long_word_end";
-        # H <=> I (H is just a sideways I)
-        i = "extend_char_right";
-        I = "no_op";
-        h = "insert_mode";
-        H = "insert_at_line_start";
-        # U <=> L (L is in the QWERTY U position)
-        u = "extend_visual_line_up";
         U = "no_op";
+        e = "move_line_down";
+        h = "insert_mode";
+        i = "move_char_right";
+        j = "move_next_word_end";
+        k = "search_next";
         l = "undo";
-        L = "redo";
+        n = "move_char_left";
+        u = "move_line_up";
       };
+      keys.select = {
+        E = "join_selections";
+        H = "insert_at_line_start";
+        I = "no_op";
+        J = "extend_next_long_word_end";
+        K = "extend_search_prev";
+        L = "redo";
+        N = "keep_selections";
+        U = "no_op";
+        e = "extend_visual_line_down";
+        h = "insert_mode";
+        i = "extend_char_right";
+        j = "extend_next_word_end";
+        k = "extend_search_next";
+        l = "undo";
+        n = "extend_char_left";
+        u = "extend_visual_line_up";
+      };
+      theme = "catppuccin_latte";
     };
     themes.catppuccin_latte = {
       attribute = "yellow";
-
-      type = "yellow";
-      "type.enum.variant" = "teal";
-
-      constructor = "sapphire";
-
-      constant = "peach";
-      "constant.character" = "teal";
-      "constant.character.escape" = "pink";
-
-      string = "green";
-      "string.regexp" = "pink";
-      "string.special" = "blue";
-      "string.special.symbol" = "red";
-
       comment = {
         fg = "overlay2";
         modifiers = [ "italic" ];
       };
-
-      variable = "text";
-      "variable.parameter" = {
-        fg = "maroon";
-        modifiers = [ "italic" ];
-      };
-      "variable.builtin" = "red";
-      "variable.other.member" = "blue";
-
-      label = "sapphire";
-
-      punctuation = "overlay2";
-      "punctuation.special" = "sky";
-
-      keyword = "mauve";
-      "keyword.control.conditional" = {
-        fg = "mauve";
-        modifiers = [ "italic" ];
-      };
-
-      operator = "sky";
-
-      function = "blue";
-      "function.macro" = "mauve";
-
-      tag = "blue";
-
-      namespace = {
-        fg = "yellow";
-        modifiers = [ "italic" ];
-      };
-
-      special = "blue";
-
-      "markup.heading.1" = "red";
-      "markup.heading.2" = "peach";
-      "markup.heading.3" = "yellow";
-      "markup.heading.4" = "green";
-      "markup.heading.5" = "blue";
-      "markup.heading.6" = "mauve";
-      "markup.list" = "teal";
-      "markup.list.unchecked" = "overlay2";
-      "markup.list.checked" = "green";
-      "markup.bold" = {
-        fg = "red";
-        modifiers = [ "bold" ];
-      };
-      "markup.italic" = {
-        fg = "red";
-        modifiers = [ "italic" ];
-      };
-      "markup.link.url" = {
-        fg = "blue";
-        modifiers = [
-          "italic"
-          "underlined"
-        ];
-      };
-      "markup.link.text" = "lavender";
-      "markup.raw" = "green";
-      "markup.quote" = "pink";
-
-      "diff.plus" = "green";
-      "diff.minus" = "red";
-      "diff.delta" = "blue";
-
-      "ui.background" = {
-        fg = "text";
-        bg = "base";
-      };
-
-      "ui.linenr" = {
-        fg = "surface1";
-      };
-      "ui.linenr.selected" = {
-        fg = "lavender";
-      };
-
-      "ui.statusline" = {
-        fg = "subtext1";
-        bg = "mantle";
-      };
-      "ui.statusline.inactive" = {
-        fg = "surface2";
-        bg = "mantle";
-      };
-      "ui.statusline.normal" = {
-        fg = "base";
-        bg = "lavender";
-        modifiers = [ "bold" ];
-      };
-      "ui.statusline.insert" = {
-        fg = "base";
-        bg = "green";
-        modifiers = [ "bold" ];
-      };
-      "ui.statusline.select" = {
-        fg = "base";
-        bg = "flamingo";
-        modifiers = [ "bold" ];
-      };
-
-      "ui.popup" = {
-        fg = "text";
-        bg = "surface0";
-      };
-      "ui.window" = {
-        fg = "crust";
-      };
-      "ui.help" = {
-        fg = "overlay2";
-        bg = "surface0";
-      };
-
-      "ui.bufferline" = {
-        fg = "subtext0";
-        bg = "mantle";
-      };
-      "ui.bufferline.active" = {
-        fg = "mauve";
-        bg = "base";
-        underline = {
-          color = "mauve";
-          style = "line";
-        };
-      };
-      "ui.bufferline.background" = {
-        bg = "crust";
-      };
-
-      "ui.text" = "text";
-      "ui.text.focus" = {
-        fg = "text";
-        bg = "surface0";
-        modifiers = [ "bold" ];
-      };
-      "ui.text.inactive" = {
-        fg = "overlay1";
-      };
-      "ui.text.directory" = {
-        fg = "blue";
-      };
-
-      "ui.virtual" = "overlay0";
-      "ui.virtual.ruler" = {
-        bg = "surface0";
-      };
-      "ui.virtual.indent-guide" = "surface0";
-      "ui.virtual.inlay-hint" = {
-        fg = "surface1";
-        bg = "mantle";
-      };
-      "ui.virtual.jump-label" = {
-        fg = "rosewater";
-        modifiers = [ "bold" ];
-      };
-
-      "ui.selection" = {
-        bg = "surface1";
-      };
-
-      "ui.cursor" = {
-        fg = "base";
-        bg = "secondary_cursor";
-      };
-      "ui.cursor.primary" = {
-        fg = "base";
-        bg = "rosewater";
-      };
-      "ui.cursor.match" = {
-        fg = "peach";
-        modifiers = [ "bold" ];
-      };
-
-      "ui.cursor.primary.normal" = {
-        fg = "base";
-        bg = "rosewater";
-      };
-      "ui.cursor.primary.insert" = {
-        fg = "base";
-        bg = "green";
-      };
-      "ui.cursor.primary.select" = {
-        fg = "base";
-        bg = "flamingo";
-      };
-
-      "ui.cursor.normal" = {
-        fg = "base";
-        bg = "secondary_cursor_normal";
-      };
-      "ui.cursor.insert" = {
-        fg = "base";
-        bg = "secondary_cursor_insert";
-      };
-      "ui.cursor.select" = {
-        fg = "base";
-        bg = "secondary_cursor";
-      };
-
-      "ui.cursorline.primary" = {
-        bg = "cursorline";
-      };
-
-      "ui.highlight" = {
-        bg = "surface1";
-        modifiers = [ "bold" ];
-      };
-
-      "ui.menu" = {
-        fg = "overlay2";
-        bg = "surface0";
-      };
-      "ui.menu.selected" = {
-        fg = "text";
-        bg = "surface1";
-        modifiers = [ "bold" ];
-      };
-
+      constant = "peach";
+      "constant.character" = "teal";
+      "constant.character.escape" = "pink";
+      constructor = "sapphire";
       "diagnostic.error" = {
         underline = {
           color = "red";
-          style = "curl";
-        };
-      };
-      "diagnostic.warning" = {
-        underline = {
-          color = "yellow";
-          style = "curl";
-        };
-      };
-      "diagnostic.info" = {
-        underline = {
-          color = "sky";
           style = "curl";
         };
       };
@@ -459,72 +211,272 @@ with lib;
           style = "curl";
         };
       };
+      "diagnostic.info" = {
+        underline = {
+          color = "sky";
+          style = "curl";
+        };
+      };
       "diagnostic.unnecessary" = {
         modifiers = [ "dim" ];
       };
-
-      error = "red";
-      warning = "yellow";
-      info = "sky";
-      hint = "teal";
-
-      palette = {
-        rosewater = "#dc8a78";
-        flamingo = "#dd7878";
-        pink = "#ea76cb";
-        mauve = "#8839ef";
-        red = "#d20f39";
-        maroon = "#e64553";
-        peach = "#fe640b";
-        yellow = "#df8e1d";
-        green = "#40a02b";
-        teal = "#179299";
-        sky = "#04a5e5";
-        sapphire = "#209fb5";
-        blue = "#1e66f5";
-        lavender = "#7287fd";
-        text = "#4c4f69";
-        subtext1 = "#5c5f77";
-        subtext0 = "#6c6f85";
-        overlay2 = "#7c7f93";
-        overlay1 = "#8c8fa1";
-        overlay0 = "#9ca0b0";
-        surface2 = "#acb0be";
-        surface1 = "#bcc0cc";
-        surface0 = "#ccd0da";
-        base = "#eff1f5";
-        mantle = "#e6e9ef";
-        crust = "#dce0e8";
-
-        cursorline = "#e8ecf1";
-        secondary_cursor = "#e1a99d";
-        secondary_cursor_normal = "#e1a99d";
-        secondary_cursor_insert = "#74b867";
+      "diagnostic.warning" = {
+        underline = {
+          color = "yellow";
+          style = "curl";
+        };
       };
+      "diff.delta" = "blue";
+      "diff.minus" = "red";
+      "diff.plus" = "green";
+      error = "red";
+      function = "blue";
+      "function.macro" = "mauve";
+      hint = "teal";
+      info = "sky";
+      keyword = "mauve";
+      "keyword.control.conditional" = {
+        fg = "mauve";
+        modifiers = [ "italic" ];
+      };
+      label = "sapphire";
+      "markup.bold" = {
+        fg = "red";
+        modifiers = [ "bold" ];
+      };
+      "markup.heading.1" = "red";
+      "markup.heading.2" = "peach";
+      "markup.heading.3" = "yellow";
+      "markup.heading.4" = "green";
+      "markup.heading.5" = "blue";
+      "markup.heading.6" = "mauve";
+      "markup.italic" = {
+        fg = "red";
+        modifiers = [ "italic" ];
+      };
+      "markup.link.text" = "lavender";
+      "markup.link.url" = {
+        fg = "blue";
+        modifiers = [
+          "italic"
+          "underlined"
+        ];
+      };
+      "markup.list" = "teal";
+      "markup.list.checked" = "green";
+      "markup.list.unchecked" = "overlay2";
+      "markup.quote" = "pink";
+      "markup.raw" = "green";
+      namespace = {
+        fg = "yellow";
+        modifiers = [ "italic" ];
+      };
+      operator = "sky";
+      palette = {
+        base = "#eff1f5";
+        blue = "#1e66f5";
+        crust = "#dce0e8";
+        cursorline = "#e8ecf1";
+        flamingo = "#dd7878";
+        green = "#40a02b";
+        lavender = "#7287fd";
+        mantle = "#e6e9ef";
+        maroon = "#e64553";
+        mauve = "#8839ef";
+        overlay0 = "#9ca0b0";
+        overlay1 = "#8c8fa1";
+        overlay2 = "#7c7f93";
+        peach = "#fe640b";
+        pink = "#ea76cb";
+        red = "#d20f39";
+        rosewater = "#dc8a78";
+        sapphire = "#209fb5";
+        secondary_cursor = "#e1a99d";
+        secondary_cursor_insert = "#74b867";
+        secondary_cursor_normal = "#e1a99d";
+        sky = "#04a5e5";
+        subtext0 = "#6c6f85";
+        subtext1 = "#5c5f77";
+        surface0 = "#ccd0da";
+        surface1 = "#bcc0cc";
+        surface2 = "#acb0be";
+        teal = "#179299";
+        text = "#4c4f69";
+        yellow = "#df8e1d";
+      };
+      punctuation = "overlay2";
+      "punctuation.special" = "sky";
+      special = "blue";
+      string = "green";
+      "string.regexp" = "pink";
+      "string.special" = "blue";
+      "string.special.symbol" = "red";
+      tag = "blue";
+      type = "yellow";
+      "type.enum.variant" = "teal";
+      "ui.background" = {
+        bg = "base";
+        fg = "text";
+      };
+      "ui.bufferline" = {
+        bg = "mantle";
+        fg = "subtext0";
+      };
+      "ui.bufferline.active" = {
+        bg = "base";
+        fg = "mauve";
+        underline = {
+          color = "mauve";
+          style = "line";
+        };
+      };
+      "ui.bufferline.background" = {
+        bg = "crust";
+      };
+      "ui.cursor" = {
+        bg = "secondary_cursor";
+        fg = "base";
+      };
+      "ui.cursor.insert" = {
+        bg = "secondary_cursor_insert";
+        fg = "base";
+      };
+      "ui.cursor.match" = {
+        fg = "peach";
+        modifiers = [ "bold" ];
+      };
+      "ui.cursor.normal" = {
+        bg = "secondary_cursor_normal";
+        fg = "base";
+      };
+      "ui.cursor.primary" = {
+        bg = "rosewater";
+        fg = "base";
+      };
+      "ui.cursor.primary.insert" = {
+        bg = "green";
+        fg = "base";
+      };
+      "ui.cursor.primary.normal" = {
+        bg = "rosewater";
+        fg = "base";
+      };
+      "ui.cursor.primary.select" = {
+        bg = "flamingo";
+        fg = "base";
+      };
+      "ui.cursor.select" = {
+        bg = "secondary_cursor";
+        fg = "base";
+      };
+      "ui.cursorline.primary" = {
+        bg = "cursorline";
+      };
+      "ui.help" = {
+        bg = "surface0";
+        fg = "overlay2";
+      };
+      "ui.highlight" = {
+        bg = "surface1";
+        modifiers = [ "bold" ];
+      };
+      "ui.linenr" = {
+        fg = "surface1";
+      };
+      "ui.linenr.selected" = {
+        fg = "lavender";
+      };
+      "ui.menu" = {
+        bg = "surface0";
+        fg = "overlay2";
+      };
+      "ui.menu.selected" = {
+        bg = "surface1";
+        fg = "text";
+        modifiers = [ "bold" ];
+      };
+      "ui.popup" = {
+        bg = "surface0";
+        fg = "text";
+      };
+      "ui.selection" = {
+        bg = "surface1";
+      };
+      "ui.statusline" = {
+        bg = "mantle";
+        fg = "subtext1";
+      };
+      "ui.statusline.inactive" = {
+        bg = "mantle";
+        fg = "surface2";
+      };
+      "ui.statusline.insert" = {
+        bg = "green";
+        fg = "base";
+        modifiers = [ "bold" ];
+      };
+      "ui.statusline.normal" = {
+        bg = "lavender";
+        fg = "base";
+        modifiers = [ "bold" ];
+      };
+      "ui.statusline.select" = {
+        bg = "flamingo";
+        fg = "base";
+        modifiers = [ "bold" ];
+      };
+      "ui.text" = "text";
+      "ui.text.directory" = {
+        fg = "blue";
+      };
+      "ui.text.focus" = {
+        bg = "surface0";
+        fg = "text";
+        modifiers = [ "bold" ];
+      };
+      "ui.text.inactive" = {
+        fg = "overlay1";
+      };
+      "ui.virtual" = "overlay0";
+      "ui.virtual.indent-guide" = "surface0";
+      "ui.virtual.inlay-hint" = {
+        bg = "mantle";
+        fg = "surface1";
+      };
+      "ui.virtual.jump-label" = {
+        fg = "rosewater";
+        modifiers = [ "bold" ];
+      };
+      "ui.virtual.ruler" = {
+        bg = "surface0";
+      };
+      "ui.window" = {
+        fg = "crust";
+      };
+      variable = "text";
+      "variable.builtin" = "red";
+      "variable.other.member" = "blue";
+      "variable.parameter" = {
+        fg = "maroon";
+        modifiers = [ "italic" ];
+      };
+      warning = "yellow";
     };
   };
+
+  programs.jq.enable = true;
+
   programs.mise = {
     enable = true;
     globalConfig.settings.experimental = true;
   };
 
-  programs.dircolors.enable = true;
-
-  programs.zsh = {
+  programs.neovim = {
     enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "sudo"
-        "docker"
-      ];
-    };
+    plugins = [
+      pkgs.vimPlugins.vim-colemak
+    ];
   };
-
-  programs.zoxide.enable = true;
 
   programs.nushell = {
     enable = true;
@@ -545,23 +497,28 @@ with lib;
     '';
   };
 
+  programs.ssh = {
+    addKeysToAgent = "yes";
+    enable = true;
+  };
+
   programs.starship.enable = true;
 
-  programs.carapace.enable = true;
+  programs.zoxide.enable = true;
 
-  programs.direnv = {
+  programs.zsh = {
+    autosuggestion.enable = true;
     enable = true;
-    nix-direnv.enable = true;
-    mise.enable = true;
-    config.global.load_dotenv = true;
+    enableCompletion = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "sudo"
+        "docker"
+      ];
+    };
+    syntaxHighlighting.enable = true;
   };
 
-  programs.jq.enable = true;
-
-  programs.gpg.enable = true;
-
-  programs.ssh = {
-    enable = true;
-    addKeysToAgent = "yes";
-  };
+  xdg.enable = true;
 }
