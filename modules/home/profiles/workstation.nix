@@ -45,17 +45,15 @@ with lib;
   programs.helix = {
     enable = true;
     languages = {
-      language-server = {
-        lsp-ai = {
-          command = "lsp-ai";
-          config = {
-            memory.file_store = { };
-            models.deepseek-coder = {
-              type = "ollama";
-              model = "deepseek-coder";
-            };
-            completion.model = "deepseek-coder";
+      language-server.lsp-ai = {
+        command = "lsp-ai";
+        config = {
+          memory.file_store = { };
+          models.deepseek-coder = {
+            type = "ollama";
+            model = "deepseek-coder";
           };
+          completion.model = "deepseek-coder";
         };
       };
       language = [
