@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.programs = [
+  home.packages = [
     pkgs.jdt-language-server
   ];
 

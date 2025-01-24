@@ -32,6 +32,7 @@ with lib;
     pkgs.watch
     pkgs.pprof
     pkgs.bash-language-server
+    pkgs.lsp-ai
   ];
 
   programs.neovim = {
@@ -46,7 +47,7 @@ with lib;
     languages = {
       language-server = {
         lsp-ai = {
-          command = "${pkgs.lsp-ai}/bin/lsp-ai";
+          command = "lsp-ai";
           config = {
             memory.file_store = { };
             models.deepseek-coder = {
