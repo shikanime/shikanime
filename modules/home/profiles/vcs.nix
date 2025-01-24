@@ -112,5 +112,53 @@
     };
   };
 
-  programs.jujutsu.enable = true;
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+    aliases = {
+      ab =[ "absorb"];
+      ci = ["commit"];
+      sq = ["squash"];
+    };
+    fix.tools = {
+      nixfmt-rfc-style = {
+command = ["${pkgs.nixfmt-rfc-style}/bin/nixfmt-rfc-style"];
+patterns = ["*.nix"];
+      };
+      prettier = {
+command = ["${pkgs.nodePackages.prettier}/bin/prettier" "--write"];
+patterns = ["*.cjs" "*.css" "*.html" "*.js" "*.json" "*.json5" "*.jsx" "*.md" "*.mdx" "*.mjs" "*.scss" "*.ts" "*.tsx" "*.vue" "*.yaml" "*.yml"];
+    };
+shfmt = {
+
+command = ["${pkgs.shfmt}/bin/shfmt" "-s" "-w" "-i" "2"];
+patterns = ["*.sh" "*.bash" "*.envrc" "*.envrc.*"];
+};
+taplo = {
+command = ["${pkgs.taplo}/bin/taplo" "format"];
+patterns = ["*.toml"];
+    };
+shellcheck = {
+command = ["${pkgs.shellcheck}/bin/shellcheck"];
+patterns = ["*.sh" "*.bash" "*.envrc" "*.envrc.*"];
+   };
+   statix = {
+command = ["${pkgs.statix}/bin/statix-fix"];
+patterns = ["*.nix"];
+   };
+   nufmt = {
+    command = ["${pkgs.nufmt}/bin/nufmt"];
+    patterns = ["*.nu"];
+   };
+   yamlfmt = {
+    command = ["${pkgs.yamlfmt}/bin/yamlfmt"];
+    patterns = ["*.yaml" "*.yml"];
+   };
+    };
+    git = {
+      private-commits = "description(glob:'secret:*')";
+      push-branch-prefix = "trunks/shikanime/";
+    };
+  };
+  };
 }

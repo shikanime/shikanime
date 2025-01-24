@@ -7,7 +7,7 @@
         enableDefaultExcludes = true;
         programs = {
           hclfmt.enable = true;
-          nixfmt.enable = true;
+          nixfmt-rfc-style.enable = true;
           prettier.enable = true;
           shfmt.enable = true;
           statix.enable = true;
