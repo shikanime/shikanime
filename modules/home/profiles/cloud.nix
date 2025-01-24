@@ -9,6 +9,8 @@ with lib;
 
 {
   home.packages = [
+    pkgs.docker-compose-language-service
+    pkgs.dockerfile-language-server-nodejs
     pkgs.glab
     pkgs.tea
   ];

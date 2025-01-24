@@ -62,58 +62,72 @@ with lib;
         {
           name = "bash";
           language-servers = [
-            "lsp-ai"
             "bash-language-server"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "dockerfile";
+          language-servers = [
+            "dockerfile-langserver"
+            "lsp-ai"
+          ];
+        }
+        {
+          name = "docker-compose";
+          language-servers = [
+            "docker-compose-language-server"
+            "lsp-ai"
           ];
         }
         {
           name = "elixir";
           language-servers = [
-            "lsp-ai"
             "elixir-ls"
+            "lsp-ai"
           ];
         }
         {
           name = "erlang";
           language-servers = [
-            "lsp-ai"
             "erlang-ls"
+            "lsp-ai"
           ];
         }
         {
           name = "go";
           language-servers = [
-            "lsp-ai"
             "gopls"
+            "lsp-ai"
           ];
         }
         {
           name = "java";
           language-servers = [
-            "lsp-ai"
             "jdt"
+            "lsp-ai"
           ];
         }
         {
           name = "javascript";
           language-servers = [
-            "lsp-ai"
             "typescript-language-server"
+            "lsp-ai"
           ];
         }
         {
           name = "python";
           language-servers = [
-            "lsp-ai"
             "ruff"
             "jedi"
+            "lsp-ai"
           ];
         }
         {
           name = "rust";
           language-servers = [
-            "lsp-ai"
             "rust-analyzer"
+            "lsp-ai"
           ];
         }
       ];
