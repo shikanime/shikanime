@@ -49,7 +49,7 @@ with lib;
           memory.file_store = { };
           models.deepseek-coder = {
             type = "ollama";
-            path = "deepseek-coder";
+            model = "deepseek-coder";
           };
           completion.model = "deepseek-coder";
         };
