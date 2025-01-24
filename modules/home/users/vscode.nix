@@ -9,6 +9,7 @@
     ../profiles/javascript.nix
     ../profiles/python.nix
     ../profiles/rustup.nix
+    ../profiles/unix.nix
     ../profiles/vcs.nix
     ../profiles/workstation.nix
   ];
