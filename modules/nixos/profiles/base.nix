@@ -1,9 +1,9 @@
 {
-  # Allow wheel users to interact with the daemon
-  nix.settings.trusted-users = [
-    "root"
-    "@wheel"
-  ];
+  # Make home-manger use packages from system
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
 
   # Clearnup disk weekly
   nix.gc = {
@@ -18,16 +18,16 @@
     dates = [ "weekly" ];
   };
 
+  # Allow wheel users to interact with the daemon
+  nix.settings.trusted-users = [
+    "root"
+    "@wheel"
+  ];
+
   # Automatically upgrade NixOS
   system.autoUpgrade = {
     enable = true;
     flake = "github:shikanime/shikanime";
-  };
-
-  # Make home-manger use packages from system
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
   };
 
   # This value determines the NixOS release from which the default

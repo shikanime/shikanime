@@ -1,9 +1,9 @@
 {
   users.users.nishir = {
     isNormalUser = true;
+    extraGroups = [ "wheel" ];
     home = "/home/nishir";
     useDefaultShell = true;
-    extraGroups = [ "wheel" ];
   };
 
   home-manager.users.nishir = {
