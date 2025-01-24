@@ -112,5 +112,18 @@
     };
   };
 
-  programs.jujutsu.enable = true;
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      aliases = {
+        ab = [ "absorb" ];
+        ci = [ "commit" ];
+        sq = [ "squash" ];
+      };
+      git = {
+        private-commits = "description(glob:'secret:*')";
+        push-bookmark-prefix = "trunks/shikanime/";
+      };
+    };
+  };
 }
