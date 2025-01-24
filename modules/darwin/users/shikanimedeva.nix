@@ -1,6 +1,4 @@
 {
-  users.users.shikanimedeva.home = "/Users/shikanimedeva";
-
   home-manager.users.shikanimedeva = {
     imports = [
       ../../home/profiles/base.nix
@@ -21,4 +19,6 @@
       username = "shikanimedeva";
     };
   };
+
+  users.users.shikanimedeva.home = "/Users/shikanimedeva";
 }

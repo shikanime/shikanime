@@ -23,6 +23,9 @@
     };
   };
 
+  # Enable Network Time Protocol
+  services.ntp.enable = true;
+
   # Enable SSH access
   services.openssh = {
     enable = true;
@@ -31,7 +34,4 @@
 
   # Enable dynamic timezone
   services.tzupdate.enable = true;
-
-  # Enable Network Time Protocol
-  services.ntp.enable = true;
 }

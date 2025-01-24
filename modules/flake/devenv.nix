@@ -3,7 +3,6 @@
     { pkgs, ... }:
     {
       treefmt = {
-        projectRootFile = "flake.nix";
         enableDefaultExcludes = true;
         programs = {
           hclfmt.enable = true;
@@ -13,6 +12,7 @@
           statix.enable = true;
           terraform.enable = true;
         };
+        projectRootFile = "flake.nix";
         settings.global.excludes = [
           ".devenv/*"
           ".direnv/*"
@@ -21,14 +21,14 @@
         ];
       };
       devenv.shells.default = {
+        cachix = {
+          enable = true;
+          push = "shikanime";
+        };
         containers = pkgs.lib.mkForce { };
         languages = {
           nix.enable = true;
           opentofu.enable = true;
-        };
-        cachix = {
-          enable = true;
-          push = "shikanime";
         };
         git-hooks.hooks = {
           actionlint.enable = true;

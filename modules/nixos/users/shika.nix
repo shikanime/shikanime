@@ -3,12 +3,12 @@
 {
   users.users.shika = {
     isNormalUser = true;
-    home = "/home/shika";
-    shell = pkgs.zsh;
     extraGroups = [
       "docker"
       "wheel"
     ];
+    home = "/home/shika";
+    shell = pkgs.zsh;
   };
 
   home-manager.users.shika = {
