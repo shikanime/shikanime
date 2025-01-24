@@ -116,7 +116,7 @@
         "code.priority" = 10;
       };
       ui = {
-        "editor" = "code --wait";
+        editor = "code --wait";
         "ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       };
     };
