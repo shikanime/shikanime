@@ -1,6 +1,3 @@
-# Direnv
-.direnv
-
 # General
 .DS_Store
 .AppleDouble
@@ -30,13 +27,6 @@ result
 Network Trash Folder
 Temporary Items
 .apdisk
-
-# Devenv
-.devenv*
-/.pre-commit-config.yaml
-
-# Dotenv
-.env
 
 # Local .terraform directories
 **/.terraform/*
@@ -75,3 +65,8 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Direnv
+.direnv
+.devenv
+.pre-commit-config.yaml
