@@ -37,6 +37,7 @@
           tflint.enable = true;
         };
         packages = [
+          pkgs.scaleway-cli
           pkgs.gh
         ];
       };
