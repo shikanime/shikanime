@@ -41,6 +41,7 @@
 
   programs.ghostty = {
     enable = true;
+    package = pkgs.nil;
     themes = {
       catppuccin-latte = {
         palette = [
