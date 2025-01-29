@@ -40,6 +40,7 @@
   };
 
   programs.ghostty = {
+    enable = true;
     themes = {
       catppuccin-latte = [
         "palette = 0=#51576d"
