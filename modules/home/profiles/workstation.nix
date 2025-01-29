@@ -1,11 +1,8 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }:
-
-with lib;
 
 {
   home.packages = [
@@ -40,6 +37,39 @@ with lib;
     mise.enable = true;
     nix-direnv.enable = true;
     config.global.load_dotenv = true;
+  };
+
+  programs.ghostty = {
+    enable = true;
+    package = pkgs.nil;
+    themes = {
+      catppuccin-latte = {
+        palette = [
+          "0=#51576d"
+          "1=#e78284"
+          "2=#a6d189"
+          "3=#e5c890"
+          "4=#8caaee"
+          "5=#f4b8e4"
+          "6=#81c8be"
+          "7=#b5bfe2"
+          "8=#626880"
+          "9=#e78284"
+          "10=#a6d189"
+          "11=#e5c890"
+          "12=#8caaee"
+          "13=#f4b8e4"
+          "14=#81c8be"
+          "15=#a5adce"
+        ];
+        background = "303446";
+        foreground = "c6d0f5";
+        cursor-color = "f2d5cf";
+        selection-background = "44495d";
+        selection-foreground = "c6d0f5";
+      };
+    };
+    settings.theme = "catppuccin-latte";
   };
 
   programs.gpg.enable = true;
