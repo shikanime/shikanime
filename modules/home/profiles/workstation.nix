@@ -65,9 +65,7 @@
         "selection-foreground = c6d0f5"
       ];
     };
-    settings = {
-      theme = "catppuccin-latte";
-    };
+    settings.theme = "catppuccin-latte";
   };
 
   programs.gpg.enable = true;
