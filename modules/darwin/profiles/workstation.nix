@@ -17,7 +17,7 @@
       "microsoft-edge@dev"
       "mongodb-compass"
       "rancher"
-      "redisinsight"
+      "redis-insight"
       "visual-studio-code"
       "windows-app"
       "wireshark"
