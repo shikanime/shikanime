@@ -32,16 +32,30 @@ variable "repositories" {
   }
 }
 
-variable "secrets" {
+variable "nix" {
   type = object({
-    nix      = string
-    operator = string
-    wakabox  = string
+    cachix_auth_token = string
+    gpg_passphrase    = string
+    gpg_private_key   = string
+    github_token      = string
   })
-  description = "Scaleway secrets ID"
-  default = {
-    nix      = "f617ec38-db68-4055-92d6-5913bd4f4b42"
-    operator = "993e60fe-8192-4207-bf1c-110115d4ae46"
-    wakabox  = "41ec1000-749b-429d-98e9-57d3c2e646a3"
-  }
+  description = "Nix configuration secrets"
+  sensitive   = true
+}
+
+variable "wakabox" {
+  type = object({
+    github_token     = string
+    wakatime_api_key = string
+  })
+  description = "Wakabox configuration secrets"
+  sensitive   = true
+}
+
+variable "operator" {
+  type = object({
+    ssh_private_key = string
+  })
+  description = "Operator configuration secrets"
+  sensitive   = true
 }
