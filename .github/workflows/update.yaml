@@ -7,10 +7,17 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - id: createGithubAppToken
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ inputs.app-id }}
+          private-key: ${{ inputs.private-key }}
       - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: DeterminateSystems/nix-installer-action@v13
         with:
-          github-token: ${{ secrets.NIX_GITHUB_TOKEN }}
+          github-token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: DeterminateSystems/update-flake-lock@v23
         with:
           branch: github/update_flake
