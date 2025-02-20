@@ -2,6 +2,7 @@
 
 {
   home.packages = [
+    pkgs.glab
     pkgs.watchman
   ];
 
@@ -97,7 +98,7 @@
       };
       git = {
         private-commits = "description(glob:'secret:*')";
-        push-bookmark-prefix = "trunks/shikanime/";
+        push-bookmark-prefix = "trunks/shikanime/push-";
       };
     };
   };

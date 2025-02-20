@@ -12,6 +12,7 @@
         ../darwin/hosts/kaltashar.nix
         inputs.home-manager.darwinModules.home-manager
         inputs.identities.darwinModules.kaltashar
+        inputs.sops-nix.darwinModules.sops
       ];
     }
   );
