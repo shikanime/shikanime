@@ -5,12 +5,11 @@
     devenv.url = "github:cachix/devenv";
     flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager.url = "github:nix-community/home-manager";
-    identities.url = "git+file:///Users/shikanimedeva/Source/Repos/Shikanime/identities";
+    identities.url = "github:shikanime/identities";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    sops-nix.url = "github:Mic92/sops-nix";
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
