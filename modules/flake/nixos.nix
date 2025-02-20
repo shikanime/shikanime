@@ -13,7 +13,6 @@
           ../nixos/hosts/flandre.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
-          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
@@ -29,7 +28,6 @@
           inputs.home-manager.nixosModules.home-manager
           inputs.identities.nixosModules.ishtar
           inputs.nixos-wsl.nixosModules.default
-          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
@@ -44,7 +42,6 @@
           ../nixos/hosts/remilia.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
-          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
