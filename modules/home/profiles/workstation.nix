@@ -9,7 +9,6 @@
     pkgs.bzip2
     pkgs.cachix
     pkgs.curl
-    pkgs.gitnr
     pkgs.gnugrep
     pkgs.gnumake
     pkgs.gnupatch
