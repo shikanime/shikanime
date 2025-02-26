@@ -17,8 +17,6 @@
     pkgs.openiscsi
   ];
 
-  services.openiscsi.enable = true;
-
   # FIXME: https://github.com/longhorn/longhorn/issues/2166
   systemd.tmpfiles.rules = [
     "L+ /usr/local/bin - - - - /run/current-system/sw/bin/"
