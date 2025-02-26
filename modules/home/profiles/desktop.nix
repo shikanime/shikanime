@@ -30,4 +30,5 @@
       };
     };
     settings.theme = "catppuccin-latte";
+  };
 }
