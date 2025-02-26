@@ -14,6 +14,7 @@
     pkgs.cryptsetup
     pkgs.lvm2
     pkgs.nfs-utils
+    pkgs.openiscsi
   ];
 
   services.openiscsi.enable = true;

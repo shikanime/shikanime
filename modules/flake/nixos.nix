@@ -25,7 +25,7 @@
           config.allowUnfree = true;
         };
         modules = [
-          ../nixos/hosts/flandre.nix
+          ../nixos/hosts/fushi.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
@@ -48,7 +48,7 @@
         ];
       }
     );
-    remilia = withSystem "aarch64-linux" (
+    nishir = withSystem "aarch64-linux" (
       { system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
         pkgs = import inputs.nixpkgs {
@@ -56,7 +56,7 @@
           config.allowUnfree = true;
         };
         modules = [
-          ../nixos/hosts/remilia.nix
+          ../nixos/hosts/nishir.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
