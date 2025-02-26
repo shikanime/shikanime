@@ -4,6 +4,7 @@
       ../../home/profiles/base.nix
       ../../home/profiles/beam.nix
       ../../home/profiles/cloud.nix
+      ../../home/profiles/desktop.nix
       ../../home/profiles/go.nix
       ../../home/profiles/helix.nix
       ../../home/profiles/java.nix
