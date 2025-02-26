@@ -12,8 +12,4 @@
   programs.nix-ld.enable = true;
 
   programs.zsh.enable = true;
-
-  services.coder.enable = true;
-
-  users.extraGroups.docker.members = [ "coder" ];
 }
