@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  programs.nix-ld.enable = true;
-
-  programs.zsh.enable = true;
-
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
@@ -12,6 +8,10 @@
     pinentryPackage = pkgs.pinentry-gnome3;
     settings.default-cache-ttl = 60 * 60;
   };
+
+  programs.nix-ld.enable = true;
+
+  programs.zsh.enable = true;
 
   services.coder.enable = true;
 

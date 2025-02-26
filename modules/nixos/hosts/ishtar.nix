@@ -9,7 +9,7 @@
     ../users/shika.nix
   ];
 
-  wsl.defaultUser = "shika";
-
   networking.hostName = "ishtar";
+
+  wsl.defaultUser = "shika";
 }
