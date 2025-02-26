@@ -2,6 +2,21 @@
 
 {
   flake.nixosConfigurations = {
+    devcontainer = withSystem "x86_64-linux" (
+      { system, ... }:
+      inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        modules = [
+          ../nixos/hosts/devcontainer.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.devcontainer
+          inputs.sops-nix.nixosModules.sops
+        ];
+      }
+    );
     flandre = withSystem "aarch64-linux" (
       { system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
