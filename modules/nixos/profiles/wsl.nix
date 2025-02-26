@@ -25,18 +25,18 @@ let
   '';
 in
 {
-  # Required for Docker credential management
-  environment.systemPackages = [
-    pkgs.wslu
-    pkgs.docker-credential-helpers
+  # Enable cross compilation
+  boot.binfmt.emulatedSystems = [
+    "aarch64-linux"
   ];
 
   # Browser open support
   environment.sessionVariables.BROWSER = "${pkgs.wslu}/bin/wslview";
 
-  # Enable cross compilation
-  boot.binfmt.emulatedSystems = [
-    "aarch64-linux"
+  # Required for Docker credential management
+  environment.systemPackages = [
+    pkgs.wslu
+    pkgs.docker-credential-helpers
   ];
 
   # Enable Nvidia Docker integration
@@ -48,6 +48,8 @@ in
     };
   };
 
+  programs.nix-ld.libraries = [ wsl-lib ];
+
   # Docker need a secret manager
   services.gnome.gnome-keyring.enable = true;
   services.passSecretService.enable = true;
@@ -57,8 +59,6 @@ in
     "intel"
     "nvidia"
   ];
-
-  programs.nix-ld.libraries = [ wsl-lib ];
 
   virtualisation.docker = {
     enable = true;

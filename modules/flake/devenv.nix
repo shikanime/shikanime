@@ -3,41 +3,49 @@
     { pkgs, ... }:
     {
       treefmt = {
-        projectRootFile = "flake.nix";
         enableDefaultExcludes = true;
         programs = {
-          actionlint.enable = true;
-          deadnix.enable = true;
+          hclfmt.enable = true;
           nixfmt.enable = true;
           prettier.enable = true;
           shfmt.enable = true;
           statix.enable = true;
           terraform.enable = true;
         };
+        projectRootFile = "flake.nix";
         settings.global.excludes = [
           ".devenv/*"
           ".direnv/*"
-          ".sl/*"
           "*.png"
           "LICENSE"
         ];
       };
       devenv.shells.default = {
-        pre-commit.hooks.flake-checker.enable = true;
-        containers = pkgs.lib.mkForce { };
-        languages = {
-          nix.enable = true;
-          terraform = {
-            enable = true;
-            package = pkgs.opentofu;
-          };
-        };
         cachix = {
           enable = true;
           push = "shikanime";
         };
+        containers = pkgs.lib.mkForce { };
+        languages = {
+          nix.enable = true;
+          opentofu.enable = true;
+        };
+        git-hooks.hooks = {
+          actionlint.enable = true;
+          deadnix.enable = true;
+          flake-checker.enable = true;
+          tflint.enable = true;
+        };
         packages = [
+          pkgs.bash-language-server
+          pkgs.nixd
+          pkgs.scaleway-cli
           pkgs.gh
+          pkgs.marksman
+          pkgs.taplo
+          pkgs.terraform-ls
+          pkgs.vscode-langservers-extracted
+          pkgs.yaml-language-server
         ];
       };
     };

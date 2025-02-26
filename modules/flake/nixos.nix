@@ -12,7 +12,23 @@
         modules = [
           ../nixos/hosts/devcontainer.nix
           inputs.home-manager.nixosModules.home-manager
-          inputs.identities.nixosModules.ishtar
+          inputs.identities.nixosModules.devcontainer
+          inputs.sops-nix.nixosModules.sops
+        ];
+      }
+    );
+    flandre = withSystem "aarch64-linux" (
+      { system, ... }:
+      inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        modules = [
+          ../nixos/hosts/flandre.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.nixos-hardware.nixosModules.raspberry-pi-4
+          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
@@ -28,6 +44,7 @@
           inputs.home-manager.nixosModules.home-manager
           inputs.identities.nixosModules.ishtar
           inputs.nixos-wsl.nixosModules.default
+          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
@@ -42,20 +59,7 @@
           ../nixos/hosts/remilia.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
-        ];
-      }
-    );
-    flandre = withSystem "aarch64-linux" (
-      { system, ... }:
-      inputs.nixpkgs.lib.nixosSystem {
-        pkgs = import inputs.nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-        modules = [
-          ../nixos/hosts/flandre.nix
-          inputs.home-manager.nixosModules.home-manager
-          inputs.nixos-hardware.nixosModules.raspberry-pi-4
+          inputs.sops-nix.nixosModules.sops
         ];
       }
     );

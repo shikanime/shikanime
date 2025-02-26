@@ -1,64 +1,92 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }:
 
-with lib;
-
 {
-  xdg.enable = true;
+  home.packages = [
+    pkgs.bzip2
+    pkgs.cachix
+    pkgs.curl
+    pkgs.gitnr
+    pkgs.gnugrep
+    pkgs.gnumake
+    pkgs.gnupatch
+    pkgs.gnused
+    pkgs.graphviz
+    pkgs.less
+    pkgs.pprof
+    pkgs.rsync
+    pkgs.unzip
+    pkgs.watch
+    pkgs.wget
+    pkgs.which
+    pkgs.zip
+  ];
 
   home.sessionPath = [
     "${config.home.homeDirectory}/.local/bin"
   ];
 
-  home.packages = [
-    pkgs.cachix
-    pkgs.gnupatch
-    pkgs.gnumake
-    pkgs.gnused
-    pkgs.gnugrep
-    pkgs.less
-    pkgs.zip
-    pkgs.unzip
-    pkgs.which
-    pkgs.bzip2
-    pkgs.graphviz
-    pkgs.rsync
-    pkgs.curl
-    pkgs.wget
-    pkgs.watch
-    pkgs.pprof
-  ];
+  programs.carapace.enable = true;
 
-  programs.neovim = {
+  programs.dircolors.enable = true;
+
+  programs.direnv = {
     enable = true;
-    plugins = [
-      pkgs.vimPlugins.vim-colemak
-    ];
+    mise.enable = true;
+    nix-direnv.enable = true;
+    config.global.load_dotenv = true;
   };
+
+  programs.ghostty = {
+    enable = true;
+    package = pkgs.nil;
+    themes = {
+      catppuccin-latte = {
+        palette = [
+          "0=#5c5f77"
+          "1=#d20f39"
+          "2=#40a02b"
+          "3=#df8e1d"
+          "4=#1e66f5"
+          "5=#ea76cb"
+          "6=#179299"
+          "7=#acb0be"
+          "8=#6c6f85"
+          "9=#d20f39"
+          "10=#40a02b"
+          "11=#df8e1d"
+          "12=#1e66f5"
+          "13=#ea76cb"
+          "14=#179299"
+          "15=#bcc0cc"
+        ];
+        background = "eff1f5";
+        foreground = "4c4f69";
+        cursor-color = "dc8a78";
+        selection-background = "d8dae1";
+        selection-foreground = "4c4f69";
+      };
+    };
+    settings.theme = "catppuccin-latte";
+  };
+
+  programs.gpg.enable = true;
+
+  programs.jq.enable = true;
 
   programs.mise = {
     enable = true;
     globalConfig.settings.experimental = true;
   };
 
-  programs.dircolors.enable = true;
-
-  programs.zsh = {
+  programs.neovim = {
     enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "sudo"
-        "docker"
-      ];
-    };
+    plugins = [
+      pkgs.vimPlugins.vim-colemak
+    ];
   };
 
   programs.nushell = {
@@ -80,21 +108,28 @@ with lib;
     '';
   };
 
+  programs.ssh = {
+    addKeysToAgent = "yes";
+    enable = true;
+  };
+
   programs.starship.enable = true;
 
-  programs.direnv = {
+  programs.zoxide.enable = true;
+
+  programs.zsh = {
+    autosuggestion.enable = true;
     enable = true;
-    nix-direnv.enable = true;
-    mise.enable = true;
-    config.global.load_dotenv = true;
+    enableCompletion = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "sudo"
+        "docker"
+      ];
+    };
+    syntaxHighlighting.enable = true;
   };
 
-  programs.jq.enable = true;
-
-  programs.gpg.enable = true;
-
-  programs.ssh = {
-    enable = true;
-    addKeysToAgent = "yes";
-  };
+  xdg.enable = true;
 }

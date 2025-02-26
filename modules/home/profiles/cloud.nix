@@ -1,7 +1,7 @@
 {
   config,
-  pkgs,
   lib,
+  pkgs,
   ...
 }:
 
@@ -18,18 +18,16 @@ with lib;
     extensions = [ pkgs.gh-copilot ];
   };
 
-  programs.zsh.oh-my-zsh.plugins = [
-    "kubectl"
-    "helm"
-    "minikube"
-    "aws"
-    "gcloud"
-  ];
+  programs.git.extraConfig.credential."https://gitlab.com".helper =
+    "${pkgs.glab}/bin/glab auth git-credential";
 
-  programs.zsh.initExtra = mkAfter ''
-    if [ -d ${config.home.homeDirectory}/.rd ]; then
-      export PATH=${config.home.homeDirectory}/.rd/bin:$PATH
-    fi
+  programs.helix.languages.language-server = {
+    docker-compose-language-server.command = "${pkgs.docker-compose-language-service}/bin/docker-compose-langserver";
+    dockerfile-langserver.command = "${pkgs.dockerfile-language-server-nodejs}/bin/dockerfile-language-server-nodejs";
+  };
+
+  programs.nushell.extraConfig = ''
+    use ${pkgs.nu_scripts}/share/nu_scripts/modules/kubernetes *
   '';
 
   programs.ssh.matchBlocks."ssh.dev.azure.com".extraOptions = {
@@ -37,10 +35,17 @@ with lib;
     PubkeyAcceptedKeyTypes = "+ssh-rsa";
   };
 
-  programs.git.extraConfig.credential."https://gitlab.com".helper =
-    "${pkgs.glab}/bin/glab auth git-credential";
-
-  programs.nushell.extraConfig = ''
-    use ${pkgs.nu_scripts}/share/nu_scripts/modules/kubernetes *
+  programs.zsh.initExtra = mkAfter ''
+    if [ -d ${config.home.homeDirectory}/.rd ]; then
+      export PATH=${config.home.homeDirectory}/.rd/bin:$PATH
+    fi
   '';
+
+  programs.zsh.oh-my-zsh.plugins = [
+    "aws"
+    "gcloud"
+    "helm"
+    "kubectl"
+    "minikube"
+  ];
 }

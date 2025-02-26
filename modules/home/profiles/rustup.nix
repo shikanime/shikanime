@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = [
+    pkgs.rustup
+  ];
+
   home.sessionPath = [
     "${config.xdg.configHome}/cargo/bin"
   ];
@@ -10,15 +14,15 @@
     RUSTUP_HOME = "${config.xdg.configHome}/rustup";
   };
 
-  home.packages = [
-    pkgs.rustup
-  ];
-
-  programs.zsh.oh-my-zsh.plugins = [
-    "rust"
-  ];
+  programs.helix.languages.language-server = {
+    rust-analyzer.command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+  };
 
   programs.nushell.extraConfig = ''
     source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/cargo/cargo-completions.nu
   '';
+
+  programs.zsh.oh-my-zsh.plugins = [
+    "rust"
+  ];
 }
