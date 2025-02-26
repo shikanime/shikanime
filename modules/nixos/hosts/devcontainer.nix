@@ -33,6 +33,19 @@
     ];
     includeNixDB = true;
     config = {
+      LABELS = {
+        "devcontainer.metadata" = builtins.toJSON [
+          {
+            overrideCommand = false;
+            privileged = true;
+            containerEnv = {
+              USER = "vscode";
+            };
+            remoteUser = "vscode";
+            updateRemoteUserUID = false;
+          }
+        ];
+      };
       Entrypoint = [ "/init" ];
       SHELL = [ "/run/current-system/sw/bin/bash" ];
     };

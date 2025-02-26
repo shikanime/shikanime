@@ -13,7 +13,5 @@ with lib;
     export USER=''${USER:-$(whoami)}
   '';
 
-  programs.k9s.enable = true;
-
   targets.genericLinux.enable = true;
 }
