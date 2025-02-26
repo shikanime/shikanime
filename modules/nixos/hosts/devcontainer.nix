@@ -14,10 +14,6 @@
     ../users/vscode.nix
   ];
 
-  security.sudo.wheelNeedsPassword = false;
-
-  services.getty.autologinUser = "root";
-
   system.build.dockerImage = pkgs.dockerTools.buildLayeredImage {
     name = "ghcr.io/shikanime/shikanime/devcontainer";
     tag = "latest";
@@ -38,7 +34,6 @@
     includeNixDB = true;
     config = {
       Entrypoint = [ "/init" ];
-      User = "vscode";
       SHELL = [ "/run/current-system/sw/bin/bash" ];
     };
   };
