@@ -4,7 +4,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "shikanime-studio"
     workspaces {
-      prefix = "shikanime-google-cloud-project-"
+      prefix = "shikanime-google-cloud-"
     }
   }
   required_providers {
