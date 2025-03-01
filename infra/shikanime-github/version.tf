@@ -4,7 +4,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "shikanime-studio"
     workspaces {
-      name = "shikanime"
+      name = "shikanime-github"
     }
   }
   required_providers {
