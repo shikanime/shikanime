@@ -18,7 +18,7 @@
     enable = true;
     extraConfig = {
       advice.skippedCherryPicks = false;
-      core.editor = "code --wait";
+      core.editor = "${pkgs.helix}/bin/hx";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
@@ -117,7 +117,7 @@
         "code.priority" = 10;
       };
       ui = {
-        editor = "code --wait";
+        editor = "${pkgs.helix}/bin/hx";
         "ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       };
     };
