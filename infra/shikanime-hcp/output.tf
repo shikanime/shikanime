@@ -1,11 +1,11 @@
 output "projects" {
   value = {
     studio = {
-      name                    = "shikanime-studio"
-      org                     = ""
-      billing_account         = "018C2E-353598-F0F3A5"
-      location               = "europe-west1"
-      enabled_apis           = [
+      name            = "shikanime-studio"
+      org             = ""
+      billing_account = "018C2E-353598-F0F3A5"
+      location        = "europe-west1"
+      enabled_apis = [
         "artifactregistry.googleapis.com",
         "cloudresourcemanager.googleapis.com",
         "compute.googleapis.com",
@@ -22,11 +22,11 @@ output "projects" {
       terraform_organization = "org-ZuQrk9oiA78Cy3Ls"
     }
     studio-labs = {
-      name                    = "shikanime-studio-labs"
-      org                     = ""
-      billing_account         = "018C2E-353598-F0F3A5"
-      location               = "europe-west1"
-      enabled_apis           = [
+      name            = "shikanime-studio-labs"
+      org             = ""
+      billing_account = "018C2E-353598-F0F3A5"
+      location        = "europe-west1"
+      enabled_apis = [
         "aiplatform.googleapis.com",
         "artifactregistry.googleapis.com",
         "cloudresourcemanager.googleapis.com",
