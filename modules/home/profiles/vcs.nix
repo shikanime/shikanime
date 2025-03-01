@@ -107,12 +107,17 @@
     enable = true;
     extraConfig = {
       diff-tools = {
+        "trae.args" = "--wait --diff $local $other";
+        "trae.gui" = true;
+        "trae.priority" = 20;
         "code.args" = "--wait --diff $local $other";
         "code.gui" = true;
         "code.priority" = 10;
       };
       github.pr_workflow = "single";
       merge-tools = {
+        "trae.args" = "--wait --merge $local $other $base $output";
+        "trae.priority" = 20;
         "code.args" = "--wait --merge $local $other $base $output";
         "code.priority" = 10;
       };
@@ -122,7 +127,6 @@
       };
     };
   };
-
   programs.zsh.oh-my-zsh.plugins = [
     "git"
   ];
