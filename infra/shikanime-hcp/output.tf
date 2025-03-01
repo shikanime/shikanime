@@ -46,7 +46,7 @@ output "projects" {
         owner = ["user:shikalegend@gmail.com"]
         cloud = ["group:shikanime-studio-cloud@googlegroups.com"]
       }
-      terraform_project      = "prj-NCaGDhtLX1Qaox7L"
+      terraform_project      = "prj-qGuaiqVzKAr318n6"
       terraform_organization = "org-ZuQrk9oiA78Cy3Ls"
     }
   }
