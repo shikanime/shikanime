@@ -117,11 +117,11 @@ fabric.properties
 # End of https://www.toptal.com/developers/gitignore/api/jetbrains+all
 
 ###-----------------###
-###  TopTal: Linux  ###
+###  TopTal: linux  ###
 ###-----------------###
 
-# Created by https://www.toptal.com/developers/gitignore/api/Linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=Linux
+# Created by https://www.toptal.com/developers/gitignore/api/linux
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux
 
 ### Linux ###
 *~
@@ -138,14 +138,14 @@ fabric.properties
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
-# End of https://www.toptal.com/developers/gitignore/api/Linux
+# End of https://www.toptal.com/developers/gitignore/api/linux
 
 ###-----------------###
-###  TopTal: Macos  ###
+###  TopTal: macos  ###
 ###-----------------###
 
-# Created by https://www.toptal.com/developers/gitignore/api/Macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=Macos
+# Created by https://www.toptal.com/developers/gitignore/api/macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos
 
 ### macOS ###
 # General
@@ -179,14 +179,14 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-# End of https://www.toptal.com/developers/gitignore/api/Macos
+# End of https://www.toptal.com/developers/gitignore/api/macos
 
 ###---------------------###
-###  TopTal: Terraform  ###
+###  TopTal: terraform  ###
 ###---------------------###
 
-# Created by https://www.toptal.com/developers/gitignore/api/Terraform
-# Edit at https://www.toptal.com/developers/gitignore?templates=Terraform
+# Created by https://www.toptal.com/developers/gitignore/api/terraform
+# Edit at https://www.toptal.com/developers/gitignore?templates=terraform
 
 ### Terraform ###
 # Local .terraform directories
@@ -224,7 +224,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# End of https://www.toptal.com/developers/gitignore/api/Terraform
+# End of https://www.toptal.com/developers/gitignore/api/terraform
 
 ###---------------###
 ###  TopTal: vim  ###
@@ -284,11 +284,11 @@ tags
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
 
 ###-------------------###
-###  TopTal: Windows  ###
+###  TopTal: windows  ###
 ###-------------------###
 
-# Created by https://www.toptal.com/developers/gitignore/api/Windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=Windows
+# Created by https://www.toptal.com/developers/gitignore/api/windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -316,4 +316,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/Windows
+# End of https://www.toptal.com/developers/gitignore/api/windows
