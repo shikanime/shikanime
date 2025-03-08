@@ -14,9 +14,8 @@
     pkgs.cryptsetup
     pkgs.lvm2
     pkgs.nfs-utils
+    pkgs.openiscsi
   ];
-
-  services.openiscsi.enable = true;
 
   # FIXME: https://github.com/longhorn/longhorn/issues/2166
   systemd.tmpfiles.rules = [

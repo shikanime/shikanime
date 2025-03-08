@@ -60,11 +60,7 @@ in
     "nvidia"
   ];
 
-  virtualisation.docker = {
-    enable = true;
-    autoPrune.enable = true;
-    daemon.settings.features.cdi = true;
-  };
+  virtualisation.docker.daemon.settings.features.cdi = true;
 
   wsl = {
     enable = true;
