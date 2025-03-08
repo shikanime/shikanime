@@ -23,10 +23,8 @@
   services.k3s = {
     enable = true;
     extraFlags = [
-      "--cluster-cidr 10.42.0.0/16,2001:cafe:42::/56"
       "--protect-kernel-defaults"
       "--secrets-encryption"
-      "--service-cidr 10.43.0.0/16,2001:cafe:43::/112"
     ];
   };
 }
