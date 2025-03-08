@@ -18,7 +18,7 @@
     enable = true;
     extraConfig = {
       advice.skippedCherryPicks = false;
-      core.editor = "code --wait";
+      core.editor = "${pkgs.helix}/bin/hx";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
@@ -107,17 +107,22 @@
     enable = true;
     extraConfig = {
       diff-tools = {
+        "trae.args" = "--wait --diff $local $other";
+        "trae.gui" = true;
+        "trae.priority" = 20;
         "code.args" = "--wait --diff $local $other";
         "code.gui" = true;
         "code.priority" = 10;
       };
       github.pr_workflow = "single";
       merge-tools = {
+        "trae.args" = "--wait --merge $local $other $base $output";
+        "trae.priority" = 20;
         "code.args" = "--wait --merge $local $other $base $output";
         "code.priority" = 10;
       };
       ui = {
-        editor = "code --wait";
+        editor = "${pkgs.helix}/bin/hx";
         "ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       };
     };

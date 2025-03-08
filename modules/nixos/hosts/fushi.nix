@@ -13,23 +13,15 @@
     ../users/nishir.nix
   ];
 
-  fileSystems."/mnt/remilia" = {
-    device = "/dev/disk/by-label/remilia";
+  fileSystems."/mnt/nishir" = {
+    device = "/dev/disk/by-label/flandre";
     options = [
       "defaults"
       "nofail"
     ];
   };
 
-  networking.hostName = "remilia";
+  networking.hostName = "fushi";
 
-  services.k3s = {
-    configPath = "/etc/remilia/k3s/config.yaml";
-    role = "server";
-    tokenFile = "/etc/remilia/k3s/token";
-  };
-
-  services.openiscsi.name = "iqn.2011-11.studio.shikanime:remilia";
-
-  services.tailscale.authKeyFile = "/etc/remilia/tailscale/authkey";
+  services.k3s.serverAddr = "https://nishir.taila659a.ts.net:6443";
 }
