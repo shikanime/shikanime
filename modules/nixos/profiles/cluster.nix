@@ -1,6 +1,7 @@
 {
   # Remove common limitations for fs heavy services such as Syncthing
   boot.kernel.sysctl = {
+    "kernel.panic" = 10;
     "kernel.threads-max" = 8192;
     "fs.inotify.max_user_watches" = 524288;
     "fs.inotify.max_user_instances" = 8192;
@@ -9,6 +10,7 @@
     "user.max_inotify_instances" = 8192;
     "user.max_inotify_watches" = 524288;
     "vm.max_map_count" = 1048576;
+    "vm.overcommit_memory" = 1;
   };
 
   # Enable cgroup for K3s
@@ -18,5 +20,13 @@
     "cgroup_memory=1"
   ];
 
-  services.k3s.enable = true;
+  services.k3s = {
+    enable = true;
+    extraFlags = [
+      "--cluster-cidr 10.42.0.0/16,2001:cafe:42::/56"
+      "--protect-kernel-defaults"
+      "--secrets-encryption"
+      "--service-cidr 10.43.0.0/16,2001:cafe:43::/112"
+    ];
+  };
 }
