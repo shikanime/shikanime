@@ -5,7 +5,7 @@
       ../../home/profiles/beam.nix
       ../../home/profiles/cloud.nix
       ../../home/profiles/desktop.nix
-      ../../home/profiles/fish.nix
+      ../../home/profiles/starship.nix
       ../../home/profiles/go.nix
       ../../home/profiles/helix.nix
       ../../home/profiles/java.nix
