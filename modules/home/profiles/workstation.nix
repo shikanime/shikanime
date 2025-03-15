@@ -40,6 +40,13 @@
     config.global.load_dotenv = true;
   };
 
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set -g fish_greeting
+    '';
+  };
+
   programs.gpg.enable = true;
 
   programs.jq.enable = true;
@@ -80,19 +87,7 @@
     enable = true;
   };
 
-  programs.starship = {
-    enable = true;
-    enableTransience = true;
-  };
-
   programs.zoxide.enable = true;
-
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      set -g fish_greeting
-    '';
-  };
 
   xdg.enable = true;
 }
