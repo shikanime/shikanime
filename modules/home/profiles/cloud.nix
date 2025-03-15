@@ -36,8 +36,8 @@ with lib;
   };
 
   programs.fish.interactiveShellInit = mkAfter ''
-    if [ -d ${config.home.homeDirectory}/.rd ]; then
-      export PATH=${config.home.homeDirectory}/.rd/bin:$PATH
-    fi
+    if test -d $HOME/.rd
+      set -gx PATH $HOME/.rd/bin $PATH
+    end
   '';
 }
