@@ -40,12 +40,4 @@ with lib;
       export PATH=${config.home.homeDirectory}/.rd/bin:$PATH
     fi
   '';
-
-  programs.zsh.oh-my-zsh.plugins = [
-    "aws"
-    "gcloud"
-    "helm"
-    "kubectl"
-    "minikube"
-  ];
 }

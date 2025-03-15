@@ -16,9 +16,4 @@
     source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/poetry/poetry-completions.nu
     source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/pytest/pytest-completions.nu
   '';
-
-  programs.zsh.oh-my-zsh.plugins = [
-    "poetry"
-    "python"
-  ];
 }
