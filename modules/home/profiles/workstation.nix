@@ -87,12 +87,5 @@
 
   programs.zoxide.enable = true;
 
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      set -g fish_greeting
-    '';
-  };
-
   xdg.enable = true;
 }

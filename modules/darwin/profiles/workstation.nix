@@ -2,7 +2,7 @@
   nix.linux-builder.enable = true;
 
   homebrew = {
-    enable = true;
+    enable = false;
     brews = [
       "openssl"
       "pinentry-mac"

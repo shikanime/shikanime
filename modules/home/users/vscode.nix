@@ -4,6 +4,7 @@
     ../profiles/beam.nix
     ../profiles/cloud.nix
     ../profiles/devcontainer.nix
+    ../profiles/fish.nix
     ../profiles/go.nix
     ../profiles/helix.nix
     ../profiles/java.nix
