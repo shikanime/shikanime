@@ -7,7 +7,7 @@ with lib;
 
   nix.package = pkgs.nix;
 
-  programs.zsh.initExtra = mkAfter ''
+  programs.fish.interactiveShellInit = mkAfter ''
     # Check if user environment variables are set because containers doesn't set
     # them by default and Home Manager needs them to work properly
     export USER=''${USER:-$(whoami)}

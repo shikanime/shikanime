@@ -11,7 +11,7 @@
 
   programs.nix-ld.enable = true;
 
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   virtualisation.docker = {
     enable = true;

@@ -35,7 +35,7 @@ with lib;
     PubkeyAcceptedKeyTypes = "+ssh-rsa";
   };
 
-  programs.zsh.initExtra = mkAfter ''
+  programs.fish.interactiveShellInit = mkAfter ''
     if [ -d ${config.home.homeDirectory}/.rd ]; then
       export PATH=${config.home.homeDirectory}/.rd/bin:$PATH
     fi
