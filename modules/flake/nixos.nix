@@ -32,7 +32,7 @@
         ];
       }
     );
-    ishtar = withSystem "x86_64-linux" (
+    nixtar = withSystem "x86_64-linux" (
       { system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
         pkgs = import inputs.nixpkgs {
@@ -40,9 +40,9 @@
           config.allowUnfree = true;
         };
         modules = [
-          ../nixos/hosts/ishtar.nix
+          ../nixos/hosts/nixtar.nix
           inputs.home-manager.nixosModules.home-manager
-          inputs.identities.nixosModules.ishtar
+          inputs.identities.nixosModules.nixtar
           inputs.nixos-wsl.nixosModules.default
           inputs.sops-nix.nixosModules.sops
         ];

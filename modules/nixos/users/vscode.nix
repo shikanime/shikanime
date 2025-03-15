@@ -18,7 +18,7 @@
       ../../home/profiles/beam.nix
       ../../home/profiles/cloud.nix
       ../../home/profiles/go.nix
-      ../../home/profiles/ishtar.nix
+      ../../home/profiles/nixtar.nix
       ../../home/profiles/java.nix
       ../../home/profiles/javascript.nix
       ../../home/profiles/python.nix
