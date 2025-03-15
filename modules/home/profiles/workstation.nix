@@ -80,23 +80,14 @@
     enable = true;
   };
 
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    enableTransience = true;
+  };
 
   programs.zoxide.enable = true;
 
-  programs.zsh = {
-    autosuggestion.enable = true;
-    enable = true;
-    enableCompletion = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "sudo"
-        "docker"
-      ];
-    };
-    syntaxHighlighting.enable = true;
-  };
+  programs.fish.enable = true;
 
   xdg.enable = true;
 }

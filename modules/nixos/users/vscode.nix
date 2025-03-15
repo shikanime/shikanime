@@ -4,7 +4,7 @@
   users.users.vscode = {
     isNormalUser = true;
     home = "/home/vscode";
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     extraGroups = [
       "docker"
       "wheel"

@@ -8,7 +8,7 @@
       "wheel"
     ];
     home = "/home/shika";
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   home-manager.users.shika = {
