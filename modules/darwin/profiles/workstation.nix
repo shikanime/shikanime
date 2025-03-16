@@ -21,7 +21,6 @@
       "visual-studio-code"
       "windows-app"
       "wireshark"
-      "wireshark-chmodbpf"
       "xquartz"
     ];
   };
