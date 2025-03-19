@@ -40,6 +40,13 @@
     config.global.load_dotenv = true;
   };
 
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set -g fish_greeting
+    '';
+  };
+
   programs.gpg.enable = true;
 
   programs.jq.enable = true;
@@ -80,23 +87,7 @@
     enable = true;
   };
 
-  programs.starship.enable = true;
-
   programs.zoxide.enable = true;
-
-  programs.zsh = {
-    autosuggestion.enable = true;
-    enable = true;
-    enableCompletion = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "sudo"
-        "docker"
-      ];
-    };
-    syntaxHighlighting.enable = true;
-  };
 
   xdg.enable = true;
 }

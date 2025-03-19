@@ -21,10 +21,11 @@
       "visual-studio-code"
       "windows-app"
       "wireshark"
-      "wireshark-chmodbpf"
       "xquartz"
     ];
   };
+
+  programs.fish.enable = true;
 
   programs.gnupg.agent = {
     enable = true;
