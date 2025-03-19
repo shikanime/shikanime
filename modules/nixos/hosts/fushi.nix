@@ -24,4 +24,9 @@
   networking.hostName = "fushi";
 
   services.k3s.serverAddr = "https://nishir.taila659a.ts.net:6443";
+
+  services.tailscale = {
+    extraUpFlags = [ "--ssh" ];
+    useRoutingFeatures = "server";
+  };
 }
