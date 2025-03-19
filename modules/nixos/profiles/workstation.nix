@@ -11,6 +11,12 @@
 
   programs.nix-ld.enable = true;
 
+  # Enable SSH access
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
+  };
+
   programs.zsh.enable = true;
 
   virtualisation.docker = {
