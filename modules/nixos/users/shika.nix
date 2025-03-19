@@ -8,7 +8,7 @@
       "wheel"
     ];
     home = "/home/shika";
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   home-manager.users.shika = {
@@ -18,11 +18,12 @@
       ../../home/profiles/cloud.nix
       ../../home/profiles/go.nix
       ../../home/profiles/helix.nix
-      ../../home/profiles/nixtar.nix
       ../../home/profiles/java.nix
       ../../home/profiles/javascript.nix
+      ../../home/profiles/nixtar.nix
       ../../home/profiles/python.nix
       ../../home/profiles/rustup.nix
+      ../../home/profiles/starship.nix
       ../../home/profiles/unix.nix
       ../../home/profiles/vcs.nix
       ../../home/profiles/workstation.nix
