@@ -24,4 +24,9 @@
   networking.hostName = "nishir";
 
   services.k3s.role = "server";
+
+  services.tailscale = {
+    extraUpFlags = [ "--ssh" ];
+    useRoutingFeatures = "server";
+  };
 }

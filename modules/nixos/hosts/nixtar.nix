@@ -18,5 +18,9 @@
     role = "server";
   };
 
+  services.tailscale.extraUpFlags = [
+    "--ssh"
+  ];
+
   wsl.defaultUser = "shika";
 }
