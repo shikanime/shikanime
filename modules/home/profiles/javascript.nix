@@ -18,12 +18,4 @@
     source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/auto-generate/completions/npm.nu
     source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/npm/npm-completions.nu
   '';
-
-  programs.zsh.oh-my-zsh.plugins = [
-    "bun"
-    "deno"
-    "node"
-    "npm"
-    "yarn"
-  ];
 }
