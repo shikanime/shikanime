@@ -8,7 +8,6 @@
       modules = [
         ../home/users/vscode.nix
         inputs.identities.homeManagerModules.vscode
-        inputs.sops-nix.homeManagerModules.sops
       ];
     }
   );
