@@ -360,16 +360,17 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1742553627,
-        "narHash": "sha256-dlxnWcAFoQmWk2bG6HorT/0Y0JRyQrOyFldTwMEMxGQ=",
-        "rev": "59665a963c92200edcb8a08ff440baebf02c1f7d",
-        "revCount": 45,
-        "type": "git",
-        "url": "file:///Users/shikanimedeva/Source/Repos/Shikanime/identities"
+        "lastModified": 1742554180,
+        "narHash": "sha256-ah3C2/LeCl0s5C1spIsoG2djf9M761/AjAEL0zU5hok=",
+        "owner": "shikanime",
+        "repo": "identities",
+        "rev": "19769d35e57a7a0620b01785186d9c1edaf09115",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///Users/shikanimedeva/Source/Repos/Shikanime/identities"
+        "owner": "shikanime",
+        "repo": "identities",
+        "type": "github"
       }
     },
     "libgit2": {
