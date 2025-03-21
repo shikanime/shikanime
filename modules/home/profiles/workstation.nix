@@ -85,24 +85,6 @@
   programs.ssh = {
     addKeysToAgent = "yes";
     enable = true;
-    matchBlocks = {
-      fushi = {
-        hostname = "fushi.taila659a.ts.net";
-        user = "shika";
-      };
-      minish = {
-        hostname = "minish.taila659a.ts.net";
-        user = "shika";
-      };
-      nixtar = {
-        hostname = "nixtar.taila659a.ts.net";
-        user = "shika";
-      };
-      nishir = {
-        hostname = "nishir.taila659a.ts.net";
-        user = "shika";
-      };
-    };
   };
 
   programs.zoxide.enable = true;
