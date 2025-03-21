@@ -13,6 +13,7 @@
           ../nixos/hosts/devcontainer.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.identities.nixosModules.devcontainer
+          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
@@ -27,6 +28,7 @@
           ../nixos/hosts/fushi.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
+          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
@@ -41,6 +43,7 @@
           ../nixos/hosts/nishir.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
+          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
@@ -56,6 +59,7 @@
           inputs.home-manager.nixosModules.home-manager
           inputs.identities.nixosModules.nixtar
           inputs.nixos-wsl.nixosModules.default
+          inputs.sops-nix.nixosModules.sops
         ];
       }
     );
