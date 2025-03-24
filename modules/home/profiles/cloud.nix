@@ -10,6 +10,7 @@ with lib;
 {
   home.packages = [
     pkgs.glab
+    pkgs.k9s
     pkgs.tea
   ];
 
