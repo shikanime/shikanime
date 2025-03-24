@@ -96,7 +96,12 @@
         bo = [ "bookmark" ];
         am = [ "squash" ];
         ci = [ "commit" ];
-        push = ["git" "push" "-r" "((trunk..@): & remote_branches()) & ~author(me)"];
+        push = [
+          "git"
+          "push"
+          "-r"
+          "((trunk..@): & remote_branches()) & ~author(me)"
+        ];
       };
       git = {
         private-commits = "description(glob:'secret:*')";
