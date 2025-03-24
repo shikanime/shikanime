@@ -93,8 +93,10 @@
     settings = {
       aliases = {
         ab = [ "absorb" ];
+        bo = [ "bookmark" ];
+        am = [ "squash" ];
         ci = [ "commit" ];
-        sq = [ "squash" ];
+        push = ["git", "push", "-r", "((trunk..@): & remote_branches()) & ~author(me)"]
       };
       git = {
         private-commits = "description(glob:'secret:*')";
