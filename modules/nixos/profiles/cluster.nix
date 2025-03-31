@@ -24,7 +24,6 @@
     enable = true;
     extraFlags = [
       "--protect-kernel-defaults"
-      "--secrets-encryption"
     ];
   };
 }

@@ -14,7 +14,7 @@
   ];
 
   fileSystems."/mnt/nishir" = {
-    device = "/dev/disk/by-label/flandre";
+    device = "/dev/disk/by-label/remilia";
     options = [
       "defaults"
       "nofail"
@@ -24,4 +24,9 @@
   networking.hostName = "fushi";
 
   services.k3s.serverAddr = "https://nishir.taila659a.ts.net:6443";
+
+  services.tailscale = {
+    extraUpFlags = [ "--ssh" ];
+    useRoutingFeatures = "server";
+  };
 }

@@ -14,16 +14,16 @@
   ];
 
   fileSystems."/mnt/nishir" = {
-    device = "/dev/nvme0n1";
+    device = "/dev/disk/by-label/flandre";
     options = [
       "defaults"
       "nofail"
     ];
   };
 
-  networking.hostName = "nishir";
+  networking.hostName = "minish";
 
-  services.k3s.role = "server";
+  services.k3s.serverAddr = "https://nishir.taila659a.ts.net:6443";
 
   services.tailscale = {
     extraUpFlags = [ "--ssh" ];
