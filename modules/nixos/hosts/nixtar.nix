@@ -5,7 +5,6 @@
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
     ../profiles/cluster.nix
-    ../profiles/network.nix
     ../profiles/workstation.nix
     ../profiles/wsl.nix
     ../users/shika.nix
@@ -17,10 +16,6 @@
     enable = true;
     role = "server";
   };
-
-  services.tailscale.extraUpFlags = [
-    "--ssh"
-  ];
 
   wsl.defaultUser = "shika";
 }
