@@ -38,10 +38,11 @@
         };
         packages = [
           pkgs.bash-language-server
-          pkgs.nixd
-          pkgs.scaleway-cli
           pkgs.gh
           pkgs.marksman
+          pkgs.nixd
+          pkgs.qemu
+          pkgs.scaleway-cli
           pkgs.taplo
           pkgs.terraform-ls
           pkgs.vscode-langservers-extracted
