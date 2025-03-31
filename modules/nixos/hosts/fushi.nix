@@ -14,7 +14,7 @@
   ];
 
   fileSystems."/mnt/nishir" = {
-    device = "/dev/disk/by-label/flandre";
+    device = "/dev/disk/by-label/remilia";
     options = [
       "defaults"
       "nofail"
