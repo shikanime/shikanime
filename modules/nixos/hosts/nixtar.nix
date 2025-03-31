@@ -12,10 +12,5 @@
 
   networking.hostName = "nixtar";
 
-  services.k3s = {
-    enable = true;
-    role = "server";
-  };
-
   wsl.defaultUser = "shika";
 }
