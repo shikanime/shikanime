@@ -3,7 +3,6 @@
 {
   imports = [
     "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
-    "${modulesPath}/virtualisation/qemu-vm.nix"
     "${modulesPath}/profiles/headless.nix"
     ../profiles/base.nix
     ../profiles/cluster.nix
