@@ -2,19 +2,14 @@
   programs.starship = {
     enable = true;
     settings = {
-      palette = "catppuccin_latte";
-      character = {
-        success_symbol = "[[󰄛](green) ❯](peach)";
-        error_symbol = "[[󰄛](red) ❯](peach)";
-        vimcmd_symbol = "[󰄛 ❮](subtext1)";
-      };
-      git_branch = {
-        style = "bold mauve";
-      };
       directory = {
         truncation_length = 4;
         style = "bold lavender";
       };
+      git_branch = {
+        style = "bold mauve";
+      };
+      palette = "catppuccin_latte";
       palettes.catppuccin_latte = {
         rosewater = "#dc8a78";
         flamingo = "#dd7878";
