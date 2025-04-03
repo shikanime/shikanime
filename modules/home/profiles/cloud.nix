@@ -14,10 +14,7 @@ with lib;
     pkgs.tea
   ];
 
-  programs.gh = {
-    enable = true;
-    extensions = [ pkgs.gh-copilot ];
-  };
+  programs.gh.enable = true;
 
   programs.git.extraConfig.credential."https://gitlab.com".helper =
     "${pkgs.glab}/bin/glab auth git-credential";
