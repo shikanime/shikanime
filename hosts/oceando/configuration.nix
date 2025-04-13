@@ -16,6 +16,8 @@
     ./users/vscode/home-configuration.nix
   ];
 
+  networking.resolvconf.enable = false;
+
   users.users.vscode = {
     initialHashedPassword = "";
     isNormalUser = true;
