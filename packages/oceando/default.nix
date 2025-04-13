@@ -18,6 +18,7 @@ pkgs.dockerTools.buildLayeredImage {
     pkgs.dockerTools.fakeNss
     pkgs.dockerTools.usrBinEnv
   ];
+  includeNixDB = true;
   config = {
     LABELS = {
       "devcontainer.metadata" = builtins.toJSON [
