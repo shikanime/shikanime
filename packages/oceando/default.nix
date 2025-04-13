@@ -5,7 +5,7 @@ pkgs.dockerTools.buildLayeredImage {
   tag = "latest";
   created = "now";
   contents = [
-    nixosConfiguration.config.system.build.toplevel
+    nixosConfiguration.config.system.build.tarball
     pkgs.coreutils
     pkgs.git
     pkgs.gnugrep
