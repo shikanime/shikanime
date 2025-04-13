@@ -5,13 +5,14 @@ pkgs.dockerTools.buildLayeredImage {
   tag = "latest";
   created = "now";
   contents = [
-    nixosConfiguration.config.system.build.tarball
+    nixosConfiguration.config.system.build.toplevel
     pkgs.coreutils
     pkgs.git
     pkgs.gnugrep
     pkgs.gnused
     pkgs.gnutar
     pkgs.gzip
+    pkgs.stdenv
     pkgs.dockerTools.binSh
     pkgs.dockerTools.caCertificates
     pkgs.dockerTools.fakeNss
