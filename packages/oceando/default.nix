@@ -6,6 +6,12 @@ pkgs.dockerTools.buildLayeredImage {
   created = "now";
   contents = [
     nixosConfiguration.config.system.build.toplevel
+    pkgs.coreutils
+    pkgs.git
+    pkgs.gnugrep
+    pkgs.gnused
+    pkgs.gnutar
+    pkgs.gzip
     pkgs.dockerTools.binSh
     pkgs.dockerTools.caCertificates
     pkgs.dockerTools.fakeNss
