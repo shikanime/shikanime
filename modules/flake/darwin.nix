@@ -9,7 +9,7 @@
         config.allowUnfree = true;
       };
       modules = [
-        ../darwin/hosts/kaltashar.nix
+        ../../hosts/kaltashar/darwin-configuration.nix
         inputs.home-manager.darwinModules.home-manager
         inputs.identities.darwinModules.kaltashar
         inputs.sops-nix.darwinModules.sops
