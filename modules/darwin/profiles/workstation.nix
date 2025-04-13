@@ -11,6 +11,7 @@
     ];
     casks = [
       "android-studio"
+      "bitwarden"
       "dbeaver-community"
       "firefox@developer-edition"
       "google-chrome@dev"
