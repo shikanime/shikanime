@@ -47,11 +47,6 @@
     '';
   };
 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
   programs.gpg.enable = true;
 
   programs.jq.enable = true;
