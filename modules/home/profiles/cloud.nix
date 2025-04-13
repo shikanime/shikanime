@@ -14,6 +14,12 @@ with lib;
     pkgs.tea
   ];
 
+  programs.fish.interactiveShellInit = mkAfter ''
+    if test -d "${config.home.homeDirectory}/.rd"
+      set -gx PATH "${config.home.homeDirectory}/.rd/bin" $PATH
+    end
+  '';
+
   programs.gh.enable = true;
 
   programs.git.extraConfig.credential."https://gitlab.com".helper =
@@ -32,10 +38,4 @@ with lib;
     HostkeyAlgorithms = "+ssh-rsa";
     PubkeyAcceptedKeyTypes = "+ssh-rsa";
   };
-
-  programs.fish.interactiveShellInit = mkAfter ''
-    if test -d $HOME/.rd
-      set -gx PATH $HOME/.rd/bin $PATH
-    end
-  '';
 }

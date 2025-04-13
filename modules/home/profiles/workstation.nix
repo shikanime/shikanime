@@ -82,11 +82,6 @@
     '';
   };
 
-  programs.ssh = {
-    addKeysToAgent = "yes";
-    enable = true;
-  };
-
   programs.zoxide.enable = true;
 
   xdg.enable = true;
