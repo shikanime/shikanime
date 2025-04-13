@@ -8,7 +8,7 @@
     ../../modules/nixos/wsl.nix
   ];
 
-  home-manager.users.nishir.imports = [
+  home-manager.users.shika.imports = [
     ./users/shika/home-configuration.nix
   ];
 
