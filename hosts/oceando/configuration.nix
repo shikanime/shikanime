@@ -9,9 +9,12 @@
   imports = [
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/virtualisation/docker-image.nix"
-    ../profiles/base.nix
-    ../profiles/workstation.nix
-    ../users/vscode.nix
+    ../../modules/nixos/base.nix
+    ../../modules/nixos/workstation.nix
+  ];
+
+  home-manager.users.vscode.imports = [
+    ./users/vscode/home-configuration.nix
   ];
 
   system.build.dockerImage = pkgs.dockerTools.buildLayeredImage {
@@ -49,5 +52,16 @@
       Entrypoint = [ "/init" ];
       SHELL = [ "/run/current-system/sw/bin/bash" ];
     };
+  };
+
+  users.users.vscode = {
+    initialHashedPassword = "";
+    isNormalUser = true;
+    extraGroups = [
+      "docker"
+      "wheel"
+    ];
+    home = "/home/shika";
+    shell = pkgs.fish;
   };
 }

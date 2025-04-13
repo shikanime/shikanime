@@ -6,7 +6,7 @@
     inputs.home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [
-        ../home/users/vscode.nix
+        ../../hosts/devcontainer/home-configuration.nix
         inputs.identities.homeManagerModules.vscode
         inputs.sops-nix.homeManagerModules.sops
       ];
