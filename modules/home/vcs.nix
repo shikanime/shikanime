@@ -104,7 +104,6 @@
         private-commits = "description(glob:'secret:*')";
         push-bookmark-prefix = "trunks/shikanime/push-";
       };
-      sigining.backend = "ssh";
     };
   };
 
