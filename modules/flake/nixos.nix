@@ -2,19 +2,6 @@
 
 {
   flake.nixosConfigurations = {
-    oceando = withSystem "x86_64-linux" (
-      { system, ... }:
-      inputs.nixpkgs.lib.nixosSystem {
-        pkgs = import inputs.nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-        modules = [
-          inputs.home-manager.nixosModules.home-manager
-          inputs.sops-nix.nixosModules.sops
-        ];
-      }
-    );
     fushi = withSystem "aarch64-linux" (
       { system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
