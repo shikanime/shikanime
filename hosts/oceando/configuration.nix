@@ -12,6 +12,15 @@
     ../../modules/nixos/workstation.nix
   ];
 
+  environment.systemPackages = [
+    pkgs.coreutils
+    pkgs.git
+    pkgs.gnugrep
+    pkgs.gnused
+    pkgs.gnutar
+    pkgs.gzip
+  ];
+
   home-manager.users.vscode.imports = [
     ./users/vscode/home-configuration.nix
   ];

@@ -6,16 +6,10 @@ pkgs.dockerTools.buildLayeredImage {
   created = "now";
   contents = [
     nixosConfiguration.config.system.build.toplevel
-    pkgs.coreutils
     pkgs.dockerTools.binSh
     pkgs.dockerTools.caCertificates
     pkgs.dockerTools.fakeNss
     pkgs.dockerTools.usrBinEnv
-    pkgs.git
-    pkgs.gnugrep
-    pkgs.gnused
-    pkgs.gnutar
-    pkgs.gzip
   ];
   includeNixDB = true;
   config = {
