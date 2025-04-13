@@ -1,11 +1,8 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }:
-
-with lib;
 
 {
   home.packages = [
@@ -13,12 +10,6 @@ with lib;
     pkgs.k9s
     pkgs.tea
   ];
-
-  programs.fish.interactiveShellInit = mkAfter ''
-    if test -d "${config.home.homeDirectory}/.rd"
-      set -gx PATH "${config.home.homeDirectory}/.rd/bin" $PATH
-    end
-  '';
 
   programs.gh.enable = true;
 

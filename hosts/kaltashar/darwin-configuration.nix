@@ -1,8 +1,11 @@
 {
   imports = [
-    ../profiles/base.nix
-    ../profiles/workstation.nix
-    ../users/shikanimedeva.nix
+    ../../modules/darwin/base.nix
+    ../../modules/darwin/workstation.nix
+  ];
+
+  home-manager.users.shikanimedeva.imports = [
+    ./users/shikanimedeva/home-configuration.nix
   ];
 
   homebrew.casks = [
@@ -24,4 +27,9 @@
   ];
 
   networking.hostName = "kaltashar";
+
+  users.users.shikanimedeva = {
+    name = "shikanimedeva";
+    home = "/Users/shikanimedeva";
+  };
 }

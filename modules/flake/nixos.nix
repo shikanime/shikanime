@@ -2,7 +2,7 @@
 
 {
   flake.nixosConfigurations = {
-    devcontainer = withSystem "x86_64-linux" (
+    oceando = withSystem "x86_64-linux" (
       { system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
         pkgs = import inputs.nixpkgs {
@@ -10,9 +10,7 @@
           config.allowUnfree = true;
         };
         modules = [
-          ../nixos/hosts/devcontainer.nix
           inputs.home-manager.nixosModules.home-manager
-          inputs.identities.nixosModules.devcontainer
           inputs.sops-nix.nixosModules.sops
         ];
       }
@@ -25,7 +23,7 @@
           config.allowUnfree = true;
         };
         modules = [
-          ../nixos/hosts/fushi.nix
+          ../../hosts/fushi/configuration.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
@@ -40,7 +38,7 @@
           config.allowUnfree = true;
         };
         modules = [
-          ../nixos/hosts/minish.nix
+          ../../hosts/minish/configuration.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
@@ -55,7 +53,7 @@
           config.allowUnfree = true;
         };
         modules = [
-          ../nixos/hosts/nishir.nix
+          ../../hosts/nishir/configuration.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
@@ -70,7 +68,7 @@
           config.allowUnfree = true;
         };
         modules = [
-          ../nixos/hosts/nixtar.nix
+          ../../hosts/nixtar/configuration.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.identities.nixosModules.nixtar
           inputs.nixos-wsl.nixosModules.default
