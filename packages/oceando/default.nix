@@ -4,24 +4,19 @@ pkgs.dockerTools.buildLayeredImage {
   name = "ghcr.io/shikanime/shikanime/devcontainer";
   tag = "latest";
   created = "now";
-  copyToRoot = pkgs.buildEnv {
-    name = "oceando-image-root";
-    paths = [
-      nixosConfiguration.config.system.build.tarball
-      pkgs.coreutils
-      pkgs.git
-      pkgs.gnugrep
-      pkgs.gnused
-      pkgs.gnutar
-      pkgs.gzip
-      pkgs.stdenv
-      pkgs.dockerTools.binSh
-      pkgs.dockerTools.caCertificates
-      pkgs.dockerTools.fakeNss
-      pkgs.dockerTools.usrBinEnv
-    ];
-    pathsToLink = [ "/bin" ];
-  };
+  contents = [
+    nixosConfiguration.config.system.build.tarball
+    pkgs.coreutils
+    pkgs.git
+    pkgs.gnugrep
+    pkgs.gnused
+    pkgs.gnutar
+    pkgs.gzip
+    pkgs.dockerTools.binSh
+    pkgs.dockerTools.caCertificates
+    pkgs.dockerTools.fakeNss
+    pkgs.dockerTools.usrBinEnv
+  ];
   config = {
     LABELS = {
       "devcontainer.metadata" = builtins.toJSON [
