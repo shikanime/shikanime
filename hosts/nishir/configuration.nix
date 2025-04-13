@@ -10,7 +10,6 @@
     ../../modules/nixos/machine.nix
     ../../modules/nixos/network.nix
     ../../modules/nixos/nishir.nix
-    ./users/nishir/home-configuration.nix
   ];
 
   fileSystems."/mnt/nishir" = {
