@@ -47,6 +47,11 @@
     '';
   };
 
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+
   programs.gpg.enable = true;
 
   programs.jq.enable = true;
@@ -80,11 +85,6 @@
       source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/tar/tar-completions.nu
       source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/vscode/vscode-completions.nu
     '';
-  };
-
-  programs.ssh = {
-    addKeysToAgent = "yes";
-    enable = true;
   };
 
   programs.zoxide.enable = true;

@@ -11,6 +11,7 @@
     ];
     casks = [
       "android-studio"
+      "bitwarden"
       "dbeaver-community"
       "firefox@developer-edition"
       "google-chrome@dev"
@@ -26,9 +27,4 @@
   };
 
   programs.fish.enable = true;
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
 }

@@ -1,10 +1,23 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+
+with lib;
 
 {
   home.packages = [
     pkgs.glab
     pkgs.watchman
   ];
+
+  programs.fish.interactiveShellInit = mkAfter ''
+    if test -e "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+        set -gx SSH_AUTH_SOCK "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+    end
+  '';
 
   programs.git = {
     aliases = {

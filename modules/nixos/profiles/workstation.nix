@@ -5,7 +5,6 @@
 
   programs.gnupg.agent = {
     enable = true;
-    enableSSHSupport = true;
     enableExtraSocket = true;
     pinentryPackage = pkgs.pinentry-all;
     settings.default-cache-ttl = 60 * 60;
