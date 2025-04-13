@@ -32,7 +32,6 @@ with lib;
     extraConfig = {
       advice.skippedCherryPicks = false;
       core.editor = "${pkgs.helix}/bin/hx";
-      gpg.format = "ssh";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
@@ -114,7 +113,6 @@ with lib;
         private-commits = "description(glob:'secret:*')";
         push-bookmark-prefix = "trunks/shikanime/push-";
       };
-      sigining.backend = "ssh";
     };
   };
 
