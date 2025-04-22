@@ -42,7 +42,7 @@
         modules = [
           ../../hosts/nishir/configuration.nix
           inputs.home-manager.nixosModules.home-manager
-          inputs.nixos-hardware.nixosModules.raspberry-pi-4
+          inputs.nixos-hardware.nixosModules.raspberry-pi-5
           inputs.sops-nix.nixosModules.sops
         ];
       }
