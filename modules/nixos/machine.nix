@@ -16,4 +16,7 @@
     enable = true;
     openFirewall = true;
   };
+
+  # Enable dynamic timezone
+  services.tzupdate.enable = true;
 }
