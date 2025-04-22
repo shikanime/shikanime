@@ -34,7 +34,4 @@
 
   # Enable dynamic timezone
   services.tzupdate.enable = true;
-
-  # Enable dynamic timezone
-  services.tzupdate.enable = true;
 }
