@@ -26,6 +26,12 @@
   # Enable Network Time Protocol
   services.ntp.enable = true;
 
+  # Enable SSH access
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
+  };
+
   # Enable dynamic timezone
   services.tzupdate.enable = true;
 }
