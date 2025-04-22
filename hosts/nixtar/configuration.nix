@@ -58,7 +58,7 @@ in
   services.passSecretService.enable = true;
 
   # Need by Docker's NVIDIA integration
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   users.users.shika = {
     isNormalUser = true;
