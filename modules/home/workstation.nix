@@ -56,17 +56,10 @@
     globalConfig.settings.experimental = true;
   };
 
-  programs.neovim = {
-    enable = true;
-    plugins = [
-      pkgs.vimPlugins.vim-colemak
-    ];
-  };
-
   programs.nushell = {
     enable = true;
     extraConfig = ''
-      $env.config = { show_banner: false }
+      $env.config.show_banner = false
 
       use ${pkgs.nu_scripts}/share/nu_scripts/modules/argx *
       use ${pkgs.nu_scripts}/share/nu_scripts/modules/lg *
