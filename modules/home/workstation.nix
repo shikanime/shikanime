@@ -56,13 +56,6 @@
     globalConfig.settings.experimental = true;
   };
 
-  programs.neovim = {
-    enable = true;
-    plugins = [
-      pkgs.vimPlugins.vim-colemak
-    ];
-  };
-
   programs.nushell = {
     enable = true;
     extraConfig = ''
