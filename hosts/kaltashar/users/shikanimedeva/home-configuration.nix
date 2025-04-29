@@ -5,13 +5,11 @@ with lib;
 {
   imports = [
     ../../../../modules/home/base.nix
-    ../../../../modules/home/beam.nix
     ../../../../modules/home/cloud.nix
     ../../../../modules/home/desktop.nix
     ../../../../modules/home/starship.nix
     ../../../../modules/home/go.nix
     ../../../../modules/home/helix.nix
-    ../../../../modules/home/java.nix
     ../../../../modules/home/javascript.nix
     ../../../../modules/home/python.nix
     ../../../../modules/home/rustup.nix
