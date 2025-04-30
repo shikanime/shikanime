@@ -76,6 +76,28 @@
     '';
   };
 
+  programs.ssh = {
+    addKeysToAgent = "yes";
+    enable = true;
+    matchBlocks = {
+      fushi = {
+        hostname = "fushi.taila659a.ts.net";
+        user = "shika";
+        setEnv.TERM = "xterm-256color";
+      };
+      minish = {
+        hostname = "minish.taila659a.ts.net";
+        user = "shika";
+        setEnv.TERM = "xterm-256color";
+      };
+      nishir = {
+        hostname = "nishir.taila659a.ts.net";
+        user = "shika";
+        setEnv.TERM = "xterm-256color";
+      };
+    };
+  };
+
   programs.zoxide.enable = true;
 
   xdg.enable = true;
