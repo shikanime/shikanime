@@ -18,6 +18,7 @@
     pkgs.less
     pkgs.pprof
     pkgs.qpdf
+    pkgs.rclone
     pkgs.rsync
     pkgs.unzip
     pkgs.watch
