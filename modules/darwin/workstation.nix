@@ -15,6 +15,7 @@
       "dbeaver-community"
       "firefox@developer-edition"
       "google-chrome@dev"
+      "macfuse"
       "microsoft-edge@dev"
       "mongodb-compass"
       "rancher"
