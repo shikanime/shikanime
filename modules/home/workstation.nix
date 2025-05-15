@@ -10,6 +10,7 @@
     pkgs.cachix
     pkgs.curl
     pkgs.gitnr
+    pkgs.glances
     pkgs.gnugrep
     pkgs.gnumake
     pkgs.gnupatch
