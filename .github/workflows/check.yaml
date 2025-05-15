@@ -11,10 +11,12 @@ jobs:
   check:
     strategy:
       matrix:
-        platform:
-          - linux/amd64
-          - linux/arm64
-    runs-on: ubuntu-latest
+        include:
+          - system: x86_64-linux
+            runner: ubuntu-latest
+          - system: aarch64-linux
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@v13
@@ -28,5 +30,6 @@ jobs:
       - name: Check Nix Flake
         run: |
           nix flake check \
+            --system ${{ matrix.system }} \
             --no-pure-eval \
             --accept-flake-config
