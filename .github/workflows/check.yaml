@@ -11,13 +11,10 @@ jobs:
   check:
     strategy:
       matrix:
-        arch: [amd64, arm64]
-        include:
-          - arch: amd64
-            runner: ubuntu-latest
-          - arch: arm64
-            runner: arm64-latest
-    runs-on: ${{ matrix.runner }}
+        platform:
+          - linux/amd64
+          - linux/arm64
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@v13
