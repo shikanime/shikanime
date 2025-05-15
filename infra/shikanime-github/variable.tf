@@ -14,7 +14,6 @@ variable "repositories" {
   type = object({
     algorithm      = string
     features       = string
-    ghstack_action = string
     identities     = string
     manifests      = string
     shikanime      = string
@@ -24,7 +23,6 @@ variable "repositories" {
   default = {
     algorithm      = "algorithm"
     features       = "features"
-    ghstack_action = "ghstack-action"
     identities     = "identities"
     manifests      = "manifests"
     shikanime      = "shikanime"
