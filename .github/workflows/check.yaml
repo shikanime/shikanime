@@ -18,9 +18,7 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@v17
         with:
           github-token: ${{ secrets.NIX_GITHUB_TOKEN }}
-          extra-conf: |
-            system-features = nixos-test benchmark big-parallel kvm
-            extra-platforms = aarch64-linux
+          extra-conf: extra-platforms = aarch64-linux
       - uses: cachix/cachix-action@v16
         with:
           name: shikanime
