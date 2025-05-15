@@ -41,6 +41,7 @@
           pkgs.nixd
           pkgs.scaleway-cli
           pkgs.gh
+          pkgs.gnused
           pkgs.marksman
           pkgs.taplo
           pkgs.terraform-ls

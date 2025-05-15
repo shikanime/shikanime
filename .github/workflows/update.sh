@@ -17,8 +17,7 @@ for workflow in "$(dirname "$0")"/*.{yml,yaml}; do
 
       if [[ -n $latest_version && $latest_version != "$current_version" ]]; then
         echo "Updating $action from $current_version to $latest_version in $workflow"
-        sed -i.bak "s|uses: $action@$current_version|uses: $action@$latest_version|g" "$workflow"
-        rm -f "${workflow}.bak"
+        sed -i "s|uses: $action@$current_version|uses: $action@$latest_version|g" "$workflow"
       fi
     done
   fi

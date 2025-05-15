@@ -18,4 +18,4 @@ gitnr create \
 
 # Update workflows
 bash "$(dirname "$0")"/.github/workflows/update.sh 2>&1 |
-  sed 's/^/['.github\\/workflows'] /'
+  sed 's/^/['workflows'] /'
