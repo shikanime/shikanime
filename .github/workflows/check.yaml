@@ -9,12 +9,17 @@ on:
       - main
 jobs:
   check:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch: [amd64, arm64]
+        include:
+          - arch: amd64
+            runner: ubuntu-latest
+          - arch: arm64
+            runner: arm64-latest
+    runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
-      - uses: docker/setup-qemu-action@v3
-        with:
-          platforms: arm64
       - uses: DeterminateSystems/nix-installer-action@v13
         with:
           github-token: ${{ secrets.NIX_GITHUB_TOKEN }}
@@ -28,4 +33,6 @@ jobs:
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
       - name: Check Nix Flake
         run: |
-          nix flake check --show-trace --all-systems --no-pure-eval --accept-flake-config
+          nix flake check \
+            --no-pure-eval \
+            --accept-flake-config
