@@ -15,3 +15,7 @@ gitnr create \
   tt:vim \
   tt:visualstudiocode \
   tt:windows >.gitignore
+
+# Update workflows
+bash "$(dirname "$0")"/.github/workflows/update.sh 2>&1 |
+  sed 's/^/['.github\\/workflows'] /'
