@@ -3,11 +3,6 @@
 set -o errexit
 set -o nounset
 set -o pipefail
-#!/usr/bin/env bash
-
-set -o errexit
-set -o nounset
-set -o pipefail
 
 for workflow in "$(dirname "$0")"/*.{yml,yaml}; do
   echo "Checking $workflow for updates..."
