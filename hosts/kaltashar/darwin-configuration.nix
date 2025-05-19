@@ -28,6 +28,8 @@
 
   networking.hostName = "kaltashar";
 
+  system.primaryUser = "shikanimedeva";
+
   users.users.shikanimedeva = {
     name = "shikanimedeva";
     home = "/Users/shikanimedeva";
