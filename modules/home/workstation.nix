@@ -56,7 +56,10 @@
 
   programs.mise = {
     enable = true;
-    globalConfig.settings.experimental = true;
+    globalConfig.settings = {
+      experimental = true;
+      idiomatic_version_file_enable_tools = [ ];
+    };
   };
 
   programs.nushell = {
