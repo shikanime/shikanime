@@ -19,7 +19,7 @@
     pkgs.less
     pkgs.pprof
     pkgs.qpdf
-    # pkgs.rclone
+    pkgs.rclone
     pkgs.rsync
     pkgs.unzip
     pkgs.watch
@@ -58,7 +58,7 @@
     enable = true;
     globalConfig.settings = {
       experimental = true;
-      idiomatic_version_file_enable_tools = [];
+      idiomatic_version_file_enable_tools = [ ];
     };
   };
 
