@@ -20,6 +20,7 @@
       "mongodb-compass"
       "rancher"
       "redis-insight"
+      "trae"
       "visual-studio-code"
       "windows-app"
       "wireshark"
