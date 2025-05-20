@@ -6,7 +6,7 @@ with lib;
   imports = [
     ../../../../modules/home/base.nix
     ../../../../modules/home/cloud.nix
-    ../../../../modules/home/desktop.nix
+    ../../../../modules/home/ghostty.nix
     ../../../../modules/home/starship.nix
     ../../../../modules/home/go.nix
     ../../../../modules/home/helix.nix
