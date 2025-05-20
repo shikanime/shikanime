@@ -14,6 +14,7 @@
       "bitwarden"
       "dbeaver-community"
       "firefox@developer-edition"
+      "ghostty"
       "google-chrome@dev"
       "macfuse"
       "microsoft-edge@dev"
