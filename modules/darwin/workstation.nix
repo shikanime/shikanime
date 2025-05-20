@@ -26,7 +26,6 @@
       "windows-app"
       "wireshark"
       "xquartz"
-      "zen"
     ];
   };
 
