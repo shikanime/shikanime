@@ -31,6 +31,9 @@
         selection-foreground = "4c4f69";
       };
     };
-    settings.theme = "catppuccin-latte";
+    settings = {
+      theme = "catppuccin-latte";
+      command = "${pkgs.fish}/bin/fish --login --interactive";
+    };
   };
 }
