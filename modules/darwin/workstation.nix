@@ -13,7 +13,6 @@
       "android-studio"
       "bitwarden"
       "dbeaver-community"
-      "firefox@developer-edition"
       "ghostty"
       "google-chrome@dev"
       "macfuse"
