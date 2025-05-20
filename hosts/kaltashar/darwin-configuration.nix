@@ -24,6 +24,7 @@
     "transmission"
     "whatsapp"
     "zoom"
+    "zen"
   ];
 
   networking.hostName = "kaltashar";
