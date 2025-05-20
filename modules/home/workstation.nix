@@ -19,7 +19,7 @@
     pkgs.less
     pkgs.pprof
     pkgs.qpdf
-    pkgs.rclone
+    # pkgs.rclone
     pkgs.rsync
     pkgs.unzip
     pkgs.watch
@@ -56,7 +56,10 @@
 
   programs.mise = {
     enable = true;
-    globalConfig.settings.experimental = true;
+    globalConfig.settings = {
+      experimental = true;
+      idiomatic_version_file_enable_tools = [];
+    };
   };
 
   programs.nushell = {
