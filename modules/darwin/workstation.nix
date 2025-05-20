@@ -4,6 +4,7 @@
   homebrew = {
     enable = true;
     brews = [
+      "mas"
       "openssl"
       "pinentry-mac"
       "pinentry"
@@ -11,7 +12,6 @@
     ];
     casks = [
       "android-studio"
-      "bitwarden"
       "dbeaver-community"
       "ghostty"
       "google-chrome@dev"
@@ -26,6 +26,10 @@
       "wireshark"
       "xquartz"
     ];
+    masApps = {
+      Bitwarden = 1352778147;
+      Xcode = 497799835;
+    };
   };
 
   programs.fish.enable = true;
