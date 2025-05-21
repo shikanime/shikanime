@@ -19,13 +19,10 @@
   };
 
   # Allow admin users to interact with the daemon
-  nix.settings = {
-    download-buffer-size = 524288000;
-    trusted-users = [
-      "root"
-      "@admin"
-    ];
-  };
+  nix.settings.trusted-users = [
+    "root"
+    "@admin"
+  ];
 
   # This value determines the Darwin release from which the default
   # settings for stateful data, like file locations and database versions
