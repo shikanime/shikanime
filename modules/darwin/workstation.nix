@@ -11,7 +11,6 @@
       "pkg-config"
     ];
     casks = [
-      "adobe-creative-cloud"
       "android-studio"
       "appcleaner"
       "dbeaver-community"
