@@ -1,3 +1,7 @@
+{ lib, pkgs, ... }:
+
+with lib;
+
 {
   nix.linux-builder.enable = true;
 
@@ -52,7 +56,14 @@
     };
   };
 
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = mkAfter ''
+      if test -f /opt/homebrew/bin/brew
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+      end
+    '';
+  };
 
   programs.gnupg.agent = {
     enable = true;
