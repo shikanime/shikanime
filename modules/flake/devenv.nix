@@ -37,16 +37,11 @@
           tflint.enable = true;
         };
         packages = [
-          pkgs.bash-language-server
-          pkgs.nixd
           pkgs.scaleway-cli
           pkgs.gh
           pkgs.gnused
           pkgs.marksman
           pkgs.taplo
-          pkgs.terraform-ls
-          pkgs.vscode-langservers-extracted
-          pkgs.yaml-language-server
         ];
       };
     };
