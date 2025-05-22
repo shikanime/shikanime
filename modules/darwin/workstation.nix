@@ -45,6 +45,7 @@
     ];
     masApps = {
       Bitwarden = 1352778147;
+      "DaVinci Resolve" = 571213070;
       Velja = 1607635845;
       "WhatsApp Messenger" = 310633997;
       Xcode = 497799835;
