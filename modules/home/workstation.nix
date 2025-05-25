@@ -62,6 +62,8 @@
     };
   };
 
+  programs.nix-index.enable = true;
+
   programs.nushell = {
     enable = true;
     extraConfig = ''
