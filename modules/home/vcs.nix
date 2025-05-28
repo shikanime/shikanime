@@ -104,6 +104,10 @@
         private-commits = "description(glob:'secret:*')";
         push-bookmark-prefix = "trunks/shikanime/push-";
       };
+      ui = {
+        default-command = "log";
+        merge-editor = ":builtin";
+      };
     };
   };
 
