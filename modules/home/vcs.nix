@@ -104,6 +104,18 @@
         private-commits = "description(glob:'secret:*')";
         push-bookmark-prefix = "trunks/shikanime/push-";
       };
+      merge-tools.trae = {
+        merge-args = [
+          "--wait"
+          "--merge"
+          "$left"
+          "$right"
+          "$base"
+          "$output"
+        ];
+        merge-tool-edits-conflict-markers = true;
+        conflict-marker-style = "git";
+      };
       ui = {
         default-command = "log";
         merge-editor = ":builtin";
