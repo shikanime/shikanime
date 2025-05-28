@@ -98,6 +98,7 @@
       aliases = {
         ab = [ "absorb" ];
         ci = [ "commit" ];
+        ds = [ "describe" ];
         sq = [ "squash" ];
       };
       git = {
