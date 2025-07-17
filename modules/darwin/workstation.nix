@@ -32,6 +32,7 @@ with lib;
       "rancher"
       "redis-insight"
       "signal"
+      "slack"
       "spotify"
       "steam"
       "stolendata-mpv"
@@ -48,6 +49,7 @@ with lib;
       "zoom"
     ];
     masApps = {
+      Amphetamine = 937984704;
       Bitwarden = 1352778147;
       "DaVinci Resolve" = 571213070;
       Velja = 1607635845;
