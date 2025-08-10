@@ -17,7 +17,6 @@ variable "repositories" {
     identities = string
     manifests  = string
     shikanime  = string
-    websites   = string
   })
   description = "GitHub repositories"
   default = {
@@ -26,7 +25,6 @@ variable "repositories" {
     identities = "identities"
     manifests  = "manifests"
     shikanime  = "shikanime"
-    websites   = "websites"
   }
 }
 
