@@ -5,8 +5,8 @@ on:
       - main
   pull_request:
     branches:
-      - gh/*/*/base
       - main
+      - gh/*/*/base
 jobs:
   check:
     runs-on: ubuntu-latest
