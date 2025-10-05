@@ -6,6 +6,7 @@ provider "registry.opentofu.org/integrations/github" {
   constraints = "~> 6.4"
   hashes = [
     "h1:B1q5+Ub1G3zJa9y474Fg40eo/N04/vOSeaf3dWaCG0I=",
+    "h1:YiGCvjr7R77HGTzw81legWicEHApVTli8O+ooDpLexE=",
     "h1:sJvuRMYWJ/ykZXTuoCuocHvx06hTwDVrXVVXq1814bw=",
     "zh:00f431c2a2510efcb1115442dda5e90815bcb16e1a3301679ade0139fa963d3b",
     "zh:12a862f4317b3cb65682c1b687650cd91eeee99e63774bdcfa8bcfc64bad097b",
@@ -30,6 +31,7 @@ provider "registry.opentofu.org/scaleway/scaleway" {
   constraints = "~> 2.43"
   hashes = [
     "h1:5BbGEXuyORjQ9adWey72qJkOCj9zjwly/aUcwXXXqvo=",
+    "h1:LczipXZujiPUPClltqtt6pDhAxQ7s35v21Fe46hflXU=",
     "h1:ra/AlSZHIX8gBGtODsiaUp+V8iXpNIL1BZlxDLPc1Es=",
     "zh:161e4a2981240645b584acf13a76563ca90fff107efd983cbf7db74bfc3462b6",
     "zh:2cf0df5b147aa0fd50953e00bee8fea56e4ddb0630e7cbc7443619933c37522f",

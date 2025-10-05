@@ -16,6 +16,7 @@ variable "repositories" {
     features   = string
     identities = string
     manifests  = string
+    niximgs    = string
     shikanime  = string
   })
   description = "GitHub repositories"
@@ -24,6 +25,7 @@ variable "repositories" {
     features   = "features"
     identities = "identities"
     manifests  = "manifests"
+    niximgs    = "niximgs"
     shikanime  = "shikanime"
   }
 }
