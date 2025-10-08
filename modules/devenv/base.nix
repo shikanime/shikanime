@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   cachix = {
     enable = true;

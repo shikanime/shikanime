@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   languages.opentofu.enable = true;
   git-hooks.hooks.tflint.enable = true;
