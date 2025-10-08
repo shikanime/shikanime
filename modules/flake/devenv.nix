@@ -19,8 +19,9 @@
       };
       devenv = {
         modules = [
-          ../devenv/github.nix
           ../devenv/air.nix
+          ../devenv/github.nix
+          ../devenv/gitignore.nix
         ];
         shells.default = {
           cachix = {
@@ -28,6 +29,20 @@
             push = "shikanime";
           };
           containers = pkgs.lib.mkForce { };
+          gitignore = {
+            enable = true;
+            templates = [
+              "repo:github/gitignore/refs/heads/main/Nix.gitignore"
+              "repo:shikanime/gitignore/refs/heads/main/Devenv.gitignore"
+              "tt:jetbrains+all"
+              "tt:linux"
+              "tt:macos"
+              "tt:terraform"
+              "tt:vim"
+              "tt:visualstudiocode"
+              "tt:windows"
+            ];
+          };
           languages = {
             nix.enable = true;
             opentofu.enable = true;
