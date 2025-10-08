@@ -22,14 +22,8 @@ let
       '';
 in
 {
-  options.gitnr = {
-    enable = lib.mkEnableOption "gitnr gitignore generator";
-
-    package = lib.mkOption {
-      type = lib.types.package;
-      default = pkgs.gitnr;
-      description = "The gitnr package to use";
-    };
+  options.gitignore = {
+    enable = lib.mkEnableOption "gitignore generator";
 
     templates = lib.mkOption {
       type = lib.types.listOf lib.types.str;

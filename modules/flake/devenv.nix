@@ -21,7 +21,7 @@
         modules = [
           ../devenv/air.nix
           ../devenv/github.nix
-          ../devenv/gitnr.nix
+          ../devenv/gitignore.nix
         ];
         shells.default = {
           cachix = {
@@ -29,7 +29,7 @@
             push = "shikanime";
           };
           containers = pkgs.lib.mkForce { };
-          gitnr = {
+          gitignore = {
             enable = true;
             templates = [
               "repo:github/gitignore/refs/heads/main/Nix.gitignore"
