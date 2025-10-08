@@ -20,6 +20,7 @@
       devenv = {
         modules = [
           ../devenv/github.nix
+          ../devenv/air.nix
         ];
         shells.default = {
           cachix = {
