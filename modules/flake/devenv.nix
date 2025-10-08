@@ -18,9 +18,13 @@
           "LICENSE"
         ];
       };
-      devenv.shells.default.imports = [
-        ../devenv/base.nix
-        ../devenv/tofu.nix
-      ];
+      devenv= {
+        modules = [
+          ../devenv/base.nix
+        ];
+        shells.default.imports = [
+          ../devenv/tofu.nix
+        ];
+      };
     };
 }
