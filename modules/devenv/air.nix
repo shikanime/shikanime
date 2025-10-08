@@ -14,6 +14,15 @@ in
   options.air = {
     enable = lib.mkEnableOption "Air live reload for Go applications";
 
+    package = lib.mkOption {
+      type = lib.types.package;
+      default = pkgs.air;
+      defaultText = lib.literalExpression "pkgs.air";
+      description = ''
+        The Air package to use.
+      '';
+    };
+
     settings = lib.mkOption {
       type = lib.types.submodule {
         freeformType = settingsFormat.type;
@@ -58,15 +67,6 @@ in
             clean_on_exit = true;
           };
         }
-      '';
-    };
-
-    package = lib.mkOption {
-      type = lib.types.package;
-      default = pkgs.air;
-      defaultText = lib.literalExpression "pkgs.air";
-      description = ''
-        The Air package to use.
       '';
     };
   };
