@@ -29,6 +29,20 @@
             push = "shikanime";
           };
           containers = pkgs.lib.mkForce { };
+          gitnr = {
+            enable = true;
+            templates = [
+              "repo:github/gitignore/refs/heads/main/Nix.gitignore"
+              "repo:shikanime/gitignore/refs/heads/main/Devenv.gitignore"
+              "tt:jetbrains+all"
+              "tt:linux"
+              "tt:macos"
+              "tt:terraform"
+              "tt:vim"
+              "tt:visualstudiocode"
+              "tt:windows"
+            ];
+          };
           languages = {
             nix.enable = true;
             opentofu.enable = true;

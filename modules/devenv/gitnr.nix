@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.gitnr;
@@ -7,11 +12,14 @@ let
   templateArgs = lib.concatStringsSep " " cfg.templates;
 
   # Generate .gitignore content using gitnr
-  gitignoreContent = pkgs.runCommand "gitignore-content" {
-    buildInputs = [ cfg.package ];
-  } ''
-    ${cfg.package}/bin/gitnr create ${templateArgs} > $out
-  '';
+  gitignoreContent =
+    pkgs.runCommand "gitignore-content"
+      {
+        buildInputs = [ cfg.package ];
+      }
+      ''
+        ${cfg.package}/bin/gitnr create ${templateArgs} > $out
+      '';
 in
 {
   options.gitnr = {
@@ -25,7 +33,7 @@ in
 
     templates = lib.mkOption {
       type = lib.types.listOf lib.types.str;
-      default = [];
+      default = [ ];
       example = [
         "tt:linux"
         "tt:macos"
@@ -56,7 +64,7 @@ in
   config = lib.mkIf cfg.enable {
     packages = [ cfg.package ];
 
-    enterShell = lib.mkIf (cfg.templates != []) ''
+    enterShell = lib.mkIf (cfg.templates != [ ]) ''
       touch "${cfg.outputPath}"
       ${cfg.package}/bin/gitnr create ${templateArgs} -f ${cfg.outputPath}
     '';
