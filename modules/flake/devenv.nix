@@ -21,8 +21,8 @@
         ];
       };
       devenv.shells.default.imports = [
-        ./devenv/base.nix
-        ./devenv/tofu.nix
+        ../devenv/base.nix
+        ../devenv/tofu.nix
       ];
     };
 }
