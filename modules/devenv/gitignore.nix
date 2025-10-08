@@ -64,7 +64,9 @@ in
         gitignoreContent="$gitignoreContent $(${cfg.package}/bin/gitnr create ${lib.concatStringsSep " " cfg.templates} 2>/dev/null)"
       ''}
       ${lib.optionalString (cfg.content != [ ]) ''
-        gitignoreContent="$gitignoreContent${lib.optionalString (cfg.templates != [ ]) "\n\n"}${lib.concatStringsSep "\n" cfg.content}"
+        gitignoreContent="$gitignoreContent${
+          lib.optionalString (cfg.templates != [ ]) "\n\n"
+        }${lib.concatStringsSep "\n" cfg.content}"
       ''}
       echo -e "$gitignoreContent" > ${config.env.DEVENV_ROOT}/.gitignore
     '';
