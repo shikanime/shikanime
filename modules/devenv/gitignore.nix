@@ -6,24 +6,30 @@
 }:
 
 let
-  cfg = config.gitnr;
-
-  # Convert template list to gitnr command arguments
-  templateArgs = lib.concatStringsSep " " cfg.templates;
-
-  # Generate .gitignore content using gitnr
-  gitignoreContent =
-    pkgs.runCommand "gitignore-content"
-      {
-        buildInputs = [ cfg.package ];
-      }
-      ''
-        ${cfg.package}/bin/gitnr create ${templateArgs} > $out
-      '';
+  cfg = config.gitignore;
 in
 {
   options.gitignore = {
     enable = lib.mkEnableOption "gitignore generator";
+
+    package = lib.mkOption {
+      type = lib.types.package;
+      default = pkgs.gitnr;
+      description = "The gitnr package to use";
+    };
+
+    content = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [ ];
+      example = [
+        "*.log"
+        "dist/"
+      ];
+      description = ''
+        Additional gitignore patterns to append to the generated file.
+        These patterns will be added after the templates are processed.
+      '';
+    };
 
     templates = lib.mkOption {
       type = lib.types.listOf lib.types.str;
@@ -47,20 +53,20 @@ in
         Templates without prefixes default to GitHub templates.
       '';
     };
-
-    outputPath = lib.mkOption {
-      type = lib.types.str;
-      default = ".gitignore";
-      description = "Path where the .gitignore file should be generated";
-    };
   };
 
   config = lib.mkIf cfg.enable {
     packages = [ cfg.package ];
 
-    enterShell = lib.mkIf (cfg.templates != [ ]) ''
-      touch "${cfg.outputPath}"
-      ${cfg.package}/bin/gitnr create ${templateArgs} -f ${cfg.outputPath}
+    enterShell = lib.mkIf (cfg.templates != [ ] || cfg.content != [ ]) ''
+      gitignoreContent=""
+      ${lib.optionalString (cfg.templates != [ ]) ''
+        gitignoreContent="$gitignoreContent $(${cfg.package}/bin/gitnr create ${lib.concatStringsSep " " cfg.templates} 2>/dev/null)"
+      ''}
+      ${lib.optionalString (cfg.content != [ ]) ''
+        gitignoreContent="$gitignoreContent${lib.optionalString (cfg.templates != [ ]) "\n\n"}${lib.concatStringsSep "\n" cfg.content}"
+      ''}
+      echo -e "$gitignoreContent" > ${config.env.DEVENV_ROOT}/.gitignore
     '';
   };
 }
