@@ -75,13 +75,8 @@ in
     packages = [ cfg.package ];
 
     enterShell = ''
-      # Create the tmp directory if it doesn't exist
       mkdir -p "${cfg.settings.tmp_dir}"
-
-      if [ ! -f .air.toml ]; then
-        echo "Creating Air configuration file..."
-        cat ${configFile} > ${config.env.DEVENV_ROOT}/.air.toml
-      fi
+      cat ${configFile} > ${config.env.DEVENV_ROOT}/.air.toml
     '';
   };
 }

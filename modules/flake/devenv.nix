@@ -19,8 +19,9 @@
       };
       devenv = {
         modules = [
-          ../devenv/github.nix
           ../devenv/air.nix
+          ../devenv/github.nix
+          ../devenv/gitnr.nix
         ];
         shells.default = {
           cachix = {
