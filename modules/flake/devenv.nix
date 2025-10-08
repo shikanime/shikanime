@@ -14,9 +14,6 @@
         };
         projectRootFile = "flake.nix";
         settings.global.excludes = [
-          ".devenv/*"
-          ".direnv/*"
-          "*.png"
           "LICENSE"
         ];
       };
