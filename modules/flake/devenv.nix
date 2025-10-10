@@ -1,4 +1,12 @@
+{ self, ... }:
+
 {
+  flake.devenvModules.default = [
+    ../devenv/air.nix
+    ../devenv/github.nix
+    ../devenv/gitignore.nix
+  ];
+
   perSystem =
     { pkgs, ... }:
     {
@@ -18,11 +26,7 @@
         ];
       };
       devenv = {
-        modules = [
-          ../devenv/air.nix
-          ../devenv/github.nix
-          ../devenv/gitignore.nix
-        ];
+        modules = self.devenvModules.default;
         shells.default = {
           cachix = {
             enable = true;
