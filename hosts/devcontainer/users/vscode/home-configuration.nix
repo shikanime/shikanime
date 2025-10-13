@@ -22,10 +22,14 @@ with lib;
 
   nix.package = pkgs.nix;
 
-  programs.bash.initExtra = mkAfter ''
-    # Check if user environment variables are set because containers doesn't set
-    # them by default and Home Manager needs them to work properly
-    [ -n "$USER" ] || export USER=$(whoami)
-  '';
+  programs.bash = {
+    enable = true;
+    initExtra = mkAfter ''
+      # Check if user environment variables are set because containers doesn't set
+      # them by default and Home Manager needs them to work properly
+      [ -n "$USER" ] || export USER=$(whoami)
+    '';
+  };
+
   targets.genericLinux.enable = true;
 }
