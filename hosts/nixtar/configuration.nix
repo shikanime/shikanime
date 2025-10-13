@@ -67,7 +67,6 @@ in
       "wheel"
     ];
     home = "/home/shika";
-    shell = pkgs.fish;
   };
 
   # Docker CDI setting is not enabled by default

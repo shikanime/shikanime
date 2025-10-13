@@ -34,6 +34,6 @@ pkgs.dockerTools.buildLayeredImage {
       ];
     };
     Entrypoint = [ "/init" ];
-    SHELL = [ "/run/current-system/sw/bin/fish" ];
+    SHELL = [ "/run/current-system/sw/bin/bash" ];
   };
 }

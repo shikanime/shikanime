@@ -58,12 +58,12 @@ with lib;
     };
   };
 
-  programs.fish = {
+  programs.zsh = {
     enable = true;
-    interactiveShellInit = mkAfter ''
-      if test -f /opt/homebrew/bin/brew
+    initExtra = mkAfter ''
+      if [[ -f /opt/homebrew/bin/brew ]]; then
         eval "$(/opt/homebrew/bin/brew shellenv)"
-      end
+      fi
     '';
   };
 
