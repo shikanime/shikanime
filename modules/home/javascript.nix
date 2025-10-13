@@ -20,6 +20,5 @@
   programs.nushell.extraConfig = ''
     source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/auto-generate/completions/node.nu
     source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/auto-generate/completions/npm.nu
-    source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/npm/npm-completions.nu
   '';
 }
