@@ -33,7 +33,7 @@
     };
     settings = {
       theme = "catppuccin-latte";
-      command = "${pkgs.fish}/bin/fish --login --interactive";
+      command = "${pkgs.nushell}/bin/nu --login --interactive";
     };
   };
 }

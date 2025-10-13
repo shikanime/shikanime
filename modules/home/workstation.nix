@@ -43,13 +43,6 @@
     config.global.load_dotenv = true;
   };
 
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      set -g fish_greeting
-    '';
-  };
-
   programs.gpg.enable = true;
 
   programs.jq.enable = true;

@@ -18,12 +18,15 @@ with lib;
     ../../../../modules/home/workstation.nix
   ];
 
-  programs.fish.interactiveShellInit = mkAfter ''
-    if test -d "${config.home.homeDirectory}/.rd"
-      set -gx PATH "${config.home.homeDirectory}/.rd/bin" $PATH
-    end
-    if test -e "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
-        set -gx SSH_AUTH_SOCK "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
-    end
-  '';
+  programs.zsh = {
+    enable = true;
+    initExtra = mkAfter ''
+      if [[ -d "${config.home.homeDirectory}/.rd" ]]; then
+        export PATH="${config.home.homeDirectory}/.rd/bin:$PATH"
+      fi
+      if [[ -e "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock" ]]; then
+        export SSH_AUTH_SOCK="${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+      fi
+    '';
+  };
 }

@@ -6,8 +6,6 @@
     "aarch64-linux"
   ];
 
-  programs.fish.enable = true;
-
   programs.gnupg.agent = {
     enable = true;
     enableExtraSocket = true;

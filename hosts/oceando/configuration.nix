@@ -24,6 +24,5 @@
       "wheel"
     ];
     home = "/home/shika";
-    shell = pkgs.fish;
   };
 }
