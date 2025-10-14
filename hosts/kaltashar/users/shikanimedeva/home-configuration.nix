@@ -20,7 +20,7 @@ with lib;
 
   programs.zsh = {
     enable = true;
-    initExtra = mkAfter ''
+    initContent = mkAfter ''
       if [[ -d "${config.home.homeDirectory}/.rd" ]]; then
         export PATH="${config.home.homeDirectory}/.rd/bin:$PATH"
       fi
