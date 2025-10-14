@@ -15,7 +15,6 @@ with lib;
       "pkg-config"
     ];
     casks = [
-      "adobe-creative-cloud"
       "android-studio"
       "appcleaner"
       "dbeaver-community"
@@ -34,14 +33,12 @@ with lib;
       "signal"
       "slack"
       "spotify"
-      "steam"
       "stolendata-mpv"
       "syncthing-app"
       "tailscale-app"
       "trae"
       "transmission"
       "visual-studio-code"
-      "whatsapp"
       "windows-app"
       "wireshark-app"
       "xquartz"
