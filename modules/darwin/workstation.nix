@@ -57,7 +57,7 @@ with lib;
 
   programs.zsh = {
     enable = true;
-    initContent = mkAfter ''
+    shellInit = mkAfter ''
       if [[ -f /opt/homebrew/bin/brew ]]; then
         eval "$(/opt/homebrew/bin/brew shellenv)"
       fi
