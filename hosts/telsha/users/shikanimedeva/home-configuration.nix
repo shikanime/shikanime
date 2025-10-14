@@ -21,10 +21,10 @@ with lib;
   programs.zsh = {
     enable = true;
     initContent = mkAfter ''
-      if [[ -d "${config.home.homeDirectory}/.rd" ]]; then
+      if test -d "${config.home.homeDirectory}/.rd"; then
         export PATH="${config.home.homeDirectory}/.rd/bin:$PATH"
       fi
-      if [[ -e "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock" ]]; then
+      if test -e "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"; then
         export SSH_AUTH_SOCK="${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
       fi
     '';
