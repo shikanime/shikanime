@@ -17,12 +17,7 @@ with lib;
     ../../../../modules/home/workstation.nix
   ];
 
-  programs.bash = {
-    enable = true;
-    initExtra = mkAfter ''
-      # Check if user environment variables are set because containers doesn't set
-      # them by default and Home Manager needs them to work properly
-      test -n "$USER" || export USER=$(whoami)
-    '';
-  };
+  home.sessionVariables.USER = "vscode";
+
+  programs.bash.enable = true;
 }

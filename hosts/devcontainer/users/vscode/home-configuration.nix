@@ -18,18 +18,14 @@ with lib;
     ../../../../modules/home/workstation.nix
   ];
 
-  home.packages = [ pkgs.iputils ];
+  home = {
+    packages = [ pkgs.iputils ];
+    sessionVariables.USER = "vscode";
+  };
 
   nix.package = pkgs.nix;
 
-  programs.bash = {
-    enable = true;
-    initExtra = mkAfter ''
-      # Check if user environment variables are set because containers doesn't set
-      # them by default and Home Manager needs them to work properly
-      test -n "$USER" || export USER=$(whoami)
-    '';
-  };
+  programs.bash.enable = true;
 
   targets.genericLinux.enable = true;
 }

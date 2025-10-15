@@ -18,20 +18,19 @@ with lib;
     ../../../../modules/home/workstation.nix
   ];
 
+  home = {
+    sessionPath = [
+      "${config.home.homeDirectory}/.rd/bin"
+    ];
+    sessionVariables.SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
+  };
+
+  programs.bash.enable = true;
+
   programs.docker-cli.settings = {
     credsStore = "osxkeychain";
     currentContext = "rancher-desktop";
   };
 
-  programs.zsh = {
-    enable = true;
-    initContent = mkAfter ''
-      if test -d "${config.home.homeDirectory}/.rd"; then
-        export PATH="${config.home.homeDirectory}/.rd/bin:$PATH"
-      fi
-      if test -e "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"; then
-        export SSH_AUTH_SOCK="${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
-      fi
-    '';
-  };
+  programs.zsh.enable = true;
 }

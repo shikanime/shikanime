@@ -55,11 +55,7 @@ with lib;
 
   programs.zsh = {
     enable = true;
-    shellInit = mkAfter ''
-      if test -f /opt/homebrew/bin/brew; then
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-      fi
-    '';
+    shellInit = mkAfter ''test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)";'';
   };
 
   programs.gnupg.agent = {
