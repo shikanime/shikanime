@@ -7,9 +7,10 @@
 {
   home.packages = [
     pkgs.glab
-    pkgs.k9s
     pkgs.tea
   ];
+
+  programs.docker-cli.enable = true;
 
   programs.gh.enable = true;
 
@@ -20,6 +21,8 @@
     docker-compose-language-server.command = "${pkgs.docker-compose-language-service}/bin/docker-compose-langserver";
     dockerfile-langserver.command = "${pkgs.dockerfile-language-server-nodejs}/bin/dockerfile-language-server-nodejs";
   };
+
+  programs.k9s.enable = true;
 
   programs.nushell.extraConfig = ''
     use ${pkgs.nu_scripts}/share/nu_scripts/modules/kubernetes *
