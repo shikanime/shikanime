@@ -18,6 +18,11 @@ with lib;
     ../../../../modules/home/workstation.nix
   ];
 
+  programs.docker-cli.settings = {
+    credsStore = "osxkeychain";
+    currentContext = "rancher-desktop";
+  };
+
   programs.zsh = {
     enable = true;
     initContent = mkAfter ''
