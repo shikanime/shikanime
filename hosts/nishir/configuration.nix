@@ -43,6 +43,5 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     home = "/home/nishir";
-    useDefaultShell = true;
   };
 }

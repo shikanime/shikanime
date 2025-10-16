@@ -11,12 +11,21 @@
     ../../modules/nixos/tailscale.nix
   ];
 
-  fileSystems."/mnt/nishir" = {
-    device = "/dev/disk/by-label/flandre";
-    options = [
-      "defaults"
-      "nofail"
-    ];
+  fileSystems = {
+    "/mnt/flandre" = {
+      device = "/dev/disk/by-label/flandre";
+      options = [
+        "defaults"
+        "nofail"
+      ];
+    };
+    "/mnt/marisa" = {
+      device = "/dev/disk/by-label/marisa";
+      options = [
+        "defaults"
+        "nofail"
+      ];
+    };
   };
 
   # Enable accelerator
@@ -49,6 +58,5 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     home = "/home/nishir";
-    useDefaultShell = true;
   };
 }
