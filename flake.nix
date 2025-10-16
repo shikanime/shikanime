@@ -36,7 +36,6 @@
       imports = [
         ./modules/flake/darwin.nix
         ./modules/flake/devenv.nix
-        ./modules/flake/home.nix
         ./modules/flake/nixos.nix
         devenv.flakeModule
         treefmt-nix.flakeModule
