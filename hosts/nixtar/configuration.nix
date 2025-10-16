@@ -62,15 +62,12 @@ in
 
   users.users.shika = {
     isNormalUser = true;
-    extraGroups = [
-      "docker"
-      "wheel"
-    ];
+    extraGroups = [ "wheel" ];
     home = "/home/shika";
   };
 
   # Docker CDI setting is not enabled by default
-  virtualisation.docker.daemon.settings.features.cdi = true;
+  virtualisation.docker.rootless.daemon.settings.features.cdi = true;
 
   wsl = {
     enable = true;

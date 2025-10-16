@@ -19,10 +19,7 @@
   users.users.vscode = {
     initialHashedPassword = "";
     isNormalUser = true;
-    extraGroups = [
-      "docker"
-      "wheel"
-    ];
+    extraGroups = [ "wheel" ];
     home = "/home/shika";
   };
 }
