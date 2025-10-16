@@ -34,7 +34,6 @@
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
-        ./modules/flake/default.nix
         ./modules/flake/darwin.nix
         ./modules/flake/devenv.nix
         ./modules/flake/home.nix

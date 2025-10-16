@@ -1,4 +1,5 @@
 {
+  config,
   modulesPath,
   pkgs,
   ...
@@ -16,9 +17,49 @@
     ./users/vscode/home-configuration.nix
   ];
 
-  networking.resolvconf.dnsExtensionMechanism = false;
+  # Let Docker manage /etc/resolv.conf
+  environment.etc."resolv.conf".enable = false;
 
   security.sudo.wheelNeedsPassword = false;
+
+  system.build.streamLayeredImage = pkgs.dockerTools.streamLayeredImage {
+    name = "ghcr.io/shikanime/shikanime/oceando";
+    contents = [
+      config.system.build.toplevel
+      pkgs.coreutils
+      pkgs.dockerTools.binSh
+      pkgs.git
+      pkgs.gnugrep
+      pkgs.gnused
+      pkgs.gnutar
+      pkgs.gzip
+      pkgs.stdenv
+    ];
+    includeNixDB = true;
+    config = {
+      LABELS = {
+        "devcontainer.metadata" = builtins.toJSON [
+          {
+            capAdd = [
+              "SYS_PTRACE"
+              "SYS_ADMIN"
+            ];
+            containerEnv = {
+              USER = "vscode";
+            };
+            overrideCommand = false;
+            remoteUser = "vscode";
+            updateRemoteUserUID = false;
+          }
+        ];
+      };
+      Entrypoint = [ "/init" ];
+    };
+  };
+
+  systemd.tmpfiles.rules = [
+    "Z /workspaces - vscode users - -"
+  ];
 
   users.users.vscode = {
     initialHashedPassword = "";
