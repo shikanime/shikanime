@@ -67,7 +67,7 @@ in
   };
 
   # Docker CDI setting is not enabled by default
-  virtualisation.docker.daemon.settings.features.cdi = true;
+  virtualisation.docker.rootless.daemon.settings.features.cdi = true;
 
   wsl = {
     enable = true;
