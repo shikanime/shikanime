@@ -55,7 +55,7 @@
   };
 
   systemd.tmpfiles.rules = [
-    "d /workspaces - vscode users - -"
+    "Z /workspaces - vscode users - -"
   ];
 
   users.users.vscode = {
