@@ -16,6 +16,8 @@
     ./users/vscode/home-configuration.nix
   ];
 
+  security.sudo.wheelNeedsPassword = false;
+
   users.users.vscode = {
     initialHashedPassword = "";
     isNormalUser = true;
