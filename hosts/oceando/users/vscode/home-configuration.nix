@@ -17,7 +17,5 @@ with lib;
     ../../../../modules/home/workstation.nix
   ];
 
-  home.sessionVariables.USER = "vscode";
-
   programs.bash.enable = true;
 }

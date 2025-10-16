@@ -1,4 +1,5 @@
 {
+  config,
   modulesPath,
   pkgs,
   ...
@@ -16,14 +17,51 @@
     ./users/vscode/home-configuration.nix
   ];
 
-  networking.resolvconf.dnsExtensionMechanism = false;
+  # Let Docker manage /etc/resolv.conf
+  environment.etc."resolv.conf".enable = false;
 
   security.sudo.wheelNeedsPassword = false;
+
+  system.build.streamLayeredImage = pkgs.dockerTools.streamLayeredImage {
+    name = "ghcr.io/shikanime/shikanime/devcontainer";
+    contents = [
+      config.system.build.toplevel
+      pkgs.coreutils
+      pkgs.dockerTools.binSh
+      pkgs.git
+      pkgs.gnugrep
+      pkgs.gnused
+      pkgs.gnutar
+      pkgs.gzip
+      pkgs.stdenv
+    ];
+    includeNixDB = true;
+    config = {
+      LABELS = {
+        "devcontainer.metadata" = builtins.toJSON [
+          {
+            overrideCommand = false;
+            privileged = true;
+            containerEnv = {
+              USER = "vscode";
+            };
+            remoteUser = "vscode";
+            updateRemoteUserUID = false;
+          }
+        ];
+      };
+      Entrypoint = [ "/init" ];
+      SHELL = [ "/run/current-system/sw/bin/bash" ];
+    };
+  };
 
   users.users.vscode = {
     initialHashedPassword = "";
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [
+      "root"
+      "wheel"
+    ];
     home = "/home/shika";
   };
 }
