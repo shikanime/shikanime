@@ -24,7 +24,7 @@ pkgs.dockerTools.streamLayeredImage {
           overrideCommand = false;
           privileged = true;
           remoteUser = "vscode";
-          updateRemoteUserUID = true;
+          updateRemoteUserUID = false;
         }
       ];
     };
