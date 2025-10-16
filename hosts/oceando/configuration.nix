@@ -16,6 +16,8 @@
     ./users/vscode/home-configuration.nix
   ];
 
+  networking.resolvconf.dnsExtensionMechanism = false;
+
   security.sudo.wheelNeedsPassword = false;
 
   users.users.vscode = {
