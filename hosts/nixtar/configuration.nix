@@ -62,10 +62,7 @@ in
 
   users.users.shika = {
     isNormalUser = true;
-    extraGroups = [
-      "docker"
-      "wheel"
-    ];
+    extraGroups = ["wheel"];
     home = "/home/shika";
   };
 
