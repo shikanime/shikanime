@@ -40,11 +40,11 @@
       LABELS = {
         "devcontainer.metadata" = builtins.toJSON [
           {
-            overrideCommand = false;
-            privileged = true;
+            capAdd = [ "SYS_PTRACE" "SYS_ADMIN" ];
             containerEnv = {
               USER = "vscode";
             };
+            overrideCommand = false;
             remoteUser = "vscode";
             updateRemoteUserUID = false;
           }
