@@ -1,9 +1,7 @@
 { pkgs, nixosConfiguration, ... }:
 
-pkgs.dockerTools.buildLayeredImage {
+pkgs.dockerTools.streamLayeredImage {
   name = "ghcr.io/shikanime/shikanime/devcontainer";
-  tag = "latest";
-  created = "now";
   contents = [
     nixosConfiguration.config.system.build.toplevel
     pkgs.coreutils
