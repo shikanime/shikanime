@@ -15,8 +15,8 @@
 
   programs.nix-ld.enable = true;
 
-  virtualisation.docker = {
+  virtualisation.docker.rootless = {
     enable = true;
-    autoPrune.enable = true;
+    setSocketVariable = true;
   };
 }
