@@ -51,7 +51,6 @@
         ];
       };
       Entrypoint = [ "/init" ];
-      SHELL = [ "/run/current-system/sw/bin/bash" ];
     };
   };
 
