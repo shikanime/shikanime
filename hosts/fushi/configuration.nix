@@ -11,12 +11,21 @@
     ../../modules/nixos/tailscale.nix
   ];
 
-  fileSystems."/mnt/nishir" = {
-    device = "/dev/disk/by-label/remilia";
-    options = [
-      "defaults"
-      "nofail"
-    ];
+  fileSystems = {
+    "/mnt/remilia" = {
+      device = "/dev/disk/by-label/remilia";
+      options = [
+        "defaults"
+        "nofail"
+      ];
+    };
+    "/mnt/reimu" = {
+      device = "/dev/disk/by-label/reimu";
+      options = [
+        "defaults"
+        "nofail"
+      ];
+    };
   };
 
   # Enable accelerator
@@ -49,6 +58,5 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     home = "/home/nishir";
-    useDefaultShell = true;
   };
 }
