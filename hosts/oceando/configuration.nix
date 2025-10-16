@@ -54,6 +54,10 @@
     };
   };
 
+  systemd.tmpfiles.rules = [
+    "d /workspaces - vscode users - -"
+  ];
+
   users.users.vscode = {
     initialHashedPassword = "";
     isNormalUser = true;
