@@ -1,9 +1,7 @@
 { pkgs, nixosConfiguration, ... }:
 
-pkgs.dockerTools.buildLayeredImage {
+pkgs.dockerTools.streamLayeredImage {
   name = "ghcr.io/shikanime/shikanime/devcontainer";
-  tag = "latest";
-  created = "now";
   contents = [
     nixosConfiguration.config.system.build.toplevel
     pkgs.coreutils
@@ -25,11 +23,8 @@ pkgs.dockerTools.buildLayeredImage {
         {
           overrideCommand = false;
           privileged = true;
-          containerEnv = {
-            USER = "vscode";
-          };
           remoteUser = "vscode";
-          updateRemoteUserUID = false;
+          updateRemoteUserUID = true;
         }
       ];
     };
