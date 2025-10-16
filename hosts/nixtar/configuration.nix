@@ -62,7 +62,7 @@ in
 
   users.users.shika = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = [ "wheel" ];
     home = "/home/shika";
   };
 

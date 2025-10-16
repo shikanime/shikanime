@@ -19,7 +19,7 @@
   users.users.vscode = {
     initialHashedPassword = "";
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = [ "wheel" ];
     home = "/home/shika";
   };
 }
