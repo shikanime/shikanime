@@ -13,8 +13,8 @@
     ../../modules/nixos/workstation.nix
   ];
 
-  home-manager.users.vscode.imports = [
-    ./users/vscode/home-configuration.nix
+  home-manager.users.shika.imports = [
+    ./users/shika/home-configuration.nix
   ];
 
   # Let Docker manage /etc/resolv.conf
@@ -41,11 +41,11 @@
         "devcontainer.metadata" = builtins.toJSON [
           {
             containerEnv = {
-              USER = "vscode";
+              USER = "shika";
             };
             overrideCommand = false;
             privileged = true;
-            remoteUser = "vscode";
+            remoteUser = "shika";
             updateRemoteUserUID = false;
           }
         ];
@@ -55,10 +55,10 @@
   };
 
   systemd.tmpfiles.rules = [
-    "Z /workspaces - vscode users - -"
+    "Z /workspaces - shika users - -"
   ];
 
-  users.users.vscode = {
+  users.users.shika = {
     initialHashedPassword = "";
     isNormalUser = true;
     extraGroups = [ "wheel" ];
