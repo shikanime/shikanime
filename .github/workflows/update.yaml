@@ -15,17 +15,18 @@ jobs:
           owner: ${{ github.repository_owner }}
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: DeterminateSystems/nix-installer-action@v13
         with:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
-      - uses: DeterminateSystems/update-flake-lock@v23
-        with:
-          branch: github/update_flake
-          commit-msg: Update Flake
-          pr-title: Update Flake
-          pr-labels: dependencies
-          pr-assignees: shikanime
-          sign-commits: true
-          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
-          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
+      - uses: DeterminateSystems/magic-nix-cache-action@v8
+      - run: |
+          nix flake update
+          nix run nixpkgs#sapling -- config \
+            --local ui.username "github-actions[bot]" \
+            --local ui.email "github-actions[bot]@users.noreply.github.com"
+          nix run nixpkgs#sapling ci \
+            -m "Update Flake"
+          nix run nixpkgs#sapling \
+            ghstack
