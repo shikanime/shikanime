@@ -54,10 +54,11 @@
             tflint.enable = true;
           };
           packages = [
-            pkgs.scaleway-cli
             pkgs.gh
             pkgs.gnused
             pkgs.marksman
+            pkgs.sapling
+            pkgs.scaleway-cli
             pkgs.taplo
           ];
         };
