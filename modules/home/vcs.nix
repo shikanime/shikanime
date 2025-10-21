@@ -136,6 +136,11 @@
         "code.priority" = 10;
       };
       github.pr_workflow = "single";
+      hooks = {
+        "precommit.git-hooks" = "test -f .git/hooks/pre-commit && .git/hooks/pre-commit";
+        "preoutgoing.git-hooks" = "test -f .git/hooks/pre-push && .git/hooks/pre-push";
+        "update.git-hooks" = "test -f .git/hooks/post-rewrite && .git/hooks/post-rewrite";
+      };
       merge-tools = {
         "trae.args" = "--wait --merge $local $other $base $output";
         "trae.priority" = 20;
