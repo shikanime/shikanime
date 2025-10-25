@@ -32,27 +32,13 @@
             containers = pkgs.lib.mkForce { };
             gitignore = {
               enable = true;
-              templates = [
-                "repo:github/gitignore/refs/heads/main/Nix.gitignore"
-                "repo:shikanime/gitignore/refs/heads/main/Devenv.gitignore"
-                "tt:jetbrains+all"
-                "tt:linux"
-                "tt:macos"
-                "tt:terraform"
-                "tt:vim"
-                "tt:visualstudiocode"
-                "tt:windows"
-              ];
+              enableDefaultTemplates = true;
             };
+            github.enable = true;
             languages = {
               nix.enable = true;
               opentofu.enable = true;
-            };
-            git-hooks.hooks = {
-              actionlint.enable = true;
-              deadnix.enable = true;
-              flake-checker.enable = true;
-              tflint.enable = true;
+              shell.enable = true;
             };
             packages = [
               pkgs.direnv
