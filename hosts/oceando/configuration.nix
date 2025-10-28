@@ -10,6 +10,7 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/virtualisation/docker-image.nix"
     ../../modules/nixos/base.nix
+    ../../modules/nixos/machine.nix
     ../../modules/nixos/workstation.nix
   ];
 
@@ -49,6 +50,10 @@
             updateRemoteUserUID = false;
           }
         ];
+      };
+      ExposedPorts = {
+        "22/tcp" = { };
+        "5353/udp" = { };
       };
       Entrypoint = [ "/init" ];
     };
