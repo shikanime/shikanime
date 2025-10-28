@@ -10,6 +10,7 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/virtualisation/docker-image.nix"
     ../../modules/nixos/base.nix
+    ../../modules/nixos/machine.nix
     ../../modules/nixos/workstation.nix
   ];
 
@@ -50,6 +51,10 @@
           }
         ];
       };
+      ExposedPorts = {
+        "22/tcp" = { };
+        "5353/udp" = { };
+      };
       Entrypoint = [ "/init" ];
     };
   };
@@ -59,7 +64,6 @@
   ];
 
   users.users.shika = {
-    initialHashedPassword = "";
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     home = "/home/shika";
