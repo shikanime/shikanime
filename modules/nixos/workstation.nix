@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  # Enable cross compilation
+  boot.binfmt.emulatedSystems = [
+    "aarch64-linux"
+  ];
+
   programs.gnupg.agent = {
     enable = true;
     enableExtraSocket = true;

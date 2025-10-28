@@ -44,16 +44,6 @@
             containerEnv = {
               USER = "shika";
             };
-            mounts = [
-              {
-                source = "/sys/kernel/debug";
-                target = "/sys/kernel/debug";
-              }
-              {
-                source = "/sys/kernel/tracing";
-                target = "/sys/kernel/tracing";
-              }
-            ];
             overrideCommand = false;
             privileged = true;
             remoteUser = "shika";
