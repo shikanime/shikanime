@@ -64,7 +64,6 @@
   ];
 
   users.users.shika = {
-    initialHashedPassword = "";
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     home = "/home/shika";
