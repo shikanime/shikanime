@@ -23,18 +23,12 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@v13
       - run: |
           nix flake update
-          nix develop \
-            --accept-flake-config \
-            --impure \
-            .#update \
-            --command sapling config --local ui.username "github-actions[bot]" --local ui.email "github-actions[bot]@users.noreply.github.com"
-          nix develop \
-            --accept-flake-config \
-            --impure \
-            .#update \
-            --command sapling ci -m "Update Flake"
-          nix develop \
-            --accept-flake-config \
-            --impure \
-            .#update \
-            --command sapling ghstack
+          nix develop --accept-flake-config --impure .#update --command sl \
+            config \
+            --local ui.username "github-actions[bot]" \
+            --local ui.email "github-actions[bot]@users.noreply.github.com"
+          nix develop --accept-flake-config --impure .#update --command sl \
+            ci \
+            --message "Update Flake"
+          nix develop --accept-flake-config --impure .#update --command sl \
+            ghstack
