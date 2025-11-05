@@ -154,7 +154,7 @@ def create_manifest [ctx: record, images: list<record>]: nothing -> nothing {
         $images
         | par-each { |image|
             (
-                docker manifest annotate $"$(ctx.image):latest" $image.name
+                docker manifest annotate $ctx.image $image.name
                     --os $image.platform.os
                     --arch $image.platform.arch
             )
