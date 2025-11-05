@@ -64,7 +64,10 @@ in
   services.gnome.gnome-keyring.enable = true;
 
   services.kubernetes = {
-    roles = [ "master" "node" ];
+    roles = [
+      "master"
+      "node"
+    ];
     # Use a hostname for masterAddress so certs are generated correctly
     masterAddress = "nixtar.taila659a.ts.net";
     # Point clients to the API server via hostname and port
