@@ -32,6 +32,7 @@
         modules = [
           ../../hosts/fushi/configuration.nix
           inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.fushi
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
         ];
@@ -47,6 +48,7 @@
         modules = [
           ../../hosts/minish/configuration.nix
           inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.minish
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
         ];
@@ -62,6 +64,7 @@
         modules = [
           ../../hosts/nishir/configuration.nix
           inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.nishir
           inputs.nixos-hardware.nixosModules.raspberry-pi-5
           inputs.sops-nix.nixosModules.sops
         ];
