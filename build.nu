@@ -121,7 +121,7 @@ def build_platform_image [ctx: record]: string -> record {
 
 def push_image [ctx: record]: record -> nothing {
     if $ctx.push_image {
-        docker push $in.image.name
+        docker push $in.name
     }
 }
 
@@ -150,7 +150,7 @@ def create_manifest [ctx: record, images: list<record>]: nothing -> nothing {
     if ($images | length) > 0 {
         print $"Creating manifest for ($ctx.image)..."
         remove_manifest $ctx
-        docker manifest create $ctx.image ...$images
+        docker manifest create $ctx.image ...($images | get name)
         $images
         | par-each { |image|
             (
