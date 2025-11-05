@@ -1,86 +1,72 @@
 {
   inputs,
   self,
-  withSystem,
   ...
 }:
 
 {
   flake = {
     nixosConfigurations = {
-      fushi = withSystem "aarch64-linux" (
-        { system, ... }:
-        inputs.nixpkgs.lib.nixosSystem {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          modules = [
-            ../../hosts/fushi/configuration.nix
-            inputs.home-manager.nixosModules.home-manager
-            inputs.identities.nixosModules.fushi
-            inputs.nixos-hardware.nixosModules.raspberry-pi-4
-            inputs.sops-nix.nixosModules.sops
-          ];
-        }
-      );
-      minish = withSystem "aarch64-linux" (
-        { system, ... }:
-        inputs.nixpkgs.lib.nixosSystem {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          modules = [
-            ../../hosts/minish/configuration.nix
-            inputs.home-manager.nixosModules.home-manager
-            inputs.identities.nixosModules.minish
-            inputs.nixos-hardware.nixosModules.raspberry-pi-4
-            inputs.sops-nix.nixosModules.sops
-          ];
-        }
-      );
-      nishir = withSystem "aarch64-linux" (
-        { system, ... }:
-        inputs.nixpkgs.lib.nixosSystem {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          modules = [
-            ../../hosts/nishir/configuration.nix
-            inputs.home-manager.nixosModules.home-manager
-            inputs.identities.nixosModules.nishir
-            inputs.nixos-hardware.nixosModules.raspberry-pi-5
-            inputs.sops-nix.nixosModules.sops
-          ];
-        }
-      );
-      nixtar = withSystem "x86_64-linux" (
-        { system, ... }:
-        inputs.nixpkgs.lib.nixosSystem {
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-          };
-          modules = [
-            ../../hosts/nixtar/configuration.nix
-            inputs.home-manager.nixosModules.home-manager
-            inputs.identities.nixosModules.nixtar
-            inputs.nixos-wsl.nixosModules.default
-            inputs.sops-nix.nixosModules.sops
-          ];
-        }
-      );
+      fushi = inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
+          system = "aarch64-linux";
+          config.allowUnfree = true;
+        };
+        modules = [
+          ../../hosts/fushi/configuration.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.fushi
+          inputs.nixos-hardware.nixosModules.raspberry-pi-4
+          inputs.sops-nix.nixosModules.sops
+        ];
+      };
+      minish = inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
+          system = "aarch64-linux";
+          config.allowUnfree = true;
+        };
+        modules = [
+          ../../hosts/minish/configuration.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.minish
+          inputs.nixos-hardware.nixosModules.raspberry-pi-4
+          inputs.sops-nix.nixosModules.sops
+        ];
+      };
+      nishir = inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
+          system = "aarch64-linux";
+          config.allowUnfree = true;
+        };
+        modules = [
+          ../../hosts/nishir/configuration.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.nishir
+          inputs.nixos-hardware.nixosModules.raspberry-pi-5
+          inputs.sops-nix.nixosModules.sops
+        ];
+      };
+      nixtar = inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
+        modules = [
+          ../../hosts/nixtar/configuration.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.identities.nixosModules.nixtar
+          inputs.nixos-wsl.nixosModules.default
+          inputs.sops-nix.nixosModules.sops
+        ];
+      };
     };
 
     packages = {
-      x86_64-linux.oceando = withSystem "x86_64-linux" (
-        { system, ... }:
+      x86_64-linux.oceando =
         let
           oceando = inputs.nixpkgs.lib.nixosSystem {
             pkgs = import inputs.nixpkgs {
-              inherit system;
+              system = "x86_64-linux";
               config.allowUnfree = true;
             };
             modules = [
@@ -91,14 +77,12 @@
             ];
           };
         in
-        oceando.config.system.build.buildLayeredImage
-      );
-      aarch64-linux.oceando = withSystem "aarch64-linux" (
-        { system, ... }:
+        oceando.config.system.build.buildLayeredImage;
+      aarch64-linux.oceando =
         let
           oceando = inputs.nixpkgs.lib.nixosSystem {
             pkgs = import inputs.nixpkgs {
-              inherit system;
+              system = "aarch64-linux";
               config.allowUnfree = true;
             };
             modules = [
@@ -109,8 +93,7 @@
             ];
           };
         in
-        oceando.config.system.build.buildLayeredImage
-      );
+        oceando.config.system.build.buildLayeredImage;
     };
   };
 }
