@@ -1,4 +1,4 @@
-name: Packages
+name: Build
 on:
   workflow_run:
     workflows:
@@ -8,7 +8,7 @@ on:
     types:
       - completed
 jobs:
-  packages:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -30,6 +30,5 @@ jobs:
           github-token: ${{ secrets.NIX_GITHUB_TOKEN }}
       - uses: DeterminateSystems/magic-nix-cache-action@v13
       - run: |
-          nix run nixpkgs#skaffold nixpkgs#nushell -- build \
-            --platform linux/amd64,linux/arm64 \
-            --build-image ghcr.io/shikanime/shikanime/oceando
+          nix develop --accept-flake-config --impure .#build --command skaffold \
+            build --platform linux/amd64,linux/arm64 --build-image ghcr.io/shikanime/shikanime/oceando
