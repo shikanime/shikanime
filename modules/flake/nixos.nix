@@ -7,21 +7,6 @@
 
 {
   flake.nixosConfigurations = {
-    oceando = withSystem "x86_64-linux" (
-      { system, ... }:
-      inputs.nixpkgs.lib.nixosSystem {
-        pkgs = import inputs.nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-        modules = [
-          ../../hosts/oceando/configuration.nix
-          inputs.home-manager.nixosModules.home-manager
-          inputs.identities.nixosModules.oceando
-          inputs.sops-nix.nixosModules.sops
-        ];
-      }
-    );
     fushi = withSystem "aarch64-linux" (
       { system, ... }:
       inputs.nixpkgs.lib.nixosSystem {
@@ -88,7 +73,24 @@
     );
   };
 
-  perSystem = _: {
-    packages.oceando = self.nixosConfigurations.oceando.config.system.build.buildLayeredImage;
-  };
+  perSystem =
+    { system, ... }:
+    {
+      packages.oceando =
+        let
+          oceando = inputs.nixpkgs.lib.nixosSystem {
+            pkgs = import inputs.nixpkgs {
+              inherit system;
+              config.allowUnfree = true;
+            };
+            modules = [
+              ../../hosts/oceando/configuration.nix
+              inputs.home-manager.nixosModules.home-manager
+              inputs.identities.nixosModules.oceando
+              inputs.sops-nix.nixosModules.sops
+            ];
+          };
+        in
+        oceando.config.system.build.buildLayeredImage;
+    };
 }

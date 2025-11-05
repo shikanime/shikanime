@@ -34,8 +34,7 @@ def format_arch []: string -> string {
 }
 
 def format_image [ctx: record, platform: record]: nothing -> string {
-    let formatted_arch = $platform.arch | format_arch
-    $"($ctx.image)-($formatted_arch)"
+    $"($ctx.image)-($platform.arch)"
 }
 
 def format_nix_flake [ctx: record, image: string, platform: record]: nothing -> string {
@@ -112,8 +111,8 @@ def build_platform_image [ctx: record]: string -> record {
 
     let flake_url = format_nix_flake $ctx $image $platform
     let loaded_image = $flake_url | build_flake | load_docker_image
-
     let image = format_image $ctx $platform
+
     docker tag $loaded_image $image
 
     {name: $image, platform: $platform}
