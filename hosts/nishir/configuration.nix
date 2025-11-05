@@ -11,12 +11,31 @@
     ../../modules/nixos/tailscale.nix
   ];
 
-  fileSystems."/mnt/nishir" = {
-    device = "/dev/nvme0n1";
-    options = [
-      "defaults"
-      "nofail"
-    ];
+  fileSystems = {
+    "/mnt/flandre" = {
+      device = "/dev/disk/by-label/flandre";
+      options = [
+        "defaults"
+        "nofail"
+        "x-systemd.automount"
+      ];
+    };
+    "/mnt/nishir" = {
+      device = "/dev/nvme0n1";
+      options = [
+        "defaults"
+        "nofail"
+        "x-systemd.automount"
+      ];
+    };
+    "/mnt/remilia" = {
+      device = "/dev/disk/by-label/remilia";
+      options = [
+        "defaults"
+        "nofail"
+        "x-systemd.automount"
+      ];
+    };
   };
 
   home-manager.users.nishir.imports = [

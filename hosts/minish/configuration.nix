@@ -11,21 +11,13 @@
     ../../modules/nixos/tailscale.nix
   ];
 
-  fileSystems = {
-    "/mnt/flandre" = {
-      device = "/dev/disk/by-label/flandre";
-      options = [
-        "defaults"
-        "nofail"
-      ];
-    };
-    "/mnt/marisa" = {
-      device = "/dev/disk/by-label/marisa";
-      options = [
-        "defaults"
-        "nofail"
-      ];
-    };
+  fileSystems."/mnt/marisa" = {
+    device = "/dev/disk/by-label/marisa";
+    options = [
+      "defaults"
+      "nofail"
+      "x-systemd.automount"
+    ];
   };
 
   # Enable accelerator
