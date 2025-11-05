@@ -23,7 +23,7 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  system.build.streamLayeredImage = pkgs.dockerTools.streamLayeredImage {
+  system.build.buildLayeredImage = pkgs.dockerTools.buildLayeredImage {
     name = "ghcr.io/shikanime/shikanime/oceando";
     contents = [
       config.system.build.toplevel

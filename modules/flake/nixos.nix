@@ -1,4 +1,9 @@
-{ inputs, withSystem, ... }:
+{
+  inputs,
+  self,
+  withSystem,
+  ...
+}:
 
 {
   flake.nixosConfigurations = {
@@ -78,5 +83,9 @@
         ];
       }
     );
+  };
+
+  perSystem = _: {
+    packages.oceando = self.nixosConfigurations.oceando.config.system.build.buildLayeredImage;
   };
 }

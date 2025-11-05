@@ -47,6 +47,7 @@
               pkgs.marksman
               pkgs.sapling
               pkgs.scaleway-cli
+              pkgs.skaffold
               pkgs.taplo
             ];
           };
