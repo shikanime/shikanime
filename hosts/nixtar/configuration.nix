@@ -60,6 +60,18 @@ in
 
   # Docker need a secret manager
   services.gnome.gnome-keyring.enable = true;
+
+  # services.kubernetes = {
+  #   apiserver.advertiseAddress = "0.0.0.0";
+  #   apiserverAddress = "https://ishtar.taila659a.ts.net:6443";
+  #   masterAddress = "ishtar.taila659a.ts.net";
+  #   roles = [
+  #     "master"
+  #     "node"
+  #   ];
+  # };
+
+  # Needed by Docker credential helpers
   services.passSecretService.enable = true;
 
   # Need by Docker's NVIDIA integration
