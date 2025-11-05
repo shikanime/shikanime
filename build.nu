@@ -104,7 +104,7 @@ def build_flake []: string -> string {
     nix build --accept-flake-config --print-out-paths $in | str trim
 }
 
-def build_platform_image [ctx: record]: string -> string {
+def build_platform_image [ctx: record]: string -> record {
     let platform = $in | parse_platform
     let image = $ctx.image | parse_image
 
@@ -116,16 +116,16 @@ def build_platform_image [ctx: record]: string -> string {
     let image = format_image $ctx $platform
     docker tag $loaded_image $image
 
-    $image
+    {name: $image, platform: $platform}
 }
 
-def push_image [ctx: record]: string -> nothing {
+def push_image [ctx: record]: record -> nothing {
     if $ctx.push_image {
-        docker push $in
+        docker push $in.image
     }
 }
 
-def build_all_platform_images [ctx: record]: nothing -> list<string> {
+def build_all_platform_images [ctx: record]: nothing -> list<record> {
     $ctx.platforms
         | split row ","
         | par-each { |platform|
@@ -133,9 +133,9 @@ def build_all_platform_images [ctx: record]: nothing -> list<string> {
         }
 }
 
-def push_all_images [ctx: record, images: list<string>]: nothing -> list<nothing> {
+def push_all_images [ctx: record, images: list<record>]: nothing -> list<nothing> {
     $images
-    | par-each { |image| $image | push_image $ctx }
+    | par-each { |image| $image.name | push_image $ctx }
 }
 
 def remove_manifest [ctx: record]: nothing -> nothing {
@@ -146,11 +146,19 @@ def remove_manifest [ctx: record]: nothing -> nothing {
     }
 }
 
-def create_manifest [ctx: record, images: list<string>]: nothing -> nothing {
+def create_manifest [ctx: record, images: list<record>]: nothing -> nothing {
     if ($images | length) > 0 {
         print $"Creating manifest for ($ctx.image)..."
         remove_manifest $ctx
-        docker manifest create ...$images $ctx.image
+        docker manifest create $ctx.image ...$images
+        $images
+        | par-each { |image|
+            (
+                docker manifest annotate $"$(ctx.image):latest" $image.name
+                    --os $image.platform.os
+                    --arch $image.platform.arch
+            )
+        }
     }
 }
 
