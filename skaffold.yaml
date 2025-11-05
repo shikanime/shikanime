@@ -7,6 +7,6 @@ build:
     - image: ghcr.io/shikanime/shikanime/oceando
       custom:
         buildCommand: ./build.nu
-      platforms:
-        - linux/amd64
-        - linux/arm64
+  platforms:
+    - linux/amd64
+    - linux/arm64
