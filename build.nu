@@ -138,33 +138,25 @@ def push_all_images [ctx: record, images: list<string>]: nothing -> list<nothing
     | par-each { |image| $image | push_image $ctx }
 }
 
-def remove_manifest [ctx: record]: nothing -> nothing {
-    try {
-        docker manifest rm $ctx.image
-    } catch { |err|
-        print $"Manifest removal failed for ($ctx.image): ($err.msg)"
-    }
-}
-
 def create_manifest [ctx: record, images: list<string>]: nothing -> nothing {
     if ($images | length) > 0 {
         print $"Creating manifest for ($ctx.image)..."
-        remove_manifest $ctx
         docker manifest create $ctx.image ...$images
     }
 }
 
 def push_manifest [ctx: record]: nothing -> nothing {
-    if $ctx.push_image {
-        docker manifest push $ctx.image
-    }
+    print $"Pushing manifest for ($ctx.image)..."
+    docker manifest push $ctx.image
 }
 
 def build_multiplatform_image [ctx: record]: nothing -> nothing {
     let images = build_all_platform_images $ctx
     push_all_images $ctx $images
-    create_manifest $ctx $images
-    push_manifest $ctx
+    if $ctx.push_image {
+        create_manifest $ctx $images
+        push_manifest $ctx
+    }
 }
 
 build_multiplatform_image (get_skaffold_context)
