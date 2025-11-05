@@ -1,4 +1,4 @@
-name: Packages
+name: Build
 on:
   workflow_run:
     workflows:
@@ -8,7 +8,7 @@ on:
     types:
       - completed
 jobs:
-  packages:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
