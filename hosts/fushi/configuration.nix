@@ -40,9 +40,7 @@
   ];
 
   services.kubernetes = {
-    addons.dns.enable = true;
     apiserverAddress = "https://nishir.taila659a.ts.net:6443";
-    easyCerts = true;
     kubelet.kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
     masterAddress = "nishir.taila659a.ts.net";
   };
