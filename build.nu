@@ -135,7 +135,7 @@ def build_all_platform_images [ctx: record]: nothing -> list<record> {
 
 def push_all_images [ctx: record, images: list<record>]: nothing -> list<nothing> {
     $images
-    | par-each { |image| $image.name | push_image $ctx }
+    | par-each { |image| $image | push_image $ctx }
 }
 
 def remove_manifest [ctx: record]: nothing -> nothing {
