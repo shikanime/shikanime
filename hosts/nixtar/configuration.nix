@@ -60,6 +60,20 @@ in
 
   # Docker need a secret manager
   services.gnome.gnome-keyring.enable = true;
+
+  services.kubernetes = {
+    apiserverAddress = "https://nishir.taila659a.ts.net:6443";
+    kubelet.kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
+    masterAddress = "nishir.taila659a.ts.net";
+    roles = [ "node" ];
+  };
+
+  services.tailscale = {
+    extraUpFlags = [ "--ssh" ];
+    useRoutingFeatures = "server";
+  };
+
+  # Needed by Docker credential helpers
   services.passSecretService.enable = true;
 
   # Need by Docker's NVIDIA integration
