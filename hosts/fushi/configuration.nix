@@ -11,21 +11,13 @@
     ../../modules/nixos/tailscale.nix
   ];
 
-  fileSystems = {
-    "/mnt/remilia" = {
-      device = "/dev/disk/by-label/remilia";
-      options = [
-        "defaults"
-        "nofail"
-      ];
-    };
-    "/mnt/reimu" = {
-      device = "/dev/disk/by-label/reimu";
-      options = [
-        "defaults"
-        "nofail"
-      ];
-    };
+  fileSystems."/mnt/reimu" = {
+    device = "/dev/disk/by-label/reimu";
+    options = [
+      "defaults"
+      "nofail"
+      "x-systemd.automount"
+    ];
   };
 
   # Enable accelerator
