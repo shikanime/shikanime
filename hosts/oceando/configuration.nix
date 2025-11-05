@@ -10,6 +10,7 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/virtualisation/docker-image.nix"
     ../../modules/nixos/base.nix
+    ../../modules/nixos/machine.nix
     ../../modules/nixos/workstation.nix
   ];
 
@@ -43,12 +44,26 @@
             containerEnv = {
               USER = "shika";
             };
+            mounts = [
+              {
+                source = "/sys/kernel/debug";
+                target = "/sys/kernel/debug";
+              }
+              {
+                source = "/sys/kernel/tracing";
+                target = "/sys/kernel/tracing";
+              }
+            ];
             overrideCommand = false;
             privileged = true;
             remoteUser = "shika";
             updateRemoteUserUID = false;
           }
         ];
+      };
+      ExposedPorts = {
+        "22/tcp" = { };
+        "5353/udp" = { };
       };
       Entrypoint = [ "/init" ];
     };
