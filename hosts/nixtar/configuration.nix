@@ -28,7 +28,9 @@ in
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
+    ../../modules/nixos/kubernetes.nix
     ../../modules/nixos/machine.nix
+    ../../modules/nixos/tailscale.nix
     ../../modules/nixos/workstation.nix
   ];
 
@@ -60,7 +62,30 @@ in
 
   # Docker need a secret manager
   services.gnome.gnome-keyring.enable = true;
+
+  services.kubernetes = {
+    roles = [
+      "master"
+      "node"
+    ];
+    # Use a hostname for masterAddress so certs are generated correctly
+    masterAddress = "nixtar.taila659a.ts.net";
+    # Point clients to the API server via hostname and port
+    apiserverAddress = "https://nixtar.taila659a.ts.net:6443";
+    easyCerts = true;
+    apiserver = {
+      securePort = 6443;
+      advertiseAddress = "100.111.162.12";
+    };
+  };
+
+  # Needed by Docker credential helpers
   services.passSecretService.enable = true;
+
+  services.tailscale = {
+    extraUpFlags = [ "--ssh" ];
+    useRoutingFeatures = "server";
+  };
 
   # Need by Docker's NVIDIA integration
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -79,5 +104,6 @@ in
     defaultUser = "shika";
     interop.register = true;
     useWindowsDriver = true;
+    wslConf.network.generateHosts = false;
   };
 }
