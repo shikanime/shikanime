@@ -49,7 +49,7 @@ def get_platforms []: nothing -> string {
         print $"No PLATFORMS specified, detected host platform: ($detected)"
         $detected
     } else {
-        $env.PLATFORMS | split row ","
+        $env.PLATFORMS
     }
 }
 
@@ -125,6 +125,19 @@ def push_image [ctx: record]: record -> nothing {
     }
 }
 
+def build_all_platform_images [ctx: record]: nothing -> list<record> {
+    $ctx.platforms
+        | split row ","
+        | par-each { |platform|
+            $platform | build_platform_image $ctx
+        }
+}
+
+def push_all_images [ctx: record, images: list<record>]: nothing -> list<nothing> {
+    $images
+    | par-each { |image| $image | push_image $ctx }
+}
+
 def remove_manifest [ctx: record]: nothing -> nothing {
     try {
         docker manifest rm $ctx.image
@@ -153,8 +166,8 @@ def push_manifest [ctx: record]: nothing -> nothing {
 }
 
 def build_multiplatform_image [ctx: record]: nothing -> nothing {
-    let images = $ctx.platforms | each { |platform| $platform | build_platform_image $ctx }
-    $images | par-each { |image| $image | push_image $ctx }
+    let images = build_all_platform_images $ctx
+    push_all_images $ctx $images
     create_manifest $ctx $images
     push_manifest $ctx
 }
