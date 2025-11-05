@@ -32,6 +32,11 @@ in
     ../../modules/nixos/workstation.nix
   ];
 
+  # Enable cross compilation
+  boot.binfmt.emulatedSystems = [
+    "aarch64-linux"
+  ];
+
   home-manager.users.shika.imports = [
     ./users/shika/home-configuration.nix
   ];
