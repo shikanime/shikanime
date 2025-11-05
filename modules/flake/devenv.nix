@@ -45,6 +45,7 @@
               pkgs.gh
               pkgs.gnused
               pkgs.marksman
+              pkgs.nushell
               pkgs.sapling
               pkgs.scaleway-cli
               pkgs.skaffold
