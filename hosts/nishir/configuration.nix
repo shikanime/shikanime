@@ -38,7 +38,10 @@
     apiserverAddress = "https://nishir.taila659a.ts.net:6443";
     easyCerts = true;
     masterAddress = "nishir.taila659a.ts.net";
-    roles = ["master" "node"];
+    roles = [
+      "master"
+      "node"
+    ];
   };
 
   services.tailscale = {
