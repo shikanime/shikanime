@@ -29,7 +29,6 @@
               enable = true;
               push = "shikanime";
             };
-            containers = pkgs.lib.mkForce { };
             gitignore = {
               enable = true;
               enableDefaultTemplates = true;
@@ -52,20 +51,14 @@
               pkgs.taplo
             ];
           };
-          build = {
-            containers = pkgs.lib.mkForce { };
-            packages = [
-              pkgs.nushell
-              pkgs.skaffold
-            ];
-          };
-          update = {
-            containers = pkgs.lib.mkForce { };
-            packages = [
-              pkgs.gh
-              pkgs.sapling
-            ];
-          };
+          build.packages = [
+            pkgs.nushell
+            pkgs.skaffold
+          ];
+          update.packages = [
+            pkgs.gh
+            pkgs.sapling
+          ];
         };
       };
     };
