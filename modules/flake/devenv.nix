@@ -52,6 +52,20 @@
               pkgs.taplo
             ];
           };
+          build = {
+            containers = pkgs.lib.mkForce { };
+            packages = [
+              pkgs.nushell
+              pkgs.skaffold
+            ];
+          };
+          update = {
+            containers = pkgs.lib.mkForce { };
+            packages = [
+              pkgs.gh
+              pkgs.sapling
+            ];
+          };
         };
       };
     };
