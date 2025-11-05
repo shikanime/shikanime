@@ -29,7 +29,6 @@
               enable = true;
               push = "shikanime";
             };
-            containers = pkgs.lib.mkForce { };
             gitignore = {
               enable = true;
               enableDefaultTemplates = true;
