@@ -43,6 +43,7 @@
     apiserverAddress = "https://nishir.taila659a.ts.net:6443";
     kubelet.kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
     masterAddress = "nishir.taila659a.ts.net";
+    roles = [ "node" ];
   };
 
   services.tailscale = {
