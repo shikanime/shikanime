@@ -20,10 +20,5 @@
     "cgroup_memory=1"
   ];
 
-  services.k3s = {
-    enable = true;
-    extraFlags = [
-      "--protect-kernel-defaults"
-    ];
-  };
+  services.kubernetes.kubelet.extraOpts = "--fail-swap-on=false";
 }

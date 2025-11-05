@@ -5,7 +5,7 @@
     "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
-    ../../modules/nixos/k3s.nix
+    ../../modules/nixos/kubernetes.nix
     ../../modules/nixos/longhorn.nix
     ../../modules/nixos/machine.nix
     ../../modules/nixos/tailscale.nix
@@ -47,7 +47,13 @@
     })
   ];
 
-  services.k3s.serverAddr = "https://nishir.taila659a.ts.net:6443";
+  services.kubernetes = {
+    addons.dns.enable = true;
+    apiserverAddress = "https://nishir.taila659a.ts.net:6443";
+    easyCerts = true;
+    kubelet.kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
+    masterAddress = "nishir.taila659a.ts.net";
+  };
 
   services.tailscale = {
     extraUpFlags = [ "--ssh" ];
