@@ -150,7 +150,7 @@ def create_manifest [ctx: record, images: list<string>]: nothing -> nothing {
     if ($images | length) > 0 {
         print $"Creating manifest for ($ctx.image)..."
         remove_manifest $ctx
-        docker manifest create $ctx.image ...$images
+        docker manifest create ...$images $ctx.image
     }
 }
 
