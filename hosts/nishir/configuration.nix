@@ -36,7 +36,6 @@
     addons.dns.enable = true;
     apiserver.advertiseAddress = "100.117.159.56";
     apiserverAddress = "https://nishir.taila659a.ts.net:6443";
-    easyCerts = true;
     masterAddress = "nishir.taila659a.ts.net";
     roles = [
       "master"
