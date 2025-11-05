@@ -146,19 +146,16 @@ def remove_manifest [ctx: record]: nothing -> nothing {
     }
 }
 
+def annotate_manifest [ctx: record, image: record]: nothing -> nothing {
+    docker manifest annotate $ctx.image $image.name --os $image.platform.os --arch $image.platform.arch
+}
+
 def create_manifest [ctx: record, images: list<record>]: nothing -> nothing {
     if ($images | length) > 0 {
         print $"Creating manifest for ($ctx.image)..."
         remove_manifest $ctx
         docker manifest create $ctx.image ...($images | get name)
-        $images
-        | par-each { |image|
-            (
-                docker manifest annotate $ctx.image $image.name
-                    --os $image.platform.os
-                    --arch $image.platform.arch
-            )
-        }
+        $images | par-each { |image| annotate_manifest $ctx $image }
     }
 }
 
