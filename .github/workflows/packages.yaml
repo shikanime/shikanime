@@ -30,6 +30,6 @@ jobs:
           github-token: ${{ secrets.NIX_GITHUB_TOKEN }}
       - uses: DeterminateSystems/magic-nix-cache-action@v13
       - run: |
-          nix run nixpkgs#skaffold -- build \
+          nix run nixpkgs#skaffold nixpkgs#nushell -- build \
             --platform linux/amd64,linux/arm64 \
             --build-image ghcr.io/shikanime/shikanime/oceando
