@@ -60,6 +60,9 @@
             updateRemoteUserUID = false;
           }
         ];
+        "org.opencontainers.image.source" = "https://github.com/shikanime/shikanime";
+        "org.opencontainers.image.description" = "Oceando development environment";
+        "org.opencontainers.image.licenses" = "AGPL-3.0-or-later";
       };
       ExposedPorts = {
         "22/tcp" = { };
