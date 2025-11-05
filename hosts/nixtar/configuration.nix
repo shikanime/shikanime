@@ -63,8 +63,9 @@ in
   services.gnome.gnome-keyring.enable = true;
 
   services.kubernetes = {
-    apiserver.advertiseAddress = "0.0.0.0";
+    apiserver.advertiseAddress = "100.77.66.124";
     apiserverAddress = "https://ishtar.taila659a.ts.net:6443";
+    easyCerts = true;
     masterAddress = "ishtar.taila659a.ts.net";
     roles = [
       "master"
