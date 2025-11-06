@@ -95,6 +95,12 @@
         user = "shika";
         setEnv.TERM = "xterm-256color";
       };
+      localhost = {
+        hostname = "localhost";
+        user = "shika";
+        port = 2222;
+        setEnv.TERM = "xterm-256color";
+      };
     };
   };
 
