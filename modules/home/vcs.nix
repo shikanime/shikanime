@@ -101,10 +101,8 @@
         ds = [ "describe" ];
         sq = [ "squash" ];
       };
-      git = {
-        private-commits = "description(glob:'secret:*')";
-        push-bookmark-prefix = "trunks/shikanime/push-";
-      };
+      git.private-commits = "description(glob:'secret:*')";
+      templates.git_push_bookmark = "'\"trunks/shikanime/push-\" ++ change_id.short()'";
       merge-tools.trae = {
         merge-args = [
           "--wait"
