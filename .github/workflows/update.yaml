@@ -5,6 +5,8 @@ on:
   workflow_dispatch: null
 jobs:
   update:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - id: createGithubAppToken
@@ -21,7 +23,9 @@ jobs:
         with:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: DeterminateSystems/magic-nix-cache-action@v13
-      - run: |
+      - env:
+          GH_TOKEN: ${{ steps.createGithubAppToken.outputs.token }}
+        run: |
           nix flake update
           nix develop --accept-flake-config --impure .#update --command sl \
             config \
