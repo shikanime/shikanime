@@ -28,8 +28,7 @@ jobs:
             --accept-flake-config
           nix develop --accept-flake-config --impure .#update --command sl \
             config \
-            --local ui.username=github-actions[bot] \
-            --local ui.email=github-actions[bot]@users.noreply.github.com
+            --local ui.username="GitHub Actions Bot <github-actions[bot]@users.noreply.github.com>"
           nix develop --accept-flake-config --impure .#update --command sl \
             ci \
             --message "Update Flake"
