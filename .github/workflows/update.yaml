@@ -28,7 +28,8 @@ jobs:
             --accept-flake-config
           nix develop --accept-flake-config --impure .#update --command sl \
             config \
-            --local ui.username="Operator 6O <operator-60@shikanime.studio>"
+            --local ui.username="Operator 6O <operator60@shikanime.studio>" \
+            --local ghstack.github_username=operator60
           nix develop --accept-flake-config --impure .#update --command sl \
             ci \
             --message "Update Flake"
