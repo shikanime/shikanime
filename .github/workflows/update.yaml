@@ -22,7 +22,7 @@ jobs:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: DeterminateSystems/magic-nix-cache-action@v13
       - env:
-          GH_TOKEN: ${{ steps.createGithubAppToken.outputs.token }}
+          GITHUB_TOKEN: ${{ steps.createGithubAppToken.outputs.token }}
         run: |
           nix flake update
           nix develop --accept-flake-config --impure .#update --command sl \
