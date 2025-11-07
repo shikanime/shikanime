@@ -31,13 +31,6 @@ resource "github_actions_secret" "gpg_private_key" {
   plaintext_value = var.nix.gpg_private_key
 }
 
-resource "github_actions_secret" "nix_github_token" {
-  for_each        = var.repositories
-  repository      = each.value
-  secret_name     = "NIX_GITHUB_TOKEN"
-  plaintext_value = var.nix.github_token
-}
-
 resource "github_actions_secret" "operator_private_key" {
   for_each        = var.repositories
   repository      = each.value
