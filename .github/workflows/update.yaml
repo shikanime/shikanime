@@ -16,7 +16,8 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@v20
       - uses: DeterminateSystems/magic-nix-cache-action@v13
       - run: |
-          nix flake update
+          nix flake update \
+            --accept-flake-config
           nix develop --accept-flake-config --impure .#update --command sl \
             config \
             --local ui.username=github-actions[bot] \
