@@ -32,10 +32,8 @@ variable "repositories" {
 
 variable "nix" {
   type = object({
-    cachix_auth_token = string
-    gpg_passphrase    = string
-    gpg_private_key   = string
-    github_token      = string
+    gpg_passphrase  = string
+    gpg_private_key = string
   })
   description = "Nix configuration secrets"
   sensitive   = true

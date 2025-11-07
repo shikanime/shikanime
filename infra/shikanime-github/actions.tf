@@ -10,13 +10,6 @@ resource "github_actions_secret" "wakatime_api_key" {
   plaintext_value = var.wakabox.wakatime_api_key
 }
 
-resource "github_actions_secret" "cachix_auth_token" {
-  for_each        = var.repositories
-  repository      = each.value
-  secret_name     = "CACHIX_AUTH_TOKEN"
-  plaintext_value = var.nix.cachix_auth_token
-}
-
 resource "github_actions_secret" "gpg_passphrase" {
   for_each        = var.repositories
   repository      = each.value
