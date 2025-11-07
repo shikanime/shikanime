@@ -5,8 +5,6 @@ on:
   workflow_dispatch: null
 jobs:
   update:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     steps:
       - id: createGithubAppToken
