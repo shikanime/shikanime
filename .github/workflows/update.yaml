@@ -24,7 +24,8 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ steps.createGithubAppToken.outputs.token }}
         run: |
-          nix flake update
+          nix flake update \
+            --accept-flake-config
           nix develop --accept-flake-config --impure .#update --command sl \
             config \
             --local ui.username=github-actions[bot] \
