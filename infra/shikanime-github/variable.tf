@@ -30,15 +30,6 @@ variable "repositories" {
   }
 }
 
-variable "nix" {
-  type = object({
-    gpg_passphrase  = string
-    gpg_private_key = string
-  })
-  description = "Nix configuration secrets"
-  sensitive   = true
-}
-
 variable "wakabox" {
   type = object({
     github_token     = string
@@ -50,6 +41,8 @@ variable "wakabox" {
 
 variable "operator" {
   type = object({
+    gpg_passphrase  = string
+    gpg_private_key = string
     ssh_private_key = string
   })
   description = "Operator configuration secrets"

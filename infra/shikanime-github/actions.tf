@@ -14,14 +14,14 @@ resource "github_actions_secret" "gpg_passphrase" {
   for_each        = var.repositories
   repository      = each.value
   secret_name     = "GPG_PASSPHRASE"
-  plaintext_value = var.nix.gpg_passphrase
+  plaintext_value = var.operator.gpg_passphrase
 }
 
 resource "github_actions_secret" "gpg_private_key" {
   for_each        = var.repositories
   repository      = each.value
   secret_name     = "GPG_PRIVATE_KEY"
-  plaintext_value = var.nix.gpg_private_key
+  plaintext_value = var.operator.gpg_private_key
 }
 
 resource "github_actions_secret" "operator_private_key" {
