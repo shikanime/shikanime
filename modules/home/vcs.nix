@@ -11,26 +11,7 @@
   ];
 
   programs.git = {
-    aliases = {
-      adog = "log --all --decorate --oneline --graph";
-      filing = "commit --amend --signoff --no-edit --reset-author";
-      poi = "commit --amend --no-edit";
-      pouf = "push --force-with-lease";
-      refiling = "rebase --exec 'git filing'";
-      tape = "push --mirror";
-    };
     enable = true;
-    extraConfig = {
-      advice.skippedCherryPicks = false;
-      core.editor = "${pkgs.helix}/bin/hx";
-      init.defaultBranch = "main";
-      pull.rebase = true;
-      push.autoSetupRemote = true;
-      rebase = {
-        autostash = true;
-        updateRefs = true;
-      };
-    };
     ignores = [
       # Backup files
       "*~"
@@ -90,6 +71,25 @@
       "Thumbs.db:encryptable"
     ];
     lfs.enable = true;
+    settings = {
+      alias = {
+        adog = "log --all --decorate --oneline --graph";
+        filing = "commit --amend --signoff --no-edit --reset-author";
+        poi = "commit --amend --no-edit";
+        pouf = "push --force-with-lease";
+        refiling = "rebase --exec 'git filing'";
+        tape = "push --mirror";
+      };
+      advice.skippedCherryPicks = false;
+      core.editor = "${pkgs.helix}/bin/hx";
+      init.defaultBranch = "main";
+      pull.rebase = true;
+      push.autoSetupRemote = true;
+      rebase = {
+        autostash = true;
+        updateRefs = true;
+      };
+    };
   };
 
   programs.jujutsu = {
