@@ -3,7 +3,7 @@
 {
   programs.go = {
     enable = true;
-    goPath = "${config.xdg.dataHome}/go";
+    env.GOPATH = "${config.xdg.dataHome}/go";
     telemetry.mode = "off";
   };
 

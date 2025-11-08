@@ -18,6 +18,6 @@
   programs.bash.enable = true;
 
   # Re-use Windows credentials
-  programs.git.extraConfig.credential.helper =
+  programs.git.settings.credential.helper =
     "/mnt/c/Users/${config.home.username}/scoop/shims/git-credential-manager.exe";
 }

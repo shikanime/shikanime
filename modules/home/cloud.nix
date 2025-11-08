@@ -14,7 +14,7 @@
 
   programs.gh.enable = true;
 
-  programs.git.extraConfig.credential."https://gitlab.com".helper =
+  programs.git.settings.credential."https://gitlab.com".helper =
     "${pkgs.glab}/bin/glab auth git-credential";
 
   programs.helix.languages.language-server = {
