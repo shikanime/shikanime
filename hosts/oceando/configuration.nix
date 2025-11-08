@@ -10,7 +10,6 @@
     "${modulesPath}/profiles/headless.nix"
     "${modulesPath}/virtualisation/docker-image.nix"
     ../../modules/nixos/base.nix
-    ../../modules/nixos/machine.nix
     ../../modules/nixos/workstation.nix
   ];
 
@@ -22,6 +21,12 @@
   environment.etc."resolv.conf".enable = false;
 
   security.sudo.wheelNeedsPassword = false;
+
+  # Enable SSH access
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
+  };
 
   system.build.buildLayeredImage = pkgs.dockerTools.buildLayeredImage {
     name = "ghcr.io/shikanime/shikanime/oceando";
