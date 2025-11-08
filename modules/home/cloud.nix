@@ -24,10 +24,6 @@
 
   programs.k9s.enable = true;
 
-  programs.nushell.extraConfig = ''
-    use ${pkgs.nu_scripts}/share/nu_scripts/modules/kubernetes *
-  '';
-
   programs.ssh.matchBlocks."ssh.dev.azure.com".extraOptions = {
     HostkeyAlgorithms = "+ssh-rsa";
     PubkeyAcceptedKeyTypes = "+ssh-rsa";
