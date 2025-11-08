@@ -28,7 +28,6 @@ in
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
-    ../../modules/nixos/machine.nix
     ../../modules/nixos/workstation.nix
   ];
 
@@ -55,6 +54,11 @@ in
   };
 
   networking.hostName = "nixtar";
+
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
+  };
 
   programs.nix-ld.libraries = [ wsl-lib ];
 
