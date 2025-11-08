@@ -1,6 +1,7 @@
 {
   # Make home-manger use packages from system
   home-manager = {
+    backupFileExtension = "backup-before-nix";
     useGlobalPkgs = true;
     useUserPackages = true;
   };
