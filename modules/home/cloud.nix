@@ -19,7 +19,7 @@
 
   programs.helix.languages.language-server = {
     docker-compose-language-server.command = "${pkgs.docker-compose-language-service}/bin/docker-compose-langserver";
-    dockerfile-langserver.command = "${pkgs.dockerfile-language-server}/bin/dockerfile-language-server-nodejs";
+    dockerfile-langserver.command = "${pkgs.dockerfile-language-server}/bin/dockerfile-language-server";
   };
 
   programs.k9s.enable = true;
