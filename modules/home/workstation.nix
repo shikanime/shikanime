@@ -17,7 +17,6 @@
     pkgs.gnused
     pkgs.graphviz
     pkgs.less
-    pkgs.pprof
     pkgs.qpdf
     pkgs.rclone
     pkgs.rsync
