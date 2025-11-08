@@ -77,7 +77,6 @@
   };
 
   programs.ssh = {
-    addKeysToAgent = "yes";
     enable = true;
     matchBlocks = {
       fushi = {
