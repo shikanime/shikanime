@@ -7,7 +7,6 @@
     ../../modules/nixos/base.nix
     ../../modules/nixos/kubernetes.nix
     ../../modules/nixos/longhorn.nix
-    ../../modules/nixos/machine.nix
     ../../modules/nixos/tailscale.nix
   ];
 
@@ -64,6 +63,22 @@
   services.tailscale = {
     extraUpFlags = [ "--ssh" ];
     useRoutingFeatures = "server";
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    nssmdns6 = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      workstation = true;
+    };
+  };
+
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
   };
 
   users.users.nishir = {
