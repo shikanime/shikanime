@@ -15,6 +15,7 @@ with lib;
       "pkg-config"
     ];
     casks = [
+      "affinity"
       "android-studio"
       "appcleaner"
       "dbeaver-community"
