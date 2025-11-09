@@ -1,8 +1,4 @@
-{
-  inputs,
-  self,
-  ...
-}:
+{ inputs, ... }:
 
 {
   flake = {
@@ -77,7 +73,7 @@
             ];
           };
         in
-        oceando.config.system.build.buildLayeredImage;
+        oceando.config.system.build.streamLayeredImage;
       aarch64-linux.oceando =
         let
           oceando = inputs.nixpkgs.lib.nixosSystem {
@@ -93,7 +89,7 @@
             ];
           };
         in
-        oceando.config.system.build.buildLayeredImage;
+        oceando.config.system.build.streamLayeredImage;
     };
   };
 }
