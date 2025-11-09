@@ -13,7 +13,7 @@ jobs:
           app-id: ${{ vars.OPERATOR_APP_ID }}
           permission-contents: read
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
-          repositories: identities
+          repositories: identities,shikanime
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
