@@ -12,21 +12,23 @@ variable "apps" {
 
 variable "repositories" {
   type = object({
-    algorithm  = string
-    features   = string
-    identities = string
-    manifests  = string
-    niximgs    = string
-    shikanime  = string
+    algorithm        = string
+    curriculum-vitae = string
+    features         = string
+    identities       = string
+    manifests        = string
+    niximgs          = string
+    shikanime        = string
   })
   description = "GitHub repositories"
   default = {
-    algorithm  = "algorithm"
-    features   = "features"
-    identities = "identities"
-    manifests  = "manifests"
-    niximgs    = "niximgs"
-    shikanime  = "shikanime"
+    algorithm        = "algorithm"
+    curriculum-vitae = "curriculum-vitae"
+    features         = "features"
+    identities       = "identities"
+    manifests        = "manifests"
+    niximgs          = "niximgs"
+    shikanime        = "shikanime"
   }
 }
 
