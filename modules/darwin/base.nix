@@ -22,20 +22,7 @@
   # Allow admin users to interact with the daemon
   nix.settings = {
     download-buffer-size = 524288000;
-    substituters = [
-      "https://cachix.cachix.org"
-      "https://devenv.cachix.org"
-      "https://shikanime.cachix.org"
-    ];
-    trusted-public-keys = [
-      "cachix.cachix.org-1:eWNHQldwUO7G2VkjpnjDbWwy4KQ/HNxht7H4SSoMckM="
-      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
-      "shikanime.cachix.org-1:OrpjVTH6RzYf2R97IqcTWdLRejF6+XbpFNNZJxKG8Ts="
-    ];
-    trusted-users = [
-      "root"
-      "@admin"
-    ];
+    trusted-users = [ "@admin" ];
   };
 
   # This value determines the Darwin release from which the default
