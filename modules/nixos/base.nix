@@ -22,10 +22,7 @@
   # Allow wheel users to interact with the daemon
   nix.settings = {
     download-buffer-size = 524288000;
-    trusted-users = [
-      "root"
-      "@wheel"
-    ];
+    trusted-users = [ "@wheel" ];
   };
 
   # Automatically upgrade NixOS
