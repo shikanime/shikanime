@@ -28,7 +28,7 @@
     openFirewall = true;
   };
 
-  system.build.buildLayeredImage = pkgs.dockerTools.buildLayeredImage {
+  system.build.streamLayeredImage = pkgs.dockerTools.streamLayeredImage {
     name = "ghcr.io/shikanime/shikanime/oceando";
     contents = [
       config.system.build.toplevel
