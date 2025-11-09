@@ -20,7 +20,8 @@ jobs:
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
           repositories: identities
       - uses: actions/checkout@v5
-
+        with:
+          token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -45,7 +46,8 @@ jobs:
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
           repositories: identities
       - uses: actions/checkout@v5
-
+        with:
+          token: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
