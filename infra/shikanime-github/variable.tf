@@ -17,6 +17,7 @@ variable "repositories" {
     features         = string
     identities       = string
     manifests        = string
+    myawesomelist    = string
     niximgs          = string
     shikanime        = string
   })
@@ -27,6 +28,7 @@ variable "repositories" {
     features         = "features"
     identities       = "identities"
     manifests        = "manifests"
+    myawesomelist    = "myawesomelist"
     niximgs          = "niximgs"
     shikanime        = "shikanime"
   }
