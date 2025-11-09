@@ -8,16 +8,8 @@ on:
     types:
       - completed
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        platform: [linux/amd64, linux/arm64]
-    permissions:
-      contents: read
-      packages: write
-      attestations: write
-      id-token: write
+  build-amd64:
+    runs-on: ubuntu-24.04
     steps:
       - id: createGithubAppToken
         uses: actions/create-github-app-token@v2
@@ -28,6 +20,7 @@ jobs:
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
           repositories: identities
       - uses: actions/checkout@v5
+
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -39,6 +32,29 @@ jobs:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
       - run: |
           nix develop --accept-flake-config --impure .#build --command skaffold \
-            build --platform ${{ matrix.platform }} \
-              --build-image ghcr.io/shikanime/shikanime/oceando \
-              --tag ${{ matrix.platform }}
+            build --platform linux/amd64
+  build-arm64:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - id: createGithubAppToken
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.OPERATOR_APP_ID }}
+          owner: shikanime
+          permission-contents: read
+          private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
+          repositories: identities
+      - uses: actions/checkout@v5
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: shikanime-studio/setup-nix-action@v1
+        with:
+          extra-platforms: aarch64-linux
+          github-token: ${{ steps.createGithubAppToken.outputs.token }}
+      - run: |
+          nix develop --accept-flake-config --impure .#build --command skaffold \
+            build --platform linux/arm64
