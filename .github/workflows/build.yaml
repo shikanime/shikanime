@@ -27,7 +27,6 @@ jobs:
           password: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: shikanime-studio/setup-nix-action@v1
         with:
-          extra-platforms: aarch64-linux
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
       - run: |
           nix develop --accept-flake-config --impure .#build --command skaffold \
@@ -51,7 +50,6 @@ jobs:
           password: ${{ steps.createGithubAppToken.outputs.token }}
       - uses: shikanime-studio/setup-nix-action@v1
         with:
-          extra-platforms: aarch64-linux
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
       - run: |
           nix develop --accept-flake-config --impure .#build --command skaffold \
