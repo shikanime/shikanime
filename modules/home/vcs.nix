@@ -102,7 +102,13 @@
         sq = [ "squash" ];
       };
       git.private-commits = "description(glob:'secret:*')";
-      templates.git_push_bookmark = "\"trunks/shikanime/\" ++ change_id.short()";
+      templates = {
+        commit_trailers = ''
+          format_signed_off_by_trailer(self)
+          ++ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
+        '';
+        git_push_bookmark = "\"trunks/shikanime/\" ++ change_id.short()";
+      };
       merge-tools.trae = {
         merge-args = [
           "--wait"
