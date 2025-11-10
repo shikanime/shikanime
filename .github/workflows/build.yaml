@@ -58,3 +58,16 @@ jobs:
       - run: |
           nix develop --accept-flake-config --impure .#build --command skaffold \
             build --platform linux/arm64
+    strategy:
+      fail-fast: false
+      matrix:
+        image:
+          - jellyfin
+          - mlflow
+          - postgresql
+          - radarr
+          - redis
+          - sonarr
+          - syncthing
+          - vaultwarden
+          - whisparr
