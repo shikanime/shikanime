@@ -6,7 +6,7 @@
     ../../../../modules/home/cloud.nix
     ../../../../modules/home/go.nix
     ../../../../modules/home/helix.nix
-    ../../../../modules/home/javascript.nix
+    ../../../../modules/home/nodejs.nix
     ../../../../modules/home/python.nix
     ../../../../modules/home/rustup.nix
     ../../../../modules/home/starship.nix

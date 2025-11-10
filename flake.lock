@@ -240,11 +240,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1762705347,
-        "narHash": "sha256-V414f9r1Q+wUVMSg+MbuAzqLSJJn68R0DSLqFumRyqQ=",
+        "lastModified": 1762805552,
+        "narHash": "sha256-yMgd0M2RMhNt0Zg8s20Yt9AoRW+A+70f5B/GmLqmS/4=",
         "owner": "shikanime-studio",
         "repo": "devlib",
-        "rev": "cc3df3ce02271eb1075602f9e2ff28a19ece29f0",
+        "rev": "fa79123098b44a40c8b4b2b98a941c14708e34f9",
         "type": "github"
       },
       "original": {
@@ -751,11 +751,11 @@
         "treefmt-nix": "treefmt-nix_3"
       },
       "locked": {
-        "lastModified": 1762786743,
-        "narHash": "sha256-9nXFDTQNaF9wo6VusV2bZemPXOyJEnuq10a+/S599aU=",
+        "lastModified": 1762806066,
+        "narHash": "sha256-FnUxzIXthlOcab2pwEG/RS0BoHozsw9UsO7ZjjQucdk=",
         "owner": "shikanime",
         "repo": "identities",
-        "rev": "035e7bbfa86df4e7452e8598f01d09e5025d7fbc",
+        "rev": "eedfe01a8637d2f8239e095d603d3e579a4cd3d2",
         "type": "github"
       },
       "original": {

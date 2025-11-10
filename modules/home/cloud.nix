@@ -28,4 +28,6 @@
     HostkeyAlgorithms = "+ssh-rsa";
     PubkeyAcceptedKeyTypes = "+ssh-rsa";
   };
+
+  programs.skaffold.enable = true;
 }

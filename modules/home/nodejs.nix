@@ -1,14 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [
-    pkgs.nodejs
-  ];
-
-  home.sessionVariables = {
-    NPM_CONFIG_CACHE = "${config.xdg.cacheHome}/npm";
-    NPM_CONFIG_USERCONFIG = "${config.xdg.configHome}/npm";
-  };
+  programs.nodejs.enable = true;
 
   programs.helix.languages.language-server = {
     typescript-language-server.command = "${pkgs.typescript-language-server}/bin/typescript-language-server";
