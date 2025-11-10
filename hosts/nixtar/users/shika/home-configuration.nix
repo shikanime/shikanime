@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -14,6 +14,8 @@
     ../../../../modules/home/vcs.nix
     ../../../../modules/home/workstation.nix
   ];
+
+  home.packages = [ pkgs.gcc ];
 
   programs.bash.enable = true;
 
