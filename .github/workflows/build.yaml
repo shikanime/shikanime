@@ -9,6 +9,8 @@ on:
       - completed
 jobs:
   build-amd64:
+    permissions:
+      packages: write
     runs-on: ubuntu-24.04
     steps:
       - id: createGithubAppToken
@@ -23,8 +25,8 @@ jobs:
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ vars.OPERATOR_APP_ID }}
-          password: ${{ steps.createGithubAppToken.outputs.token }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: shikanime-studio/setup-nix-action@v1
         with:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
@@ -32,6 +34,8 @@ jobs:
           nix develop --accept-flake-config --impure .#build --command skaffold \
             build --platform linux/amd64
   build-arm64:
+    permissions:
+      packages: write
     runs-on: ubuntu-24.04-arm
     steps:
       - id: createGithubAppToken
@@ -46,8 +50,8 @@ jobs:
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ vars.OPERATOR_APP_ID }}
-          password: ${{ steps.createGithubAppToken.outputs.token }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: shikanime-studio/setup-nix-action@v1
         with:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
