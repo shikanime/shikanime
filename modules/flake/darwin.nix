@@ -12,6 +12,7 @@
         inputs.home-manager.darwinModules.home-manager
         inputs.identities.darwinModules.kaltashar
         inputs.sops-nix.darwinModules.sops
+        { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
       ];
     };
     telsha = inputs.nix-darwin.lib.darwinSystem {
@@ -24,6 +25,7 @@
         inputs.home-manager.darwinModules.home-manager
         inputs.identities.darwinModules.telsha
         inputs.sops-nix.darwinModules.sops
+        { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
       ];
     };
   };

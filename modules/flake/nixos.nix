@@ -14,6 +14,7 @@
           inputs.identities.nixosModules.fushi
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
+          { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
         ];
       };
       minish = inputs.nixpkgs.lib.nixosSystem {
@@ -27,6 +28,7 @@
           inputs.identities.nixosModules.minish
           inputs.nixos-hardware.nixosModules.raspberry-pi-4
           inputs.sops-nix.nixosModules.sops
+          { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
         ];
       };
       nishir = inputs.nixpkgs.lib.nixosSystem {
@@ -40,6 +42,7 @@
           inputs.identities.nixosModules.nishir
           inputs.nixos-hardware.nixosModules.raspberry-pi-5
           inputs.sops-nix.nixosModules.sops
+          { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
         ];
       };
       nixtar = inputs.nixpkgs.lib.nixosSystem {
@@ -53,6 +56,7 @@
           inputs.identities.nixosModules.nixtar
           inputs.nixos-wsl.nixosModules.default
           inputs.sops-nix.nixosModules.sops
+          { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
         ];
       };
     };
@@ -70,6 +74,7 @@
               inputs.home-manager.nixosModules.home-manager
               inputs.identities.nixosModules.oceando
               inputs.sops-nix.nixosModules.sops
+              { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
             ];
           };
         in
@@ -86,6 +91,7 @@
               inputs.home-manager.nixosModules.home-manager
               inputs.identities.nixosModules.oceando
               inputs.sops-nix.nixosModules.sops
+              { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
             ];
           };
         in
