@@ -27,10 +27,6 @@
     pkgs.zip
   ];
 
-  home.sessionPath = [
-    "${config.home.homeDirectory}/.local/bin"
-  ];
-
   programs.carapace.enable = true;
 
   programs.dircolors.enable = true;
