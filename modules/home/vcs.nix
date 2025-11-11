@@ -81,7 +81,7 @@
         tape = "push --mirror";
       };
       advice.skippedCherryPicks = false;
-      core.editor = "${pkgs.helix}/bin/hx";
+      core.editor = "${lib.getExe helix}";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
@@ -152,7 +152,7 @@
         "code.priority" = 10;
       };
       ui = {
-        editor = "${pkgs.helix}/bin/hx";
+        editor = "${lib.getExe helix}";
         "ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       };
     };

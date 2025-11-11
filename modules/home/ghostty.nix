@@ -33,7 +33,7 @@
     };
     settings = {
       theme = "catppuccin-latte";
-      command = "${pkgs.zsh}/bin/zsh -c ${pkgs.nushell}/bin/nu --login";
+      command = "${lib.getExe zsh} -c ${lib.getExe nushell} --login";
     };
   };
 }

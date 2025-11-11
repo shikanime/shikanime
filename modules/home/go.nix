@@ -7,7 +7,7 @@
   };
 
   programs.helix.languages.language-server = {
-    gopls.command = "${pkgs.gopls}/bin/gopls";
+    gopls.command = "${lib.getExe gopls}";
   };
 
   programs.nushell.extraConfig = ''
