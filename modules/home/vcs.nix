@@ -1,8 +1,11 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }:
+
+with lib;
 
 {
   home.packages = [
@@ -81,7 +84,7 @@
         tape = "push --mirror";
       };
       advice.skippedCherryPicks = false;
-      core.editor = "${pkgs.helix}/bin/hx";
+      core.editor = "${getExe pkgs.helix}";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
@@ -152,7 +155,7 @@
         "code.priority" = 10;
       };
       ui = {
-        editor = "${pkgs.helix}/bin/hx";
+        editor = "${getExe pkgs.helix}";
         "ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       };
     };

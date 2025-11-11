@@ -1,4 +1,11 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+
+with lib;
 
 {
   programs.go = {
@@ -7,7 +14,7 @@
   };
 
   programs.helix.languages.language-server = {
-    gopls.command = "${pkgs.gopls}/bin/gopls";
+    gopls.command = "${getExe pkgs.gopls}";
   };
 
   programs.nushell.extraConfig = ''

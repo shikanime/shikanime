@@ -1,4 +1,6 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
+
+with lib;
 
 {
   programs.ghostty = {
@@ -33,7 +35,7 @@
     };
     settings = {
       theme = "catppuccin-latte";
-      command = "${pkgs.zsh}/bin/zsh -c ${pkgs.nushell}/bin/nu --login";
+      command = "${getExe pkgs.zsh} -c ${getExe pkgs.nushell} --login";
     };
   };
 }
