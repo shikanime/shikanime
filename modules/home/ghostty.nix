@@ -1,5 +1,7 @@
 { lib, pkgs, ... }:
 
+with lib;
+
 {
   programs.ghostty = {
     enable = true;
@@ -33,7 +35,7 @@
     };
     settings = {
       theme = "catppuccin-latte";
-      command = "${lib.getExe zsh} -c ${lib.getExe nushell} --login";
+      command = "${getExe zsh} -c ${getExe nushell} --login";
     };
   };
 }

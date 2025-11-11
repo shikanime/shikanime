@@ -5,6 +5,8 @@
   ...
 }:
 
+with lib;
+
 {
   programs.go = {
     enable = true;
@@ -12,7 +14,7 @@
   };
 
   programs.helix.languages.language-server = {
-    gopls.command = "${lib.getExe gopls}";
+    gopls.command = "${getExe gopls}";
   };
 
   programs.nushell.extraConfig = ''

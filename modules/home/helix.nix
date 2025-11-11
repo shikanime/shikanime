@@ -1,5 +1,7 @@
 { lib, pkgs, ... }:
 
+with lib;
+
 {
   programs.helix = {
     defaultEditor = true;
@@ -90,7 +92,7 @@
             };
           };
         };
-        taplo.command = "${lib.getExe taplo}";
+        taplo.command = "${getExe taplo}";
         vscode-json-language-server.command = "${pkgs.vscode-langservers-extracted}/bin/vscode-json-language-server";
         yaml-language-server.command = "${pkgs.yaml-language-server}/bin/yaml-language-server";
       };
