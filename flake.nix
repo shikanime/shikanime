@@ -4,6 +4,7 @@
   inputs = {
     devenv.url = "github:cachix/devenv";
     devlib.url = "github:shikanime-studio/devlib";
+    git-hooks.url = "github:cachix/git-hooks.nix";
     flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager.url = "github:nix-community/home-manager";
     identities.url = "github:shikanime/identities";
@@ -31,7 +32,9 @@
   outputs =
     inputs@{
       devenv,
+      devlib,
       flake-parts,
+      git-hooks,
       treefmt-nix,
       ...
     }:
@@ -41,6 +44,8 @@
         ./modules/flake/devenv.nix
         ./modules/flake/nixos.nix
         devenv.flakeModule
+        devlib.flakeModule
+        git-hooks.flakeModule
         treefmt-nix.flakeModule
       ];
       systems = [
