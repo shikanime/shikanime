@@ -5,6 +5,8 @@
   ...
 }:
 
+with lib;
+
 {
   home.packages = [
     pkgs.glab
