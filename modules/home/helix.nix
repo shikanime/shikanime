@@ -92,7 +92,7 @@ with lib;
             };
           };
         };
-        taplo.command = "${getExe taplo}";
+        taplo.command = "${getExe pkgs.taplo}";
         vscode-json-language-server.command = "${pkgs.vscode-langservers-extracted}/bin/vscode-json-language-server";
         yaml-language-server.command = "${pkgs.yaml-language-server}/bin/yaml-language-server";
       };

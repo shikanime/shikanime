@@ -9,7 +9,7 @@ with lib;
 
   programs.helix.languages.language-server = {
     jedi.command = "${pkgs.python312Packages.jedi-language-server}/bin/jedi-language-server";
-    ruff.command = "${getExe ruff}";
+    ruff.command = "${getExe pkgs.ruff}";
   };
 
   programs.nushell.extraConfig = ''

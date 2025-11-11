@@ -35,7 +35,7 @@ with lib;
     };
     settings = {
       theme = "catppuccin-latte";
-      command = "${getExe zsh} -c ${getExe nushell} --login";
+      command = "${getExe pkgs.zsh} -c ${getExe pkgs.nushell} --login";
     };
   };
 }

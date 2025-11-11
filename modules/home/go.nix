@@ -14,7 +14,7 @@ with lib;
   };
 
   programs.helix.languages.language-server = {
-    gopls.command = "${getExe gopls}";
+    gopls.command = "${getExe pkgs.gopls}";
   };
 
   programs.nushell.extraConfig = ''

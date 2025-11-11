@@ -5,8 +5,6 @@
   ...
 }:
 
-with lib;
-
 {
   home.packages = [
     pkgs.glab
@@ -84,7 +82,7 @@ with lib;
         tape = "push --mirror";
       };
       advice.skippedCherryPicks = false;
-      core.editor = "${getExe helix}";
+      core.editor = "${getExe pkgs.helix}";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
@@ -155,7 +153,7 @@ with lib;
         "code.priority" = 10;
       };
       ui = {
-        editor = "${getExe helix}";
+        editor = "${getExe pkgs.helix}";
         "ignore.git-config" = "${config.home.homeDirectory}/.config/git/ignore";
       };
     };
