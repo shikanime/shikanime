@@ -10,6 +10,24 @@ variable "apps" {
   }
 }
 
+variable "cachix" {
+  type = object({
+    auth_token = string
+  })
+  description = "Cachix configuration secrets"
+  sensitive   = true
+}
+
+variable "operator" {
+  type = object({
+    gpg_passphrase  = string
+    gpg_private_key = string
+    ssh_private_key = string
+  })
+  description = "Operator configuration secrets"
+  sensitive   = true
+}
+
 variable "repositories" {
   type = object({
     algorithm        = string
@@ -40,15 +58,5 @@ variable "wakabox" {
     wakatime_api_key = string
   })
   description = "Wakabox configuration secrets"
-  sensitive   = true
-}
-
-variable "operator" {
-  type = object({
-    gpg_passphrase  = string
-    gpg_private_key = string
-    ssh_private_key = string
-  })
-  description = "Operator configuration secrets"
   sensitive   = true
 }
