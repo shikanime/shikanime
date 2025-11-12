@@ -24,9 +24,3 @@ jobs:
             --add-label dependencies
         env:
           GITHUB_TOKEN: ${{ steps.createGithubAppToken.outputs.token }}
-      - if: github.event_name == 'check_suite' && github.event.check_suite.conclusion == 'success'
-        run: |
-          gh pr comment ${{ github.event.pull_request.number }} \
-            --body ".land"
-        env:
-          GITHUB_TOKEN: ${{ steps.createGithubAppToken.outputs.token }}
