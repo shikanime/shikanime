@@ -11,7 +11,7 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-      - if: github.event.pull_request.user.login == 'yorha-operator-6o'
+      - if: github.event.pull_request.user.login == 'yorha-operator-6o[bot]'
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: dependencies
