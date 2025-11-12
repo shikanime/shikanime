@@ -1,5 +1,6 @@
 resource "github_actions_secret" "cachix_auth_token" {
-  repository      = var.repositories.shikanime
+  for_each        = var.repositories
+  repository      = each.value
   secret_name     = "CACHIX_AUTH_TOKEN"
   plaintext_value = var.cachix.auth_token
 }
