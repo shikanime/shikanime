@@ -21,6 +21,7 @@ jobs:
           github.event.pull_request.user.login == 'dependabot[bot]'
         uses: actions-ecosystem/action-add-labels@v1
         with:
+          github_token: ${{ steps.createGithubAppToken.outputs.token }}
           labels: dependencies
       - if: github.event_name == 'check_suite' && github.event.check_suite.conclusion == 'success'
         run: |
