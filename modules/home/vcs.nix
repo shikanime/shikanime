@@ -13,6 +13,8 @@ with lib;
     pkgs.watchman
   ];
 
+  programs.ghstack.enable = true;
+
   programs.git = {
     enable = true;
     ignores = [
