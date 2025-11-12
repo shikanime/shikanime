@@ -1,0 +1,21 @@
+name: Triage
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  check_suite:
+    types:
+      - completed
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - if: github.event.pull_request.user.login == 'yorha-operator-6o'
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: dependencies
+      - if: github.event_name == 'check_suite' && github.event.check_suite.conclusion == 'success'
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} \
+            --body ".land"
