@@ -16,7 +16,9 @@ jobs:
         with:
           app-id: ${{ vars.OPERATOR_APP_ID }}
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
-      - if: github.event.pull_request.user.login == 'yorha-operator-6o[bot]'
+      - if: |
+          github.event.pull_request.user.login == 'yorha-operator-6o[bot]' ||
+          github.event.pull_request.user.login == 'dependabot[bot]'
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: dependencies
