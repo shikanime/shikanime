@@ -867,11 +867,11 @@
         "treefmt-nix": "treefmt-nix_3"
       },
       "locked": {
-        "lastModified": 1762912110,
-        "narHash": "sha256-TjZnNogakxSQ/OOc2quvPBkAlxKSuzEFEP9C3QSw8k0=",
+        "lastModified": 1762912529,
+        "narHash": "sha256-R28Kj6OV2oDrRfLjc/qKgcoeByoNsd1viV28/w0scbM=",
         "owner": "shikanime",
         "repo": "identities",
-        "rev": "048635a95524dfd44e5ff02a3fb063b0fd5167d7",
+        "rev": "0e7dfbf72d89f74b5c04f6823564edf2935aa067",
         "type": "github"
       },
       "original": {
