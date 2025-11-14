@@ -43,6 +43,8 @@ in
   # Required for Docker credential management
   environment.systemPackages = [
     pkgs.docker-credential-helpers
+    pkgs.wl-clipboard
+    pkgs.libnotify
   ];
 
   # NVIDIA driver is provided by Windows host
