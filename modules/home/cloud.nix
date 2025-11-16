@@ -12,24 +12,25 @@ with lib;
     pkgs.tea
   ];
 
-  programs.docker-cli.enable = true;
+  programs = {
+    docker-cli.enable = true;
 
-  programs.gh.enable = true;
+    gh.enable = true;
 
-  programs.git.settings.credential."https://gitlab.com".helper =
-    "${getExe pkgs.glab} auth git-credential";
+    git.settings.credential."https://gitlab.com".helper = "${getExe pkgs.glab} auth git-credential";
 
-  programs.helix.languages.language-server = {
-    docker-compose-language-server.command = "${pkgs.docker-compose-language-service}/bin/docker-compose-langserver";
-    dockerfile-langserver.command = "${pkgs.dockerfile-language-server}/bin/dockerfile-language-server";
+    helix.languages.language-server = {
+      docker-compose-language-server.command = "${pkgs.docker-compose-language-service}/bin/docker-compose-langserver";
+      dockerfile-langserver.command = "${pkgs.dockerfile-language-server}/bin/dockerfile-language-server";
+    };
+
+    k9s.enable = true;
+
+    ssh.matchBlocks."ssh.dev.azure.com".extraOptions = {
+      HostkeyAlgorithms = "+ssh-rsa";
+      PubkeyAcceptedKeyTypes = "+ssh-rsa";
+    };
+
+    skaffold.enable = true;
   };
-
-  programs.k9s.enable = true;
-
-  programs.ssh.matchBlocks."ssh.dev.azure.com".extraOptions = {
-    HostkeyAlgorithms = "+ssh-rsa";
-    PubkeyAcceptedKeyTypes = "+ssh-rsa";
-  };
-
-  programs.skaffold.enable = true;
 }

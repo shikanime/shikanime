@@ -57,19 +57,19 @@ in
 
   networking.hostName = "nixtar";
 
-  services.openssh = {
-    enable = true;
-    openFirewall = true;
+  services = {
+    openssh = {
+      enable = true;
+      openFirewall = true;
+    };
+
+    gnome.gnome-keyring.enable = true;
+    passSecretService.enable = true;
+
+    xserver.videoDrivers = [ "nvidia" ];
   };
 
   programs.nix-ld.libraries = [ wsl-lib ];
-
-  # Docker need a secret manager
-  services.gnome.gnome-keyring.enable = true;
-  services.passSecretService.enable = true;
-
-  # Need by Docker's NVIDIA integration
-  services.xserver.videoDrivers = [ "nvidia" ];
 
   users.users.shika = {
     isNormalUser = true;
