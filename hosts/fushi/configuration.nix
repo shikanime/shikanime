@@ -38,32 +38,34 @@
     })
   ];
 
-  services.kubernetes = {
-    apiserverAddress = "https://nishir.taila659a.ts.net:6443";
-    kubelet.kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
-    masterAddress = "nishir.taila659a.ts.net";
-    roles = [ "node" ];
-  };
-
-  services.tailscale = {
-    extraUpFlags = [ "--ssh" ];
-    useRoutingFeatures = "server";
-  };
-
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    nssmdns6 = true;
-    publish = {
-      enable = true;
-      addresses = true;
-      workstation = true;
+  services = {
+    kubernetes = {
+      apiserverAddress = "https://nishir.taila659a.ts.net:6443";
+      kubelet.kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
+      masterAddress = "nishir.taila659a.ts.net";
+      roles = [ "node" ];
     };
-  };
 
-  services.openssh = {
-    enable = true;
-    openFirewall = true;
+    tailscale = {
+      extraUpFlags = [ "--ssh" ];
+      useRoutingFeatures = "server";
+    };
+
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      nssmdns6 = true;
+      publish = {
+        enable = true;
+        addresses = true;
+        workstation = true;
+      };
+    };
+
+    openssh = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 
   users.users.nishir = {
