@@ -25,12 +25,14 @@ with lib;
     sessionVariables.SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
   };
 
-  programs.bash.enable = true;
+  programs = {
+    bash.enable = true;
 
-  programs.docker-cli.settings = {
-    credsStore = "osxkeychain";
-    currentContext = "rancher-desktop";
+    docker-cli.settings = {
+      credsStore = "osxkeychain";
+      currentContext = "rancher-desktop";
+    };
+
+    zsh.enable = true;
   };
-
-  programs.zsh.enable = true;
 }

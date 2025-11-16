@@ -6,23 +6,22 @@
     useUserPackages = true;
   };
 
-  # Clearnup disk weekly
-  nix.gc = {
-    automatic = true;
-    options = "--delete-older-than 30d";
-    interval = [ { Weekday = 7; } ];
-  };
+  nix = {
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 30d";
+      interval = [ { Weekday = 7; } ];
+    };
 
-  # Optimize nix store weekly
-  nix.optimise = {
-    automatic = true;
-    interval = [ { Weekday = 7; } ];
-  };
+    optimise = {
+      automatic = true;
+      interval = [ { Weekday = 7; } ];
+    };
 
-  # Allow admin users to interact with the daemon
-  nix.settings = {
-    download-buffer-size = 524288000;
-    trusted-users = [ "@admin" ];
+    settings = {
+      download-buffer-size = 524288000;
+      trusted-users = [ "@admin" ];
+    };
   };
 
   # This value determines the Darwin release from which the default
