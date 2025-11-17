@@ -92,10 +92,19 @@ def build_flake []: string -> string {
 
 def push_image [ctx: record, image: string]: string -> nothing {
     if $ctx.push_image {
-        run-external $in | skopeo copy $"docker-archive:/dev/stdin" $"docker://($image)"
+        (
+            run-external $in | skopeo copy
+                $"docker-archive:/dev/stdin"
+                $"docker://($image)"
+        )
     } else {
         let docker_host = get_docker_host
-        run-external $in | skopeo copy $"docker-archive:/dev/stdin" $"docker-daemon:($image)" --dst-daemon-host $"($docker_host)"
+        (
+            run-external $in | skopeo copy
+                --dst-daemon-host $"($docker_host)"
+                $"docker-archive:/dev/stdin"
+                $"docker-daemon:($image)"
+        )
     }
 }
 
@@ -116,14 +125,19 @@ def remove_manifest [ctx: record]: nothing -> nothing {
 }
 
 def annotate_manifest [ctx: record, image: record]: nothing -> nothing {
-    buildah manifest add --os $image.platform.os --arch $image.platform.arch $ctx.image $"docker://($image.name)"
+    (
+        buildah manifest add
+            --os $image.platform.os
+            --arch $image.platform.arch
+            $ctx.image $"docker://($image.name)"
+    )
 }
 
 def create_manifest [ctx: record, images: list<record>]: nothing -> nothing {
     print $"Creating manifest for ($ctx.image)..."
     remove_manifest $ctx
     buildah manifest create $ctx.image
-    $images | par-each { |image| annotate_manifest $ctx $image }
+    $images | par-each { |image| annotate_manifest $ctx $image } | ignore
 }
 
 def push_manifest [ctx: record]: nothing -> nothing {
