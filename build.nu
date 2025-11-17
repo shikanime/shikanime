@@ -40,7 +40,7 @@ def format_platform_image [ctx: record, platform: record]: nothing -> string {
 def format_nix_flake [ctx: record, platform: record]: nothing -> string {
     let formatted_arch = $platform.arch | format_arch
     let formatted_image = $ctx.image | parse_image
-    $"($ctx.build_context)#packages.($formatted_arch)-($platform.os).($formatted_image)"
+    $"($ctx.build_context)#packages.($formatted_arch)-($platform.os).($formatted_image.image)"
 }
 
 def get_platforms []: nothing -> string {
