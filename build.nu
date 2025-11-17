@@ -20,8 +20,9 @@ def parse_platform []: string -> record {
     {os: ($parts | get 0), arch: ($parts | get 1)}
 }
 
-def parse_image []: string -> string {
-    $in | split row "/" | last | split row ":" | get 0
+def parse_image []: string -> record {
+    let parts = $in | split row "/" | last | split row ":"
+    {image: ($parts | get 0), tag: ($parts | get 1)}
 }
 
 def format_arch []: string -> string {
