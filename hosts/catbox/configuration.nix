@@ -82,12 +82,12 @@
   ];
 
   users.users = {
-    root = {
-      initialHashedPassword = "$y$j9T$YiuBBsevFD1c6mAOGSJrj/$F74aClFmbKOt/qXs//kaWzFgJbS8JU8GciGb7ocdOi0";
+    root.initialHashedPassword = "$y$j9T$YiuBBsevFD1c6mAOGSJrj/$F74aClFmbKOt/qXs//kaWzFgJbS8JU8GciGb7ocdOi0";
+    shika = {
+      initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
       extraGroups = [ "wheel" ];
       isNormalUser = true;
       home = "/home/shika";
     };
-    shika.initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
   };
 }
