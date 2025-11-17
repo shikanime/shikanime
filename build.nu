@@ -102,7 +102,7 @@ def push_image [ctx: record, image: string]: string -> error {
     let docker_host = get_docker_host
     (
         run-external $in | skopeo copy
-            --dst-daemon-host $"($docker_host)"
+            --dest-daemon-host $"($docker_host)"
             $"docker-archive:/dev/stdin"
             $"docker-daemon:($image)"
     )
