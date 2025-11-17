@@ -62,40 +62,40 @@
     };
 
     packages = {
-      x86_64-linux.oceando =
+      x86_64-linux.catbox =
         let
-          oceando = inputs.nixpkgs.lib.nixosSystem {
+          catbox = inputs.nixpkgs.lib.nixosSystem {
             pkgs = import inputs.nixpkgs {
               system = "x86_64-linux";
               config.allowUnfree = true;
             };
             modules = [
-              ../../hosts/oceando/configuration.nix
+              ../../hosts/catbox/configuration.nix
               inputs.home-manager.nixosModules.home-manager
-              inputs.identities.nixosModules.oceando
+              inputs.identities.nixosModules.catbox
               inputs.sops-nix.nixosModules.sops
               { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
             ];
           };
         in
-        oceando.config.system.build.streamLayeredImage;
-      aarch64-linux.oceando =
+        catbox.config.system.build.streamLayeredImage;
+      aarch64-linux.catbox =
         let
-          oceando = inputs.nixpkgs.lib.nixosSystem {
+          catbox = inputs.nixpkgs.lib.nixosSystem {
             pkgs = import inputs.nixpkgs {
               system = "aarch64-linux";
               config.allowUnfree = true;
             };
             modules = [
-              ../../hosts/oceando/configuration.nix
+              ../../hosts/catbox/configuration.nix
               inputs.home-manager.nixosModules.home-manager
-              inputs.identities.nixosModules.oceando
+              inputs.identities.nixosModules.catbox
               inputs.sops-nix.nixosModules.sops
               { home-manager.sharedModules = [ inputs.devlib.homeManagerModule ]; }
             ];
           };
         in
-        oceando.config.system.build.streamLayeredImage;
+        catbox.config.system.build.streamLayeredImage;
     };
   };
 }

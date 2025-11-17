@@ -29,7 +29,7 @@
   };
 
   system.build.streamLayeredImage = pkgs.dockerTools.streamLayeredImage {
-    name = "ghcr.io/shikanime/shikanime/oceando";
+    name = "ghcr.io/shikanime/shikanime/catbox";
     contents = [
       config.system.build.toplevel
       pkgs.coreutils
@@ -66,7 +66,7 @@
           }
         ];
         "org.opencontainers.image.source" = "https://github.com/shikanime/shikanime";
-        "org.opencontainers.image.description" = "Oceando development environment";
+        "org.opencontainers.image.description" = "catbox development environment";
         "org.opencontainers.image.licenses" = "AGPL-3.0-or-later";
       };
       ExposedPorts = {
