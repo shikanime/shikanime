@@ -1,7 +1,5 @@
 { lib, ... }:
 
-with lib;
-
 {
   nix.linux-builder.enable = true;
 
@@ -57,7 +55,7 @@ with lib;
 
   programs.zsh = {
     enable = true;
-    shellInit = mkAfter ''test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)";'';
+    shellInit = lib.mkAfter ''test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)";'';
   };
 
   programs.gnupg.agent = {
