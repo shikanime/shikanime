@@ -5,14 +5,11 @@
     { pkgs, ... }:
     {
       devenv.shells = {
-        imports = [
-          inputs.devenv.devenvModules.shikanime-studio
-        ];
         default = {
-          cachix = {
-            enable = true;
-            push = "shikanime";
-          };
+          imports = [
+            inputs.devlib.devenvModules.shikanime-studio
+          ];
+          cachix.push = "shikanime";
           languages.opentofu.enable = true;
           packages = [
             pkgs.buildah
