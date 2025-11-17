@@ -139,26 +139,26 @@ def create_manifest [ctx: record, images: list<record>]: nothing -> nothing {
     $images | par-each { |image| annotate_manifest $ctx $image } | ignore
 }
 
-def push_manifest [ctx: record]: nothing -> nothing {
+def push_manifest [ctx: record]: nothing -> error {
     if $ctx.push_image {
         buildah manifest push --all $ctx.image $"docker://($ctx.image)"
     }
 }
 
-def build_and_push_multiplatform_image [ctx: record]: nothing -> nothing {
-    let images = $ctx.platforms | par-each { |platform| $platform | build_platform_image $ctx }
+def build_and_push_multiplatform_image [ctx: record]: nothing -> error {
+    let images: list<record> = $ctx.platforms | par-each { |platform| $platform | build_platform_image $ctx }
     create_manifest $ctx $images
     push_manifest $ctx
 }
 
-def build_and_push_image [ctx: record]: nothing -> nothing {
+def build_and_push_image [ctx: record]: nothing -> error {
     let platform = $ctx.platforms | first | parse_platform
     let flake_url = format_nix_flake $ctx $platform
     let image_name = format_platform_image $ctx $platform
     $flake_url | build_flake | push_image $ctx $image_name
 }
 
-def build [ctx: record]: nothing -> nothing {
+def build [ctx: record]: nothing -> error {
     if (($ctx.platforms | length) == 1) {
         build_and_push_image $ctx
     } else {
