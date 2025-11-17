@@ -155,8 +155,7 @@ def build_and_push_multiplatform_image [ctx: record]: nothing -> error {
 def build_and_push_image [ctx: record]: nothing -> error {
     let platform = $ctx.platforms | first | parse_platform
     let flake_url = format_nix_flake $ctx $platform
-    let image_name = format_platform_image $ctx $platform
-    $flake_url | build_flake | push_image $ctx $image_name
+    $flake_url | build_flake | push_image $ctx $ctx.image
 }
 
 def build [ctx: record]: nothing -> error {
