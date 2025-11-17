@@ -91,26 +91,34 @@ def build_flake []: string -> string {
     nix build --accept-flake-config --print-out-paths $in | str trim
 }
 
-def push_image [ctx: record, image: string]: string -> error {
-    let docker_host = get_docker_host
-    if $ctx.push_image {
-        $in
-        | run-external
-        | (
-            skopeo copy
-                --dest-daemon-host $"($docker_host)"
-                $"docker-archive:/dev/stdin"
-                $"docker://($image)"
-        )
-    }
-    $in
-    | run-external
-    | (
+def push_image_to_registry [docker_host: string, image: string]: string -> error {
+    (
+        skopeo copy
+            --dest-daemon-host $"($docker_host)"
+            $"docker-archive:/dev/stdin"
+            $"docker://($image)"
+    )
+}
+
+def push_image_to_docker_daemon [docker_host: string, image: string]: string -> error {
+    (
         skopeo copy
             --dest-daemon-host $"($docker_host)"
             $"docker-archive:/dev/stdin"
             $"docker-daemon:($image)"
     )
+}
+
+def push_image [ctx: record, image: string]: string -> error {
+    let docker_host = get_docker_host
+    if $ctx.push_image {
+        $in
+        | run-external
+        | push_image_to_registry $docker_host $image
+    }
+    $in
+    | run-external
+    | push_image_to_docker_daemon $docker_host $image
 }
 
 def build_platform_image [ctx: record]: string -> record {
