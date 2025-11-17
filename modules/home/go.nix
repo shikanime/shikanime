@@ -4,8 +4,6 @@
   ...
 }:
 
-with lib;
-
 {
   programs = {
     go = {
@@ -14,7 +12,7 @@ with lib;
     };
 
     helix.languages.language-server = {
-      gopls.command = "${getExe pkgs.gopls}";
+      gopls.command = "${lib.getExe pkgs.gopls}";
     };
 
     nushell.extraConfig = ''

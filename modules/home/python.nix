@@ -1,7 +1,5 @@
 { lib, pkgs, ... }:
 
-with lib;
-
 {
   home.packages = [
     pkgs.uv
@@ -9,7 +7,7 @@ with lib;
 
   programs.helix.languages.language-server = {
     jedi.command = "${pkgs.python312Packages.jedi-language-server}/bin/jedi-language-server";
-    ruff.command = "${getExe pkgs.ruff}";
+    ruff.command = "${lib.getExe pkgs.ruff}";
   };
 
   programs.nushell.extraConfig = ''

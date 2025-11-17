@@ -1,7 +1,3 @@
-{ lib, ... }:
-
-with lib;
-
 {
   nix.linux-builder.enable = true;
 

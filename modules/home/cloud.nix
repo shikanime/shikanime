@@ -4,15 +4,13 @@
   ...
 }:
 
-with lib;
-
 {
   programs = {
     docker-cli.enable = true;
 
     gh.enable = true;
 
-    git.settings.credential."https://gitlab.com".helper = "${getExe pkgs.glab} auth git-credential";
+    git.settings.credential."https://gitlab.com".helper = "${lib.getExe pkgs.glab} auth git-credential";
 
     helix.languages.language-server = {
       docker-compose-language-server.command = "${pkgs.docker-compose-language-service}/bin/docker-compose-langserver";

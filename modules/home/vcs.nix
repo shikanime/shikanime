@@ -5,8 +5,6 @@
   ...
 }:
 
-with lib;
-
 {
   home.packages = [
     pkgs.ghstack
@@ -86,7 +84,7 @@ with lib;
           tape = "push --mirror";
         };
         advice.skippedCherryPicks = false;
-        core.editor = "${getExe pkgs.helix}";
+        core.editor = "${lib.getExe pkgs.helix}";
         init.defaultBranch = "main";
         pull.rebase = true;
         push.autoSetupRemote = true;
