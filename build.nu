@@ -44,13 +44,13 @@ def format_nix_flake [ctx: record, platform: record]: nothing -> string {
 }
 
 def get_platforms []: nothing -> string {
-    if ($env.PLATFORMS? | default "" | is-empty) {
+    let platform: string = $env.PLATFORM? | default ""
+    if ($platform | is-empty) {
         let detected: string = detect_host_platform
-        print $"No PLATFORMS specified, detected host platform: ($detected)"
+        print $"No PLATFORM specified, detected host platform: ($detected)"
         $detected
-    } else {
-        $env.PLATFORMS | split row ","
     }
+    $platform
 }
 
 def get_push_image []: nothing -> bool {
@@ -71,8 +71,8 @@ def get_skaffold_context []: nothing -> record {
 }
 
 def get_docker_host []: nothing -> string {
-    let docker_host: string =  $env.DOCKER_HOST
-    if ($docker_host | default "" | is-empty) {
+    let docker_host: string =  $env.DOCKER_HOST | default ""
+    if ($docker_host | is-empty) {
         if ("/var/run/docker.sock" | path exists) {
             "unix:///var/run/docker.sock"
         } else if ("$HOME/.docker/run/docker.sock" | path exists) {
