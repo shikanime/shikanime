@@ -20,6 +20,7 @@
             shell.enable = true;
           };
           packages = [
+            pkgs.buildah
             pkgs.direnv
             pkgs.gh
             pkgs.gnused
@@ -27,6 +28,7 @@
             pkgs.sapling
             pkgs.scaleway-cli
             pkgs.skaffold
+            pkgs.skopeo
             pkgs.sops
           ];
           treefmt = {
