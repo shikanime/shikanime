@@ -78,14 +78,16 @@
 
     git = {
       includes = [
-        { path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path; }
         {
-          path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-github-config.path;
-          condition = "hasconfig:remote.*.url:https://github.com/**";
+          path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path;
         }
         {
-          path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-gitlab-config.path;
+          condition = "hasconfig:remote.*.url:https://github.com/**";
+          path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-github-config.path;
+        }
+        {
           condition = "hasconfig:remote.*.url:https://gitlab.com/**";
+          path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-gitlab-config.path;
         }
       ];
       signing = {
