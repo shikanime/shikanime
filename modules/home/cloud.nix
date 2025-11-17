@@ -5,6 +5,11 @@
 }:
 
 {
+  home.packages = [
+    pkgs.buildah
+    pkgs.skopeo
+  ];
+
   programs = {
     docker-cli.enable = true;
 

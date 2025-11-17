@@ -12,6 +12,7 @@
           cachix.push = "shikanime";
           languages.opentofu.enable = true;
           packages = [
+            pkgs.buildah
             pkgs.direnv
             pkgs.gh
             pkgs.gnused
@@ -19,6 +20,7 @@
             pkgs.sapling
             pkgs.scaleway-cli
             pkgs.skaffold
+            pkgs.skopeo
             pkgs.sops
           ];
         };
