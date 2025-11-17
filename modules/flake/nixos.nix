@@ -88,6 +88,11 @@
             modules = [
               ../../hosts/catbox/configuration.nix
               inputs.home-manager.nixosModules.home-manager
+              {
+                home-manager.sharedModules = [
+                  inputs.devlib.homeManagerModule
+                ];
+              }
             ];
           };
         in
@@ -102,6 +107,11 @@
             modules = [
               ../../hosts/catbox/configuration.nix
               inputs.home-manager.nixosModules.home-manager
+              {
+                home-manager.sharedModules = [
+                  inputs.devlib.homeManagerModule
+                ];
+              }
             ];
           };
         in
