@@ -1,5 +1,5 @@
 #!/usr/bin/env nix
-#! nix develop --impure --command nu
+#! nix shell nixpkgs#buildah nixpkgs#nushell nixpkgs#skopeo --command nu
 
 def detect_host_arch []: nothing -> string {
     let arch: string = uname | get machine
