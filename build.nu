@@ -44,13 +44,13 @@ def format_nix_flake [ctx: record, platform: record]: nothing -> string {
 }
 
 def get_platforms []: nothing -> string {
-    let platform: string = $env.PLATFORM? | default ""
-    if ($platform | is-empty) {
+    if ($env.PLATFORMS? | default "" | is-empty) {
         let detected: string = detect_host_platform
-        print $"No PLATFORM specified, detected host platform: ($detected)"
+        print $"No PLATFORMS specified, detected host platform: ($detected)"
         $detected
+    } else {
+        $env.PLATFORMS | split row ","
     }
-    $platform
 }
 
 def get_push_image []: nothing -> bool {
@@ -71,8 +71,7 @@ def get_skaffold_context []: nothing -> record {
 }
 
 def get_docker_host []: nothing -> string {
-    let docker_host: string =  $env.DOCKER_HOST | default ""
-    if ($docker_host | is-empty) {
+    if ($env.DOCKER_HOST? | default "" | is-empty) {
         if ("/var/run/docker.sock" | path exists) {
             "unix:///var/run/docker.sock"
         } else if ("$HOME/.docker/run/docker.sock" | path exists) {
@@ -82,8 +81,9 @@ def get_docker_host []: nothing -> string {
         } else {
             "unix:///var/run/docker.sock"
         }
+    } else {
+        $env.DOCKER_HOST
     }
-    $docker_host
 }
 
 def build_flake []: string -> string {
@@ -101,7 +101,7 @@ def push_image [ctx: record, image: string]: string -> error {
     let docker_host = get_docker_host
     (
         run-external $in | skopeo copy
-            --dest-daemon-host $"($docker_host)"
+            --dst-daemon-host $"($docker_host)"
             $"docker-archive:/dev/stdin"
             $"docker-daemon:($image)"
     )
