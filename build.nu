@@ -113,9 +113,9 @@ def push_image [ctx: record, image: string]: string -> error {
     let docker_host = get_docker_host
     let image_stream = run-external $in
     if $ctx.push_image {
-        image_stream | push_image_to_registry $docker_host $image
+        $image_stream | push_image_to_registry $docker_host $image
     } else {
-        image_stream | push_image_to_docker_daemon $docker_host $image
+        $image_stream | push_image_to_docker_daemon $docker_host $image
     }
 }
 
