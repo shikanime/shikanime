@@ -4,6 +4,6 @@ metadata:
   name: niximgs
 build:
   artifacts:
-    - image: ghcr.io/shikanime/catbox
+    - image: ghcr.io/shikanime/shikanime/catbox
       custom:
         buildCommand: ./build.nu
