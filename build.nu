@@ -79,6 +79,12 @@ def build_image [ctx: record, platform: record]: string -> string {
     $flake_url | build_flake
 }
 
+def push_image [ctx: record, image: string]: nothing -> nothing {
+    if $ctx.push_image {
+        open --raw $image | skopeo copy "docker-archive:/dev/stdin" $"docker://($ctx.image)"
+    }
+}
+
 def build_platform_image [ctx: record]: string -> record {
     let platform = $in | parse_platform
     let image = $ctx.image | parse_image
@@ -86,43 +92,42 @@ def build_platform_image [ctx: record]: string -> record {
     let path = $image | build_image $ctx $platform
     let formatted_image = format_platform_image $ctx $platform
 
+    if $ctx.push_image {
+        push_image $ctx $path
+    }
+
     {name: $formatted_image, platform: $platform, path: $path}
 }
 
-def push_image [ctx: record]: record -> nothing {
-    if $ctx.push_image {
-        skopeo copy $"docker-archive:($in.path)" $"docker://($in.name)"
-    }
-}
+
 
 def remove_manifest [ctx: record]: nothing -> nothing {
     try {
-        docker manifest rm $ctx.image
+        buildah manifest rm $ctx.image
     } catch { |err|
         print $"Manifest removal failed for ($ctx.image): ($err.msg)"
     }
 }
 
 def annotate_manifest [ctx: record, image: record]: nothing -> nothing {
-    docker manifest annotate $ctx.image $image.name --os $image.platform.os --arch $image.platform.arch
+    buildah manifest add --os $image.platform.os --arch $image.platform.arch $ctx.image $"docker://($image.name)"
 }
 
 def create_manifest [ctx: record, images: list<record>]: nothing -> nothing {
     print $"Creating manifest for ($ctx.image)..."
     remove_manifest $ctx
-    docker manifest create $ctx.image ...($images | get name)
+    buildah manifest create $ctx.image
     $images | par-each { |image| annotate_manifest $ctx $image }
 }
 
 def push_manifest [ctx: record]: nothing -> nothing {
     if $ctx.push_image {
-        docker manifest push $ctx.image
+        buildah manifest push --all $ctx.image $"docker://($ctx.image)"
     }
 }
 
 def build_and_push_multiplatform_image [ctx: record]: nothing -> nothing {
     let images = $ctx.platforms | par-each { |platform| $platform | build_platform_image $ctx }
-    $images | par-each { |image| $image | push_image $ctx }
     create_manifest $ctx $images
     push_manifest $ctx
 }
@@ -130,8 +135,10 @@ def build_and_push_multiplatform_image [ctx: record]: nothing -> nothing {
 def build_and_push_image [ctx: record]: nothing -> nothing {
     let platform = $ctx.platforms | first | parse_platform
     let image = $ctx.image | parse_image
-    let loaded_image = $image | build_image $ctx $platform
-    {name: $ctx.image, path: $loaded_image} | push_image $ctx
+    let built_image = $image | build_image $ctx $platform
+    if $ctx.push_image {
+        push_image $ctx $built_image
+    }
 }
 
 def build [ctx: record]: nothing -> nothing {
