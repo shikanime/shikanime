@@ -79,9 +79,9 @@ def build_image [ctx: record, platform: record]: string -> string {
     $flake_url | build_flake
 }
 
-def push_image [ctx: record, image: string]: nothing -> nothing {
+def push_image [ctx: record]: string -> nothing {
     if $ctx.push_image {
-        open --raw $image | skopeo copy "docker-archive:/dev/stdin" $"docker://($ctx.image)"
+        skopeo copy $"docker-archive:/($in)" $"docker://($ctx.image)"
     }
 }
 
@@ -93,7 +93,7 @@ def build_platform_image [ctx: record]: string -> record {
     let formatted_image = format_platform_image $ctx $platform
 
     if $ctx.push_image {
-        push_image $ctx $path
+        $path | push_image $ctx
     }
 
     {name: $formatted_image, platform: $platform, path: $path}
@@ -135,9 +135,9 @@ def build_and_push_multiplatform_image [ctx: record]: nothing -> nothing {
 def build_and_push_image [ctx: record]: nothing -> nothing {
     let platform = $ctx.platforms | first | parse_platform
     let image = $ctx.image | parse_image
-    let built_image = $image | build_image $ctx $platform
+    let path = $image | build_image $ctx $platform
     if $ctx.push_image {
-        push_image $ctx $built_image
+        $path | push_image $ctx
     }
 }
 
