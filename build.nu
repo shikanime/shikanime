@@ -77,6 +77,8 @@ def build_flake []: string -> string {
 def push_image [ctx: record, image: string]: string -> nothing {
     if $ctx.push_image {
         run-external $in | skopeo copy $"docker-archive:/dev/stdin" $"docker://($image)"
+    } else {
+        run-external $in | skopeo copy $"docker-archive:/dev/stdin" $"docker-daemon:($image)"
     }
 }
 
@@ -84,15 +86,9 @@ def build_platform_image [ctx: record]: string -> record {
     let platform = $in | parse_platform
     let flake_url = format_nix_flake $ctx $platform
     let image_name = format_platform_image $ctx $platform
-
-    if $ctx.push_image {
-        $flake_url | build_flake | push_image $ctx $image_name
-    }
-
+    $flake_url | build_flake | push_image $ctx $image_name
     {name: $image_name, platform: $platform, flake: $flake_url}
 }
-
-
 
 def remove_manifest [ctx: record]: nothing -> nothing {
     try {
@@ -129,10 +125,7 @@ def build_and_push_image [ctx: record]: nothing -> nothing {
     let platform = $ctx.platforms | first | parse_platform
     let flake_url = format_nix_flake $ctx $platform
     let image_name = format_platform_image $ctx $platform
-
-    if $ctx.push_image {
-        $flake_url | build_flake | push_image $ctx $image_name
-    }
+    $flake_url | build_flake | push_image $ctx $image_name
 }
 
 def build [ctx: record]: nothing -> nothing {
