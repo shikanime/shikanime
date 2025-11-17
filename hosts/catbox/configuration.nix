@@ -29,7 +29,7 @@
   };
 
   system.build.streamLayeredImage = pkgs.dockerTools.streamLayeredImage {
-    name = "ghcr.io/shikanime/catbox";
+    name = "ghcr.io/shikanime/shikanime/catbox";
     contents = [
       config.system.build.toplevel
       pkgs.coreutils
