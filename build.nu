@@ -1,5 +1,5 @@
 #!/usr/bin/env nix
-#! nix develop --impure --command nu
+#! nix shell nixpkgs#buildah nixpkgs#nushell nixpkgs#skopeo --command nu
 
 def detect_host_arch []: nothing -> string {
     let arch: string = uname | get machine
@@ -37,9 +37,10 @@ def format_platform_image [ctx: record, platform: record]: nothing -> string {
     $"($ctx.image)_($platform.os)_($platform.arch)"
 }
 
-def format_nix_flake [ctx: record, image: string, platform: record]: nothing -> string {
+def format_nix_flake [ctx: record, platform: record]: nothing -> string {
     let formatted_arch = $platform.arch | format_arch
-    $"($ctx.build_context)#packages.($formatted_arch)-($platform.os).($image)"
+    let formatted_image = $ctx.image | parse_image
+    $"($ctx.build_context)#packages.($formatted_arch)-($platform.os).($formatted_image)"
 }
 
 def get_platforms []: nothing -> string {
@@ -73,65 +74,65 @@ def build_flake []: string -> string {
     nix build --accept-flake-config --print-out-paths $in | str trim
 }
 
-def build_image [ctx: record, platform: record]: string -> string {
-    print $"Building ($in) for ($platform.os)/($platform.arch)..."
-    let flake_url = format_nix_flake $ctx $in $platform
-    $flake_url | build_flake
+def push_image [ctx: record, image: string]: string -> nothing {
+    if $ctx.push_image {
+        run-external $in | skopeo copy $"docker-archive:/dev/stdin" $"docker://($image)"
+    }
 }
 
 def build_platform_image [ctx: record]: string -> record {
     let platform = $in | parse_platform
-    let image = $ctx.image | parse_image
+    let flake_url = format_nix_flake $ctx $platform
+    let image_name = format_platform_image $ctx $platform
 
-    let path = $image | build_image $ctx $platform
-    let formatted_image = format_platform_image $ctx $platform
-
-    {name: $formatted_image, platform: $platform, path: $path}
-}
-
-def push_image [ctx: record]: record -> nothing {
     if $ctx.push_image {
-        skopeo copy $"docker-archive:($in.path)" $"docker://($in.name)"
+        $flake_url | build_flake | push_image $ctx $image_name
     }
+
+    {name: $image_name, platform: $platform, flake: $flake_url}
 }
+
+
 
 def remove_manifest [ctx: record]: nothing -> nothing {
     try {
-        docker manifest rm $ctx.image
+        buildah manifest rm $ctx.image
     } catch { |err|
         print $"Manifest removal failed for ($ctx.image): ($err.msg)"
     }
 }
 
 def annotate_manifest [ctx: record, image: record]: nothing -> nothing {
-    docker manifest annotate $ctx.image $image.name --os $image.platform.os --arch $image.platform.arch
+    buildah manifest add --os $image.platform.os --arch $image.platform.arch $ctx.image $"docker://($image.name)"
 }
 
 def create_manifest [ctx: record, images: list<record>]: nothing -> nothing {
     print $"Creating manifest for ($ctx.image)..."
     remove_manifest $ctx
-    docker manifest create $ctx.image ...($images | get name)
+    buildah manifest create $ctx.image
     $images | par-each { |image| annotate_manifest $ctx $image }
 }
 
 def push_manifest [ctx: record]: nothing -> nothing {
     if $ctx.push_image {
-        docker manifest push $ctx.image
+        buildah manifest push --all $ctx.image $"docker://($ctx.image)"
     }
 }
 
 def build_and_push_multiplatform_image [ctx: record]: nothing -> nothing {
     let images = $ctx.platforms | par-each { |platform| $platform | build_platform_image $ctx }
-    $images | par-each { |image| $image | push_image $ctx }
     create_manifest $ctx $images
     push_manifest $ctx
 }
 
 def build_and_push_image [ctx: record]: nothing -> nothing {
     let platform = $ctx.platforms | first | parse_platform
-    let image = $ctx.image | parse_image
-    let loaded_image = $image | build_image $ctx $platform
-    {name: $ctx.image, path: $loaded_image} | push_image $ctx
+    let flake_url = format_nix_flake $ctx $platform
+    let image_name = format_platform_image $ctx $platform
+
+    if $ctx.push_image {
+        $flake_url | build_flake | push_image $ctx $image_name
+    }
 }
 
 def build [ctx: record]: nothing -> nothing {
