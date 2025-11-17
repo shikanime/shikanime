@@ -6,7 +6,7 @@
 
 {
   home.packages = [
-    pkgs.buildha
+    pkgs.buildah
     pkgs.skopeo
   ];
 
