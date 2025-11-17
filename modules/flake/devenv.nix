@@ -1,24 +1,19 @@
+{ inputs, ... }:
+
 {
   perSystem =
     { pkgs, ... }:
     {
       devenv.shells = {
+        imports = [
+          inputs.devenv.devenvModules.shikanime-studio
+        ];
         default = {
           cachix = {
             enable = true;
             push = "shikanime";
           };
-          containers = pkgs.lib.mkForce { };
-          gitignore = {
-            enable = true;
-            enableDefaultTemplates = true;
-          };
-          github.enable = true;
-          languages = {
-            nix.enable = true;
-            opentofu.enable = true;
-            shell.enable = true;
-          };
+          languages.opentofu.enable = true;
           packages = [
             pkgs.buildah
             pkgs.direnv
@@ -31,14 +26,6 @@
             pkgs.skopeo
             pkgs.sops
           ];
-          treefmt = {
-            enable = true;
-            config = {
-              enableDefaultExcludes = true;
-              programs.prettier.enable = true;
-              projectRootFile = "flake.nix";
-            };
-          };
         };
         build = {
           containers = pkgs.lib.mkForce { };
