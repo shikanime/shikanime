@@ -69,10 +69,7 @@
         "org.opencontainers.image.description" = "catbox development environment";
         "org.opencontainers.image.licenses" = "AGPL-3.0-or-later";
       };
-      ExposedPorts = {
-        "22/tcp" = { };
-        "5353/udp" = { };
-      };
+      ExposedPorts."22/tcp" = { };
       Entrypoint = [ "/init" ];
     };
   };
