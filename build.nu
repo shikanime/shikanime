@@ -90,22 +90,21 @@ def build_flake []: string -> string {
     nix build --accept-flake-config --print-out-paths $in | str trim
 }
 
-def push_image [ctx: record, image: string]: string -> nothing {
+def push_image [ctx: record, image: string]: string -> error {
     if $ctx.push_image {
         (
             run-external $in | skopeo copy
                 $"docker-archive:/dev/stdin"
                 $"docker://($image)"
         )
-    } else {
-        let docker_host = get_docker_host
-        (
-            run-external $in | skopeo copy
-                --dst-daemon-host $"($docker_host)"
-                $"docker-archive:/dev/stdin"
-                $"docker-daemon:($image)"
-        )
     }
+    let docker_host = get_docker_host
+    (
+        run-external $in | skopeo copy
+            --dst-daemon-host $"($docker_host)"
+            $"docker-archive:/dev/stdin"
+            $"docker-daemon:($image)"
+    )
 }
 
 def build_platform_image [ctx: record]: string -> record {
