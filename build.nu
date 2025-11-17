@@ -111,14 +111,12 @@ def push_image_to_docker_daemon [docker_host: string, image: string]: string -> 
 
 def push_image [ctx: record, image: string]: string -> error {
     let docker_host = get_docker_host
+    let image_stream = run-external $in
     if $ctx.push_image {
-        $in
-        | run-external
-        | push_image_to_registry $docker_host $image
+        image_stream | push_image_to_registry $docker_host $image
+    } else {
+        image_stream | push_image_to_docker_daemon $docker_host $image
     }
-    $in
-    | run-external
-    | push_image_to_docker_daemon $docker_host $image
 }
 
 def build_platform_image [ctx: record]: string -> record {
