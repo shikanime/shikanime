@@ -5,6 +5,11 @@
 }:
 
 {
+  home.packages = [
+    pkgs.buildah
+    pkgs.skopeo
+  ];
+
   programs = {
     docker-cli.enable = true;
 
@@ -26,4 +31,17 @@
 
     skaffold.enable = true;
   };
+
+  xdg.configFile."containers/policy.json".source =
+    let
+      format = pkgs.formats.json { };
+    in
+    format.generate "policy.json" {
+      default = [
+        { type = "insecureAcceptAnything"; }
+      ];
+      transports.docker-daemon = {
+        "" = [ { type = "insecureAcceptAnything"; } ];
+      };
+    };
 }
