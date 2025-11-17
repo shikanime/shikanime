@@ -13,16 +13,18 @@
     options = "--delete-older-than 30d";
   };
 
-  # Optimize nix store weekly
-  nix.optimise = {
-    automatic = true;
-    dates = [ "weekly" ];
-  };
+  nix = {
+    # Optimize nix store weekly
+    optimise = {
+      automatic = true;
+      dates = [ "weekly" ];
+    };
 
-  # Allow wheel users to interact with the daemon
-  nix.settings = {
-    download-buffer-size = 524288000;
-    trusted-users = [ "@wheel" ];
+    # Allow wheel users to interact with the daemon
+    settings = {
+      download-buffer-size = 524288000;
+      trusted-users = [ "@wheel" ];
+    };
   };
 
   # Automatically upgrade NixOS

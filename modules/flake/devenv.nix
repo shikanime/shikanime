@@ -27,6 +27,7 @@
             pkgs.sapling
             pkgs.scaleway-cli
             pkgs.skaffold
+            pkgs.sops
           ];
           treefmt = {
             enable = true;

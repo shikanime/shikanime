@@ -1,4 +1,4 @@
-{ modulesPath, ... }:
+{ config, modulesPath, ... }:
 
 {
   imports = [
@@ -29,6 +29,10 @@
     ./users/nishir/home-configuration.nix
   ];
 
+  nix.extraOptions = ''
+    !include ${config.sops.secrets.nix-config.path}
+  '';
+
   networking.hostName = "fushi";
 
   # https://github.com/NixOS/nixpkgs/issues/154163#issuecomment-1008362877
@@ -39,18 +43,6 @@
   ];
 
   services = {
-    kubernetes = {
-      apiserverAddress = "https://nishir.taila659a.ts.net:6443";
-      kubelet.kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
-      masterAddress = "nishir.taila659a.ts.net";
-      roles = [ "node" ];
-    };
-
-    tailscale = {
-      extraUpFlags = [ "--ssh" ];
-      useRoutingFeatures = "server";
-    };
-
     avahi = {
       enable = true;
       nssmdns4 = true;
@@ -62,15 +54,42 @@
       };
     };
 
+    kubernetes = {
+      apiserverAddress = "https://nishir.taila659a.ts.net:6443";
+      kubelet.kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
+      masterAddress = "nishir.taila659a.ts.net";
+      roles = [ "node" ];
+    };
+
+    tailscale = {
+      authKeyFile = config.sops.secrets.tailscale-authkey.path;
+      extraUpFlags = [ "--ssh" ];
+      useRoutingFeatures = "server";
+    };
+
     openssh = {
       enable = true;
       openFirewall = true;
     };
   };
 
-  users.users.nishir = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    home = "/home/nishir";
+  users.users = {
+    nishir = {
+      initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
+      extraGroups = [ "wheel" ];
+      isNormalUser = true;
+      home = "/home/nishir";
+    };
+    root.initialHashedPassword = "$y$j9T$yoHV44BnXG1/k.HRE0ZRT/$xtna749AkoM0HK0Aa6S1zmGb4/WnnUsdR3hszsP5cF0";
+  };
+
+  sops = {
+    age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+    defaultSopsFile = ../../secrets/fushi.enc.yaml;
+    defaultSopsFormat = "yaml";
+    secrets = {
+      tailscale-authkey = { };
+      nix-config = { };
+    };
   };
 }

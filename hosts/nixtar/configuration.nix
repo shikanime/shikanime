@@ -1,4 +1,9 @@
-{ modulesPath, pkgs, ... }:
+{
+  config,
+  modulesPath,
+  pkgs,
+  ...
+}:
 
 let
   wsl-lib = pkgs.runCommand "wsl-lib" { } ''
@@ -57,6 +62,12 @@ in
 
   networking.hostName = "nixtar";
 
+  nix.extraOptions = ''
+    !include ${config.sops.secrets.nix-config.path}
+  '';
+
+  programs.nix-ld.libraries = [ wsl-lib ];
+
   services = {
     openssh = {
       enable = true;
@@ -69,7 +80,16 @@ in
     xserver.videoDrivers = [ "nvidia" ];
   };
 
-  programs.nix-ld.libraries = [ wsl-lib ];
+  sops = {
+    age = {
+      generateKey = true;
+      keyFile = "/var/lib/spos-nix/key.txt";
+      sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+    };
+    defaultSopsFile = ../../secrets/nixtar.enc.yaml;
+    defaultSopsFormat = "yaml";
+    secrets.nix-config = { };
+  };
 
   users.users.shika = {
     isNormalUser = true;

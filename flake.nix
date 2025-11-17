@@ -7,7 +7,6 @@
     git-hooks.url = "github:cachix/git-hooks.nix";
     flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager.url = "github:nix-community/home-manager";
-    identities.url = "github:shikanime/identities";
     nix-darwin.url = "github:nix-darwin/nix-darwin";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
