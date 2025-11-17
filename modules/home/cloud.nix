@@ -7,11 +7,6 @@
 with lib;
 
 {
-  home.packages = [
-    pkgs.glab
-    pkgs.tea
-  ];
-
   programs = {
     docker-cli.enable = true;
 
