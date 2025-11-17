@@ -92,14 +92,15 @@ def build_flake []: string -> string {
 }
 
 def push_image [ctx: record, image: string]: string -> error {
+    let docker_host = get_docker_host
     if $ctx.push_image {
         (
             run-external $in | skopeo copy
+                --dest-daemon-host $"($docker_host)"
                 $"docker-archive:/dev/stdin"
                 $"docker://($image)"
         )
     }
-    let docker_host = get_docker_host
     (
         run-external $in | skopeo copy
             --dest-daemon-host $"($docker_host)"
