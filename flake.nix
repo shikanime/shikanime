@@ -10,8 +10,8 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    sops-nix.url = "github:Mic92/sops-nix";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    sops-nix.url = "github:mic92/sops-nix";
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
