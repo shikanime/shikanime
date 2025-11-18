@@ -6,10 +6,7 @@
 
 {
   programs = {
-    go = {
-      enable = true;
-      telemetry.mode = "off";
-    };
+    go.enable = true;
 
     helix.languages.language-server = {
       gopls.command = "${lib.getExe pkgs.gopls}";
