@@ -30,17 +30,7 @@
 
   programs.git = {
     includes = [
-      {
-        path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path;
-      }
-      {
-        condition = "hasconfig:remote.*.url:https://github.com/**";
-        path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-github-config.path;
-      }
-      {
-        condition = "hasconfig:remote.*.url:https://gitlab.com/**";
-        path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-gitlab-config.path;
-      }
+      { path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path; }
     ];
 
     # Re-use Windows credentials
@@ -60,12 +50,8 @@
       cachix-config = { };
       ghstack-config = { };
       git-config = { };
-      git-github-config = { };
-      git-gitlab-config = { };
       glab-cli-config = { };
       jujutsu-config = { };
-      jujutsu-github-config = { };
-      jujutsu-gitlab-config = { };
       nix-config = { };
       sapling-config = { };
     };
@@ -89,9 +75,5 @@
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.cachix-config.path;
     "jj/conf.d/default.toml".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-config.path;
-    "jj/conf.d/github.toml".source =
-      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-github-config.path;
-    "jj/conf.d/gitlab.toml".source =
-      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-gitlab-config.path;
   };
 }
