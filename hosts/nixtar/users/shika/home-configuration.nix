@@ -26,19 +26,23 @@
     !include ${config.sops.secrets.nix-config.path}
   '';
 
-  programs.bash.enable = true;
+  programs = {
+    bash.enable = true;
 
-  programs.git = {
-    includes = [
-      { path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path; }
-    ];
+    docker-cli.settings.credsStore = "secretservice";
 
-    # Re-use Windows credentials
-    settings.credential.helper = "/mnt/c/Users/${config.home.username}/scoop/shims/git-credential-manager.exe";
+    git = {
+      includes = [
+        { path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path; }
+      ];
 
-    signing = {
-      format = "openpgp";
-      signByDefault = true;
+      # Re-use Windows credentials
+      settings.credential.helper = "/mnt/c/Users/${config.home.username}/scoop/shims/git-credential-manager.exe";
+
+      signing = {
+        format = "openpgp";
+        signByDefault = true;
+      };
     };
   };
 

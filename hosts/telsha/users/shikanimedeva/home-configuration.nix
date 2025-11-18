@@ -71,10 +71,7 @@
   programs = {
     bash.enable = true;
 
-    docker-cli.settings = {
-      credsStore = "osxkeychain";
-      currentContext = "rancher-desktop";
-    };
+    docker-cli.settings.credsStore = "osxkeychain";
 
     git = {
       includes = [
