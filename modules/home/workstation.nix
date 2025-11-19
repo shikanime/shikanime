@@ -80,10 +80,9 @@
           user = "shika";
           setEnv.TERM = "xterm-256color";
         };
-        localhost = {
-          hostname = "localhost";
+        catbox = {
+          hostname = "catbox.taila659a.ts.net";
           user = "shika";
-          port = 2222;
           setEnv.TERM = "xterm-256color";
         };
       };
