@@ -10,6 +10,12 @@
             inputs.devlib.devenvModules.shikanime-studio
           ];
           cachix.push = "shikanime";
+          github.workflows.check.settings.jobs.check.steps = [
+            {
+              name = "Check";
+              uses = "actions/checkout@v3";
+            }
+          ];
           languages.opentofu.enable = true;
           packages = [
             pkgs.direnv
