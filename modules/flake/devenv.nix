@@ -21,6 +21,9 @@
             pkgs.skaffold
             pkgs.sops
           ];
+          shikanime-studio.github.actions.create-github-app-token.extraOptions.repositories = [
+            "identities"
+          ];
         };
         build = {
           containers = pkgs.lib.mkForce { };
