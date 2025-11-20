@@ -21,7 +21,7 @@
             pkgs.skaffold
             pkgs.sops
           ];
-          shikanime-studio.github.actions.create-github-app-token.extraOptions.repositories = [
+          github.actions.create-github-app-token."with".repositories = [
             "identities"
           ];
         };
