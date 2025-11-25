@@ -96,9 +96,9 @@ in
     };
     defaultSopsFile = ../../secrets/nixtar.enc.yaml;
     defaultSopsFormat = "yaml";
-    secrets={
+    secrets = {
       nix-config = { };
-      tailscale-authkey = {};
+      tailscale-authkey = { };
     };
   };
 
