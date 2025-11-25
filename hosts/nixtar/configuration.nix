@@ -75,6 +75,9 @@ in
     };
 
     gnome.gnome-keyring.enable = true;
+
+    network.enable = true;
+
     passSecretService.enable = true;
 
     xserver.videoDrivers = [ "nvidia" ];
