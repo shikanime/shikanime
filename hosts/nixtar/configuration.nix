@@ -105,10 +105,10 @@ in
     enable = true;
     defaultUser = "shika";
     interop.register = true;
-    network = {
-      generateHosts= false;
+    useWindowsDriver = true;
+    wslConf.network = {
+      generateHosts = false;
       generateResolvConf = false;
     };
-    useWindowsDriver = true;
   };
 }
