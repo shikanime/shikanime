@@ -75,6 +75,7 @@ in
     };
 
     gnome.gnome-keyring.enable = true;
+
     passSecretService.enable = true;
 
     xserver.videoDrivers = [ "nvidia" ];
@@ -105,5 +106,9 @@ in
     defaultUser = "shika";
     interop.register = true;
     useWindowsDriver = true;
+    wslConf.network = {
+      generateHosts = false;
+      generateResolvConf = false;
+    };
   };
 }

@@ -17,9 +17,6 @@
     ./users/shika/home-configuration.nix
   ];
 
-  # Let Docker manage /etc/resolv.conf
-  environment.etc."resolv.conf".enable = false;
-
   security.sudo.wheelNeedsPassword = false;
 
   # Enable SSH access
