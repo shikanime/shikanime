@@ -81,8 +81,6 @@ in
     xserver.videoDrivers = [ "nvidia" ];
   };
 
-  systemd.network.enable = true;
-
   sops = {
     age = {
       generateKey = true;
@@ -107,6 +105,7 @@ in
     enable = true;
     defaultUser = "shika";
     interop.register = true;
+    network.generateResolvConf = false;
     useWindowsDriver = true;
   };
 }
