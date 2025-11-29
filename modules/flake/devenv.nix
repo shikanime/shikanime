@@ -13,59 +13,11 @@
           languages.opentofu.enable = true;
           packages = [
             pkgs.direnv
-            pkgs.gh
-            pkgs.gnused
             pkgs.nushell
-            pkgs.sapling
             pkgs.scaleway-cli
             pkgs.skaffold
             pkgs.sops
           ];
-          github = {
-            actions.nothing-but-nix.uses = "wimpysworld/nothing-but-nix@v6";
-            workflows.push.settings.jobs.build = {
-              runs-on = "ubuntu-latest";
-              steps =
-                with config.devenv.shells.default.github.actions;
-                with config.devenv.shells.default.github.lib;
-                [
-                  create-github-app-token
-                  checkout
-                  nothing-but-nix
-                  setup-nix
-                  {
-                    env = {
-                      USERNAME = mkWorkflowRef "github.actor";
-                      DOCKER_REGISTRY = "ghcr.io";
-                      GITHUB_TOKEN = mkWorkflowRef "secrets.GITHUB_TOKEN";
-                    };
-                    run = mkWorkflowRun [
-                      "nix"
-                      "run"
-                      "nixpkgs#docker"
-                      "--"
-                      "login"
-                      ''"$DOCKER_REGISTRY"''
-                      "--username"
-                      ''"$USERNAME"''
-                      "--password"
-                      ''"$GITHUB_TOKEN"''
-                    ];
-                  }
-                  {
-                    run = mkWorkflowRun [
-                      "nix"
-                      "run"
-                      "nixpkgs#skaffold"
-                      "--"
-                      "build"
-                      "--platform"
-                      "linux/amd64,linux/arm64"
-                    ];
-                  }
-                ];
-            };
-          };
         };
         build = {
           containers = pkgs.lib.mkForce { };
