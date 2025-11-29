@@ -34,9 +34,7 @@
                 {
                   run = mkWorkflowRun [
                     "nix"
-                    "develop"
-                    "--accept-flake-config"
-                    "--impure"
+                    "shell"
                     "nixpkgs#skaffold"
                     "--command"
                     "skaffold"
