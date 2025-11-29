@@ -22,7 +22,7 @@
             pkgs.sops
           ];
           github = {
-            actions.create-github-app-token."with".repositories = "identities";
+            actions.create-github-app-token."with".repositories = "identities,shikanime";
 
             workflows.push.settings.jobs.build =
               with config.devenv.shells.default.github.actions;
