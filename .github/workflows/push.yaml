@@ -19,9 +19,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           username: ${{ github.actor }}
-      - run:
-          nix develop --accept-flake-config --impure nixpkgs#skaffold --command skaffold
-          build --platform linux/amd64,linux/arm64
+      - run: nix run nixpkgs#skaffold --command skaffold build --platform linux/amd64,linux/arm64
   check:
     runs-on: ubuntu-latest
     steps:
