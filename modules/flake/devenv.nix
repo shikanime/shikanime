@@ -21,29 +21,33 @@
             pkgs.skaffold
             pkgs.sops
           ];
-          github.workflows.push.settings.jobs.build = {
-            runs-on = "ubuntu-latest";
-            steps =
-              with config.devenv.shells.default.github.actions;
-              with config.devenv.shells.default.github.lib;
-              [
-                create-github-app-token
-                checkout
-                setup-nix
-                docker-login
-                {
-                  run = mkWorkflowRun [
-                    "nix"
-                    "shell"
-                    "nixpkgs#skaffold"
-                    "--command"
-                    "skaffold"
-                    "build"
-                    "--platform"
-                    "linux/amd64,linux/arm64"
-                  ];
-                }
-              ];
+          github = {
+            actions.nothing-but-nix.uses = "wimpysworld/nothing-but-nix@v6";
+            workflows.push.settings.jobs.build = {
+              runs-on = "ubuntu-latest";
+              steps =
+                with config.devenv.shells.default.github.actions;
+                with config.devenv.shells.default.github.lib;
+                [
+                  create-github-app-token
+                  checkout
+                  nothing-but-nix
+                  setup-nix
+                  docker-login
+                  {
+                    run = mkWorkflowRun [
+                      "nix"
+                      "shell"
+                      "nixpkgs#skaffold"
+                      "--command"
+                      "skaffold"
+                      "build"
+                      "--platform"
+                      "linux/amd64,linux/arm64"
+                    ];
+                  }
+                ];
+            };
           };
         };
         build = {
