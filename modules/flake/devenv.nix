@@ -43,6 +43,7 @@
                       "nix"
                       "run"
                       "nixpkgs#docker"
+                      "--"
                       "login"
                       ''"$DOCKER_REGISTRY"''
                       "--username"
@@ -56,6 +57,7 @@
                       "nix"
                       "run"
                       "nixpkgs#skaffold"
+                      "--"
                       "build"
                       "--platform"
                       "linux/amd64,linux/arm64"
