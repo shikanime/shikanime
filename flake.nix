@@ -2,6 +2,7 @@
   description = "Shikanime's home configuration";
 
   inputs = {
+    automata.url = "github:shikanime-studio/automata";
     devenv.url = "github:cachix/devenv";
     devlib.url = "github:shikanime-studio/devlib";
     git-hooks.url = "github:cachix/git-hooks.nix";
