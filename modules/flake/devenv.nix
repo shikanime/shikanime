@@ -21,7 +21,6 @@
             pkgs.skaffold
             pkgs.sops
           ];
-          github.actions.create-github-app-token."with".repositories = "identities";
         };
         build = {
           containers = pkgs.lib.mkForce { };
