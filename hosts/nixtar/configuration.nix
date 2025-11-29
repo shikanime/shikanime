@@ -33,6 +33,7 @@ in
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
+    ../../modules/nixos/tailscale.nix
     ../../modules/nixos/workstation.nix
   ];
 
@@ -75,7 +76,14 @@ in
     };
 
     gnome.gnome-keyring.enable = true;
+
     passSecretService.enable = true;
+
+    tailscale = {
+      authKeyFile = config.sops.secrets.tailscale-authkey.path;
+      extraUpFlags = [ "--ssh" ];
+      useRoutingFeatures = "both";
+    };
 
     xserver.videoDrivers = [ "nvidia" ];
   };
@@ -88,7 +96,10 @@ in
     };
     defaultSopsFile = ../../secrets/nixtar.enc.yaml;
     defaultSopsFormat = "yaml";
-    secrets.nix-config = { };
+    secrets = {
+      nix-config = { };
+      tailscale-authkey = { };
+    };
   };
 
   users.users.shika = {
@@ -105,5 +116,9 @@ in
     defaultUser = "shika";
     interop.register = true;
     useWindowsDriver = true;
+    wslConf.network = {
+      generateHosts = false;
+      generateResolvConf = false;
+    };
   };
 }
