@@ -22,7 +22,11 @@
             pkgs.sops
           ];
           github = {
-            actions.create-github-app-token."with".repositories = "identities,shikanime";
+            actions.create-github-app-token."with" = {
+              owner = "shikanime";
+              permission-issues = "write";
+              repositories = "identities,shikanime";
+            };
 
             workflows.push.settings.jobs.build =
               with config.devenv.shells.default.github.actions;
