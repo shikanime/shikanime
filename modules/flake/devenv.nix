@@ -22,8 +22,8 @@
             pkgs.sops
           ];
           github = {
-            actions.create-github-app-token."with" = {
-              owner = "shikanime";
+            actions.create-github-app-token."with" = with config.devenv.shells.default.github.lib; {
+              owner = mkWorkflowRef "github.repository_owner";
               permission-issues = "write";
               repositories = "identities,shikanime";
             };
