@@ -21,37 +21,29 @@
             pkgs.skaffold
             pkgs.sops
           ];
-          github = {
-            actions.create-github-app-token."with" = with config.devenv.shells.default.github.lib; {
-              owner = mkWorkflowRef "github.repository_owner";
-              permission-issues = "write";
-              repositories = "identities,shikanime";
-            };
-
-            workflows.push.settings.jobs.build =
-              with config.devenv.shells.default.github.actions;
-              with config.devenv.shells.default.github.lib;
-              [
-                create-github-app-token
-                checkout
-                setup-nix
-                docker-login
-                {
-                  run = mkWorkflowRun [
-                    "nix"
-                    "develop"
-                    "--accept-flake-config"
-                    "--impure"
-                    "nixpkgs#skaffold"
-                    "--command"
-                    "skaffold"
-                    "build"
-                    "--platform"
-                    "linux/amd64,linux/arm64"
-                  ];
-                }
-              ];
-          };
+          github.workflows.push.settings.jobs.build =
+            with config.devenv.shells.default.github.actions;
+            with config.devenv.shells.default.github.lib;
+            [
+              create-github-app-token
+              checkout
+              setup-nix
+              docker-login
+              {
+                run = mkWorkflowRun [
+                  "nix"
+                  "develop"
+                  "--accept-flake-config"
+                  "--impure"
+                  "nixpkgs#skaffold"
+                  "--command"
+                  "skaffold"
+                  "build"
+                  "--platform"
+                  "linux/amd64,linux/arm64"
+                ];
+              }
+            ];
         };
         build = {
           containers = pkgs.lib.mkForce { };

@@ -8,9 +8,7 @@ jobs:
         uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ vars.OPERATOR_APP_ID }}
-          owner: shikanime
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
-          repositories: identities,shikanime
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
@@ -30,9 +28,7 @@ jobs:
         uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ vars.OPERATOR_APP_ID }}
-          owner: shikanime
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
-          repositories: identities,shikanime
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
@@ -57,9 +53,7 @@ jobs:
         uses: actions/create-github-app-token@v2
         with:
           app-id: ${{ vars.OPERATOR_APP_ID }}
-          owner: shikanime
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
-          repositories: identities,shikanime
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0

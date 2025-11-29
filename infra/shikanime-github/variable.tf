@@ -33,7 +33,6 @@ variable "repositories" {
     algorithm        = string
     curriculum-vitae = string
     features         = string
-    identities       = string
     manifests        = string
     myawesomelist    = string
     niximgs          = string
@@ -44,7 +43,6 @@ variable "repositories" {
     algorithm        = "algorithm"
     curriculum-vitae = "curriculum-vitae"
     features         = "features"
-    identities       = "identities"
     manifests        = "manifests"
     myawesomelist    = "myawesomelist"
     niximgs          = "niximgs"
