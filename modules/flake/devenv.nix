@@ -33,14 +33,29 @@
                   checkout
                   nothing-but-nix
                   setup-nix
-                  docker-login
+                  {
+                    env = {
+                      USERNAME = mkWorkflowRef "github.actor";
+                      DOCKER_REGISTRY = "ghcr.io";
+                      GITHUB_TOKEN = mkWorkflowRef "secrets.GITHUB_TOKEN";
+                    };
+                    run = mkWorkflowRun [
+                      "nix"
+                      "run"
+                      "nixpkgs#docker"
+                      "login"
+                      ''"$DOCKER_REGISTRY"''
+                      "--username"
+                      ''"$USERNAME"''
+                      "--password"
+                      ''"$GITHUB_TOKEN"''
+                    ];
+                  }
                   {
                     run = mkWorkflowRun [
                       "nix"
-                      "shell"
+                      "run"
                       "nixpkgs#skaffold"
-                      "--command"
-                      "skaffold"
                       "build"
                       "--platform"
                       "linux/amd64,linux/arm64"
