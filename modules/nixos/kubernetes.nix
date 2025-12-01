@@ -10,7 +10,6 @@
     "user.max_inotify_instances" = 8192;
     "user.max_inotify_watches" = 524288;
     "vm.max_map_count" = 1048576;
-    "vm.overcommit_memory" = 1;
   };
 
   # Enable cgroup for K3s

@@ -98,13 +98,10 @@
     };
   };
 
-  users.users = {
-    nishir = {
-      extraGroups = [ "wheel" ];
-      initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
-      isNormalUser = true;
-      home = "/home/nishir";
-    };
-    root.initialHashedPassword = "$y$j9T$wGNLLekBAxFb3/zZyGu/e0$fs5Fe0Qn7Ay8lwr6VhW1moojQoAs7V5fx3uNhCp1FhC";
+  users.users.nishir = {
+    extraGroups = [ "wheel" ];
+    initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
+    isNormalUser = true;
+    home = "/home/nishir";
   };
 }

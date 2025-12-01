@@ -2,7 +2,7 @@
 
 {
   imports = [
-    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
+    "${modulesPath}/installer/netboot/netboot-minimal.nix"
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/kubernetes.nix
@@ -73,14 +73,11 @@
     };
   };
 
-  users.users = {
-    nishir = {
-      initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
-      extraGroups = [ "wheel" ];
-      isNormalUser = true;
-      home = "/home/nishir";
-    };
-    root.initialHashedPassword = "$y$j9T$yoHV44BnXG1/k.HRE0ZRT/$xtna749AkoM0HK0Aa6S1zmGb4/WnnUsdR3hszsP5cF0";
+  users.users.nishir = {
+    initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
+    extraGroups = [ "wheel" ];
+    isNormalUser = true;
+    home = "/home/nishir";
   };
 
   sops = {
