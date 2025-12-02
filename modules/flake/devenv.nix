@@ -2,7 +2,7 @@
 
 {
   perSystem =
-    { config, pkgs, ... }:
+    { pkgs, ... }:
     {
       devenv.shells = {
         default = {
