@@ -103,6 +103,20 @@ in
   services = {
     gnome.gnome-keyring.enable = true;
 
+    kubernetes = {
+      roles = [
+        "master"
+        "node"
+      ];
+      masterAddress = "nixtar.taila659a.ts.net";
+      apiserverAddress = "https://nixtar.taila659a.ts.net:6443";
+      easyCerts = true;
+      apiserver = {
+        securePort = 6443;
+        advertiseAddress = "100.111.162.12";
+      };
+    };
+
     openssh = {
       enable = true;
       openFirewall = true;
