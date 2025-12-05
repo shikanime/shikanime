@@ -38,8 +38,6 @@
       "net.core.wmem_default" = 7340032;
       # Allow larger autotuned send buffers
       "net.core.wmem_max" = 16777216;
-      # Enable IPv4 forwarding for Kubernetes/overlay networking
-      "net.ipv4.ip_forward" = 1;
       # Relax rp_filter for asymmetric routing via Tailscale subnet router
       "net.ipv4.conf.all.rp_filter" = 0;
       "net.ipv4.conf.default.rp_filter" = 0;
