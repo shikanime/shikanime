@@ -173,8 +173,8 @@ in
             };
             spec.valuesContent = builtins.toJSON {
               flannel = {
-                iface = "tailscale0";
                 backend = "host-gw";
+                iface = "tailscale0";
               };
             };
           };
