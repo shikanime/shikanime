@@ -66,8 +66,6 @@
       "vm.dirty_writeback_centisecs" = 500;
       # Support many mmap/large indices/filesystems
       "vm.max_map_count" = 262144;
-      # Allow overcommit memory to avoid OOM
-      "vm.overcommit_memory" = lib.mkForce "1";
       # Lower swappiness to keep memory for cache (NVMe)
       "vm.swappiness" = 5;
       # Favor inode/dentry caching for large media libraries
