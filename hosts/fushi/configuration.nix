@@ -1,4 +1,4 @@
-{ config, modulesPath, ... }:
+{ config, lib, modulesPath, ... }:
 
 {
   imports = [
@@ -16,18 +16,12 @@
     "fs.inotify.max_user_watches" = 524288;
     # Raise system-wide open files to prevent global exhaustion
     "fs.file-max" = 2097152;
-    # Auto-reboot 10s after panic to restore availability
-    "kernel.panic" = 10;
-    # Panic on kernel oops for fast node recovery
-    "kernel.panic_on_oops" = 1;
     # Increase conntrack capacity for Kubernetes NAT
     "net.netfilter.nf_conntrack_max" = 262144;
     # Fair queuing qdisc; synergizes with BBR
     "net.core.default_qdisc" = "fq";
     # Increase ingress backlog for bursty overlay traffic (Calico/Tailscale)
     "net.core.netdev_max_backlog" = 16384;
-    # Raise default socket receive buffer for large transfers
-    "net.core.rmem_default" = 7340032;
     # Allow larger autotuned receive buffers
     "net.core.rmem_max" = 16777216;
     # Increase accept backlog for busy services (Jellyfin/copyparty)
@@ -66,8 +60,8 @@
     "vm.dirty_writeback_centisecs" = 500;
     # Support many mmap/large indices/filesystems
     "vm.max_map_count" = 262144;
-    # Allow moderate memory overcommit for containers
-    "vm.overcommit_memory" = 1;
+    # Allow overcommit memory to avoid OOM
+    "vm.overcommit_memory" = lib.mkForce "1";
     # Prefer page cache, avoid swap thrash
     "vm.swappiness" = 10;
     # Favor inode/dentry caching for large media libraries
@@ -87,6 +81,16 @@
       "defaults"
       "nofail"
       "x-systemd.automount"
+    ];
+  };
+
+  fileSystems."/mnt/nishir-rke2" = {
+    device = "root@nishir.taila659a.ts.net:/var/lib/rancher/rke2/server";
+    fsType = "sshfs";
+    options = [
+      "ro"
+      "_netdev"
+      "IdentityFile=/etc/ssh/ssh_host_ed25519_key"
     ];
   };
 
@@ -129,7 +133,7 @@
       enable = true;
       role = "agent";
       serverAddr = "https://nishir.taila659a.ts.net:9345";
-      tokenFile = config.sops.secrets.rke2-token.path;
+      tokenFile = "/mnt/nishir-rke2/token";
     };
 
     tailscale = {

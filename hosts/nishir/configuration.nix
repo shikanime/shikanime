@@ -1,8 +1,8 @@
-{ config, modulesPath, ... }:
+{ config, lib, modulesPath, ... }:
 
 {
   imports = [
-    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
+    "${modulesPath}/installer/netboot/netboot-minimal.nix"
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/longhorn.nix
@@ -16,18 +16,12 @@
     "fs.inotify.max_user_watches" = 524288;
     # Raise system-wide open files to prevent global exhaustion
     "fs.file-max" = 2097152;
-    # Auto-reboot 10s after panic to restore availability
-    "kernel.panic" = 10;
-    # Panic on kernel oops for fast node recovery
-    "kernel.panic_on_oops" = 1;
     # Increase conntrack capacity for Kubernetes NAT
     "net.netfilter.nf_conntrack_max" = 262144;
     # Fair queuing qdisc; synergizes with BBR
     "net.core.default_qdisc" = "fq";
     # Increase ingress backlog for bursty overlay traffic (Calico/Tailscale)
     "net.core.netdev_max_backlog" = 16384;
-    # Raise default socket receive buffer for large transfers
-    "net.core.rmem_default" = 7340032;
     # Allow larger autotuned receive buffers
     "net.core.rmem_max" = 16777216;
     # Increase accept backlog for busy services (Jellyfin/copyparty)
@@ -66,8 +60,8 @@
     "vm.dirty_writeback_centisecs" = 500;
     # Support many mmap/large indices/filesystems
     "vm.max_map_count" = 262144;
-    # Allow moderate memory overcommit for containers
-    "vm.overcommit_memory" = 1;
+    # Allow overcommit memory to avoid OOM
+    "vm.overcommit_memory" = lib.mkForce "1";
     # Lower swappiness to keep memory for cache (NVMe)
     "vm.swappiness" = 5;
     # Favor inode/dentry caching for large media libraries
