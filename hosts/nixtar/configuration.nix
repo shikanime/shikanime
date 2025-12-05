@@ -42,6 +42,25 @@ in
     "aarch64-linux"
   ];
 
+  boot = {
+    kernelModules = [ "tcp_bbr" ];
+
+    kernel.sysctl = {
+      # Optimize for 64GB RAM
+      "vm.swappiness" = 10;
+      "vm.vfs_cache_pressure" = 50;
+      "vm.max_map_count" = 524288;
+
+      # Increase file watcher limit for IDEs
+      "fs.inotify.max_user_watches" = 524288;
+      "fs.inotify.max_user_instances" = 512;
+
+      # Network optimizations
+      "net.core.default_qdisc" = "fq";
+      "net.ipv4.tcp_congestion_control" = "bbr";
+    };
+  };
+
   home-manager.users.shika.imports = [
     ./users/shika/home-configuration.nix
   ];
