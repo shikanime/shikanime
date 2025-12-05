@@ -5,7 +5,6 @@
     "${modulesPath}/installer/netboot/netboot-minimal.nix"
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
-    ../../modules/nixos/kubernetes.nix
     ../../modules/nixos/longhorn.nix
     ../../modules/nixos/tailscale.nix
   ];
