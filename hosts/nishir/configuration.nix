@@ -5,10 +5,77 @@
     "${modulesPath}/installer/netboot/netboot-minimal.nix"
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
-    ../../modules/nixos/kubernetes.nix
     ../../modules/nixos/longhorn.nix
     ../../modules/nixos/tailscale.nix
   ];
+
+  boot = {
+    # Enable cgroup for Kubernetes
+    kernelParams = [
+      "cgroup_enable=cpuset"
+      "cgroup_enable=memory"
+      "cgroup_memory=1"
+    ];
+
+    kernel.sysctl = {
+      # Allow many inotify instances for controllers and Syncthing
+      "fs.inotify.max_user_instances" = 8192;
+      # Allow many watched paths for large libraries (Syncthing/copyparty)
+      "fs.inotify.max_user_watches" = 524288;
+      # Raise system-wide open files to prevent global exhaustion
+      "fs.file-max" = 2097152;
+      # Increase conntrack capacity for Kubernetes NAT
+      "net.netfilter.nf_conntrack_max" = 262144;
+      # Fair queuing qdisc; synergizes with BBR
+      "net.core.default_qdisc" = "fq";
+      # Increase ingress backlog for bursty overlay traffic (Calico/Tailscale)
+      "net.core.netdev_max_backlog" = 16384;
+      # Allow larger autotuned receive buffers
+      "net.core.rmem_max" = 16777216;
+      # Increase accept backlog for busy services (Jellyfin/copyparty)
+      "net.core.somaxconn" = 65535;
+      # Raise default socket send buffer
+      "net.core.wmem_default" = 7340032;
+      # Allow larger autotuned send buffers
+      "net.core.wmem_max" = 16777216;
+      # Enable IPv4 forwarding for Kubernetes/overlay networking
+      "net.ipv4.ip_forward" = 1;
+      # Relax rp_filter for asymmetric routing via Tailscale subnet router
+      "net.ipv4.conf.all.rp_filter" = 0;
+      "net.ipv4.conf.default.rp_filter" = 0;
+      "net.ipv4.conf.tailscale0.rp_filter" = 0;
+      # Widen ephemeral port range to avoid exhaustion
+      "net.ipv4.ip_local_port_range" = "1024 65535";
+      # BBR congestion control for better throughput/latency
+      "net.ipv4.tcp_congestion_control" = "bbr";
+      # Free sockets sooner under load
+      "net.ipv4.tcp_fin_timeout" = 30;
+      # Maintain long-lived connections without frequent probes
+      "net.ipv4.tcp_keepalive_time" = 600;
+      # Enable PMTU probing for overlays/Tailnet
+      "net.ipv4.tcp_mtu_probing" = 1;
+      # Expand TCP autotuning bounds (recv)
+      "net.ipv4.tcp_rmem" = "4096 87380 16777216";
+      # Expand TCP autotuning bounds (send)
+      "net.ipv4.tcp_wmem" = "4096 65536 16777216";
+      # NVMe: increase background writeback for higher throughput
+      "vm.dirty_background_ratio" = 10;
+      # NVMe: delay expiration to allow larger merges (20s)
+      "vm.dirty_expire_centisecs" = 2000;
+      # NVMe: allow more dirty pages to utilize fast storage
+      "vm.dirty_ratio" = 20;
+      # NVMe: schedule writeback frequency (5s)
+      "vm.dirty_writeback_centisecs" = 500;
+      # Support many mmap/large indices/filesystems
+      "vm.max_map_count" = 262144;
+      # Allow overcommit memory to avoid OOM
+      "vm.overcommit_memory" = lib.mkForce "1";
+      # Lower swappiness to keep memory for cache (NVMe)
+      "vm.swappiness" = 5;
+      # Favor inode/dentry caching for large media libraries
+      "vm.vfs_cache_pressure" = 50;
+    };
+  };
 
   fileSystems = {
     "/mnt/flandre" = {
