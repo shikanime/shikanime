@@ -79,6 +79,11 @@ in
 
     passSecretService.enable = true;
 
+    rke2 = {
+      enable = true;
+      role = "server";
+    };
+
     tailscale = {
       authKeyFile = config.sops.secrets.tailscale-authkey.path;
       extraUpFlags = [ "--ssh" ];
@@ -99,6 +104,7 @@ in
     secrets = {
       nix-config = { };
       tailscale-authkey = { };
+      rke2-token = { };
     };
   };
 
