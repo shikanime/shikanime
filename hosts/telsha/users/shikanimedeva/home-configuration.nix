@@ -4,6 +4,7 @@
   imports = [
     ../../../../modules/home/base.nix
     ../../../../modules/home/cloud.nix
+    ../../../../modules/home/elixir.nix
     ../../../../modules/home/ghostty.nix
     ../../../../modules/home/starship.nix
     ../../../../modules/home/go.nix
