@@ -70,12 +70,12 @@ in
   programs.nix-ld.libraries = [ wsl-lib ];
 
   services = {
+    gnome.gnome-keyring.enable = true;
+
     openssh = {
       enable = true;
       openFirewall = true;
     };
-
-    gnome.gnome-keyring.enable = true;
 
     passSecretService.enable = true;
 
