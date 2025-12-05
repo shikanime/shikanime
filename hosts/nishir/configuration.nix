@@ -6,7 +6,6 @@
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/longhorn.nix
-    ../../modules/nixos/tailscale.nix
   ];
 
   boot = {
@@ -30,6 +29,8 @@
       "net.core.default_qdisc" = "fq";
       # Increase ingress backlog for bursty overlay traffic (Calico/Tailscale)
       "net.core.netdev_max_backlog" = 16384;
+      # Raise default socket receive buffer
+      "net.core.rmem_default" = 7340032;
       # Allow larger autotuned receive buffers
       "net.core.rmem_max" = 16777216;
       # Increase accept backlog for busy services (Jellyfin/copyparty)
@@ -146,6 +147,8 @@
     };
 
     tailscale = {
+      enable = true;
+      openFirewall = true;
       authKeyFile = config.sops.secrets.tailscale-authkey.path;
       extraUpFlags = [ "--ssh" ];
       useRoutingFeatures = "server";

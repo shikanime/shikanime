@@ -33,7 +33,6 @@ in
   imports = [
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
-    ../../modules/nixos/tailscale.nix
     ../../modules/nixos/workstation.nix
   ];
 
@@ -54,10 +53,23 @@ in
       # Increase file watcher limit for IDEs
       "fs.inotify.max_user_watches" = 524288;
       "fs.inotify.max_user_instances" = 512;
+      "fs.file-max" = 2097152;
 
       # Network optimizations
       "net.core.default_qdisc" = "fq";
+      "net.core.netdev_max_backlog" = 16384;
+      "net.core.rmem_default" = 7340032;
+      "net.core.rmem_max" = 16777216;
+      "net.core.somaxconn" = 65535;
+      "net.core.wmem_default" = 7340032;
+      "net.core.wmem_max" = 16777216;
+      "net.ipv4.ip_local_port_range" = "1024 65535";
       "net.ipv4.tcp_congestion_control" = "bbr";
+      "net.ipv4.tcp_fin_timeout" = 30;
+      "net.ipv4.tcp_keepalive_time" = 600;
+      "net.ipv4.tcp_mtu_probing" = 1;
+      "net.ipv4.tcp_rmem" = "4096 87380 16777216";
+      "net.ipv4.tcp_wmem" = "4096 65536 16777216";
     };
   };
 
@@ -99,6 +111,8 @@ in
     passSecretService.enable = true;
 
     tailscale = {
+      enable = true;
+      openFirewall = true;
       authKeyFile = config.sops.secrets.tailscale-authkey.path;
       extraUpFlags = [ "--ssh" ];
       useRoutingFeatures = "both";
