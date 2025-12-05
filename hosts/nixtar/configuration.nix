@@ -103,18 +103,6 @@ in
   services = {
     gnome.gnome-keyring.enable = true;
 
-    kubernetes = {
-      apiserver.advertiseAddress = "100.111.162.12";
-      apiserverAddress = "https://nixtar.taila659a.ts.net:6443";
-      easyCerts = true;
-      kubelet.extraOpts = "--fail-swap-on=false";
-      masterAddress = "nixtar.taila659a.ts.net";
-      roles = [
-        "master"
-        "node"
-      ];
-    };
-
     openssh = {
       enable = true;
       openFirewall = true;
@@ -122,11 +110,103 @@ in
 
     passSecretService.enable = true;
 
+    rke2 = {
+      enable = true;
+      autoDeployCharts = {
+        cert-manager = {
+          enable = true;
+          createNamespace = true;
+          hash = "sha256-9ypyexdJ3zUh56Za9fGFBfk7Vy11iEGJAnCxUDRLK0E=";
+          name = "cert-manager";
+          repo = "https://charts.jetstack.io";
+          targetNamespace = "cert-manager-system";
+          values.crds.enabled = true;
+          version = "v1.19.1";
+        };
+        cluster-api-operator = {
+          enable = true;
+          createNamespace = true;
+          hash = "sha256-ROo2PFA39z61PqTpgI2PlTtdIyCG3znHaPgrYPpdA7Q=";
+          name = "cluster-api-operator";
+          repo = "https://kubernetes-sigs.github.io/cluster-api-operator";
+          targetNamespace = "capi-operator-system";
+          values.cert-manager.enabled = true;
+          version = "0.24.1";
+        };
+        tailscale-operator = {
+          enable = true;
+          createNamespace = true;
+          hash = "sha256-8pZyWgBTDtnUXnYzDCtbXtTzvUe35BnqHckI/bBuk7o=";
+          name = "tailscale-operator";
+          repo = "https://pkgs.tailscale.com/helmcharts";
+          targetNamespace = "tailscale-system";
+          values.operatorConfig.hostname = "nixtar-k8s-operator";
+          version = "1.90.9";
+        };
+        vpa = {
+          enable = true;
+          createNamespace = true;
+          hash = "sha256-d0om1BuSLM9CDIRdmsxeG/uhUfliFmzHe6+qwfXg/t0=";
+          name = "vpa";
+          repo = "https://charts.fairwinds.com/stable";
+          targetNamespace = "kube-system";
+          version = "4.10.0";
+        };
+      };
+      cisHardening = true;
+      extraFlags = [
+        "--cni multus,canal"
+        "--cluster-cidr 10.42.0.0/16,2001:cafe:42::/56"
+        "--protect-kernel-defaults"
+        "--service-cidr 10.43.0.0/16,2001:cafe:43::/112"
+        "--tls-san nixtar.taila659a.ts.net"
+      ];
+      manifests = {
+        rke2-canal-config = {
+          enable = true;
+          content = {
+            apiVersion = "helm.cattle.io/v1";
+            kind = "HelmChartConfig";
+            metadata = {
+              name = "rke2-canal";
+              namespace = "kube-system";
+            };
+            spec.valuesContent = builtins.toJSON {
+              flannel = {
+                backend = "host-gw";
+                iface = "tailscale0";
+              };
+            };
+          };
+        };
+        rke2-multus-config = {
+          enable = true;
+          content = {
+            apiVersion = "helm.cattle.io/v1";
+            kind = "HelmChartConfig";
+            metadata = {
+              name = "rke2-multus";
+              namespace = "kube-system";
+            };
+            spec.valuesContent = builtins.toJSON {
+              thickPlugin.enabled = true;
+              dynamicNetworksController.enabled = true;
+            };
+          };
+        };
+      };
+      nodeIP = "100.111.162.12,fd7a:115c:a1e0::2101:1963";
+      role = "server";
+    };
+
     tailscale = {
       enable = true;
       openFirewall = true;
       authKeyFile = config.sops.secrets.tailscale-authkey.path;
-      extraUpFlags = [ "--ssh" ];
+      extraUpFlags = [
+        "--advertise-routes 10.42.0.0/16,2001:cafe:42::/56"
+        "--ssh"
+      ];
       useRoutingFeatures = "both";
     };
 
@@ -144,6 +224,7 @@ in
     secrets = {
       nix-config = { };
       tailscale-authkey = { };
+      tailscale-operator-config-manifest = { };
     };
   };
 
@@ -166,4 +247,8 @@ in
       generateResolvConf = false;
     };
   };
+
+  systemd.tmpfiles.rules = [
+    "L+ /var/lib/rancher/rke2/server/manifests/tailscale-operator-config.yaml - - - - ${config.sops.secrets.tailscale-operator-config-manifest.path}"
+  ];
 }
