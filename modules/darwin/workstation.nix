@@ -21,7 +21,6 @@
       "ghostty"
       "google-chrome"
       "google-drive"
-      "headlamp"
       "jellyfin-media-player"
       "macfuse"
       "microsoft-edge"
