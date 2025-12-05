@@ -114,6 +114,7 @@ in
       enable = true;
       autoDeployCharts = {
         cert-manager = {
+          enable = true;
           createNamespace = true;
           hash = "sha256-9ypyexdJ3zUh56Za9fGFBfk7Vy11iEGJAnCxUDRLK0E=";
           name = "cert-manager";
@@ -123,6 +124,7 @@ in
           version = "v1.19.1";
         };
         cluster-api-operator = {
+          enable = true;
           createNamespace = true;
           hash = "sha256-ROo2PFA39z61PqTpgI2PlTtdIyCG3znHaPgrYPpdA7Q=";
           name = "cluster-api-operator";
@@ -132,6 +134,7 @@ in
           version = "0.24.1";
         };
         tailscale-operator = {
+          enable = true;
           createNamespace = true;
           hash = "sha256-8pZyWgBTDtnUXnYzDCtbXtTzvUe35BnqHckI/bBuk7o=";
           name = "tailscale-operator";
@@ -141,6 +144,7 @@ in
           version = "1.90.9";
         };
         vpa = {
+          enable = true;
           createNamespace = true;
           hash = "sha256-d0om1BuSLM9CDIRdmsxeG/uhUfliFmzHe6+qwfXg/t0=";
           name = "vpa";
@@ -149,14 +153,49 @@ in
           version = "4.10.0";
         };
       };
+      cisHardening = true;
       extraFlags = [
         "--cni multus,canal"
         "--cluster-cidr 10.42.0.0/16,2001:cafe:42::/56"
-        "--node-ip 100.111.162.12,fd7a:115c:a1e0::2101:1963"
         "--protect-kernel-defaults"
         "--service-cidr 10.43.0.0/16,2001:cafe:43::/112"
         "--tls-san nixtar.taila659a.ts.net"
       ];
+      manifests =
+        let
+          json = pkgs.formats.json { };
+        in
+        {
+          rke2-canal-config = {
+            enable = true;
+            content = {
+              apiVersion = "helm.cattle.io/v1";
+              kind = "HelmChartConfig";
+              metadata = {
+                name = "rke2-canal";
+                namespace = "kube-system";
+              };
+              spec.valuesContent = json.generate "rke2-canal-config" {
+                flannel.iface = "tailscale0";
+              };
+            };
+          };
+          rke2-multus-config = {
+            enable = true;
+            content = {
+              apiVersion = "helm.cattle.io/v1";
+              kind = "HelmChartConfig";
+              metadata = {
+                name = "rke2-multus";
+                namespace = "kube-system";
+              };
+              spec.valuesContent = json.generate "rke2-multus-config" {
+                manifests.dhcpDaemonSet = true;
+              };
+            };
+          };
+        };
+      nodeIp = "100.111.162.12,fd7a:115c:a1e0::2101:1963";
       role = "server";
     };
 
