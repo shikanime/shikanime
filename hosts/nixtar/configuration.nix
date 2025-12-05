@@ -172,7 +172,10 @@ in
               namespace = "kube-system";
             };
             spec.valuesContent = builtins.toJSON {
-              flannel.iface = "tailscale0";
+              flannel = {
+                iface = "tailscale0";
+                backend = "host-gw";
+              };
             };
           };
         };
@@ -186,7 +189,8 @@ in
               namespace = "kube-system";
             };
             spec.valuesContent = builtins.toJSON {
-              manifests.dhcpDaemonSet = true;
+              thickPlugin.enabled = true;
+              dynamicNetworksController.enabled = true;
             };
           };
         };
