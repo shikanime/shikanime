@@ -161,41 +161,37 @@ in
         "--service-cidr 10.43.0.0/16,2001:cafe:43::/112"
         "--tls-san nixtar.taila659a.ts.net"
       ];
-      manifests =
-        let
-          json = pkgs.formats.json { };
-        in
-        {
-          rke2-canal-config = {
-            enable = true;
-            content = {
-              apiVersion = "helm.cattle.io/v1";
-              kind = "HelmChartConfig";
-              metadata = {
-                name = "rke2-canal";
-                namespace = "kube-system";
-              };
-              spec.valuesContent = json.generate "rke2-canal-config" {
-                flannel.iface = "tailscale0";
-              };
+      manifests = {
+        rke2-canal-config = {
+          enable = true;
+          content = {
+            apiVersion = "helm.cattle.io/v1";
+            kind = "HelmChartConfig";
+            metadata = {
+              name = "rke2-canal";
+              namespace = "kube-system";
             };
-          };
-          rke2-multus-config = {
-            enable = true;
-            content = {
-              apiVersion = "helm.cattle.io/v1";
-              kind = "HelmChartConfig";
-              metadata = {
-                name = "rke2-multus";
-                namespace = "kube-system";
-              };
-              spec.valuesContent = json.generate "rke2-multus-config" {
-                manifests.dhcpDaemonSet = true;
-              };
+            spec.valuesContent = builtins.toJSON {
+              flannel.iface = "tailscale0";
             };
           };
         };
-      nodeIp = "100.111.162.12,fd7a:115c:a1e0::2101:1963";
+        rke2-multus-config = {
+          enable = true;
+          content = {
+            apiVersion = "helm.cattle.io/v1";
+            kind = "HelmChartConfig";
+            metadata = {
+              name = "rke2-multus";
+              namespace = "kube-system";
+            };
+            spec.valuesContent = builtins.toJSON {
+              manifests.dhcpDaemonSet = true;
+            };
+          };
+        };
+      };
+      nodeIP = "100.111.162.12,fd7a:115c:a1e0::2101:1963";
       role = "server";
     };
 
