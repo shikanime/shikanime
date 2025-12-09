@@ -1,15 +1,16 @@
 { pkgs, ... }:
 
 {
+  home.packages = [
+    pkgs.docker-compose-language-service
+    pkgs.dockerfile-language-server
+    pkgs.yaml-language-server
+  ];
+
   programs = {
     docker-cli.enable = true;
 
     gh.enable = true;
-
-    helix.languages.language-server = {
-      docker-compose-language-server.command = "${pkgs.docker-compose-language-service}/bin/docker-compose-langserver";
-      dockerfile-langserver.command = "${pkgs.dockerfile-language-server}/bin/dockerfile-language-server";
-    };
 
     k9s.enable = true;
 

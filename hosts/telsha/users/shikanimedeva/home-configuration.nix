@@ -9,6 +9,7 @@
     ../../../../modules/home/starship.nix
     ../../../../modules/home/go.nix
     ../../../../modules/home/helix.nix
+    ../../../../modules/home/nix.nix
     ../../../../modules/home/nodejs.nix
     ../../../../modules/home/python.nix
     ../../../../modules/home/rustup.nix
