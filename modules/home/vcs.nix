@@ -9,64 +9,6 @@
   programs = {
     git = {
       enable = true;
-      ignores = [
-        # Backup files
-        "*~"
-        # Darwin Finder files
-        ".AppleDouble"
-        ".DS_Store"
-        ".LSOverride"
-        # Directories potentially created on remote AFP share
-        ".AppleDB"
-        ".AppleDesktop"
-        # Files that might appear in the root of a volume
-        ".DocumentRevisions-V100"
-        # KDE directory preferences
-        ".directory"
-        ".fseventsd"
-        # Temporary files which can be created if a process still has a handle open of a deleted file
-        ".fuse_hidden*"
-        # Git
-        ".git"
-        # Jujutsu
-        ".jj"
-        # .nfs files are created when an open file is removed but is still being accessed
-        ".nfs*"
-        # Sapling
-        ".sl"
-        ".Spotlight-V100"
-        ".TemporaryItems"
-        # Linux trash folder which might appear on any partition or disk
-        ".Trash-*"
-        ".Trashes"
-        ".VolumeIcon.icns"
-        ".apdisk"
-        ".com.apple.timemachine.donotpresent"
-        # Thumbnails
-        "._*"
-        # Windows shortcuts
-        "* .lnk"
-        # Dump file
-        "*.stackdump"
-        # Windows Installer files
-        "*.cab"
-        "*.msi"
-        "*.msix"
-        "*.msm"
-        "*.msp"
-        # Recycle Bin used on file shares
-        "$RECYCLE.BIN/"
-        # Folder config file
-        "[Dd]esktop.ini"
-        "ehthumbs.db"
-        "ehthumbs_vista.db"
-        # Icon must end with two \r
-        "Icon"
-        "Network Trash Folder"
-        "Temporary Items"
-        "Thumbs.db"
-        "Thumbs.db:encryptable"
-      ];
       lfs.enable = true;
       settings = {
         alias = {
