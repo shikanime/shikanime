@@ -6,12 +6,6 @@
 }:
 
 {
-  home.packages = [
-    pkgs.ghstack
-    pkgs.sapling
-    pkgs.tea
-  ];
-
   programs = {
     git = {
       enable = true;
