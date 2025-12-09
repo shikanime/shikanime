@@ -11,9 +11,7 @@
           select = "underline";
         };
         cursorline = true;
-        indent-guides = {
-          render = true;
-        };
+        indent-guides.render = true;
         line-number = "relative";
       };
       keys.normal = {
