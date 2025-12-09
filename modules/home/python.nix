@@ -1,14 +1,12 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = [
+    pkgs.basedpyright
+    pkgs.python312Packages.jedi-language-server
+    pkgs.ruff
     pkgs.uv
   ];
-
-  programs.helix.languages.language-server = {
-    jedi.command = "${pkgs.python312Packages.jedi-language-server}/bin/jedi-language-server";
-    ruff.command = "${lib.getExe pkgs.ruff}";
-  };
 
   programs.nushell.extraConfig = ''
     source ${pkgs.nu_scripts}/share/nu_scripts/custom-completions/auto-generate/completions/python.nu

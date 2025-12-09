@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
 {
-  programs.helix.languages.language-server = {
-    bash-language-server.command = "${pkgs.bash-language-server}/bin/bash-language-server";
-    clangd.command = "${pkgs.clang-tools}/bin/clangd";
-  };
+  home.packages = [
+    pkgs.bash-language-server
+    pkgs.clang-tools
+  ];
 }
