@@ -1,8 +1,6 @@
 { lib, ... }:
 
 {
-  nix.linux-builder.enable = true;
-
   homebrew = {
     enable = true;
     brews = [
