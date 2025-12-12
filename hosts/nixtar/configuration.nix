@@ -98,7 +98,10 @@ in
     !include ${config.sops.secrets.nix-config.path}
   '';
 
-  programs.nix-ld.libraries = [ wsl-lib ];
+  programs.nix-ld = {
+    enable = true;
+    libraries = [ wsl-lib ];
+  };
 
   services = {
     gnome.gnome-keyring.enable = true;
@@ -233,10 +236,15 @@ in
     extraGroups = [ "wheel" ];
     home = "/home/shika";
   };
-
-  # Docker CDI setting is not enabled by default
-  virtualisation.docker.rootless.daemon.settings.features.cdi = true;
-
+  virtualisation.docker = {
+    autoPrune.enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+      # Docker CDI setting is not enabled by default
+      daemon.settings.features.cdi = true;
+    };
+  };
   wsl = {
     enable = true;
     defaultUser = "shika";
