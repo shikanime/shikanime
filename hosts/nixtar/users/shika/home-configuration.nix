@@ -11,8 +11,6 @@
   ];
 
   home = {
-    file."Library/Preferences/sapling/sapling.conf".source =
-      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
     packages = [ pkgs.gcc ];
     sessionVariables.GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
   };
@@ -70,6 +68,8 @@
     ];
 
   xdg.configFile = {
+    "sapling/sapling.conf".source =
+      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
     "cachix/cachix.dhall".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.cachix-config.path;
     "jj/conf.d/default.toml".source =
