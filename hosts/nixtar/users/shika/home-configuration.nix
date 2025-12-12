@@ -10,10 +10,7 @@
     ../../../../modules/home/workstation.nix
   ];
 
-  home = {
-    packages = [ pkgs.gcc ];
-    sessionVariables.GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
-  };
+  home.sessionVariables.GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
 
   nix.extraOptions = ''
     !include ${config.sops.secrets.nix-config.path}
