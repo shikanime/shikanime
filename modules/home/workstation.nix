@@ -2,24 +2,9 @@
 
 {
   home.packages = [
-    pkgs.bzip2
-    pkgs.cachix
-    pkgs.curl
-    pkgs.gitnr
     pkgs.glances
-    pkgs.gnugrep
-    pkgs.gnumake
-    pkgs.gnupatch
-    pkgs.gnused
-    pkgs.graphviz
-    pkgs.less
     pkgs.qpdf
     pkgs.rclone
-    pkgs.rsync
-    pkgs.unzip
-    pkgs.watch
-    pkgs.wget
-    pkgs.which
     pkgs.zip
   ];
 
