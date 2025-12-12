@@ -22,8 +22,6 @@
 
     gpg.enable = true;
 
-    jq.enable = true;
-
     mise.enable = true;
 
     nix-index.enable = true;
