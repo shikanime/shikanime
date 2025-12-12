@@ -69,13 +69,6 @@
             };
           };
         };
-        build = {
-          containers = pkgs.lib.mkForce { };
-          packages = [
-            pkgs.nushell
-            pkgs.skaffold
-          ];
-        };
       };
     };
 }
