@@ -7,19 +7,19 @@
       devenv.shells = {
         default = {
           imports = [
-            inputs.devlib.devenvModules.shikanime-studio
+            inputs.devlib.devenvModules.docs
+            inputs.devlib.devenvModules.formats
+            inputs.devlib.devenvModules.github
+            inputs.devlib.devenvModules.nix
+            inputs.devlib.devenvModules.opentofu
+            inputs.devlib.devenvModules.shell
+            inputs.devlib.devenvModules.shikanime
           ];
 
-          cachix.push = "shikanime";
-
-          languages.opentofu.enable = true;
-
           packages = [
-            pkgs.direnv
             pkgs.nushell
             pkgs.scaleway-cli
             pkgs.skaffold
-            pkgs.sops
           ];
 
           sops = {
