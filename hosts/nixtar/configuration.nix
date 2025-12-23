@@ -236,6 +236,7 @@ in
     extraGroups = [ "wheel" ];
     home = "/home/shika";
   };
+
   virtualisation.docker = {
     autoPrune.enable = true;
     rootless = {
@@ -245,6 +246,7 @@ in
       daemon.settings.features.cdi = true;
     };
   };
+
   wsl = {
     enable = true;
     defaultUser = "shika";

@@ -30,6 +30,7 @@
   # Automatically upgrade NixOS
   system.autoUpgrade = {
     enable = true;
+    flags = ["--accept-flake-config"];
     flake = "github:shikanime/shikanime";
   };
 
