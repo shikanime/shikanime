@@ -53,10 +53,12 @@
               {
                 source = "/sys/kernel/debug";
                 target = "/sys/kernel/debug";
+                type = "bind";
               }
               {
                 source = "/sys/kernel/tracing";
                 target = "/sys/kernel/tracing";
+                type = "bind";
               }
             ];
             overrideCommand = false;
