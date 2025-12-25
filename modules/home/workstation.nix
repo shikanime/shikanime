@@ -5,6 +5,7 @@
     pkgs.glances
     pkgs.qpdf
     pkgs.rclone
+    pkgs.wget
     pkgs.zip
   ];
 

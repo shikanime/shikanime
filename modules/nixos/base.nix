@@ -6,7 +6,7 @@
     useUserPackages = true;
   };
 
-  # Clearnup disk weekly
+  # Cleanup disk weekly
   nix.gc = {
     automatic = true;
     dates = "weekly";
