@@ -39,10 +39,12 @@
       pkgs.dockerTools.binSh
       pkgs.git
       pkgs.gnugrep
+      pkgs.gnupg
       pkgs.gnused
       pkgs.gnutar
       pkgs.gzip
       pkgs.stdenv
+      pkgs.xargs
     ];
     includeNixDB = true;
     config = {
