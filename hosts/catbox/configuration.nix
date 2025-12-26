@@ -37,6 +37,7 @@
       pkgs.bash
       pkgs.coreutils
       pkgs.dockerTools.binSh
+      pkgs.findutils
       pkgs.git
       pkgs.gnugrep
       pkgs.gnupg
@@ -44,7 +45,6 @@
       pkgs.gnutar
       pkgs.gzip
       pkgs.stdenv
-      pkgs.xargs
     ];
     includeNixDB = true;
     config = {
