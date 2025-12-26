@@ -67,14 +67,6 @@
             overrideCommand = false;
             privileged = true;
             remoteUser = "shika";
-            runArgs = [
-              "--interactive"
-              "--tmpfs"
-              "/run"
-              "--tmpfs"
-              "/tmp"
-              "--tty"
-            ];
             updateRemoteUserUID = false;
           }
         ];
