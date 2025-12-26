@@ -34,6 +34,7 @@
     name = "ghcr.io/shikanime/shikanime/catbox";
     contents = [
       config.system.build.toplevel
+      pkgs.bash
       pkgs.coreutils
       pkgs.dockerTools.binSh
       pkgs.git
