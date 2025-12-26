@@ -67,7 +67,10 @@
             overrideCommand = false;
             privileged = true;
             remoteUser = "shika";
-            runArgs = ["--interactive" "--tty"];
+            runArgs = [
+              "--interactive"
+              "--tty"
+            ];
             updateRemoteUserUID = false;
           }
         ];
