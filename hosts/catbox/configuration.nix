@@ -8,7 +8,7 @@
 {
   imports = [
     "${modulesPath}/profiles/headless.nix"
-    "${modulesPath}/virtualisation/docker-image.nix"
+    "${modulesPath}/profiles/docker-container.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/workstation.nix
   ];
