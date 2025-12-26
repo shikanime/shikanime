@@ -8,7 +8,7 @@
 {
   imports = [
     "${modulesPath}/profiles/headless.nix"
-    "${modulesPath}/profiles/docker-container.nix"
+    "${modulesPath}/virtualisation/docker-image.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/workstation.nix
   ];
@@ -19,9 +19,6 @@
 
   # Let Docker manage /etc/resolv.conf
   environment.etc."resolv.conf".enable = false;
-
-  # Iptables do not work in Docker.
-  networking.firewall.enable = false;
 
   programs.nix-ld.enable = true;
 
