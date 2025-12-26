@@ -20,6 +20,8 @@
   # Let Docker manage /etc/resolv.conf
   environment.etc."resolv.conf".enable = false;
 
+  programs.nix-ld.enable = true;
+
   security.sudo.wheelNeedsPassword = false;
 
   # Enable SSH access
