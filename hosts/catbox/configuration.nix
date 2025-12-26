@@ -46,6 +46,7 @@
       pkgs.gnused
       pkgs.gnutar
       pkgs.gzip
+      pkgs.openssh
       pkgs.stdenv
     ];
     includeNixDB = true;
