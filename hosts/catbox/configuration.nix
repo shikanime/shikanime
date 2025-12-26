@@ -20,6 +20,9 @@
   # Let Docker manage /etc/resolv.conf
   environment.etc."resolv.conf".enable = false;
 
+  # Iptables do not work in Docker.
+  networking.firewall.enable = false;
+
   programs.nix-ld.enable = true;
 
   security.sudo.wheelNeedsPassword = false;
