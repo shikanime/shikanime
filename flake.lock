@@ -809,9 +809,12 @@
       "locked": {
         "lastModified": 1766682643,
         "narHash": "sha256-f4VRPaPZVcJpdmelgnuIpVSr+pblKvn6SLpu3mkPMJU=",
+        "lastModified": 1766757199,
+        "narHash": "sha256-vyk4UFbI0Rnw9AmW4iXQ6QA9aVxCRWDR5J9e5YtjiV4=",
         "owner": "shikanime-studio",
         "repo": "devlib",
         "rev": "d4dc205866ac7288292b02768e2cc9009e54c8c8",
+        "rev": "3304a48d2dac653c6fe28703e00194e8dcdc470d",
         "type": "github"
       },
       "original": {
