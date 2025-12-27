@@ -15,7 +15,7 @@
     file."Library/Preferences/sapling/sapling.conf".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
     sessionVariables = {
-      GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
+      GHSTACKRC_PATH = "${config.xdg.configHome}/ghstack/ghstackrc";
       SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
     };
   };
@@ -100,6 +100,8 @@
       force = true;
       source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.glab-cli-config.path;
     };
+    "ghstack/ghstackrc".source =
+      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
     "jj/conf.d/default.toml".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-config.path;
   };
