@@ -15,7 +15,7 @@
     file."Library/Preferences/sapling/sapling.conf".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
     sessionVariables = {
-      GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
+      GHSTACKRC_PATH = "${config.xdg.configHome}/ghstack/ghstackrc";
       SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
     };
   };
@@ -96,6 +96,8 @@
   xdg.configFile = {
     "cachix/cachix.dhall".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.cachix-config.path;
+    "ghstack/ghstackrc".source =
+      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
     "glab-cli/config.yml" = {
       force = true;
       source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.glab-cli-config.path;
