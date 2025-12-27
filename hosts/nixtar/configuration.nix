@@ -103,6 +103,8 @@ in
     libraries = [ wsl-lib ];
   };
 
+  security.sudo.wheelNeedsPassword = false;
+
   services = {
     gnome.gnome-keyring.enable = true;
 
