@@ -153,14 +153,9 @@
   };
 
   users.users.nishir = {
+    initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
     extraGroups = [ "wheel" ];
     isNormalUser = true;
     home = "/home/nishir";
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsUrtJU0kAg39S6Is4hOhiCIbZusi7/MHAvLYY0M7L3 shikanimedeva@kaltashar"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIciZH796Ca2/OgnDrxsnyAeuuiaT9Yvc6hH9cXWARoH shikanimedeva@telsha"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRmTkC8sHNFKpHFfbSsZAQ5/gJyUlgUCXOhYhjPmNed shika@ishtar"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINql3Q+6f6EM8ZBIFPOnVzbxsU1jOhAFRg+3Y8oSKy5s shika@nixtar"
-    ];
   };
 }
