@@ -10,7 +10,7 @@
     ../../../../modules/home/workstation.nix
   ];
 
-  home.sessionVariables.GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
+  home.sessionVariables.GHSTACKRC_PATH = "${config.xdg.configHome}/ghstack/ghstackrc";
 
   nix.extraOptions = ''
     !include ${config.sops.secrets.nix-config.path}
@@ -69,6 +69,8 @@
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
     "cachix/cachix.dhall".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.cachix-config.path;
+    "ghstack/ghstackrc".source =
+      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
     "jj/conf.d/default.toml".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-config.path;
   };
