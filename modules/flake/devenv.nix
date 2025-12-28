@@ -17,6 +17,7 @@
           ];
 
           packages = [
+            pkgs.nixos-facter
             pkgs.nushell
             pkgs.scaleway-cli
             pkgs.skaffold

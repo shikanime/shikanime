@@ -84,6 +84,8 @@ in
     pkgs.libnotify
   ];
 
+  hardware.facter.reportPath = ./facter.json;
+
   # NVIDIA driver is provided by Windows host
   hardware.nvidia.open = false;
 
@@ -252,10 +254,6 @@ in
     defaultUser = "shika";
     interop.register = true;
     useWindowsDriver = true;
-    wslConf.network = {
-      generateHosts = false;
-      generateResolvConf = false;
-    };
   };
 
   systemd.tmpfiles.rules = [
