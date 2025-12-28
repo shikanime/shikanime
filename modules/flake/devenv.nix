@@ -17,7 +17,6 @@
           ];
 
           packages = [
-            pkgs.nushell
             pkgs.scaleway-cli
             pkgs.skaffold
           ]
