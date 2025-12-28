@@ -84,12 +84,13 @@ in
     pkgs.libnotify
   ];
 
-  # NVIDIA driver is provided by Windows host
-  hardware.nvidia.open = false;
-
-  hardware.nvidia-container-toolkit = {
-    enable = true;
-    mount-nvidia-executables = false;
+  hardware = {
+    facter.reportPath = ./facter.json;
+    nvidia.open = true;
+    nvidia-container-toolkit = {
+      enable = true;
+      mount-nvidia-executables = false;
+    };
   };
 
   networking.hostName = "nixtar";
@@ -252,10 +253,6 @@ in
     defaultUser = "shika";
     interop.register = true;
     useWindowsDriver = true;
-    wslConf.network = {
-      generateHosts = false;
-      generateResolvConf = false;
-    };
   };
 
   systemd.tmpfiles.rules = [

@@ -2,7 +2,7 @@
 
 {
   perSystem =
-    { pkgs, ... }:
+    { lib, pkgs, ... }:
     {
       devenv.shells = {
         default = {
@@ -20,7 +20,8 @@
             pkgs.nushell
             pkgs.scaleway-cli
             pkgs.skaffold
-          ];
+          ]
+          ++ lib.optional pkgs.stdenv.hostPlatform.isLinux pkgs.nixos-facter;
 
           sops = {
             enable = true;
