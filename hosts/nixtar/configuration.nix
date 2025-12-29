@@ -77,6 +77,9 @@ in
     ./users/shika/home-configuration.nix
   ];
 
+  # Let Tailscale manage /etc/resolv.conf
+  environment.etc."resolv.conf".enable = false;
+
   # Required for Docker credential management
   environment.systemPackages = [
     pkgs.docker-credential-helpers
@@ -267,6 +270,10 @@ in
     defaultUser = "shika";
     interop.register = true;
     useWindowsDriver = true;
+    wslConf.network = {
+      generateHosts = false;
+      generateResolvConf = false;
+    };
   };
 
   systemd.tmpfiles.rules = [
