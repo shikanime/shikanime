@@ -20,7 +20,13 @@
   # Let Docker manage /etc/resolv.conf
   environment.etc."resolv.conf".enable = false;
 
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = [
+      pkgs.stdenv.cc.cc.lib
+    ];
+  };
+
 
   security.sudo.wheelNeedsPassword = false;
 

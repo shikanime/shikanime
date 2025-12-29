@@ -101,7 +101,10 @@ in
 
   programs.nix-ld = {
     enable = true;
-    libraries = [ wsl-lib ];
+    libraries = [
+      pkgs.stdenv.cc.cc.lib
+      wsl-lib
+    ];
   };
 
   services = {
