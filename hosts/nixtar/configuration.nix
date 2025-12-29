@@ -141,6 +141,15 @@ in
           values.cert-manager.enabled = true;
           version = "0.24.1";
         };
+        longhorn = {
+          enable = true;
+          createNamespace = true;
+          hash = "sha256-qHHTl+Gc8yQ5SavUH9KUhp9cLEkAFPKecYZqJDPsf7k=";
+          name = "longhorn";
+          repo = "https://charts.longhorn.io";
+          targetNamespace = "longhorn-system";
+          version = "1.10.1";
+        };
         tailscale-operator = {
           enable = true;
           createNamespace = true;
