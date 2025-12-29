@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   imports = [
@@ -17,42 +17,6 @@
     sessionVariables = {
       GHSTACKRC_PATH = "${config.xdg.configHome}/ghstack/ghstackrc";
       SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
-    };
-  };
-
-  launchd.agents = {
-    chmod-ghstack = {
-      enable = true;
-      config = {
-        KeepAlive = {
-          Crashed = true;
-          SuccessfulExit = false;
-        };
-        ProgramArguments = [
-          "${pkgs.coreutils}/bin/chmod"
-          "0640"
-          "${config.xdg.configHome}/ghstack/ghstackrc"
-        ];
-        RunAtLoad = true;
-        WatchPaths = [ "${config.xdg.configHome}/ghstack/ghstackrc" ];
-      };
-    };
-
-    chmod-glab-cli = {
-      enable = true;
-      config = {
-        KeepAlive = {
-          Crashed = true;
-          SuccessfulExit = false;
-        };
-        ProgramArguments = [
-          "${pkgs.coreutils}/bin/chmod"
-          "0600"
-          "${config.xdg.configHome}/glab-cli/config.yml"
-        ];
-        RunAtLoad = true;
-        WatchPaths = [ "${config.xdg.configHome}/glab-cli/config.yml" ];
-      };
     };
   };
 
@@ -84,7 +48,7 @@
     defaultSopsFormat = "yaml";
     secrets = {
       cachix-config = { };
-      ghstack-config = { };
+      ghstack-config.mode = "0640";
       git-config = { };
       glab-cli-config = { };
       jujutsu-config = { };
