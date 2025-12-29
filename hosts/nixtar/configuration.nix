@@ -208,6 +208,7 @@ in
       openFirewall = true;
       authKeyFile = config.sops.secrets.tailscale-authkey.path;
       extraUpFlags = [
+        "--accept-dns=false"
         "--advertise-routes 10.42.0.0/16,2001:cafe:42::/56"
         "--ssh"
       ];
