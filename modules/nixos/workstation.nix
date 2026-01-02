@@ -7,4 +7,6 @@
     pinentryPackage = pkgs.pinentry-all;
     settings.default-cache-ttl = 60 * 60;
   };
+
+  services.lorri.enable = true;
 }
