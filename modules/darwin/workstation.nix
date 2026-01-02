@@ -58,4 +58,6 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  services.lorri.enable = true;
 }
