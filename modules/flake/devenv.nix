@@ -1,4 +1,6 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
+
+with lib;
 
 {
   perSystem =
@@ -100,6 +102,50 @@
               stores.yaml.indent = 2;
             };
           };
+        };
+        linux = {
+          containers = mkForce { };
+
+          languages.c.enable = true;
+
+          packages = [
+            pkgs.bc
+            pkgs.bison
+            pkgs.flex
+            pkgs.gcc
+            pkgs.gnumake
+            pkgs.ncurses
+            pkgs.openssl
+            pkgs.pkg-config
+            pkgs.python3
+            pkgs.zlib
+          ]
+          ++ optional (lib.meta.availableOn pkgs.stdenv.hostPlatform pkgs.elfutils) pkgs.elfutils
+          ++ optional (lib.meta.availableOn pkgs.stdenv.hostPlatform pkgs.pahole) pkgs.pahole;
+        };
+        longhorn = {
+          containers = mkForce { };
+
+          git-hooks.hooks = {
+            golangci-lint.enable = true;
+            gotest.enable = true;
+          };
+
+          languages.go.enable = true;
+
+          packages = [
+            pkgs.docker
+            pkgs.gnumake
+            pkgs.kubectl
+            pkgs.kustomize
+          ];
+        };
+        nixos = {
+          containers = mkForce { };
+
+          packages = [
+            pkgs.nixpkgs-review
+          ];
         };
       };
     };
