@@ -77,6 +77,9 @@ in
     ./users/shika/home-configuration.nix
   ];
 
+  # Let Tailscale manage /etc/resolv.conf
+  environment.etc."resolv.conf".enable = false;
+
   # Required for Docker credential management
   environment.systemPackages = [
     pkgs.docker-credential-helpers
@@ -84,12 +87,13 @@ in
     pkgs.libnotify
   ];
 
-  # NVIDIA driver is provided by Windows host
-  hardware.nvidia.open = false;
-
-  hardware.nvidia-container-toolkit = {
-    enable = true;
-    mount-nvidia-executables = false;
+  hardware = {
+    facter.reportPath = ./facter.json;
+    nvidia.open = true;
+    nvidia-container-toolkit = {
+      enable = true;
+      mount-nvidia-executables = false;
+    };
   };
 
   networking.hostName = "nixtar";
@@ -100,7 +104,11 @@ in
 
   programs.nix-ld = {
     enable = true;
-    libraries = [ wsl-lib ];
+    libraries = [
+      pkgs.stdenv.cc.cc.lib
+      pkgs.zlib
+      wsl-lib
+    ];
   };
 
   services = {
@@ -135,6 +143,15 @@ in
           targetNamespace = "capi-operator-system";
           values.cert-manager.enabled = true;
           version = "0.24.1";
+        };
+        longhorn = {
+          enable = true;
+          createNamespace = true;
+          hash = "sha256-qHHTl+Gc8yQ5SavUH9KUhp9cLEkAFPKecYZqJDPsf7k=";
+          name = "longhorn";
+          repo = "https://charts.longhorn.io";
+          targetNamespace = "longhorn-system";
+          version = "1.10.1";
         };
         tailscale-operator = {
           enable = true;
@@ -207,6 +224,7 @@ in
       openFirewall = true;
       authKeyFile = config.sops.secrets.tailscale-authkey.path;
       extraUpFlags = [
+        "--accept-dns=false"
         "--advertise-routes 10.42.0.0/16,2001:cafe:42::/56"
         "--ssh"
       ];
