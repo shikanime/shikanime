@@ -32,5 +32,8 @@
   users.users.shikanimedeva = {
     name = "shikanimedeva";
     home = "/Users/shikanimedeva";
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+tp1Xfz7NomHCZuDPlfj3XW5hm9t0TiCyEeudRraoe"
+    ];
   };
 }

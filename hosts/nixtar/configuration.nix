@@ -111,6 +111,8 @@ in
     ];
   };
 
+  security.sudo.wheelNeedsPassword = false;
+
   services = {
     gnome.gnome-keyring.enable = true;
 
@@ -253,6 +255,9 @@ in
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     home = "/home/shika";
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+tp1Xfz7NomHCZuDPlfj3XW5hm9t0TiCyEeudRraoe"
+    ];
   };
 
   virtualisation.docker = {
