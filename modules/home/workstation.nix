@@ -2,6 +2,7 @@
 
 {
   home.packages = [
+    pkgs.bitwarden-cli
     pkgs.glances
     pkgs.qpdf
     pkgs.rclone
