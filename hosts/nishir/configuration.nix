@@ -167,6 +167,7 @@
 
   users.users.nishir = {
     extraGroups = [ "wheel" ];
+    initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
     isNormalUser = true;
     home = "/home/nishir";
     openssh.authorizedKeys.keys = [
