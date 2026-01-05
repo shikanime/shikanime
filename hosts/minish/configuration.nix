@@ -157,10 +157,7 @@
     isNormalUser = true;
     home = "/home/nishir";
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsUrtJU0kAg39S6Is4hOhiCIbZusi7/MHAvLYY0M7L3 shikanimedeva@kaltashar"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIciZH796Ca2/OgnDrxsnyAeuuiaT9Yvc6hH9cXWARoH shikanimedeva@telsha"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRmTkC8sHNFKpHFfbSsZAQ5/gJyUlgUCXOhYhjPmNed shika@ishtar"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINql3Q+6f6EM8ZBIFPOnVzbxsU1jOhAFRg+3Y8oSKy5s shika@nixtar"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+tp1Xfz7NomHCZuDPlfj3XW5hm9t0TiCyEeudRraoe"
     ];
   };
 }

@@ -20,7 +20,13 @@
   # Let Docker manage /etc/resolv.conf
   environment.etc."resolv.conf".enable = false;
 
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = [
+      pkgs.stdenv.cc.cc.lib
+      pkgs.zlib
+    ];
+  };
 
   security.sudo.wheelNeedsPassword = false;
 
@@ -36,12 +42,17 @@
       config.system.build.toplevel
       pkgs.bash
       pkgs.coreutils
+      pkgs.docker
       pkgs.dockerTools.binSh
+      pkgs.findutils
+      pkgs.gh
       pkgs.git
       pkgs.gnugrep
+      pkgs.gnupg
       pkgs.gnused
       pkgs.gnutar
       pkgs.gzip
+      pkgs.openssh
       pkgs.stdenv
     ];
     includeNixDB = true;
@@ -67,10 +78,6 @@
             overrideCommand = false;
             privileged = true;
             remoteUser = "shika";
-            runArgs = [
-              "--interactive"
-              "--tty"
-            ];
             updateRemoteUserUID = false;
           }
         ];
@@ -92,10 +99,7 @@
     isNormalUser = true;
     home = "/home/shika";
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsUrtJU0kAg39S6Is4hOhiCIbZusi7/MHAvLYY0M7L3 shikanimedeva@kaltashar"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIciZH796Ca2/OgnDrxsnyAeuuiaT9Yvc6hH9cXWARoH shikanimedeva@telsha"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRmTkC8sHNFKpHFfbSsZAQ5/gJyUlgUCXOhYhjPmNed shika@ishtar"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINql3Q+6f6EM8ZBIFPOnVzbxsU1jOhAFRg+3Y8oSKy5s shika@nixtar"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+tp1Xfz7NomHCZuDPlfj3XW5hm9t0TiCyEeudRraoe"
     ];
   };
 }
