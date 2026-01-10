@@ -103,6 +103,15 @@ with lib;
             };
           };
         };
+        jj-vcs = {
+          containers = mkForce { };
+
+          languages.rust.enable = true;
+
+          packages = [
+            pkgs.libiconv
+          ];
+        };
         linux = {
           containers = mkForce { };
 
