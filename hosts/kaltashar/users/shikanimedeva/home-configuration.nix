@@ -4,7 +4,6 @@
   imports = [
     ../../../../modules/home/base.nix
     ../../../../modules/home/cloud.nix
-    ../../../../modules/home/fontconfig.nix
     ../../../../modules/home/ghostty.nix
     ../../../../modules/home/starship.nix
     ../../../../modules/home/helix.nix
