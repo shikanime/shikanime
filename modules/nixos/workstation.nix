@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  fonts.packages = [
+    pkgs.fira-code
+    pkgs.inriafonts
+  ];
+
   programs.gnupg.agent = {
     enable = true;
     enableExtraSocket = true;
