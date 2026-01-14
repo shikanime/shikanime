@@ -85,7 +85,6 @@ in
     pkgs.docker-credential-helpers
     pkgs.pass
     pkgs.wl-clipboard
-    pkgs.libnotify
   ];
 
   hardware = {
