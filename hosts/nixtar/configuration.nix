@@ -83,6 +83,7 @@ in
   # Required for Docker credential management
   environment.systemPackages = [
     pkgs.docker-credential-helpers
+    pkgs.pass
     pkgs.wl-clipboard
     pkgs.libnotify
   ];
@@ -112,14 +113,10 @@ in
   };
 
   services = {
-    gnome.gnome-keyring.enable = true;
-
     openssh = {
       enable = true;
       openFirewall = true;
     };
-
-    passSecretService.enable = true;
 
     rke2 = {
       enable = true;
