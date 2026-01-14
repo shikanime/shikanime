@@ -43,6 +43,7 @@
       pkgs.bash
       pkgs.coreutils
       pkgs.docker
+      pkgs.docker-credential-helpers
       pkgs.dockerTools.binSh
       pkgs.findutils
       pkgs.gh
@@ -53,6 +54,7 @@
       pkgs.gnutar
       pkgs.gzip
       pkgs.openssh
+      pkgs.pass
       pkgs.stdenv
     ];
     includeNixDB = true;
