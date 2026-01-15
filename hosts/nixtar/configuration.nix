@@ -112,8 +112,6 @@ in
   };
 
   services = {
-    cachix-watch-store.enable = true;
-
     openssh = {
       enable = true;
       openFirewall = true;
