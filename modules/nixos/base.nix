@@ -6,7 +6,7 @@
     useUserPackages = true;
   };
 
-  # Clearnup disk weekly
+  # Cleanup disk weekly
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -30,6 +30,7 @@
   # Automatically upgrade NixOS
   system.autoUpgrade = {
     enable = true;
+    flags = [ "--accept-flake-config" ];
     flake = "github:shikanime/shikanime";
   };
 

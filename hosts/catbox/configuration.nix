@@ -20,6 +20,14 @@
   # Let Docker manage /etc/resolv.conf
   environment.etc."resolv.conf".enable = false;
 
+  programs.nix-ld = {
+    enable = true;
+    libraries = [
+      pkgs.stdenv.cc.cc.lib
+      pkgs.zlib
+    ];
+  };
+
   security.sudo.wheelNeedsPassword = false;
 
   # Enable SSH access
@@ -32,13 +40,21 @@
     name = "ghcr.io/shikanime/shikanime/catbox";
     contents = [
       config.system.build.toplevel
+      pkgs.bash
       pkgs.coreutils
+      pkgs.docker
+      pkgs.docker-credential-helpers
       pkgs.dockerTools.binSh
+      pkgs.findutils
+      pkgs.gh
       pkgs.git
       pkgs.gnugrep
+      pkgs.gnupg
       pkgs.gnused
       pkgs.gnutar
       pkgs.gzip
+      pkgs.openssh
+      pkgs.pass
       pkgs.stdenv
     ];
     includeNixDB = true;
@@ -53,10 +69,12 @@
               {
                 source = "/sys/kernel/debug";
                 target = "/sys/kernel/debug";
+                type = "bind";
               }
               {
                 source = "/sys/kernel/tracing";
                 target = "/sys/kernel/tracing";
+                type = "bind";
               }
             ];
             overrideCommand = false;
@@ -78,13 +96,13 @@
     "Z /workspaces - shika users - -"
   ];
 
-  users.users = {
-    root.initialHashedPassword = "$y$j9T$YiuBBsevFD1c6mAOGSJrj/$F74aClFmbKOt/qXs//kaWzFgJbS8JU8GciGb7ocdOi0";
-    shika = {
-      initialHashedPassword = "$y$j9T$HB1msXB0DEq00J48zRpB20$/3rhVrTzGrv1j/cPvZ0clOM2gEe1TeylUG39wgD0C42";
-      extraGroups = [ "wheel" ];
-      isNormalUser = true;
-      home = "/home/shika";
-    };
+  users.users.shika = {
+    extraGroups = [ "wheel" ];
+    initialHashedPassword = "";
+    isNormalUser = true;
+    home = "/home/shika";
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+tp1Xfz7NomHCZuDPlfj3XW5hm9t0TiCyEeudRraoe"
+    ];
   };
 }

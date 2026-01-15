@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   imports = [
     ../../../../modules/home/base.nix
     ../../../../modules/home/cloud.nix
+    ../../../../modules/home/fontconfig.nix
     ../../../../modules/home/ghostty.nix
     ../../../../modules/home/helix.nix
     ../../../../modules/home/starship.nix
@@ -14,48 +15,9 @@
   home = {
     file."Library/Preferences/sapling/sapling.conf".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
-    sessionPath = [
-      "${config.home.homeDirectory}/.rd/bin"
-    ];
     sessionVariables = {
-      GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
+      GHSTACKRC_PATH = "${config.xdg.configHome}/ghstack/ghstackrc";
       SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
-    };
-  };
-
-  launchd.agents = {
-    chmod-ghstack = {
-      enable = true;
-      config = {
-        KeepAlive = {
-          Crashed = true;
-          SuccessfulExit = false;
-        };
-        ProgramArguments = [
-          "${pkgs.coreutils}/bin/chmod"
-          "0640"
-          "${config.xdg.configHome}/ghstack/ghstackrc"
-        ];
-        RunAtLoad = true;
-        WatchPaths = [ "${config.xdg.configHome}/ghstack/ghstackrc" ];
-      };
-    };
-
-    chmod-glab-cli = {
-      enable = true;
-      config = {
-        KeepAlive = {
-          Crashed = true;
-          SuccessfulExit = false;
-        };
-        ProgramArguments = [
-          "${pkgs.coreutils}/bin/chmod"
-          "0600"
-          "${config.xdg.configHome}/glab-cli/config.yml"
-        ];
-        RunAtLoad = true;
-        WatchPaths = [ "${config.xdg.configHome}/glab-cli/config.yml" ];
-      };
     };
   };
 
@@ -87,7 +49,7 @@
     defaultSopsFormat = "yaml";
     secrets = {
       cachix-config = { };
-      ghstack-config = { };
+      ghstack-config.mode = "0640";
       git-config = { };
       jujutsu-config = { };
       glab-cli-config = { };
@@ -103,6 +65,8 @@
       force = true;
       source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.glab-cli-config.path;
     };
+    "ghstack/ghstackrc".source =
+      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
     "jj/conf.d/default.toml".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-config.path;
   };
