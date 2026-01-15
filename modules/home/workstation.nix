@@ -3,6 +3,7 @@
 {
   home.packages = [
     pkgs.bitwarden-cli
+    pkgs.cachix
     pkgs.devenv
     pkgs.glances
     pkgs.qpdf
