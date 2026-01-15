@@ -16,7 +16,6 @@
       "appcleaner"
       "dbeaver-community"
       "discord"
-      "ghostty"
       "google-chrome"
       "google-drive"
       "jellyfin-media-player"

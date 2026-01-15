@@ -4,13 +4,14 @@
   imports = [
     ../../../../modules/home/base.nix
     ../../../../modules/home/cloud.nix
+    ../../../../modules/home/fontconfig.nix
     ../../../../modules/home/helix.nix
     ../../../../modules/home/starship.nix
     ../../../../modules/home/vcs.nix
     ../../../../modules/home/workstation.nix
   ];
 
-  home.sessionVariables.GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
+  home.sessionVariables.GHSTACKRC_PATH = "${config.xdg.configHome}/ghstack/ghstackrc";
 
   nix.extraOptions = ''
     !include ${config.sops.secrets.nix-config.path}
@@ -42,7 +43,7 @@
     defaultSopsFormat = "yaml";
     secrets = {
       cachix-config = { };
-      ghstack-config = { };
+      ghstack-config.mode = "0640";
       git-config = { };
       glab-cli-config = { };
       jujutsu-config = { };
@@ -51,24 +52,13 @@
     };
   };
 
-  # Use systemd-tmpfiles to ensure glab config is a real file with mode 0600
-  systemd.user.tmpfiles.rules =
-    let
-      glabConfigTarget = "${config.xdg.configHome}/glab-cli/config.yml";
-      ghstackConfigTarget = "${config.xdg.configHome}/ghstack/ghstackrc";
-    in
-    [
-      "C+ ${glabConfigTarget} - - - - ${config.sops.secrets.glab-cli-config.path}"
-      "z  ${glabConfigTarget} 0600"
-      "C+ ${ghstackConfigTarget} - - - - ${config.sops.secrets.ghstack-config.path}"
-      "z  ${ghstackConfigTarget} 0640"
-    ];
-
   xdg.configFile = {
     "sapling/sapling.conf".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
     "cachix/cachix.dhall".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.cachix-config.path;
+    "ghstack/ghstackrc".source =
+      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
     "jj/conf.d/default.toml".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-config.path;
   };

@@ -1,14 +1,22 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
+
+with lib;
 
 {
   perSystem =
-    { pkgs, ... }:
+    {
+      config,
+      lib,
+      pkgs,
+      ...
+    }:
     {
       devenv.shells = {
         default = {
           imports = [
             inputs.devlib.devenvModules.docs
             inputs.devlib.devenvModules.formats
+            inputs.devlib.devenvModules.git
             inputs.devlib.devenvModules.github
             inputs.devlib.devenvModules.nix
             inputs.devlib.devenvModules.opentofu
@@ -16,11 +24,37 @@
             inputs.devlib.devenvModules.shikanime
           ];
 
+          github.workflows.wakabox = {
+            enable = true;
+            settings = {
+              name = "Wakabox";
+              on = {
+                schedule = [
+                  { cron = "0 0 * * *"; }
+                ];
+                workflow_dispatch = null;
+              };
+              jobs.wakabox = {
+                runs-on = "ubuntu-latest";
+                steps = with config.devenv.shells.default.github.lib; [
+                  {
+                    uses = "matchai/waka-box@v5.0.0";
+                    env = {
+                      GH_TOKEN = mkWorkflowRef "secrets.WAKABOX_GITHUB_TOKEN";
+                      GIST_ID = mkWorkflowRef "vars.WAKABOX_GITHUB_GIST_ID";
+                      WAKATIME_API_KEY = mkWorkflowRef "secrets.WAKATIME_API_KEY";
+                    };
+                  }
+                ];
+              };
+            };
+          };
+
           packages = [
-            pkgs.nushell
             pkgs.scaleway-cli
             pkgs.skaffold
-          ];
+          ]
+          ++ lib.optional pkgs.stdenv.hostPlatform.isLinux pkgs.nixos-facter;
 
           sops = {
             enable = true;
@@ -68,6 +102,59 @@
               stores.yaml.indent = 2;
             };
           };
+        };
+        jj-vcs = {
+          containers = mkForce { };
+
+          languages.rust.enable = true;
+
+          packages = [
+            pkgs.libiconv
+          ];
+        };
+        linux = {
+          containers = mkForce { };
+
+          languages.c.enable = true;
+
+          packages = [
+            pkgs.bc
+            pkgs.bison
+            pkgs.flex
+            pkgs.gcc
+            pkgs.gnumake
+            pkgs.ncurses
+            pkgs.openssl
+            pkgs.pkg-config
+            pkgs.python3
+            pkgs.zlib
+          ]
+          ++ optional (lib.meta.availableOn pkgs.stdenv.hostPlatform pkgs.elfutils) pkgs.elfutils
+          ++ optional (lib.meta.availableOn pkgs.stdenv.hostPlatform pkgs.pahole) pkgs.pahole;
+        };
+        longhorn = {
+          containers = mkForce { };
+
+          git-hooks.hooks = {
+            golangci-lint.enable = true;
+            gotest.enable = true;
+          };
+
+          languages.go.enable = true;
+
+          packages = [
+            pkgs.docker
+            pkgs.gnumake
+            pkgs.kubectl
+            pkgs.kustomize
+          ];
+        };
+        nixos = {
+          containers = mkForce { };
+
+          packages = [
+            pkgs.nixpkgs-review
+          ];
         };
       };
     };
