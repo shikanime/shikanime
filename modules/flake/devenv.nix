@@ -69,6 +69,10 @@ with lib;
                 in
                 [
                   {
+                    path_regex = "secrets/fushi.enc.yaml";
+                    key_groups = [ { inherit age; } ];
+                  }
+                  {
                     path_regex = "secrets/kaltashar.enc.yaml";
                     key_groups = [
                       {
@@ -77,6 +81,14 @@ with lib;
                         ];
                       }
                     ];
+                  }
+                  {
+                    path_regex = "secrets/minish.enc.yaml";
+                    key_groups = [ { inherit age; } ];
+                  }
+                  {
+                    path_regex = "secrets/nishir.enc.yaml";
+                    key_groups = [ { inherit age; } ];
                   }
                   {
                     path_regex = "secrets/nixtar.enc.yaml";
