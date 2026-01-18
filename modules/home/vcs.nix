@@ -45,7 +45,7 @@
             format_signed_off_by_trailer(self)
             ++ if(!trailers.contains_key("Change-Id"), format_gerrit_change_id_trailer(self))
           '';
-          git_push_bookmark = "\"trunks/shikanime/\" ++ change_id.short()";
+          git_push_bookmark = "\"shikanime/push-\" ++ change_id.short()";
         };
         merge-tools.trae = {
           merge-args = [
