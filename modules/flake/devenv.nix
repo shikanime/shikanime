@@ -13,8 +13,6 @@ with lib;
     {
       devenv.shells.default = {
         imports = [
-          inputs.devlib.devenvModules.docs
-          inputs.devlib.devenvModules.formats
           inputs.devlib.devenvModules.git
           inputs.devlib.devenvModules.github
           inputs.devlib.devenvModules.nix
