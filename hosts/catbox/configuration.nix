@@ -77,6 +77,7 @@
                 type = "bind";
               }
             ];
+            onCreateCommand = "systemctl is-system-running --wait || true";
             overrideCommand = false;
             privileged = true;
             remoteUser = "shika";
