@@ -16,6 +16,7 @@
       "appcleaner"
       "dbeaver-community"
       "discord"
+      "firefox"
       "google-chrome"
       "google-drive"
       "jellyfin-media-player"
