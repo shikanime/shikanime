@@ -1,6 +1,4 @@
-{ config, lib, pkgs, ... }:
-
-with lib;
+{ config, ... }:
 
 {
   imports = [
@@ -11,12 +9,6 @@ with lib;
   home-manager.users.shikanimedeva.imports = [
     ./users/shikanimedeva/home-configuration.nix
   ];
-
-  # FIX: https://github.com/Mic92/sops-nix/issues/890
-  launchd.agents.sops-nix = mkIf pkgs.stdenv.isDarwin {
-    enable = true;
-    config.EnvironmentVariables.PATH = mkForce "/usr/bin:/bin:/usr/sbin:/sbin";
-  };
 
   networking.hostName = "telsha";
 

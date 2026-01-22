@@ -1,4 +1,11 @@
-{ config, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+
+with lib;
 
 {
   imports = [
@@ -19,6 +26,12 @@
       GHSTACKRC_PATH = "${config.xdg.configHome}/ghstack/ghstackrc";
       SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
     };
+  };
+
+  # FIX: https://github.com/Mic92/sops-nix/issues/890
+  launchd.agents.sops-nix = mkIf pkgs.stdenv.isDarwin {
+    enable = true;
+    config.EnvironmentVariables.PATH = mkForce "/usr/bin:/bin:/usr/sbin:/sbin";
   };
 
   nix.extraOptions = ''
