@@ -6,11 +6,6 @@
     ../../modules/darwin/workstation.nix
   ];
 
-  # Required for Docker credential management
-  environment.systemPackages = [
-    pkgs.docker-credential-helpers
-  ];
-
   home-manager.users.shikanimedeva.imports = [
     ./users/shikanimedeva/home-configuration.nix
   ];
