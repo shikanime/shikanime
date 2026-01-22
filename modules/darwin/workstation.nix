@@ -21,6 +21,7 @@
       "google-drive"
       "jellyfin-media-player"
       "macfuse"
+      "mattermost"
       "microsoft-edge"
       "microsoft-teams"
       "mongodb-compass"
