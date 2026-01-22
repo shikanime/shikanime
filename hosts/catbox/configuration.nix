@@ -30,10 +30,16 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  # Enable SSH access
-  services.openssh = {
-    enable = true;
-    openFirewall = true;
+  services = {
+    gnome.gnome-keyring.enable = true;
+
+    passSecretService.enable = true;
+
+    # Enable SSH access
+    openssh = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 
   system.build.streamLayeredImage = pkgs.dockerTools.streamLayeredImage {
