@@ -1,4 +1,6 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
+
+with lib;
 
 {
   home.packages = [
@@ -11,6 +13,12 @@
     pkgs.wget
     pkgs.zip
   ];
+
+  # FIX: https://github.com/Mic92/sops-nix/issues/890
+  launchd.agents.sops-nix = mkIf pkgs.stdenv.isDarwin {
+    enable = true;
+    config.EnvironmentVariables.PATH = mkForce "/usr/bin:/bin:/usr/sbin:/sbin";
+  };
 
   programs = {
     carapace.enable = true;
