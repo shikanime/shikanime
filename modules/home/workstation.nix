@@ -50,6 +50,11 @@ with lib;
     ssh = {
       enable = true;
       matchBlocks = {
+        catbox = {
+          hostname = "catbox.taila659a.ts.net";
+          user = "shika";
+          setEnv.TERM = "xterm-256color";
+        };
         fushi = {
           hostname = "fushi.taila659a.ts.net";
           user = "shika";
@@ -65,9 +70,9 @@ with lib;
           user = "shika";
           setEnv.TERM = "xterm-256color";
         };
-        catbox = {
-          hostname = "catbox.taila659a.ts.net";
-          user = "shika";
+        thinkcentre-m710t = {
+          hostname = "thinkcentre-m710t.tailfb4bb2.ts.net";
+          user = "william-phetsinorath";
           setEnv.TERM = "xterm-256color";
         };
       };
