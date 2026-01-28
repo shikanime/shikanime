@@ -50,28 +50,23 @@ with lib;
     ssh = {
       enable = true;
       matchBlocks = {
-        catbox = {
-          hostname = "catbox.taila659a.ts.net";
+        "catbox.taila659a.ts.net" = {
           user = "shika";
           setEnv.TERM = "xterm-256color";
         };
-        fushi = {
-          hostname = "fushi.taila659a.ts.net";
+        "fushi.taila659a.ts.net" = {
           user = "shika";
           setEnv.TERM = "xterm-256color";
         };
-        minish = {
-          hostname = "minish.taila659a.ts.net";
+        "minish.taila659a.ts.net" = {
           user = "shika";
           setEnv.TERM = "xterm-256color";
         };
-        nishir = {
-          hostname = "nishir.taila659a.ts.net";
+        "nishir.taila659a.ts.net" = {
           user = "shika";
           setEnv.TERM = "xterm-256color";
         };
-        thinkcentre-m710t = {
-          hostname = "thinkcentre-m710t.tailfb4bb2.ts.net";
+        "thinkcentre-m710t.tailfb4bb2.ts.net" = {
           user = "william-phetsinorath";
           setEnv.TERM = "xterm-256color";
         };
