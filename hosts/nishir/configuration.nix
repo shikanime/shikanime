@@ -2,7 +2,7 @@
 
 {
   imports = [
-    "${modulesPath}/installer/netboot/netboot-minimal.nix"
+    "${modulesPath}/installer/sd-card/sd-image-aarch64.nix"
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/longhorn.nix
