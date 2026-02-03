@@ -59,6 +59,7 @@
           merge-tool-edits-conflict-markers = true;
           conflict-marker-style = "git";
         };
+        revset-aliases."nulls()" = "empty() & description(\"\") & mutable()";
         ui = {
           default-command = "log";
           merge-editor = ":builtin";
