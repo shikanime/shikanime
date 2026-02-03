@@ -132,9 +132,9 @@
 
     kubernetes = {
       apiserver.advertiseAddress = "100.117.159.56";
-      apiserverAddress = "https://nishir.taila659a.ts.net:6443";
+      apiserverAddress = "https://nishir.local:6443";
       kubelet.extraOpts = "--fail-swap-on=false";
-      masterAddress = "nishir.taila659a.ts.net";
+      masterAddress = "nishir.local";
       roles = [
         "master"
         "node"
