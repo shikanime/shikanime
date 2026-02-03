@@ -60,8 +60,8 @@
           conflict-marker-style = "git";
         };
         revset-aliases = {
-          "nulls()" = "empty() & description(\"\") & mutable()";
-          "stack()" = "trunk()..@ ~ empty()";
+          "nulls()" = "empty() & mutable()";
+          "stack()" = "trunk()..@ ~ nulls()";
         };
         ui = {
           default-command = "log";
