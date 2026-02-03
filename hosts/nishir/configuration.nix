@@ -131,7 +131,7 @@
     };
 
     kubernetes = {
-      apiserver.advertiseAddress = "100.117.159.56";
+      apiserver.advertiseAddress = "192.168.1.66";
       apiserverAddress = "https://nishir.local:6443";
       kubelet.extraOpts = "--fail-swap-on=false";
       masterAddress = "nishir.local";
