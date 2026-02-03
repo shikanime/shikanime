@@ -119,12 +119,12 @@
     };
 
     kubernetes = {
-      apiserverAddress = "https://nishir.taila659a.ts.net:6443";
+      apiserverAddress = "https://nishir.local:6443";
       kubelet = {
         extraOpts = "--fail-swap-on=false";
-        kubeconfig.server = "https://nishir.taila659a.ts.net:6443";
+        kubeconfig.server = "https://nishir.local:6443";
       };
-      masterAddress = "nishir.taila659a.ts.net";
+      masterAddress = "nishir.local";
       roles = [ "node" ];
     };
 
