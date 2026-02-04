@@ -56,7 +56,7 @@ in
   };
 
   sops = {
-    age.keyFile = "${configDir}/sops/age/keys.txt";
+    age.keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
     defaultSopsFile = ../../../../secrets/telsha.enc.yaml;
     defaultSopsFormat = "yaml";
     secrets = {
