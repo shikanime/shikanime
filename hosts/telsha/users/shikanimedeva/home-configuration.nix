@@ -1,5 +1,25 @@
-{ config, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
+with lib;
+
+let
+  configDir =
+    if pkgs.stdenv.hostPlatform.isDarwin then
+      "Library/Application Support"
+    else
+      removePrefix config.home.homeDirectory config.xdg.configHome;
+
+  saplingConfigDir =
+    if pkgs.stdenv.hostPlatform.isDarwin then
+      "Library/Preferences/sapling"
+    else
+      removePrefix config.home.homeDirectory "${config.xdg.configHome}/sapling";
+in
 {
   imports = [
     ../../../../modules/home/base.nix
@@ -13,8 +33,16 @@
   ];
 
   home = {
-    file."Library/Preferences/sapling/sapling.conf".source =
-      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
+    file = {
+      "${configDir}/cachix/cachix.dhall".source =
+        config.lib.file.mkOutOfStoreSymlink config.sops.secrets.cachix-config.path;
+      "${configDir}/glab-cli/config.yml".source =
+        config.lib.file.mkOutOfStoreSymlink config.sops.secrets.glab-cli-config.path;
+      "${configDir}/jj/conf.d/default.toml".source =
+        config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-config.path;
+      "${saplingConfigDir}/sapling.conf".source =
+        config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
+    };
     sessionVariables = {
       GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
       SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
@@ -42,7 +70,7 @@
   };
 
   sops = {
-    age.keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
+    age.keyFile = "${configDir}/sops/age/keys.txt";
     defaultSopsFile = ../../../../secrets/telsha.enc.yaml;
     defaultSopsFormat = "yaml";
     secrets = {
@@ -54,16 +82,5 @@
       nix-config = { };
       sapling-config = { };
     };
-  };
-
-  xdg.configFile = {
-    "cachix/cachix.dhall".source =
-      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.cachix-config.path;
-    "glab-cli/config.yml" = {
-      force = true;
-      source = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.glab-cli-config.path;
-    };
-    "jj/conf.d/default.toml".source =
-      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.jujutsu-config.path;
   };
 }
