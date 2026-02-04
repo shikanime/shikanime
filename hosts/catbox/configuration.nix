@@ -48,7 +48,6 @@
       config.system.build.toplevel
       pkgs.bash
       pkgs.coreutils
-      pkgs.docker
       pkgs.docker-credential-helpers
       pkgs.dockerTools.binSh
       pkgs.findutils
