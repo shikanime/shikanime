@@ -1,16 +1,21 @@
-{ pkgs, ... }:
-
 {
-  programs = {
-    k9s.enable = true;
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
-    ssh.matchBlocks."ssh.dev.azure.com".extraOptions = {
-      HostkeyAlgorithms = "+ssh-rsa";
-      PubkeyAcceptedKeyTypes = "+ssh-rsa";
-    };
-  };
+with lib;
 
-  xdg.configFile."containers/policy.json".source =
+let
+  configDir =
+    if pkgs.stdenv.hostPlatform.isDarwin then
+      "Library/Application Support"
+    else
+      removePrefix config.home.homeDirectory config.xdg.configHome;
+in
+{
+  home.file."${configDir}/containers/policy.json".source =
     let
       format = pkgs.formats.json { };
     in
@@ -22,4 +27,13 @@
         "" = [ { type = "insecureAcceptAnything"; } ];
       };
     };
+
+  programs = {
+    k9s.enable = true;
+
+    ssh.matchBlocks."ssh.dev.azure.com".extraOptions = {
+      HostkeyAlgorithms = "+ssh-rsa";
+      PubkeyAcceptedKeyTypes = "+ssh-rsa";
+    };
+  };
 }

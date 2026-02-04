@@ -5,7 +5,6 @@ with lib;
 {
   perSystem =
     {
-      config,
       lib,
       pkgs,
       ...
@@ -14,36 +13,32 @@ with lib;
       devenv.shells.default = {
         imports = [
           inputs.devlib.devenvModules.git
-          inputs.devlib.devenvModules.github
           inputs.devlib.devenvModules.nix
           inputs.devlib.devenvModules.opentofu
           inputs.devlib.devenvModules.shell
           inputs.devlib.devenvModules.shikanime
         ];
 
-        github.workflows.wakabox = {
-          enable = true;
-          settings = {
-            name = "Wakabox";
-            on = {
-              schedule = [
-                { cron = "0 0 * * *"; }
-              ];
-              workflow_dispatch = null;
-            };
-            jobs.wakabox = {
-              runs-on = "ubuntu-latest";
-              steps = with config.devenv.shells.default.github.lib; [
-                {
-                  uses = "matchai/waka-box@v5.0.0";
-                  env = {
-                    GH_TOKEN = mkWorkflowRef "secrets.WAKABOX_GITHUB_TOKEN";
-                    GIST_ID = mkWorkflowRef "vars.WAKABOX_GITHUB_GIST_ID";
-                    WAKATIME_API_KEY = mkWorkflowRef "secrets.WAKATIME_API_KEY";
-                  };
-                }
-              ];
-            };
+        github.settings.workflows.wakabox = {
+          name = "Wakabox";
+          on = {
+            schedule = [
+              { cron = "0 0 * * *"; }
+            ];
+            workflow_dispatch = { };
+          };
+          jobs.wakabox = {
+            runs-on = "ubuntu-latest";
+            steps = [
+              {
+                uses = "matchai/waka-box@v5.0.0";
+                env = {
+                  GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
+                  GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
+                  WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
+                };
+              }
+            ];
           };
         };
 
