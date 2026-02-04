@@ -28,7 +28,7 @@ in
 
   home = {
     file."${saplingConfigDir}/sapling.conf".source =
-        config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
+      config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
     sessionVariables = {
       GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
       SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
