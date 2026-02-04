@@ -28,8 +28,6 @@
   programs = {
     bash.enable = true;
 
-    docker-cli.settings.credsStore = "osxkeychain";
-
     git = {
       includes = [
         { path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path; }

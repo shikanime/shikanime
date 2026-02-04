@@ -111,8 +111,6 @@ in
   };
 
   services = {
-    gnome.gnome-keyring.enable = true;
-
     openssh = {
       enable = true;
       openFirewall = true;
@@ -215,8 +213,6 @@ in
       nodeIP = "100.111.162.12,fd7a:115c:a1e0::2101:1963";
       role = "server";
     };
-
-    passSecretService.enable = true;
 
     tailscale = {
       enable = true;

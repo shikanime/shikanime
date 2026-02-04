@@ -7,7 +7,9 @@ with lib;
     pkgs.bitwarden-cli
     pkgs.cachix
     pkgs.devenv
+    pkgs.docker-credential-helpers
     pkgs.glances
+    pkgs.pass
     pkgs.qpdf
     pkgs.rclone
     pkgs.wget
@@ -30,6 +32,11 @@ with lib;
       mise.enable = true;
       nix-direnv.enable = true;
       config.global.load_dotenv = true;
+    };
+
+    docker-cli = {
+      enable = true;
+      settings.credsStore = "pass";
     };
 
     gpg.enable = true;
