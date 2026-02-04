@@ -82,4 +82,6 @@ with lib;
 
     zoxide.enable = true;
   };
+
+  xdg.enable = true;
 }
