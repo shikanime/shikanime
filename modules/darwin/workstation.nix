@@ -51,6 +51,8 @@
     };
   };
 
+  nix.linux-builder.enable = true;
+
   programs.zsh = {
     enable = true;
     shellInit = lib.mkAfter ''test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)";'';

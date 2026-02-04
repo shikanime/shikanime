@@ -1,5 +1,7 @@
 { lib, pkgs, ... }:
 
+with lib;
+
 {
   home.packages = [
     pkgs.git-credential-manager
@@ -38,6 +40,20 @@
           ab = [ "absorb" ];
           ci = [ "commit" ];
           ds = [ "describe" ];
+          ghstack =
+            let
+              ghstack = pkgs.writeShellScript "ghstack" ''
+                ${getExe pkgs.jujutsu} abandon -r 'nulls()' --ignore-immutable
+                ${getExe pkgs.jujutsu} rebase -b@ -d main --ignore-immutable
+                ${getExe pkgs.ghstack} "$@"
+              '';
+            in
+            [
+              "util"
+              "exec"
+              "--"
+              "${ghstack}"
+            ];
           sq = [ "squash" ];
         };
         git.private-commits = "description(glob:'secret:*')";
