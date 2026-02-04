@@ -1,14 +1,9 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   imports = [
     ../../modules/darwin/base.nix
     ../../modules/darwin/workstation.nix
-  ];
-
-  # Required for Docker credential management
-  environment.systemPackages = [
-    pkgs.docker-credential-helpers
   ];
 
   home-manager.users.shikanimedeva.imports = [

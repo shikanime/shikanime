@@ -20,16 +20,10 @@
   programs = {
     bash.enable = true;
 
-    docker-cli.settings.credsStore = "secretservice";
-
     git = {
       includes = [
         { path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path; }
       ];
-
-      # Re-use Windows credentials
-      settings.credential.helper = "/mnt/c/Users/${config.home.username}/scoop/shims/git-credential-manager.exe";
-
       signing = {
         format = "openpgp";
         signByDefault = true;

@@ -1,10 +1,10 @@
-{
-  lib,
-  pkgs,
-  ...
-}:
+{ lib, pkgs, ... }:
 
 {
+  home.packages = [
+    pkgs.git-credential-manager
+  ];
+
   programs = {
     git = {
       enable = true;
@@ -19,6 +19,7 @@
           tape = "push --mirror";
         };
         advice.skippedCherryPicks = false;
+        credential.helper = "manager";
         core.editor = "${lib.getExe pkgs.helix}";
         init.defaultBranch = "main";
         pull.rebase = true;
