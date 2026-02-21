@@ -36,23 +36,20 @@ with lib;
     jujutsu = {
       enable = true;
       settings = {
-        aliases = {
-          ghstack =
-            let
-              ghstack = pkgs.writeShellScript "ghstack" ''
-                ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()' --ignore-immutable
-                ${getExe pkgs.jujutsu} rebase -b@ -d 'trunk()' --ignore-immutable
-                ${getExe pkgs.ghstack} "$@"
-              '';
-            in
-            [
-              "util"
-              "exec"
-              "--"
-              "${ghstack}"
-            ];
-          sq = [ "squash" ];
-        };
+        aliases.ghstack =
+          let
+            ghstack = pkgs.writeShellScript "ghstack" ''
+              ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()' --ignore-immutable
+              ${getExe pkgs.jujutsu} rebase -b@ -d 'trunk()' --ignore-immutable
+              ${getExe pkgs.ghstack} "$@"
+            '';
+          in
+          [
+            "util"
+            "exec"
+            "--"
+            "${ghstack}"
+          ];
         git.private-commits = "description(glob:'secret:*')";
         templates = {
           commit_trailers = ''
