@@ -6,6 +6,7 @@
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/longhorn.nix
+    ../../modules/nixos/rke2.nix
   ];
 
   boot = {
@@ -43,6 +44,8 @@
       "net.ipv4.conf.all.rp_filter" = 0;
       "net.ipv4.conf.default.rp_filter" = 0;
       "net.ipv4.conf.tailscale0.rp_filter" = 0;
+      # Enable forwarding for Kubernetes and Tailscale routes
+      "net.ipv4.ip_forward" = 1;
       # Widen ephemeral port range to avoid exhaustion
       "net.ipv4.ip_local_port_range" = "1024 65535";
       # BBR congestion control for better throughput/latency
@@ -67,10 +70,13 @@
       "vm.dirty_writeback_centisecs" = 500;
       # Support many mmap/large indices/filesystems
       "vm.max_map_count" = 262144;
+      "vm.page-cluster" = 0;
       # Prefer page cache, avoid swap thrash
       "vm.swappiness" = 10;
       # Favor inode/dentry caching for large media libraries
       "vm.vfs_cache_pressure" = 50;
+      "vm.watermark_boost_factor" = 0;
+      "vm.watermark_scale_factor" = 125;
     };
   };
 
@@ -118,14 +124,10 @@
       };
     };
 
-    kubernetes = {
-      apiserverAddress = "https://nishir.local:6443";
-      kubelet = {
-        extraOpts = "--fail-swap-on=false";
-        kubeconfig.server = "https://nishir.local:6443";
-      };
-      masterAddress = "nishir.local";
-      roles = [ "node" ];
+    rke2 = {
+      extraFlags = [
+        "--tls-san minish.taila659a.ts.net"
+      ];
     };
 
     tailscale = {
@@ -151,6 +153,15 @@
       nix-config = { };
     };
   };
+
+  systemd.tmpfiles.rules = [
+    "L+ /var/lib/rancher/rke2 - - - - /mnt/marisa/rke2"
+    "L+ /var/lib/longhorn - - - - /mnt/marisa/longhorn"
+    "L+ /var/log/calico - - - - /mnt/marisa/log/calico"
+    "L+ /var/log/containers - - - - /mnt/marisa/log/containers"
+    "L+ /var/log/pods - - - - /mnt/marisa/log/pods"
+    "L+ /var/swap - - - - /mnt/marisa/swap"
+  ];
 
   users.users.nishir = {
     extraGroups = [ "wheel" ];

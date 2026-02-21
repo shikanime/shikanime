@@ -6,6 +6,7 @@
     "${modulesPath}/profiles/headless.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/longhorn.nix
+    ../../modules/nixos/rke2.nix
   ];
 
   boot = {
@@ -44,6 +45,10 @@
       "net.ipv4.conf.default.rp_filter" = 0;
       "net.ipv4.conf.tailscale0.rp_filter" = 0;
       # Widen ephemeral port range to avoid exhaustion
+      # Widen ephemeral port range to avoid exhaustion
+      # Enable forwarding for Kubernetes and Tailscale routes
+      "net.ipv4.ip_forward" = 1;
+      # Widen ephemeral port range to avoid exhaustion
       "net.ipv4.ip_local_port_range" = "1024 65535";
       # BBR congestion control for better throughput/latency
       "net.ipv4.tcp_congestion_control" = "bbr";
@@ -63,14 +68,14 @@
       "vm.dirty_expire_centisecs" = 1500;
       # SATA SSD: limit dirty pages to reduce IO spikes
       "vm.dirty_ratio" = 15;
-      # SATA SSD: writeback cadence (5s)
       "vm.dirty_writeback_centisecs" = 500;
       # Support many mmap/large indices/filesystems
       "vm.max_map_count" = 262144;
-      # Prefer page cache, avoid swap thrash
-      "vm.swappiness" = 10;
+      "vm.page-cluster" = 0;
       # Favor inode/dentry caching for large media libraries
       "vm.vfs_cache_pressure" = 50;
+      "vm.watermark_boost_factor" = 0;
+      "vm.watermark_scale_factor" = 125;
     };
   };
 
@@ -115,17 +120,18 @@
         enable = true;
         addresses = true;
         workstation = true;
+      enable = true;
+      role = "server";
       };
+        "--cluster-cidr 10.42.0.0/16,2001:cafe:42::/56"
+        "--service-cidr 10.43.0.0/16,2001:cafe:43::/112"
     };
+        "--data-dir /mnt/reimu/rke2"
 
-    kubernetes = {
-      apiserverAddress = "https://nishir.local:6443";
-      kubelet = {
-        extraOpts = "--fail-swap-on=false";
-        kubeconfig.server = "https://nishir.local:6443";
-      };
-      masterAddress = "nishir.local";
-      roles = [ "node" ];
+    rke2 = {
+      extraFlags = [
+        "--tls-san fushi.taila659a.ts.net"
+      ];
     };
 
     tailscale = {
@@ -147,10 +153,10 @@
     defaultSopsFile = ../../secrets/fushi.enc.yaml;
     defaultSopsFormat = "yaml";
     secrets = {
-      tailscale-authkey = { };
-      nix-config = { };
-    };
-  };
+    "L+ /var/log/containers - - - - /mnt/reimu/log/containers"
+    "L+ /var/log/pods - - - - /mnt/reimu/log/pods"
+    "L+ /var/swap - - - - /mnt/reimu/swap"
+  ];
 
   users.users.nishir = {
     extraGroups = [ "wheel" ];
