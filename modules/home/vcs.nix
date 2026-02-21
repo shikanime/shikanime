@@ -37,14 +37,11 @@ with lib;
       enable = true;
       settings = {
         aliases = {
-          ab = [ "absorb" ];
-          ci = [ "commit" ];
-          ds = [ "describe" ];
           ghstack =
             let
               ghstack = pkgs.writeShellScript "ghstack" ''
-                ${getExe pkgs.jujutsu} abandon -r 'nulls()' --ignore-immutable
-                ${getExe pkgs.jujutsu} rebase -b@ -d main --ignore-immutable
+                ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()' --ignore-immutable
+                ${getExe pkgs.jujutsu} rebase -b@ -d 'trunk()' --ignore-immutable
                 ${getExe pkgs.ghstack} "$@"
               '';
             in
@@ -78,7 +75,7 @@ with lib;
         };
         revset-aliases = {
           "nulls()" = "empty() & mutable()";
-          "stack()" = "trunk()..@ ~ nulls()";
+          "stack()" = "trunk()..@";
         };
         ui = {
           default-command = "log";
