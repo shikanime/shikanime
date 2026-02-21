@@ -44,8 +44,6 @@
       "net.ipv4.conf.all.rp_filter" = 0;
       "net.ipv4.conf.default.rp_filter" = 0;
       "net.ipv4.conf.tailscale0.rp_filter" = 0;
-      # Widen ephemeral port range to avoid exhaustion
-      # Widen ephemeral port range to avoid exhaustion
       # Enable forwarding for Kubernetes and Tailscale routes
       "net.ipv4.ip_forward" = 1;
       # Widen ephemeral port range to avoid exhaustion
