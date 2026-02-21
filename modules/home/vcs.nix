@@ -36,26 +36,25 @@ with lib;
     jujutsu = {
       enable = true;
       settings = {
-        aliases = {
-          ab = [ "absorb" ];
-          ci = [ "commit" ];
-          ds = [ "describe" ];
-          ghstack =
-            let
-              ghstack = pkgs.writeShellScript "ghstack" ''
-                ${getExe pkgs.jujutsu} abandon -r 'nulls()' --ignore-immutable
-                ${getExe pkgs.jujutsu} rebase -b@ -d main --ignore-immutable
-                ${getExe pkgs.ghstack} "$@"
-              '';
-            in
-            [
-              "util"
-              "exec"
-              "--"
-              "${ghstack}"
-            ];
-          sq = [ "squash" ];
-        };
+        aliases.ghstack =
+          let
+            ghstack = pkgs.writeShellScript "jj-ghstack" ''
+              if [ -z "$1" ]; then
+                set -- "submit"
+              fi
+              if [ "$1" = "submit" ]; then
+                ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()'
+                ${getExe pkgs.jujutsu} rebase -d 'trunk()'
+              fi
+              ${getExe pkgs.ghstack} "$@"
+            '';
+          in
+          [
+            "util"
+            "exec"
+            "--"
+            "${ghstack}"
+          ];
         git.private-commits = "description(glob:'secret:*')";
         templates = {
           commit_trailers = ''
@@ -78,7 +77,7 @@ with lib;
         };
         revset-aliases = {
           "nulls()" = "empty() & mutable()";
-          "stack()" = "trunk()..@ ~ nulls()";
+          "stack()" = "trunk().. & ~mine()";
         };
         ui = {
           default-command = "log";
