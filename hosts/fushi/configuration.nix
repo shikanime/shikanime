@@ -118,16 +118,14 @@
         enable = true;
         addresses = true;
         workstation = true;
+      };
+    };
+    rke2 = {
       enable = true;
       role = "server";
-      };
+      extraFlags = [
         "--cluster-cidr 10.42.0.0/16,2001:cafe:42::/56"
         "--service-cidr 10.43.0.0/16,2001:cafe:43::/112"
-    };
-        "--data-dir /mnt/reimu/rke2"
-
-    rke2 = {
-      extraFlags = [
         "--tls-san fushi.taila659a.ts.net"
       ];
     };
@@ -151,6 +149,12 @@
     defaultSopsFile = ../../secrets/fushi.enc.yaml;
     defaultSopsFormat = "yaml";
     secrets = {
+      nix-config = { };
+      tailscale-authkey = { };
+    };
+  };
+
+  systemd.tmpfiles.rules = [
     "L+ /var/log/containers - - - - /mnt/reimu/log/containers"
     "L+ /var/log/pods - - - - /mnt/reimu/log/pods"
     "L+ /var/swap - - - - /mnt/reimu/swap"
