@@ -36,26 +36,34 @@ with lib;
     jujutsu = {
       enable = true;
       settings = {
-        aliases.ghstack =
-          let
-            ghstack = pkgs.writeShellScript "jj-ghstack" ''
-              if [ -z "$1" ]; then
-                set -- "submit"
-              fi
-              if [ "$1" = "submit" ]; then
-                ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()'
-                ${getExe pkgs.jujutsu} rebase -d 'trunk()'
-              fi
-              ${getExe pkgs.ghstack} "$@"
-            '';
-          in
-          [
-            "util"
-            "exec"
-            "--"
-            "${ghstack}"
+        aliases = {
+          ghstack =
+            let
+              ghstack = pkgs.writeShellScript "jj-ghstack" ''
+                if [ -z "$1" ]; then
+                  set -- "submit"
+                fi
+                if [ "$1" = "submit" ]; then
+                  ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()'
+                  ${getExe pkgs.jujutsu} rebase -d 'trunk()'
+                fi
+                ${getExe pkgs.ghstack} "$@"
+              '';
+            in
+            [
+              "util"
+              "exec"
+              "--"
+              "${ghstack}"
+            ];
+          restack = [
+            "rebase"
+            "--onto"
+            "trunk()"
+            "--source"
+            "roots(trunk()..) & mutable()"
           ];
-        git.private-commits = "description(glob:'secret:*')";
+        };
         templates = {
           commit_trailers = ''
             format_signed_off_by_trailer(self)
