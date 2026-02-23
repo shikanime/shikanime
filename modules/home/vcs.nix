@@ -64,6 +64,7 @@ with lib;
             "roots(trunk()..) & mutable()"
           ];
         };
+        git.private-commits = "description(glob:'secret:*')";
         templates = {
           commit_trailers = ''
             format_signed_off_by_trailer(self)
