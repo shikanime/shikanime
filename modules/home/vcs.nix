@@ -56,6 +56,11 @@ with lib;
               "--"
               "${ghstack}"
             ];
+          sync = [
+            "git"
+            "fetch"
+            "--all-remotes"
+          ];
           restack = [
             "rebase"
             "--onto"
@@ -86,7 +91,9 @@ with lib;
         };
         revset-aliases = {
           "nulls()" = "empty() & mutable()";
-          "stack()" = "trunk().. & ~mine()";
+          "stack()" = "stack(@)";
+          "stack(x)" = "stack(x, 2)";
+          "stack(x, n)" = "ancestors(reachable(x, mutable()), n)";
         };
         ui = {
           default-command = "log";
