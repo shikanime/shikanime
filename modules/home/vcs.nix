@@ -47,7 +47,13 @@ with lib;
                   ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()'
                   ${getExe pkgs.jujutsu} rebase -d 'trunk()'
                 fi
-                ${getExe pkgs.ghstack} "$@"
+                readarray -t pull_requests < <(
+                  ${getExe pkgs.ghstack} "$@" --short
+                )
+                for pr in "''${pull_requests[@]}"; do
+                  head_ref=$(${getExe pkgs.gh} pr view "$pr" --json headRefName --jq '.headRefName')
+                  ${getExe pkgs.jujutsu} bookmark create "gh/''${head_ref#refs/heads/}"
+                done
               '';
             in
             [
