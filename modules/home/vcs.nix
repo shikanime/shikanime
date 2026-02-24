@@ -51,7 +51,7 @@ with lib;
                   head_ref=$(${getExe pkgs.gh} pr view "$pr" --json headRefName --jq '.headRefName')
                   head_bookmark="''${head_ref#refs/heads/}"
                   orig_bookmark="''${head_bookmark%/head}/orig"
-                  ${getExe pkgs.jujutsu} bookmark track "''${orig_bookmark}"
+                  ${getExe pkgs.jujutsu} bookmark track --remote origin "''${orig_bookmark}"
                 done
               '';
             in
