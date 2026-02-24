@@ -49,9 +49,9 @@ with lib;
                 )
                 for pr in "''${pull_requests[@]}"; do
                   head_ref=$(${getExe pkgs.gh} pr view "$pr" --json headRefName --jq '.headRefName')
-                  head_bookmark_ref="''${head_ref#refs/heads/}"
-                  orig_bookmark_ref="''${head_bookmark_ref%/head}/orig"
-                  ${getExe pkgs.jujutsu} bookmark track "''${orig_bookmark_ref}"
+                  head_bookmark="''${head_ref#refs/heads/}"
+                  orig_bookmark="''${head_bookmark%/head}/orig"
+                  ${getExe pkgs.jujutsu} bookmark track "''${orig_bookmark}"
                 done
               '';
             in
