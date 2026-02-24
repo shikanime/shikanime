@@ -49,7 +49,7 @@ with lib;
                 )
                 for pr in "''${pull_requests[@]}"; do
                   head_ref=$(${getExe pkgs.gh} pr view "$pr" --json headRefName --jq '.headRefName')
-                  ${getExe pkgs.jujutsu} bookmark create "''${head_ref#refs/heads/}"
+                  ${getExe pkgs.jujutsu} bookmark track "''${head_ref#refs/heads/}"
                 done
               '';
             in
