@@ -25,8 +25,6 @@ with lib;
   programs = {
     carapace.enable = true;
 
-    chromium.enable = true;
-
     dircolors.enable = true;
 
     direnv = {
@@ -40,8 +38,6 @@ with lib;
       enable = true;
       settings.credsStore = "pass";
     };
-
-    firefox.enable = true;
 
     gpg.enable = true;
 
