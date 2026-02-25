@@ -40,14 +40,21 @@ with lib;
           ghstack =
             let
               ghstack = pkgs.writeShellScript "jj-ghstack" ''
-                if [ -z "$1" ]; then
-                  set -- "submit"
-                fi
-                if [ "$1" = "submit" ]; then
+                if [ -z "$1" ] || [ "$1" = "submit" ]; then
                   ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()'
                   ${getExe pkgs.jujutsu} rebase -d 'trunk()'
                 fi
-                ${getExe pkgs.ghstack} "$@"
+                readarray -t pull_requests < <(
+                  ${getExe pkgs.ghstack} "$@" --short | ${getExe pkgs.gnugrep} -o 'https://github.com/.*/pull/[0-9]*'
+                )
+                for pr in "''${pull_requests[@]}"; do
+                  head_ref=$(${getExe pkgs.gh} pr view "$pr" --json headRefName --jq '.headRefName')
+                  head_bookmark="''${head_ref#refs/heads/}"
+                  orig_bookmark="''${head_bookmark%/head}/orig"
+                  if ! ${getExe pkgs.jujutsu} bookmark list | ${getExe pkgs.gnugrep} -q "^''${orig_bookmark}:"; then
+                    ${getExe pkgs.jujutsu} bookmark track --remote origin "''${orig_bookmark}"
+                  fi
+                done
               '';
             in
             [
