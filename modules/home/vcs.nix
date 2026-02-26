@@ -40,14 +40,16 @@ with lib;
           ghstack =
             let
               ghstack = pkgs.writeShellScript "jj-ghstack" ''
-                if [ -z "$1" ]; then
-                  set -- "submit"
-                fi
-                if [ "$1" = "submit" ]; then
-                  ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()'
+                if [ -z "$1" ] || [ "$1" = "submit" ]; then
                   ${getExe pkgs.jujutsu} rebase -d 'trunk()'
                 fi
                 ${getExe pkgs.ghstack} "$@"
+                ${getExe pkgs.jujutsu} bookmark list --all -T 'if(remote == "origin" && name.starts_with("gh/") && name.ends_with("orig"), name ++ " " ++ tracked ++ "\n")' | sort | uniq | while read bookmark tracked; do
+                  ${getExe pkgs.jujutsu} bookmark set "$bookmark" -r "$bookmark@origin" 2>/dev/null || true
+                  if [ "$tracked" = "false" ]; then
+                    ${getExe pkgs.jujutsu} bookmark track "$bookmark@origin" 2>/dev/null || true
+                  fi
+                done
               '';
             in
             [
