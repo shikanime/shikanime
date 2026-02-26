@@ -44,7 +44,7 @@ with lib;
                   ${getExe pkgs.jujutsu} rebase -d 'trunk()'
                 fi
                 ${getExe pkgs.ghstack} "$@" || exit 1
-                for bookmark in $(${getExe pkgs.jujutsu} bookmark list --all -T 'if(name.starts_with("gh/"), name ++ "\n")' | sort | uniq); do
+                for bookmark in $(${getExe pkgs.jujutsu} bookmark list --all -T 'if(name.starts_with("gh/") && name.ends_with("orig"), name ++ "\n")' | sort | uniq); do
                   ${getExe pkgs.jujutsu} bookmark set "$bookmark" -r "$bookmark@origin" 2>/dev/null || true
                   ${getExe pkgs.jujutsu} bookmark track "$bookmark@origin" 2>/dev/null || true
                 done
