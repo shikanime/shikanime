@@ -43,7 +43,7 @@ with lib;
                 if [ -z "$1" ] || [ "$1" = "submit" ]; then
                   ${getExe pkgs.jujutsu} rebase -d 'trunk()'
                 fi
-                ${getExe pkgs.ghstack} "$@" || exit 1
+                ${getExe pkgs.ghstack} "$@"
                 ${getExe pkgs.jujutsu} bookmark list --all -T 'if(remote == "origin" && name.starts_with("gh/") && name.ends_with("orig"), name ++ " " ++ tracked ++ "\n")' | sort | uniq | while read bookmark tracked; do
                   ${getExe pkgs.jujutsu} bookmark set "$bookmark" -r "$bookmark@origin" 2>/dev/null || true
                   if [ "$tracked" = "false" ]; then
