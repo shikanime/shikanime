@@ -41,19 +41,12 @@ with lib;
             let
               ghstack = pkgs.writeShellScript "jj-ghstack" ''
                 if [ -z "$1" ] || [ "$1" = "submit" ]; then
-                  ${getExe pkgs.jujutsu} abandon -r 'stack() & nulls()'
                   ${getExe pkgs.jujutsu} rebase -d 'trunk()'
                 fi
-                readarray -t pull_requests < <(
-                  ${getExe pkgs.ghstack} "$@" --short | ${getExe pkgs.gnugrep} -o 'https://github.com/.*/pull/[0-9]*'
-                )
-                for pr in "''${pull_requests[@]}"; do
-                  head_ref=$(${getExe pkgs.gh} pr view "$pr" --json headRefName --jq '.headRefName')
-                  head_bookmark="''${head_ref#refs/heads/}"
-                  orig_bookmark="''${head_bookmark%/head}/orig"
-                  if ! ${getExe pkgs.jujutsu} bookmark list | ${getExe pkgs.gnugrep} -q "^''${orig_bookmark}:"; then
-                    ${getExe pkgs.jujutsu} bookmark track --remote origin "''${orig_bookmark}"
-                  fi
+                ${getExe pkgs.ghstack} "$@" || exit 1
+                for bookmark in $(${getExe pkgs.jujutsu} bookmark list --all -T 'if(name.starts_with("gh/"), name ++ "\n")' | sort | uniq); do
+                  ${getExe pkgs.jujutsu} bookmark set "$bookmark" -r "$bookmark@origin" 2>/dev/null || true
+                  ${getExe pkgs.jujutsu} bookmark track "$bookmark@origin" 2>/dev/null || true
                 done
               '';
             in
