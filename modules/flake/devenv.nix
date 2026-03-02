@@ -1,6 +1,4 @@
-{ inputs, lib, ... }:
-
-with lib;
+{ inputs, ... }:
 
 {
   perSystem =
@@ -43,6 +41,7 @@ with lib;
         };
 
         packages = [
+          pkgs.age
           pkgs.scaleway-cli
           pkgs.skaffold
         ]
@@ -55,6 +54,7 @@ with lib;
               age = [
                 "age1pwl9yz4k4255a4h8qz7lafce8wxhsul0cnqwmr8528fqgujlfshshv3z3g" # telsha
                 "age1x9v4ps90txy9mk4392uya93tyzx40te4dvns4chg5s6q8mfy03ns74jpay" # nixtar
+                "age18zmkeyxun4gflllelsmdhwjh5xpfwrqshdxrednv7zljphepxc6strhysn" # github-actions
               ];
             in
             [
