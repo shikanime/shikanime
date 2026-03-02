@@ -1,6 +1,4 @@
-{ inputs, lib, ... }:
-
-with lib;
+{ inputs, ... }:
 
 {
   perSystem =
@@ -43,6 +41,7 @@ with lib;
         };
 
         packages = [
+          pkgs.age
           pkgs.scaleway-cli
           pkgs.skaffold
         ]
