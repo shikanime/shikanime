@@ -51,7 +51,14 @@
     };
   };
 
-  nix.linux-builder.enable = true;
+  nix.linux-builder = {
+    enable = true;
+    systems = [
+      "x86_64-linux"
+      "aarch64-linux"
+    ];
+    config.boot.binfmt.emulatedSystems = [ "x86_64-linux" ];
+  };
 
   programs.zsh = {
     enable = true;
