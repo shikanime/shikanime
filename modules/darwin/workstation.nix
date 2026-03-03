@@ -53,11 +53,12 @@
 
   nix.linux-builder = {
     enable = true;
+    config.boot.binfmt.emulatedSystems = [ "x86_64-linux" ];
+    ephemeral = true;
     systems = [
       "x86_64-linux"
       "aarch64-linux"
     ];
-    config.boot.binfmt.emulatedSystems = [ "x86_64-linux" ];
   };
 
   programs.zsh = {
