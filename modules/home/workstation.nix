@@ -34,10 +34,7 @@ with lib;
       config.global.load_dotenv = true;
     };
 
-    docker-cli = {
-      enable = true;
-      settings.credsStore = "pass";
-    };
+    docker-cli.enable = true;
 
     gpg.enable = true;
 

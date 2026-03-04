@@ -44,6 +44,7 @@
           with pkgs;
           [
             age
+            docker
             scaleway-cli
             skaffold
           ]
