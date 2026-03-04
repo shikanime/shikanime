@@ -20,6 +20,8 @@
   programs = {
     bash.enable = true;
 
+    docker-cli.settings.credsStore = "pass";
+
     git = {
       includes = [
         { path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path; }
