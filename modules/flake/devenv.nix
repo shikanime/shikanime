@@ -40,12 +40,14 @@
           };
         };
 
-        packages = [
-          pkgs.age
-          pkgs.scaleway-cli
-          pkgs.skaffold
-        ]
-        ++ lib.optional pkgs.stdenv.hostPlatform.isLinux pkgs.nixos-facter;
+        packages =
+          with pkgs;
+          [
+            age
+            scaleway-cli
+            skaffold
+          ]
+          ++ lib.optional stdenv.hostPlatform.isLinux nixos-facter;
 
         sops = {
           enable = true;
