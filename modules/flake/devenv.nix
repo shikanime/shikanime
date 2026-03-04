@@ -33,7 +33,7 @@
             };
             jobs.build = {
               permissions.packages = "write";
-              "runs-on" = "ubuntu-24.04-arm";
+              "runs-on" = "ubuntu-latest";
               steps = [
                 {
                   id = "createGithubAppToken";
