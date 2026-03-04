@@ -54,6 +54,13 @@
                     "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
                 }
                 {
+                  uses = "cachix/cachix-action@v16";
+                  "with" = {
+                    authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+                    name = "shikanime";
+                  };
+                }
+                {
                   uses = "docker/login-action@v3";
                   "with" = {
                     registry = "ghcr.io";
