@@ -17,26 +17,78 @@
           inputs.devlib.devenvModules.shikanime
         ];
 
-        github.settings.workflows.wakabox = {
-          name = "Wakabox";
-          on = {
-            schedule = [
-              { cron = "0 0 * * *"; }
-            ];
-            workflow_dispatch = { };
+        github.settings.workflows = {
+          containers = {
+            name = "Containers";
+            on = {
+              push = {
+                branches = [
+                  "main"
+                  "release-[0-9]+.[0-9]+"
+                ];
+                tags = [
+                  "v?[0-9]+.[0-9]+.[0-9]+*"
+                ];
+              };
+            };
+            jobs.build = {
+              permissions.packages = "write";
+              "runs-on" = "ubuntu-24.04-arm";
+              steps = [
+                {
+                  id = "createGithubAppToken";
+                  uses = "actions/create-github-app-token@v1";
+                  "with" = {
+                    app-id = "\${{ vars.OPERATOR_APP_ID }}";
+                    private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
+                    permission-contents = "write";
+                  };
+                }
+                {
+                  uses = "actions/checkout@v4";
+                  "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                }
+                {
+                  uses = "cachix/install-nix-action@v30";
+                  "with".github_access_token =
+                    "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                }
+                {
+                  uses = "docker/login-action@v3";
+                  "with" = {
+                    registry = "ghcr.io";
+                    username = "\${{ github.actor }}";
+                    password = "\${{ secrets.GITHUB_TOKEN }}";
+                  };
+                }
+                { run = "nix run nixpkgs#direnv allow"; }
+                { run = "nix run nixpkgs#direnv export gha >> \"$GITHUB_ENV\""; }
+                { run = "skaffold build --platform linux/amd64,linux/arm64"; }
+              ];
+            };
           };
-          jobs.wakabox = {
-            runs-on = "ubuntu-latest";
-            steps = [
-              {
-                uses = "matchai/waka-box@v5.0.0";
-                env = {
-                  GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
-                  GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
-                  WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
-                };
-              }
-            ];
+
+          wakabox = {
+            name = "Wakabox";
+            on = {
+              schedule = [
+                { cron = "0 0 * * *"; }
+              ];
+              workflow_dispatch = { };
+            };
+            jobs.wakabox = {
+              runs-on = "ubuntu-latest";
+              steps = [
+                {
+                  uses = "matchai/waka-box@v5.0.0";
+                  env = {
+                    GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
+                    GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
+                    WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
+                  };
+                }
+              ];
+            };
           };
         };
 

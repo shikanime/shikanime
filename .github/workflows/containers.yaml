@@ -1,0 +1,34 @@
+jobs:
+  build:
+    permissions:
+      packages: write
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - id: createGithubAppToken
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.OPERATOR_APP_ID }}
+          permission-contents: write
+          private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}
+      - uses: cachix/install-nix-action@v30
+        with:
+          github_access_token: ${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}
+      - uses: docker/login-action@v3
+        with:
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+      - run: nix run nixpkgs#direnv allow
+      - run: nix run nixpkgs#direnv export gha >> "$GITHUB_ENV"
+      - run: skaffold build --platform linux/amd64,linux/arm64
+name: Containers
+'on':
+  push:
+    branches:
+      - main
+      - release-[0-9]+.[0-9]+
+    tags:
+      - v?[0-9]+.[0-9]+.[0-9]+*
