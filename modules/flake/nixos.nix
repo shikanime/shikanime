@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ config, inputs, ... }:
 
 {
   flake = {
@@ -77,45 +77,14 @@
       };
     };
 
-    packages = {
-      x86_64-linux.catbox =
-        let
-          catbox = inputs.nixpkgs.lib.nixosSystem {
-            pkgs = import inputs.nixpkgs {
-              system = "x86_64-linux";
-              config.allowUnfree = true;
-            };
-            modules = [
-              ../../hosts/catbox/configuration.nix
-              inputs.home-manager.nixosModules.home-manager
-              {
-                home-manager.sharedModules = [
-                  inputs.devlib.homeManagerModule
-                ];
-              }
-            ];
-          };
-        in
-        catbox.config.system.build.streamLayeredImage;
-      aarch64-linux.catbox =
-        let
-          catbox = inputs.nixpkgs.lib.nixosSystem {
-            pkgs = import inputs.nixpkgs {
-              system = "aarch64-linux";
-              config.allowUnfree = true;
-            };
-            modules = [
-              ../../hosts/catbox/configuration.nix
-              inputs.home-manager.nixosModules.home-manager
-              {
-                home-manager.sharedModules = [
-                  inputs.devlib.homeManagerModule
-                ];
-              }
-            ];
-          };
-        in
-        catbox.config.system.build.streamLayeredImage;
-    };
   };
+
+  perSystem =
+    { pkgs, ... }:
+    {
+      packages.catbox = pkgs.callPackage ../../pkgs/catbox/default.nix {
+        inherit inputs;
+        catbox = config.system.build.toplevel;
+      };
+    };
 }
