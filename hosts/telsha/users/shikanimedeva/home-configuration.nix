@@ -29,6 +29,9 @@ in
   home = {
     file."${saplingConfigDir}/sapling.conf".source =
       config.lib.file.mkOutOfStoreSymlink config.sops.secrets.sapling-config.path;
+    sessionPath = [
+      "${config.home.homeDirectory}/.rd/bin"
+    ];
     sessionVariables = {
       GHSTACKRC_PATH = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.ghstack-config.path;
       SSH_AUTH_SOCK = "${config.home.homeDirectory}/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
@@ -53,10 +56,6 @@ in
         signByDefault = true;
       };
     };
-
-    zsh.shellInit = lib.mkAfter ''
-      test -d $HOME/.rd/bin && export PATH="$HOME/.rd/bin:$PATH"
-    '';
   };
 
   sops = {
