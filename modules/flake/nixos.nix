@@ -96,7 +96,7 @@
             ];
           };
         in
-        catbox.config.system.build.streamLayeredImage;
+        catbox.config.system.build.buildLayeredImage;
       aarch64-linux.catbox =
         let
           catbox = inputs.nixpkgs.lib.nixosSystem {
@@ -115,7 +115,7 @@
             ];
           };
         in
-        catbox.config.system.build.streamLayeredImage;
+        catbox.config.system.build.buildLayeredImage;
     };
   };
 }
