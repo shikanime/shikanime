@@ -1,5 +1,3 @@
-{ lib, ... }:
-
 {
   homebrew = {
     enable = true;
@@ -61,10 +59,7 @@
     ];
   };
 
-  programs.zsh = {
-    enable = true;
-    shellInit = lib.mkAfter ''test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)";'';
-  };
+  programs.zsh.enable = true;
 
   programs.gnupg.agent = {
     enable = true;
