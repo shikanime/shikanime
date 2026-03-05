@@ -54,7 +54,9 @@ in
       };
     };
 
-    zsh.enable = true;
+    zsh.shellInit = lib.mkAfter ''
+      test -d $HOME/.rd/bin && export PATH="$HOME/.rd/bin:$PATH"
+    '';
   };
 
   sops = {
