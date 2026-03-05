@@ -56,6 +56,8 @@ in
         signByDefault = true;
       };
     };
+
+    zsh.enable = true;
   };
 
   sops = {
