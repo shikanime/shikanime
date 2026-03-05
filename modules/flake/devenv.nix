@@ -49,9 +49,17 @@
                   "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
                 }
                 {
+                  uses = "docker/setup-qemu-action@v4";
+                  "with".platforms = "arm64";
+                }
+                {
                   uses = "cachix/install-nix-action@v30";
-                  "with".github_access_token =
-                    "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                  "with" = {
+                    github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                    extra_nix_config = ''
+                      extra-platforms = [ "aarch64-linux" ]
+                    '';
+                  };
                 }
                 {
                   uses = "cachix/cachix-action@v16";
