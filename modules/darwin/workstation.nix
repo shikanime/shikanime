@@ -1,6 +1,7 @@
 {
   homebrew = {
     enable = true;
+    enableZshIntegration = true;
     brews = [
       "mas"
       "openssl"
