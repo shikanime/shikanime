@@ -45,7 +45,21 @@ in
   programs = {
     bash.enable = true;
 
-    docker-cli.settings.credsStore = "osxkeychain";
+    docker-cli = {
+      contexts.rancher-desktop = {
+        Metadata = { Description = "Rancher Desktop moby context"; };
+        Endpoints = {
+          docker = {
+            Host = "unix://${config.home.homeDirectory}/.rd/docker.sock";
+            SkipTLSVerify = false;
+          };
+        };
+      };
+      settings = {
+        credsStore = "osxkeychain";
+        currentContext = "rancher-desktop";
+      };
+    };
 
     git = {
       includes = [
