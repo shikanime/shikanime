@@ -55,7 +55,10 @@ in
           };
         };
       };
-      settings.credsStore = "osxkeychain";
+      settings = {
+        credsStore = "osxkeychain";
+        currentContext = "rancher-desktop";
+      };
     };
 
     git = {
