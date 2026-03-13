@@ -47,7 +47,7 @@ in
 
     docker-cli = {
       contexts.rancher-desktop = {
-        Metadata = { Description = "Rancher Desktop moby context"; };
+        Metadata.Description = "Rancher Desktop moby context";
         Endpoints = {
           docker = {
             Host = "unix://${config.home.homeDirectory}/.rd/docker.sock";
