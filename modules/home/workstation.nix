@@ -23,6 +23,8 @@ with lib;
   };
 
   programs = {
+    bat.enable = true;
+
     carapace.enable = true;
 
     dircolors.enable = true;
