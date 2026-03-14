@@ -1,4 +1,5 @@
 { inputs, ... }:
+_:
 
 {
   perSystem =
