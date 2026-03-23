@@ -19,83 +19,62 @@ _:
         ];
 
         github.settings.workflows = {
-          skaffold = {
-            name = "Skaffold";
-            on.workflow_call = {
-              secrets = {
-                OPERATOR_PRIVATE_KEY.required = true;
-                CACHIX_AUTH_TOKEN.required = true;
-              };
-            };
-            jobs.build = {
-              permissions.packages = "write";
-              "runs-on" = "ubuntu-latest";
-              steps = [
-                {
-                  id = "createGithubAppToken";
-                  uses = "actions/create-github-app-token@v1";
-                  "with" = {
-                    app-id = "\${{ vars.OPERATOR_APP_ID }}";
-                    private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
-                    permission-contents = "write";
-                  };
-                }
-                {
-                  uses = "actions/checkout@v4";
-                  "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                }
-                {
-                  uses = "docker/setup-qemu-action@v4";
-                  "with".platforms = "arm64";
-                }
-                {
-                  uses = "cachix/install-nix-action@v30";
-                  "with" = {
-                    github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                    extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
-                  };
-                }
-                {
-                  uses = "cachix/cachix-action@v16";
-                  "with" = {
-                    authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-                    name = "shikanime";
-                  };
-                }
-                {
-                  uses = "docker/login-action@v3";
-                  "with" = {
-                    registry = "ghcr.io";
-                    username = "\${{ github.actor }}";
-                    password = "\${{ secrets.GITHUB_TOKEN }}";
-                  };
-                }
-                { run = "nix run nixpkgs#direnv allow"; }
-                { run = "nix run nixpkgs#direnv export gha >> \"$GITHUB_ENV\""; }
-                { run = "skaffold build --platform linux/amd64,linux/arm64"; }
-              ];
-            };
-          };
-
-          integration = {
-            jobs.skaffold = {
-              uses = "./.github/workflows/skaffold.yaml";
-              needs = [ "nix" ];
-              secrets = {
-                OPERATOR_PRIVATE_KEY = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
-                CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-              };
-            };
-            permissions.packages = "write";
-          };
-
           release.jobs = {
             skaffold = {
-              uses = "./.github/workflows/skaffold.yaml";
-              needs = [ "nix" ];
-              secrets = {
-                OPERATOR_PRIVATE_KEY = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
-                CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              name = "Skaffold";
+              on.workflow_call = {
+                secrets = {
+                  OPERATOR_PRIVATE_KEY.required = true;
+                  CACHIX_AUTH_TOKEN.required = true;
+                };
+              };
+              jobs.build = {
+                permissions.packages = "write";
+                "runs-on" = "ubuntu-latest";
+                steps = [
+                  {
+                    id = "createGithubAppToken";
+                    uses = "actions/create-github-app-token@v1";
+                    "with" = {
+                      app-id = "\${{ vars.OPERATOR_APP_ID }}";
+                      private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
+                      permission-contents = "write";
+                    };
+                  }
+                  {
+                    uses = "actions/checkout@v4";
+                    "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                  }
+                  {
+                    uses = "docker/setup-qemu-action@v4";
+                    "with".platforms = "arm64";
+                  }
+                  {
+                    uses = "cachix/install-nix-action@v30";
+                    "with" = {
+                      github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                      extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
+                    };
+                  }
+                  {
+                    uses = "cachix/cachix-action@v16";
+                    "with" = {
+                      authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+                      name = "shikanime";
+                    };
+                  }
+                  {
+                    uses = "docker/login-action@v3";
+                    "with" = {
+                      registry = "ghcr.io";
+                      username = "\${{ github.actor }}";
+                      password = "\${{ secrets.GITHUB_TOKEN }}";
+                    };
+                  }
+                  { run = "nix run nixpkgs#direnv allow"; }
+                  { run = "nix run nixpkgs#direnv export gha >> \"$GITHUB_ENV\""; }
+                  { run = "skaffold build --platform linux/amd64,linux/arm64"; }
+                ];
               };
             };
 
@@ -105,12 +84,9 @@ _:
 
           wakabox = {
             name = "Wakabox";
-            on = {
-              schedule = [
-                { cron = "0 0 * * *"; }
-              ];
-              workflow_dispatch = { };
-            };
+            on.schedule = [
+              { cron = "0 0 * * *"; }
+            ];
             jobs.wakabox = {
               runs-on = "ubuntu-latest";
               steps = [
