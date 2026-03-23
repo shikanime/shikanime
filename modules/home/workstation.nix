@@ -8,7 +8,6 @@ with lib;
     pkgs.cachix
     pkgs.devenv
     pkgs.docker-credential-helpers
-    pkgs.glances
     pkgs.pass
     pkgs.qpdf
     pkgs.rclone
