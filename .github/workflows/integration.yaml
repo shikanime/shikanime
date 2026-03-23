@@ -21,3 +21,4 @@ name: Integration
       - gh/*/*/base
 permissions:
   contents: read
+  packages: write
