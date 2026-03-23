@@ -19,17 +19,12 @@ _:
         ];
 
         github.settings.workflows = {
-          containers = {
-            name = "Containers";
-            on = {
-              push = {
-                branches = [
-                  "main"
-                  "release-[0-9]+.[0-9]+"
-                ];
-                tags = [
-                  "v?[0-9]+.[0-9]+.[0-9]+*"
-                ];
+          skaffold = {
+            name = "Skaffold";
+            on.workflow_call = {
+              secrets = {
+                OPERATOR_PRIVATE_KEY.required = true;
+                CACHIX_AUTH_TOKEN.required = true;
               };
             };
             jobs.build = {
@@ -57,9 +52,7 @@ _:
                   uses = "cachix/install-nix-action@v30";
                   "with" = {
                     github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                    extra_nix_config = ''
-                      extra-platforms = [ "aarch64-linux" ]
-                    '';
+                    extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
                   };
                 }
                 {
@@ -82,6 +75,29 @@ _:
                 { run = "skaffold build --platform linux/amd64,linux/arm64"; }
               ];
             };
+          };
+
+          integration.jobs.skaffold = {
+            uses = "./.github/workflows/skaffold.yaml";
+            needs = [ "nix" ];
+            secrets = {
+              OPERATOR_PRIVATE_KEY = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
+              CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+            };
+          };
+
+          release.jobs = {
+            skaffold = {
+              uses = "./.github/workflows/skaffold.yaml";
+              needs = [ "nix" ];
+              secrets = {
+                OPERATOR_PRIVATE_KEY = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
+                CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              };
+            };
+
+            release-branch.needs = [ "skaffold" ];
+            release-tag.needs = [ "skaffold" ];
           };
 
           wakabox = {
