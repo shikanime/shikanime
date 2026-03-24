@@ -19,56 +19,59 @@ _:
         ];
 
         github.settings.workflows = {
-          release.jobs = {
+          release = {
             permissions.packages = "write";
-            release-branch.needs = [ "skaffold" ];
-            release-tag.needs = [ "skaffold" ];
-            skaffold = {
-              "runs-on" = "ubuntu-latest";
-              steps = [
-                {
-                  id = "createGithubAppToken";
-                  uses = "actions/create-github-app-token@v1";
-                  "with" = {
-                    app-id = "\${{ vars.OPERATOR_APP_ID }}";
-                    private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
-                    permission-packages = "write";
-                  };
-                }
-                {
-                  uses = "actions/checkout@v4";
-                  "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                }
-                {
-                  uses = "docker/setup-qemu-action@v4";
-                  "with".platforms = "arm64";
-                }
-                {
-                  uses = "cachix/install-nix-action@v30";
-                  "with" = {
-                    github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                    extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
-                  };
-                }
-                {
-                  uses = "cachix/cachix-action@v16";
-                  "with" = {
-                    authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-                    name = "shikanime";
-                  };
-                }
-                {
-                  uses = "docker/login-action@v3";
-                  "with" = {
-                    registry = "ghcr.io";
-                    username = "\${{ github.actor }}";
-                    password = "\${{ secrets.GITHUB_TOKEN }}";
-                  };
-                }
-                { run = "nix run nixpkgs#direnv allow"; }
-                { run = "nix run nixpkgs#direnv export gha >> \"$GITHUB_ENV\""; }
-                { run = "skaffold build --platform linux/amd64,linux/arm64"; }
-              ];
+            jobs = {
+              release-branch.needs = [ "skaffold" ];
+              release-tag.needs = [ "skaffold" ];
+              skaffold = {
+                "runs-on" = "ubuntu-latest";
+                steps = [
+                  {
+                    id = "createGithubAppToken";
+                    uses = "actions/create-github-app-token@v1";
+                    "with" = {
+                      app-id = "\${{ vars.OPERATOR_APP_ID }}";
+                      private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
+                      permission-contents = "write";
+                      permission-packages = "write";
+                    };
+                  }
+                  {
+                    uses = "actions/checkout@v4";
+                    "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                  }
+                  {
+                    uses = "docker/setup-qemu-action@v4";
+                    "with".platforms = "arm64";
+                  }
+                  {
+                    uses = "cachix/install-nix-action@v30";
+                    "with" = {
+                      github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                      extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
+                    };
+                  }
+                  {
+                    uses = "cachix/cachix-action@v16";
+                    "with" = {
+                      authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+                      name = "shikanime";
+                    };
+                  }
+                  {
+                    uses = "docker/login-action@v3";
+                    "with" = {
+                      registry = "ghcr.io";
+                      username = "\${{ github.actor }}";
+                      password = "\${{ secrets.GITHUB_TOKEN }}";
+                    };
+                  }
+                  { run = "nix run nixpkgs#direnv allow"; }
+                  { run = "nix run nixpkgs#direnv export gha >> \"$GITHUB_ENV\""; }
+                  { run = "skaffold build --platform linux/amd64,linux/arm64"; }
+                ];
+              };
             };
           };
 
