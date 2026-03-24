@@ -20,6 +20,9 @@ _:
 
         github.settings.workflows = {
           release.jobs = {
+            permissions.packages = "write";
+            release-branch.needs = [ "skaffold" ];
+            release-tag.needs = [ "skaffold" ];
             skaffold = {
               "runs-on" = "ubuntu-latest";
               steps = [
@@ -67,9 +70,6 @@ _:
                 { run = "skaffold build --platform linux/amd64,linux/arm64"; }
               ];
             };
-
-            release-branch.needs = [ "skaffold" ];
-            release-tag.needs = [ "skaffold" ];
           };
 
           wakabox = {
