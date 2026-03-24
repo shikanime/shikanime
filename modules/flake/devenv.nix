@@ -54,7 +54,7 @@ _:
                     };
                   }
                   {
-                    uses = "cachix/cachix-action@v16";
+                    uses = "cachix/cachix-action@v17";
                     "with" = {
                       authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
                       name = "shikanime";
