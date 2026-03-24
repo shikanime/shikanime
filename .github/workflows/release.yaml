@@ -59,7 +59,6 @@ jobs:
         uses: actions/create-github-app-token@v1
         with:
           app-id: ${{ vars.OPERATOR_APP_ID }}
-          permission-contents: write
           permission-packages: write
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
       - uses: actions/checkout@v4
