@@ -33,6 +33,7 @@ _:
                     "with" = {
                       app-id = "\${{ vars.OPERATOR_APP_ID }}";
                       private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
+                      permission-contents = "write";
                       permission-packages = "write";
                     };
                   }
@@ -48,7 +49,7 @@ _:
                     uses = "cachix/install-nix-action@v30";
                     "with" = {
                       github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                      extr-nix_config = "platforms = [ \"aarch64-linux\" ]";
+                      extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
                     };
                   }
                   {

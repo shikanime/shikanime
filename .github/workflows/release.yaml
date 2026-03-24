@@ -57,6 +57,7 @@ jobs:
         uses: actions/create-github-app-token@v1
         with:
           app-id: ${{ vars.OPERATOR_APP_ID }}
+          permission-contents: write
           permission-packages: write
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
       - uses: actions/checkout@v4
@@ -67,7 +68,7 @@ jobs:
           platforms: arm64
       - uses: cachix/install-nix-action@v30
         with:
-          extr-nix_config: platforms = [ "aarch64-linux" ]
+          extra_nix_config: platforms = [ "aarch64-linux" ]
           github_access_token: ${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}
       - uses: cachix/cachix-action@v16
         with:
