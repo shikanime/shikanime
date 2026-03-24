@@ -25,6 +25,7 @@ _:
               release-branch.needs = [ "skaffold" ];
               release-tag.needs = [ "skaffold" ];
               skaffold = {
+                needs = [ "nix" ];
                 "runs-on" = "ubuntu-latest";
                 steps = [
                   {

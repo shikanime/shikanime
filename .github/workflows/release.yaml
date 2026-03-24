@@ -51,6 +51,8 @@ jobs:
           REPO: ${{ github.repository }}
         run: gh release create "$REF_NAME" --repo "$REPO" --generate-notes || true
   skaffold:
+    needs:
+      - nix
     runs-on: ubuntu-latest
     steps:
       - id: createGithubAppToken
