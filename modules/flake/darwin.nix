@@ -1,5 +1,4 @@
 { inputs, ... }:
-_:
 
 {
   flake.darwinConfigurations.telsha = inputs.nix-darwin.lib.darwinSystem {
