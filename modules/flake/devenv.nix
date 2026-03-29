@@ -18,59 +18,57 @@
         ];
 
         github.settings.workflows = {
-          release = {
-            permissions.packages = "write";
-            jobs = {
-              release-branch.needs = [ "skaffold" ];
-              release-tag.needs = [ "skaffold" ];
-              skaffold = {
-                needs = [ "nix" ];
-                "runs-on" = "ubuntu-latest";
-                steps = [
-                  {
-                    id = "createGithubAppToken";
-                    uses = "actions/create-github-app-token@v1";
-                    "with" = {
-                      app-id = "\${{ vars.OPERATOR_APP_ID }}";
-                      private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
-                      permission-packages = "write";
-                    };
-                  }
-                  {
-                    uses = "actions/checkout@v4";
-                    "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                  }
-                  {
-                    uses = "docker/setup-qemu-action@v4";
-                    "with".platforms = "arm64";
-                  }
-                  {
-                    uses = "cachix/install-nix-action@v30";
-                    "with" = {
-                      github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                      extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
-                    };
-                  }
-                  {
-                    uses = "cachix/cachix-action@v17";
-                    "with" = {
-                      authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-                      name = "shikanime";
-                    };
-                  }
-                  {
-                    uses = "docker/login-action@v3";
-                    "with" = {
-                      registry = "ghcr.io";
-                      username = "\${{ github.actor }}";
-                      password = "\${{ secrets.GITHUB_TOKEN }}";
-                    };
-                  }
-                  { run = "nix run nixpkgs#direnv allow"; }
-                  { run = "nix run nixpkgs#direnv export gha >> \"$GITHUB_ENV\""; }
-                  { run = "skaffold build --platform linux/amd64,linux/arm64"; }
-                ];
-              };
+          release.jobs = {
+            release-branch.needs = [ "skaffold" ];
+            release-tag.needs = [ "skaffold" ];
+            skaffold = {
+              needs = [ "nix" ];
+              permissions.packages = "write";
+              "runs-on" = "ubuntu-latest";
+              steps = [
+                {
+                  id = "createGithubAppToken";
+                  uses = "actions/create-github-app-token@v1";
+                  "with" = {
+                    app-id = "\${{ vars.OPERATOR_APP_ID }}";
+                    private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
+                    permission-packages = "write";
+                  };
+                }
+                {
+                  uses = "actions/checkout@v4";
+                  "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                }
+                {
+                  uses = "docker/setup-qemu-action@v4";
+                  "with".platforms = "arm64";
+                }
+                {
+                  uses = "cachix/install-nix-action@v30";
+                  "with" = {
+                    github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                    extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
+                  };
+                }
+                {
+                  uses = "cachix/cachix-action@v17";
+                  "with" = {
+                    authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+                    name = "shikanime";
+                  };
+                }
+                {
+                  uses = "docker/login-action@v3";
+                  "with" = {
+                    registry = "ghcr.io";
+                    username = "\${{ github.actor }}";
+                    password = "\${{ secrets.GITHUB_TOKEN }}";
+                  };
+                }
+                { run = "nix run nixpkgs#direnv allow"; }
+                { run = "nix run nixpkgs#direnv export gha >> \"$GITHUB_ENV\""; }
+                { run = "skaffold build --platform linux/amd64,linux/arm64"; }
+              ];
             };
           };
 
@@ -92,6 +90,7 @@
                 }
               ];
             };
+            permissions.contents = "read";
           };
         };
 
@@ -150,6 +149,16 @@
               }
             ];
         };
+
+        treefmt.config.programs.typos.configFile =
+          let
+            format = pkgs.formats.toml { };
+            settings = {
+              default.extend-words.facter = "facter";
+            };
+            configFile = format.generate "typos.toml" settings;
+          in
+          "${configFile}";
       };
     };
 }
