@@ -11,6 +11,8 @@ jobs:
     needs:
       - nix
       - skaffold
+    permissions:
+      contents: write
     runs-on: ubuntu-slim
     steps:
       - continue-on-error: true
@@ -32,6 +34,8 @@ jobs:
     needs:
       - nix
       - skaffold
+    permissions:
+      contents: write
     runs-on: ubuntu-slim
     steps:
       - continue-on-error: true
@@ -53,6 +57,8 @@ jobs:
   skaffold:
     needs:
       - nix
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - id: createGithubAppToken
@@ -97,5 +103,4 @@ name: Release
         description: Tag or branch to release
         required: true
 permissions:
-  contents: write
-  packages: write
+  contents: read
