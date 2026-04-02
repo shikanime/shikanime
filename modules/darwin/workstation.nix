@@ -25,7 +25,6 @@
       "microsoft-teams"
       "obs"
       "rancher"
-      "signal"
       "slack"
       "spotify"
       "stolendata-mpv"
