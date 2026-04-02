@@ -10,6 +10,10 @@ with lib;
   programs = {
     git = {
       enable = true;
+      ignores = [
+        "_bmad"
+        ".trae"
+      ];
       lfs.enable = true;
       settings = {
         alias = {
