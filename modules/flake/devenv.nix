@@ -40,21 +40,12 @@
                   "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
                 }
                 {
-                  uses = "docker/setup-qemu-action@v4";
-                  "with".platforms = "arm64";
-                }
-                {
-                  uses = "cachix/install-nix-action@v30";
+                  uses = "shikanime-studio/actions/nix/setup@v8";
                   "with" = {
-                    github_access_token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                    extra_nix_config = "platforms = [ \"aarch64-linux\" ]";
-                  };
-                }
-                {
-                  uses = "cachix/cachix-action@v17";
-                  "with" = {
-                    authToken = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-                    name = "shikanime";
+                    github-token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                    cachix-name = "shikanime";
+                    cachix-auth-token = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+                    extra-platforms = "arm64";
                   };
                 }
                 {
@@ -65,9 +56,13 @@
                     password = "\${{ secrets.GITHUB_TOKEN }}";
                   };
                 }
-                { run = "nix run nixpkgs#direnv allow"; }
-                { run = "nix run nixpkgs#direnv export gha >> \"$GITHUB_ENV\""; }
-                { run = "skaffold build --platform linux/amd64,linux/arm64"; }
+                {
+                  uses = "shikanime-studio/actions/direnv@v8";
+                }
+                {
+                  env.DEBUG = "\${{ runner.debug == '1' && '--debug=1' || '' }}";
+                  run = "skaffold build --platform linux/amd64,linux/arm64";
+                }
               ];
             };
           };
