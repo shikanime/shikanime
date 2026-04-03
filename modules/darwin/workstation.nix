@@ -1,8 +1,7 @@
-{ lib, ... }:
-
 {
   homebrew = {
     enable = true;
+    enableZshIntegration = true;
     brews = [
       "mas"
       "openssl"
@@ -24,11 +23,8 @@
       "mattermost"
       "microsoft-edge"
       "microsoft-teams"
-      "mongodb-compass"
       "obs"
       "rancher"
-      "redis-insight"
-      "signal"
       "slack"
       "spotify"
       "stolendata-mpv"
@@ -51,12 +47,17 @@
     };
   };
 
-  nix.linux-builder.enable = true;
-
-  programs.zsh = {
+  nix.linux-builder = {
     enable = true;
-    shellInit = lib.mkAfter ''test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)";'';
+    config.boot.binfmt.emulatedSystems = [ "x86_64-linux" ];
+    ephemeral = true;
+    systems = [
+      "x86_64-linux"
+      "aarch64-linux"
+    ];
   };
+
+  programs.zsh.enable = true;
 
   programs.gnupg.agent = {
     enable = true;

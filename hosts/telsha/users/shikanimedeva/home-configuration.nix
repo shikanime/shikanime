@@ -42,6 +42,22 @@ in
   programs = {
     bash.enable = true;
 
+    docker-cli = {
+      contexts.rancher-desktop = {
+        Metadata.Description = "Rancher Desktop moby context";
+        Endpoints = {
+          docker = {
+            Host = "unix://${config.home.homeDirectory}/.rd/docker.sock";
+            SkipTLSVerify = false;
+          };
+        };
+      };
+      settings = {
+        credsStore = "osxkeychain";
+        currentContext = "rancher-desktop";
+      };
+    };
+
     git = {
       includes = [
         { path = config.lib.file.mkOutOfStoreSymlink config.sops.secrets.git-config.path; }

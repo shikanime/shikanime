@@ -5,7 +5,7 @@ with lib;
 {
   programs.ghostty = {
     enable = true;
-    package = if pkgs.stdenv.hostPlatform.isLinux then pkgs.ghostty else pkgs.ghostty-bin;
+    package = if pkgs.stdenv.isLinux then pkgs.ghostty else pkgs.ghostty-bin;
     themes = {
       catppuccin-latte = {
         palette = [
@@ -35,7 +35,7 @@ with lib;
     };
     settings = {
       theme = "catppuccin-latte";
-      command = "${getExe pkgs.zsh} -c ${getExe pkgs.nushell} --login";
+      command = "${getExe pkgs.zsh} -c ${getExe pkgs.nushell}";
     };
   };
 }

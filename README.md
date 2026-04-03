@@ -4,7 +4,7 @@
 
 <!-- markdownlint-enable first-line-heading -->
 
-## About me
+# About me
 
 Hey 🌸 I'm Shikanime Deva, I like to build correct by construction software λ
 and contribute to the civilization of the human species.
