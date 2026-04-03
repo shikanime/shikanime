@@ -40,16 +40,62 @@ with lib;
           ghstack =
             let
               ghstack = pkgs.writeShellScript "jj-ghstack" ''
-                if [ -z "$1" ] || [ "$1" = "submit" ]; then
-                  ${getExe pkgs.jujutsu} rebase -d 'trunk()'
+                jj=${getExe pkgs.jujutsu}
+                git=${getExe pkgs.git}
+                ghstack=${getExe pkgs.ghstack}
+                ghstack_config_path=''${GHSTACKRC_PATH:-"$HOME/.ghstackrc"}
+
+                resolve_remote_name() {
+                  ghstack_config_path=$1
+
+                  [ -f "$ghstack_config_path" ] || {
+                    printf '%s\n' origin
+                    return 0
+                  }
+
+                  ${getExe' pkgs.yq-go "yq"} -p toml -r '.ghstack.remote_name // "origin"' "$ghstack_config_path"
+                }
+
+                track_stack_bookmarks() {
+                  remote_name=$1
+                  stack_commit_ids=$("$jj" log --no-graph -r 'stack()' -T 'commit_id() ++ "\n"')
+                  [ -n "$stack_commit_ids" ] || return 0
+
+                  "$git" for-each-ref \
+                    --format='%(refname:strip=3)|%(objectname)' \
+                    "refs/remotes/''${remote_name}/gh/*/orig" \
+                    | while IFS='|' read -r bookmark_name commit_id; do
+                    [ -n "$bookmark_name" ] || continue
+                    printf '%s\n' "$stack_commit_ids" | ${getExe' pkgs.gnugrep "grep"} -Fxq "$commit_id" || continue
+                    "$jj" bookmark track "''${bookmark_name}@''${remote_name}" >/dev/null
+                  done
+                }
+
+                sync_stack_bookmarks() {
+                  remote_name=$1
+                  "$jj" git fetch --remote "$remote_name"
+                  track_stack_bookmarks "$remote_name"
+                }
+
+                prepare_submit() {
+                  remote_name=$1
+                  sync_stack_bookmarks "$remote_name"
+                  "$jj" abandon -r 'stack() & nulls()'
+                  "$jj" rebase -d 'trunk()'
+                }
+
+                remote_name=$(resolve_remote_name "$ghstack_config_path")
+
+                if [ -z "''${1:-}" ]; then
+                  set -- "submit"
                 fi
-                ${getExe pkgs.ghstack} "$@"
-                ${getExe pkgs.jujutsu} bookmark list --all -T 'if(remote == "origin" && name.starts_with("gh/") && name.ends_with("orig"), name ++ " " ++ tracked ++ "\n")' | sort | uniq | while read bookmark tracked; do
-                  ${getExe pkgs.jujutsu} bookmark set "$bookmark" -r "$bookmark@origin" 2>/dev/null || true
-                  if [ "$tracked" = "false" ]; then
-                    ${getExe pkgs.jujutsu} bookmark track "$bookmark@origin" 2>/dev/null || true
-                  fi
-                done
+                if [ "$1" = "submit" ]; then
+                  prepare_submit "$remote_name"
+                fi
+                "$ghstack" "$@"
+                if [ "$1" = "submit" ]; then
+                  sync_stack_bookmarks "$remote_name"
+                fi
               '';
             in
             [

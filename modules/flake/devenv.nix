@@ -1,6 +1,4 @@
-{ inputs, lib, ... }:
-
-with lib;
+{ inputs, ... }:
 
 {
   perSystem =
@@ -19,34 +17,87 @@ with lib;
           inputs.devlib.devenvModules.shikanime
         ];
 
-        github.settings.workflows.wakabox = {
-          name = "Wakabox";
-          on = {
-            schedule = [
+        github.settings.workflows = {
+          release.jobs = {
+            release-branch.needs = [ "skaffold" ];
+            release-tag.needs = [ "skaffold" ];
+            skaffold = {
+              needs = [ "nix" ];
+              permissions.packages = "write";
+              "runs-on" = "ubuntu-latest";
+              steps = [
+                {
+                  id = "createGithubAppToken";
+                  uses = "actions/create-github-app-token@v1";
+                  "with" = {
+                    app-id = "\${{ vars.OPERATOR_APP_ID }}";
+                    private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
+                    permission-packages = "write";
+                  };
+                }
+                {
+                  uses = "actions/checkout@v4";
+                  "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                }
+                {
+                  uses = "shikanime-studio/actions/nix/setup@v8";
+                  "with" = {
+                    github-token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
+                    cachix-name = "shikanime";
+                    cachix-auth-token = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+                    extra-platforms = "arm64";
+                  };
+                }
+                {
+                  uses = "docker/login-action@v3";
+                  "with" = {
+                    registry = "ghcr.io";
+                    username = "\${{ github.actor }}";
+                    password = "\${{ secrets.GITHUB_TOKEN }}";
+                  };
+                }
+                {
+                  uses = "shikanime-studio/actions/direnv@v8";
+                }
+                {
+                  env.DEBUG = "\${{ runner.debug == '1' && '--debug=1' || '' }}";
+                  run = "skaffold build --platform linux/amd64,linux/arm64";
+                }
+              ];
+            };
+          };
+
+          wakabox = {
+            name = "Wakabox";
+            on.schedule = [
               { cron = "0 0 * * *"; }
             ];
-            workflow_dispatch = { };
-          };
-          jobs.wakabox = {
-            runs-on = "ubuntu-latest";
-            steps = [
-              {
-                uses = "matchai/waka-box@v5.0.0";
-                env = {
-                  GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
-                  GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
-                  WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
-                };
-              }
-            ];
+            jobs.wakabox = {
+              runs-on = "ubuntu-latest";
+              steps = [
+                {
+                  uses = "matchai/waka-box@v5.0.0";
+                  env = {
+                    GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
+                    GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
+                    WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
+                  };
+                }
+              ];
+            };
+            permissions.contents = "read";
           };
         };
 
-        packages = [
-          pkgs.scaleway-cli
-          pkgs.skaffold
-        ]
-        ++ lib.optional pkgs.stdenv.hostPlatform.isLinux pkgs.nixos-facter;
+        packages =
+          with pkgs;
+          [
+            age
+            docker
+            scaleway-cli
+            skaffold
+          ]
+          ++ lib.optional stdenv.hostPlatform.isLinux nixos-facter;
 
         sops = {
           enable = true;
@@ -55,6 +106,7 @@ with lib;
               age = [
                 "age1pwl9yz4k4255a4h8qz7lafce8wxhsul0cnqwmr8528fqgujlfshshv3z3g" # telsha
                 "age1x9v4ps90txy9mk4392uya93tyzx40te4dvns4chg5s6q8mfy03ns74jpay" # nixtar
+                "age18zmkeyxun4gflllelsmdhwjh5xpfwrqshdxrednv7zljphepxc6strhysn" # github-actions
               ];
             in
             [
@@ -92,6 +144,16 @@ with lib;
               }
             ];
         };
+
+        treefmt.config.programs.typos.configFile =
+          let
+            format = pkgs.formats.toml { };
+            settings = {
+              default.extend-words.facter = "facter";
+            };
+            configFile = format.generate "typos.toml" settings;
+          in
+          "${configFile}";
       };
     };
 }

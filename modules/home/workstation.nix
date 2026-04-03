@@ -8,7 +8,6 @@ with lib;
     pkgs.cachix
     pkgs.devenv
     pkgs.docker-credential-helpers
-    pkgs.glances
     pkgs.pass
     pkgs.qpdf
     pkgs.rclone
@@ -23,6 +22,8 @@ with lib;
   };
 
   programs = {
+    bat.enable = true;
+
     carapace.enable = true;
 
     dircolors.enable = true;
@@ -34,10 +35,7 @@ with lib;
       config.global.load_dotenv = true;
     };
 
-    docker-cli = {
-      enable = true;
-      settings.credsStore = "pass";
-    };
+    docker-cli.enable = true;
 
     gpg.enable = true;
 
