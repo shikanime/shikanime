@@ -56,6 +56,13 @@ with lib;
               "--"
               "${ghstack}"
             ];
+          prune = [
+            "abandon"
+            "-r"
+            "stack() & nulls()"
+            "-d"
+            "trunk()"
+          ];
           sync = [
             "git"
             "fetch"
