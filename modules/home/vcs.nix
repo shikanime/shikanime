@@ -58,10 +58,8 @@ with lib;
             ];
           prune = [
             "abandon"
-            "-r"
-            "stack() & nulls()"
-            "-d"
-            "trunk()"
+            "nulls()"
+            "conflicts"
           ];
           sync = [
             "git"
