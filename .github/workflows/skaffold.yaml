@@ -24,11 +24,15 @@ jobs:
           extra-platforms: arm64
           github-token: ${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}
       - uses: shikanime-studio/actions/direnv@v8
-      - run: skaffold config set --global collect-metrics false
       - env:
+          SKAFFOLD_COLLECT_METRICS: 'false'
+          SKAFFOLD_LOG_LEVEL: ${{ runner.debug == '1' && 'debug' || 'info' }}
           SKAFFOLD_PLATFORM: linux/amd64,linux/arm64
         run: skaffold build --profile ${{ matrix.name }}
-      - run: skaffold render --profile ${{ matrix.name }}
+      - env:
+          SKAFFOLD_COLLECT_METRICS: 'false'
+          SKAFFOLD_LOG_LEVEL: ${{ runner.debug == '1' && 'debug' || 'info' }}
+        run: skaffold render --profile ${{ matrix.name }}
     strategy:
       fail-fast: false
       matrix:
