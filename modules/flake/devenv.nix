@@ -17,75 +17,51 @@
           inputs.devlib.devenvModules.shikanime
         ];
 
-        github.settings.workflows = {
-          release.jobs = {
-            release-branch.needs = [ "skaffold" ];
-            release-tag.needs = [ "skaffold" ];
-            skaffold = {
-              needs = [ "nix" ];
-              permissions.packages = "write";
-              "runs-on" = "ubuntu-latest";
-              steps = [
-                {
-                  id = "createGithubAppToken";
-                  uses = "actions/create-github-app-token@v1";
-                  "with" = {
-                    app-id = "\${{ vars.OPERATOR_APP_ID }}";
-                    private-key = "\${{ secrets.OPERATOR_PRIVATE_KEY }}";
-                    permission-packages = "write";
-                  };
-                }
-                {
-                  uses = "actions/checkout@v4";
-                  "with".token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                }
-                {
-                  uses = "shikanime-studio/actions/nix/setup@v8";
-                  "with" = {
-                    github-token = "\${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}";
-                    cachix-name = "shikanime";
-                    cachix-auth-token = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-                    extra-platforms = "arm64";
-                  };
-                }
-                {
-                  uses = "docker/login-action@v3";
-                  "with" = {
-                    registry = "ghcr.io";
-                    username = "\${{ github.actor }}";
-                    password = "\${{ secrets.GITHUB_TOKEN }}";
-                  };
-                }
-                {
-                  uses = "shikanime-studio/actions/direnv@v8";
-                }
-                {
-                  env.DEBUG = "\${{ runner.debug == '1' && '--debug=1' || '' }}";
-                  run = "skaffold build --platform linux/amd64,linux/arm64";
-                }
+        github = {
+          settings.workflows = {
+            integration = {
+              jobs.skaffold.secrets.CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              on.workflow_call.secrets.CACHIX_AUTH_TOKEN.required = lib.mkDefault true;
+            };
+
+            release = {
+              jobs.skaffold.secrets.CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              on.workflow_call.secrets.CACHIX_AUTH_TOKEN.required = lib.mkDefault true;
+            };
+
+            skaffold.on.workflow_call.secrets.CACHIX_AUTH_TOKEN.required = lib.mkDefault true;
+
+            wakabox = {
+              name = "Wakabox";
+              on.schedule = [
+                { cron = "0 0 * * *"; }
               ];
+              jobs.wakabox = {
+                runs-on = "ubuntu-latest";
+                steps = [
+                  {
+                    uses = "matchai/waka-box@v5.0.0";
+                    env = {
+                      GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
+                      GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
+                      WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
+                    };
+                  }
+                ];
+              };
+              permissions.contents = "read";
             };
           };
 
-          wakabox = {
-            name = "Wakabox";
-            on.schedule = [
-              { cron = "0 0 * * *"; }
-            ];
-            jobs.wakabox = {
-              runs-on = "ubuntu-latest";
-              steps = [
-                {
-                  uses = "matchai/waka-box@v5.0.0";
-                  env = {
-                    GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
-                    GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
-                    WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
-                  };
-                }
-              ];
+          workflows.skaffold = {
+            enable = true;
+            settings = {
+              setup-nix = {
+                cachix-auth-token = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+                extra-platforms = "arm64";
+              };
+              skaffold-build.SKAFFOLD_PLATFORM = "linux/amd64,linux/arm64";
             };
-            permissions.contents = "read";
           };
         };
 
