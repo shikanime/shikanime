@@ -59,7 +59,7 @@ with lib;
           prune = [
             "abandon"
             "nulls()"
-            "conflicts"
+            "conflicts()"
           ];
           sync = [
             "git"
