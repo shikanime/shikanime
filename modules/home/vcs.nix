@@ -40,6 +40,8 @@ with lib;
           ghstack =
             let
               ghstack = pkgs.writeShellScript "jj-ghstack" ''
+                set -eu
+
                 jj=${getExe pkgs.jujutsu}
                 git=${getExe pkgs.git}
                 ghstack=${getExe pkgs.ghstack}
@@ -53,12 +55,12 @@ with lib;
                     return 0
                   }
 
-                  ${getExe' pkgs.yq-go "yq"} -p toml -r '.ghstack.remote_name // "origin"' "$ghstack_config_path"
+                  ${getExe' pkgs.yq-go "yq"} -p ini -o json -r '.ghstack.remote_name // "origin"' "$ghstack_config_path"
                 }
 
                 track_stack_bookmarks() {
                   remote_name=$1
-                  stack_commit_ids=$("$jj" log --no-graph -r 'stack()' -T 'commit_id() ++ "\n"')
+                  stack_commit_ids=$("$jj" log --no-graph -r 'stack()' -T 'commit_id ++ "\n"')
                   [ -n "$stack_commit_ids" ] || return 0
 
                   "$git" for-each-ref \
