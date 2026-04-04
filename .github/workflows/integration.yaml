@@ -11,12 +11,12 @@ name: Integration
 'on':
   pull_request:
     branches:
-      - main
-      - gh/*/*/base
+    - main
+    - gh/*/*/base
     types:
-      - opened
-      - reopened
-      - synchronize
-      - ready_for_review
+    - opened
+    - reopened
+    - synchronize
+    - ready_for_review
 permissions:
   contents: read
