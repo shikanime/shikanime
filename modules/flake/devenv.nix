@@ -55,12 +55,9 @@
 
           workflows.skaffold = {
             enable = true;
-            settings = {
-              setup-nix = {
-                cachix-auth-token = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-                extra-platforms = "arm64";
-              };
-              skaffold-build.SKAFFOLD_PLATFORM = "linux/amd64,linux/arm64";
+            settings.setup-nix = {
+              cachix-auth-token = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              extra-platforms = "arm64";
             };
           };
         };
