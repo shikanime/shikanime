@@ -1,19 +1,27 @@
-{ lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 
 {
-  home.packages = [
-    pkgs.bitwarden-cli
-    pkgs.cachix
-    pkgs.devenv
-    pkgs.docker-credential-helpers
-    pkgs.pass
-    pkgs.qpdf
-    pkgs.rclone
-    pkgs.wget
-    pkgs.zip
-  ];
+  home = {
+    packages = [
+      pkgs.bitwarden-cli
+      pkgs.cachix
+      pkgs.devenv
+      pkgs.docker-credential-helpers
+      pkgs.pass
+      pkgs.qpdf
+      pkgs.rclone
+      pkgs.wget
+      pkgs.zip
+    ];
+    sessionPath = "${config.home.homeDirectory}/.local/bin";
+  };
 
   # FIX: https://github.com/Mic92/sops-nix/issues/890
   launchd.agents.sops-nix = mkIf pkgs.stdenv.isDarwin {
