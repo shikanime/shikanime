@@ -56,6 +56,7 @@ jobs:
         run: gh release create "$REF_NAME" --repo "$REPO" --generate-notes || true
   skaffold:
     permissions:
+      contents: read
       packages: write
     secrets:
       CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
