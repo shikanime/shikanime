@@ -20,7 +20,7 @@ with lib;
       pkgs.wget
       pkgs.zip
     ];
-    sessionPath = [ "${config.home.homeDirectory}/.local/bin"];
+    sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
   };
 
   # FIX: https://github.com/Mic92/sops-nix/issues/890
