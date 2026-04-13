@@ -86,20 +86,28 @@
       treefmt-nix,
       ...
     }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [
-        ./modules/flake/darwin.nix
-        ./modules/flake/devenv.nix
-        ./modules/flake/nixos.nix
-        devenv.flakeModule
-        devlib.flakeModule
-        git-hooks.flakeModule
-        treefmt-nix.flakeModule
-      ];
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "aarch64-darwin"
-      ];
-    };
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      { flake-parts-lib, self, ... }:
+      with flake-parts-lib;
+      let
+        darwinFlakeModule = importApply ./modules/flake/darwin.nix { inherit self; };
+        nixosFlakeModule = importApply ./modules/flake/nixos.nix { inherit self; };
+      in
+      {
+        imports = [
+          ./modules/flake/devenv.nix
+          darwinFlakeModule
+          nixosFlakeModule
+          devenv.flakeModule
+          devlib.flakeModule
+          git-hooks.flakeModule
+          treefmt-nix.flakeModule
+        ];
+        systems = [
+          "x86_64-linux"
+          "aarch64-linux"
+          "aarch64-darwin"
+        ];
+      }
+    );
 }
