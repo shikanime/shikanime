@@ -1,3 +1,4 @@
+{ self, ... }:
 { inputs, ... }:
 
 {
@@ -78,44 +79,52 @@
     };
 
     packages = {
-      x86_64-linux.catbox =
-        let
-          catbox = inputs.nixpkgs.lib.nixosSystem {
-            pkgs = import inputs.nixpkgs {
-              system = "x86_64-linux";
-              config.allowUnfree = true;
+      x86_64-linux = {
+        catbox =
+          let
+            catbox = inputs.nixpkgs.lib.nixosSystem {
+              pkgs = import inputs.nixpkgs {
+                system = "x86_64-linux";
+                config.allowUnfree = true;
+              };
+              modules = [
+                ../../hosts/catbox/configuration.nix
+                inputs.home-manager.nixosModules.home-manager
+                {
+                  home-manager.sharedModules = [
+                    inputs.devlib.homeManagerModule
+                  ];
+                }
+              ];
             };
-            modules = [
-              ../../hosts/catbox/configuration.nix
-              inputs.home-manager.nixosModules.home-manager
-              {
-                home-manager.sharedModules = [
-                  inputs.devlib.homeManagerModule
-                ];
-              }
-            ];
-          };
-        in
-        catbox.config.system.build.buildLayeredImage;
-      aarch64-linux.catbox =
-        let
-          catbox = inputs.nixpkgs.lib.nixosSystem {
-            pkgs = import inputs.nixpkgs {
-              system = "aarch64-linux";
-              config.allowUnfree = true;
+          in
+          catbox.config.system.build.buildLayeredImage;
+        nixtar = self.nixosConfigurations.nixtar.config.system.build.tarballBuilder;
+      };
+      aarch64-linux = {
+        catbox =
+          let
+            catbox = inputs.nixpkgs.lib.nixosSystem {
+              pkgs = import inputs.nixpkgs {
+                system = "aarch64-linux";
+                config.allowUnfree = true;
+              };
+              modules = [
+                ../../hosts/catbox/configuration.nix
+                inputs.home-manager.nixosModules.home-manager
+                {
+                  home-manager.sharedModules = [
+                    inputs.devlib.homeManagerModule
+                  ];
+                }
+              ];
             };
-            modules = [
-              ../../hosts/catbox/configuration.nix
-              inputs.home-manager.nixosModules.home-manager
-              {
-                home-manager.sharedModules = [
-                  inputs.devlib.homeManagerModule
-                ];
-              }
-            ];
-          };
-        in
-        catbox.config.system.build.buildLayeredImage;
+          in
+          catbox.config.system.build.buildLayeredImage;
+        fushi = self.nixosConfigurations.fushi.config.system.build.sdImage;
+        minish = self.nixosConfigurations.minish.config.system.build.sdImage;
+        nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
+      };
     };
   };
 }
