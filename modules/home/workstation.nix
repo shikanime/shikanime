@@ -80,11 +80,9 @@ with lib;
           setEnv.TERM = "xterm-256color";
         };
         "thinkcentre-m710t.tailfb4bb2.ts.net" = {
+          forwardX11 = true;
           user = "william-phetsinorath";
-          setEnv = {
-            TERM = "xterm-256color";
-            X11Forwarding = "yes";
-          };
+          setEnv.TERM = "xterm-256color";
         };
       };
     };
