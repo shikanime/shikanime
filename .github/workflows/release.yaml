@@ -55,6 +55,8 @@ jobs:
           REPO: ${{ github.repository }}
         run: gh release create "$REF_NAME" --repo "$REPO" --generate-notes || true
   skaffold:
+    needs:
+      - nix
     permissions:
       contents: read
       packages: write
