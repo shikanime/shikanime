@@ -20,12 +20,18 @@
         github = {
           settings.workflows = {
             integration = {
-              jobs.skaffold.secrets.CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              jobs.skaffold = {
+                needs = [ "nix" ];
+                secrets.CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              };
               on.workflow_call.secrets.CACHIX_AUTH_TOKEN.required = lib.mkDefault true;
             };
 
             release = {
-              jobs.skaffold.secrets.CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              jobs.skaffold = {
+                needs = [ "nix" ];
+                secrets.CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
+              };
               on.workflow_call.secrets.CACHIX_AUTH_TOKEN.required = lib.mkDefault true;
             };
 
