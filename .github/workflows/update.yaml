@@ -1,46 +1,36 @@
 jobs:
   dependencies:
-    permissions:
-      contents: write
-      pull-requests: write
     runs-on: ubuntu-slim
     steps:
-      - continue-on-error: true
-        id: createGithubAppToken
-        uses: actions/create-github-app-token@v3
+      - id: createGithubAppToken
+        uses: actions/create-github-app-token@v3.1.1
         with:
-          app-id: ${{ vars.OPERATOR_APP_ID }}
+          client-id: ${{ vars.OPERATOR_APP_CLIENT_ID }}
           permission-contents: write
           permission-pull-requests: write
+          permission-workflows: write
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
-      - uses: actions/checkout@v6
+      - uses: shikanime-studio/actions/nix/setup@v9
         with:
-          fetch-depth: 0
-          ref: main
-          token: ${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}
-      - uses: shikanime-studio/actions/nix/setup@v8
+          github-token: ${{ steps.createGithubAppToken.outputs.token }}
+      - uses: shikanime-studio/actions/checkout@v9
         with:
-          github-token: ${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}
-      - uses: shikanime-studio/actions/update@v8
-        with:
-          email: operator6o@shikanime.studio
-          fullname: Operator 6O
-          github-token: ${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}
+          github-token: ${{ steps.createGithubAppToken.outputs.token }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           sign-commits: true
           username: operator6o
+      - uses: shikanime-studio/actions/update@v9
+        with:
+          github-token: ${{ steps.createGithubAppToken.outputs.token }}
+          username: operator6o
   stale:
-    permissions:
-      issues: write
-      pull-requests: write
     runs-on: ubuntu-slim
     steps:
-      - continue-on-error: true
-        id: createGithubAppToken
-        uses: actions/create-github-app-token@v3
+      - id: createGithubAppToken
+        uses: actions/create-github-app-token@v3.1.1
         with:
-          app-id: ${{ vars.OPERATOR_APP_ID }}
+          client-id: ${{ vars.OPERATOR_APP_CLIENT_ID }}
           permission-issues: write
           permission-pull-requests: write
           private-key: ${{ secrets.OPERATOR_PRIVATE_KEY }}
@@ -48,7 +38,7 @@ jobs:
         with:
           days-before-close: 14
           days-before-stale: 30
-          repo-token: ${{ steps.createGithubAppToken.outputs.token || secrets.GITHUB_TOKEN }}
+          repo-token: ${{ steps.createGithubAppToken.outputs.token }}
           stale-issue-label: stale
           stale-pr-label: stale
 name: Update
