@@ -50,7 +50,7 @@
       vpa = {
         enable = true;
         createNamespace = true;
-        hash = "sha256-d0om1BuSLM9CDIRdmsxeG/uhUfliFmzHe6+qwfXg/t0=";
+        hash = "sha256-6PZrlFQncf6dHi2xJS69D77osUUWTDMRnmRV/tLJo9s=";
         name = "vpa";
         repo = "https://charts.fairwinds.com/stable";
         targetNamespace = "kube-system";
