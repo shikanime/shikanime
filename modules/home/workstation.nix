@@ -81,7 +81,10 @@ with lib;
         };
         "thinkcentre-m710t.tailfb4bb2.ts.net" = {
           user = "william-phetsinorath";
-          setEnv.TERM = "xterm-256color";
+          setEnv = {
+            TERM = "xterm-256color";
+            X11Forwarding = "yes";
+          };
         };
       };
     };
