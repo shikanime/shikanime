@@ -13,9 +13,14 @@
     ../../modules/nixos/workstation.nix
   ];
 
-  home-manager.users.shika.imports = [
-    ./users/shika/home-configuration.nix
-  ];
+  home-manager.users = {
+    automata.imports = [
+      ./users/automata/home-configuration.nix
+    ];
+    shika.imports = [
+      ./users/shika/home-configuration.nix
+    ];
+  };
 
   # Let Docker manage /etc/resolv.conf
   environment.etc."resolv.conf".enable = false;
@@ -97,11 +102,18 @@
 
   users.users.shika = {
     extraGroups = [ "wheel" ];
-    initialHashedPassword = "";
     isNormalUser = true;
     home = "/home/shika";
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+tp1Xfz7NomHCZuDPlfj3XW5hm9t0TiCyEeudRraoe"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN6ORksXnayYquyZKEBQ8b0EEqwZRCeQFh1JlHZk9tQx"
+    ];
+  };
+
+  users.users.automata = {
+    isNormalUser = true;
+    home = "/home/automata";
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOuenA6cT5pkPEwdGvmvXRjVqFTv2QwpyYrB7gvMy0/X"
     ];
   };
 
