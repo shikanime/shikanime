@@ -102,6 +102,7 @@
 
   users.users.shika = {
     extraGroups = [ "wheel" ];
+    initialHashedPassword = "";
     isNormalUser = true;
     home = "/home/shika";
     openssh.authorizedKeys.keys = [
@@ -110,6 +111,7 @@
   };
 
   users.users.automata = {
+    initialHashedPassword = "";
     isNormalUser = true;
     home = "/home/automata";
     openssh.authorizedKeys.keys = [
