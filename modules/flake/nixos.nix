@@ -98,7 +98,7 @@
               ];
             };
           in
-          catbox.config.system.build.buildLayeredImage;
+          catbox.config.system.build.isoImage;
         nixtar = self.nixosConfigurations.nixtar.config.system.build.tarballBuilder;
       };
       aarch64-linux = {
@@ -120,7 +120,7 @@
               ];
             };
           in
-          catbox.config.system.build.buildLayeredImage;
+          catbox.config.system.build.isoImage;
         fushi = self.nixosConfigurations.fushi.config.system.build.sdImage;
         minish = self.nixosConfigurations.minish.config.system.build.sdImage;
         nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
