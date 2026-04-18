@@ -17,55 +17,25 @@
           inputs.devlib.devenvModules.shikanime
         ];
 
-        github = {
-          settings.workflows = {
-            integration = {
-              jobs.skaffold = {
-                needs = [ "nix" ];
-                secrets.CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-              };
-              on.workflow_call.secrets.CACHIX_AUTH_TOKEN.required = lib.mkDefault true;
-            };
-
-            release = {
-              jobs.skaffold = {
-                needs = [ "nix" ];
-                secrets.CACHIX_AUTH_TOKEN = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-              };
-              on.workflow_call.secrets.CACHIX_AUTH_TOKEN.required = lib.mkDefault true;
-            };
-
-            skaffold.on.workflow_call.secrets.CACHIX_AUTH_TOKEN.required = lib.mkDefault true;
-
-            wakabox = {
-              name = "Wakabox";
-              on.schedule = [
-                { cron = "0 0 * * *"; }
-              ];
-              jobs.wakabox = {
-                runs-on = "ubuntu-latest";
-                steps = [
-                  {
-                    uses = "matchai/waka-box@v5.0.0";
-                    env = {
-                      GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
-                      GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
-                      WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
-                    };
-                  }
-                ];
-              };
-              permissions.contents = "read";
-            };
+        github.settings.workflows.wakabox = {
+          name = "Wakabox";
+          on.schedule = [
+            { cron = "0 0 * * *"; }
+          ];
+          jobs.wakabox = {
+            runs-on = "ubuntu-latest";
+            steps = [
+              {
+                uses = "matchai/waka-box@v5.0.0";
+                env = {
+                  GH_TOKEN = "\${{ secrets.WAKABOX_GITHUB_TOKEN }}";
+                  GIST_ID = "\${{ vars.WAKABOX_GITHUB_GIST_ID }}";
+                  WAKATIME_API_KEY = "\${{ secrets.WAKATIME_API_KEY }}";
+                };
+              }
+            ];
           };
-
-          workflows.skaffold = {
-            enable = true;
-            settings.setup-nix = {
-              cachix-auth-token = "\${{ secrets.CACHIX_AUTH_TOKEN }}";
-              extra-platforms = "arm64";
-            };
-          };
+          permissions.contents = "read";
         };
 
         packages =
