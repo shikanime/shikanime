@@ -38,17 +38,9 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  services = {
-    # Let Kubernetes manage the DNS configuration
-    nscd = {
-      enable = false;
-      enableNsncd = false;
-    };
-
-    openssh = {
-      enable = true;
-      openFirewall = true;
-    };
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
   };
 
   system.build.buildLayeredImage = pkgs.dockerTools.buildLayeredImage {
@@ -110,23 +102,25 @@
     "Z /workspaces - shika users - -"
   ];
 
-  users.users.shika = {
-    extraGroups = [ "wheel" ];
-    initialHashedPassword = "";
-    isNormalUser = true;
-    home = "/home/shika";
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN6ORksXnayYquyZKEBQ8b0EEqwZRCeQFh1JlHZk9tQx"
-    ];
-  };
+  users.users = {
+    shika = {
+      extraGroups = [ "wheel" ];
+      initialHashedPassword = "";
+      isNormalUser = true;
+      home = "/home/shika";
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN6ORksXnayYquyZKEBQ8b0EEqwZRCeQFh1JlHZk9tQx"
+      ];
+    };
 
-  users.users.automata = {
-    initialHashedPassword = "";
-    isNormalUser = true;
-    home = "/home/automata";
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOuenA6cT5pkPEwdGvmvXRjVqFTv2QwpyYrB7gvMy0/X"
-    ];
+    automata = {
+      initialHashedPassword = "";
+      isNormalUser = true;
+      home = "/home/automata";
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOuenA6cT5pkPEwdGvmvXRjVqFTv2QwpyYrB7gvMy0/X"
+      ];
+    };
   };
 
   virtualisation.docker = {
