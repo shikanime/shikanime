@@ -40,7 +40,10 @@
 
   services = {
     # Let Kubernetes manage the DNS configuration
-    nscd.enableNsncd = false;
+    nscd = {
+      enable = false;
+      enableNsncd = false;
+    };
 
     openssh = {
       enable = true;
