@@ -8,7 +8,7 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         uses: matchai/waka-box@v5.0.0
 name: Wakabox
-'on':
+"on":
   schedule:
     - cron: 0 0 * * *
 permissions:

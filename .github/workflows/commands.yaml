@@ -1,12 +1,14 @@
 jobs:
   backport:
-    if: github.event.issue.pull_request != null && contains(github.event.comment.body, '.backport')
+    if:
+      github.event.issue.pull_request != null &&
+      contains(github.event.comment.body, '.backport')
     runs-on: ubuntu-slim
     steps:
       - id: createGithubAppToken
-        uses: actions/create-github-app-token@v3.1.1
+        uses: actions/create-github-app-token@v3
         with:
-          client-id: ${{ vars.OPERATOR_APP_CLIENT_ID }}
+          app-id: ${{ vars.OPERATOR_APP_ID }}
           permission-contents: write
           permission-issues: write
           permission-pull-requests: write
@@ -22,13 +24,15 @@ jobs:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           sign-commits: true
   close:
-    if: github.event.issue.pull_request != null && contains(github.event.comment.body, '.close')
+    if:
+      github.event.issue.pull_request != null &&
+      contains(github.event.comment.body, '.close')
     runs-on: ubuntu-slim
     steps:
       - id: createGithubAppToken
-        uses: actions/create-github-app-token@v3.1.1
+        uses: actions/create-github-app-token@v3
         with:
-          client-id: ${{ vars.OPERATOR_APP_CLIENT_ID }}
+          app-id: ${{ vars.OPERATOR_APP_ID }}
           permission-contents: write
           permission-issues: write
           permission-pull-requests: write
@@ -41,13 +45,16 @@ jobs:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
           username: operator6o
   land:
-    if: github.event.issue.pull_request != null && (contains(github.event.comment.body, '.land') || contains(github.event.comment.body, '.force-land'))
+    if:
+      github.event.issue.pull_request != null &&
+      (contains(github.event.comment.body, '.land') ||
+      contains(github.event.comment.body, '.force-land'))
     runs-on: ubuntu-slim
     steps:
       - id: createGithubAppToken
-        uses: actions/create-github-app-token@v3.1.1
+        uses: actions/create-github-app-token@v3
         with:
-          client-id: ${{ vars.OPERATOR_APP_CLIENT_ID }}
+          app-id: ${{ vars.OPERATOR_APP_ID }}
           permission-administration: read
           permission-contents: write
           permission-issues: write
@@ -67,13 +74,15 @@ jobs:
           sign-commits: true
           username: operator6o
   rebase:
-    if: github.event.issue.pull_request != null && contains(github.event.comment.body, '.rebase')
+    if:
+      github.event.issue.pull_request != null &&
+      contains(github.event.comment.body, '.rebase')
     runs-on: ubuntu-slim
     steps:
       - id: createGithubAppToken
-        uses: actions/create-github-app-token@v3.1.1
+        uses: actions/create-github-app-token@v3
         with:
-          client-id: ${{ vars.OPERATOR_APP_CLIENT_ID }}
+          app-id: ${{ vars.OPERATOR_APP_ID }}
           permission-contents: write
           permission-issues: write
           permission-pull-requests: write
@@ -92,13 +101,15 @@ jobs:
           sign-commits: true
           username: operator6o
   run:
-    if: github.event.issue.pull_request != null && contains(github.event.comment.body, '.run')
+    if:
+      github.event.issue.pull_request != null &&
+      contains(github.event.comment.body, '.run')
     runs-on: ubuntu-slim
     steps:
       - id: createGithubAppToken
-        uses: actions/create-github-app-token@v3.1.1
+        uses: actions/create-github-app-token@v3
         with:
-          client-id: ${{ vars.OPERATOR_APP_CLIENT_ID }}
+          app-id: ${{ vars.OPERATOR_APP_ID }}
           permission-contents: write
           permission-issues: write
           permission-pull-requests: write
@@ -110,7 +121,7 @@ jobs:
         with:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
 name: Commands
-'on':
+"on":
   issue_comment:
     types:
       - created
