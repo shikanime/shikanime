@@ -25,6 +25,9 @@
   # Let Docker manage /etc/resolv.conf
   environment.etc."resolv.conf".enable = false;
 
+  # Let Kubernetes manage the network configuration
+  networking.useDHCP = false;
+
   programs.nix-ld = {
     enable = true;
     libraries = [
@@ -35,10 +38,14 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  # Enable SSH access
-  services.openssh = {
-    enable = true;
-    openFirewall = true;
+  services = {
+    # Let Kubernetes manage the DNS configuration
+    nscd.enable = false;
+
+    openssh = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 
   system.build.buildLayeredImage = pkgs.dockerTools.buildLayeredImage {
