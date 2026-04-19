@@ -9,6 +9,7 @@ permissions:
         required: true
       OPERATOR_PRIVATE_KEY:
         required: true
+  workflow_dispatch: {}
 jobs:
   build-render:
     name: Build & Render
