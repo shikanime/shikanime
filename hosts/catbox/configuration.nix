@@ -1,5 +1,4 @@
 {
-  config,
   modulesPath,
   pkgs,
   ...
@@ -7,8 +6,8 @@
 
 {
   imports = [
+    "${modulesPath}/installer/cd-dvd/iso-image.nix"
     "${modulesPath}/profiles/headless.nix"
-    "${modulesPath}/virtualisation/docker-image.nix"
     ../../modules/nixos/base.nix
     ../../modules/nixos/workstation.nix
   ];
@@ -41,61 +40,6 @@
   services.openssh = {
     enable = true;
     openFirewall = true;
-  };
-
-  system.build.buildLayeredImage = pkgs.dockerTools.buildLayeredImage {
-    name = "ghcr.io/shikanime/shikanime/catbox";
-    contents = [
-      config.system.build.toplevel
-      pkgs.bash
-      pkgs.coreutils
-      pkgs.dockerTools.binSh
-      pkgs.findutils
-      pkgs.gh
-      pkgs.git
-      pkgs.gnugrep
-      pkgs.gnupg
-      pkgs.gnused
-      pkgs.gnutar
-      pkgs.gzip
-      pkgs.openssh
-      pkgs.pass
-      pkgs.stdenv
-    ];
-    includeNixDB = true;
-    config = {
-      LABELS = {
-        "devcontainer.metadata" = builtins.toJSON [
-          {
-            containerEnv = {
-              USER = "shika";
-            };
-            mounts = [
-              {
-                source = "/sys/kernel/debug";
-                target = "/sys/kernel/debug";
-                type = "bind";
-              }
-              {
-                source = "/sys/kernel/tracing";
-                target = "/sys/kernel/tracing";
-                type = "bind";
-              }
-            ];
-            onCreateCommand = "systemctl is-system-running --wait || true";
-            overrideCommand = false;
-            privileged = true;
-            remoteUser = "shika";
-            updateRemoteUserUID = false;
-          }
-        ];
-        "org.opencontainers.image.source" = "https://github.com/shikanime/shikanime";
-        "org.opencontainers.image.description" = "catbox development environment";
-        "org.opencontainers.image.licenses" = "AGPL-3.0-or-later";
-      };
-      ExposedPorts."22/tcp" = { };
-      Entrypoint = [ "/init" ];
-    };
   };
 
   systemd.tmpfiles.rules = [
