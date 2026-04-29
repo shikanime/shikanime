@@ -3,19 +3,20 @@
     enable = true;
 
     userSettings = {
-      helix_mode = true;
-      vim_mode = true;
-
-      theme = "Catppuccin Latte";
-
-      relative_line_numbers = "enabled";
-
       agent = {
         new_thread_location = "new_worktree";
         default_model = {
           provider = "Hermes Agent";
           model = "hermes-agent";
           enable_thinking = true;
+        };
+      };
+
+      agent_servers = {
+        "Hermes Agent" = {
+          type = "custom";
+          command = "hermes";
+          args = [ "acp" ];
         };
       };
 
@@ -42,13 +43,17 @@
         };
       };
 
-      agent_servers = {
-        "Hermes Agent" = {
-          type = "custom";
-          command = "hermes";
-          args = [ "acp" ];
-        };
+      helix_mode = true;
+
+      relative_line_numbers = "enabled";
+
+      theme = {
+        mode = "system";
+        light = "Catppuccin Latte";
+        dark = "Catppuccin Frappé";
       };
+
+      vim_mode = true;
     };
 
     userKeymaps = [
