@@ -78,6 +78,8 @@
         g = {
           n = "extend_to_line_start";
           i = "extend_to_line_end";
+          u = "goto_file_start";
+          e = "goto_file_end";
         };
       };
       theme = "catppuccin_latte";
