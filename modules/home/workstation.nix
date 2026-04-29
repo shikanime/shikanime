@@ -9,16 +9,19 @@ with lib;
 
 {
   home = {
-    packages = [
-      pkgs.bitwarden-cli
-      pkgs.cachix
-      pkgs.devenv
-      pkgs.docker-credential-helpers
-      pkgs.pass
-      pkgs.qpdf
-      pkgs.rclone
-      pkgs.wget
-      pkgs.zip
+    packages = with pkgs; [
+      bitwarden-cli
+      cachix
+      claude-code
+      codex
+      devenv
+      docker-credential-helpers
+      pass
+      qpdf
+      qwen-code
+      rclone
+      wget
+      zip
     ];
     sessionPath = [ "${config.home.homeDirectory}/.local/bin" ];
   };
