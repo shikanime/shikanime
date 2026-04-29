@@ -3,14 +3,52 @@
     enable = true;
 
     userSettings = {
+      helix_mode = true;
+      vim_mode = true;
+
       theme = "Catppuccin Latte";
-      vim_mode = "helix";
-      relative_line_numbers = true;
-      cursor_shape = "bar";
-      indent_guides.enabled = true;
-      active_pane_modifiers.highlight_current_line = true;
-      soft_wrap = "none";
-      show_whitespaces = "selection";
+
+      relative_line_numbers = "enabled";
+
+      agent = {
+        new_thread_location = "new_worktree";
+        default_model = {
+          provider = "Hermes Agent";
+          model = "hermes-agent";
+          enable_thinking = true;
+        };
+      };
+
+      language_models = {
+        openai_compatible = {
+          "Hermes Agent" = {
+            api_url = "http://localhost:8642/v1";
+            available_models = [
+              {
+                name = "hermes-agent";
+                max_tokens = 200000;
+                max_output_tokens = 32000;
+                max_completion_tokens = 200000;
+                capabilities = {
+                  tools = true;
+                  images = true;
+                  parallel_tool_calls = true;
+                  prompt_cache_key = true;
+                  chat_completions = true;
+                };
+              }
+            ];
+          };
+        };
+      };
+
+      agent_servers = {
+        "Hermes Agent" = {
+          type = "custom";
+          command = "hermes";
+          args = [ "acp" ];
+        };
+      };
     };
 
     userKeymaps = [
