@@ -3,14 +3,18 @@
     enable = true;
 
     userSettings = {
-      theme = "Catppuccin Latte";
-      vim_mode = "helix";
-      relative_line_numbers = true;
+      active_pane_modifiers.highlight_current_line = true;
       cursor_shape = "bar";
       indent_guides.enabled = true;
-      active_pane_modifiers.highlight_current_line = true;
-      soft_wrap = "none";
+      relative_line_numbers = true;
       show_whitespaces = "selection";
+      soft_wrap = "none";
+      theme = {
+        mode = "system";
+        light = "Catppuccin Latte";
+        dark = "Catppuccin Frappé";
+      };
+      vim_mode = "helix";
     };
 
     userKeymaps = [
