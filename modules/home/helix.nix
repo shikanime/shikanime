@@ -15,40 +15,70 @@
         line-number = "relative";
       };
       keys.normal = {
-        E = "join_selections";
-        H = "insert_at_line_start";
-        I = "no_op";
+        # Core Navigation (NEUI Cluster)
+        n = "move_char_left";
+        e = "move_visual_line_down";
+        u = "move_visual_line_up";
+        i = "move_char_right";
+
+        # Displaced Commands Restoration
+        h = "insert_mode";
+        j = "move_next_word_end";
         J = "move_next_long_word_end";
+        k = "search_next";
         K = "search_prev";
+        l = "undo";
         L = "redo";
+
+        # Utility and Selection
+        H = "insert_at_line_start";
+        E = "join_selections";
         N = "keep_selections";
         U = "no_op";
-        e = "move_line_down";
-        h = "insert_mode";
-        i = "move_char_right";
-        j = "move_next_word_end";
-        k = "search_next";
-        l = "undo";
-        n = "move_char_left";
-        u = "move_line_up";
+        I = "no_op";
+
+        # GoTo Mode Optimization
+        g = {
+          n = "goto_line_start";
+          i = "goto_line_end";
+          u = "goto_file_start";
+          e = "goto_file_end";
+        };
+
+        # View Mode Optimization
+        z = {
+          u = "scroll_up";
+          e = "scroll_down";
+        };
       };
       keys.select = {
-        E = "join_selections";
-        H = "insert_at_line_start";
-        I = "no_op";
+        # Core Navigation (Extend)
+        n = "extend_char_left";
+        e = "extend_visual_line_down";
+        u = "extend_visual_line_up";
+        i = "extend_char_right";
+
+        # Restoration
+        h = "insert_mode";
+        j = "extend_next_word_end";
         J = "extend_next_long_word_end";
+        k = "extend_search_next";
         K = "extend_search_prev";
+        l = "undo";
         L = "redo";
+
+        # Utility
+        H = "insert_at_line_start";
+        E = "join_selections";
         N = "keep_selections";
         U = "no_op";
-        e = "extend_visual_line_down";
-        h = "insert_mode";
-        i = "extend_char_right";
-        j = "extend_next_word_end";
-        k = "extend_search_next";
-        l = "undo";
-        n = "extend_char_left";
-        u = "extend_visual_line_up";
+        I = "no_op";
+
+        # GoTo Mode (Extend)
+        g = {
+          n = "extend_to_line_start";
+          i = "extend_to_line_end";
+        };
       };
       theme = "catppuccin_latte";
     };
@@ -193,9 +223,7 @@
           style = "line";
         };
       };
-      "ui.bufferline.background" = {
-        bg = "crust";
-      };
+      "ui.bufferline.background".bg = "crust";
       "ui.cursor" = {
         bg = "secondary_cursor";
         fg = "base";
@@ -232,9 +260,7 @@
         bg = "secondary_cursor";
         fg = "base";
       };
-      "ui.cursorline.primary" = {
-        bg = "cursorline";
-      };
+      "ui.cursorline.primary".bg = "cursorline";
       "ui.help" = {
         bg = "surface0";
         fg = "overlay2";
@@ -243,12 +269,8 @@
         bg = "surface1";
         modifiers = [ "bold" ];
       };
-      "ui.linenr" = {
-        fg = "surface1";
-      };
-      "ui.linenr.selected" = {
-        fg = "lavender";
-      };
+      "ui.linenr".fg = "surface1";
+      "ui.linenr.selected".fg = "lavender";
       "ui.menu" = {
         bg = "surface0";
         fg = "overlay2";
@@ -262,9 +284,7 @@
         bg = "surface0";
         fg = "text";
       };
-      "ui.selection" = {
-        bg = "surface1";
-      };
+      "ui.selection".bg = "surface1";
       "ui.statusline" = {
         bg = "mantle";
         fg = "subtext1";
@@ -289,17 +309,13 @@
         modifiers = [ "bold" ];
       };
       "ui.text" = "text";
-      "ui.text.directory" = {
-        fg = "blue";
-      };
+      "ui.text.directory".fg = "blue";
       "ui.text.focus" = {
         bg = "surface0";
         fg = "text";
         modifiers = [ "bold" ];
       };
-      "ui.text.inactive" = {
-        fg = "overlay1";
-      };
+      "ui.text.inactive".fg = "overlay1";
       "ui.virtual" = "overlay0";
       "ui.virtual.indent-guide" = "surface0";
       "ui.virtual.inlay-hint" = {
@@ -310,12 +326,8 @@
         fg = "rosewater";
         modifiers = [ "bold" ];
       };
-      "ui.virtual.ruler" = {
-        bg = "surface0";
-      };
-      "ui.window" = {
-        fg = "crust";
-      };
+      "ui.virtual.ruler".bg = "surface0";
+      "ui.window".fg = "crust";
       variable = "text";
       "variable.builtin" = "red";
       "variable.other.member" = "blue";
