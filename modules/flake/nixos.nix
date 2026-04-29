@@ -4,60 +4,6 @@
 {
   flake = {
     nixosConfigurations = {
-      fushi = inputs.nixpkgs.lib.nixosSystem {
-        pkgs = import inputs.nixpkgs {
-          system = "aarch64-linux";
-          config.allowUnfree = true;
-        };
-        modules = [
-          ../../hosts/fushi/configuration.nix
-          inputs.home-manager.nixosModules.home-manager
-          inputs.nixos-hardware.nixosModules.raspberry-pi-4
-          inputs.sops-nix.nixosModules.sops
-          {
-            home-manager.sharedModules = [
-              inputs.devlib.homeManagerModule
-              inputs.sops-nix.homeManagerModule
-            ];
-          }
-        ];
-      };
-      minish = inputs.nixpkgs.lib.nixosSystem {
-        pkgs = import inputs.nixpkgs {
-          system = "aarch64-linux";
-          config.allowUnfree = true;
-        };
-        modules = [
-          ../../hosts/minish/configuration.nix
-          inputs.home-manager.nixosModules.home-manager
-          inputs.nixos-hardware.nixosModules.raspberry-pi-4
-          inputs.sops-nix.nixosModules.sops
-          {
-            home-manager.sharedModules = [
-              inputs.devlib.homeManagerModule
-              inputs.sops-nix.homeManagerModule
-            ];
-          }
-        ];
-      };
-      nishir = inputs.nixpkgs.lib.nixosSystem {
-        pkgs = import inputs.nixpkgs {
-          system = "aarch64-linux";
-          config.allowUnfree = true;
-        };
-        modules = [
-          ../../hosts/nishir/configuration.nix
-          inputs.home-manager.nixosModules.home-manager
-          inputs.nixos-hardware.nixosModules.raspberry-pi-5
-          inputs.sops-nix.nixosModules.sops
-          {
-            home-manager.sharedModules = [
-              inputs.devlib.homeManagerModule
-              inputs.sops-nix.homeManagerModule
-            ];
-          }
-        ];
-      };
       nixtar = inputs.nixpkgs.lib.nixosSystem {
         pkgs = import inputs.nixpkgs {
           system = "x86_64-linux";
@@ -121,9 +67,6 @@
             };
           in
           catbox.config.system.build.buildLayeredImage;
-        fushi = self.nixosConfigurations.fushi.config.system.build.sdImage;
-        minish = self.nixosConfigurations.minish.config.system.build.sdImage;
-        nishir = self.nixosConfigurations.nishir.config.system.build.sdImage;
       };
     };
   };
