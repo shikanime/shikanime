@@ -20,6 +20,12 @@
         };
       };
 
+      icon_theme = {
+        mode = "system";
+        light = "Catppuccin Latte";
+        dark = "Catppuccin Frappé";
+      };
+
       language_models = {
         openai_compatible = {
           "Hermes Agent" = {
