@@ -22,7 +22,6 @@ with lib;
         };
         advice.skippedCherryPicks = false;
         credential.helper = "manager";
-        core.editor = "${lib.getExe pkgs.helix}";
         init.defaultBranch = "main";
         pull.rebase = true;
         push.autoSetupRemote = true;
@@ -82,28 +81,13 @@ with lib;
           '';
           git_push_bookmark = "\"shikanime/push-\" ++ change_id.short()";
         };
-        merge-tools.trae = {
-          merge-args = [
-            "--wait"
-            "--merge"
-            "$left"
-            "$right"
-            "$base"
-            "$output"
-          ];
-          merge-tool-edits-conflict-markers = true;
-          conflict-marker-style = "git";
-        };
         revset-aliases = {
           "nulls()" = "empty() & mutable()";
           "stack()" = "stack(@)";
           "stack(x)" = "stack(x, 2)";
           "stack(x, n)" = "ancestors(reachable(x, mutable()), n)";
         };
-        ui = {
-          default-command = "log";
-          merge-editor = ":builtin";
-        };
+        ui.default-command = "log";
       };
     };
   };

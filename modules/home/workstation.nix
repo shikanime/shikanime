@@ -50,6 +50,8 @@ with lib;
 
     gpg.enable = true;
 
+    mergiraf.enable = true;
+
     mise.enable = true;
 
     nix-index.enable = true;
