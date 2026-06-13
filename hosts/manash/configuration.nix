@@ -219,10 +219,9 @@
     tailscale = {
       enable = true;
       openFirewall = true;
-      useRoutingFeatures = "server";
       authKeyFile = config.sops.secrets.tailscale-authkey.path;
       extraUpFlags = [
-        "--advertise-routes=10.244.0.0/24,fd00::/112"
+        "--accept-routes"
         "--ssh"
       ];
     };
