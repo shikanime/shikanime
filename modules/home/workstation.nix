@@ -100,6 +100,10 @@ with lib;
           User = "shika";
           SetEnv.TERM = "xterm-256color";
         };
+        "ishtar.taila659a.ts.net" = {
+          User = "shika";
+          SetEnv.TERM = "xterm-256color";
+        };
         "nishir.taila659a.ts.net" = {
           User = "shika";
           SetEnv.TERM = "xterm-256color";

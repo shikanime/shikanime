@@ -78,6 +78,29 @@
           }
         ];
       };
+      ishtar = inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
+        modules = [
+          ../../hosts/ishtar/configuration.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.sops-nix.nixosModules.sops
+          inputs.nixos-hardware.nixosModules.common-cpu-intel
+          inputs.nixos-hardware.nixosModules.common-gpu-nvidia
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+          inputs.nixos-hardware.nixosModules.common-hidpi
+          {
+            home-manager.sharedModules = [
+              inputs.catppuccin.homeModules.default
+              inputs.colemak.homeModules.default
+              inputs.devlib.homeModules.default
+              inputs.sops-nix.homeModules.default
+            ];
+          }
+        ];
+      };
     };
 
     packages = {
@@ -107,6 +130,7 @@
         manash = self.nixosConfigurations.manash.config.system.build.toplevel;
         nalsha = self.nixosConfigurations.nalsha.config.system.build.toplevel;
         nixtar = self.nixosConfigurations.nixtar.config.system.build.tarballBuilder;
+        ishtar = self.nixosConfigurations.ishtar.config.system.build.toplevel;
       };
       aarch64-linux = {
         catbox =
